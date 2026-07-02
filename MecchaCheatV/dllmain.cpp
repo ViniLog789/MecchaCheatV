@@ -4,48 +4,6 @@
 
 using namespace MecchaCheatV;
 
-bool IsDX11(ID3D11Device* device)
-{
-    if (!device)
-        return false;
-
-    D3D_FEATURE_LEVEL level = device->GetFeatureLevel();
-
-    return level == D3D_FEATURE_LEVEL_11_0 ||
-        level == D3D_FEATURE_LEVEL_11_1;
-}
-
-void RestartWithDx11Flag()
-{
-    wchar_t path[MAX_PATH];
-    GetModuleFileNameW(NULL, path, MAX_PATH);
-
-    std::wstring cmd = L"\"";
-    cmd += path;
-    cmd += L"\" -dx11";
-
-    STARTUPINFOW si{};
-    PROCESS_INFORMATION pi{};
-
-    si.cb = sizeof(si);
-
-    CreateProcessW(
-        NULL,
-        cmd.data(),
-        NULL,
-        NULL,
-        FALSE,
-        0,
-        NULL,
-        NULL,
-        &si,
-        &pi
-    );
-
-    if (pi.hThread) CloseHandle(pi.hThread);
-    if (pi.hProcess) CloseHandle(pi.hProcess);
-}
-
 static std::unique_ptr<Logger> loggerInstance;
 static std::unique_ptr<Renderer> rendererInstance;
 static std::unique_ptr<Hooking> hookingInstance;
@@ -87,21 +45,6 @@ extern "C" __declspec(dllexport) DWORD WINAPI MecchaCheatVThread()
 
         NOTIFY_INFO_QUICK("Cheat injected successfully. The menu opens on " + Utils::getKeyName(MenuToggleKey));
         LOG_INFO("Cheat injected successfully. The menu opens on " + Utils::getKeyName(MenuToggleKey));
-
-        if (!IsDX11(Renderer::Device))
-        {
-            std::cout << "d3d11.dll not found. Restarting in 15 seconds with -dx11..." << std::endl;
-
-            for (int i = 15; i > 0; --i)
-            {
-                std::cout << "Restart in " << i << " sec" << std::endl;
-                std::this_thread::sleep_for(std::chrono::seconds(1));
-            }
-
-            RestartWithDx11Flag();
-            FreeLibraryAndExitThread(Globals::globalModule, 0);
-            return 0;
-        }
 
         while (Globals::CheatWork)
         {

@@ -11,8 +11,8 @@ using ProcessEvent_t = void(__fastcall*)(SDK::UObject*, SDK::UFunction*, void*);
 namespace MecchaCheatV::Globals
 {
 	// Debug and Tests
-	inline bool IsDebugging = true;
-	inline bool IsCalledLogs = true;
+	inline bool IsDebugging = false;
+	inline bool IsCalledLogs = false;
 	inline bool IsUpdateCalledLogs = false;
 
 	// Main
