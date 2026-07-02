@@ -1,0 +1,9 @@
+#pragma once
+#include "feats/watermark/watermark.h"
+#include "feats/playeresp/playeresp.h"
+#include "feats/decoyesp/decoyesp.h"
+#include "feats/fovchanger/fovchanger.h"
+#include "feats/setname/setname.h"
+#include "feats/alwvisible/alwvisible.h"
+#include "feats/autodisshadow/autodisshadow.h"
+#include "feats/teleport/teleport.h"
