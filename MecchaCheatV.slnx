@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="MecchaCheatV Injector/MecchaCheatV Injector.vcxproj" Id="b05a52fc-b9d2-4d90-b759-9cfe2b7ccf51" />
   <Project Path="MecchaCheatV/MecchaCheatV.vcxproj" Id="2414f152-dd89-46d5-bed3-ecbad3f5d512" />
 </Solution>

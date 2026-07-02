@@ -4,29 +4,15 @@
 
 using namespace MecchaCheatV;
 
-bool IsModuleLoaded(const wchar_t* moduleName)
+bool IsDX11(ID3D11Device* device)
 {
-    HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, GetCurrentProcessId());
-    if (snapshot == INVALID_HANDLE_VALUE)
+    if (!device)
         return false;
 
-    MODULEENTRY32W me{};
-    me.dwSize = sizeof(me);
+    D3D_FEATURE_LEVEL level = device->GetFeatureLevel();
 
-    if (Module32FirstW(snapshot, &me))
-    {
-        do
-        {
-            if (_wcsicmp(me.szModule, moduleName) == 0)
-            {
-                CloseHandle(snapshot);
-                return true;
-            }
-        } while (Module32NextW(snapshot, &me));
-    }
-
-    CloseHandle(snapshot);
-    return false;
+    return level == D3D_FEATURE_LEVEL_11_0 ||
+        level == D3D_FEATURE_LEVEL_11_1;
 }
 
 void RestartWithDx11Flag()
@@ -77,21 +63,6 @@ extern "C" __declspec(dllexport) DWORD WINAPI MecchaCheatVThread()
     }
     catch (...) {
         return 0;
-    }    
-
-    if (!IsModuleLoaded(L"d3d11.dll"))
-    {
-        LOG_WARN("d3d11.dll not found. Restarting in 15 seconds with -dx11...");
-
-        for (int i = 15; i > 0; --i)
-        {
-            LOG_INFO("Restart in " + std::to_string(i) + " sec");
-            std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-
-        RestartWithDx11Flag();
-        FreeLibraryAndExitThread(Globals::globalModule, 0);
-        return 0;
     }
 
     try {
@@ -116,6 +87,21 @@ extern "C" __declspec(dllexport) DWORD WINAPI MecchaCheatVThread()
 
         NOTIFY_INFO_QUICK("Cheat injected successfully. The menu opens on " + Utils::getKeyName(MenuToggleKey));
         LOG_INFO("Cheat injected successfully. The menu opens on " + Utils::getKeyName(MenuToggleKey));
+
+        if (!IsDX11(Renderer::Device))
+        {
+            std::cout << "d3d11.dll not found. Restarting in 15 seconds with -dx11..." << std::endl;
+
+            for (int i = 15; i > 0; --i)
+            {
+                std::cout << "Restart in " << i << " sec" << std::endl;
+                std::this_thread::sleep_for(std::chrono::seconds(1));
+            }
+
+            RestartWithDx11Flag();
+            FreeLibraryAndExitThread(Globals::globalModule, 0);
+            return 0;
+        }
 
         while (Globals::CheatWork)
         {
