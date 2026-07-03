@@ -10,73 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SteamWorkshopMaps_structs.hpp"
 #include "EN_cLeonMainGamePhase_structs.hpp"
+#include "SteamWorkshopMaps_structs.hpp"
 #include "ST_cLeonMapData_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.Winner
-// 0x0008 (0x0008 - 0x0000)
-struct BP_GameState_cLeon_C_Winner final
-{
-public:
-	class ABP_FirstPersonPlayerState_Online_C*    WinnerPlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_cLeon_C_Winner;
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateBulletWidget
-// 0x0004 (0x0004 - 0x0000)
-struct BP_GameState_cLeon_C_UpdateBulletWidget final
-{
-public:
-	int32                                         Current;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_cLeon_C_UpdateBulletWidget;
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRankning(Client)
-// 0x0028 (0x0028 - 0x0000)
-struct BP_GameState_cLeon_C_SyncRankning_Client_ final
-{
-public:
-	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> PlayerStates;                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<int32>                                 NewPoints;                                         // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         UpdateTime;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_cLeon_C_SyncRankning_Client_;
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Local)
-// 0x0004 (0x0004 - 0x0000)
-struct BP_GameState_cLeon_C_ShowPopup_Local_ final
-{
-public:
-	int32                                         PopupIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_cLeon_C_ShowPopup_Local_;
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Client)
-// 0x0004 (0x0004 - 0x0000)
-struct BP_GameState_cLeon_C_ShowPopup_Client_ final
-{
-public:
-	int32                                         PopupIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_cLeon_C_ShowPopup_Client_;
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPointAddPopup
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_cLeon_C_ShowPointAddPopup final
-{
-public:
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* TargetPlayerState;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Point;                                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_cLeon_C_ShowPointAddPopup;
 
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowDeathWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -310,179 +250,6 @@ public:
 };
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_GetAllMapDatas;
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ExecuteUbergraph_BP_GameState_cLeon
-// 0x0468 (0x0468 - 0x0000)
-struct BP_GameState_cLeon_C_ExecuteUbergraph_BP_GameState_cLeon final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_Conv_DoubleToVector2D_ReturnValue;        // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 Current, int32 max_0)>   K2Node_CreateDelegate_OutputDelegate_2;            // 0x0038(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntVector2ToString_ReturnValue;      // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_DoubleRanking_C*                   CallFunc_Create_ReturnValue;                       // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_CentorTextWinner_C*                CallFunc_Create_ReturnValue_1;                     // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_PopupIndex_1;                   // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_PlayerController_cLeon_C*           K2Node_DynamicCast_AsBP_Player_Controller_C_Leon;  // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D3[0x5];                                       // 0x00D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x00D8(0x0010)()
-	TArray<class FString>                         CallFunc_SplitTextPure_ReturnValue;                // 0x00E8(0x0010)(ReferenceParm)
-	int32                                         K2Node_CustomEvent_PopupIndex;                     // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0100(0x0010)()
-	TArray<class FString>                         CallFunc_SplitTextPure_ReturnValue_1;              // 0x0110(0x0010)(ReferenceParm)
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWBP_ModQueueAll_C*                     CallFunc_Create_ReturnValue_2;                     // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_cLeon_Character_C* K2Node_DynamicCast_AsBP_First_Person_Character_C_Leon_Character; // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_cLeon_Character_C* K2Node_DynamicCast_AsBP_First_Person_Character_C_Leon_Character_1; // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonPlayerState_Online_C*    K2Node_CustomEvent_WinnerPlayerState;              // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_2;            // 0x0158(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UWBP_CentorText_C*                      CallFunc_Create_ReturnValue_3;                     // 0x0178(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TMap<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*, int32> CallFunc_GetDoubleRanking_ReturnMap; // 0x0190(0x0050)()
-	bool                                          K2Node_CustomEvent_IsShow;                         // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E1[0x3];                                      // 0x01E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* K2Node_CustomEvent_HunterPlayerState;           // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* K2Node_CustomEvent_SurvivorPlayerState;         // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWBP_CentorText_C*                      CallFunc_Create_ReturnValue_4;                     // 0x01F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*> CallFunc_GetAllActorsOfClass_OutActors; // 0x0200(0x0010)(ReferenceParm)
-	TArray<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*> CallFunc_GetAllActorsOfClass_OutActors_1; // 0x0210(0x0010)(ReferenceParm)
-	class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C* CallFunc_Array_Get_Item;              // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C* CallFunc_Array_Get_Item_1;              // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_235[0x3];                                      // 0x0235(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x023C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23D[0x3];                                      // 0x023D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*> CallFunc_GetAllActorsOfClass_OutActors_2; // 0x0240(0x0010)(ReferenceParm)
-	class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C* CallFunc_Array_Get_Item_2;            // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25D[0x3];                                      // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           K2Node_CustomEvent_TargetPlayerState_1;            // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           CallFunc_GetPlayerState_ReturnValue;               // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_2;        // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalController_ReturnValue;            // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_PlayerController_cLeon_C*           K2Node_DynamicCast_AsBP_Player_Controller_C_Leon_1; // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29A[0x6];                                      // 0x029A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ABP_FirstPersonCharacter_cLeon_Character_C*> CallFunc_GetAllActorsOfClass_OutActors_3; // 0x02A0(0x0010)(ReferenceParm)
-	class ABP_FirstPersonCharacter_cLeon_Character_C* CallFunc_Array_Get_Item_3;                     // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x02B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x02C8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D1[0x3];                                      // 0x02D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x02D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x02DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x02DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2DF[0x1];                                      // 0x02DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* K2Node_CustomEvent_SourcePlayerState_1;         // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> K2Node_CustomEvent_PlayerStates_1;      // 0x02E8(0x0010)(ConstParm, ReferenceParm)
-	TArray<int32>                                 K2Node_CustomEvent_Points;                         // 0x02F8(0x0010)(ConstParm, ReferenceParm)
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* CallFunc_Array_Get_Item_4;                      // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_311[0x3];                                      // 0x0311(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0314(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0324(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_325[0x3];                                      // 0x0325(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> K2Node_CustomEvent_PlayerStates;        // 0x0328(0x0010)(ConstParm, ReferenceParm)
-	TArray<int32>                                 K2Node_CustomEvent_NewPoints;                      // 0x0338(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_CustomEvent_UpdateTime;                     // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0350(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> CallFunc_Map_Keys_Keys;                 // 0x0360(0x0010)(ReferenceParm)
-	TArray<int32>                                 CallFunc_Map_Values_Values;                        // 0x0370(0x0010)(ReferenceParm)
-	bool                                          K2Node_CustomEvent_State;                          // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> K2Node_MakeArray_Array;                 // 0x0388(0x0010)(ConstParm, ReferenceParm)
-	TArray<int32>                                 K2Node_MakeArray_Array_1;                          // 0x0398(0x0010)(ConstParm, ReferenceParm)
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* K2Node_CustomEvent_TargetPlayerState;           // 0x03A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* K2Node_CustomEvent_SourcePlayerState;           // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Point;                          // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BC[0x4];                                      // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_KillLog_C*                         CallFunc_Create_ReturnValue_5;                     // 0x03C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x03CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x03D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x03D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x03D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x03D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D5[0x3];                                      // 0x03D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Len_ReturnValue;                          // 0x03D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DC[0x4];                                      // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_Online_SelfControler_C*             CallFunc_GetActorOfClass_ReturnValue;              // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_3;        // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_4;        // 0x03F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetViewportSize_ReturnValue;              // 0x0400(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Divide_Vector2DVector2D_ReturnValue;      // 0x0410(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0434(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0440(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_GameMode_cLeon_C*                   K2Node_DynamicCast_AsBP_Game_Mode_C_Leon;          // 0x0448(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0450(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_451[0x3];                                      // 0x0451(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_Current_1;                      // 0x0454(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Max;                            // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FIntVector2                            K2Node_MakeStruct_IntVector2;                      // 0x045C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Current;                        // 0x0464(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_cLeon_C_ExecuteUbergraph_BP_GameState_cLeon;
-
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.AddToViewDatas
 // 0x0028 (0x0028 - 0x0000)
 struct BP_GameState_cLeon_C_AddToViewDatas final
@@ -493,6 +260,75 @@ public:
 	TArray<int32>                                 Points;                                            // 0x0018(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_AddToViewDatas;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AddToViewDataForce
+// 0x0028 (0x0028 - 0x0000)
+struct BP_GameState_cLeon_C_AddToViewDataForce final
+{
+public:
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> PlayerStates;                           // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<int32>                                 Points;                                            // 0x0018(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_AddToViewDataForce;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPointAddPopup
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_cLeon_C_ShowPointAddPopup final
+{
+public:
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* TargetPlayerState;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Point;                                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_ShowPointAddPopup;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Client)
+// 0x0004 (0x0004 - 0x0000)
+struct BP_GameState_cLeon_C_ShowPopup_Client_ final
+{
+public:
+	int32                                         PopupIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_ShowPopup_Client_;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Local)
+// 0x0004 (0x0004 - 0x0000)
+struct BP_GameState_cLeon_C_ShowPopup_Local_ final
+{
+public:
+	int32                                         PopupIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_ShowPopup_Local_;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRankning(Client)
+// 0x0028 (0x0028 - 0x0000)
+struct BP_GameState_cLeon_C_SyncRankning_Client_ final
+{
+public:
+	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> PlayerStates;                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<int32>                                 NewPoints;                                         // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         UpdateTime_0;                                      // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_SyncRankning_Client_;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateBulletWidget
+// 0x0004 (0x0004 - 0x0000)
+struct BP_GameState_cLeon_C_UpdateBulletWidget final
+{
+public:
+	int32                                         Current;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_UpdateBulletWidget;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.Winner
+// 0x0008 (0x0008 - 0x0000)
+struct BP_GameState_cLeon_C_Winner final
+{
+public:
+	class ABP_FirstPersonPlayerState_Online_C*    WinnerPlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_Winner;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

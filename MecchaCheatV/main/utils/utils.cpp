@@ -318,7 +318,7 @@ void Utils::KillSurvivor(SDK::APawn* myPlayer, SDK::AActor* actor)
 
     SDK::Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer parms{};
     parms.FirstpersonCharacter = survivor;
-    parms.SourcePlayerState = hunter->MyPlayerState;
+    parms.SourcePlayerState = static_cast<SDK::ABP_FirstPersonPlayerState_Online_cLeon_C*>(hunter->MyPlayerState);
     hunter->ProcessEvent(fn, &parms);
 }
 

@@ -86,26 +86,6 @@ void ABP_PlayerCounter_Base_C::BeginOverlap(class UPrimitiveComponent* Overlappe
 }
 
 
-// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.ExecuteUbergraph_BP_PlayerCounter_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerCounter_Base_C::ExecuteUbergraph_BP_PlayerCounter_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "ExecuteUbergraph_BP_PlayerCounter_Base");
-
-	Params::BP_PlayerCounter_Base_C_ExecuteUbergraph_BP_PlayerCounter_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 

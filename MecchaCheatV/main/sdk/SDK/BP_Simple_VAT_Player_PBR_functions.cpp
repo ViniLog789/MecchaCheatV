@@ -50,26 +50,6 @@ void ABP_Simple_VAT_Player_PBR_C::OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184(clas
 }
 
 
-// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.ExecuteUbergraph_BP_Simple_VAT_Player_PBR
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Simple_VAT_Player_PBR_C::ExecuteUbergraph_BP_Simple_VAT_Player_PBR(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "ExecuteUbergraph_BP_Simple_VAT_Player_PBR");
-
-	Params::BP_Simple_VAT_Player_PBR_C_ExecuteUbergraph_BP_Simple_VAT_Player_PBR Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.BaseTime__UpdateFunc
 // (BlueprintEvent)
 

@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_FriendListContents_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextBlock*                             UserName;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation;                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FUniqueNetIdRepl                       FriendNetId;                                       // 0x0358(0x0030)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
@@ -32,7 +31,6 @@ public:
 	class FString                                 playerName;                                        // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_FriendListContents(int32 EntryPoint);
 	void Construct();
 	void BndEvt__WBP_FriendListContents_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 

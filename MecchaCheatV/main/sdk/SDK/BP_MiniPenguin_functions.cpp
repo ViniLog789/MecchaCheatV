@@ -288,26 +288,6 @@ void ABP_MiniPenguin_C::GetParryState(bool* State)
 }
 
 
-// Function BP_MiniPenguin.BP_MiniPenguin_C.ExecuteUbergraph_BP_MiniPenguin
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MiniPenguin_C::ExecuteUbergraph_BP_MiniPenguin(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MiniPenguin_C", "ExecuteUbergraph_BP_MiniPenguin");
-
-	Params::BP_MiniPenguin_C_ExecuteUbergraph_BP_MiniPenguin Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_MiniPenguin.BP_MiniPenguin_C.DamageToPlayerController
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

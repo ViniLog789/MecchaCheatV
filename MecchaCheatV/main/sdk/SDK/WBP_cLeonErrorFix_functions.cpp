@@ -16,40 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_cLeonErrorFix.WBP_cLeonErrorFix_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AWBP_cLeonErrorFix_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonErrorFix_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonErrorFix.WBP_cLeonErrorFix_C.ExecuteUbergraph_WBP_cLeonErrorFix
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AWBP_cLeonErrorFix_C::ExecuteUbergraph_WBP_cLeonErrorFix(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonErrorFix_C", "ExecuteUbergraph_WBP_cLeonErrorFix");
-
-	Params::WBP_cLeonErrorFix_C_ExecuteUbergraph_WBP_cLeonErrorFix Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_cLeonErrorFix.WBP_cLeonErrorFix_C.BndEvt__WBP_cLeonErrorFix_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
@@ -77,6 +43,20 @@ void AWBP_cLeonErrorFix_C::BndEvt__WBP_cLeonErrorFix_Box_K2Node_ComponentBoundEv
 	Parms.SweepResult = std::move(SweepResult);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonErrorFix.WBP_cLeonErrorFix_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AWBP_cLeonErrorFix_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonErrorFix_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -58,26 +58,6 @@ void UBPC_AutoAttachHandControl_C::Grab()
 }
 
 
-// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.ExecuteUbergraph_BPC_AutoAttachHandControl
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_AutoAttachHandControl_C::ExecuteUbergraph_BPC_AutoAttachHandControl(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "ExecuteUbergraph_BPC_AutoAttachHandControl");
-
-	Params::BPC_AutoAttachHandControl_C_ExecuteUbergraph_BPC_AutoAttachHandControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.DestroySelf
 // (BlueprintCallable, BlueprintEvent)
 

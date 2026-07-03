@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ABP_LINK_Penguin_V2_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ABP_LINK_Penguin_V2_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
@@ -25,8 +25,7 @@ SDK_NAMESPACE_START
 class UABP_LINK_Penguin_V2_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_3D8[0x10];                                     // 0x03D8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct ABP_LINK_Penguin_V2::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;          // 0x03E8(0x0014)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0400(0x0008)()
@@ -121,7 +120,6 @@ public:
 	bool                                          NeckLock;                                          // 0x1EB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ABP_LINK_Penguin_V2(int32 EntryPoint);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D();

@@ -10,46 +10,45 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_FirstPersonGameMode_V2_classes.hpp"
 #include "EN_cLeonBodyType_structs.hpp"
-#include "EN_cLeonGameMode_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_GameMode_cLeon.BP_GameMode_cLeon_C
-// 0x0080 (0x0448 - 0x03C8)
+// 0x0088 (0x0448 - 0x03C0)
 class ABP_GameMode_cLeon_C final : public ABP_FirstPersonGameMode_V2_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_GameMode_cLeon_C;                // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ABP_CountZone_cLeon_C*                  HunterCountZone;                                   // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_CountZone_cLeon_C*                  SurvivorCountZone;                                 // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         StartWaitTimeDefault;                              // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentTimer;                                      // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         StartWaitTime;                                     // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_GameState_cLeon_C*                  BP_GameState_cLeon;                                // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         TimerDefault;                                      // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxHunterNum;                                      // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_cLeonHunterLotteryArea_C*           LotteryArea;                                       // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         HunterWaitTimeDefault;                             // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         HunterWaitTime;                                    // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CheckAnswersTimeDefault;                           // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CheckAnswersTime;                                  // 0x0414(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         GameModeIndex;                                     // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanOpenOption;                                     // 0x041C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41D[0x3];                                      // 0x041D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BodyChangeDelay;                                   // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TestInt;                                           // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentGameMapIndex;                               // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanModMap;                                         // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsModUse;                                          // 0x0431(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_432[0x6];                                      // 0x0432(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 SurvivorClass;                                     // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         ChickenHunterWait;                                 // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ChickenMainSearch;                                 // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C0[0x8];                                      // 0x03C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_CountZone_cLeon_C*                  HunterCountZone;                                   // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_CountZone_cLeon_C*                  SurvivorCountZone;                                 // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         StartWaitTimeDefault;                              // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentTimer;                                      // 0x03DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         StartWaitTime;                                     // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_GameState_cLeon_C*                  BP_GameState_cLeon;                                // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         TimerDefault;                                      // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxHunterNum;                                      // 0x03F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_cLeonHunterLotteryArea_C*           LotteryArea;                                       // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         HunterWaitTimeDefault;                             // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         HunterWaitTime;                                    // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CheckAnswersTimeDefault;                           // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CheckAnswersTime;                                  // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         GameModeIndex;                                     // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanOpenOption;                                     // 0x0414(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_415[0x3];                                      // 0x0415(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BodyChangeDelay;                                   // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TestInt;                                           // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentGameMapIndex;                               // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanModMap;                                         // 0x0428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsModUse;                                          // 0x0429(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42A[0x6];                                      // 0x042A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 SurvivorClass;                                     // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         ChickenHunterWait;                                 // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ChickenMainSearch;                                 // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ChickenAnswerTime;                                 // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void WinnerCheck();
@@ -77,7 +76,7 @@ public:
 	void RemoveGamePlayer(bool IsLogout, class AController* Controller);
 	void ReceiveBeginPlay();
 	void ModComplete();
-	void KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_C* SourcePlayerState);
+	void KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState);
 	void K2_PostLogin(class APlayerController* NewPlayer_K2_PostLogin);
 	void K2_OnRestartPlayer(class AController* NewPlayer_K2_OnRestartPlayer);
 	void K2_OnLogout(class AController* ExitingController_K2_OnLogout);
@@ -91,7 +90,7 @@ public:
 	void GetGameTime(int32* TimerDefault);
 	void GetGameModeIndex(int32* GameModeIndex);
 	void GetDoubleWinnerPlayer(class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C** WinnerPlayerActor);
-	void GetChickenWinnerPlayer(class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C** WinnerPlayerActor);
+	void GetChickenWinnerPlayer(class ABP_FirstPersonPlayerState_Online_cLeon_C** WinnerPlayerState);
 	void GetCheckAnswersTime(int32* CheckAnswersTime);
 	void GameTimerClear();
 	void GameStateCheck(bool* IsGameEnd, class FName* WinnerRole);
@@ -99,14 +98,13 @@ public:
 	void GameStart();
 	void GameEndCheck();
 	void GameEnd();
-	void ExecuteUbergraph_BP_GameMode_cLeon(int32 EntryPoint);
 	void CountDownStart();
 	void ControllerArrayToPlayerState(TArray<class ABP_PlayerController_cLeon_C*>& PlayerController, TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>* PlayerStateArray);
 	void ChickenTeleport_GotoMap();
 	void ChickenTeleport_BackHome();
 	void ChickenSearchStop();
 	void CheckAnswerTimeMinus();
-	void ChangeSpectateBodyAll(bool KeepBody);
+	void ChangeSpectateBody_Chicken_(bool KeepBody);
 	void BodyChange(EN_cLeonBodyType TargetBody, class ABP_PlayerController_cLeon_C* TargetController, const struct FTransform& OverrideSpawnTransform, bool KeepBody, bool BodyVisibility, class ABP_FirstPersonCharacter_cLeon_Character_C** CreateCharacter);
 
 public:

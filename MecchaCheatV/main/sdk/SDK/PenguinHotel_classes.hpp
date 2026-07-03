@@ -757,11 +757,12 @@ public:
 DUMPER7_ASSERTS_UModBlueprintLibrary;
 
 // Class PenguinHotel.MyGameModeBase
-// 0x0010 (0x0350 - 0x0340)
+// 0x0008 (0x0348 - 0x0340)
 class AMyGameModeBase : public AGameModeBase
 {
 public:
-	uint8                                         Pad_340[0x10];                                     // 0x0340(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bCheckMaxPublicConnections;                        // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void GetSeamlessTravelActorListBPF(bool bToTransition, TArray<class AActor*>* ActorList, const TArray<class AActor*>& TargetActroList);

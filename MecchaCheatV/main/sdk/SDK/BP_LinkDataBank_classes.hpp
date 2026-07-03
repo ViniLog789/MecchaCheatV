@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "LinkMergeTargetPrimitives_structs.hpp"
-#include "Engine_structs.hpp"
+#include "ReferencedGlues_structs.hpp"
 #include "LinkMergePoint_structs.hpp"
+#include "LinkMergeTargetPrimitives_structs.hpp"
+#include "PrimitiveGlues_structs.hpp"
 #include "PenguinHotel_structs.hpp"
 #include "PenguinHotel_classes.hpp"
-#include "ReferencedGlues_structs.hpp"
-#include "PrimitiveGlues_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,7 +25,7 @@ SDK_NAMESPACE_START
 class ABP_LinkDataBank_C final : public ACPP_LinkDataBank
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0820(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_820[0x8];                                      // 0x0820(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0828(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TMap<class UPrimitiveComponent*, class ABP_LinkBranchData_C*> PrimitiveReferences;               // 0x0830(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
 	TMap<class UPrimitiveComponent*, struct FReferencedGlues> GlueReferences;                        // 0x0880(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
@@ -48,7 +47,6 @@ public:
 	void FindPrimitiveGlues(TArray<struct FReferencedGlueGroup>& Glues, class UPrimitiveComponent* Primitive, int32* FoundIndex, TArray<class ABP_Glue_CustomPhysics_C*>* FoundGlues);
 	void FilterReferencedGlues(class UPrimitiveComponent* Primitive, TArray<class ABP_Glue_CustomPhysics_C*>& Glues, TArray<class ABP_Glue_CustomPhysics_C*>* ReturnGlueActors);
 	void FilterOtherBranchPrimitive(class UPrimitiveComponent* SourcePrimitive, TArray<class ABP_Glue_CustomPhysics_C*>& Glues, TArray<class UPrimitiveComponent*>* Primitives);
-	void ExecuteUbergraph_BP_LinkDataBank(int32 EntryPoint);
 	void BranchDataMergeCheck(TArray<class UPrimitiveComponent*>& Primitives);
 	void AddReferencedGlueGroups(class UPrimitiveComponent* SourcePrimitive, class ABP_Glue_CustomPhysics_C* Glues);
 

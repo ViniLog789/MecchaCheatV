@@ -50,26 +50,6 @@ void UWBP_TextChatTextBox_C::Finish()
 }
 
 
-// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.ExecuteUbergraph_WBP_TextChatTextBox
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TextChatTextBox_C::ExecuteUbergraph_WBP_TextChatTextBox(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatTextBox_C", "ExecuteUbergraph_WBP_TextChatTextBox");
-
-	Params::WBP_TextChatTextBox_C_ExecuteUbergraph_WBP_TextChatTextBox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

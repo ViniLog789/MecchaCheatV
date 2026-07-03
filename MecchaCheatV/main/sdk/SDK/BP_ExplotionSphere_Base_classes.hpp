@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,14 +20,13 @@ SDK_NAMESPACE_START
 class ABP_ExplotionSphere_Base_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraComponent*                      Niagara;                                           // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USphereComponent*                       ExplotionRadius;                                   // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	double                                        ImpluseScale;                                      // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_ExplotionSphere_Base(int32 EntryPoint);
 	void BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature(class UNiagaraComponent* PSystem);
 
 public:

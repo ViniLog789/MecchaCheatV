@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -59,17 +59,6 @@ public:
 	struct FST_ItemCoreDatas                      CoreDatas_GetItemInfo;                             // 0x0048(0x0070)(Parm, OutParm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_CraftedObject_Log_Sand_C_GetItemInfo;
-
-// Function BP_CraftedObject_Log_Sand.BP_CraftedObject_Log_Sand_C.ExecuteUbergraph_BP_CraftedObject_Log_Sand
-// 0x0010 (0x0010 - 0x0000)
-struct BP_CraftedObject_Log_Sand_C_ExecuteUbergraph_BP_CraftedObject_Log_Sand final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_OtherActor;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Log_Sand_C_ExecuteUbergraph_BP_CraftedObject_Log_Sand;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

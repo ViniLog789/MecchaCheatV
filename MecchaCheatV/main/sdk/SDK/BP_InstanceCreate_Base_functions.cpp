@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_InstanceCreate_Base_classes.hpp"
-#include "BP_InstanceCreate_Base_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -41,26 +40,6 @@ void ABP_InstanceCreate_Base_C::InstancePack()
 		Func = Class->GetFunction("BP_InstanceCreate_Base_C", "InstancePack");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_InstanceCreate_Base.BP_InstanceCreate_Base_C.ExecuteUbergraph_BP_InstanceCreate_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_InstanceCreate_Base_C::ExecuteUbergraph_BP_InstanceCreate_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InstanceCreate_Base_C", "ExecuteUbergraph_BP_InstanceCreate_Base");
-
-	Params::BP_InstanceCreate_Base_C_ExecuteUbergraph_BP_InstanceCreate_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

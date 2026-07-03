@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ExecuteUbergraph_BPC_TaskObject_Base
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_TaskObject_Base_C::ExecuteUbergraph_BPC_TaskObject_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_Base_C", "ExecuteUbergraph_BPC_TaskObject_Base");
-
-	Params::BPC_TaskObject_Base_C_ExecuteUbergraph_BPC_TaskObject_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ReceiveEndPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:

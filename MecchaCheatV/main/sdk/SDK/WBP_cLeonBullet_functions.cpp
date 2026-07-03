@@ -56,24 +56,4 @@ void UWBP_cLeonBullet_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_cLeonBullet.WBP_cLeonBullet_C.ExecuteUbergraph_WBP_cLeonBullet
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonBullet_C::ExecuteUbergraph_WBP_cLeonBullet(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonBullet_C", "ExecuteUbergraph_WBP_cLeonBullet");
-
-	Params::WBP_cLeonBullet_C_ExecuteUbergraph_WBP_cLeonBullet Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

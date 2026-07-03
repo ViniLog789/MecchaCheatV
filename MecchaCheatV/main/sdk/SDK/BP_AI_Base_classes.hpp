@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EN_StrafingDirection_structs.hpp"
 #include "Engine_classes.hpp"
 #include "ENUM_CameraMode_structs.hpp"
 #include "ENUM_ActorType_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "EN_StrafingDirection_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -25,8 +24,7 @@ SDK_NAMESPACE_START
 class ABP_AI_Base_C final : public ACharacter
 {
 public:
-	uint8                                         Pad_648[0x8];                                      // 0x0648(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0650(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_648[0x10];                                     // 0x0648(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAudioComponent*                        Audio;                                             // 0x0658(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBillboardComponent*                    CentorPosition;                                    // 0x0660(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBillboardComponent*                    SubPosition;                                       // 0x0668(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -56,7 +54,6 @@ public:
 	double                                        DefautAcceleration;                                // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_AI_Base(int32 EntryPoint);
 	void Set_Difficulty(int32 Value);
 	void PlayAvoidanceAnimation();
 	void CoolDownEnd();

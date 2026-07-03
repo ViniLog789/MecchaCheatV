@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_FirstPersonPlayerController_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class ABP_PlayerController_cLeon_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_PlayerController_cLeon_C;        // 0x0768(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_768[0x8];                                      // 0x0768(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class URuntimePaintRelayComponent*            RuntimePaintRelay;                                 // 0x0770(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWBP_cLeonMain_C*                       MainWidget;                                        // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        CameraFadeValue;                                   // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -41,23 +40,22 @@ public:
 	bool                                          CanPenterationForce;                               // 0x07E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void TeleportMovie();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void OnNamePlateVisibilityChange(bool Visibility);
-	class AActor* NearSurvivor_IgnoreSelf(const struct FVector& Location, const struct FVector& Direction, float* OutDotProduct);
-	void InpActEvt_U_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
-	void InpActEvt_Three_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_Six_K2Node_InputKeyEvent_1(const struct FKey& Key);
-	void InpActEvt_G_K2Node_InputKeyEvent_0(const struct FKey& Key);
-	void GetPawnCentorLocation(struct FVector* ReturnLocation);
-	void Finish();
-	void ExecuteUbergraph_BP_PlayerController_cLeon(int32 EntryPoint);
-	void EEYAN_State(bool State);
-	void ChoseBodyClose();
-	void CameraReset();
-	void AddMainWidgets();
 	void AddBodyTypeSesttings();
+	void AddMainWidgets();
+	void CameraReset();
+	void ChoseBodyClose();
+	void EEYAN_State(bool State);
+	void Finish();
+	void GetPawnCentorLocation(struct FVector* ReturnLocation);
+	void InpActEvt_G_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	void InpActEvt_Six_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_Three_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_U_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
+	class AActor* NearSurvivor_IgnoreSelf(const struct FVector& Location, const struct FVector& Direction, float* OutDotProduct);
+	void OnNamePlateVisibilityChange(bool Visibility);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void TeleportMovie();
 
 public:
 	static class UClass* StaticClass()

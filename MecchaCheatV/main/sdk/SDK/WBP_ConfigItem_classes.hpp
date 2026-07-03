@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Enum_ConfigItem_structs.hpp"
-#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -23,7 +22,7 @@ SDK_NAMESPACE_START
 class UWBP_ConfigItem_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_NavOptionBox_C*                    WBP_NavOptionBox;                                  // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             configItem_text;                                   // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBorder*                                Border_62;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -68,7 +67,6 @@ public:
 	void SetVarValue(int32 inInt);
 	void RemoveMin(const class FText& SourceText, class FText* ReturnText);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_ConfigItem(int32 EntryPoint);
 	void BndEvt__WBP_ConfigItem_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
 	void ApplySetting();
 

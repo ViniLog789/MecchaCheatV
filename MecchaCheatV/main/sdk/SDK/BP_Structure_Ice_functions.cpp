@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_Structure_Ice_classes.hpp"
-#include "BP_Structure_Ice_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -41,26 +40,6 @@ void ABP_Structure_Ice_C::Generate()
 		Func = Class->GetFunction("BP_Structure_Ice_C", "Generate");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Structure_Ice.BP_Structure_Ice_C.ExecuteUbergraph_BP_Structure_Ice
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Structure_Ice_C::ExecuteUbergraph_BP_Structure_Ice(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Structure_Ice_C", "ExecuteUbergraph_BP_Structure_Ice");
-
-	Params::BP_Structure_Ice_C_ExecuteUbergraph_BP_Structure_Ice Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

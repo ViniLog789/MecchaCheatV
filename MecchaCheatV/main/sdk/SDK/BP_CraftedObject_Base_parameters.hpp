@@ -10,66 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "FinishFilter_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "EN_DamageType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "FinishFilter_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ExecuteUbergraph_BP_CraftedObject_Base
-// 0x0340 (0x0340 - 0x0000)
-struct BP_CraftedObject_Base_C_ExecuteUbergraph_BP_CraftedObject_Base final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGrab_ReturnValue;                       // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_Event_Force_Vector;                         // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Event_CentorPosition;                       // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_KeepScale;                            // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_State;                                // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        K2Node_Event_Character;                            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_SlotIndex;                            // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_ItemCoreDatas                      K2Node_Event_CoreDatas;                            // 0x0070(0x0070)(ConstParm, HasGetValueTypeHash)
-	EN_StanType                                   K2Node_Event_StanType;                             // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Event_Value;                                // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_TargetActor;                          // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_DamageValue;                          // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_TeamIndex;                            // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 K2Node_Event_DamageType;                           // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_105[0xB];                                      // 0x0105(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             K2Node_Event_SourceAgentPoint;                     // 0x0110(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_UnAvoidable;                          // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_Event_DamageName;                           // 0x0174(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_Event_HitRezult;                            // 0x0180(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_SourceActor;                          // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_LINK_C*        K2Node_CustomEvent_ForceGrabTarget;                // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0290(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x02F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0308(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0320(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x0338(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_ExecuteUbergraph_BP_CraftedObject_Base;
 
 // Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetForceGrabTarget
 // 0x0008 (0x0008 - 0x0000)

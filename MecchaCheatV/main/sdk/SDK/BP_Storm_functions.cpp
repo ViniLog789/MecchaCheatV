@@ -318,24 +318,4 @@ void ABP_Storm_C::ForceStateCheck()
 }
 
 
-// Function BP_Storm.BP_Storm_C.ExecuteUbergraph_BP_Storm
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Storm_C::ExecuteUbergraph_BP_Storm(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "ExecuteUbergraph_BP_Storm");
-
-	Params::BP_Storm_C_ExecuteUbergraph_BP_Storm Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

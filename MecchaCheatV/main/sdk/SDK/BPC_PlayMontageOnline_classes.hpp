@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UBPC_PlayMontageOnline_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  OwnerActor;                                        // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -42,7 +41,6 @@ public:
 	void OnCompleted_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
 	void OnBlendOut_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
 	void OnBlendOut_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
-	void ExecuteUbergraph_BPC_PlayMontageOnline(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

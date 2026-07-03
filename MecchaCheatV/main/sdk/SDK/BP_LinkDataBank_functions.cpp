@@ -314,26 +314,6 @@ void ABP_LinkDataBank_C::FilterOtherBranchPrimitive(class UPrimitiveComponent* S
 }
 
 
-// Function BP_LinkDataBank.BP_LinkDataBank_C.ExecuteUbergraph_BP_LinkDataBank
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_LinkDataBank_C::ExecuteUbergraph_BP_LinkDataBank(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkDataBank_C", "ExecuteUbergraph_BP_LinkDataBank");
-
-	Params::BP_LinkDataBank_C_ExecuteUbergraph_BP_LinkDataBank Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_LinkDataBank.BP_LinkDataBank_C.BranchDataMergeCheck
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

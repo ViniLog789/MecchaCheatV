@@ -98,24 +98,4 @@ void UWBP_Item_C::PlaySlotAnim(bool IsSelect)
 }
 
 
-// Function WBP_Item.WBP_Item_C.ExecuteUbergraph_WBP_Item
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Item_C::ExecuteUbergraph_WBP_Item(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Item_C", "ExecuteUbergraph_WBP_Item");
-
-	Params::WBP_Item_C_ExecuteUbergraph_WBP_Item Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

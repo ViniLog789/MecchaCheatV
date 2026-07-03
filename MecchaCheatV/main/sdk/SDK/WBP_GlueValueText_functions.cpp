@@ -70,24 +70,4 @@ void UWBP_GlueValueText_C::SetBarWidth(double Desired_Size_X)
 }
 
 
-// Function WBP_GlueValueText.WBP_GlueValueText_C.ExecuteUbergraph_WBP_GlueValueText
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GlueValueText_C::ExecuteUbergraph_WBP_GlueValueText(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GlueValueText_C", "ExecuteUbergraph_WBP_GlueValueText");
-
-	Params::WBP_GlueValueText_C_ExecuteUbergraph_WBP_GlueValueText Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

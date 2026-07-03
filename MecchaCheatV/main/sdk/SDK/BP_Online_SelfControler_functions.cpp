@@ -70,26 +70,6 @@ void ABP_Online_SelfControler_C::InpActEvt_IA_Pause_K2Node_EnhancedInputActionEv
 }
 
 
-// Function BP_Online_SelfControler.BP_Online_SelfControler_C.ExecuteUbergraph_BP_Online_SelfControler
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Online_SelfControler_C::ExecuteUbergraph_BP_Online_SelfControler(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Online_SelfControler_C", "ExecuteUbergraph_BP_Online_SelfControler");
-
-	Params::BP_Online_SelfControler_C_ExecuteUbergraph_BP_Online_SelfControler Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Online_SelfControler.BP_Online_SelfControler_C.CloseSettings
 // (BlueprintCallable, BlueprintEvent)
 

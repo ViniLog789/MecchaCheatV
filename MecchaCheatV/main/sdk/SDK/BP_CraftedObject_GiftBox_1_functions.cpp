@@ -128,24 +128,4 @@ void ABP_CraftedObject_GiftBox_1_C::GetItemInfo(ENUM_HandType* HandType_GetItemI
 }
 
 
-// Function BP_CraftedObject_GiftBox_1.BP_CraftedObject_GiftBox_1_C.ExecuteUbergraph_BP_CraftedObject_GiftBox_1
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_GiftBox_1_C::ExecuteUbergraph_BP_CraftedObject_GiftBox_1(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_GiftBox_1_C", "ExecuteUbergraph_BP_CraftedObject_GiftBox_1");
-
-	Params::BP_CraftedObject_GiftBox_1_C_ExecuteUbergraph_BP_CraftedObject_GiftBox_1 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

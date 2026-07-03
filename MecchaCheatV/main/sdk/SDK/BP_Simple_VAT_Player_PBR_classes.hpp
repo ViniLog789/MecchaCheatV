@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_Simple_VAT_Player_Base_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_Simple_VAT_Player_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_Simple_VAT_Player_PBR_C final : public ABP_Simple_VAT_Player_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BaseTime_Time_883ADD2A4DE64EC7552965BB86FB0D92;    // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            BaseTime__Direction_883ADD2A4DE64EC7552965BB86FB0D92; // 0x02C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2C5[0x3];                                      // 0x02C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -31,7 +31,6 @@ public:
 public:
 	void ReceiveBeginPlay();
 	void OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184(class UObject* Loaded);
-	void ExecuteUbergraph_BP_Simple_VAT_Player_PBR(int32 EntryPoint);
 	void BaseTime__UpdateFunc();
 	void BaseTime__FinishedFunc();
 

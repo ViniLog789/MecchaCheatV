@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Food_Base.BP_Food_Base_C.ExecuteUbergraph_BP_Food_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Food_Base_C::ExecuteUbergraph_BP_Food_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Food_Base_C", "ExecuteUbergraph_BP_Food_Base");
-
-	Params::BP_Food_Base_C_ExecuteUbergraph_BP_Food_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Food_Base.BP_Food_Base_C.UseItem
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 

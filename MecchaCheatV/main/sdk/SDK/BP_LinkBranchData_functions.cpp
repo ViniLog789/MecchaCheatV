@@ -84,26 +84,6 @@ void ABP_LinkBranchData_C::GetSidePrimitive(int32 CenterIndex, int32 Distance, c
 }
 
 
-// Function BP_LinkBranchData.BP_LinkBranchData_C.ExecuteUbergraph_BP_LinkBranchData
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_LinkBranchData_C::ExecuteUbergraph_BP_LinkBranchData(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkBranchData_C", "ExecuteUbergraph_BP_LinkBranchData");
-
-	Params::BP_LinkBranchData_C_ExecuteUbergraph_BP_LinkBranchData Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_LinkBranchData.BP_LinkBranchData_C.AddPrimitive
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

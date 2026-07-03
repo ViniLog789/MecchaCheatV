@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
 
 
@@ -18,11 +17,10 @@ SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_NavOptionBox.WBP_NavOptionBox_C
 // 0x0060 (0x09E0 - 0x0980)
-#pragma pack(push, 0x1)
-class SDK_ALIGN(0x10) UWBP_NavOptionBox_C : public UUINavOptionBox
+class UWBP_NavOptionBox_C : public UUINavOptionBox
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0980(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_980[0x8];                                      // 0x0980(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_NavOptionUnderBox_C*               WBP_NavOptionUnderBox;                             // 0x0988(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UHorizontalBox*                         UnderBox;                                          // 0x0990(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_133;                                         // 0x0998(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -36,7 +34,6 @@ public:
 	void UpdateOptions();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnChangedValue();
-	void ExecuteUbergraph_WBP_NavOptionBox(int32 EntryPoint);
 	void Construct();
 	void AddUnderBars();
 
@@ -54,7 +51,6 @@ public:
 		return GetDefaultObjImpl<UWBP_NavOptionBox_C>();
 	}
 };
-#pragma pack(pop)
 DUMPER7_ASSERTS_UWBP_NavOptionBox_C;
 
 SDK_NAMESPACE_END

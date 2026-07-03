@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "EN_StanType_structs.hpp"
+#include "BP_EnablePotoIn_Base_classes.hpp"
 #include "ST_VAT_Datas_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "BP_EnablePotoIn_Base_classes.hpp"
 #include "EN_DamageType_structs.hpp"
-#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -25,8 +25,6 @@ SDK_NAMESPACE_START
 class ABP_CopyActorBase_C : public ABP_EnablePotoIn_Base_C
 {
 public:
-	uint8                                         Pad_3E6[0x2];                                      // 0x03E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CopyActorBase_C;                 // 0x03E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UNiagaraComponent*                      Niagara;                                           // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         DeleteVATAnim_Time_9C40C62540CE68DAE57FCAA1FB62D81A; // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            DeleteVATAnim__Direction_9C40C62540CE68DAE57FCAA1FB62D81A; // 0x03FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,7 +38,6 @@ public:
 	class UMaterialInstanceDynamic*               DeleteDynamicMaterialInstance;                     // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_CopyActorBase(int32 EntryPoint);
 	void Fix();
 	void Delete();
 	void Reverse(const struct FTransform& NewPosition_Reverse, const struct FVector& HitNormal_Reverse);

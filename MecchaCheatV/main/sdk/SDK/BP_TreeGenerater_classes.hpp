@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_TreeGenerater_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULBPC_PriorityGenerateControl_C*        LBPC_PriorityGenerateControl;                      // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 TreeClass;                                         // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -32,7 +31,6 @@ public:
 	void ReceiveBeginPlay();
 	void GenerateTree(const struct FRandomStream& Seed);
 	void Generate(const struct FRandomStream& Seed, int32 DepthIndex);
-	void ExecuteUbergraph_BP_TreeGenerater(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

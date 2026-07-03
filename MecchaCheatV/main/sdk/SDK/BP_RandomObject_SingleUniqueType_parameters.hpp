@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.UserConstructionScript
-// 0x0001 (0x0001 - 0x0000)
-struct BP_RandomObject_SingleUniqueType_C_UserConstructionScript final
-{
-public:
-	bool                                          CallFunc_SetIndex_Error;                           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_RandomObject_SingleUniqueType_C_UserConstructionScript;
-
 // Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.SetIndex
 // 0x0088 (0x0088 - 0x0000)
 struct BP_RandomObject_SingleUniqueType_C_SetIndex final
@@ -77,32 +68,14 @@ public:
 };
 DUMPER7_ASSERTS_BP_RandomObject_SingleUniqueType_C_SetIndex;
 
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.ExecuteUbergraph_BP_RandomObject_SingleUniqueType
-// 0x0050 (0x0050 - 0x0000)
-struct BP_RandomObject_SingleUniqueType_C_ExecuteUbergraph_BP_RandomObject_SingleUniqueType final
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.UserConstructionScript
+// 0x0001 (0x0001 - 0x0000)
+struct BP_RandomObject_SingleUniqueType_C_UserConstructionScript final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0018(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue_1;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_RandomFloat_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetIndex_Error;                           // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetIndex_Error_1;                         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetIndex_Error_2;                         // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetIndex_Error;                           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_RandomObject_SingleUniqueType_C_ExecuteUbergraph_BP_RandomObject_SingleUniqueType;
+DUMPER7_ASSERTS_BP_RandomObject_SingleUniqueType_C_UserConstructionScript;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

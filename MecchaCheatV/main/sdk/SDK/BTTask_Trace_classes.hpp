@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_classes.hpp"
 
 
@@ -21,10 +20,9 @@ SDK_NAMESPACE_START
 class UBTTask_Trace_C : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void ExecuteUbergraph_BTTask_Trace(int32 EntryPoint);
 	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
 
 public:

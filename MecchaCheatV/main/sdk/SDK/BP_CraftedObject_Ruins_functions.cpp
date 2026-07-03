@@ -128,24 +128,4 @@ void ABP_CraftedObject_Ruins_C::GetItemInfo(ENUM_HandType* HandType_GetItemInfo,
 }
 
 
-// Function BP_CraftedObject_Ruins.BP_CraftedObject_Ruins_C.ExecuteUbergraph_BP_CraftedObject_Ruins
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Ruins_C::ExecuteUbergraph_BP_CraftedObject_Ruins(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Ruins_C", "ExecuteUbergraph_BP_CraftedObject_Ruins");
-
-	Params::BP_CraftedObject_Ruins_C_ExecuteUbergraph_BP_CraftedObject_Ruins Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

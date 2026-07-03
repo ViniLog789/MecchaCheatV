@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.ExecuteUbergraph_ABP_LINK_Penguin_V2
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UABP_LINK_Penguin_V2_C::ExecuteUbergraph_ABP_LINK_Penguin_V2(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "ExecuteUbergraph_ABP_LINK_Penguin_V2");
-
-	Params::ABP_LINK_Penguin_V2_C_ExecuteUbergraph_ABP_LINK_Penguin_V2 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC
 // (BlueprintEvent)
 

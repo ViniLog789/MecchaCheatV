@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EN_DamageType_structs.hpp"
 #include "EN_StanType_structs.hpp"
 
@@ -24,7 +23,7 @@ SDK_NAMESPACE_START
 class ABP_SnowBall_Top_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBPC_CollisionSound_C*                  BPC_CollisionSound;                                // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        Audio;                                             // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USphereComponent*                       SearchCharacter;                                   // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -41,7 +40,6 @@ public:
 	void ReceiveDestroyed();
 	void ReceiveBeginPlay();
 	void GetParryState(bool* State);
-	void ExecuteUbergraph_BP_SnowBall_Top(int32 EntryPoint);
 	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
 	void BndEvt__BP_SnowBall_Top_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);

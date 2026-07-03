@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_CheckPointIgroo_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   StaticMesh2;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      Niagara;                                           // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USphereComponent*                       Sphere;                                            // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -40,7 +40,6 @@ public:
 	void IsGoalMemberState(bool* IsGoal);
 	void FogDeactivate();
 	void FogActivate();
-	void ExecuteUbergraph_BP_CheckPointIgroo(int32 EntryPoint);
 	void CheckState(bool State);
 	void BndEvt__BP_CheckPointIgroo_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BeaconVisualize(bool State);

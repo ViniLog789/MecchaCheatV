@@ -64,24 +64,4 @@ void ABP_IceRefrigerator_C::OnRep_Out_Actors()
 }
 
 
-// Function BP_IceRefrigerator.BP_IceRefrigerator_C.ExecuteUbergraph_BP_IceRefrigerator
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_IceRefrigerator_C::ExecuteUbergraph_BP_IceRefrigerator(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_IceRefrigerator_C", "ExecuteUbergraph_BP_IceRefrigerator");
-
-	Params::BP_IceRefrigerator_C_ExecuteUbergraph_BP_IceRefrigerator Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

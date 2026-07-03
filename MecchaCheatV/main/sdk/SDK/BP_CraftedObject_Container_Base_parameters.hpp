@@ -10,26 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function BP_CraftedObject_Container_Base.BP_CraftedObject_Container_Base_C.ExecuteUbergraph_BP_CraftedObject_Container_Base
-// 0x0010 (0x0010 - 0x0000)
-struct BP_CraftedObject_Container_Base_C_ExecuteUbergraph_BP_CraftedObject_Container_Base final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_OtherActor;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Container_Base_C_ExecuteUbergraph_BP_CraftedObject_Container_Base;
 
 // Function BP_CraftedObject_Container_Base.BP_CraftedObject_Container_Base_C.ReceiveActorBeginOverlap
 // 0x0008 (0x0008 - 0x0000)

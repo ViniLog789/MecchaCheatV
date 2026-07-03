@@ -9,7 +9,7 @@ void AlwaysVisible::OnMenuRender()
 	ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(8, 6));
 
 	bool enabled = IsActive();
-	if (ImGui::Checkbox("Enable always visible (disable too burried)", &enabled))
+	if (ImGui::Checkbox("Enable always visible (Infection)", &enabled))
 	{
 		SET_CONFIG_VALUE(GetConfigManager(), "Enabled", bool, enabled);
 		if (enabled) OnActivate();
@@ -26,10 +26,5 @@ void AlwaysVisible::AlwaysVisibleHandle(SDK::UObject* Object)
 	if (!Object)
 		return;
 	auto character = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(Object);
-	if (Utils::isSurvivor(character))
-	{
-		auto* survivor = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*>(character);
-		character->BodyVisibility = true;
-		survivor->OverlapCheckCapsules.Clear();
-	}
+	character->BodyVisibility = true;
 }

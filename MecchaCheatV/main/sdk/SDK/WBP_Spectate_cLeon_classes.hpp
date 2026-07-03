@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -22,7 +20,7 @@ SDK_NAMESPACE_START
 class UWBP_Spectate_cLeon_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_KeyImage_C*                        WBP_KeyImage_1;                                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_KeyImage_C*                        WBP_KeyImage_0;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_KeyImage_C*                        WBP_KeyImage;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -43,16 +41,15 @@ public:
 	bool                                          IsFreeCamera;                                      // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdatePlayers();
-	void SwitchFreeCamera(bool ToggleState);
-	void SelectChange(int32 AddValue);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> GetSpectateTarget(TArray<class APawn*>* ReturnPawn);
-	void ExecuteUbergraph_WBP_Spectate_cLeon(int32 EntryPoint);
-	void EmptyCheck();
-	void ConstructGameState();
+	void ChangeBackType(bool IsBackType_0);
 	void Construct();
-	void ChangeBackType(bool IsBackType);
+	void ConstructGameState();
+	void EmptyCheck();
+	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> GetSpectateTarget(TArray<class APawn*>* ReturnPawn);
+	void PreConstruct(bool IsDesignTime);
+	void SelectChange(int32 AddValue);
+	void SwitchFreeCamera(bool ToggleState);
+	void UpdatePlayers();
 
 public:
 	static class UClass* StaticClass()

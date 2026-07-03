@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UWBP_ConfigGraphic_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_SettingSliderFPS_C*                WBP_SettingSliderFPS;                              // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_SettingSlider_C*                   WBP_MotionBlur;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_ConfigItem_C*                      WBP_ConfigItem_9;                                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -46,7 +45,6 @@ public:
 	void UpdateScreenEvent();
 	void ScreenTypeSettingsUpdate();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_ConfigGraphic(int32 EntryPoint);
 	void DeleteConfigWidget();
 	void Construct();
 	void BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature();

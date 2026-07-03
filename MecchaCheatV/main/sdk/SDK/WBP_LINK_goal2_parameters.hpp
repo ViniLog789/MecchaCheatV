@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -47,28 +46,6 @@ public:
 	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_LINK_goal2_C_PlayAnimationMessage;
-
-// Function WBP_LINK_goal2.WBP_LINK_goal2_C.ExecuteUbergraph_WBP_LINK_goal2
-// 0x0070 (0x0070 - 0x0000)
-struct WBP_LINK_goal2_C_ExecuteUbergraph_WBP_LINK_goal2 final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0004(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Event_Text;                                 // 0x0028(0x0010)()
-	int32                                         K2Node_Event_Index_2;                              // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_Event_Color;                                // 0x003C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_Index_1;                              // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsForward;                            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_Index;                                // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue_1;              // 0x005C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LINK_goal2_C_ExecuteUbergraph_WBP_LINK_goal2;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

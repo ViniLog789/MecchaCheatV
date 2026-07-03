@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "ST_SpawnLuggageDatas_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,14 +21,13 @@ SDK_NAMESPACE_START
 class ULBPC_SpawnLuggage_C final : public USceneComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_240[0x8];                                      // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDABP_LuggagePreset_C*                  SpawnPreset;                                       // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<class UDABP_LuggagePreset_C*>          Presets;                                           // 0x0250(0x0010)(Edit, BlueprintVisible)
 	struct FST_SpawnLuggageDatas                  SpawnTarget;                                       // 0x0260(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void SpawnItem(const struct FGuid& UniqueID);
-	void ExecuteUbergraph_LBPC_SpawnLuggage(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

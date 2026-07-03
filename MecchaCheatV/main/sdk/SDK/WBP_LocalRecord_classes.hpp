@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UWBP_LocalRecord_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextBlock*                             SubText;                                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             MainText;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ABP_GameState_LINK_C*                   As_BP_Game_State_LINK;                             // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -29,7 +28,6 @@ public:
 public:
 	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_LocalRecord(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

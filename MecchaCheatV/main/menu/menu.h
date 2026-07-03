@@ -1,5 +1,6 @@
 #pragma once
 #include "Includes.h"
+#include "widgets/HostOnly.h"
 
 namespace MecchaCheatV
 {

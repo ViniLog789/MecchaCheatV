@@ -10,50 +10,49 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
+#include "BP_FirstPersonGameMode_V2_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EN_LINK_GamePhase_structs.hpp"
-#include "BP_FirstPersonGameMode_V2_classes.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonGameMode_Online_LINK.BP_FirstPersonGameMode_Online_LINK_C
-// 0x0178 (0x0540 - 0x03C8)
+// 0x0178 (0x0538 - 0x03C0)
 class ABP_FirstPersonGameMode_Online_LINK_C final : public ABP_FirstPersonGameMode_V2_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonGameMode_Online_LINK_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_GameState_LINK_C*                   BP_Game_State_LINK;                                // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_TeleportPoints_C*                   ShopTeleportPoints;                                // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class AController*, class FName>         UserStates;                                        // 0x03E8(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	int32                                         LobbyPhase;                                        // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ShopPhase;                                         // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StartTimerDefualtValue;                            // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DaySeconds;                                        // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentDaySeconds;                                 // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentTimerValue;                                 // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DayTimerUpdateInverval;                            // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRandomStream                          GenerateMapSeed;                                   // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor)
-	TArray<struct FRandomStream>                  GenerateMapSeedArray;                              // 0x0470(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UBP_LevelPriset_C*>              SpawnLevelPrisets;                                 // 0x0480(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void()>              OnGoal;                                            // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<int32>                                 RemainId;                                          // 0x04A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         MaxColorIndex;                                     // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentSpawnPointNum;                              // 0x04B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentLinkNum;                                    // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4BC[0x4];                                      // 0x04BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ABP_LinkGoalPosition_C*>         LastGoalTargets;                                   // 0x04C0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	int32                                         CurrentLastGoalNumber;                             // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentTimer;                                      // 0x04D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentPhase;                                      // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsOverTime;                                        // 0x04DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DD[0x3];                                      // 0x04DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, int32>                            PhaseTimer;                                        // 0x04E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         ModeLevel;                                         // 0x0530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   StartGameMode;                                     // 0x0534(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C0[0x8];                                      // 0x03C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_GameState_LINK_C*                   BP_Game_State_LINK;                                // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_TeleportPoints_C*                   ShopTeleportPoints;                                // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class AController*, class FName>         UserStates;                                        // 0x03E0(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	int32                                         LobbyPhase;                                        // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ShopPhase;                                         // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StartTimerDefualtValue;                            // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DaySeconds;                                        // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentDaySeconds;                                 // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentTimerValue;                                 // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DayTimerUpdateInverval;                            // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRandomStream                          GenerateMapSeed;                                   // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor)
+	TArray<struct FRandomStream>                  GenerateMapSeedArray;                              // 0x0468(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UBP_LevelPriset_C*>              SpawnLevelPrisets;                                 // 0x0478(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              OnGoal;                                            // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<int32>                                 RemainId;                                          // 0x0498(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         MaxColorIndex;                                     // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentSpawnPointNum;                              // 0x04AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentLinkNum;                                    // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ABP_LinkGoalPosition_C*>         LastGoalTargets;                                   // 0x04B8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	int32                                         CurrentLastGoalNumber;                             // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentTimer;                                      // 0x04CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentPhase;                                      // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOverTime;                                        // 0x04D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D5[0x3];                                      // 0x04D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, int32>                            PhaseTimer;                                        // 0x04D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         ModeLevel;                                         // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   StartGameMode;                                     // 0x052C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserStateClean();
@@ -119,7 +118,6 @@ public:
 	void GameOver();
 	void GameClear();
 	void Freeze(class ABP_FirstPersonCharacter_Main_C* Character);
-	void ExecuteUbergraph_BP_FirstPersonGameMode_Online_LINK(int32 EntryPoint);
 	void DayStart();
 	void CountOut();
 	void Countdown();

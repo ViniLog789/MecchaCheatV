@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function ABP_BigPen.ABP_BigPen_C.ExecuteUbergraph_ABP_BigPen
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UABP_BigPen_C::ExecuteUbergraph_ABP_BigPen(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BigPen_C", "ExecuteUbergraph_ABP_BigPen");
-
-	Params::ABP_BigPen_C_ExecuteUbergraph_ABP_BigPen Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ABP_BigPen.ABP_BigPen_C.BlueprintUpdateAnimation
 // (Event, Public, BlueprintEvent)
 // Parameters:

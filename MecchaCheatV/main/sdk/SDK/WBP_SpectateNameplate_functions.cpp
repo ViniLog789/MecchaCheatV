@@ -97,24 +97,4 @@ void UWBP_SpectateNameplate_C::GetCustomPlayerName(class FString* playerName)
 }
 
 
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.ExecuteUbergraph_WBP_SpectateNameplate
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SpectateNameplate_C::ExecuteUbergraph_WBP_SpectateNameplate(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SpectateNameplate_C", "ExecuteUbergraph_WBP_SpectateNameplate");
-
-	Params::WBP_SpectateNameplate_C_ExecuteUbergraph_WBP_SpectateNameplate Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

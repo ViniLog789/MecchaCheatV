@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -48,26 +47,6 @@ public:
 	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Bar_C_PreConstruct;
-
-// Function WBP_Bar.WBP_Bar_C.ExecuteUbergraph_WBP_Bar
-// 0x0048 (0x0048 - 0x0000)
-struct WBP_Bar_C_ExecuteUbergraph_WBP_Bar final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UOverlaySlot*                           CallFunc_SlotAsOverlaySlot_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UOverlaySlot*                           CallFunc_SlotAsOverlaySlot_ReturnValue_1;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_Left_ImplicitCast;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_Top_ImplicitCast;                // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_Right_ImplicitCast;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_Bottom_ImplicitCast;             // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Bar_C_ExecuteUbergraph_WBP_Bar;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

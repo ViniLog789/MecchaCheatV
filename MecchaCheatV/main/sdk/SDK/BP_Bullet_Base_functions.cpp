@@ -151,26 +151,6 @@ void ABP_Bullet_Base_C::GetParryState(bool* State)
 }
 
 
-// Function BP_Bullet_Base.BP_Bullet_Base_C.ExecuteUbergraph_BP_Bullet_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Bullet_Base_C::ExecuteUbergraph_BP_Bullet_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Bullet_Base_C", "ExecuteUbergraph_BP_Bullet_Base");
-
-	Params::BP_Bullet_Base_C_ExecuteUbergraph_BP_Bullet_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Bullet_Base.BP_Bullet_Base_C.DamageToPlayerController
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

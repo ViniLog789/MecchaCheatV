@@ -26,17 +26,6 @@ public:
 };
 DUMPER7_ASSERTS_BP_CrouchingCheck_C_Trigger;
 
-// Function BP_CrouchingCheck.BP_CrouchingCheck_C.ExecuteUbergraph_BP_CrouchingCheck
-// 0x0128 (0x0128 - 0x0000)
-struct BP_CrouchingCheck_C_ExecuteUbergraph_BP_CrouchingCheck final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSimulationTickParams                  K2Node_Event_Params;                               // 0x0008(0x0120)(ConstParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_BP_CrouchingCheck_C_ExecuteUbergraph_BP_CrouchingCheck;
-
 // Function BP_CrouchingCheck.BP_CrouchingCheck_C.Evaluate
 // 0x0228 (0x0228 - 0x0000)
 struct BP_CrouchingCheck_C_Evaluate final

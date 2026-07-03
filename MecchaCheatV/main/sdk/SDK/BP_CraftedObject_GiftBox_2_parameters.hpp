@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
 #include "EN_DamageType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "FinishFilter_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -63,19 +63,6 @@ public:
 	struct FST_ItemCoreDatas                      CoreDatas_GetItemInfo;                             // 0x0048(0x0070)(Parm, OutParm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_CraftedObject_GiftBox_2_C_GetItemInfo;
-
-// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.ExecuteUbergraph_BP_CraftedObject_GiftBox_2
-// 0x0080 (0x0080 - 0x0000)
-struct BP_CraftedObject_GiftBox_2_C_ExecuteUbergraph_BP_CraftedObject_GiftBox_2 final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_SelfWeight_ImplicitCast;        // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_GiftBox_2_C_ExecuteUbergraph_BP_CraftedObject_GiftBox_2;
 
 // Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.Damage
 // 0x01A0 (0x01A0 - 0x0000)

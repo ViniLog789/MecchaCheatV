@@ -182,26 +182,6 @@ void UWBP_HealthAndStaminaBar_C::HealthBarUpdate(double Value)
 }
 
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.ExecuteUbergraph_WBP_HealthAndStaminaBar
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HealthAndStaminaBar_C::ExecuteUbergraph_WBP_HealthAndStaminaBar(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "ExecuteUbergraph_WBP_HealthAndStaminaBar");
-
-	Params::WBP_HealthAndStaminaBar_C_ExecuteUbergraph_WBP_HealthAndStaminaBar Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

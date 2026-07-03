@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_classes.hpp"
 
 
@@ -21,11 +20,10 @@ SDK_NAMESPACE_START
 class ABP_BigPenController_C final : public AAIController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_3C8[0x8];                                      // 0x03C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_BigPenController(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

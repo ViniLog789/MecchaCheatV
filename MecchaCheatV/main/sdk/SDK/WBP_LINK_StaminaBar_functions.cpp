@@ -56,24 +56,4 @@ void UWBP_LINK_StaminaBar_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.ExecuteUbergraph_WBP_LINK_StaminaBar
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_LINK_StaminaBar_C::ExecuteUbergraph_WBP_LINK_StaminaBar(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LINK_StaminaBar_C", "ExecuteUbergraph_WBP_LINK_StaminaBar");
-
-	Params::WBP_LINK_StaminaBar_C_ExecuteUbergraph_WBP_LINK_StaminaBar Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "ST_HandControlDatas_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,14 +21,13 @@ SDK_NAMESPACE_START
 class UBPC_AutoAttachHandControl_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FST_HandControlDatas                   ReplicateData;                                     // 0x00C0(0x0060)(Edit, BlueprintVisible, Net, ZeroConstructor, RepNotify, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ReceiveBeginPlay();
 	void OnRep_ReplicateData();
 	void Grab();
-	void ExecuteUbergraph_BPC_AutoAttachHandControl(int32 EntryPoint);
 	void DestroySelf();
 
 public:

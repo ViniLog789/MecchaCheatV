@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "RedpointEOSFramework_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UBPGI_Main_C final : public URedpointGameInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0228(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_228[0x8];                                      // 0x0228(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CursorSpeed;                                       // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 InputDeviceName;                                   // 0x0238(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class ULINK_ServerSaveData_C*                 LINK_ServerSaveData;                               // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -33,7 +32,6 @@ public:
 
 public:
 	void CloudSaveSync();
-	void ExecuteUbergraph_BPGI_Main(int32 EntryPoint);
 	void OnCallFailed_0646E9BD4A18BBF176FCAEA43F9771E1(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
 	void OnCallFailed_0646E9BD4A18BBF176FCAEA44F5EA191(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
 	void OnCallFailed_4473CEAA43FDA8DFD02079B1F2500B1B(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename);

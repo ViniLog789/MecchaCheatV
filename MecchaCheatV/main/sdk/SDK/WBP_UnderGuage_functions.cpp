@@ -56,24 +56,4 @@ void UWBP_UnderGuage_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_UnderGuage.WBP_UnderGuage_C.ExecuteUbergraph_WBP_UnderGuage
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UnderGuage_C::ExecuteUbergraph_WBP_UnderGuage(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UnderGuage_C", "ExecuteUbergraph_WBP_UnderGuage");
-
-	Params::WBP_UnderGuage_C_ExecuteUbergraph_WBP_UnderGuage Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

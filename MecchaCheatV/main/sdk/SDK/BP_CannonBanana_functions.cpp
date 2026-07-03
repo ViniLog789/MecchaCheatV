@@ -91,26 +91,6 @@ void ABP_CannonBanana_C::GetParryState(bool* State)
 }
 
 
-// Function BP_CannonBanana.BP_CannonBanana_C.ExecuteUbergraph_BP_CannonBanana
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CannonBanana_C::ExecuteUbergraph_BP_CannonBanana(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CannonBanana_C", "ExecuteUbergraph_BP_CannonBanana");
-
-	Params::BP_CannonBanana_C_ExecuteUbergraph_BP_CannonBanana Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CannonBanana.BP_CannonBanana_C.DamageToPlayerController
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

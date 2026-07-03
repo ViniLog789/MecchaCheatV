@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
@@ -29,17 +27,6 @@ public:
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_EnvironmentSystem_Tree_C_UserConstructionScript;
-
-// Function BP_EnvironmentSystem_Tree.BP_EnvironmentSystem_Tree_C.ExecuteUbergraph_BP_EnvironmentSystem_Tree
-// 0x0020 (0x0020 - 0x0000)
-struct BP_EnvironmentSystem_Tree_C_ExecuteUbergraph_BP_EnvironmentSystem_Tree final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnvironmentSystem_Tree_C_ExecuteUbergraph_BP_EnvironmentSystem_Tree;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

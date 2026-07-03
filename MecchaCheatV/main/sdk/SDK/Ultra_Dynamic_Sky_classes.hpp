@@ -10,30 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "UDS_Space_Planet_structs.hpp"
-#include "UDS_Project_Mode_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UDS_SkyMode_structs.hpp"
-#include "UDS_SkyLightMode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "UDS_PropertyType_structs.hpp"
+#include "UDS_CachedProperties_structs.hpp"
+#include "UDS_SkyLightMode_structs.hpp"
+#include "UDS_FogColorMode_structs.hpp"
 #include "UDS_ColorMode_structs.hpp"
-#include "UDS_DateAndTime_structs.hpp"
+#include "UDS_Project_Mode_structs.hpp"
 #include "UDS_RenderingFeatureLevel_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "UDS_Modifier_Float_Property_structs.hpp"
-#include "UDS_RunContext_structs.hpp"
 #include "UDS_VolRT_Mode_structs.hpp"
 #include "UDS_CityPresets_structs.hpp"
-#include "UDS_PropertyType_structs.hpp"
-#include "UDS_Planet_Lightsource_structs.hpp"
 #include "UDS_LensFlareType_structs.hpp"
-#include "UDS_FogColorMode_structs.hpp"
 #include "UDS_Post_Process_Stage_structs.hpp"
-#include "UDS_CachedProperties_structs.hpp"
-#include "UDS_Cache_Group_structs.hpp"
-#include "UDS_Modifier_Color_Property_structs.hpp"
-#include "RadialStorm_CoverageBrush_structs.hpp"
+#include "UDS_RunContext_structs.hpp"
+#include "UDS_Space_Planet_structs.hpp"
 #include "UDS_Space_Parent_structs.hpp"
+#include "UDS_Modifier_Color_Property_structs.hpp"
+#include "UDS_DateAndTime_structs.hpp"
+#include "UDS_Modifier_Float_Property_structs.hpp"
+#include "RadialStorm_CoverageBrush_structs.hpp"
+#include "UDS_Cache_Group_structs.hpp"
+#include "UDS_Planet_Lightsource_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -43,7 +43,7 @@ SDK_NAMESPACE_START
 class AUltra_Dynamic_Sky_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   Moon_Handle;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   Sun_Handle;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   S;                                                 // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -1212,7 +1212,6 @@ public:
 	void Finish_Time_Transition();
 	void Sunrise_Times();
 	void Filtered_Moon_Light_Intensity(double Unfiltered, double* Intensity);
-	void ExecuteUbergraph_Ultra_Dynamic_Sky(int32 EntryPoint);
 	void Editor_Update_from_Weather();
 	void Editor_Tick(const struct FVector& Editor_Camera_Location, const struct FRotator& Editor_Camera_Rotation, bool Sequencer_Open);
 	void Editor_Return_from_PIE();

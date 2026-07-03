@@ -40,24 +40,4 @@ void ABP_Parasol_C::PickState(bool State_PickState, class ABP_FirstPersonCharact
 }
 
 
-// Function BP_Parasol.BP_Parasol_C.ExecuteUbergraph_BP_Parasol
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Parasol_C::ExecuteUbergraph_BP_Parasol(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Parasol_C", "ExecuteUbergraph_BP_Parasol");
-
-	Params::BP_Parasol_C_ExecuteUbergraph_BP_Parasol Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

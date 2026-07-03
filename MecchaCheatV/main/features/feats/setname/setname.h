@@ -8,7 +8,7 @@ namespace MecchaCheatV::Features::Player
 	public:
 		SetName();
 		~SetName() override = default;
-		void OnActivate() override;
+		void OnActivate() override {}
 		void OnDeactivate() override;
 		void OnRender() override {}
 		void OnMenuRender() override;

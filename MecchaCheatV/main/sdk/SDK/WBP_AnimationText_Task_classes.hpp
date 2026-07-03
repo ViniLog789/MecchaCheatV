@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -21,14 +20,13 @@ SDK_NAMESPACE_START
 class UWBP_AnimationText_Task_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class URichTextBlock*                         MainTextBlock;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Top;                                               // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class FText                                   In_Text;                                           // 0x0358(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_AnimationText_Task(int32 EntryPoint);
 	void AnimationEndEvent();
 
 public:

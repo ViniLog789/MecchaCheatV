@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UBPC_LinkCharacterCustomControl_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 MainMesh;                                          // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         BodyColorIndex;                                    // 0x00C8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -47,7 +46,6 @@ public:
 	void OnRep_HeadAccessorieIndex();
 	void OnRep_BodyColorIndex();
 	void Init(class UMaterialInstanceDynamic* OwnerDynamicMaterial);
-	void ExecuteUbergraph_BPC_LinkCharacterCustomControl(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

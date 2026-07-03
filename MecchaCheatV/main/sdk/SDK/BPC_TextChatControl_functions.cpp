@@ -82,24 +82,4 @@ void UBPC_TextChatControl_C::SendToText_Client_(const class FString& MainString,
 }
 
 
-// Function BPC_TextChatControl.BPC_TextChatControl_C.ExecuteUbergraph_BPC_TextChatControl
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_TextChatControl_C::ExecuteUbergraph_BPC_TextChatControl(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TextChatControl_C", "ExecuteUbergraph_BPC_TextChatControl");
-
-	Params::BPC_TextChatControl_C_ExecuteUbergraph_BPC_TextChatControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

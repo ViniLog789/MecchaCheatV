@@ -253,26 +253,6 @@ void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInpu
 }
 
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.ExecuteUbergraph_WBP_VoiceChatState
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_VoiceChatState_C::ExecuteUbergraph_WBP_VoiceChatState(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatState_C", "ExecuteUbergraph_WBP_VoiceChatState");
-
-	Params::WBP_VoiceChatState_C_ExecuteUbergraph_WBP_VoiceChatState Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_VoiceChatState.WBP_VoiceChatState_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

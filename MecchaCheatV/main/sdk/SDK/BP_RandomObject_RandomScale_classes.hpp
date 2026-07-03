@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_RandomObject_Base_classes.hpp"
 
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_RandomObject_RandomScale_C final : public ABP_RandomObject_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_RandomObject_RandomScale_C;      // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ScaleRange;                                        // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              AddRandomYaw;                                      // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         TargetActors;                                      // 0x02E0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
@@ -31,15 +30,14 @@ public:
 	TMap<class AActor*, struct FVector>           DefaultScale;                                      // 0x0348(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
-	void UserConstructionScript();
-	void SpawnSet();
-	void SetIndex(bool* Error);
-	void ReceiveBeginPlay();
-	void OnRep_Seed();
-	void OnRep_CurrentIndex();
-	void IndexUpdate();
-	void ExecuteUbergraph_BP_RandomObject_RandomScale(int32 EntryPoint);
 	void CheckLoop();
+	void IndexUpdate();
+	void OnRep_CurrentIndex();
+	void OnRep_Seed();
+	void ReceiveBeginPlay();
+	void SetIndex(bool* Error);
+	void SpawnSet();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

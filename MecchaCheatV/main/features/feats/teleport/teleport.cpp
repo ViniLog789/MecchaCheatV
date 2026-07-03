@@ -63,6 +63,8 @@ void Teleport::OnMenuRender()
         return;
     }
 
+    ImGui::BeginHostOnly();
+
     ImGui::SeparatorText("Custom teleport");
 
     float teleportX = CONFIG_FLOAT(GetConfigManager(), "TeleportLocationX");
@@ -98,23 +100,29 @@ void Teleport::OnMenuRender()
 
     if (!cachedPlayers.empty())
     {
+        std::vector<std::string> playerNames;
         std::vector<const char*> names;
+
+        playerNames.reserve(cachedPlayers.size());
         names.reserve(cachedPlayers.size());
 
         for (auto* pawn : cachedPlayers)
         {
             if (!Utils::isObjectValid(pawn))
             {
-                names.push_back("Invalid Player");
+                playerNames.emplace_back("Invalid Player");
                 continue;
             }
 
             SDK::APlayerState* ps = pawn->PlayerState;
             if (ps)
-                names.push_back(ps->PlayerNamePrivate.ToString().c_str());
+                playerNames.emplace_back(ps->PlayerNamePrivate.ToString());
             else
-                names.push_back("Unknown");
+                playerNames.emplace_back("Unknown");
         }
+
+        for (auto& str : playerNames)
+            names.push_back(str.c_str());
 
         ImGui::Combo("Select player", &selectedPlayerIndex, names.data(), (int)names.size());
     }
@@ -134,6 +142,8 @@ void Teleport::OnMenuRender()
             }
         }
     }
+
+	ImGui::EndHostOnly();
 
     ImGui::PopStyleVar();
 }

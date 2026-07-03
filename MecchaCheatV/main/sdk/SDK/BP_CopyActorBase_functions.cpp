@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CopyActorBase.BP_CopyActorBase_C.ExecuteUbergraph_BP_CopyActorBase
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CopyActorBase_C::ExecuteUbergraph_BP_CopyActorBase(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "ExecuteUbergraph_BP_CopyActorBase");
-
-	Params::BP_CopyActorBase_C_ExecuteUbergraph_BP_CopyActorBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CopyActorBase.BP_CopyActorBase_C.Fix
 // (Public, BlueprintCallable, BlueprintEvent)
 

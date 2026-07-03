@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_PlayerCounter_Base_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class ABP_SortieArea_C final : public ABP_PlayerCounter_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SortieArea_C;                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_300[0x8];                                      // 0x0300(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   LinkFlagOverlapZone;                               // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   ring;                                              // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         OverlapingPlayers_0;                               // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
@@ -30,7 +29,6 @@ public:
 
 public:
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_SortieArea(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

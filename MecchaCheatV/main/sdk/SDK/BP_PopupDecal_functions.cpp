@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_PopupDecal_classes.hpp"
-#include "BP_PopupDecal_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,26 +26,6 @@ void ABP_PopupDecal_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_PopupDecal_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PopupDecal.BP_PopupDecal_C.ExecuteUbergraph_BP_PopupDecal
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PopupDecal_C::ExecuteUbergraph_BP_PopupDecal(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PopupDecal_C", "ExecuteUbergraph_BP_PopupDecal");
-
-	Params::BP_PopupDecal_C_ExecuteUbergraph_BP_PopupDecal Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

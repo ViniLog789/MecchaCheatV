@@ -42,26 +42,6 @@ void UWBP_CentorInteract_C::SetTextAndImage(TSoftObjectPtr<class UTexture2D> Sof
 }
 
 
-// Function WBP_CentorInteract.WBP_CentorInteract_C.ExecuteUbergraph_WBP_CentorInteract
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CentorInteract_C::ExecuteUbergraph_WBP_CentorInteract(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CentorInteract_C", "ExecuteUbergraph_WBP_CentorInteract");
-
-	Params::WBP_CentorInteract_C_ExecuteUbergraph_WBP_CentorInteract Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_CentorInteract.WBP_CentorInteract_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

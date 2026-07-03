@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
+#include "ENUM_ActorType_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
 #include "EN_EnemyType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ENUM_ActorType_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "EN_ThrowState_structs.hpp"
-#include "EN_DamageType_structs.hpp"
-#include "ST_AttackDatas_structs.hpp"
 #include "EN_StrafingDirection_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "EN_ThrowState_structs.hpp"
+#include "ST_AttackDatas_structs.hpp"
 #include "EN_StanType_structs.hpp"
-#include "ENUM_CameraMode_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AttackType_structs.hpp"
 
@@ -32,8 +32,7 @@ SDK_NAMESPACE_START
 class AEnemy_AI_Base_C final : public ACharacter
 {
 public:
-	uint8                                         Pad_648[0x8];                                      // 0x0648(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0650(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_648[0x10];                                     // 0x0648(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAIPerceptionComponent*                 AIPerception;                                      // 0x0658(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   BoundBox;                                          // 0x0660(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_CharacterStatusGaugeControl_C*     BPC_SuperArmorGaugeControl;                        // 0x0668(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -96,7 +95,7 @@ public:
 	bool                                          IsStrafing;                                        // 0x08F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8F5[0x3];                                      // 0x08F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ReciveDamageValue;                                 // 0x08F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class WBP_LockOn::UWBP_LockOn_C*              LockOnUI;                                          // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class WBP_LockOn_0::UWBP_LockOn_C*            LockOnUI;                                          // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        MaxHealth;                                         // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Add_Multiply;                                      // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(EN_ThrowState ThrowState)> ThrowEvent;                             // 0x0918(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -250,7 +249,6 @@ public:
 	void GetAvoidanceRotation(struct FRotator* Rotation);
 	void GetActorInfo(struct FTransform* DefaultTransform, bool* Not_In_Shot, struct FVector* CentorPosition, bool* IsPenguin, ENUM_ActorType* ActorType, bool* NonInPhoto);
 	void Fix();
-	void ExecuteUbergraph_Enemy_AI_Base(int32 EntryPoint);
 	void DownTime();
 	void DestroyLockOnSystems();
 	void Delete();

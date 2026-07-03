@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -22,7 +20,7 @@ SDK_NAMESPACE_START
 class UWBP_PaintCursor_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextBlock*                             TextBlock_48;                                      // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_20;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_0;                                           // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -30,11 +28,10 @@ public:
 	class ABP_FirstPersonCharacter_cLeon_Character_C* As_BP_First_Person_Character_C_Leon;           // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void SetPickVisibility(bool Visibility);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_PaintCursor(int32 EntryPoint);
 	void Construct();
+	void PreConstruct(bool IsDesignTime);
+	void SetPickVisibility(bool Visibility_0);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

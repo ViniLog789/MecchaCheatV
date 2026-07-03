@@ -76,26 +76,6 @@ void ULBPC_Glue_C::ReceiveBeginPlay()
 }
 
 
-// Function LBPC_Glue.LBPC_Glue_C.ExecuteUbergraph_LBPC_Glue
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULBPC_Glue_C::ExecuteUbergraph_LBPC_Glue(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_Glue_C", "ExecuteUbergraph_LBPC_Glue");
-
-	Params::LBPC_Glue_C_ExecuteUbergraph_LBPC_Glue Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function LBPC_Glue.LBPC_Glue_C.DoConnect
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:

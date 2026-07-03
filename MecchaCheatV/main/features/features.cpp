@@ -48,8 +48,10 @@ FeatureHandler::FeatureHandler() : CurrentType(TYPE_NONE)
 	ADD_FEATURE(this, FOVChanger);
 	ADD_FEATURE(this, SetName);
 	ADD_FEATURE(this, AlwaysVisible);
+    ADD_FEATURE(this, NoDetection);
 	ADD_FEATURE(this, AutoDissShadow);
 	ADD_FEATURE(this, Teleport);
+	ADD_FEATURE(this, SprintMultiplier);
 
     MainFeatureHandler = this;
 }

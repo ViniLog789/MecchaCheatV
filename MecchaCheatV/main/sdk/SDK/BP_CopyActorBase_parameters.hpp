@@ -20,42 +20,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_CopyActorBase.BP_CopyActorBase_C.ExecuteUbergraph_BP_CopyActorBase
-// 0x0270 (0x0270 - 0x0000)
-struct BP_CopyActorBase_C_ExecuteUbergraph_BP_CopyActorBase final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   CallFunc_AddComponentByClass_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EN_StanType                                   K2Node_Event_StanType;                             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Event_Value;                                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_TargetActor;                          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_DamageValue;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_TeamIndex;                            // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 K2Node_Event_DamageType;                           // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35[0xB];                                       // 0x0035(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             K2Node_Event_SourceAgentPoint;                     // 0x0040(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_UnAvoidable;                          // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_Event_DamageName;                           // 0x00A4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_Event_HitRezult;                            // 0x00B0(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_SourceActor;                          // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B8[0x8];                                      // 0x01B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             K2Node_Event_NewPosition;                          // 0x01C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Event_HitNormal;                            // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue_1;              // 0x0261(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0262(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CopyActorBase_C_ExecuteUbergraph_BP_CopyActorBase;
-
 // Function BP_CopyActorBase.BP_CopyActorBase_C.Reverse
 // 0x0080 (0x0080 - 0x0000)
 struct BP_CopyActorBase_C_Reverse final

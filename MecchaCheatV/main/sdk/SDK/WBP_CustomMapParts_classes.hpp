@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UWBP_CustomMapParts_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextBlock*                             MapName;                                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_ChoseMap;                // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBorder*                                Border_0;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -36,7 +35,6 @@ public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnSuccess_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
 	void OnFailure_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void ExecuteUbergraph_WBP_CustomMapParts(int32 EntryPoint);
 	void Construct();
 	void BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 

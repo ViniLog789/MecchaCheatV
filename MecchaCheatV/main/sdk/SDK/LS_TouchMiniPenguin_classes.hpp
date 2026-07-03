@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "LevelSequence_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class ULS_TouchMiniPenguin_DirectorBP_C final : public ULevelSequenceDirector
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_3();
@@ -32,7 +31,6 @@ public:
 	struct FMovieSceneDynamicBindingResolveResult RightItemPositon_DynamicBinding();
 	struct FMovieSceneDynamicBindingResolveResult LeftItemPositon_DynamicBinding();
 	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
-	void ExecuteUbergraph_LS_TouchMiniPenguin_DirectorBP(int32 EntryPoint);
 	void BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
 	void BP_AI_Base_Event(class ABP_AI_Base_C* BP_AI_Base);
 

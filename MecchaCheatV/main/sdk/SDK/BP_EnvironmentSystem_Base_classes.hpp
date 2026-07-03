@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "EN_DamageType_structs.hpp"
 #include "EN_StanType_structs.hpp"
@@ -23,11 +22,10 @@ SDK_NAMESPACE_START
 class ABP_EnvironmentSystem_Base_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_EnvironmentSystem_Base(int32 EntryPoint);
 	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void StaminaDamage(double Value);
 	void StanDamage(EN_StanType StanType);

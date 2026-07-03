@@ -104,26 +104,6 @@ void UWBP_MapContents_C::OnFailure_F47348424771535C48E222B9B9CA8A4E(const class 
 }
 
 
-// Function WBP_MapContents.WBP_MapContents_C.ExecuteUbergraph_WBP_MapContents
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_MapContents_C::ExecuteUbergraph_WBP_MapContents(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MapContents_C", "ExecuteUbergraph_WBP_MapContents");
-
-	Params::WBP_MapContents_C_ExecuteUbergraph_WBP_MapContents Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_MapContents.WBP_MapContents_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

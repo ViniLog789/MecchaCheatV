@@ -96,24 +96,4 @@ void UWBP_LINK_goal2_C::FinishEvent()
 }
 
 
-// Function WBP_LINK_goal2.WBP_LINK_goal2_C.ExecuteUbergraph_WBP_LINK_goal2
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_LINK_goal2_C::ExecuteUbergraph_WBP_LINK_goal2(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LINK_goal2_C", "ExecuteUbergraph_WBP_LINK_goal2");
-
-	Params::WBP_LINK_goal2_C_ExecuteUbergraph_WBP_LINK_goal2 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

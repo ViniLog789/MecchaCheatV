@@ -50,26 +50,6 @@ void UWBP_ConfigSound_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_ConfigSound.WBP_ConfigSound_C.ExecuteUbergraph_WBP_ConfigSound
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ConfigSound_C::ExecuteUbergraph_WBP_ConfigSound(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigSound_C", "ExecuteUbergraph_WBP_ConfigSound");
-
-	Params::WBP_ConfigSound_C_ExecuteUbergraph_WBP_ConfigSound Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ConfigSound.WBP_ConfigSound_C.DeleteConfigWidget
 // (BlueprintCallable, BlueprintEvent)
 

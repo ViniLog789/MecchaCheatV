@@ -128,24 +128,4 @@ void ABP_CraftedObject_Log_Sand_C::GetItemInfo(ENUM_HandType* HandType_GetItemIn
 }
 
 
-// Function BP_CraftedObject_Log_Sand.BP_CraftedObject_Log_Sand_C.ExecuteUbergraph_BP_CraftedObject_Log_Sand
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Log_Sand_C::ExecuteUbergraph_BP_CraftedObject_Log_Sand(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Log_Sand_C", "ExecuteUbergraph_BP_CraftedObject_Log_Sand");
-
-	Params::BP_CraftedObject_Log_Sand_C_ExecuteUbergraph_BP_CraftedObject_Log_Sand Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

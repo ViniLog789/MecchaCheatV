@@ -432,26 +432,6 @@ void UWBP_cLeonMain_C::GameModeIndexUpdate(int32 Index_0)
 }
 
 
-// Function WBP_cLeonMain.WBP_cLeonMain_C.ExecuteUbergraph_WBP_cLeonMain
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonMain_C::ExecuteUbergraph_WBP_cLeonMain(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonMain_C", "ExecuteUbergraph_WBP_cLeonMain");
-
-	Params::WBP_cLeonMain_C_ExecuteUbergraph_WBP_cLeonMain Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_cLeonMain.WBP_cLeonMain_C.eeyan
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

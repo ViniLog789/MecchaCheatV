@@ -10,11 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "BP_CraftedObject_Base_classes.hpp"
-#include "Engine_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
+#include "BP_CraftedObject_Base_classes.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -24,7 +23,7 @@ SDK_NAMESPACE_START
 class ABP_CraftedObject_GiftBox_1_C final : public ABP_CraftedObject_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CraftedObject_GiftBox_1_C;       // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_350[0x8];                                      // 0x0350(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraComponent*                      Niagara;                                           // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int32                                         OverrideMass;                                      // 0x0360(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
@@ -33,7 +32,6 @@ public:
 	void ReceiveActorBeginOverlap(class AActor* OtherActor_ReceiveActorBeginOverlap);
 	void IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage);
 	void GetItemInfo(ENUM_HandType* HandType_GetItemInfo, ENUM_ClassType* ClassType_GetItemInfo, bool* NotPickUp_GetItemInfo, struct FRotator* HaveRotation_GetItemInfo, struct FVector* Add_Position_GetItemInfo, bool* IsBoneAttach_GetItemInfo, ENUM_ItemBindType* BindType_GetItemInfo, class FName* BoneName_GetItemInfo, struct FST_ItemCoreDatas* CoreDatas_GetItemInfo);
-	void ExecuteUbergraph_BP_CraftedObject_GiftBox_1(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

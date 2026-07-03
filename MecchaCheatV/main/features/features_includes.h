@@ -7,3 +7,5 @@
 #include "feats/alwvisible/alwvisible.h"
 #include "feats/autodisshadow/autodisshadow.h"
 #include "feats/teleport/teleport.h"
+#include "feats/sprintmultiplier/sprintmultiplier.h"
+#include "feats/nodetection/nodetection.h"

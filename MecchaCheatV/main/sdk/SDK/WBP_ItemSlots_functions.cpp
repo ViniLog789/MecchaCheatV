@@ -121,24 +121,4 @@ void UWBP_ItemSlots_C::GetCurrentItemData(struct FCPP_GameItemData* ItemData)
 }
 
 
-// Function WBP_ItemSlots.WBP_ItemSlots_C.ExecuteUbergraph_WBP_ItemSlots
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ItemSlots_C::ExecuteUbergraph_WBP_ItemSlots(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemSlots_C", "ExecuteUbergraph_WBP_ItemSlots");
-
-	Params::WBP_ItemSlots_C_ExecuteUbergraph_WBP_ItemSlots Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

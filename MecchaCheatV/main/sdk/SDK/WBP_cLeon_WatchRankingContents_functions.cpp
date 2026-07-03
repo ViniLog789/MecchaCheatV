@@ -36,24 +36,4 @@ void UWBP_cLeon_WatchRankingContents_C::PreConstruct(bool IsDesignTime_PreConstr
 }
 
 
-// Function WBP_cLeon_WatchRankingContents.WBP_cLeon_WatchRankingContents_C.ExecuteUbergraph_WBP_cLeon_WatchRankingContents
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeon_WatchRankingContents_C::ExecuteUbergraph_WBP_cLeon_WatchRankingContents(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeon_WatchRankingContents_C", "ExecuteUbergraph_WBP_cLeon_WatchRankingContents");
-
-	Params::WBP_cLeon_WatchRankingContents_C_ExecuteUbergraph_WBP_cLeon_WatchRankingContents Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

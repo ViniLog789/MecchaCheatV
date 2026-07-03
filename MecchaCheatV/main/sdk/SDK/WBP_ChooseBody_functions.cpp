@@ -58,24 +58,4 @@ void UWBP_ChooseBody_C::OnClickWithClass(class UWBP_BodySelect_C* SelfObject, cl
 }
 
 
-// Function WBP_ChooseBody.WBP_ChooseBody_C.ExecuteUbergraph_WBP_ChooseBody
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ChooseBody_C::ExecuteUbergraph_WBP_ChooseBody(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ChooseBody_C", "ExecuteUbergraph_WBP_ChooseBody");
-
-	Params::WBP_ChooseBody_C_ExecuteUbergraph_WBP_ChooseBody Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

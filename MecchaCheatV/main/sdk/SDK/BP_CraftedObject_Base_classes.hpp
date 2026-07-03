@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "EN_StanType_structs.hpp"
 
 
@@ -27,7 +26,7 @@ SDK_NAMESPACE_START
 class ABP_CraftedObject_Base_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBPC_PhysicsNetDormancyControl_C*       BPC_PhysicsNetDormancyControl;                     // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_CollisionSound_C*                  BPC_CollisionSound;                                // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBoxComponent*                          Box;                                               // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -37,7 +36,6 @@ public:
 	class ABP_FirstPersonCharacter_LINK_C*        ForceGrabTarget;                                   // 0x0348(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, RepNotify, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_CraftedObject_Base(int32 EntryPoint);
 	void ReceiveDestroyed();
 	void SetForceGrabTarget(class ABP_FirstPersonCharacter_LINK_C* ForceGrabTarget_0);
 	void ForceGrab();

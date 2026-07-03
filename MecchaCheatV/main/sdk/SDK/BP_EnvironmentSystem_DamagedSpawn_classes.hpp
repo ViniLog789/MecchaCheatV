@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_EnvironmentSystem_Base_classes.hpp"
 #include "EN_DamageType_structs.hpp"
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_EnvironmentSystem_DamagedSpawn_C : public ABP_EnvironmentSystem_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EnvironmentSystem_DamagedSpawn_C; // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBillboardComponent*                    SpawnPosition;                                     // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int32                                         SpawnEventLimit;                                   // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -37,7 +36,6 @@ public:
 	bool                                          UniqueSpawn;                                       // 0x035A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn(int32 EntryPoint);
 	void ReplicateEvent();
 	void SpawnMaterial();
 	void ReceiveBeginPlay();

@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UWBP_BodySelect_C final : public UUINavComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0910(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_910[0x8];                                      // 0x0910(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock;                             // 0x0918(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_0;                                           // 0x0920(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBorder*                                Border_56;                                         // 0x0928(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -33,7 +32,6 @@ public:
 public:
 	void SetSelectState(bool State);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_BodySelect(int32 EntryPoint);
 	void BndEvt__WBP_BodySelect_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 
 public:

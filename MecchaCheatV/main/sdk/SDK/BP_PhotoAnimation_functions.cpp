@@ -375,26 +375,6 @@ void ABP_PhotoAnimation_C::Fire(bool MiniFire)
 }
 
 
-// Function BP_PhotoAnimation.BP_PhotoAnimation_C.ExecuteUbergraph_BP_PhotoAnimation
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PhotoAnimation_C::ExecuteUbergraph_BP_PhotoAnimation(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotoAnimation_C", "ExecuteUbergraph_BP_PhotoAnimation");
-
-	Params::BP_PhotoAnimation_C_ExecuteUbergraph_BP_PhotoAnimation Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PhotoAnimation.BP_PhotoAnimation_C.DropItem
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

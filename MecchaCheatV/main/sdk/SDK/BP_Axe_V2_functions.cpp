@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Axe_V2.BP_Axe_V2_C.ExecuteUbergraph_BP_Axe_V2
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Axe_V2_C::ExecuteUbergraph_BP_Axe_V2(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Axe_V2_C", "ExecuteUbergraph_BP_Axe_V2");
-
-	Params::BP_Axe_V2_C_ExecuteUbergraph_BP_Axe_V2 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Axe_V2.BP_Axe_V2_C.BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

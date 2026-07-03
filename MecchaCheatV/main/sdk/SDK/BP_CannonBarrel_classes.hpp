@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_CraftedObject_Base_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class ABP_CannonBarrel_C final : public ABP_CraftedObject_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CannonBarrel_C;                  // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_350[0x8];                                      // 0x0350(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBillboardComponent*                    SpawnLocation_1;                                   // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBillboardComponent*                    SpawnLocation_3;                                   // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBillboardComponent*                    SpawnLocation_2;                                   // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -30,7 +29,6 @@ public:
 	void ReceiveDestroyed();
 	void ReceiveBeginPlay();
 	void IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage);
-	void ExecuteUbergraph_BP_CannonBarrel(int32 EntryPoint);
 	void BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 
 public:

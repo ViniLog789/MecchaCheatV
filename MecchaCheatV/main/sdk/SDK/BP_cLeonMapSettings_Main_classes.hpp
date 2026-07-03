@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,18 +20,17 @@ SDK_NAMESPACE_START
 class ABP_cLeonMapSettings_Main_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   StaticMesh1;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class ABP_GameMode_cLeon_C*                   As_BP_Game_Mode_C_Leon;                            // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
-	void ExecuteUbergraph_BP_cLeonMapSettings_Main(int32 EntryPoint);
-	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
-	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);
 	void BPI_InteractEnd();
+	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);
+	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
+	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

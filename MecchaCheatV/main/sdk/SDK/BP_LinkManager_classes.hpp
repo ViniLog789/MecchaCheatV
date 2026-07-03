@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "PenguinHotel_classes.hpp"
 #include "EN_GlueType_structs.hpp"
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_LinkManager_C final : public ACPP_LinkManager
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_308[0x8];                                      // 0x0308(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int32                                         LatestInstanceID;                                  // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         BranchInstanceID;                                  // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -43,7 +42,6 @@ public:
 	void Propagation(class UPrimitiveComponent* TargetPrimitive, TArray<int32>& UsedBranch);
 	void MergeCheckForce(class UPrimitiveComponent* Primitive, const TSet<int32>& UsedBranchIndex, double& ForceValue);
 	void MergeCheck(class UPrimitiveComponent* Primitive, TArray<int32>& UsedBranchIndex);
-	void ExecuteUbergraph_BP_LinkManager(int32 EntryPoint);
 	void AddCustomForce(class UPrimitiveComponent* SourcePrimitive, class UPrimitiveComponent* PrePrimitive, double& ForceValue);
 
 public:

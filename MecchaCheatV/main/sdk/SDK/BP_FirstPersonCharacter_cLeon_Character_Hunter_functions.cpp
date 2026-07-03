@@ -622,9 +622,9 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnBlendOut_12AC243E438FB
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_FirstPersonCharacter_cLeon_Character_C*FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonPlayerState_C*     SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_C* SourcePlayerState)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -643,12 +643,12 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::KillPlayer(class ABP_Fir
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3
 // (BlueprintEvent)
 // Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FInputActionValue&         ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, float ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, float TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, const class UInputAction* SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3)
 {
 	static class UFunction* Func = nullptr;
 
@@ -657,10 +657,10 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Shot_K2Node
 
 	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 Parms{};
 
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
+	Parms.ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 = std::move(ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3);
+	Parms.ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 = ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3;
+	Parms.TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 = TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3;
+	Parms.SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 = SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -773,26 +773,6 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::HitSuccess(class ABP_Fir
 	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess Parms{};
 
 	Parms.FirstpersonCharacter = FirstpersonCharacter;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

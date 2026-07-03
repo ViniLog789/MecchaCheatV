@@ -16,188 +16,69 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PaintMode_Cursor_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "Tick");
-
-	Params::WBP_PaintMode_Cursor_C_Tick Parms{};
-
-	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
-	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ShadowState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ToggleState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PaintMode_Cursor_C::ShadowState(bool ToggleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ShadowState");
-
-	Params::WBP_PaintMode_Cursor_C_ShadowState Parms{};
-
-	Parms.ToggleState = ToggleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.SetCursorPosition
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.AddCursorPosition
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector2D&                 SetValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PaintMode_Cursor_C::SetCursorPosition(const struct FVector2D& SetValue)
+void UWBP_PaintMode_Cursor_C::AddCursorPosition(const struct FVector2D& AddValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "SetCursorPosition");
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "AddCursorPosition");
 
-	Params::WBP_PaintMode_Cursor_C_SetCursorPosition Parms{};
+	Params::WBP_PaintMode_Cursor_C_AddCursorPosition Parms{};
 
-	Parms.SetValue = std::move(SetValue);
+	Parms.AddValue = std::move(AddValue);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_PaintMode_Cursor_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_PaintMode_Cursor_C::BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "PreConstruct");
-
-	Params::WBP_PaintMode_Cursor_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.PaintViewLookUpdate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PaintMode_Cursor_C::PaintViewLookUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "PaintViewLookUpdate");
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.MetallicOrRoughnessChanged
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ColorChanged
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              NewColor                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::ColorChanged(const struct FLinearColor& NewColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ColorChanged");
+
+	Params::WBP_PaintMode_Cursor_C_ColorChanged Parms{};
+
+	Parms.NewColor = std::move(NewColor);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ColorPick
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   NewMetallic                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   NewRoughness                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PaintMode_Cursor_C::MetallicOrRoughnessChanged(float NewMetallic, float NewRoughness)
+void UWBP_PaintMode_Cursor_C::ColorPick()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "MetallicOrRoughnessChanged");
-
-	Params::WBP_PaintMode_Cursor_C_MetallicOrRoughnessChanged Parms{};
-
-	Parms.NewMetallic = NewMetallic;
-	Parms.NewRoughness = NewRoughness;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.GetViewportPosition
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FVector2D*                       Positon                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PaintMode_Cursor_C::GetViewportPosition(struct FVector2D* Positon)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "GetViewportPosition");
-
-	Params::WBP_PaintMode_Cursor_C_GetViewportPosition Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Positon != nullptr)
-		*Positon = std::move(Parms.Positon);
-}
-
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ExecuteUbergraph_WBP_PaintMode_Cursor
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PaintMode_Cursor_C::ExecuteUbergraph_WBP_PaintMode_Cursor(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ExecuteUbergraph_WBP_PaintMode_Cursor");
-
-	Params::WBP_PaintMode_Cursor_C_ExecuteUbergraph_WBP_PaintMode_Cursor Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_PaintMode_Cursor_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_PaintMode_Cursor_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "Construct");
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ColorPick");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -225,69 +106,168 @@ void UWBP_PaintMode_Cursor_C::ColorPickKeep(bool State, bool Commit)
 }
 
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ColorPick
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_PaintMode_Cursor_C::ColorPick()
+void UWBP_PaintMode_Cursor_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ColorPick");
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ColorChanged
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FLinearColor&              NewColor                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_PaintMode_Cursor_C::ColorChanged(const struct FLinearColor& NewColor)
+void UWBP_PaintMode_Cursor_C::Destruct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ColorChanged");
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "Destruct");
 
-	Params::WBP_PaintMode_Cursor_C_ColorChanged Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.NewColor = std::move(NewColor);
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.GetViewportPosition
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FVector2D*                       Positon                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::GetViewportPosition(struct FVector2D* Positon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "GetViewportPosition");
+
+	Params::WBP_PaintMode_Cursor_C_GetViewportPosition Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Positon != nullptr)
+		*Positon = std::move(Parms.Positon);
+}
+
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.MetallicOrRoughnessChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   NewMetallic                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   NewRoughness                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::MetallicOrRoughnessChanged(float NewMetallic, float NewRoughness)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "MetallicOrRoughnessChanged");
+
+	Params::WBP_PaintMode_Cursor_C_MetallicOrRoughnessChanged Parms{};
+
+	Parms.NewMetallic = NewMetallic;
+	Parms.NewRoughness = NewRoughness;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.PaintViewLookUpdate
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWBP_PaintMode_Cursor_C::BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
+void UWBP_PaintMode_Cursor_C::PaintViewLookUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "PaintViewLookUpdate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.AddCursorPosition
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// const struct FVector2D&                 AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PaintMode_Cursor_C::AddCursorPosition(const struct FVector2D& AddValue)
+void UWBP_PaintMode_Cursor_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "AddCursorPosition");
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "PreConstruct");
 
-	Params::WBP_PaintMode_Cursor_C_AddCursorPosition Parms{};
+	Params::WBP_PaintMode_Cursor_C_PreConstruct Parms{};
 
-	Parms.AddValue = std::move(AddValue);
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.SetCursorPosition
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 SetValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::SetCursorPosition(const struct FVector2D& SetValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "SetCursorPosition");
+
+	Params::WBP_PaintMode_Cursor_C_SetCursorPosition Parms{};
+
+	Parms.SetValue = std::move(SetValue);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ShadowState
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ToggleState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::ShadowState(bool ToggleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ShadowState");
+
+	Params::WBP_PaintMode_Cursor_C_ShadowState Parms{};
+
+	Parms.ToggleState = ToggleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "Tick");
+
+	Params::WBP_PaintMode_Cursor_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

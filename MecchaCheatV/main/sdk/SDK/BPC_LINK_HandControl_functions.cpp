@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_LINK_HandControl.BPC_LINK_HandControl_C.ExecuteUbergraph_BPC_LINK_HandControl
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LINK_HandControl_C::ExecuteUbergraph_BPC_LINK_HandControl(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LINK_HandControl_C", "ExecuteUbergraph_BPC_LINK_HandControl");
-
-	Params::BPC_LINK_HandControl_C_ExecuteUbergraph_BPC_LINK_HandControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_LINK_HandControl.BPC_LINK_HandControl_C.DetachHandleItem
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

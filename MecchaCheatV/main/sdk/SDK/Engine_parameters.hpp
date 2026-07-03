@@ -12163,23 +12163,23 @@ public:
 };
 DUMPER7_ASSERTS_LevelInstanceInterface_IsLoaded;
 
-// Function Engine.SpotLight.SetInnerConeAngle
+// Function Engine.spotlight.SetInnerConeAngle
 // 0x0004 (0x0004 - 0x0000)
-struct SpotLight_SetInnerConeAngle final
+struct spotlight_SetInnerConeAngle final
 {
 public:
 	float                                         NewInnerConeAngle;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SpotLight_SetInnerConeAngle;
+DUMPER7_ASSERTS_spotlight_SetInnerConeAngle;
 
-// Function Engine.SpotLight.SetOuterConeAngle
+// Function Engine.spotlight.SetOuterConeAngle
 // 0x0004 (0x0004 - 0x0000)
-struct SpotLight_SetOuterConeAngle final
+struct spotlight_SetOuterConeAngle final
 {
 public:
 	float                                         NewOuterConeAngle;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SpotLight_SetOuterConeAngle;
+DUMPER7_ASSERTS_spotlight_SetOuterConeAngle;
 
 // Function Engine.AnimNotifyMirrorInspectionLibrary.GetMirrorDataTable
 // 0x0038 (0x0038 - 0x0000)

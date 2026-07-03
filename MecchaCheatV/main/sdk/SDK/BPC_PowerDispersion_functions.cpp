@@ -30,26 +30,6 @@ void UBPC_PowerDispersion_C::ReceiveBeginPlay()
 }
 
 
-// Function BPC_PowerDispersion.BPC_PowerDispersion_C.ExecuteUbergraph_BPC_PowerDispersion
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_PowerDispersion_C::ExecuteUbergraph_BPC_PowerDispersion(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PowerDispersion_C", "ExecuteUbergraph_BPC_PowerDispersion");
-
-	Params::BPC_PowerDispersion_C_ExecuteUbergraph_BPC_PowerDispersion Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_PowerDispersion.BPC_PowerDispersion_C.Dispersion
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

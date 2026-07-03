@@ -134,26 +134,6 @@ void UWBP_NavInputTextBlock_C::GetInputText(class FString* Text)
 }
 
 
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.ExecuteUbergraph_WBP_NavInputTextBlock
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_NavInputTextBlock_C::ExecuteUbergraph_WBP_NavInputTextBlock(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "ExecuteUbergraph_WBP_NavInputTextBlock");
-
-	Params::WBP_NavInputTextBlock_C_ExecuteUbergraph_WBP_NavInputTextBlock Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

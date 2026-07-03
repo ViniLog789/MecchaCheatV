@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_RandomObject_Base_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class ABP_RandomObject_MultiSpawnType_C final : public ABP_RandomObject_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_RandomObject_MultiSpawnType_C;   // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SpawnProbability;                                  // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         TargetActors;                                      // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	struct FRandomStream                          Seed;                                              // 0x02D8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, RepNotify, NoDestructor)
@@ -35,7 +35,6 @@ public:
 	void OnRep_Seed();
 	void OnRep_CurrentIndex();
 	void IndexUpdate();
-	void ExecuteUbergraph_BP_RandomObject_MultiSpawnType(int32 EntryPoint);
 	void CheckLoop();
 
 public:

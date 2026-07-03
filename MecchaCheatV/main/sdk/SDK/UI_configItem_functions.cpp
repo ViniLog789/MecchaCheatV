@@ -125,26 +125,6 @@ void UUI_configItem_C::look_spead(class FText* slook_pead)
 }
 
 
-// Function UI_configItem.UI_configItem_C.ExecuteUbergraph_UI_configItem
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUI_configItem_C::ExecuteUbergraph_UI_configItem(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_configItem_C", "ExecuteUbergraph_UI_configItem");
-
-	Params::UI_configItem_C_ExecuteUbergraph_UI_configItem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function UI_configItem.UI_configItem_C.BndEvt__UI_configItem_Light_BTN_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 

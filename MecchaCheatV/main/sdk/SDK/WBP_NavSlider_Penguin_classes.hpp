@@ -10,9 +10,7 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +20,7 @@ SDK_NAMESPACE_START
 class UWBP_NavSlider_Penguin_C final : public UUINavSlider
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_9B0[0x8];                                      // 0x09B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextBlock*                             configItem_text_1;                                 // 0x09B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               BarPenguin;                                        // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShowValueText;                                     // 0x09C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -32,7 +30,6 @@ public:
 public:
 	void SetValueText(const class FText& InText);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_NavSlider_Penguin(int32 EntryPoint);
 	void Construct();
 	void BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value);
 

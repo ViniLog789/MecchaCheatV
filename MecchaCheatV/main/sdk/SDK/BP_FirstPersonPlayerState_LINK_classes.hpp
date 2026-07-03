@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "EN_LINK_PlayerStateValueType_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_FirstPersonPlayerState_classes.hpp"
 
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonPlayerState_LINK_C final : public ABP_FirstPersonPlayerState_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonPlayerState_LINK_C;   // 0x0380(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_380[0x8];                                      // 0x0380(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBPC_LuggageBackpack_LINK_C*            BPC_LuggageBackpack_LINK;                          // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class ABP_FirstPersonCharacter_LINK_C*        OwnerCharacter_LINK;                               // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TMap<EN_LINK_PlayerStateValueType, double>    PlayerStateValue;                                  // 0x0398(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -56,7 +55,6 @@ public:
 	void GetStateValue(EN_LINK_PlayerStateValueType& Key, double* Value, double* ReplicateValue);
 	void GetCustomPlayerName(class FString* playerName);
 	void GetCurrentWeight(double* WeightPower);
-	void ExecuteUbergraph_BP_FirstPersonPlayerState_LINK(int32 EntryPoint);
 	void BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature(double Weight);
 	void BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature(int32 Index_0, bool CanSpawn);
 	void AddStateValue(EN_LINK_PlayerStateValueType ValueName, double Value, const struct FVector2D& ClampValue);

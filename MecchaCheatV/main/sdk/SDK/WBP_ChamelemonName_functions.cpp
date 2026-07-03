@@ -50,26 +50,6 @@ void UWBP_ChamelemonName_C::NumUpdate()
 }
 
 
-// Function WBP_ChamelemonName.WBP_ChamelemonName_C.ExecuteUbergraph_WBP_ChamelemonName
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ChamelemonName_C::ExecuteUbergraph_WBP_ChamelemonName(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ChamelemonName_C", "ExecuteUbergraph_WBP_ChamelemonName");
-
-	Params::WBP_ChamelemonName_C_ExecuteUbergraph_WBP_ChamelemonName Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ChamelemonName.WBP_ChamelemonName_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

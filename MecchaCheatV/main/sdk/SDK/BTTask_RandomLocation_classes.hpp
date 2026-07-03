@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
 
@@ -22,14 +21,13 @@ SDK_NAMESPACE_START
 class UBTTask_RandomLocation_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlackboardKeySelector                 Target_Location_Key;                               // 0x00B0(0x0028)(Edit, BlueprintVisible)
 	double                                        BaseRadius;                                        // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        AddRandomRaidus;                                   // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
-	void ExecuteUbergraph_BTTask_RandomLocation(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -65,24 +65,4 @@ void UBPC_RayPositions_C::GetRayPositions(TArray<struct FVector>* VectorArray)
 }
 
 
-// Function BPC_RayPositions.BPC_RayPositions_C.ExecuteUbergraph_BPC_RayPositions
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_RayPositions_C::ExecuteUbergraph_BPC_RayPositions(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RayPositions_C", "ExecuteUbergraph_BPC_RayPositions");
-
-	Params::BPC_RayPositions_C_ExecuteUbergraph_BPC_RayPositions Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

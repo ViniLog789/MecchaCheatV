@@ -432,9 +432,9 @@ void ABP_GameMode_cLeon_C::ModComplete()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_FirstPersonCharacter_cLeon_Character_C*FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonPlayerState_C*     SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameMode_cLeon_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_C* SourcePlayerState)
+void ABP_GameMode_cLeon_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -719,11 +719,11 @@ void ABP_GameMode_cLeon_C::GetDoubleWinnerPlayer(class ABP_FirstPersonCharacter_
 
 
 // Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.GetChickenWinnerPlayer
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C**WinnerPlayerActor                                      (Parm, OutParm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class ABP_FirstPersonPlayerState_Online_cLeon_C**WinnerPlayerState                                      (Parm, OutParm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-void ABP_GameMode_cLeon_C::GetChickenWinnerPlayer(class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C** WinnerPlayerActor)
+void ABP_GameMode_cLeon_C::GetChickenWinnerPlayer(class ABP_FirstPersonPlayerState_Online_cLeon_C** WinnerPlayerState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -734,8 +734,8 @@ void ABP_GameMode_cLeon_C::GetChickenWinnerPlayer(class ABP_FirstPersonCharacter
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (WinnerPlayerActor != nullptr)
-		*WinnerPlayerActor = Parms.WinnerPlayerActor;
+	if (WinnerPlayerState != nullptr)
+		*WinnerPlayerState = Parms.WinnerPlayerState;
 }
 
 
@@ -855,26 +855,6 @@ void ABP_GameMode_cLeon_C::GameEnd()
 }
 
 
-// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.ExecuteUbergraph_BP_GameMode_cLeon
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameMode_cLeon_C::ExecuteUbergraph_BP_GameMode_cLeon(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameMode_cLeon_C", "ExecuteUbergraph_BP_GameMode_cLeon");
-
-	Params::BP_GameMode_cLeon_C_ExecuteUbergraph_BP_GameMode_cLeon Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.CountDownStart
 // (BlueprintCallable, BlueprintEvent)
 
@@ -971,19 +951,19 @@ void ABP_GameMode_cLeon_C::CheckAnswerTimeMinus()
 }
 
 
-// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.ChangeSpectateBodyAll
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.ChangeSpectateBody(Chicken)
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    KeepBody                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameMode_cLeon_C::ChangeSpectateBodyAll(bool KeepBody)
+void ABP_GameMode_cLeon_C::ChangeSpectateBody_Chicken_(bool KeepBody)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameMode_cLeon_C", "ChangeSpectateBodyAll");
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "ChangeSpectateBody(Chicken)");
 
-	Params::BP_GameMode_cLeon_C_ChangeSpectateBodyAll Parms{};
+	Params::BP_GameMode_cLeon_C_ChangeSpectateBody_Chicken_ Parms{};
 
 	Parms.KeepBody = KeepBody;
 

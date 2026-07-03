@@ -114,6 +114,18 @@
     <ClCompile Include="main\features\feats\teleport\teleport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main\sdk\SDK\Mover_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\sdk\SDK\MoverExamples_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\features\feats\sprintmultiplier\sprintmultiplier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\features\feats\nodetection\nodetection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Includes.h">
@@ -225,6 +237,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main\features\feats\teleport\teleport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\menu\widgets\HostOnly.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\feats\sprintmultiplier\sprintmultiplier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\feats\nodetection\nodetection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

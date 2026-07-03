@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "HitMaterial_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_CollisionSound_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          AudioOff;                                          // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EHitMaterial                                  Actor_Material;                                    // 0x00C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
@@ -36,7 +35,6 @@ public:
 public:
 	void ReceiveBeginPlay();
 	void HitEvent(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void ExecuteUbergraph_BPC_CollisionSound(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

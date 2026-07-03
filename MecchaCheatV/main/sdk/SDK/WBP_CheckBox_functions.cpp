@@ -56,24 +56,4 @@ void UWBP_CheckBox_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_CheckBox.WBP_CheckBox_C.ExecuteUbergraph_WBP_CheckBox
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CheckBox_C::ExecuteUbergraph_WBP_CheckBox(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CheckBox_C", "ExecuteUbergraph_WBP_CheckBox");
-
-	Params::WBP_CheckBox_C_ExecuteUbergraph_WBP_CheckBox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

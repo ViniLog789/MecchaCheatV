@@ -9,7 +9,6 @@
 #define LOG_INFO(...)
 #define LOG_ERROR(...)
 #include "Includes.h"
-
 using namespace MecchaCheatV::Globals;
 
 namespace MecchaCheatV
@@ -24,10 +23,16 @@ namespace MecchaCheatV
             Info,
             Warning,
             Error,
-            Hooks
+            Hooks,
+            UInfo,
+            UWarning,
+            UError,
+            RPC,
+            Release
         };
         explicit Logger(Level minLevel = Level::Call);
         ~Logger();
+        void ShutdownConsole();
 
         template<typename... Args>
         void Log(const Level level, Args&&... args)
@@ -37,6 +42,21 @@ namespace MecchaCheatV
         }
 
         void ActualLog(Level level, std::string_view message);
+        void LogRelease(WORD color, std::string_view message);
+
+        template<typename... Args>
+        static std::string FormatMessage(const char* format, Args&&... args)
+        {
+            if (format == nullptr)
+                return "<null format>";
+
+            std::string formatStr(format);
+
+            if (ContainsPrintfFormat(formatStr))
+                return PrintfFormat(format, std::forward<Args>(args)...);
+            else
+                return ConcatenateFormat(format, std::forward<Args>(args)...);
+        }
 
     private:
         const Level MinLevel;
@@ -62,28 +82,26 @@ namespace MecchaCheatV
             return ss.str();
         }
 
-        template<typename... Args>
-        static std::string FormatMessage(const char* format, Args&&... args)
-        {
-            std::string formatStr(format);
-
-            if (ContainsPrintfFormat(formatStr))
-                return PrintfFormat(format, std::forward<Args>(args)...);
-            else
-                return ConcatenateFormat(format, std::forward<Args>(args)...);
-        }
-
         template<typename T>
         static std::string FormatMessage(T&& arg)
         {
+            if constexpr (std::is_pointer_v<std::decay_t<T>>)
+            {
+                if (arg == nullptr)
+                    return "<nullptr>";
+            }
             return ConvertToString(std::forward<T>(arg));
         }
 
         template<typename... Args>
         static std::string PrintfFormat(const char* format, Args&&... args)
         {
+            if (format == nullptr)
+                return "<null format>";
+
             int size = std::snprintf(nullptr, 0, format, std::forward<Args>(args)...);
-            if (size < 0) return std::string(format);
+            if (size < 0)
+                return std::string("[snprintf error] ") + (format ? format : "<null>");
 
             std::string result(size + 1, '\0');
             std::snprintf(&result[0], size + 1, format, std::forward<Args>(args)...);
@@ -128,3 +146,19 @@ namespace MecchaCheatV
 #define LOG_CALL_UPDATE(...) \
     if (MecchaCheatV::logger && IsDebugging && IsUpdateCalledLogs) \
         MecchaCheatV::logger->Log(MecchaCheatV::Logger::Level::Call, __VA_ARGS__)
+#define LOG_RPC(...) \
+    if (MecchaCheatV::logger && IsDebugging && IsRPCLogs) \
+        MecchaCheatV::logger->Log(MecchaCheatV::Logger::Level::RPC, __VA_ARGS__)
+#define LOG_RELEASE(color, ...) \
+    if (MecchaCheatV::logger) \
+        MecchaCheatV::logger->LogRelease(color, MecchaCheatV::Logger::FormatMessage(__VA_ARGS__))
+
+#define LOG_UNITY(...) \
+    if (MecchaCheatV::logger && IsDebugging) \
+        MecchaCheatV::logger->Log(MecchaCheatV::Logger::Level::UInfo, __VA_ARGS__)
+#define LOG_UNITY_WARN(...) \
+    if (MecchaCheatV::logger && IsDebugging) \
+        MecchaCheatV::logger->Log(MecchaCheatV::Logger::Level::UWarning, __VA_ARGS__)
+#define LOG_UNITY_ERROR(...) \
+    if (MecchaCheatV::logger) \
+        MecchaCheatV::logger->Log(MecchaCheatV::Logger::Level::UError, __VA_ARGS__)

@@ -7,13 +7,6 @@ SetName::SetName() : FeatureCore("Set Name", TYPE_PLAYER)
 	DECLARE_CONFIG(GetConfigManager(), "PlayerName", std::string, "");
 }
 
-void SetName::OnActivate()
-{
-	std::string playerName = CONFIG_STRING(GetConfigManager(), "PlayerName");
-	if (!playerName.empty())
-		SetPlayerName(playerName);
-}
-
 void SetName::OnDeactivate()
 {
 	if (!origName.empty())

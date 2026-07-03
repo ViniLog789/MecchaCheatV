@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -58,33 +57,6 @@ public:
 	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_SortieCount_C_PlayAnimationMessage;
-
-// Function WBP_SortieCount.WBP_SortieCount_C.ExecuteUbergraph_WBP_SortieCount
-// 0x00D8 (0x00D8 - 0x0000)
-struct WBP_SortieCount_C_ExecuteUbergraph_WBP_SortieCount final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsForward;                            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_Index;                                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_Event_Color;                                // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_Index_2;                              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_AppendPreset;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_CustomEvent_Text;                           // 0x0028(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<class FString>                         CallFunc_SplitTextPure_ReturnValue;                // 0x0048(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0078(0x0010)()
-	class FText                                   K2Node_Event_Text;                                 // 0x0088(0x0010)()
-	int32                                         K2Node_Event_Index_1;                              // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x009C(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x00B0(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default;                             // 0x00C4(0x0014)()
-};
-DUMPER7_ASSERTS_WBP_SortieCount_C_ExecuteUbergraph_WBP_SortieCount;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -44,24 +44,4 @@ void ABP_BGM_Manager_C::OnRep_CurrentBGM()
 }
 
 
-// Function BP_BGM_Manager.BP_BGM_Manager_C.ExecuteUbergraph_BP_BGM_Manager
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_BGM_Manager_C::ExecuteUbergraph_BP_BGM_Manager(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BGM_Manager_C", "ExecuteUbergraph_BP_BGM_Manager");
-
-	Params::BP_BGM_Manager_C_ExecuteUbergraph_BP_BGM_Manager Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

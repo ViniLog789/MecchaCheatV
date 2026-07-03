@@ -14,12 +14,13 @@ namespace MecchaCheatV::Globals
 	inline bool IsDebugging = false;
 	inline bool IsCalledLogs = false;
 	inline bool IsUpdateCalledLogs = false;
+	inline bool ForTests = false; // Dont change here
 
 	// Main
 	inline HMODULE globalModule{};
 	inline std::atomic<bool> CheatWork{ false };
 	inline int MenuToggleKey = VK_RETURN; // Enter
-	inline std::string Version = "1.0";
+	inline std::string Version = "1.1";
 	inline const char* GitHubRepository = "https://github.com/ViniLog789/MecchaCheatV";
 	inline ProcessEvent_t hookedProcessEvent = nullptr;
 	inline bool needTeleport = false;

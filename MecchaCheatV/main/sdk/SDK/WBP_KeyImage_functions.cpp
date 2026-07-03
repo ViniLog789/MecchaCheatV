@@ -50,26 +50,6 @@ void UWBP_KeyImage_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_KeyImage.WBP_KeyImage_C.ExecuteUbergraph_WBP_KeyImage
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_KeyImage_C::ExecuteUbergraph_WBP_KeyImage(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_KeyImage_C", "ExecuteUbergraph_WBP_KeyImage");
-
-	Params::WBP_KeyImage_C_ExecuteUbergraph_WBP_KeyImage Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_KeyImage.WBP_KeyImage_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

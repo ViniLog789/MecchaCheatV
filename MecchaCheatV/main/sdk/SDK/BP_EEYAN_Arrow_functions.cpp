@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_EEYAN_Arrow_classes.hpp"
-#include "BP_EEYAN_Arrow_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,26 +26,6 @@ void ABP_EEYAN_Arrow_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_EEYAN_Arrow_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EEYAN_Arrow.BP_EEYAN_Arrow_C.ExecuteUbergraph_BP_EEYAN_Arrow
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EEYAN_Arrow_C::ExecuteUbergraph_BP_EEYAN_Arrow(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EEYAN_Arrow_C", "ExecuteUbergraph_BP_EEYAN_Arrow");
-
-	Params::BP_EEYAN_Arrow_C_ExecuteUbergraph_BP_EEYAN_Arrow Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

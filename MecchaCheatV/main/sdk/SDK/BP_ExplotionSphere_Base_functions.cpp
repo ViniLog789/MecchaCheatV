@@ -30,26 +30,6 @@ void ABP_ExplotionSphere_Base_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.ExecuteUbergraph_BP_ExplotionSphere_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ExplotionSphere_Base_C::ExecuteUbergraph_BP_ExplotionSphere_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ExplotionSphere_Base_C", "ExecuteUbergraph_BP_ExplotionSphere_Base");
-
-	Params::BP_ExplotionSphere_Base_C_ExecuteUbergraph_BP_ExplotionSphere_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

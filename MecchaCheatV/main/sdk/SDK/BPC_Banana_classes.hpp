@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,12 +21,11 @@ SDK_NAMESPACE_START
 class UBPC_Banana_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_FirstPersonCharacter_LINK_C*        As_BP_First_Person_Character_LINK;                 // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                TargetVel;                                         // 0x00C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BPC_Banana(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void ReceiveBeginPlay();
 

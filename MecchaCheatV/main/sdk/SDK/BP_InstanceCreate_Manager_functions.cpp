@@ -11,30 +11,9 @@
 #include "Basic.hpp"
 
 #include "BP_InstanceCreate_Manager_classes.hpp"
-#include "BP_InstanceCreate_Manager_parameters.hpp"
 
 
 SDK_NAMESPACE_START
-
-// Function BP_InstanceCreate_Manager.BP_InstanceCreate_Manager_C.ExecuteUbergraph_BP_InstanceCreate_Manager
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_InstanceCreate_Manager_C::ExecuteUbergraph_BP_InstanceCreate_Manager(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InstanceCreate_Manager_C", "ExecuteUbergraph_BP_InstanceCreate_Manager");
-
-	Params::BP_InstanceCreate_Manager_C_ExecuteUbergraph_BP_InstanceCreate_Manager Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
 
 // Function BP_InstanceCreate_Manager.BP_InstanceCreate_Manager_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)

@@ -12045,9 +12045,9 @@ public:
 };
 DUMPER7_ASSERTS_UMaterialExpressionDistance;
 
-// Class Engine.SpotLight
+// Class Engine.spotlight
 // 0x0008 (0x02C0 - 0x02B8)
-class ASpotLight : public ALight
+class Aspotlight : public ALight
 {
 public:
 	class USpotLightComponent*                    SpotLightComponent;                                // 0x02B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
@@ -12059,22 +12059,22 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SpotLight")
+		STATIC_CLASS_IMPL("spotlight")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SpotLight")
+		STATIC_NAME_IMPL(L"spotlight")
 	}
-	static class ASpotLight* GetDefaultObj()
+	static class Aspotlight* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ASpotLight>();
+		return GetDefaultObjImpl<Aspotlight>();
 	}
 };
-DUMPER7_ASSERTS_ASpotLight;
+DUMPER7_ASSERTS_Aspotlight;
 
 // Class Engine.GeneratedMeshAreaLight
 // 0x0000 (0x02C0 - 0x02C0)
-class AGeneratedMeshAreaLight final : public ASpotLight
+class AGeneratedMeshAreaLight final : public Aspotlight
 {
 public:
 	static class UClass* StaticClass()

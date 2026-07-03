@@ -106,26 +106,6 @@ void UWBP_VoiceChatUserSettings_C::OnFinished_1657203944876F75161AA6986A7C9FD9(c
 }
 
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ExecuteUbergraph_WBP_VoiceChatUserSettings
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_VoiceChatUserSettings_C::ExecuteUbergraph_WBP_VoiceChatUserSettings(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "ExecuteUbergraph_WBP_VoiceChatUserSettings");
-
-	Params::WBP_VoiceChatUserSettings_C_ExecuteUbergraph_WBP_VoiceChatUserSettings Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ConstructSetup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

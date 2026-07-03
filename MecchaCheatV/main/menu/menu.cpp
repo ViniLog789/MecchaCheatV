@@ -380,6 +380,15 @@ void Menu::Render()
                     *(int*)0 = 42;
                 }
 
+				if (ImGui::Button("Test IsServer"))
+				{
+					bool a1 = SDK::UKismetSystemLibrary::IsServer(SDK::UWorld::GetWorld());
+                    LOG_INFO(a1 ? "yes" : "no");
+				}
+
+                if (ImGui::Button("Call test"))
+                    Globals::ForTests = true;
+
                 ImGui::EndChild();
             }
             break;

@@ -2,7 +2,7 @@
 
 using namespace MecchaCheatV::Features::Player;
 
-AutoDissShadow::AutoDissShadow() : FeatureCore("Auto Diss Shadow", TYPE_PLAYER) {}
+AutoDissShadow::AutoDissShadow() : FeatureCore("Auto Disable Shadow", TYPE_PLAYER) {}
 
 void AutoDissShadow::OnMenuRender()
 {

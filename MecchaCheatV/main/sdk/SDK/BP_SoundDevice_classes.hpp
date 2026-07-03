@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "EN_SoundPlayType_structs.hpp"
 #include "BP_DeviceBase_classes.hpp"
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_SoundDevice_C final : public ABP_DeviceBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SoundDevice_C;                   // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2F0[0x8];                                      // 0x02F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAudioComponent*                        Audio;                                             // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBillboardComponent*                    Billboard;                                         // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USoundBase*                             SoundAsset;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -37,7 +36,6 @@ public:
 public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_SoundDevice(int32 EntryPoint);
 	void BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue);
 
 public:

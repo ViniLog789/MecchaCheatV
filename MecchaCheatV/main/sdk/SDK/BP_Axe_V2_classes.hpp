@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_DamageTool_Base_V2_classes.hpp"
 
 
@@ -21,10 +20,6 @@ SDK_NAMESPACE_START
 class ABP_Axe_V2_C final : public ABP_DamageTool_Base_V2_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Axe_V2_C;                        // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void ExecuteUbergraph_BP_Axe_V2(int32 EntryPoint);
 	void BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature(class FName EventName);
 
 public:

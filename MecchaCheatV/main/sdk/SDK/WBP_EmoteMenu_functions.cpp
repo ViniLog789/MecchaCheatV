@@ -112,26 +112,6 @@ void UWBP_EmoteMenu_C::InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0(const
 }
 
 
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.ExecuteUbergraph_WBP_EmoteMenu
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_EmoteMenu_C::ExecuteUbergraph_WBP_EmoteMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EmoteMenu_C", "ExecuteUbergraph_WBP_EmoteMenu");
-
-	Params::WBP_EmoteMenu_C_ExecuteUbergraph_WBP_EmoteMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_EmoteMenu.WBP_EmoteMenu_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

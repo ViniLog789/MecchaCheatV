@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_ItemBase_classes.hpp"
 
 
@@ -21,7 +20,6 @@ SDK_NAMESPACE_START
 class ABP_Food_Base_C : public ABP_ItemBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Food_Base_C;                     // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   Plane;                                             // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	double                                        NowDamageMultiply;                                 // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        NowStanDamageMultiply;                             // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -38,7 +36,6 @@ public:
 	double                                        kcal;                                              // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_Food_Base(int32 EntryPoint);
 	void UseItem();
 	void DefaultMontagePlay();
 	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);

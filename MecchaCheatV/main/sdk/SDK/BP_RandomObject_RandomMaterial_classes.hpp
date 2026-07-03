@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_RandomObject_Base_classes.hpp"
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_RandomObject_RandomMaterial_C final : public ABP_RandomObject_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_RandomObject_RandomMaterial_C;   // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInstance*>              Materials;                                         // 0x02C0(0x0010)(Edit, BlueprintVisible)
 	TArray<class AActor*>                         TargetActors;                                      // 0x02D0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	int32                                         ElementIndex;                                      // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -36,7 +35,6 @@ public:
 	void OnRep_Seed();
 	void OnRep_CurrentIndex();
 	void IndexUpdate();
-	void ExecuteUbergraph_BP_RandomObject_RandomMaterial(int32 EntryPoint);
 	void CheckLoop();
 
 public:

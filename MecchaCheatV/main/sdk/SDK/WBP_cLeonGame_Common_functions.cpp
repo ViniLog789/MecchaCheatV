@@ -50,24 +50,4 @@ void UWBP_cLeonGame_Common_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_cLeonGame_Common.WBP_cLeonGame_Common_C.ExecuteUbergraph_WBP_cLeonGame_Common
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGame_Common_C::ExecuteUbergraph_WBP_cLeonGame_Common(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGame_Common_C", "ExecuteUbergraph_WBP_cLeonGame_Common");
-
-	Params::WBP_cLeonGame_Common_C_ExecuteUbergraph_WBP_cLeonGame_Common Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_ReplicateEventController.BP_ReplicateEventController_C.ExecuteUbergraph_BP_ReplicateEventController
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ReplicateEventController_C::ExecuteUbergraph_BP_ReplicateEventController(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplicateEventController_C", "ExecuteUbergraph_BP_ReplicateEventController");
-
-	Params::BP_ReplicateEventController_C_ExecuteUbergraph_BP_ReplicateEventController Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_ReplicateEventController.BP_ReplicateEventController_C.ApplyDamage
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:

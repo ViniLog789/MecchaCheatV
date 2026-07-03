@@ -11,8 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -23,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_PaintMode_Cursor_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_PaintCursor_C*                     WBP_PaintCursor;                                   // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_KeyImage_C*                        WBP_KeyImage_11;                                   // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_KeyImage_C*                        WBP_KeyImage_10;                                   // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -60,21 +58,20 @@ public:
 	class UColorPicker*                           SpawnedColorPicker;                                // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void ShadowState(bool ToggleState);
-	void SetCursorPosition(const struct FVector2D& SetValue);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void PaintViewLookUpdate();
-	void MetallicOrRoughnessChanged(float NewMetallic, float NewRoughness);
-	void GetViewportPosition(struct FVector2D* Positon);
-	void ExecuteUbergraph_WBP_PaintMode_Cursor(int32 EntryPoint);
-	void Destruct();
-	void Construct();
-	void ColorPickKeep(bool State, bool Commit);
-	void ColorPick();
-	void ColorChanged(const struct FLinearColor& NewColor);
-	void BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature();
 	void AddCursorPosition(const struct FVector2D& AddValue);
+	void BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature();
+	void ColorChanged(const struct FLinearColor& NewColor);
+	void ColorPick();
+	void ColorPickKeep(bool State, bool Commit);
+	void Construct();
+	void Destruct();
+	void GetViewportPosition(struct FVector2D* Positon);
+	void MetallicOrRoughnessChanged(float NewMetallic, float NewRoughness);
+	void PaintViewLookUpdate();
+	void PreConstruct(bool IsDesignTime);
+	void SetCursorPosition(const struct FVector2D& SetValue);
+	void ShadowState(bool ToggleState);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

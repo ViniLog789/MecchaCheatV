@@ -91,26 +91,6 @@ void ABP_GlueCrystal_ForceGreen_C::GetParryState(bool* State)
 }
 
 
-// Function BP_GlueCrystal_ForceGreen.BP_GlueCrystal_ForceGreen_C.ExecuteUbergraph_BP_GlueCrystal_ForceGreen
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GlueCrystal_ForceGreen_C::ExecuteUbergraph_BP_GlueCrystal_ForceGreen(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_ForceGreen_C", "ExecuteUbergraph_BP_GlueCrystal_ForceGreen");
-
-	Params::BP_GlueCrystal_ForceGreen_C_ExecuteUbergraph_BP_GlueCrystal_ForceGreen Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_GlueCrystal_ForceGreen.BP_GlueCrystal_ForceGreen_C.DamageToPlayerController
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -116,24 +116,4 @@ void UWBP_announcement_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
 }
 
 
-// Function WBP_announcement.WBP_announcement_C.ExecuteUbergraph_WBP_announcement
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_announcement_C::ExecuteUbergraph_WBP_announcement(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_announcement_C", "ExecuteUbergraph_WBP_announcement");
-
-	Params::WBP_announcement_C_ExecuteUbergraph_WBP_announcement Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

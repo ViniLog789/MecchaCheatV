@@ -96,24 +96,4 @@ void UWBP_Nameplate_C::SetColor(const struct FSlateColor& Color_and_Opacity)
 }
 
 
-// Function WBP_Nameplate.WBP_Nameplate_C.ExecuteUbergraph_WBP_Nameplate
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Nameplate_C::ExecuteUbergraph_WBP_Nameplate(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Nameplate_C", "ExecuteUbergraph_WBP_Nameplate");
-
-	Params::WBP_Nameplate_C_ExecuteUbergraph_WBP_Nameplate Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

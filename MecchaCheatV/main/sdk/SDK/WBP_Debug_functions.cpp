@@ -86,26 +86,6 @@ void UWBP_Debug_C::OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1(const struct FBan
 }
 
 
-// Function WBP_Debug.WBP_Debug_C.ExecuteUbergraph_WBP_Debug
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Debug_C::ExecuteUbergraph_WBP_Debug(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Debug_C", "ExecuteUbergraph_WBP_Debug");
-
-	Params::WBP_Debug_C_ExecuteUbergraph_WBP_Debug Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Debug.WBP_Debug_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

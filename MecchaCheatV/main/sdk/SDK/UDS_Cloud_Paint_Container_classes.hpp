@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class AUDS_Cloud_Paint_Container_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBillboardComponent*                    Billboard;                                         // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneCaptureComponent2D*               SceneCaptureComponent2D;                           // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FIntPoint, class UUDS_Cloud_Paint_Cell_C*> Cloud_Painting_Cell_Data;                 // 0x02C0(0x0050)(Edit, BlueprintVisible)
@@ -33,7 +33,6 @@ public:
 public:
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_UDS_Cloud_Paint_Container(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,15 +21,12 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C : public ABP_FirstPersonCharacter_cLeon_Character_C
 {
 public:
-	uint8                                         Pad_CC1[0x7];                                      // 0x0CC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonCharacter_cLeon_Character_Survivor_C; // 0x0CC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        FilledValue;                                       // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PreStencil;                                        // 0x0CD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_CDC[0x4];                                      // 0x0CDC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UCapsuleComponent*>              OverlapCheckCapsules;                              // 0x0CE0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Survivor(int32 EntryPoint);
 	void SetStencilValue_Server_(int32 StencilValue);
 	void ReceiveBeginPlay();
 	void OverlapCheck();

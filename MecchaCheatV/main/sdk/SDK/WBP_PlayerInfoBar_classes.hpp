@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
 
@@ -23,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_PlayerInfoBar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextBlock*                             ValueText;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 MainVar_R;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 MainVar_L;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -44,7 +42,6 @@ public:
 public:
 	void SetValue(double Value);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_PlayerInfoBar(int32 EntryPoint);
 	void Add_Event();
 
 public:
