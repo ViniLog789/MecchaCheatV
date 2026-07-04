@@ -1,4 +1,4 @@
-Current game version: 2.4.1
+Current game version: 2.5.0
 
 **How to install:**
 
