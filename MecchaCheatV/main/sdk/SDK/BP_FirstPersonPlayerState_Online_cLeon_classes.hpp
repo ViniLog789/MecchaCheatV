@@ -36,25 +36,25 @@ public:
 	TMulticastInlineDelegate<void()>              MEChange;                                          // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void AddEEYANPoint_Server_();
-	void AddMEPoint();
-	void AddMEPoint_Server_();
-	void GiveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState);
-	void OnCallFailed_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
-	void OnRep_CurrentEEYAN_Point();
-	void OnRep_CurrentME_Point();
-	void OnWriteUserFileCanceled_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
-	void OnWriteUserFileComplete_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
-	void OnWriteUserFileProgress64_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
-	void ReceiveBeginPlay();
-	void ReciveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* Source);
-	void SetBodyClass(class UClass* CurrentBodyClass_0);
-	void SetModState(bool ModState_0);
-	void UpdateEEYANPoint_Local_(int32 CurrentEEYAN_Point_0);
-	void UpdateEEYANPoint_Server_(int32 CurrentEEYAN_Point_0);
-	void UpdateMEPoint_Local_(int32 CurrentME_Point_0);
-	void UpdateMEPoint_Server_(int32 CurrentME_Point_0);
 	void WriteEEYANPoint();
+	void UpdateMEPoint_Server_(int32 CurrentME_Point);
+	void UpdateMEPoint_Local_(int32 CurrentME_Point);
+	void UpdateEEYANPoint_Server_(int32 CurrentEEYAN_Point);
+	void UpdateEEYANPoint_Local_(int32 CurrentEEYAN_Point);
+	void SetModState(bool ModState);
+	void SetBodyClass(class UClass* CurrentBodyClass);
+	void ReciveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* Source);
+	void ReceiveBeginPlay();
+	void OnWriteUserFileProgress64_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
+	void OnWriteUserFileComplete_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
+	void OnWriteUserFileCanceled_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
+	void OnRep_CurrentME_Point();
+	void OnRep_CurrentEEYAN_Point();
+	void OnCallFailed_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
+	void GiveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState);
+	void AddMEPoint_Server_();
+	void AddMEPoint();
+	void AddEEYANPoint_Server_();
 
 public:
 	static class UClass* StaticClass()

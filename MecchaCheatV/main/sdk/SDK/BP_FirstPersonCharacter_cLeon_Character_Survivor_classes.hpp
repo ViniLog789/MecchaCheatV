@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
 
 
 SDK_NAMESPACE_START

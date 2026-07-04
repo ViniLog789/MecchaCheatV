@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "EN_cLeonGameMode_structs.hpp"
 #include "EN_cLeonMainGamePhase_structs.hpp"
-#include "ST_cLeonMapData_structs.hpp"
+#include "EN_cLeonGameMode_structs.hpp"
 #include "EN_cLeonGamePhase_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ST_cLeonSurvivorVariation_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -90,6 +90,15 @@ public:
 	class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C* ChickenSearchTarget;                  // 0x05B0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState);
+	void UpdateSend();
+	void UpdateRanking();
+	void UpdateBulletWidget(int32 Current);
+	void SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime);
+	void SyncRanking_Server_();
+	void ShowPopup_Local_(int32 PopupIndex);
+	void ShowPopup_Client_(int32 PopupIndex);
+	void ShowPointAddPopup(class ABP_FirstPersonPlayerState_Online_cLeon_C* TargetPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, int32 Point);
 	void ShowDeathWidget(class APlayerState* TargetPlayerState);
 	void ShowAllSurvivors();
 	void SetTimerTextIndex(int32 TimerTextIndex);
@@ -97,6 +106,7 @@ public:
 	void SetSyncRankingLoopState(bool State);
 	void SetMaxTimerTime(int32 MaxTimerTime);
 	void SetCopyTarget();
+	void SetChickenAlpha();
 	void ReceiveBeginPlay();
 	void RankingWidgetUpdate(bool IsShow);
 	void PlayTeleportMovie();
@@ -133,15 +143,6 @@ public:
 	void AllHunterStencilOff();
 	void AddToViewDatas(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);
 	void AddToViewDataForce(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);
-	void ShowPointAddPopup(class ABP_FirstPersonPlayerState_Online_cLeon_C* TargetPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, int32 Point);
-	void ShowPopup_Client_(int32 PopupIndex);
-	void ShowPopup_Local_(int32 PopupIndex);
-	void SyncRanking_Server_();
-	void SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime_0);
-	void UpdateBulletWidget(int32 Current);
-	void UpdateRanking();
-	void UpdateSend();
-	void Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState);
 
 public:
 	static class UClass* StaticClass()

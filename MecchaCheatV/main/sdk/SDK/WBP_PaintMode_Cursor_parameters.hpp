@@ -18,61 +18,52 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.AddCursorPosition
-// 0x0038 (0x0038 - 0x0000)
-struct WBP_PaintMode_Cursor_C_AddCursorPosition final
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_PaintMode_Cursor_C_Tick final
 {
 public:
-	struct FVector2D                              AddValue;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_Tick;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ShadowState
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_PaintMode_Cursor_C_ShadowState final
+{
+public:
+	bool                                          ToggleState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_ShadowState;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.SetCursorPosition
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_PaintMode_Cursor_C_SetCursorPosition final
+{
+public:
+	struct FVector2D                              SetValue;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetPosition_ReturnValue;                  // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Add_Vector2DVector2D_ReturnValue;         // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_AddCursorPosition;
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_SetCursorPosition;
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ColorChanged
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_PaintMode_Cursor_C_ColorChanged final
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.SelectSlide
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_PaintMode_Cursor_C_SelectSlide final
 {
 public:
-	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AddValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_ColorChanged;
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_SelectSlide;
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ColorPickKeep
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_PaintMode_Cursor_C_ColorPickKeep final
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_PaintMode_Cursor_C_PreConstruct final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Commit;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_ColorPickKeep;
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.GetViewportPosition
-// 0x0098 (0x0098 - 0x0000)
-struct WBP_PaintMode_Cursor_C_GetViewportPosition final
-{
-public:
-	struct FVector2D                              Positon;                                           // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Conv_DoubleToVector2D_ReturnValue;        // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              CallFunc_GetCachedGeometry_ReturnValue;            // 0x0020(0x0038)(ConstParm, IsPlainOldData, NoDestructor)
-	struct FVector2D                              CallFunc_GetLocalSize_ReturnValue;                 // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Divide_Vector2DVector2D_ReturnValue;      // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_LocalToViewport_PixelPosition;            // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_LocalToViewport_ViewportPosition;         // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_GetViewportPosition;
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.MetallicOrRoughnessChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_PaintMode_Cursor_C_MetallicOrRoughnessChanged final
-{
-public:
-	float                                         NewMetallic;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NewRoughness;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_MetallicOrRoughnessChanged;
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_PreConstruct;
 
 // Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.PaintViewLookUpdate
 // 0x00E8 (0x00E8 - 0x0000)
@@ -98,43 +89,92 @@ public:
 };
 DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_PaintViewLookUpdate;
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_PaintMode_Cursor_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_PreConstruct;
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.SetCursorPosition
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.OnGBufferColorPicked
 // 0x0018 (0x0018 - 0x0000)
-struct WBP_PaintMode_Cursor_C_SetCursorPosition final
+struct WBP_PaintMode_Cursor_C_OnGBufferColorPicked final
 {
 public:
-	struct FVector2D                              SetValue;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           PickedColor;                                       // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PickedMetallic;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PickedRoughness;                                   // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_OnGBufferColorPicked;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.MetallicOrRoughnessChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_PaintMode_Cursor_C_MetallicOrRoughnessChanged final
+{
+public:
+	float                                         NewMetallic;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NewRoughness;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_MetallicOrRoughnessChanged;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.GetViewportPosition
+// 0x0098 (0x0098 - 0x0000)
+struct WBP_PaintMode_Cursor_C_GetViewportPosition final
+{
+public:
+	struct FVector2D                              Positon;                                           // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Conv_DoubleToVector2D_ReturnValue;        // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              CallFunc_GetCachedGeometry_ReturnValue;            // 0x0020(0x0038)(ConstParm, IsPlainOldData, NoDestructor)
+	struct FVector2D                              CallFunc_GetLocalSize_ReturnValue;                 // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Divide_Vector2DVector2D_ReturnValue;      // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_LocalToViewport_PixelPosition;            // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_LocalToViewport_ViewportPosition;         // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_GetViewportPosition;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ColorPickKeep
+// 0x0002 (0x0002 - 0x0000)
+struct WBP_PaintMode_Cursor_C_ColorPickKeep final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Commit;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_ColorPickKeep;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ColorChanged
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_PaintMode_Cursor_C_ColorChanged final
+{
+public:
+	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_ColorChanged;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_PaintMode_Cursor_C_BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature final
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Metallic;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Roughness;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.AddSliderValue
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_PaintMode_Cursor_C_AddSliderValue final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_AddSliderValue;
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.AddCursorPosition
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_PaintMode_Cursor_C_AddCursorPosition final
+{
+public:
+	struct FVector2D                              AddValue;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetPosition_ReturnValue;                  // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Add_Vector2DVector2D_ReturnValue;         // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_SetCursorPosition;
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ShadowState
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_PaintMode_Cursor_C_ShadowState final
-{
-public:
-	bool                                          ToggleState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_ShadowState;
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_PaintMode_Cursor_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_Tick;
+DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_AddCursorPosition;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

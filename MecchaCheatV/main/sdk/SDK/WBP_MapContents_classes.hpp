@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ST_cLeonMapData_structs.hpp"
 #include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "ST_cLeonMapData_structs.hpp"
 
 
 SDK_NAMESPACE_START

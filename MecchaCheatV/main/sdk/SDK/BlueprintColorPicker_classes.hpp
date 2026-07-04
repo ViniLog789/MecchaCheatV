@@ -18,7 +18,7 @@
 SDK_NAMESPACE_START
 
 // Class BlueprintColorPicker.ColorPicker
-// 0x0348 (0x04B0 - 0x0168)
+// 0x0368 (0x04D0 - 0x0168)
 class UColorPicker final : public UWidget
 {
 public:
@@ -26,44 +26,49 @@ public:
 	TMulticastInlineDelegate<void()>              OnContextMenuCloseRequested;                       // 0x0178(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(float NewMetallic, float NewRoughness)> OnMetallicRoughnessChanged; // 0x0188(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness)> OnMaterialSampled; // 0x0198(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	struct FLinearColor                           InitialColor;                                      // 0x01A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BackgroundColor;                                   // 0x01B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowInline;                                       // 0x01C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAlpha;                                         // 0x01C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForContextMenu;                                   // 0x01CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowOkCancelButtons;                              // 0x01CB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Metallic;                                          // 0x01CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Roughness;                                         // 0x01D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   MetallicLabel;                                     // 0x01D8(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	class FText                                   RoughnessLabel;                                    // 0x01E8(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	bool                                          bOverwriteColorOnSample;                           // 0x01F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     MetallicRoughnessSampleMaterial;                   // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	bool                                          bUseExactGBufferReadback;                          // 0x0208(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_209[0x3];                                      // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxGBufferSamplesPerSecond;                        // 0x020C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowGBufferEyedropper;                            // 0x0210(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_211[0x3];                                      // 0x0211(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           EyedropperBackgroundColor;                         // 0x0214(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_224[0xC];                                      // 0x0224(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            EyedropperIcon;                                    // 0x0230(0x00B0)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	class FText                                   EyedropperButtonText;                              // 0x02E0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F0[0x158];                                    // 0x02F0(0x0158)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 PixelInspectorBufferFinalColor[0x2];               // 0x0448(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class UTextureRenderTarget2D*                 PixelInspectorBufferSceneColor[0x2];               // 0x0458(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class UTextureRenderTarget2D*                 PixelInspectorBufferHDR[0x2];                      // 0x0468(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class UTextureRenderTarget2D*                 PixelInspectorBufferBCDEF[0x2];                    // 0x0478(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	uint8                                         Pad_488[0x10];                                     // 0x0488(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 CachedSamplingRT;                                  // 0x0498(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class AActor*                                 CachedSamplingActor;                               // 0x04A0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class USceneCaptureComponent2D*               CachedSamplingComponent;                           // 0x04A8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	TMulticastInlineDelegate<void(const struct FLinearColor& PickedColor, float PickedMetallic, float PickedRoughness)> OnGBufferColorPicked; // 0x01A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	struct FLinearColor                           InitialColor;                                      // 0x01B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BackgroundColor;                                   // 0x01C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowInline;                                       // 0x01D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAlpha;                                         // 0x01D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForContextMenu;                                   // 0x01DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowOkCancelButtons;                              // 0x01DB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Metallic;                                          // 0x01DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Roughness;                                         // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   MetallicLabel;                                     // 0x01E8(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	class FText                                   RoughnessLabel;                                    // 0x01F8(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	bool                                          bOverwriteColorOnSample;                           // 0x0208(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     MetallicRoughnessSampleMaterial;                   // 0x0210(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	bool                                          bUseExactGBufferReadback;                          // 0x0218(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxGBufferSamplesPerSecond;                        // 0x021C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowGBufferEyedropper;                            // 0x0220(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_221[0x3];                                      // 0x0221(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           EyedropperBackgroundColor;                         // 0x0224(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_234[0xC];                                      // 0x0234(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            EyedropperIcon;                                    // 0x0240(0x00B0)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	class FText                                   EyedropperButtonText;                              // 0x02F0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	uint8                                         Pad_300[0x160];                                    // 0x0300(0x0160)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 PixelInspectorBufferFinalColor[0x2];               // 0x0460(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTextureRenderTarget2D*                 PixelInspectorBufferSceneColor[0x2];               // 0x0470(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTextureRenderTarget2D*                 PixelInspectorBufferHDR[0x2];                      // 0x0480(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTextureRenderTarget2D*                 PixelInspectorBufferBCDEF[0x2];                    // 0x0490(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_4A0[0x10];                                     // 0x04A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 CachedSamplingRT;                                  // 0x04B0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class AActor*                                 CachedSamplingActor;                               // 0x04B8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class USceneCaptureComponent2D*               CachedSamplingComponent;                           // 0x04C0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_4C8[0x8];                                      // 0x04C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool SampleViewportGBuffer(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FLinearColor* OutBaseColor, float* OutMetallic, float* OutRoughness, class UMaterialInterface* OptionalMetallicRoughnessMaterial);
 
 	void ApplySampledValues(const struct FLinearColor& SampledColor, float SampledMetallic, float SampledRoughness);
 	bool SampleViewportAtCursorAndApply();
+	void SetMetallicRoughnessSampleMaterial(class UMaterialInterface* NewMaterial);
+	void SetPickerColorAndMaterialValues(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness, bool bBroadcastChanges);
+	void SetPickerColorMaterialAndSampleMaterial(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness, class UMaterialInterface* NewSampleMaterial, bool bBroadcastChanges);
 	void StartGBufferSampling();
 	void StopGBufferSampling(bool bCommit);
 

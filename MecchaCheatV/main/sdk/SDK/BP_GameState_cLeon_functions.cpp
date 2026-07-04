@@ -16,6 +16,176 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.Winner
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonPlayerState_Online_C*WinnerPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "Winner");
+
+	Params::BP_GameState_cLeon_C_Winner Parms{};
+
+	Parms.WinnerPlayerState = WinnerPlayerState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateSend
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::UpdateSend()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateSend");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateRanking
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::UpdateRanking()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateRanking");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateBulletWidget
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::UpdateBulletWidget(int32 Current)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateBulletWidget");
+
+	Params::BP_GameState_cLeon_C_UpdateBulletWidget Parms{};
+
+	Parms.Current = Current;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRankning(Client)
+// (Net, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<int32>&                    NewPoints                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   UpdateTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SyncRankning(Client)");
+
+	Params::BP_GameState_cLeon_C_SyncRankning_Client_ Parms{};
+
+	Parms.PlayerStates = std::move(PlayerStates);
+	Parms.NewPoints = std::move(NewPoints);
+	Parms.UpdateTime = UpdateTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRanking(Server)
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::SyncRanking_Server_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SyncRanking(Server)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Local)
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   PopupIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::ShowPopup_Local_(int32 PopupIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPopup(Local)");
+
+	Params::BP_GameState_cLeon_C_ShowPopup_Local_ Parms{};
+
+	Parms.PopupIndex = PopupIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Client)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   PopupIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::ShowPopup_Client_(int32 PopupIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPopup(Client)");
+
+	Params::BP_GameState_cLeon_C_ShowPopup_Client_ Parms{};
+
+	Parms.PopupIndex = PopupIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPointAddPopup
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*TargetPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   Point                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::ShowPointAddPopup(class ABP_FirstPersonPlayerState_Online_cLeon_C* TargetPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, int32 Point)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPointAddPopup");
+
+	Params::BP_GameState_cLeon_C_ShowPointAddPopup Parms{};
+
+	Parms.TargetPlayerState = TargetPlayerState;
+	Parms.SourcePlayerState = SourcePlayerState;
+	Parms.Point = Point;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowDeathWidget
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -139,6 +309,20 @@ void ABP_GameState_cLeon_C::SetCopyTarget()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetCopyTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetChickenAlpha
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::SetChickenAlpha()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetChickenAlpha");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -361,7 +545,7 @@ void ABP_GameState_cLeon_C::OnRep_CurrentPreviewMapData()
 
 
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_ChickenSearchTarget
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_GameState_cLeon_C::OnRep_ChickenSearchTarget()
 {
@@ -709,176 +893,6 @@ void ABP_GameState_cLeon_C::AddToViewDataForce(class ABP_FirstPersonPlayerState_
 	Parms.SourcePlayerState = SourcePlayerState;
 	Parms.PlayerStates = std::move(PlayerStates);
 	Parms.Points = std::move(Points);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPointAddPopup
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonPlayerState_Online_cLeon_C*TargetPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   Point                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::ShowPointAddPopup(class ABP_FirstPersonPlayerState_Online_cLeon_C* TargetPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, int32 Point)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPointAddPopup");
-
-	Params::BP_GameState_cLeon_C_ShowPointAddPopup Parms{};
-
-	Parms.TargetPlayerState = TargetPlayerState;
-	Parms.SourcePlayerState = SourcePlayerState;
-	Parms.Point = Point;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Client)
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PopupIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::ShowPopup_Client_(int32 PopupIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPopup(Client)");
-
-	Params::BP_GameState_cLeon_C_ShowPopup_Client_ Parms{};
-
-	Parms.PopupIndex = PopupIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Local)
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PopupIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::ShowPopup_Local_(int32 PopupIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPopup(Local)");
-
-	Params::BP_GameState_cLeon_C_ShowPopup_Local_ Parms{};
-
-	Parms.PopupIndex = PopupIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRanking(Server)
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::SyncRanking_Server_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SyncRanking(Server)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRankning(Client)
-// (Net, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<int32>&                    NewPoints                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// int32                                   UpdateTime_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SyncRankning(Client)");
-
-	Params::BP_GameState_cLeon_C_SyncRankning_Client_ Parms{};
-
-	Parms.PlayerStates = std::move(PlayerStates);
-	Parms.NewPoints = std::move(NewPoints);
-	Parms.UpdateTime_0 = UpdateTime_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateBulletWidget
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::UpdateBulletWidget(int32 Current)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateBulletWidget");
-
-	Params::BP_GameState_cLeon_C_UpdateBulletWidget Parms{};
-
-	Parms.Current = Current;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateRanking
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::UpdateRanking()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateRanking");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateSend
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::UpdateSend()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateSend");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.Winner
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonPlayerState_Online_C*WinnerPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "Winner");
-
-	Params::BP_GameState_cLeon_C_Winner Parms{};
-
-	Parms.WinnerPlayerState = WinnerPlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

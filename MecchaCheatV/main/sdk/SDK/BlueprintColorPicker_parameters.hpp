@@ -52,6 +52,42 @@ public:
 };
 DUMPER7_ASSERTS_ColorPicker_SampleViewportAtCursorAndApply;
 
+// Function BlueprintColorPicker.ColorPicker.SetMetallicRoughnessSampleMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct ColorPicker_SetMetallicRoughnessSampleMaterial final
+{
+public:
+	class UMaterialInterface*                     NewMaterial;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ColorPicker_SetMetallicRoughnessSampleMaterial;
+
+// Function BlueprintColorPicker.ColorPicker.SetPickerColorAndMaterialValues
+// 0x001C (0x001C - 0x0000)
+struct ColorPicker_SetPickerColorAndMaterialValues final
+{
+public:
+	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewMetallic;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewRoughness;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBroadcastChanges;                                 // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ColorPicker_SetPickerColorAndMaterialValues;
+
+// Function BlueprintColorPicker.ColorPicker.SetPickerColorMaterialAndSampleMaterial
+// 0x0028 (0x0028 - 0x0000)
+struct ColorPicker_SetPickerColorMaterialAndSampleMaterial final
+{
+public:
+	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewMetallic;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewRoughness;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     NewSampleMaterial;                                 // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBroadcastChanges;                                 // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ColorPicker_SetPickerColorMaterialAndSampleMaterial;
+
 // Function BlueprintColorPicker.ColorPicker.StopGBufferSampling
 // 0x0001 (0x0001 - 0x0000)
 struct ColorPicker_StopGBufferSampling final

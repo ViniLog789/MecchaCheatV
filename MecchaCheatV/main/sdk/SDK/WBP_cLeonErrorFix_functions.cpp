@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_cLeonErrorFix.WBP_cLeonErrorFix_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AWBP_cLeonErrorFix_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonErrorFix_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_cLeonErrorFix.WBP_cLeonErrorFix_C.BndEvt__WBP_cLeonErrorFix_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
@@ -43,20 +57,6 @@ void AWBP_cLeonErrorFix_C::BndEvt__WBP_cLeonErrorFix_Box_K2Node_ComponentBoundEv
 	Parms.SweepResult = std::move(SweepResult);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonErrorFix.WBP_cLeonErrorFix_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AWBP_cLeonErrorFix_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonErrorFix_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

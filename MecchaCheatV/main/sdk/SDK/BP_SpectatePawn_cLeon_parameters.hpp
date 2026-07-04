@@ -18,23 +18,87 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_Five_K2Node_InputKeyEvent_1
-// 0x0018 (0x0018 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_InpActEvt_Five_K2Node_InputKeyEvent_1 final
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SpectateTargetChange
+// 0x0010 (0x0010 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_SpectateTargetChange final
 {
 public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Pawn;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_Five_K2Node_InputKeyEvent_1;
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_SpectateTargetChange;
 
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_Four_K2Node_InputKeyEvent_3
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SetLocation
 // 0x0018 (0x0018 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_InpActEvt_Four_K2Node_InputKeyEvent_3 final
+struct BP_SpectatePawn_cLeon_C_SetLocation final
+{
+public:
+	struct FVector                                NewLocation;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_SetLocation;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ReceiveTick;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceivePossessed
+// 0x0008 (0x0008 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_ReceivePossessed final
+{
+public:
+	class AController*                            NewController_ReceivePossessed;                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ReceivePossessed;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ProvocationRemote
+// 0x0008 (0x0008 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_ProvocationRemote final
+{
+public:
+	class ABP_FirstPersonCharacter_cLeon_Character_C* Target;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ProvocationRemote;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.OnRep_CanBackBody
+// 0x0001 (0x0001 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_OnRep_CanBackBody final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_OnRep_CanBackBody;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_Two_K2Node_InputKeyEvent_4
+// 0x0018 (0x0018 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_InpActEvt_Two_K2Node_InputKeyEvent_4 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_Four_K2Node_InputKeyEvent_3;
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_Two_K2Node_InputKeyEvent_4;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_2
+// 0x0018 (0x0018 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_2 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_2;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_One_K2Node_InputKeyEvent_0
+// 0x0018 (0x0018 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_InpActEvt_One_K2Node_InputKeyEvent_0 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_One_K2Node_InputKeyEvent_0;
 
 // Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)
@@ -48,87 +112,23 @@ public:
 };
 DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_0;
 
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_One_K2Node_InputKeyEvent_0
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_Four_K2Node_InputKeyEvent_3
 // 0x0018 (0x0018 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_InpActEvt_One_K2Node_InputKeyEvent_0 final
+struct BP_SpectatePawn_cLeon_C_InpActEvt_Four_K2Node_InputKeyEvent_3 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_One_K2Node_InputKeyEvent_0;
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_Four_K2Node_InputKeyEvent_3;
 
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_2
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_Five_K2Node_InputKeyEvent_1
 // 0x0018 (0x0018 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_2 final
+struct BP_SpectatePawn_cLeon_C_InpActEvt_Five_K2Node_InputKeyEvent_1 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_2;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.InpActEvt_Two_K2Node_InputKeyEvent_4
-// 0x0018 (0x0018 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_InpActEvt_Two_K2Node_InputKeyEvent_4 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_Two_K2Node_InputKeyEvent_4;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.OnRep_CanBackBody
-// 0x0001 (0x0001 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_OnRep_CanBackBody final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_OnRep_CanBackBody;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ProvocationRemote
-// 0x0008 (0x0008 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_ProvocationRemote final
-{
-public:
-	class ABP_FirstPersonCharacter_cLeon_Character_C* Target;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ProvocationRemote;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceivePossessed
-// 0x0008 (0x0008 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_ReceivePossessed final
-{
-public:
-	class AController*                            NewController;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ReceivePossessed;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ReceiveTick;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SetLocation
-// 0x0018 (0x0018 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_SetLocation final
-{
-public:
-	struct FVector                                NewLocation;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_SetLocation;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SpectateTargetChange
-// 0x0010 (0x0010 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_SpectateTargetChange final
-{
-public:
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Pawn;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_SpectateTargetChange;
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_Five_K2Node_InputKeyEvent_1;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

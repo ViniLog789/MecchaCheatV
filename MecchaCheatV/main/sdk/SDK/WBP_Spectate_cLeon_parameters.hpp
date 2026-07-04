@@ -14,14 +14,32 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.ChangeBackType
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.SwitchFreeCamera
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_Spectate_cLeon_C_ChangeBackType final
+struct WBP_Spectate_cLeon_C_SwitchFreeCamera final
 {
 public:
-	bool                                          IsBackType_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ToggleState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_ChangeBackType;
+DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_SwitchFreeCamera;
+
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.SelectChange
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Spectate_cLeon_C_SelectChange final
+{
+public:
+	int32                                         AddValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_SelectChange;
+
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Spectate_cLeon_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_PreConstruct;
 
 // Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.GetSpectateTarget
 // 0x00C8 (0x00C8 - 0x0000)
@@ -64,32 +82,14 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_GetSpectateTarget;
 
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.PreConstruct
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.ChangeBackType
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_Spectate_cLeon_C_PreConstruct final
+struct WBP_Spectate_cLeon_C_ChangeBackType final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBackType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_PreConstruct;
-
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.SelectChange
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Spectate_cLeon_C_SelectChange final
-{
-public:
-	int32                                         AddValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_SelectChange;
-
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.SwitchFreeCamera
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Spectate_cLeon_C_SwitchFreeCamera final
-{
-public:
-	bool                                          ToggleState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_SwitchFreeCamera;
+DUMPER7_ASSERTS_WBP_Spectate_cLeon_C_ChangeBackType;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

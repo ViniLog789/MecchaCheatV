@@ -114,6 +114,95 @@ bool UColorPicker::SampleViewportAtCursorAndApply()
 }
 
 
+// Function BlueprintColorPicker.ColorPicker.SetMetallicRoughnessSampleMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               NewMaterial                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UColorPicker::SetMetallicRoughnessSampleMaterial(class UMaterialInterface* NewMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ColorPicker", "SetMetallicRoughnessSampleMaterial");
+
+	Params::ColorPicker_SetMetallicRoughnessSampleMaterial Parms{};
+
+	Parms.NewMaterial = NewMaterial;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function BlueprintColorPicker.ColorPicker.SetPickerColorAndMaterialValues
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FLinearColor&              NewColor                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewMetallic                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewRoughness                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bBroadcastChanges                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UColorPicker::SetPickerColorAndMaterialValues(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness, bool bBroadcastChanges)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ColorPicker", "SetPickerColorAndMaterialValues");
+
+	Params::ColorPicker_SetPickerColorAndMaterialValues Parms{};
+
+	Parms.NewColor = std::move(NewColor);
+	Parms.NewMetallic = NewMetallic;
+	Parms.NewRoughness = NewRoughness;
+	Parms.bBroadcastChanges = bBroadcastChanges;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function BlueprintColorPicker.ColorPicker.SetPickerColorMaterialAndSampleMaterial
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FLinearColor&              NewColor                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewMetallic                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewRoughness                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInterface*               NewSampleMaterial                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bBroadcastChanges                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UColorPicker::SetPickerColorMaterialAndSampleMaterial(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness, class UMaterialInterface* NewSampleMaterial, bool bBroadcastChanges)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ColorPicker", "SetPickerColorMaterialAndSampleMaterial");
+
+	Params::ColorPicker_SetPickerColorMaterialAndSampleMaterial Parms{};
+
+	Parms.NewColor = std::move(NewColor);
+	Parms.NewMetallic = NewMetallic;
+	Parms.NewRoughness = NewRoughness;
+	Parms.NewSampleMaterial = NewSampleMaterial;
+	Parms.bBroadcastChanges = bBroadcastChanges;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function BlueprintColorPicker.ColorPicker.StartGBufferSampling
 // (Final, Native, Public, BlueprintCallable)
 

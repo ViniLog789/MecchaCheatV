@@ -18,68 +18,23 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.EEYAN_State
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_PlayerController_cLeon_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_ReceiveTick;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.OnNamePlateVisibilityChange
 // 0x0001 (0x0001 - 0x0000)
-struct BP_PlayerController_cLeon_C_EEYAN_State final
+struct BP_PlayerController_cLeon_C_OnNamePlateVisibilityChange final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Visibility;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_EEYAN_State;
-
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.GetPawnCentorLocation
-// 0x0080 (0x0080 - 0x0000)
-struct BP_PlayerController_cLeon_C_GetPawnCentorLocation final
-{
-public:
-	struct FVector                                ReturnLocation;                                    // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Location;                                          // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASpectatorPawn*                         CallFunc_GetSpectatorPawn_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_GetPawnCentorLocation;
-
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_G_K2Node_InputKeyEvent_0
-// 0x0018 (0x0018 - 0x0000)
-struct BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_0 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_0;
-
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Six_K2Node_InputKeyEvent_1
-// 0x0018 (0x0018 - 0x0000)
-struct BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_1 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_1;
-
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Three_K2Node_InputKeyEvent_2
-// 0x0018 (0x0018 - 0x0000)
-struct BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_2 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_2;
-
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_U_K2Node_InputDebugKeyEvent_0
-// 0x0038 (0x0038 - 0x0000)
-struct BP_PlayerController_cLeon_C_InpActEvt_U_K2Node_InputDebugKeyEvent_0 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_U_K2Node_InputDebugKeyEvent_0;
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_OnNamePlateVisibilityChange;
 
 // Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.NearSurvivor_IgnoreSelf
 // 0x0098 (0x0098 - 0x0000)
@@ -108,23 +63,77 @@ public:
 };
 DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_NearSurvivor_IgnoreSelf;
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.OnNamePlateVisibilityChange
-// 0x0001 (0x0001 - 0x0000)
-struct BP_PlayerController_cLeon_C_OnNamePlateVisibilityChange final
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_U_K2Node_InputDebugKeyEvent_0
+// 0x0038 (0x0038 - 0x0000)
+struct BP_PlayerController_cLeon_C_InpActEvt_U_K2Node_InputDebugKeyEvent_0 final
 {
 public:
-	bool                                          Visibility;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_OnNamePlateVisibilityChange;
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_U_K2Node_InputDebugKeyEvent_0;
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_PlayerController_cLeon_C_ReceiveTick final
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Three_K2Node_InputKeyEvent_3
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_3 final
 {
 public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_ReceiveTick;
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_3;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Six_K2Node_InputKeyEvent_2
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_2 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_2;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_G_K2Node_InputKeyEvent_1
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_1 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_1;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Ctrl+Shift_H_K2Node_InputKeyEvent_0
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerController_cLeon_C_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.GetPawnCentorLocation
+// 0x0080 (0x0080 - 0x0000)
+struct BP_PlayerController_cLeon_C_GetPawnCentorLocation final
+{
+public:
+	struct FVector                                ReturnLocation;                                    // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Location;                                          // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASpectatorPawn*                         CallFunc_GetSpectatorPawn_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_GetPawnCentorLocation;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.EEYAN_State
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerController_cLeon_C_EEYAN_State final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_EEYAN_State;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

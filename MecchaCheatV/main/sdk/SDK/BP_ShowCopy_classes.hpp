@@ -26,6 +26,7 @@ public:
 	class UAnimMontage*                           LastMontage;                                       // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void Update();
 	void ReceiveBeginPlay();
 	void OnNotifyEnd_B4C244954CE7898DEF0913A0CF8A49C8(class FName NotifyName);
 	void OnNotifyBegin_B4C244954CE7898DEF0913A0CF8A49C8(class FName NotifyName);

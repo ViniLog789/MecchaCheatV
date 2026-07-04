@@ -16,65 +16,77 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.ChangeBackType
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.UpdatePlayers
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsBackType_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Spectate_cLeon_C::ChangeBackType(bool IsBackType_0)
+void UWBP_Spectate_cLeon_C::UpdatePlayers()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "ChangeBackType");
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "UpdatePlayers");
 
-	Params::WBP_Spectate_cLeon_C_ChangeBackType Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsBackType_0 = IsBackType_0;
+
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.SwitchFreeCamera
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ToggleState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Spectate_cLeon_C::SwitchFreeCamera(bool ToggleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "SwitchFreeCamera");
+
+	Params::WBP_Spectate_cLeon_C_SwitchFreeCamera Parms{};
+
+	Parms.ToggleState = ToggleState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.Construct
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.SelectChange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Spectate_cLeon_C::SelectChange(int32 AddValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "SelectChange");
+
+	Params::WBP_Spectate_cLeon_C_SelectChange Parms{};
+
+	Parms.AddValue = AddValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Spectate_cLeon_C::Construct()
+void UWBP_Spectate_cLeon_C::PreConstruct(bool IsDesignTime_PreConstruct)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "Construct");
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::WBP_Spectate_cLeon_C_PreConstruct Parms{};
 
+	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.ConstructGameState
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Spectate_cLeon_C::ConstructGameState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "ConstructGameState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.EmptyCheck
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Spectate_cLeon_C::EmptyCheck()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "EmptyCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -102,77 +114,65 @@ TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> UWBP_Spectate_cLeon_C::
 }
 
 
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Spectate_cLeon_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "PreConstruct");
-
-	Params::WBP_Spectate_cLeon_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.SelectChange
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Spectate_cLeon_C::SelectChange(int32 AddValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "SelectChange");
-
-	Params::WBP_Spectate_cLeon_C_SelectChange Parms{};
-
-	Parms.AddValue = AddValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.SwitchFreeCamera
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ToggleState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Spectate_cLeon_C::SwitchFreeCamera(bool ToggleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "SwitchFreeCamera");
-
-	Params::WBP_Spectate_cLeon_C_SwitchFreeCamera Parms{};
-
-	Parms.ToggleState = ToggleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.UpdatePlayers
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.EmptyCheck
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Spectate_cLeon_C::UpdatePlayers()
+void UWBP_Spectate_cLeon_C::EmptyCheck()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "UpdatePlayers");
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "EmptyCheck");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.ConstructGameState
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Spectate_cLeon_C::ConstructGameState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "ConstructGameState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_Spectate_cLeon_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.ChangeBackType
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsBackType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Spectate_cLeon_C::ChangeBackType(bool IsBackType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "ChangeBackType");
+
+	Params::WBP_Spectate_cLeon_C_ChangeBackType Parms{};
+
+	Parms.IsBackType = IsBackType;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

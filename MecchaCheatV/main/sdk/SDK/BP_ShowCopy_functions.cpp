@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_ShowCopy.BP_ShowCopy_C.Update
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_ShowCopy_C::Update()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ShowCopy_C", "Update");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_ShowCopy.BP_ShowCopy_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
