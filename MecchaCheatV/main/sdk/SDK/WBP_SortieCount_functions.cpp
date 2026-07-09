@@ -104,4 +104,24 @@ void UWBP_SortieCount_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
 }
 
 
+// Function WBP_SortieCount.WBP_SortieCount_C.ExecuteUbergraph_WBP_SortieCount
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SortieCount_C::ExecuteUbergraph_WBP_SortieCount(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SortieCount_C", "ExecuteUbergraph_WBP_SortieCount");
+
+	Params::WBP_SortieCount_C_ExecuteUbergraph_WBP_SortieCount Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

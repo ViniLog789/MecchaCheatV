@@ -24,5 +24,19 @@ public:
 };
 DUMPER7_ASSERTS_BTTask_TraceEnd_C_ReceiveExecuteAI;
 
+// Function BTTask_TraceEnd.BTTask_TraceEnd_C.ExecuteUbergraph_BTTask_TraceEnd
+// 0x0028 (0x0028 - 0x0000)
+struct BTTask_TraceEnd_C_ExecuteUbergraph_BTTask_TraceEnd final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAIController*                          K2Node_Event_OwnerController;                      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  K2Node_Event_ControlledPawn;                       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_AI_Base_C*                          K2Node_DynamicCast_AsBP_AI_Base;                   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BTTask_TraceEnd_C_ExecuteUbergraph_BTTask_TraceEnd;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

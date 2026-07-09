@@ -855,6 +855,26 @@ void ABP_GameMode_cLeon_C::GameEnd()
 }
 
 
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.ExecuteUbergraph_BP_GameMode_cLeon
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameMode_cLeon_C::ExecuteUbergraph_BP_GameMode_cLeon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "ExecuteUbergraph_BP_GameMode_cLeon");
+
+	Params::BP_GameMode_cLeon_C_ExecuteUbergraph_BP_GameMode_cLeon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.CountDownStart
 // (BlueprintCallable, BlueprintEvent)
 

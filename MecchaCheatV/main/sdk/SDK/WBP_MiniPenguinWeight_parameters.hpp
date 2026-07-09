@@ -47,5 +47,25 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_PlayAnimationMessage;
 
+// Function WBP_MiniPenguinWeight.WBP_MiniPenguinWeight_C.ExecuteUbergraph_WBP_MiniPenguinWeight
+// 0x0068 (0x0068 - 0x0000)
+struct WBP_MiniPenguinWeight_C_ExecuteUbergraph_WBP_MiniPenguinWeight final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_Event_Color;                                // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_Index_2;                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsForward;                            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_Index_1;                              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Event_Text;                                 // 0x0020(0x0010)()
+	int32                                         K2Node_Event_Index;                                // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
+};
+DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_ExecuteUbergraph_WBP_MiniPenguinWeight;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -116,6 +116,26 @@ class UUINavComponent* UWBP_ConfigV2_C::GetInitialFocusComponent()
 }
 
 
+// Function WBP_ConfigV2.WBP_ConfigV2_C.ExecuteUbergraph_WBP_ConfigV2
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ConfigV2_C::ExecuteUbergraph_WBP_ConfigV2(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigV2_C", "ExecuteUbergraph_WBP_ConfigV2");
+
+	Params::WBP_ConfigV2_C_ExecuteUbergraph_WBP_ConfigV2 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ConfigV2.WBP_ConfigV2_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

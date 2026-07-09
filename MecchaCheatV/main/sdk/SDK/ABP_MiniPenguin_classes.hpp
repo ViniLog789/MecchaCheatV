@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "ABP_MiniPenguin_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -25,7 +25,8 @@ SDK_NAMESPACE_START
 class UABP_MiniPenguin_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3D8[0x10];                                     // 0x03D8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct ABP_MiniPenguin::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;              // 0x03E8(0x0014)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0400(0x0008)()
@@ -93,6 +94,7 @@ public:
 	class UBPC_ReplicateAnimBPState_C*            ReplicateAnimBPState;                              // 0x1440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_ABP_MiniPenguin(int32 EntryPoint);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniPenguin_AnimGraphNode_TransitionResult_4E49FAE24595B658CDCDB9AA6E945C84();
 	void BlueprintUpdateAnimation(float DeltaTimeX_BlueprintUpdateAnimation);
 	void BlueprintInitializeAnimation();

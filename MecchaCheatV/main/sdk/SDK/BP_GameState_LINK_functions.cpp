@@ -786,6 +786,26 @@ void ABP_GameState_LINK_C::ExitShopAreaUpdate(class AActor* Actor, bool State)
 }
 
 
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ExecuteUbergraph_BP_GameState_LINK
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::ExecuteUbergraph_BP_GameState_LINK(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ExecuteUbergraph_BP_GameState_LINK");
+
+	Params::BP_GameState_LINK_C_ExecuteUbergraph_BP_GameState_LINK Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Server)
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:

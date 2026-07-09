@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_SimpleNiagaraSpawner_classes.hpp"
+#include "BP_SimpleNiagaraSpawner_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,6 +27,26 @@ void ABP_SimpleNiagaraSpawner_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_SimpleNiagaraSpawner_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SimpleNiagaraSpawner.BP_SimpleNiagaraSpawner_C.ExecuteUbergraph_BP_SimpleNiagaraSpawner
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SimpleNiagaraSpawner_C::ExecuteUbergraph_BP_SimpleNiagaraSpawner(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SimpleNiagaraSpawner_C", "ExecuteUbergraph_BP_SimpleNiagaraSpawner");
+
+	Params::BP_SimpleNiagaraSpawner_C_ExecuteUbergraph_BP_SimpleNiagaraSpawner Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

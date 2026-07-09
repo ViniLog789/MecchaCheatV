@@ -10,8 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "BP_FirstPersonGameMode_V2_classes.hpp"
+#include "Engine_structs.hpp"
 #include "EN_cLeonBodyType_structs.hpp"
+#include "BP_FirstPersonGameMode_V2_classes.hpp"
+#include "EN_cLeonGameMode_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +23,7 @@ SDK_NAMESPACE_START
 class ABP_GameMode_cLeon_C final : public ABP_FirstPersonGameMode_V2_C
 {
 public:
-	uint8                                         Pad_3C0[0x8];                                      // 0x03C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_GameMode_cLeon_C;                // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class ABP_CountZone_cLeon_C*                  HunterCountZone;                                   // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ABP_CountZone_cLeon_C*                  SurvivorCountZone;                                 // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         StartWaitTimeDefault;                              // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -98,6 +100,7 @@ public:
 	void GameStart();
 	void GameEndCheck();
 	void GameEnd();
+	void ExecuteUbergraph_BP_GameMode_cLeon(int32 EntryPoint);
 	void CountDownStart();
 	void ControllerArrayToPlayerState(TArray<class ABP_PlayerController_cLeon_C*>& PlayerController, TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>* PlayerStateArray);
 	void ChickenTeleport_GotoMap();

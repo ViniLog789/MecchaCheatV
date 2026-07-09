@@ -21,7 +21,8 @@ SDK_NAMESPACE_START
 class ABP_BigPenAI_C final : public ACharacter
 {
 public:
-	uint8                                         Pad_648[0x10];                                     // 0x0648(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_648[0x8];                                      // 0x0648(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0650(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UAudioComponent*                        Audio;                                             // 0x0658(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USphereComponent*                       AttackPenguinZone;                                 // 0x0660(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USphereComponent*                       DestroyZone;                                       // 0x0668(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -44,6 +45,7 @@ public:
 	void OnCompleted_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
 	void OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
 	void OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
+	void ExecuteUbergraph_BP_BigPenAI(int32 EntryPoint);
 	void DistanceCheck();
 	void BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);

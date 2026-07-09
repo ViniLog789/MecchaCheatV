@@ -10,10 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "PenguinHotel_classes.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -23,7 +24,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonGameMode_V2_C : public AMyGameModeBase
 {
 public:
-	uint8                                         Pad_348[0x8];                                      // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWBP_Pause_C*                           UIPause;                                           // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void()>              DeleteUI;                                          // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -56,6 +57,7 @@ public:
 	void K2_PostLogin(class APlayerController* NewPlayer_K2_PostLogin);
 	void K2_OnLogout(class AController* ExitingController_K2_OnLogout);
 	void JoinFillterCheck();
+	void ExecuteUbergraph_BP_FirstPersonGameMode_V2(int32 EntryPoint);
 	void DelayUpdate();
 	void CheckBindItem(class ABP_FirstPersonCharacter_Main_C* Character, class AActor* Actor);
 

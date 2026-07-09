@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "GameplayAbilities_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UGA_Hand_C final : public UGameplayAbility
 {
 public:
-	uint8                                         Pad_3A8[0x8];                                      // 0x03A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void OnInterrupted_D984D1104BE6D38FAE2461A31D0E051A();
@@ -29,6 +30,7 @@ public:
 	void OnBlendOut_D984D1104BE6D38FAE2461A31D0E051A();
 	void OnBlendedIn_D984D1104BE6D38FAE2461A31D0E051A();
 	void K2_ActivateAbility();
+	void ExecuteUbergraph_GA_Hand(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

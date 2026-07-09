@@ -44,5 +44,23 @@ public:
 };
 DUMPER7_ASSERTS_BPC_TextChatControl_C_SendToText_Client_;
 
+// Function BPC_TextChatControl.BPC_TextChatControl_C.ExecuteUbergraph_BPC_TextChatControl
+// 0x0050 (0x0050 - 0x0000)
+struct BPC_TextChatControl_C_ExecuteUbergraph_BPC_TextChatControl final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_MainString;                     // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Index;                          // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_MainString_2;                   // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Index_2;                        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_MainString_1;                   // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Index_1;                        // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_TextChatControl_C_ExecuteUbergraph_BPC_TextChatControl;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

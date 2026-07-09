@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_RadialMenu.WBP_RadialMenu_C.ExecuteUbergraph_WBP_RadialMenu
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_RadialMenu_C::ExecuteUbergraph_WBP_RadialMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RadialMenu_C", "ExecuteUbergraph_WBP_RadialMenu");
+
+	Params::WBP_RadialMenu_C_ExecuteUbergraph_WBP_RadialMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_RadialMenu.WBP_RadialMenu_C.SetItemDatasImageOnly
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_FirstPersonGameMode_V2_classes.hpp"
 #include "EN_LINK_GamePhase_structs.hpp"
@@ -23,7 +24,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonGameMode_Online_LINK_C final : public ABP_FirstPersonGameMode_V2_C
 {
 public:
-	uint8                                         Pad_3C0[0x8];                                      // 0x03C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonGameMode_Online_LINK_C; // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ABP_GameState_LINK_C*                   BP_Game_State_LINK;                                // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ABP_TeleportPoints_C*                   ShopTeleportPoints;                                // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -118,6 +119,7 @@ public:
 	void GameOver();
 	void GameClear();
 	void Freeze(class ABP_FirstPersonCharacter_Main_C* Character);
+	void ExecuteUbergraph_BP_FirstPersonGameMode_Online_LINK(int32 EntryPoint);
 	void DayStart();
 	void CountOut();
 	void Countdown();

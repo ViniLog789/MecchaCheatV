@@ -11,9 +11,30 @@
 #include "Basic.hpp"
 
 #include "WBP_SuperStan_classes.hpp"
+#include "WBP_SuperStan_parameters.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Function WBP_SuperStan.WBP_SuperStan_C.ExecuteUbergraph_WBP_SuperStan
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SuperStan_C::ExecuteUbergraph_WBP_SuperStan(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SuperStan_C", "ExecuteUbergraph_WBP_SuperStan");
+
+	Params::WBP_SuperStan_C_ExecuteUbergraph_WBP_SuperStan Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 
 // Function WBP_SuperStan.WBP_SuperStan_C.End
 // (BlueprintCallable, BlueprintEvent)

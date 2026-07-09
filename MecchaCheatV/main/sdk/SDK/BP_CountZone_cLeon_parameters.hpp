@@ -23,5 +23,17 @@ public:
 };
 DUMPER7_ASSERTS_BP_CountZone_cLeon_C_ReceiveTick;
 
+// Function BP_CountZone_cLeon.BP_CountZone_cLeon_C.ExecuteUbergraph_BP_CountZone_cLeon
+// 0x0020 (0x0020 - 0x0000)
+struct BP_CountZone_cLeon_C_ExecuteUbergraph_BP_CountZone_cLeon final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ABP_FirstPersonCharacter_cLeon_Character_C*> CallFunc_GetOverlappingActors_OverlappingActors; // 0x0008(0x0010)(ReferenceParm)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CountZone_cLeon_C_ExecuteUbergraph_BP_CountZone_cLeon;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

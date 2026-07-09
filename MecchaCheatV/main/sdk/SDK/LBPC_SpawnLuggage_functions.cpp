@@ -36,4 +36,24 @@ void ULBPC_SpawnLuggage_C::SpawnItem(const struct FGuid& UniqueID)
 }
 
 
+// Function LBPC_SpawnLuggage.LBPC_SpawnLuggage_C.ExecuteUbergraph_LBPC_SpawnLuggage
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_SpawnLuggage_C::ExecuteUbergraph_LBPC_SpawnLuggage(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_SpawnLuggage_C", "ExecuteUbergraph_LBPC_SpawnLuggage");
+
+	Params::LBPC_SpawnLuggage_C_ExecuteUbergraph_LBPC_SpawnLuggage Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

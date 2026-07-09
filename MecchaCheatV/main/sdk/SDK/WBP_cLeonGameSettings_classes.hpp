@@ -10,7 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -21,7 +23,7 @@ SDK_NAMESPACE_START
 class UWBP_cLeonGameSettings_C final : public UUINavWidget
 {
 public:
-	uint8                                         Pad_4F0[0x8];                                      // 0x04F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWBP_NavOptionBox_C*                    WBP_NavOptionBox_MapSelect_1;                      // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_NavOptionBox_C*                    WBP_NavOptionBox_MapSelect;                        // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_NavOptionBox_C*                    WBP_NavOptionBox_LimitBullet;                      // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -75,28 +77,29 @@ public:
 	TArray<class UWBP_BodySelect_C*>              BodySelects;                                       // 0x0690(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
+	void SelectMapMain(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& MapData);
+	void SelectMap(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& MapData);
+	void OnClickWithClass(class UWBP_BodySelect_C* SelfObject, class UClass* BodyClass);
+	void ExecuteUbergraph_WBP_cLeonGameSettings(int32 EntryPoint);
+	void Construct();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_K2Node_ComponentBoundEvent_10_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_1_K2Node_ComponentBoundEvent_11_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_LimitBullet_K2Node_ComponentBoundEvent_13_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_GameMode_K2Node_ComponentBoundEvent_5_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMosaic_K2Node_ComponentBoundEvent_9_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMonochrome_K2Node_ComponentBoundEvent_7_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterHorror_K2Node_ComponentBoundEvent_8_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_CanShowHunterWatchRanking_K2Node_ComponentBoundEvent_12_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_6_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_16_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_15_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_17_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_CanShowHunterWatchRanking_K2Node_ComponentBoundEvent_12_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterHorror_K2Node_ComponentBoundEvent_8_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMonochrome_K2Node_ComponentBoundEvent_7_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMosaic_K2Node_ComponentBoundEvent_9_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_GameMode_K2Node_ComponentBoundEvent_5_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_LimitBullet_K2Node_ComponentBoundEvent_13_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_1_K2Node_ComponentBoundEvent_11_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_K2Node_ComponentBoundEvent_10_OnValueChangedEvent__DelegateSignature();
-	void Construct();
-	void OnClickWithClass(class UWBP_BodySelect_C* SelfObject, class UClass* BodyClass);
-	void SelectMap(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& MapData);
-	void SelectMapMain(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& MapData);
 
 public:
 	static class UClass* StaticClass()

@@ -58,6 +58,26 @@ void ABP_PenBoxTop_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_PenBoxTop.BP_PenBoxTop_C.ExecuteUbergraph_BP_PenBoxTop
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PenBoxTop_C::ExecuteUbergraph_BP_PenBoxTop(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PenBoxTop_C", "ExecuteUbergraph_BP_PenBoxTop");
+
+	Params::BP_PenBoxTop_C_ExecuteUbergraph_BP_PenBoxTop Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PenBoxTop.BP_PenBoxTop_C.BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

@@ -133,6 +133,26 @@ void ABP_GlueCrystal_Purple_C::GetParryState(bool* State)
 }
 
 
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ExecuteUbergraph_BP_GlueCrystal_Purple
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GlueCrystal_Purple_C::ExecuteUbergraph_BP_GlueCrystal_Purple(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ExecuteUbergraph_BP_GlueCrystal_Purple");
+
+	Params::BP_GlueCrystal_Purple_C_ExecuteUbergraph_BP_GlueCrystal_Purple Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.DamageToPlayerController
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

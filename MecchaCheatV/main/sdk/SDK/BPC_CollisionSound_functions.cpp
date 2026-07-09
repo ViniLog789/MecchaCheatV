@@ -58,4 +58,24 @@ void UBPC_CollisionSound_C::HitEvent(class UPrimitiveComponent* HitComponent, cl
 }
 
 
+// Function BPC_CollisionSound.BPC_CollisionSound_C.ExecuteUbergraph_BPC_CollisionSound
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_CollisionSound_C::ExecuteUbergraph_BPC_CollisionSound(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CollisionSound_C", "ExecuteUbergraph_BPC_CollisionSound");
+
+	Params::BPC_CollisionSound_C_ExecuteUbergraph_BPC_CollisionSound Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

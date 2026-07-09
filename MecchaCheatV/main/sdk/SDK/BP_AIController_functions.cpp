@@ -44,6 +44,26 @@ void ABP_AIController_C::Forget_Target()
 }
 
 
+// Function BP_AIController.BP_AIController_C.ExecuteUbergraph_BP_AIController
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AIController_C::ExecuteUbergraph_BP_AIController(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AIController_C", "ExecuteUbergraph_BP_AIController");
+
+	Params::BP_AIController_C_ExecuteUbergraph_BP_AIController Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_AIController.BP_AIController_C.BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

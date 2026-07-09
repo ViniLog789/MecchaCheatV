@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_BigPenController_classes.hpp"
+#include "BP_BigPenController_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,6 +27,26 @@ void ABP_BigPenController_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_BigPenController_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BigPenController.BP_BigPenController_C.ExecuteUbergraph_BP_BigPenController
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_BigPenController_C::ExecuteUbergraph_BP_BigPenController(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BigPenController_C", "ExecuteUbergraph_BP_BigPenController");
+
+	Params::BP_BigPenController_C_ExecuteUbergraph_BP_BigPenController Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

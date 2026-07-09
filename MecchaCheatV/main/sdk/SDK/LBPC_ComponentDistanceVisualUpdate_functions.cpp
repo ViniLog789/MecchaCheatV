@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "LBPC_ComponentDistanceVisualUpdate_classes.hpp"
+#include "LBPC_ComponentDistanceVisualUpdate_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,6 +41,26 @@ void ULBPC_ComponentDistanceVisualUpdate_C::ForceUpdate()
 		Func = Class->GetFunction("LBPC_ComponentDistanceVisualUpdate_C", "ForceUpdate");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LBPC_ComponentDistanceVisualUpdate.LBPC_ComponentDistanceVisualUpdate_C.ExecuteUbergraph_LBPC_ComponentDistanceVisualUpdate
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_ComponentDistanceVisualUpdate_C::ExecuteUbergraph_LBPC_ComponentDistanceVisualUpdate(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ComponentDistanceVisualUpdate_C", "ExecuteUbergraph_LBPC_ComponentDistanceVisualUpdate");
+
+	Params::LBPC_ComponentDistanceVisualUpdate_C_ExecuteUbergraph_LBPC_ComponentDistanceVisualUpdate Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

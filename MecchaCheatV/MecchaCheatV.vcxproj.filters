@@ -90,40 +90,40 @@
     <ClCompile Include="main\features\feats\alwvisible\alwvisible.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\sdk\SDK\Basic.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main\sdk\SDK\BP_FirstPersonCharacter_cLeon_Character_Hunter_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main\sdk\SDK\BP_FirstPersonCharacter_cLeon_Character_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main\sdk\SDK\BP_FirstPersonPlayerState_Online_cLeon_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main\sdk\SDK\CoreUObject_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main\sdk\SDK\Engine_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main\features\feats\autodisshadow\autodisshadow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main\features\feats\teleport\teleport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\sdk\SDK\Mover_functions.cpp">
+    <ClCompile Include="main\features\feats\sprintmultiplier\sprintmultiplier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\features\feats\nodetection\nodetection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\sdk\SDK\Basic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\sdk\SDK\BP_FirstPersonCharacter_cLeon_Character_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\sdk\SDK\BP_FirstPersonCharacter_cLeon_Character_Hunter_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\sdk\SDK\CoreUObject_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\sdk\SDK\BP_FirstPersonPlayerState_Online_cLeon_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\sdk\SDK\Engine_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main\sdk\SDK\MoverExamples_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\features\feats\sprintmultiplier\sprintmultiplier.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main\features\feats\nodetection\nodetection.cpp">
+    <ClCompile Include="main\sdk\SDK\Mover_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

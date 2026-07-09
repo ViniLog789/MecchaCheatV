@@ -16,6 +16,23 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_UpdateLine.BP_UpdateLine_C.ExecuteUbergraph_BP_UpdateLine
+// 0x0058 (0x0058 - 0x0000)
+struct BP_UpdateLine_C_ExecuteUbergraph_BP_UpdateLine final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ABP_DeviceBase_C*>               Temp_object_Variable;                              // 0x0008(0x0010)(ReferenceParm)
+	TArray<class ABP_DeviceBase_C*>               CallFunc_GetAllActorsOfClass_OutActors;            // 0x0018(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_UpdateLine_C_ExecuteUbergraph_BP_UpdateLine;
+
 // Function BP_UpdateLine.BP_UpdateLine_C.UpdateLine
 // 0x0160 (0x0160 - 0x0000)
 struct BP_UpdateLine_C_UpdateLine final

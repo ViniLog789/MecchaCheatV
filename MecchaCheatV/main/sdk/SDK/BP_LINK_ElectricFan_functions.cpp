@@ -64,6 +64,26 @@ void ABP_LINK_ElectricFan_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_LINK_ElectricFan.BP_LINK_ElectricFan_C.ExecuteUbergraph_BP_LINK_ElectricFan
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LINK_ElectricFan_C::ExecuteUbergraph_BP_LINK_ElectricFan(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LINK_ElectricFan_C", "ExecuteUbergraph_BP_LINK_ElectricFan");
+
+	Params::BP_LINK_ElectricFan_C_ExecuteUbergraph_BP_LINK_ElectricFan Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_LINK_ElectricFan.BP_LINK_ElectricFan_C.BndEvt__BP_LINK_ElectricFan_Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:

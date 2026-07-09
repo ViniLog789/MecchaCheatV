@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -70,6 +71,21 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_RandomObject_RandomMaterial_C_SetIndex;
+
+// Function BP_RandomObject_RandomMaterial.BP_RandomObject_RandomMaterial_C.ExecuteUbergraph_BP_RandomObject_RandomMaterial
+// 0x0028 (0x0028 - 0x0000)
+struct BP_RandomObject_RandomMaterial_C_ExecuteUbergraph_BP_RandomObject_RandomMaterial final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0018(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetIndex_Error;                           // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_RandomObject_RandomMaterial_C_ExecuteUbergraph_BP_RandomObject_RandomMaterial;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

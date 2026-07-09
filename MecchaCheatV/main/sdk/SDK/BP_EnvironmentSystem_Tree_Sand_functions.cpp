@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_EnvironmentSystem_Tree_Sand_classes.hpp"
+#include "BP_EnvironmentSystem_Tree_Sand_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -54,6 +55,26 @@ void ABP_EnvironmentSystem_Tree_Sand_C::ReceiveDestroyed()
 		Func = Class->GetFunction("BP_EnvironmentSystem_Tree_Sand_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnvironmentSystem_Tree_Sand.BP_EnvironmentSystem_Tree_Sand_C.ExecuteUbergraph_BP_EnvironmentSystem_Tree_Sand
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnvironmentSystem_Tree_Sand_C::ExecuteUbergraph_BP_EnvironmentSystem_Tree_Sand(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Tree_Sand_C", "ExecuteUbergraph_BP_EnvironmentSystem_Tree_Sand");
+
+	Params::BP_EnvironmentSystem_Tree_Sand_C_ExecuteUbergraph_BP_EnvironmentSystem_Tree_Sand Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

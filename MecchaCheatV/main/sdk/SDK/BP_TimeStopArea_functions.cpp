@@ -104,6 +104,26 @@ void ABP_TimeStopArea_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_TimeStopArea.BP_TimeStopArea_C.ExecuteUbergraph_BP_TimeStopArea
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TimeStopArea_C::ExecuteUbergraph_BP_TimeStopArea(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeStopArea_C", "ExecuteUbergraph_BP_TimeStopArea");
+
+	Params::BP_TimeStopArea_C_ExecuteUbergraph_BP_TimeStopArea Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_TimeStopArea.BP_TimeStopArea_C.DestroyVAT
 // (BlueprintCallable, BlueprintEvent)
 

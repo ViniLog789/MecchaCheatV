@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_PenBoxUnder_classes.hpp"
+#include "BP_PenBoxUnder_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,6 +27,26 @@ void ABP_PenBoxUnder_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_PenBoxUnder_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PenBoxUnder.BP_PenBoxUnder_C.ExecuteUbergraph_BP_PenBoxUnder
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PenBoxUnder_C::ExecuteUbergraph_BP_PenBoxUnder(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PenBoxUnder_C", "ExecuteUbergraph_BP_PenBoxUnder");
+
+	Params::BP_PenBoxUnder_C_ExecuteUbergraph_BP_PenBoxUnder Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

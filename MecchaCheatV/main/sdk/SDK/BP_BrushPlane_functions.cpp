@@ -50,4 +50,24 @@ void ABP_BrushPlane_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_BrushPlane.BP_BrushPlane_C.ExecuteUbergraph_BP_BrushPlane
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_BrushPlane_C::ExecuteUbergraph_BP_BrushPlane(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BrushPlane_C", "ExecuteUbergraph_BP_BrushPlane");
+
+	Params::BP_BrushPlane_C_ExecuteUbergraph_BP_BrushPlane Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

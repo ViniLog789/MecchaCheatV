@@ -27,6 +27,19 @@ public:
 };
 DUMPER7_ASSERTS_BP_LogDevice_C_UserConstructionScript;
 
+// Function BP_LogDevice.BP_LogDevice_C.ExecuteUbergraph_BP_LogDevice
+// 0x0060 (0x0060 - 0x0000)
+struct BP_LogDevice_C_ExecuteUbergraph_BP_LogDevice final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_EventValue                         K2Node_ComponentBoundEvent_SignalValue;            // 0x0008(0x0028)(ZeroConstructor, HasGetValueTypeHash)
+	struct FST_EventValue                         CallFunc_DeviceStateUpdate_ReturnEventValue;       // 0x0030(0x0028)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_LogDevice_C_ExecuteUbergraph_BP_LogDevice;
+
 // Function BP_LogDevice.BP_LogDevice_C.BndEvt__BP_IfDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
 // 0x0028 (0x0028 - 0x0000)
 struct BP_LogDevice_C_BndEvt__BP_IfDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature final

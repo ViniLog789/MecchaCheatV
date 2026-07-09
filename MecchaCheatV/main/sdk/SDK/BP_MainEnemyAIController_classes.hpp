@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "AIModule_classes.hpp"
 
 
@@ -20,11 +21,12 @@ SDK_NAMESPACE_START
 class ABP_MainEnemyAIController_C final : public AAIController
 {
 public:
-	uint8                                         Pad_3C8[0x8];                                      // 0x03C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Run();
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_MainEnemyAIController(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

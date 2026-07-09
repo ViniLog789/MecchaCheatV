@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_ReportContent_C final : public UUserWidget
 {
 public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWrapBox*                               WrapBox_24;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_NavMultipleInputTextBlock_C*       WBP_NavMultipleInputTextBlock;                     // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation;                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -35,6 +35,7 @@ public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnPushButton(class UWBP_ReportTypeButton_C* SelfObject);
 	void OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const struct FEOSPlayerReportResult& Result);
+	void ExecuteUbergraph_WBP_ReportContent(int32 EntryPoint);
 	void BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 
 public:

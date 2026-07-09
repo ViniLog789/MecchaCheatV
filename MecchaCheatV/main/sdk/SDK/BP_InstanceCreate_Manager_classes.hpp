@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "ST_InstanceGroupDatas_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,12 +22,13 @@ SDK_NAMESPACE_START
 class ABP_InstanceCreate_Manager_C : public AActor
 {
 public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class UClass*>                         TargetClass;                                       // 0x02B8(0x0010)(Edit, BlueprintVisible)
 	TMap<class UStaticMesh*, struct FST_InstanceGroupDatas> MeshDatas;                               // 0x02C8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
+	void ExecuteUbergraph_BP_InstanceCreate_Manager(int32 EntryPoint);
 	void ReceiveBeginPlay();
 
 public:

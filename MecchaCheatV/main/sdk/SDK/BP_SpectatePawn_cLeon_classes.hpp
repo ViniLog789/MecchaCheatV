@@ -10,7 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EN_cLeonGameMode_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -20,7 +22,7 @@ SDK_NAMESPACE_START
 class ABP_SpectatePawn_cLeon_C final : public ASpectatorPawn
 {
 public:
-	uint8                                         Pad_350[0x8];                                      // 0x0350(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UCameraComponent*                       Camera;                                            // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USpringArmComponent*                    SpringArm;                                         // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class ABP_FirstPersonCharacter_Main_C*        SpectateTarget;                                    // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -59,6 +61,7 @@ public:
 	void InpActEvt_Four_K2Node_InputKeyEvent_3(const struct FKey& Key);
 	void InpActEvt_Five_K2Node_InputKeyEvent_1(const struct FKey& Key);
 	void FreeCameraChange();
+	void ExecuteUbergraph_BP_SpectatePawn_cLeon(int32 EntryPoint);
 	void BackBody();
 
 public:

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_ChooseBody_C final : public UUINavWidget
 {
 public:
-	uint8                                         Pad_4F0[0x8];                                      // 0x04F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock;                             // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWrapBox*                               Bodys;                                             // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<class UWBP_BodySelect_C*>              BodySelects;                                       // 0x0508(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
@@ -28,6 +29,7 @@ public:
 public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnClickWithClass(class UWBP_BodySelect_C* SelfObject, class UClass* BodyClass);
+	void ExecuteUbergraph_WBP_ChooseBody(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

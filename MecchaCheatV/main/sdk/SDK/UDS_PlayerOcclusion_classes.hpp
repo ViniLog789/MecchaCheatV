@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UUDS_PlayerOcclusion_C final : public USceneComponent
 {
 public:
-	uint8                                         Pad_240[0x8];                                      // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UUDS_OcclusionSettings_C*               Occlusion_Settings;                                // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          Force_Full_Occlusion;                              // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -39,6 +39,7 @@ public:
 	bool                                          Do_Incremental_Traces;                             // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_UDS_PlayerOcclusion(int32 EntryPoint);
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
 	void ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, const struct FVector& SimulationPositionOffset);
 	void Initialize();

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UDS_Volume_Actor_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class AUDS_Occlusion_Volume_C final : public AUDS_Volume_Actor_C
 {
 public:
-	uint8                                         Pad_300[0x8];                                      // 0x0300(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_UDS_Occlusion_Volume_C;             // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          _Interior_Adjusments;                              // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Occlusion_Multiplier;                              // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -30,6 +31,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void Query_Occlusion_Multiplier(const struct FVector& Location, double* Multiplier);
+	void ExecuteUbergraph_UDS_Occlusion_Volume(int32 EntryPoint);
 	void Configure_Weather_Particle_Blocking();
 
 public:

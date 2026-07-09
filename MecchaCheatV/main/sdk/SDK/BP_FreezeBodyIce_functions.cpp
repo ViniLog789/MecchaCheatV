@@ -159,6 +159,26 @@ void ABP_FreezeBodyIce_C::GetParryState(bool* State)
 }
 
 
+// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.ExecuteUbergraph_BP_FreezeBodyIce
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FreezeBodyIce_C::ExecuteUbergraph_BP_FreezeBodyIce(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FreezeBodyIce_C", "ExecuteUbergraph_BP_FreezeBodyIce");
+
+	Params::BP_FreezeBodyIce_C_ExecuteUbergraph_BP_FreezeBodyIce Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.DamageToPlayerController
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

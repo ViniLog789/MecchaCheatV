@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_cLeon_RankingContents_C final : public UUserWidget
 {
 public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UTextBlock*                             Rank;                                              // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Name_0;                                            // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Found;                                             // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -30,6 +31,7 @@ public:
 
 public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void ExecuteUbergraph_WBP_cLeon_RankingContents(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

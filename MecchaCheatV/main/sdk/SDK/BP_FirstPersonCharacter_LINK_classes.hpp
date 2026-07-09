@@ -10,14 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 #include "BP_FirstPersonCharacter_Main_classes.hpp"
-#include "OnlineSubsystemBlueprints_structs.hpp"
-#include "EN_LINK_PlayerStateValueType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "EN_LINK_PlayerStateValueType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
+#include "EN_LINK_GamePhase_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,7 +29,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonCharacter_LINK_C final : public ABP_FirstPersonCharacter_Main_C
 {
 public:
-	uint8                                         Pad_B30[0x8];                                      // 0x0B30(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonCharacter_LINK_C;     // 0x0B30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBillboardComponent*                    ItemDropPoint;                                     // 0x0B38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_LinkCharacterCustomControl_C*      BPC_LinkCharacterCustomControl;                    // 0x0B40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWidgetComponent*                       Nameplate;                                         // 0x0B48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -158,6 +160,7 @@ public:
 	void Freeze_Server_();
 	void Freeze_Client_();
 	void ForceGrab(const class AActor* TargetActor);
+	void ExecuteUbergraph_BP_FirstPersonCharacter_LINK(int32 EntryPoint);
 	void EmoteStop();
 	void DropInventoryItem_Server_(int32 SlotIndex, const struct FVector& OverrideDropLocation, bool ForceNoDrop);
 	void DropInventoryItem();

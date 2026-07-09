@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UINavigation_classes.hpp"
@@ -22,7 +23,7 @@ SDK_NAMESPACE_START
 class UWBP_NavInputTextBlock_C final : public UUINavComponent
 {
 public:
-	uint8                                         Pad_910[0x8];                                      // 0x0910(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0910(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UTextBlock*                             RemainText;                                        // 0x0918(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UEditableText*                          EditableText;                                      // 0x0920(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class FText                                   HintText;                                          // 0x0928(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -45,6 +46,7 @@ public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	class FString GetNumerText(const class FText& InText);
 	void GetInputText(class FString* Text);
+	void ExecuteUbergraph_WBP_NavInputTextBlock(int32 EntryPoint);
 	void Construct();
 	void BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text);

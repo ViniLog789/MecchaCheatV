@@ -50,4 +50,24 @@ void UBPC_FreezeActor_C::ReceiveBeginPlay()
 }
 
 
+// Function BPC_FreezeActor.BPC_FreezeActor_C.ExecuteUbergraph_BPC_FreezeActor
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_FreezeActor_C::ExecuteUbergraph_BPC_FreezeActor(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_FreezeActor_C", "ExecuteUbergraph_BPC_FreezeActor");
+
+	Params::BPC_FreezeActor_C_ExecuteUbergraph_BPC_FreezeActor Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Mover_classes.hpp"
 
 
@@ -20,12 +21,13 @@ SDK_NAMESPACE_START
 class UBP_ClimbingCheck_C final : public UBaseMovementModeTransition
 {
 public:
-	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0040(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class FName                                   Next_Mode;                                         // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsToClimb;                                         // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Trigger(const struct FSimulationTickParams& Params_Trigger);
+	void ExecuteUbergraph_BP_ClimbingCheck(int32 EntryPoint);
 
 	struct FTransitionEvalResult Evaluate(const struct FSimulationTickParams& Params_Evaluate) const;
 

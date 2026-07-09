@@ -152,6 +152,26 @@ void ULongTapButton_OnAnimation_C::FromNavigation()
 }
 
 
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.ExecuteUbergraph_LongTapButton_OnAnimation
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULongTapButton_OnAnimation_C::ExecuteUbergraph_LongTapButton_OnAnimation(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "ExecuteUbergraph_LongTapButton_OnAnimation");
+
+	Params::LongTapButton_OnAnimation_C_ExecuteUbergraph_LongTapButton_OnAnimation Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature
 // (BlueprintEvent)
 

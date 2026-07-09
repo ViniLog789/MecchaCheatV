@@ -11,9 +11,30 @@
 #include "Basic.hpp"
 
 #include "WBP_VoiceChatControlPanel_classes.hpp"
+#include "WBP_VoiceChatControlPanel_parameters.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.ExecuteUbergraph_WBP_VoiceChatControlPanel
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_VoiceChatControlPanel_C::ExecuteUbergraph_WBP_VoiceChatControlPanel(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatControlPanel_C", "ExecuteUbergraph_WBP_VoiceChatControlPanel");
+
+	Params::WBP_VoiceChatControlPanel_C_ExecuteUbergraph_WBP_VoiceChatControlPanel Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 
 // Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)

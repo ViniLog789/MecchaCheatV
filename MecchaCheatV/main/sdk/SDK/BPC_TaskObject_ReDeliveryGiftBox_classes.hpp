@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BPC_TaskObject_Base_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_TaskObject_ReDeliveryGiftBox_C final : public UBPC_TaskObject_Base_C
 {
 public:
-	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BPC_TaskObject_ReDeliveryGiftBox_C; // 0x0110(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         TargetNum;                                         // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ABP_GoalHouse_C*>                Out_Actors;                                        // 0x0120(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
@@ -28,6 +29,7 @@ public:
 public:
 	void TaskStart();
 	void GoalGiftBox(class AActor* GiftBox);
+	void ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

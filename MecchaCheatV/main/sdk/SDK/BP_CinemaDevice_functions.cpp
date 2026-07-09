@@ -66,6 +66,26 @@ void ABP_CinemaDevice_C::PlayDeviceSequence(class UMovieSceneSequencePlayer* Lev
 }
 
 
+// Function BP_CinemaDevice.BP_CinemaDevice_C.ExecuteUbergraph_BP_CinemaDevice
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CinemaDevice_C::ExecuteUbergraph_BP_CinemaDevice(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CinemaDevice_C", "ExecuteUbergraph_BP_CinemaDevice");
+
+	Params::BP_CinemaDevice_C_ExecuteUbergraph_BP_CinemaDevice Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_CinemaDevice.BP_CinemaDevice_C.BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

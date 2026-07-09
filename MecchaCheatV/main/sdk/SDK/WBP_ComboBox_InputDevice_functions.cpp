@@ -50,6 +50,26 @@ void UWBP_ComboBox_InputDevice_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.ExecuteUbergraph_WBP_ComboBox_InputDevice
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ComboBox_InputDevice_C::ExecuteUbergraph_WBP_ComboBox_InputDevice(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "ExecuteUbergraph_WBP_ComboBox_InputDevice");
+
+	Params::WBP_ComboBox_InputDevice_C_ExecuteUbergraph_WBP_ComboBox_InputDevice Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

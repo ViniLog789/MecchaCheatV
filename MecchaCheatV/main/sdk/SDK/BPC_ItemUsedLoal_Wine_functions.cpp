@@ -70,4 +70,24 @@ void UBPC_ItemUsedLoal_Wine_C::ReceiveBeginPlay()
 }
 
 
+// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ExecuteUbergraph_BPC_ItemUsedLoal_Wine
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemUsedLoal_Wine_C::ExecuteUbergraph_BPC_ItemUsedLoal_Wine(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemUsedLoal_Wine_C", "ExecuteUbergraph_BPC_ItemUsedLoal_Wine");
+
+	Params::BPC_ItemUsedLoal_Wine_C_ExecuteUbergraph_BPC_ItemUsedLoal_Wine Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

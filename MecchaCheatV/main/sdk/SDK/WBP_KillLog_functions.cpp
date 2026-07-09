@@ -36,6 +36,26 @@ void UWBP_KillLog_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_KillLog.WBP_KillLog_C.ExecuteUbergraph_WBP_KillLog
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_KillLog_C::ExecuteUbergraph_WBP_KillLog(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_KillLog_C", "ExecuteUbergraph_WBP_KillLog");
+
+	Params::WBP_KillLog_C_ExecuteUbergraph_WBP_KillLog Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_KillLog.WBP_KillLog_C.AnimationEnd
 // (BlueprintCallable, BlueprintEvent)
 

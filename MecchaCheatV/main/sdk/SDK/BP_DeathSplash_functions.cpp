@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_DeathSplash_classes.hpp"
+#include "BP_DeathSplash_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -54,6 +55,26 @@ void ABP_DeathSplash_C::OnRep_PaintMaterialPatterns()
 		Func = Class->GetFunction("BP_DeathSplash_C", "OnRep_PaintMaterialPatterns");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_DeathSplash.BP_DeathSplash_C.ExecuteUbergraph_BP_DeathSplash
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DeathSplash_C::ExecuteUbergraph_BP_DeathSplash(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DeathSplash_C", "ExecuteUbergraph_BP_DeathSplash");
+
+	Params::BP_DeathSplash_C_ExecuteUbergraph_BP_DeathSplash Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

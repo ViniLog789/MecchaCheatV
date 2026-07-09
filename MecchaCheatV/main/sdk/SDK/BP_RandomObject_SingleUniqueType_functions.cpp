@@ -16,85 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.CheckLoop
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_RandomObject_SingleUniqueType_C::CheckLoop()
+void ABP_RandomObject_SingleUniqueType_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "CheckLoop");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.HideCall
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_RandomObject_SingleUniqueType_C::HideCall()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "HideCall");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.IndexUpdate
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_RandomObject_SingleUniqueType_C::IndexUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "IndexUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.OnRep_CurrentIndex
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_RandomObject_SingleUniqueType_C::OnRep_CurrentIndex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "OnRep_CurrentIndex");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.RandomCall
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_RandomObject_SingleUniqueType_C::RandomCall()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "RandomCall");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_RandomObject_SingleUniqueType_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,15 +54,105 @@ void ABP_RandomObject_SingleUniqueType_C::SetIndex(int32 Index_0, bool* Error)
 }
 
 
-// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_RandomObject_SingleUniqueType_C::UserConstructionScript()
+void ABP_RandomObject_SingleUniqueType_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.RandomCall
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_RandomObject_SingleUniqueType_C::RandomCall()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "RandomCall");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.OnRep_CurrentIndex
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_RandomObject_SingleUniqueType_C::OnRep_CurrentIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "OnRep_CurrentIndex");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.IndexUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_RandomObject_SingleUniqueType_C::IndexUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "IndexUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.HideCall
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_RandomObject_SingleUniqueType_C::HideCall()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "HideCall");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.ExecuteUbergraph_BP_RandomObject_SingleUniqueType
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RandomObject_SingleUniqueType_C::ExecuteUbergraph_BP_RandomObject_SingleUniqueType(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "ExecuteUbergraph_BP_RandomObject_SingleUniqueType");
+
+	Params::BP_RandomObject_SingleUniqueType_C_ExecuteUbergraph_BP_RandomObject_SingleUniqueType Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RandomObject_SingleUniqueType.BP_RandomObject_SingleUniqueType_C.CheckLoop
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_RandomObject_SingleUniqueType_C::CheckLoop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RandomObject_SingleUniqueType_C", "CheckLoop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

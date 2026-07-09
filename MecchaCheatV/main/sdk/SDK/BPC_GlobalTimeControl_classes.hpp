@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,11 +21,12 @@ SDK_NAMESPACE_START
 class UBPC_GlobalTimeControl_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void TimeReset();
 	void SlowTime(double Drutaion, double Multiply, bool ControlPitch);
+	void ExecuteUbergraph_BPC_GlobalTimeControl(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -191,6 +191,26 @@ void ABP_RevivalBell_C::GetParryState(bool* State)
 }
 
 
+// Function BP_RevivalBell.BP_RevivalBell_C.ExecuteUbergraph_BP_RevivalBell
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RevivalBell_C::ExecuteUbergraph_BP_RevivalBell(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RevivalBell_C", "ExecuteUbergraph_BP_RevivalBell");
+
+	Params::BP_RevivalBell_C_ExecuteUbergraph_BP_RevivalBell Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_RevivalBell.BP_RevivalBell_C.DamageToPlayerController
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

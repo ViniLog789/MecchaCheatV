@@ -21,13 +21,14 @@ SDK_NAMESPACE_START
 class ABP_AIController_C final : public AAIController
 {
 public:
-	uint8                                         Pad_3C8[0x8];                                      // 0x03C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UAIPerceptionComponent*                 AIPerception;                                      // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           Timer;                                             // 0x03D8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ReceiveBeginPlay();
 	void Forget_Target();
+	void ExecuteUbergraph_BP_AIController(int32 EntryPoint);
 	void BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus);
 
 public:

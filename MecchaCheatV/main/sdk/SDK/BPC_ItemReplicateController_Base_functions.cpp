@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ExecuteUbergraph_BPC_ItemReplicateController_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Base_C::ExecuteUbergraph_BPC_ItemReplicateController_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "ExecuteUbergraph_BPC_ItemReplicateController_Base");
+
+	Params::BPC_ItemReplicateController_Base_C_ExecuteUbergraph_BPC_ItemReplicateController_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.CharacterReplicated
 // (BlueprintCallable, BlueprintEvent)
 

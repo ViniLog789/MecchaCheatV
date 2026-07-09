@@ -10,11 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_SaveDataUpdateType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EN_DeviceState_structs.hpp"
+#include "ENUM_SaveDataUpdateType_structs.hpp"
 #include "EN_DeviceOnlineMode_structs.hpp"
-#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -24,7 +25,7 @@ SDK_NAMESPACE_START
 class ABP_DeviceBase_C : public AActor
 {
 public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UObject*                                BPC_UpdateLineSignalControl;                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UDeviceComponent_C*                     DeviceComonent;                                    // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -38,6 +39,7 @@ public:
 
 public:
 	void DeviceStateUpdate(const struct FST_EventValue& EventValue, struct FST_EventValue* ReturnEventValue);
+	void ExecuteUbergraph_BP_DeviceBase(int32 EntryPoint);
 	void OnStateChange(EN_DeviceState State);
 	void ReceiveBeginPlay();
 	void SaveUpdateFunc();

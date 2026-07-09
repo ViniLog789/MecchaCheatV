@@ -302,6 +302,26 @@ void ABP_LinkGoalPosition_C::FragVisualUpdate(bool IsUsed)
 }
 
 
+// Function BP_LinkGoalPosition.BP_LinkGoalPosition_C.ExecuteUbergraph_BP_LinkGoalPosition
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LinkGoalPosition_C::ExecuteUbergraph_BP_LinkGoalPosition(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LinkGoalPosition_C", "ExecuteUbergraph_BP_LinkGoalPosition");
+
+	Params::BP_LinkGoalPosition_C_ExecuteUbergraph_BP_LinkGoalPosition Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_LinkGoalPosition.BP_LinkGoalPosition_C.CanInteract
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

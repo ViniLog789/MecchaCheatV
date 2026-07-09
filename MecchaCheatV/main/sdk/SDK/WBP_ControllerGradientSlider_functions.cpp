@@ -118,6 +118,26 @@ void UWBP_ControllerGradientSlider_C::PreConstruct(bool IsDesignTime_PreConstruc
 }
 
 
+// Function WBP_ControllerGradientSlider.WBP_ControllerGradientSlider_C.ExecuteUbergraph_WBP_ControllerGradientSlider
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ControllerGradientSlider_C::ExecuteUbergraph_WBP_ControllerGradientSlider(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ControllerGradientSlider_C", "ExecuteUbergraph_WBP_ControllerGradientSlider");
+
+	Params::WBP_ControllerGradientSlider_C_ExecuteUbergraph_WBP_ControllerGradientSlider Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ControllerGradientSlider.WBP_ControllerGradientSlider_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

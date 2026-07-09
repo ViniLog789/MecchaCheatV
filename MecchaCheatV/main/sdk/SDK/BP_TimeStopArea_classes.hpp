@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_CopyActorBase_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_TimeStopArea_C final : public ABP_CopyActorBase_C
 {
 public:
-	uint8                                         Pad_460[0x8];                                      // 0x0460(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_TimeStopArea_C;                  // 0x0460(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USphereComponent*                       Sphere1;                                           // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      Centor1;                                           // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   Clock_Base_mesh;                                   // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -35,6 +36,7 @@ public:
 	void TimeReStart(class AActor* Actor);
 	void SetTimeStopState(bool State_SetTimeStopState);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_TimeStopArea(int32 EntryPoint);
 	void DestroyVAT();
 	void Check();
 	void BndEvt__BP_TimeStopArea_Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);

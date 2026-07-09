@@ -30,6 +30,26 @@ void UWBP_SaveNow_LINK_C::Construct()
 }
 
 
+// Function WBP_SaveNow_LINK.WBP_SaveNow_LINK_C.ExecuteUbergraph_WBP_SaveNow_LINK
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SaveNow_LINK_C::ExecuteUbergraph_WBP_SaveNow_LINK(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SaveNow_LINK_C", "ExecuteUbergraph_WBP_SaveNow_LINK");
+
+	Params::WBP_SaveNow_LINK_C_ExecuteUbergraph_WBP_SaveNow_LINK Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_SaveNow_LINK.WBP_SaveNow_LINK_C.PlayAnimationMessage
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

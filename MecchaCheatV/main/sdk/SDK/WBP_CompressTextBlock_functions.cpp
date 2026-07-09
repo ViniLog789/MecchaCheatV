@@ -76,4 +76,24 @@ void UWBP_CompressTextBlock_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_CompressTextBlock.WBP_CompressTextBlock_C.ExecuteUbergraph_WBP_CompressTextBlock
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CompressTextBlock_C::ExecuteUbergraph_WBP_CompressTextBlock(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CompressTextBlock_C", "ExecuteUbergraph_WBP_CompressTextBlock");
+
+	Params::WBP_CompressTextBlock_C_ExecuteUbergraph_WBP_CompressTextBlock Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

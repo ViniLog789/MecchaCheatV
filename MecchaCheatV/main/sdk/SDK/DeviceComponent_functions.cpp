@@ -90,6 +90,26 @@ void UDeviceComponent_C::CallSignal_Server_(const struct FST_EventValue& SignalV
 }
 
 
+// Function DeviceComponent.DeviceComponent_C.ExecuteUbergraph_DeviceComponent
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDeviceComponent_C::ExecuteUbergraph_DeviceComponent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DeviceComponent_C", "ExecuteUbergraph_DeviceComponent");
+
+	Params::DeviceComponent_C_ExecuteUbergraph_DeviceComponent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function DeviceComponent.DeviceComponent_C.OnSignal_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

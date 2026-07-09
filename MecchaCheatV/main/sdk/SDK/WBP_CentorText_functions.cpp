@@ -50,6 +50,26 @@ void UWBP_CentorText_C::Finish()
 }
 
 
+// Function WBP_CentorText.WBP_CentorText_C.ExecuteUbergraph_WBP_CentorText
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CentorText_C::ExecuteUbergraph_WBP_CentorText(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CentorText_C", "ExecuteUbergraph_WBP_CentorText");
+
+	Params::WBP_CentorText_C_ExecuteUbergraph_WBP_CentorText Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_CentorText.WBP_CentorText_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

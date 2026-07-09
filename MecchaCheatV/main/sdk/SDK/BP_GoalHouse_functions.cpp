@@ -98,6 +98,26 @@ void ABP_GoalHouse_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_GoalHouse.BP_GoalHouse_C.ExecuteUbergraph_BP_GoalHouse
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GoalHouse_C::ExecuteUbergraph_BP_GoalHouse(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GoalHouse_C", "ExecuteUbergraph_BP_GoalHouse");
+
+	Params::BP_GoalHouse_C_ExecuteUbergraph_BP_GoalHouse Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_GoalHouse.BP_GoalHouse_C.BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:

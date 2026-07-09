@@ -21,12 +21,13 @@ SDK_NAMESPACE_START
 class UWBP_VoiceChatControlPanel_C final : public UUserWidget
 {
 public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWBP_SettingVoiceInputDevice_C*         WBP_SettingVoiceInputDevice;                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UScrollBox*                             ScrollBox_52;                                      // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<struct FUniqueNetIdRepl>               BoxTarget;                                         // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
+	void ExecuteUbergraph_WBP_VoiceChatControlPanel(int32 EntryPoint);
 	void Construct();
 
 public:

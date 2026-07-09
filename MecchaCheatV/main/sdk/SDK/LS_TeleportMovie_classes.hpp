@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "LevelSequence_classes.hpp"
 
 
@@ -20,11 +21,12 @@ SDK_NAMESPACE_START
 class ULS_TeleportMovie_DirectorBP_C final : public ULevelSequenceDirector
 {
 public:
-	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void SequenceEvent__ENTRYPOINTLS_TeleportMovie_DirectorBP_0(class ABP_FirstPersonCharacter_cLeon_Character_C* BP_FirstPersonCharacter_cLeon_Character);
 	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_TeleportMovie_DirectorBP();
+	void ExecuteUbergraph_LS_TeleportMovie_DirectorBP(int32 EntryPoint);
 	void BP_FirstPersonCharacter_cLeon_Character_Event(class ABP_FirstPersonCharacter_cLeon_Character_C* BP_FirstPersonCharacter_cLeon_Character);
 	struct FMovieSceneDynamicBindingResolveResult BP_FirstPersonCharacter_cLeon_Character_DynamicBinding_0(int32 PlayerControllerIndex);
 	struct FMovieSceneDynamicBindingResolveResult BP_FirstPersonCharacter_cLeon_Character_DynamicBinding(int32 PlayerControllerIndex);

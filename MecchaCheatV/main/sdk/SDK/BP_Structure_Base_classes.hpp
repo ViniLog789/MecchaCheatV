@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,12 +22,13 @@ SDK_NAMESPACE_START
 class ABP_Structure_Base_C : public AActor
 {
 public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FRandomStream                          RandomSeed;                                        // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor)
 
 public:
 	void Generate();
+	void ExecuteUbergraph_BP_Structure_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

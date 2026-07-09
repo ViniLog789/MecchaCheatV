@@ -10,9 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EN_LINK_GamePhase_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +24,7 @@ SDK_NAMESPACE_START
 class ABP_GameState_LINK_C final : public AGameStateBase
 {
 public:
-	uint8                                         Pad_300[0x8];                                      // 0x0300(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int32                                         CurrentRound;                                      // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -90,6 +92,7 @@ public:
 	void GameClerUI();
 	void GameClear();
 	void ExitShopAreaUpdate(class AActor* Actor, bool State);
+	void ExecuteUbergraph_BP_GameState_LINK(int32 EntryPoint);
 	void DeathAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete);
 	void DeathAnnounce_Client_(const class FString& playerName);
 	void CloseAnnounce();

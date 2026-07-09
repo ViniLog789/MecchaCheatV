@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_EnviromentSystem_log_classes.hpp"
+#include "BP_EnviromentSystem_log_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,6 +41,26 @@ void ABP_EnviromentSystem_log_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_EnviromentSystem_log_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnviromentSystem_log.BP_EnviromentSystem_log_C.ExecuteUbergraph_BP_EnviromentSystem_log
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnviromentSystem_log_C::ExecuteUbergraph_BP_EnviromentSystem_log(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnviromentSystem_log_C", "ExecuteUbergraph_BP_EnviromentSystem_log");
+
+	Params::BP_EnviromentSystem_log_C_ExecuteUbergraph_BP_EnviromentSystem_log Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

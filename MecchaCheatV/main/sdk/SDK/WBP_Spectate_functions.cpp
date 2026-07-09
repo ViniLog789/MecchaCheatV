@@ -88,6 +88,26 @@ void UWBP_Spectate_C::InpActEvt_IA_Spectate_Left_K2Node_EnhancedInputActionEvent
 }
 
 
+// Function WBP_Spectate.WBP_Spectate_C.ExecuteUbergraph_WBP_Spectate
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Spectate_C::ExecuteUbergraph_WBP_Spectate(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Spectate_C", "ExecuteUbergraph_WBP_Spectate");
+
+	Params::WBP_Spectate_C_ExecuteUbergraph_WBP_Spectate Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Spectate.WBP_Spectate_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

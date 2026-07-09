@@ -56,6 +56,26 @@ void UWBP_BodySelect_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_BodySelect.WBP_BodySelect_C.ExecuteUbergraph_WBP_BodySelect
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BodySelect_C::ExecuteUbergraph_WBP_BodySelect(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BodySelect_C", "ExecuteUbergraph_WBP_BodySelect");
+
+	Params::WBP_BodySelect_C_ExecuteUbergraph_WBP_BodySelect Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_BodySelect.WBP_BodySelect_C.BndEvt__WBP_BodySelect_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 

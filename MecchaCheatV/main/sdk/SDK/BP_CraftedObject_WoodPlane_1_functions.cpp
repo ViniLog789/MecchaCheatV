@@ -36,4 +36,24 @@ void ABP_CraftedObject_WoodPlane_1_C::ReceiveTick(float DeltaSeconds_ReceiveTick
 }
 
 
+// Function BP_CraftedObject_WoodPlane_1.BP_CraftedObject_WoodPlane_1_C.ExecuteUbergraph_BP_CraftedObject_WoodPlane_1
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_WoodPlane_1_C::ExecuteUbergraph_BP_CraftedObject_WoodPlane_1(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_WoodPlane_1_C", "ExecuteUbergraph_BP_CraftedObject_WoodPlane_1");
+
+	Params::BP_CraftedObject_WoodPlane_1_C_ExecuteUbergraph_BP_CraftedObject_WoodPlane_1 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

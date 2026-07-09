@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,12 +21,13 @@ SDK_NAMESPACE_START
 class UBPC_CameraShake_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TSubclassOf<class UCameraShakeBase>           ShakeClass;                                        // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
 public:
 	void ShakeStart(double Duration, double Scale);
 	void ShakeEnd();
+	void ExecuteUbergraph_BPC_CameraShake(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

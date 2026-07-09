@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_NearInteract_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        SearchRadius;                                      // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Angle;                                             // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        TraceRoot;                                         // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -40,6 +40,7 @@ public:
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
 	void ReceiveBeginPlay();
 	void GetSelectActor(class AActor** CurrentSelectActor);
+	void ExecuteUbergraph_BPC_NearInteract(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

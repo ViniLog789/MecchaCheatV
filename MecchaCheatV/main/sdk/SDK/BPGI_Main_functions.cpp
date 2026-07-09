@@ -30,6 +30,26 @@ void UBPGI_Main_C::CloudSaveSync()
 }
 
 
+// Function BPGI_Main.BPGI_Main_C.ExecuteUbergraph_BPGI_Main
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPGI_Main_C::ExecuteUbergraph_BPGI_Main(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPGI_Main_C", "ExecuteUbergraph_BPGI_Main");
+
+	Params::BPGI_Main_C_ExecuteUbergraph_BPGI_Main Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPGI_Main.BPGI_Main_C.OnCallFailed_0646E9BD4A18BBF176FCAEA43F9771E1
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

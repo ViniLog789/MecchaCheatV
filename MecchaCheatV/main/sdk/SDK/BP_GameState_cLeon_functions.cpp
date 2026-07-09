@@ -766,6 +766,26 @@ void ABP_GameState_cLeon_C::FocusChicken()
 }
 
 
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ExecuteUbergraph_BP_GameState_cLeon
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::ExecuteUbergraph_BP_GameState_cLeon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ExecuteUbergraph_BP_GameState_cLeon");
+
+	Params::BP_GameState_cLeon_C_ExecuteUbergraph_BP_GameState_cLeon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.EEYAN_Activate
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 

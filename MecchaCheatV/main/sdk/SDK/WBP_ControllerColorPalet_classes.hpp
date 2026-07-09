@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -21,7 +22,7 @@ SDK_NAMESPACE_START
 class UWBP_ControllerColorPalet_C final : public UUserWidget
 {
 public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWBP_ControllerGradientSlider_C*        WBP_ControllerGradientSlider_V;                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_ControllerGradientSlider_C*        WBP_ControllerGradientSlider_S;                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_ControllerGradientSlider_C*        WBP_ControllerGradientSlider_R;                    // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -39,6 +40,7 @@ public:
 	void UpdateDefaultValue(const struct FLinearColor& DefaultColor, double Metallic, double Roughness);
 	void SelectSlide(int32 AddValue);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void ExecuteUbergraph_WBP_ControllerColorPalet(int32 EntryPoint);
 	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_V_K2Node_ComponentBoundEvent_2_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);
 	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_S_K2Node_ComponentBoundEvent_1_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);
 	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_R_K2Node_ComponentBoundEvent_4_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);

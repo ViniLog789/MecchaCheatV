@@ -35,5 +35,21 @@ public:
 };
 DUMPER7_ASSERTS_BPC_ReplicateAnimBPState_C_OnRep_MaxWalkSpeed;
 
+// Function BPC_ReplicateAnimBPState.BPC_ReplicateAnimBPState_C.ExecuteUbergraph_BPC_ReplicateAnimBPState
+// 0x0030 (0x0030 - 0x0000)
+struct BPC_ReplicateAnimBPState_C_ExecuteUbergraph_BPC_ReplicateAnimBPState final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_CustomEvent_Speed;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCharacterMoverComponent*               CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	const class UCommonLegacyMovementSettings*    CallFunc_FindSharedSettings_BP_ReturnValue;        // 0x0020(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_MaxSpeed_ImplicitCast;          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ReplicateAnimBPState_C_ExecuteUbergraph_BPC_ReplicateAnimBPState;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

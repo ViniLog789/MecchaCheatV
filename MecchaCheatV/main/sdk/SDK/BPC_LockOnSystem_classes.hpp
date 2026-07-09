@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,12 +21,13 @@ SDK_NAMESPACE_START
 class UBPC_LockOnSystem_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class AActor*                                 Retrun_Actor;                                      // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ULBPC_LockOn_C*                         Return_Lock_on_Component;                          // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UCameraComponent*                       First_Person_Camera;                               // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_BPC_LockOnSystem(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void LockOnCheck(const struct FTransform& OwnerViewTransform);
 	void LockOn(bool State);

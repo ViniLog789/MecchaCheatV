@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -20,11 +21,12 @@ SDK_NAMESPACE_START
 class UWBP_ShortageStamina_C final : public UUserWidget
 {
 public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       Shake;                                             // 0x0348(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ShakePlay();
+	void ExecuteUbergraph_WBP_ShortageStamina(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -158,6 +158,26 @@ void UBPC_ItemReplicateController_Parasol_C::ForceClose()
 }
 
 
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ExecuteUbergraph_BPC_ItemReplicateController_Parasol
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Parasol_C::ExecuteUbergraph_BPC_ItemReplicateController_Parasol(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "ExecuteUbergraph_BPC_ItemReplicateController_Parasol");
+
+	Params::BPC_ItemReplicateController_Parasol_C_ExecuteUbergraph_BPC_ItemReplicateController_Parasol Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.AddForceNoDrop
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 

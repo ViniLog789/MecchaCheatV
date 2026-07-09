@@ -370,6 +370,26 @@ void ABP_SpectatePawn_cLeon_C::FreeCameraChange()
 }
 
 
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ExecuteUbergraph_BP_SpectatePawn_cLeon
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SpectatePawn_cLeon_C::ExecuteUbergraph_BP_SpectatePawn_cLeon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ExecuteUbergraph_BP_SpectatePawn_cLeon");
+
+	Params::BP_SpectatePawn_cLeon_C_ExecuteUbergraph_BP_SpectatePawn_cLeon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.BackBody
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 

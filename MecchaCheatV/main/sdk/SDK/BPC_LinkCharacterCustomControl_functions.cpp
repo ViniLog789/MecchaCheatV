@@ -200,4 +200,24 @@ void UBPC_LinkCharacterCustomControl_C::Init(class UMaterialInstanceDynamic* Own
 }
 
 
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.ExecuteUbergraph_BPC_LinkCharacterCustomControl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LinkCharacterCustomControl_C::ExecuteUbergraph_BPC_LinkCharacterCustomControl(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "ExecuteUbergraph_BPC_LinkCharacterCustomControl");
+
+	Params::BPC_LinkCharacterCustomControl_C_ExecuteUbergraph_BPC_LinkCharacterCustomControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BPC_ItemReplicateController_Base_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UBPC_ItemReplicateController_MagicHand_C final : public UBPC_ItemReplicateController_Base_C
 {
 public:
-	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BPC_ItemReplicateController_MagicHand_C; // 0x00E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UPrimitiveComponent*                    AddForceTarget;                                    // 0x00E8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class ABP_MagicHandGrabArea_C*                GrabAreaActor;                                     // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        GrabLength;                                        // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -43,6 +43,7 @@ public:
 	void OnBlendOut_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
 	void Grab_Server_(const struct FVector& CentorLocation);
 	void Grab_Replicate_(const struct FVector& CentorLocation);
+	void ExecuteUbergraph_BPC_ItemReplicateController_MagicHand(int32 EntryPoint);
 	void CharacterReplicated();
 
 public:

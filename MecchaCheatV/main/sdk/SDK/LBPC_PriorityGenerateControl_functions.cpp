@@ -30,4 +30,24 @@ void ULBPC_PriorityGenerateControl_C::ReceiveBeginPlay()
 }
 
 
+// Function LBPC_PriorityGenerateControl.LBPC_PriorityGenerateControl_C.ExecuteUbergraph_LBPC_PriorityGenerateControl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_PriorityGenerateControl_C::ExecuteUbergraph_LBPC_PriorityGenerateControl(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_PriorityGenerateControl_C", "ExecuteUbergraph_LBPC_PriorityGenerateControl");
+
+	Params::LBPC_PriorityGenerateControl_C_ExecuteUbergraph_LBPC_PriorityGenerateControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

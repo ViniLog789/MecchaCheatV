@@ -78,6 +78,26 @@ void UWBP_ComboBox_ScreenMode_C::GetResolution()
 }
 
 
+// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.ExecuteUbergraph_WBP_ComboBox_ScreenMode
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ComboBox_ScreenMode_C::ExecuteUbergraph_WBP_ComboBox_ScreenMode(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "ExecuteUbergraph_WBP_ComboBox_ScreenMode");
+
+	Params::WBP_ComboBox_ScreenMode_C_ExecuteUbergraph_WBP_ComboBox_ScreenMode Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

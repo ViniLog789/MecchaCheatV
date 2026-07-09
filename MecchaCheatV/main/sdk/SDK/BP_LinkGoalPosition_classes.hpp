@@ -11,7 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EN_LINK_GamePhase_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +23,7 @@ SDK_NAMESPACE_START
 class ABP_LinkGoalPosition_C final : public AActor
 {
 public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UNiagaraComponent*                      NI_Beacon;                                         // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      Niagara;                                           // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   falgswitch;                                        // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -72,6 +74,7 @@ public:
 	void GoalEvent();
 	void GetDuplicateValues(TArray<struct FGuid>* DuplicateValues);
 	void FragVisualUpdate(bool IsUsed);
+	void ExecuteUbergraph_BP_LinkGoalPosition(int32 EntryPoint);
 	bool CanInteract();
 	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
 	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);

@@ -36,4 +36,24 @@ void ABP_BackpackHolo_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
 }
 
 
+// Function BP_BackpackHolo.BP_BackpackHolo_C.ExecuteUbergraph_BP_BackpackHolo
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_BackpackHolo_C::ExecuteUbergraph_BP_BackpackHolo(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BackpackHolo_C", "ExecuteUbergraph_BP_BackpackHolo");
+
+	Params::BP_BackpackHolo_C_ExecuteUbergraph_BP_BackpackHolo Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

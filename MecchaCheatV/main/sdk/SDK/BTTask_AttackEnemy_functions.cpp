@@ -38,6 +38,26 @@ void UBTTask_AttackEnemy_C::ReceiveExecuteAI(class AAIController* OwnerControlle
 }
 
 
+// Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.ExecuteUbergraph_BTTask_AttackEnemy
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_AttackEnemy_C::ExecuteUbergraph_BTTask_AttackEnemy(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_AttackEnemy_C", "ExecuteUbergraph_BTTask_AttackEnemy");
+
+	Params::BTTask_AttackEnemy_C_ExecuteUbergraph_BTTask_AttackEnemy Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.EndTask
 // (BlueprintCallable, BlueprintEvent)
 

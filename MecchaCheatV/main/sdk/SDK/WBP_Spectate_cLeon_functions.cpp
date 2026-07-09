@@ -114,6 +114,26 @@ TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> UWBP_Spectate_cLeon_C::
 }
 
 
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.ExecuteUbergraph_WBP_Spectate_cLeon
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Spectate_cLeon_C::ExecuteUbergraph_WBP_Spectate_cLeon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "ExecuteUbergraph_WBP_Spectate_cLeon");
+
+	Params::WBP_Spectate_cLeon_C_ExecuteUbergraph_WBP_Spectate_cLeon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.EmptyCheck
 // (BlueprintCallable, BlueprintEvent)
 

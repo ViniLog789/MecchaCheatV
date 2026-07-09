@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "EN_StanType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PenguinHotel_classes.hpp"
+#include "EN_StanType_structs.hpp"
 #include "EN_DamageType_structs.hpp"
 
 
@@ -24,7 +24,7 @@ SDK_NAMESPACE_START
 class ABP_Glue_CustomPhysics_V2_C final : public ACPP_Glue
 {
 public:
-	uint8                                         Pad_2F0[0x8];                                      // 0x02F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USphereComponent*                       Sphere;                                            // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWidgetComponent*                       Widget;                                            // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   GlueArea;                                          // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -71,6 +71,7 @@ public:
 	void OnRep_DynamicColorIndex();
 	void GlueViewDistanceCheck();
 	void GetParryState(bool* State);
+	void ExecuteUbergraph_BP_Glue_CustomPhysics_V2(int32 EntryPoint);
 	void DebugVisualize__UpdateFunc();
 	void DebugVisualize__FinishedFunc();
 	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);

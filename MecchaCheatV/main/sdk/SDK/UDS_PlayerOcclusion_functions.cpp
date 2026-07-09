@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ExecuteUbergraph_UDS_PlayerOcclusion
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUDS_PlayerOcclusion_C::ExecuteUbergraph_UDS_PlayerOcclusion(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "ExecuteUbergraph_UDS_PlayerOcclusion");
+
+	Params::UDS_PlayerOcclusion_C_ExecuteUbergraph_UDS_PlayerOcclusion Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ReceiveEndPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:

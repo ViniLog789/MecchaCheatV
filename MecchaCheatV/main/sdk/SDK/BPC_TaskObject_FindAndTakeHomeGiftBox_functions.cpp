@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_TaskObject_FindAndTakeHomeGiftBox_C::ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_TaskObject_FindAndTakeHomeGiftBox_C", "ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox");
+
+	Params::BPC_TaskObject_FindAndTakeHomeGiftBox_C_ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.GoalActor
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

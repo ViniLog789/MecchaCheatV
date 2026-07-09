@@ -36,4 +36,24 @@ void UWBP_cLeon_RankingContents_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_cLeon_RankingContents.WBP_cLeon_RankingContents_C.ExecuteUbergraph_WBP_cLeon_RankingContents
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeon_RankingContents_C::ExecuteUbergraph_WBP_cLeon_RankingContents(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeon_RankingContents_C", "ExecuteUbergraph_WBP_cLeon_RankingContents");
+
+	Params::WBP_cLeon_RankingContents_C_ExecuteUbergraph_WBP_cLeon_RankingContents Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

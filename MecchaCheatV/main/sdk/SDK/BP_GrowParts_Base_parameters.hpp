@@ -16,6 +16,22 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_GrowParts_Base.BP_GrowParts_Base_C.ExecuteUbergraph_BP_GrowParts_Base
+// 0x0028 (0x0028 - 0x0000)
+struct BP_GrowParts_Base_C_ExecuteUbergraph_BP_GrowParts_Base final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_GenerateMapManager_C*               CallFunc_GetActorOfClass_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRandomStream                          K2Node_Event_Seed;                                 // 0x0014(0x0008)(ConstParm, ZeroConstructor, NoDestructor)
+	int32                                         K2Node_Event_DepthIndex;                           // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GrowParts_Base_C_ExecuteUbergraph_BP_GrowParts_Base;
+
 // Function BP_GrowParts_Base.BP_GrowParts_Base_C.Generate
 // 0x000C (0x000C - 0x0000)
 struct BP_GrowParts_Base_C_Generate final

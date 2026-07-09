@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
 
@@ -21,11 +22,12 @@ SDK_NAMESPACE_START
 class UBTS_NearAttack_C final : public UBTService_BlueprintBase
 {
 public:
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FBlackboardKeySelector                 Key;                                               // 0x00A0(0x0028)(Edit, BlueprintVisible)
 
 public:
 	void ReceiveTickAI(class AAIController* OwnerController_ReceiveTickAI, class APawn* ControlledPawn_ReceiveTickAI, float DeltaSeconds_ReceiveTickAI);
+	void ExecuteUbergraph_BTS_NearAttack(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

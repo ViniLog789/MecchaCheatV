@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_DamageTool_Base_V2_classes.hpp"
 
 
@@ -20,10 +21,12 @@ SDK_NAMESPACE_START
 class ABP_Spear_C final : public ABP_DamageTool_Base_V2_C
 {
 public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Spear_C;                         // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBPC_DampingControl_C*                  BPC_DampingControl;                                // 0x0500(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Shot(bool PressState_Shot, double PushTime_Shot, class ABP_FirstPersonCharacter_Main_C* SourcePlayer_Shot);
+	void ExecuteUbergraph_BP_Spear(int32 EntryPoint);
 	void BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature(double PushTime);
 
 public:

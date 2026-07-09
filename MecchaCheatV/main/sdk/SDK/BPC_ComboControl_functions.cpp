@@ -196,6 +196,26 @@ void UBPC_ComboControl_C::LoopInput(bool bEnabled)
 }
 
 
+// Function BPC_ComboControl.BPC_ComboControl_C.ExecuteUbergraph_BPC_ComboControl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ComboControl_C::ExecuteUbergraph_BPC_ComboControl(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ComboControl_C", "ExecuteUbergraph_BPC_ComboControl");
+
+	Params::BPC_ComboControl_C_ExecuteUbergraph_BPC_ComboControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_ComboControl.BPC_ComboControl_C.ComboStart
 // (BlueprintCallable, BlueprintEvent)
 

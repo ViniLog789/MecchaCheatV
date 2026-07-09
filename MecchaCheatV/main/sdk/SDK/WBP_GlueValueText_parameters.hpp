@@ -32,5 +32,17 @@ public:
 };
 DUMPER7_ASSERTS_WBP_GlueValueText_C_SetBarWidth;
 
+// Function WBP_GlueValueText.WBP_GlueValueText_C.ExecuteUbergraph_WBP_GlueValueText
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_GlueValueText_C_ExecuteUbergraph_WBP_GlueValueText final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_CustomEvent_InText;                         // 0x0008(0x0010)()
+	double                                        K2Node_CustomEvent_Desired_Size_X;                 // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GlueValueText_C_ExecuteUbergraph_WBP_GlueValueText;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

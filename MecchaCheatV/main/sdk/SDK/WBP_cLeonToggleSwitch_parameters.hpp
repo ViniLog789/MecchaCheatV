@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
+
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
@@ -31,6 +33,24 @@ public:
 	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_cLeonToggleSwitch_C_PreConstruct;
+
+// Function WBP_cLeonToggleSwitch.WBP_cLeonToggleSwitch_C.ExecuteUbergraph_WBP_cLeonToggleSwitch
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_cLeonToggleSwitch_C_ExecuteUbergraph_WBP_cLeonToggleSwitch final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUMGSequencePlayMode                          Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUMGSequencePlayMode                          Temp_byte_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUMGSequencePlayMode                          K2Node_Select_Default;                             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x000C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_ToggleState;                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonToggleSwitch_C_ExecuteUbergraph_WBP_cLeonToggleSwitch;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

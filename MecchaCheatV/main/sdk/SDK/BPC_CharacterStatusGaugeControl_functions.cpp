@@ -191,6 +191,26 @@ void UBPC_CharacterStatusGaugeControl_C::GetAnimationStartValue(bool Normalize, 
 }
 
 
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ExecuteUbergraph_BPC_CharacterStatusGaugeControl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_CharacterStatusGaugeControl_C::ExecuteUbergraph_BPC_CharacterStatusGaugeControl(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ExecuteUbergraph_BPC_CharacterStatusGaugeControl");
+
+	Params::BPC_CharacterStatusGaugeControl_C_ExecuteUbergraph_BPC_CharacterStatusGaugeControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ChangeValue
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

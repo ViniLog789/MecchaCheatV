@@ -162,7 +162,7 @@ int main()
     DWORD pid = GetProcessId(kProcessName);
     if (!pid)
     {
-        std::cout << "Process not found!" << std::endl;
+        std::cout << "Process not found!" << std::endl; // need pause
         return 0;
     }
 

@@ -98,6 +98,26 @@ void UWBP_TextChatVisualBox_C::InpActEvt_IA_TextChat_K2Node_EnhancedInputActionE
 }
 
 
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ExecuteUbergraph_WBP_TextChatVisualBox
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TextChatVisualBox_C::ExecuteUbergraph_WBP_TextChatVisualBox(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "ExecuteUbergraph_WBP_TextChatVisualBox");
+
+	Params::WBP_TextChatVisualBox_C_ExecuteUbergraph_WBP_TextChatVisualBox Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:

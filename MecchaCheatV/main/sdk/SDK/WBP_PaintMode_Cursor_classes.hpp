@@ -11,6 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -21,7 +23,7 @@ SDK_NAMESPACE_START
 class UWBP_PaintMode_Cursor_C final : public UUserWidget
 {
 public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWBP_PaintCursor_C*                     WBP_PaintCursor;                                   // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_KeyImage_C*                        WBP_KeyImage_11;                                   // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_KeyImage_C*                        WBP_KeyImage_10;                                   // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -68,6 +70,7 @@ public:
 	void OnGBufferColorPicked(const struct FLinearColor& PickedColor, float PickedMetallic, float PickedRoughness);
 	void MetallicOrRoughnessChanged(float NewMetallic, float NewRoughness);
 	void GetViewportPosition(struct FVector2D* Positon);
+	void ExecuteUbergraph_WBP_PaintMode_Cursor(int32 EntryPoint);
 	void Destruct();
 	void Construct();
 	void ColorPickKeep(bool State, bool Commit);

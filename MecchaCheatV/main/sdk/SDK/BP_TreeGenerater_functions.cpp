@@ -72,4 +72,24 @@ void ABP_TreeGenerater_C::Generate(const struct FRandomStream& Seed, int32 Depth
 }
 
 
+// Function BP_TreeGenerater.BP_TreeGenerater_C.ExecuteUbergraph_BP_TreeGenerater
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TreeGenerater_C::ExecuteUbergraph_BP_TreeGenerater(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TreeGenerater_C", "ExecuteUbergraph_BP_TreeGenerater");
+
+	Params::BP_TreeGenerater_C_ExecuteUbergraph_BP_TreeGenerater Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

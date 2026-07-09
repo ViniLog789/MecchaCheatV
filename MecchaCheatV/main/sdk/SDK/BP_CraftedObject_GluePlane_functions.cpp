@@ -148,4 +148,24 @@ void ABP_CraftedObject_GluePlane_C::GetItemInfo(ENUM_HandType* HandType_GetItemI
 }
 
 
+// Function BP_CraftedObject_GluePlane.BP_CraftedObject_GluePlane_C.ExecuteUbergraph_BP_CraftedObject_GluePlane
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_GluePlane_C::ExecuteUbergraph_BP_CraftedObject_GluePlane(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_GluePlane_C", "ExecuteUbergraph_BP_CraftedObject_GluePlane");
+
+	Params::BP_CraftedObject_GluePlane_C_ExecuteUbergraph_BP_CraftedObject_GluePlane Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

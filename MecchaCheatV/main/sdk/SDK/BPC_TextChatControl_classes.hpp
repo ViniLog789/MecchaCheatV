@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,13 +21,14 @@ SDK_NAMESPACE_START
 class UBPC_TextChatControl_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TMulticastInlineDelegate<void(const class FString& MainString, int32 Index_0)> ReciveText;       // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void SendToText_Server_(const class FString& MainString, int32 Index_0);
 	void SendToText_Local_(const class FString& MainString, int32 Index_0);
 	void SendToText_Client_(const class FString& MainString, int32 Index_0);
+	void ExecuteUbergraph_BPC_TextChatControl(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

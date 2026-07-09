@@ -68,6 +68,26 @@ void AUDS_Occlusion_Volume_C::Query_Occlusion_Multiplier(const struct FVector& L
 }
 
 
+// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.ExecuteUbergraph_UDS_Occlusion_Volume
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AUDS_Occlusion_Volume_C::ExecuteUbergraph_UDS_Occlusion_Volume(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "ExecuteUbergraph_UDS_Occlusion_Volume");
+
+	Params::UDS_Occlusion_Volume_C_ExecuteUbergraph_UDS_Occlusion_Volume Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.Configure Weather Particle Blocking
 // (Protected, BlueprintCallable, BlueprintEvent)
 

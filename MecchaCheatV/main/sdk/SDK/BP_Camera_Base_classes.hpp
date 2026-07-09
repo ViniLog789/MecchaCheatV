@@ -12,10 +12,11 @@
 
 #include "Engine_structs.hpp"
 #include "ENUM_CameraMode_structs.hpp"
-#include "BP_ItemBase_classes.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
+#include "BP_ItemBase_classes.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -25,6 +26,7 @@ SDK_NAMESPACE_START
 class ABP_Camera_Base_C final : public ABP_ItemBase_C
 {
 public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Camera_Base_C;                   // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   CentorPosition;                                    // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      N_DeleteShot;                                      // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        ChargeAudio;                                       // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -84,6 +86,7 @@ public:
 	void Finisher(class AActor* self2);
 	bool FinishCheck(const struct FFinishFilter& FinishFilter);
 	void ExportSignal(class ABP_PhotoAnimation_C* self2);
+	void ExecuteUbergraph_BP_Camera_Base(int32 EntryPoint);
 	void ChargeState(bool IsCharge);
 	void ChangeMode();
 	void Change();

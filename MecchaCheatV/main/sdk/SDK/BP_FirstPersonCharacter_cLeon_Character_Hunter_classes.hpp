@@ -10,17 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C
-// 0x00D0 (0x0DA0 - 0x0CD0)
+// 0x00E0 (0x0DB0 - 0x0CD0)
 class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C final : public ABP_FirstPersonCharacter_cLeon_Character_C
 {
 public:
+	uint8                                         Pad_CC1[0x7];                                      // 0x0CC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonCharacter_cLeon_Character_Hunter_C; // 0x0CC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        GunTop1;                                           // 0x0CD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0CD8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 LocalViewBody;                                     // 0x0CE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -35,6 +38,11 @@ public:
 	class UMaterialInstanceDynamic*               LocalTarget;                                       // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         CurrentBullet;                                     // 0x0D90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InfinityBullet;                                    // 0x0D94(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D95[0x3];                                      // 0x0D95(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Gun_Cool_TimeDefault;                              // 0x0D98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsChater;                                          // 0x0DA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DA1[0x3];                                      // 0x0DA1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CheatCheck;                                        // 0x0DA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateRemainBullet(int32 BulletNum);
@@ -75,6 +83,7 @@ public:
 	void InpActEvt_IA_Crouch_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InfinityBulletEnd();
 	void HitSuccess(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter);
+	void ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter(int32 EntryPoint);
 	void CheckViewInSurvivor();
 	void CheckViewInPlayers(class AActor* TargetActor, bool UseBoundCentor, int32* Rezult);
 	void ChangeViewMode(class FName ModeName_ChangeViewMode, bool Quick_ChangeViewMode);

@@ -64,4 +64,24 @@ void ABP_LinkPoint_C::MakePole(class UInstancedStaticMeshComponent* InstancedSta
 }
 
 
+// Function BP_LinkPoint.BP_LinkPoint_C.ExecuteUbergraph_BP_LinkPoint
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LinkPoint_C::ExecuteUbergraph_BP_LinkPoint(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LinkPoint_C", "ExecuteUbergraph_BP_LinkPoint");
+
+	Params::BP_LinkPoint_C_ExecuteUbergraph_BP_LinkPoint Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

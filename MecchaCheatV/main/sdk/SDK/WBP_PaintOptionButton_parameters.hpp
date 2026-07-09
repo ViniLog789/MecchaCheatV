@@ -23,5 +23,15 @@ public:
 };
 DUMPER7_ASSERTS_WBP_PaintOptionButton_C_PreConstruct;
 
+// Function WBP_PaintOptionButton.WBP_PaintOptionButton_C.ExecuteUbergraph_WBP_PaintOptionButton
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_PaintOptionButton_C_ExecuteUbergraph_WBP_PaintOptionButton final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintOptionButton_C_ExecuteUbergraph_WBP_PaintOptionButton;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

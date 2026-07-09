@@ -180,4 +180,24 @@ void ULBPC_ReplicatePrimitiveParamaters_C::OnRep_AngularDamping()
 }
 
 
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_ReplicatePrimitiveParamaters_C::ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters");
+
+	Params::LBPC_ReplicatePrimitiveParamaters_C_ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

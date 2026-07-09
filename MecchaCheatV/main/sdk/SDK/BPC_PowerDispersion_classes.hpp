@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,12 +21,13 @@ SDK_NAMESPACE_START
 class UBPC_PowerDispersion_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UPrimitiveComponent*                    PrimitiveComp;                                     // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<class ABP_Glue_CustomPhysics_C*>       AdjacentGlues;                                     // 0x00C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 
 public:
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BPC_PowerDispersion(int32 EntryPoint);
 	void Dispersion(const struct FVector& PowerPosition, double power, class AActor* SourceActor);
 
 public:

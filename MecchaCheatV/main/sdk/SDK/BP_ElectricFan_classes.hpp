@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_CopyActorBase_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_ElectricFan_C final : public ABP_CopyActorBase_C
 {
 public:
-	uint8                                         Pad_460[0x8];                                      // 0x0460(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ElectricFan_C;                   // 0x0460(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   ElectricFan_Base_mesh;                             // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        Multimedia_Internet_CD_Rom_Flash_Click_Multiple_18; // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      N_WindTrail;                                       // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -41,6 +42,7 @@ public:
 	void ReceiveBeginPlay();
 	void MaxSpeedControl(class AActor* TargetActor, double* MultiplyPower);
 	double GetAttenuation(const struct FVector& v1, double power);
+	void ExecuteUbergraph_BP_ElectricFan(int32 EntryPoint);
 	void DestroyVAT();
 	void Check();
 	void BehindCheck(const struct FVector& B, bool* IsBehind);

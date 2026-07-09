@@ -250,6 +250,26 @@ void ABP_PlayerController_cLeon_C::Finish()
 }
 
 
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.ExecuteUbergraph_BP_PlayerController_cLeon
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::ExecuteUbergraph_BP_PlayerController_cLeon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "ExecuteUbergraph_BP_PlayerController_cLeon");
+
+	Params::BP_PlayerController_cLeon_C_ExecuteUbergraph_BP_PlayerController_cLeon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.EEYAN_State
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

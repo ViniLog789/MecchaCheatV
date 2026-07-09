@@ -102,6 +102,26 @@ void UWBP_FriendList_C::OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7(int32 Loca
 }
 
 
+// Function WBP_FriendList.WBP_FriendList_C.ExecuteUbergraph_WBP_FriendList
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FriendList_C::ExecuteUbergraph_WBP_FriendList(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FriendList_C", "ExecuteUbergraph_WBP_FriendList");
+
+	Params::WBP_FriendList_C_ExecuteUbergraph_WBP_FriendList Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_FriendList.WBP_FriendList_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

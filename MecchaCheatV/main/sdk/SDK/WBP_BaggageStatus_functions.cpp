@@ -70,4 +70,24 @@ void UWBP_BaggageStatus_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_BaggageStatus.WBP_BaggageStatus_C.ExecuteUbergraph_WBP_BaggageStatus
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BaggageStatus_C::ExecuteUbergraph_WBP_BaggageStatus(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BaggageStatus_C", "ExecuteUbergraph_WBP_BaggageStatus");
+
+	Params::WBP_BaggageStatus_C_ExecuteUbergraph_WBP_BaggageStatus Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

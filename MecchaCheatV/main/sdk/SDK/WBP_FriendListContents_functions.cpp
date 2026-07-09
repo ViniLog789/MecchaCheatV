@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_FriendListContents.WBP_FriendListContents_C.ExecuteUbergraph_WBP_FriendListContents
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FriendListContents_C::ExecuteUbergraph_WBP_FriendListContents(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FriendListContents_C", "ExecuteUbergraph_WBP_FriendListContents");
+
+	Params::WBP_FriendListContents_C_ExecuteUbergraph_WBP_FriendListContents Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_FriendListContents.WBP_FriendListContents_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

@@ -38,4 +38,24 @@ void ABP_InfinityGenerator_C::Generate(const struct FRandomStream& Seed, int32 D
 }
 
 
+// Function BP_InfinityGenerator.BP_InfinityGenerator_C.ExecuteUbergraph_BP_InfinityGenerator
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_InfinityGenerator_C::ExecuteUbergraph_BP_InfinityGenerator(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InfinityGenerator_C", "ExecuteUbergraph_BP_InfinityGenerator");
+
+	Params::BP_InfinityGenerator_C_ExecuteUbergraph_BP_InfinityGenerator Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

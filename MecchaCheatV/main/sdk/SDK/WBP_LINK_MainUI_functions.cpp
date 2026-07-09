@@ -246,6 +246,26 @@ void UWBP_LINK_MainUI_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.ExecuteUbergraph_WBP_LINK_MainUI
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_LINK_MainUI_C::ExecuteUbergraph_WBP_LINK_MainUI(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_LINK_MainUI_C", "ExecuteUbergraph_WBP_LINK_MainUI");
+
+	Params::WBP_LINK_MainUI_C_ExecuteUbergraph_WBP_LINK_MainUI Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

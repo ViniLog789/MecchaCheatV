@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_GrowParts_Base.BP_GrowParts_Base_C.ExecuteUbergraph_BP_GrowParts_Base
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GrowParts_Base_C::ExecuteUbergraph_BP_GrowParts_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GrowParts_Base_C", "ExecuteUbergraph_BP_GrowParts_Base");
+
+	Params::BP_GrowParts_Base_C_ExecuteUbergraph_BP_GrowParts_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_GrowParts_Base.BP_GrowParts_Base_C.Generate
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

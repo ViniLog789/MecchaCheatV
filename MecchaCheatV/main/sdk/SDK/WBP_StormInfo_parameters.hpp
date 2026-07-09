@@ -47,5 +47,21 @@ public:
 };
 DUMPER7_ASSERTS_WBP_StormInfo_C_PlayAnimationMessage;
 
+// Function WBP_StormInfo.WBP_StormInfo_C.ExecuteUbergraph_WBP_StormInfo
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_StormInfo_C_ExecuteUbergraph_WBP_StormInfo final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_Event_Color;                                // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_Index_2;                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsForward;                            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_Index_1;                              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Event_Text;                                 // 0x0020(0x0010)()
+	int32                                         K2Node_Event_Index;                                // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_StormInfo_C_ExecuteUbergraph_WBP_StormInfo;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

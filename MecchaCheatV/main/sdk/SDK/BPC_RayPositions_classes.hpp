@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +22,7 @@ SDK_NAMESPACE_START
 class UBPC_RayPositions_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TArray<struct FTransform>                     ChildRelativeTransform;                            // 0x00C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class AActor*                                 OwnerActor;                                        // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
@@ -29,6 +30,7 @@ public:
 	void SetUpTransforms();
 	void ReceiveBeginPlay();
 	void GetRayPositions(TArray<struct FVector>* VectorArray);
+	void ExecuteUbergraph_BPC_RayPositions(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

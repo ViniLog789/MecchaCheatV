@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_SortieArea_classes.hpp"
+#include "BP_SortieArea_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,6 +27,26 @@ void ABP_SortieArea_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_SortieArea_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SortieArea.BP_SortieArea_C.ExecuteUbergraph_BP_SortieArea
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SortieArea_C::ExecuteUbergraph_BP_SortieArea(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SortieArea_C", "ExecuteUbergraph_BP_SortieArea");
+
+	Params::BP_SortieArea_C_ExecuteUbergraph_BP_SortieArea Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

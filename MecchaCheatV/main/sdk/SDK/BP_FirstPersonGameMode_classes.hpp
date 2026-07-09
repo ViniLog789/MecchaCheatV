@@ -10,7 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "PenguinHotel_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -20,7 +22,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonGameMode_C final : public AMyGameModeBase
 {
 public:
-	uint8                                         Pad_348[0x8];                                      // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWBP_Pause_C*                           UIPause;                                           // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void()>              DeleteUI;                                          // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -30,6 +32,7 @@ public:
 	void InteractSignal(class ABP_FirstPersonCharacter_Main_C* Character, class AActor* Actor);
 	void InpActEvt_Tab_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
 	void InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void ExecuteUbergraph_BP_FirstPersonGameMode(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -36,4 +36,24 @@ void UWBP_VoiceChatObject_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_VoiceChatObject.WBP_VoiceChatObject_C.ExecuteUbergraph_WBP_VoiceChatObject
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_VoiceChatObject_C::ExecuteUbergraph_WBP_VoiceChatObject(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatObject_C", "ExecuteUbergraph_WBP_VoiceChatObject");
+
+	Params::WBP_VoiceChatObject_C_ExecuteUbergraph_WBP_VoiceChatObject Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class ABP_Glue_CustomPhysics_C final : public ACPP_Glue
 {
 public:
-	uint8                                         Pad_2F0[0x8];                                      // 0x02F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UTextRenderComponent*                   TextRender1;                                       // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UTextRenderComponent*                   TextRender;                                        // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   GlueArea;                                          // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -48,6 +48,7 @@ public:
 	bool PrimitiveCheck(class AActor* Actor, const class UPrimitiveComponent*& PrimitiveComp);
 	void LINKCheckFunc(const struct FVector& StaticLocation, const class UPrimitiveComponent*& PrimitiveComp);
 	void LINK_Overlap(class UPrimitiveComponent* PrimitiveComponent);
+	void ExecuteUbergraph_BP_Glue_CustomPhysics(int32 EntryPoint);
 	void DebugVisualize__UpdateFunc();
 	void DebugVisualize__FinishedFunc();
 	void BndEvt__BP_Glue_CustomPhysics_GlueArea_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);

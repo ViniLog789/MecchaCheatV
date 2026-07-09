@@ -26,5 +26,14 @@ public:
 };
 DUMPER7_ASSERTS_BP_BGM_Manager_C_OnRep_CurrentBGM;
 
+// Function BP_BGM_Manager.BP_BGM_Manager_C.ExecuteUbergraph_BP_BGM_Manager
+// 0x0004 (0x0004 - 0x0000)
+struct BP_BGM_Manager_C_ExecuteUbergraph_BP_BGM_Manager final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BGM_Manager_C_ExecuteUbergraph_BP_BGM_Manager;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

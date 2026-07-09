@@ -38,4 +38,24 @@ void UBTTask_LockOnPlayer_C::ReceiveExecuteAI(class AAIController* OwnerControll
 }
 
 
+// Function BTTask_LockOnPlayer.BTTask_LockOnPlayer_C.ExecuteUbergraph_BTTask_LockOnPlayer
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_LockOnPlayer_C::ExecuteUbergraph_BTTask_LockOnPlayer(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_LockOnPlayer_C", "ExecuteUbergraph_BTTask_LockOnPlayer");
+
+	Params::BTTask_LockOnPlayer_C_ExecuteUbergraph_BTTask_LockOnPlayer Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

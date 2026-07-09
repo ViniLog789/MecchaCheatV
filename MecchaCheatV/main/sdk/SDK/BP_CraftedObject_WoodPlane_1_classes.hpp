@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_CraftedObject_Strage_Base_classes.hpp"
 
 
@@ -20,10 +21,11 @@ SDK_NAMESPACE_START
 class ABP_CraftedObject_WoodPlane_1_C final : public ABP_CraftedObject_Strage_Base_C
 {
 public:
-	uint8                                         Pad_368[0x8];                                      // 0x0368(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CraftedObject_WoodPlane_1_C;     // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ExecuteUbergraph_BP_CraftedObject_WoodPlane_1(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

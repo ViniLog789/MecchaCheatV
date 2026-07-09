@@ -778,6 +778,26 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::HitSuccess(class ABP_Fir
 }
 
 
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Hunter Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.CheckViewInSurvivor
 // (BlueprintCallable, BlueprintEvent)
 

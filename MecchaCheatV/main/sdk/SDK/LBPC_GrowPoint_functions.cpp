@@ -38,4 +38,24 @@ void ULBPC_GrowPoint_C::Generate(const struct FRandomStream& Seed, int32 DepthIn
 }
 
 
+// Function LBPC_GrowPoint.LBPC_GrowPoint_C.ExecuteUbergraph_LBPC_GrowPoint
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_GrowPoint_C::ExecuteUbergraph_LBPC_GrowPoint(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_GrowPoint_C", "ExecuteUbergraph_LBPC_GrowPoint");
+
+	Params::LBPC_GrowPoint_C_ExecuteUbergraph_LBPC_GrowPoint Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

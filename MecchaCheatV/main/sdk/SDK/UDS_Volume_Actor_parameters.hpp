@@ -73,5 +73,14 @@ public:
 };
 DUMPER7_ASSERTS_UDS_Volume_Actor_C_Query_Blend_Radius;
 
+// Function UDS_Volume_Actor.UDS_Volume_Actor_C.ExecuteUbergraph_UDS_Volume_Actor
+// 0x0004 (0x0004 - 0x0000)
+struct UDS_Volume_Actor_C_ExecuteUbergraph_UDS_Volume_Actor final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_Volume_Actor_C_ExecuteUbergraph_UDS_Volume_Actor;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

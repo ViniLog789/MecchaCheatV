@@ -30,6 +30,26 @@ void ABP_Cactus_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_Cactus.BP_Cactus_C.ExecuteUbergraph_BP_Cactus
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Cactus_C::ExecuteUbergraph_BP_Cactus(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Cactus_C", "ExecuteUbergraph_BP_Cactus");
+
+	Params::BP_Cactus_C_ExecuteUbergraph_BP_Cactus Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Cactus.BP_Cactus_C.BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

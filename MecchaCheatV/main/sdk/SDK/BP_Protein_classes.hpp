@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_ItemBase_classes.hpp"
 
 
@@ -20,6 +21,7 @@ SDK_NAMESPACE_START
 class ABP_Protein_C final : public ABP_ItemBase_C
 {
 public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Protein_C;                       // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        NowDamageMultiply;                                 // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        NowStanDamageMultiply;                             // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DamageEnableState;                                 // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -51,6 +53,7 @@ public:
 	void OnBlendOut_B624065C408A21AB39805CBF1EDA7D0B(class FName NotifyName);
 	void OnBlendOut_8C09DE9F41762B9037D01C9BF92CC68C(class FName NotifyName);
 	void IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage);
+	void ExecuteUbergraph_BP_Protein(int32 EntryPoint);
 	void DefaultMontagePlay();
 	void Combo(double TimeRange, class FName ComboName);
 	void CollisionReset();

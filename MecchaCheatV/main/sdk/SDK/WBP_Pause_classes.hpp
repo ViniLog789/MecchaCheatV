@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_Pause_C final : public UUINavWidget
 {
 public:
-	uint8                                         Pad_4F0[0x8];                                      // 0x04F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class ULongTapButton_OnAnimation_C*           LongTapButton_VoiceChat;                           // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULongTapButton_OnAnimation_C*           LongTapButton_Settings;                            // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULongTapButton_OnAnimation_C*           LongTapButton_BackToHome;                          // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -35,6 +36,7 @@ public:
 	void OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E(class FName SessionName, bool bWasSuccessful);
 	void OnCallFailed_E73CF3A14099BA1780F00197E2D8169E(class FName SessionName, bool bWasSuccessful);
 	class UUINavComponent* GetInitialFocusComponent();
+	void ExecuteUbergraph_WBP_Pause(int32 EntryPoint);
 	void Construct();
 	void BndEvt__WBP_Pause_LongTapButton_VoiceChat_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 	void BndEvt__WBP_Pause_LongTapButton_Settings_K2Node_ComponentBoundEvent_5_PushEnd__DelegateSignature();

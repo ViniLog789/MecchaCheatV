@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "GameplayAbilities_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UGA_Tool_Base_C : public UGameplayAbility
 {
 public:
-	uint8                                         Pad_3A8[0x8];                                      // 0x03A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UAnimMontage*                           Montage;                                           // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFirstAttack;                                     // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -32,6 +33,7 @@ public:
 	void OnBlendOut_9E7A34EE47C91FC2089049BA43913140();
 	void OnBlendedIn_9E7A34EE47C91FC2089049BA43913140();
 	void K2_ActivateAbility();
+	void ExecuteUbergraph_GA_Tool_Base(int32 EntryPoint);
 	void EventReceived_1C4DAC504023E166C4A361AD9FA20411(const struct FGameplayEventData& Payload);
 
 public:

@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_AttackCollisionControl_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TMulticastInlineDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)> HitEvent; // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<class UPrimitiveComponent*>            BindPrimitiveComponents;                           // 0x00D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          Multipy_Hit_Possible;                              // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -34,6 +34,7 @@ public:
 	void UnBindComponents();
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void OnComponentBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ExecuteUbergraph_BPC_AttackCollisionControl(int32 EntryPoint);
 	void EffectStop();
 	void EffectSpawnEvent(double ActiveTime, class FName TargetTag);
 	void Combo(double TimeRange, class FName ComboName);

@@ -56,6 +56,26 @@ void UWBP_ReportTypeButton_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.ExecuteUbergraph_WBP_ReportTypeButton
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ReportTypeButton_C::ExecuteUbergraph_WBP_ReportTypeButton(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ReportTypeButton_C", "ExecuteUbergraph_WBP_ReportTypeButton");
+
+	Params::WBP_ReportTypeButton_C_ExecuteUbergraph_WBP_ReportTypeButton Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

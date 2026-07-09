@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BTTask_Trace_classes.hpp"
 
 
@@ -20,9 +21,10 @@ SDK_NAMESPACE_START
 class UBTTask_AttackToPlayer_C : public UBTTask_Trace_C
 {
 public:
-	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BTTask_AttackToPlayer_C;            // 0x00B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
+	void ExecuteUbergraph_BTTask_AttackToPlayer(int32 EntryPoint);
 	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
 
 public:

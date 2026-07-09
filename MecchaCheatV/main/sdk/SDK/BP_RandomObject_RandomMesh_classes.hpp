@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "BP_RandomObject_Base_classes.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,20 +22,21 @@ SDK_NAMESPACE_START
 class ABP_RandomObject_RandomMesh_C final : public ABP_RandomObject_Base_C
 {
 public:
-	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_RandomObject_RandomMesh_C;       // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TArray<class AActor*>                         TargetActors;                                      // 0x02C0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class UStaticMesh*>                    RandomMesh;                                        // 0x02D0(0x0010)(Edit, BlueprintVisible)
 	struct FRandomStream                          Seed;                                              // 0x02E0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, RepNotify, NoDestructor)
 
 public:
-	void CheckLoop();
-	void IndexUpdate();
-	void OnRep_CurrentIndex();
-	void OnRep_Seed();
-	void ReceiveBeginPlay();
-	void SetIndex(bool* Error);
-	void SpawnSet();
 	void UserConstructionScript();
+	void SpawnSet();
+	void SetIndex(bool* Error);
+	void ReceiveBeginPlay();
+	void OnRep_Seed();
+	void OnRep_CurrentIndex();
+	void IndexUpdate();
+	void ExecuteUbergraph_BP_RandomObject_RandomMesh(int32 EntryPoint);
+	void CheckLoop();
 
 public:
 	static class UClass* StaticClass()

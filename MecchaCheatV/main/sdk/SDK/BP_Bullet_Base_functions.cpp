@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_Bullet_Base.BP_Bullet_Base_C.ExecuteUbergraph_BP_Bullet_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Bullet_Base_C::ExecuteUbergraph_BP_Bullet_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Bullet_Base_C", "ExecuteUbergraph_BP_Bullet_Base");
+
+	Params::BP_Bullet_Base_C_ExecuteUbergraph_BP_Bullet_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Bullet_Base.BP_Bullet_Base_C.BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:

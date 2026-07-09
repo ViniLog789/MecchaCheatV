@@ -11,9 +11,30 @@
 #include "Basic.hpp"
 
 #include "WBP_HealOutLine_classes.hpp"
+#include "WBP_HealOutLine_parameters.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Function WBP_HealOutLine.WBP_HealOutLine_C.ExecuteUbergraph_WBP_HealOutLine
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HealOutLine_C::ExecuteUbergraph_WBP_HealOutLine(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HealOutLine_C", "ExecuteUbergraph_WBP_HealOutLine");
+
+	Params::WBP_HealOutLine_C_ExecuteUbergraph_WBP_HealOutLine Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 
 // Function WBP_HealOutLine.WBP_HealOutLine_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)

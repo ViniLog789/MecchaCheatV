@@ -10,17 +10,18 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_FirstPersonPlayerState_Online_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonPlayerState_Online_cLeon.BP_FirstPersonPlayerState_Online_cLeon_C
-// 0x0060 (0x0418 - 0x03B8)
+// 0x00B0 (0x0468 - 0x03B8)
 class ABP_FirstPersonPlayerState_Online_cLeon_C final : public ABP_FirstPersonPlayerState_Online_C
 {
 public:
-	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonPlayerState_Online_cLeon_C; // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          ModState;                                          // 0x03C0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlayerController_cLeon_C*           As_BP_Player_Controller_C_Leon;                    // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -34,6 +35,7 @@ public:
 	int32                                         CurrentME_Point;                                   // 0x0400(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	int32                                         MEPoint;                                           // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void()>              MEChange;                                          // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TSet<class ABP_FirstPersonPlayerState_Online_cLeon_C*> RecivedPlayer;                            // 0x0418(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void WriteEEYANPoint();
@@ -52,6 +54,7 @@ public:
 	void OnRep_CurrentEEYAN_Point();
 	void OnCallFailed_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
 	void GiveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState);
+	void ExecuteUbergraph_BP_FirstPersonPlayerState_Online_cLeon(int32 EntryPoint);
 	void AddMEPoint_Server_();
 	void AddMEPoint();
 	void AddEEYANPoint_Server_();

@@ -156,6 +156,26 @@ struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::HeadPo
 }
 
 
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.ExecuteUbergraph_Touch_bigpen_DirectorBP
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTouch_bigpen_DirectorBP_C::ExecuteUbergraph_Touch_bigpen_DirectorBP(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "ExecuteUbergraph_Touch_bigpen_DirectorBP");
+
+	Params::Touch_bigpen_DirectorBP_C_ExecuteUbergraph_Touch_bigpen_DirectorBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Touch_bigpen.Touch_bigpen_DirectorBP_C.BP_FirstPersonCharacter_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

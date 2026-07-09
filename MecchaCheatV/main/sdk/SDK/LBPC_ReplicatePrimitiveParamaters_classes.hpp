@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class ULBPC_ReplicatePrimitiveParamaters_C final : public USceneComponent
 {
 public:
-	uint8                                         Pad_240[0x8];                                      // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UPrimitiveComponent*                    ParentPrimitive;                                   // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        Mass;                                              // 0x0250(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	double                                        LinearDamping;                                     // 0x0258(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
@@ -45,6 +46,7 @@ public:
 	void OnRep_Mass();
 	void OnRep_LinearDamping();
 	void OnRep_AngularDamping();
+	void ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "WBP_CurrentModeInfo_classes.hpp"
+#include "WBP_CurrentModeInfo_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,6 +41,26 @@ void UWBP_CurrentModeInfo_C::RankUpdate()
 		Func = Class->GetFunction("WBP_CurrentModeInfo_C", "RankUpdate");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CurrentModeInfo.WBP_CurrentModeInfo_C.ExecuteUbergraph_WBP_CurrentModeInfo
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CurrentModeInfo_C::ExecuteUbergraph_WBP_CurrentModeInfo(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CurrentModeInfo_C", "ExecuteUbergraph_WBP_CurrentModeInfo");
+
+	Params::WBP_CurrentModeInfo_C_ExecuteUbergraph_WBP_CurrentModeInfo Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

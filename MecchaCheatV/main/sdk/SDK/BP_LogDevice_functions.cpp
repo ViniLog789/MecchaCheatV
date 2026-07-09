@@ -30,6 +30,26 @@ void ABP_LogDevice_C::UserConstructionScript()
 }
 
 
+// Function BP_LogDevice.BP_LogDevice_C.ExecuteUbergraph_BP_LogDevice
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LogDevice_C::ExecuteUbergraph_BP_LogDevice(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LogDevice_C", "ExecuteUbergraph_BP_LogDevice");
+
+	Params::BP_LogDevice_C_ExecuteUbergraph_BP_LogDevice Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_LogDevice.BP_LogDevice_C.BndEvt__BP_IfDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

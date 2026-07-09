@@ -72,6 +72,26 @@ void UWBP_OptionBox_VoiceInputOrOutputDevice_C::OnValueChangeEvent()
 }
 
 
+// Function WBP_OptionBox_VoiceInputOrOutputDevice.WBP_OptionBox_VoiceInputOrOutputDevice_C.ExecuteUbergraph_WBP_OptionBox_VoiceInputOrOutputDevice
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_OptionBox_VoiceInputOrOutputDevice_C::ExecuteUbergraph_WBP_OptionBox_VoiceInputOrOutputDevice(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_OptionBox_VoiceInputOrOutputDevice_C", "ExecuteUbergraph_WBP_OptionBox_VoiceInputOrOutputDevice");
+
+	Params::WBP_OptionBox_VoiceInputOrOutputDevice_C_ExecuteUbergraph_WBP_OptionBox_VoiceInputOrOutputDevice Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_OptionBox_VoiceInputOrOutputDevice.WBP_OptionBox_VoiceInputOrOutputDevice_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

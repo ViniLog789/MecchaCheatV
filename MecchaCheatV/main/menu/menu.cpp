@@ -236,7 +236,7 @@ void Menu::Render()
                     ImGui::TextColored(ImVec4(0.8f, 0.8f, 1.f, 1.f), "Colors");
                     ImGui::PopFont();
 
-                    ImGui::Spacing();
+                    ImGui::Spacing(); 
 
                     bool changed = false;
 

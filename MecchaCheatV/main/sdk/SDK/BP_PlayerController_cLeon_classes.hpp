@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_FirstPersonPlayerController_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_PlayerController_cLeon_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
-	uint8                                         Pad_768[0x8];                                      // 0x0768(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_PlayerController_cLeon_C;        // 0x0768(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class URuntimePaintRelayComponent*            RuntimePaintRelay;                                 // 0x0770(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWBP_cLeonMain_C*                       MainWidget;                                        // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        CameraFadeValue;                                   // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -53,6 +54,7 @@ public:
 	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0(const struct FKey& Key);
 	void GetPawnCentorLocation(struct FVector* ReturnLocation);
 	void Finish();
+	void ExecuteUbergraph_BP_PlayerController_cLeon(int32 EntryPoint);
 	void EEYAN_State(bool State);
 	void ChoseBodyClose();
 	void CameraReset();

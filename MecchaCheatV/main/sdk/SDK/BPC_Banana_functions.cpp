@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BPC_Banana.BPC_Banana_C.ExecuteUbergraph_BPC_Banana
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_Banana_C::ExecuteUbergraph_BPC_Banana(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_Banana_C", "ExecuteUbergraph_BPC_Banana");
+
+	Params::BPC_Banana_C_ExecuteUbergraph_BPC_Banana Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_Banana.BPC_Banana_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:

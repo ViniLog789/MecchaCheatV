@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "AIModule_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BTTask_Trace_classes.hpp"
+#include "AIModule_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,11 +22,12 @@ SDK_NAMESPACE_START
 class UBTTask_UpdateTarget_C final : public UBTTask_Trace_C
 {
 public:
-	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BTTask_UpdateTarget_C;              // 0x00B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FBlackboardKeySelector                 Key;                                               // 0x00B8(0x0028)(Edit, BlueprintVisible)
 
 public:
 	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
+	void ExecuteUbergraph_BTTask_UpdateTarget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

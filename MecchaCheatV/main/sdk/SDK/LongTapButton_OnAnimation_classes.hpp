@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
 
 
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class ULongTapButton_OnAnimation_C final : public UUINavComponent
 {
 public:
-	uint8                                         Pad_910[0x8];                                      // 0x0910(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0910(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UTextBlock*                             MiniText;                                          // 0x0918(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_215;                                         // 0x0920(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_73;                                          // 0x0928(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -56,6 +56,7 @@ public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	class FText GetText();
 	void FromNavigation();
+	void ExecuteUbergraph_LongTapButton_OnAnimation(int32 EntryPoint);
 	void BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature();
 	void BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature();
 	void BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature();

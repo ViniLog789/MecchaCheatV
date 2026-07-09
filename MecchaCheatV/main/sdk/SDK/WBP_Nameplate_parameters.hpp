@@ -52,5 +52,23 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Nameplate_C_SetColor;
 
+// Function WBP_Nameplate.WBP_Nameplate_C.ExecuteUbergraph_WBP_Nameplate
+// 0x0068 (0x0068 - 0x0000)
+struct WBP_Nameplate_C_ExecuteUbergraph_WBP_Nameplate final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_PlayerName;                     // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0010)()
+	struct FSlateColor                            K2Node_CustomEvent_Color_and_Opacity;              // 0x0028(0x0014)(ConstParm)
+	int32                                         K2Node_CustomEvent_Point_1;                        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0040(0x0010)()
+	int32                                         K2Node_CustomEvent_Point;                          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0058(0x0010)()
+};
+DUMPER7_ASSERTS_WBP_Nameplate_C_ExecuteUbergraph_WBP_Nameplate;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

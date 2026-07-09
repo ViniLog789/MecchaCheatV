@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,13 +21,14 @@ SDK_NAMESPACE_START
 class ABP_CountZone_cLeon_C final : public AActor
 {
 public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UTextRenderComponent*                   DebugText;                                         // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBoxComponent*                          Box;                                               // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class ABP_FirstPersonCharacter_cLeon_Character_C*> CurrentOverlappingCharacters;          // 0x02C0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ExecuteUbergraph_BP_CountZone_cLeon(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

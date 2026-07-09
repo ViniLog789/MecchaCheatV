@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_EnvironmentSystem_DamagedSpawn_classes.hpp"
 
@@ -21,11 +22,12 @@ SDK_NAMESPACE_START
 class ABP_EnvironmentSystem_Container_Base_C : public ABP_EnvironmentSystem_DamagedSpawn_C
 {
 public:
-	uint8                                         Pad_360[0x8];                                      // 0x0360(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EnvironmentSystem_Container_Base_C; // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FVector                                BoundSize;                                         // 0x0368(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UBP_RBD_VAT_DataAssets_C> VATData_Asset;                                    // 0x0380(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_BP_EnvironmentSystem_Container_Base(int32 EntryPoint);
 	void ReceiveDestroyed();
 	void ReplicateEvent();
 	void SpawnMaterial();

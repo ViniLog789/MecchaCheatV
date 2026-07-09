@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_KeepArea_C final : public AActor
 {
 public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USphereComponent*                       Sphere;                                            // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         DefaultActors;                                     // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 
@@ -29,6 +29,7 @@ public:
 	void UserConstructionScript();
 	void RemoveOverlapType();
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_KeepArea(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

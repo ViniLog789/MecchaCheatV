@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_ItemBase_classes.hpp"
 
 
@@ -20,6 +21,7 @@ SDK_NAMESPACE_START
 class ABP_Wine_C final : public ABP_ItemBase_C
 {
 public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Wine_C;                          // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        NowDamageMultiply;                                 // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        NowStanDamageMultiply;                             // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DamageEnableState;                                 // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -49,6 +51,7 @@ public:
 	void OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName);
 	void OnBlendOut_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName);
 	void IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage);
+	void ExecuteUbergraph_BP_Wine(int32 EntryPoint);
 	void DefaultMontagePlay();
 	void Combo(double TimeRange, class FName ComboName);
 	void CollisionReset();

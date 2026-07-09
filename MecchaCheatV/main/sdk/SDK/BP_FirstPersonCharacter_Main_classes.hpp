@@ -13,11 +13,11 @@
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 #include "Mover_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
 #include "MoverExamples_classes.hpp"
-#include "ENUM_ClassType_structs.hpp"
 #include "EN_DamageType_structs.hpp"
 #include "DeathType_structs.hpp"
 #include "EN_StanType_structs.hpp"
@@ -30,7 +30,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonCharacter_Main_C : public AMoverExamplesCharacter
 {
 public:
-	uint8                                         Pad_3E8[0x8];                                      // 0x03E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBPC_NearInteract_C*                    BPC_NearInteract;                                  // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UExtendedPhysicsCharacterMoverComponent_C* ExtendedPhysicsCharacterMoverComponent;         // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USphereComponent*                       HeadPosition;                                      // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -224,6 +224,7 @@ public:
 	bool                                          UseYawRotation;                                    // 0x0B2F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_BP_FirstPersonCharacter_Main(int32 EntryPoint);
 	void ViewResetCheck();
 	void Recharge();
 	void InventoryUpdateSignal();

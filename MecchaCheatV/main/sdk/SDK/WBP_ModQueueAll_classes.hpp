@@ -10,7 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -20,7 +22,7 @@ SDK_NAMESPACE_START
 class UWBP_ModQueueAll_C final : public UUINavWidget
 {
 public:
-	uint8                                         Pad_4F0[0x8];                                      // 0x04F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_3;                           // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_2;                           // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_1;                           // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -44,6 +46,7 @@ public:
 	void OnDestroySessionComplete_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
 	void OnCallFailed_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
 	void GetWaitPlayers(class FString* ReturnNames, bool* CompleteState);
+	void ExecuteUbergraph_WBP_ModQueueAll(int32 EntryPoint);
 	void DownloadCheck();
 	void Construct();
 	void CheckInstalledItems(bool* ReturnInstalled, bool* ReturnDownloading);

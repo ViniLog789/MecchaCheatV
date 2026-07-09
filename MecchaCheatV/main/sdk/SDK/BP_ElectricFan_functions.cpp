@@ -119,6 +119,26 @@ double ABP_ElectricFan_C::GetAttenuation(const struct FVector& v1, double power)
 }
 
 
+// Function BP_ElectricFan.BP_ElectricFan_C.ExecuteUbergraph_BP_ElectricFan
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ElectricFan_C::ExecuteUbergraph_BP_ElectricFan(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ElectricFan_C", "ExecuteUbergraph_BP_ElectricFan");
+
+	Params::BP_ElectricFan_C_ExecuteUbergraph_BP_ElectricFan Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_ElectricFan.BP_ElectricFan_C.DestroyVAT
 // (BlueprintCallable, BlueprintEvent)
 

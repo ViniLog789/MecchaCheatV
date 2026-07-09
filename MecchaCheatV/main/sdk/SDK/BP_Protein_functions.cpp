@@ -337,6 +337,26 @@ void ABP_Protein_C::IsChangeImage(bool* IsInteract_IsChangeImage, class FText* O
 }
 
 
+// Function BP_Protein.BP_Protein_C.ExecuteUbergraph_BP_Protein
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Protein_C::ExecuteUbergraph_BP_Protein(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Protein_C", "ExecuteUbergraph_BP_Protein");
+
+	Params::BP_Protein_C_ExecuteUbergraph_BP_Protein Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Protein.BP_Protein_C.DefaultMontagePlay
 // (BlueprintCallable, BlueprintEvent)
 

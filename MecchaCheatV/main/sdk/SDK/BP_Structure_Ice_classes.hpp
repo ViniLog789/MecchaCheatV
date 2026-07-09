@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_Structure_Base_classes.hpp"
 
 
@@ -20,13 +21,14 @@ SDK_NAMESPACE_START
 class ABP_Structure_Ice_C final : public ABP_Structure_Base_C
 {
 public:
-	uint8                                         Pad_2C0[0x8];                                      // 0x02C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Structure_Ice_C;                 // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class UStaticMesh*>                    RandomMesh;                                        // 0x02D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ReceiveBeginPlay();
 	void Generate();
+	void ExecuteUbergraph_BP_Structure_Ice(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

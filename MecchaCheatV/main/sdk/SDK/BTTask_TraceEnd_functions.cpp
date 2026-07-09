@@ -38,4 +38,24 @@ void UBTTask_TraceEnd_C::ReceiveExecuteAI(class AAIController* OwnerController_R
 }
 
 
+// Function BTTask_TraceEnd.BTTask_TraceEnd_C.ExecuteUbergraph_BTTask_TraceEnd
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_TraceEnd_C::ExecuteUbergraph_BTTask_TraceEnd(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_TraceEnd_C", "ExecuteUbergraph_BTTask_TraceEnd");
+
+	Params::BTTask_TraceEnd_C_ExecuteUbergraph_BTTask_TraceEnd Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "AttackType_structs.hpp"
 #include "BTTask_AttackToPlayer_classes.hpp"
 
@@ -21,11 +22,12 @@ SDK_NAMESPACE_START
 class UBTTask_AttackEnemy_C final : public UBTTask_AttackToPlayer_C
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BTTask_AttackEnemy_C;               // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	EAttackType                                   AttackType;                                        // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
+	void ExecuteUbergraph_BTTask_AttackEnemy(int32 EntryPoint);
 	void EndTask();
 
 public:

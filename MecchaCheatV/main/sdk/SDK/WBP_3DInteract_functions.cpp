@@ -58,6 +58,26 @@ void UWBP_3DInteract_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_3DInteract.WBP_3DInteract_C.ExecuteUbergraph_WBP_3DInteract
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_3DInteract_C::ExecuteUbergraph_WBP_3DInteract(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_3DInteract_C", "ExecuteUbergraph_WBP_3DInteract");
+
+	Params::WBP_3DInteract_C_ExecuteUbergraph_WBP_3DInteract Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_3DInteract.WBP_3DInteract_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

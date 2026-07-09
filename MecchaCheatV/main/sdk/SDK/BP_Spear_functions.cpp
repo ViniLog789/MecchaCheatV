@@ -40,6 +40,26 @@ void ABP_Spear_C::Shot(bool PressState_Shot, double PushTime_Shot, class ABP_Fir
 }
 
 
+// Function BP_Spear.BP_Spear_C.ExecuteUbergraph_BP_Spear
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Spear_C::ExecuteUbergraph_BP_Spear(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Spear_C", "ExecuteUbergraph_BP_Spear");
+
+	Params::BP_Spear_C_ExecuteUbergraph_BP_Spear Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Spear.BP_Spear_C.BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

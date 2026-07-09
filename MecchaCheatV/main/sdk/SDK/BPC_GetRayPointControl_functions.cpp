@@ -51,4 +51,24 @@ void UBPC_GetRayPointControl_C::GetRayPoints(TArray<struct FVector>* Vectors)
 }
 
 
+// Function BPC_GetRayPointControl.BPC_GetRayPointControl_C.ExecuteUbergraph_BPC_GetRayPointControl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_GetRayPointControl_C::ExecuteUbergraph_BPC_GetRayPointControl(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GetRayPointControl_C", "ExecuteUbergraph_BPC_GetRayPointControl");
+
+	Params::BPC_GetRayPointControl_C_ExecuteUbergraph_BPC_GetRayPointControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

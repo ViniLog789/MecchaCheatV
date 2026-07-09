@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UBPC_FindNearConnectPoint_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UPrimitiveComponent*                    Primitive;                                         // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TSet<class UPrimitiveComponent*>              UniqueStatic;                                      // 0x00C8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TMap<class UPrimitiveComponent*, struct FVector> Near_Point_Datas;                               // 0x0118(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
@@ -48,6 +48,7 @@ public:
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
 	void ReceiveBeginPlay();
 	void GetNearConnectDatas(TMap<class UPrimitiveComponent*, struct FVector>* NearPointDatas);
+	void ExecuteUbergraph_BPC_FindNearConnectPoint(int32 EntryPoint);
 	void DestroySelf();
 	void ClearArray();
 	void AddWeight(const class ABP_FirstPersonCharacter_Main_C*& Key, double Value, class UBPC_LINK_HandControl_C* HandComponent);

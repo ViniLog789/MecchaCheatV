@@ -121,6 +121,26 @@ void ABP_RandomObject_MultiSpawnType_C::IndexUpdate()
 }
 
 
+// Function BP_RandomObject_MultiSpawnType.BP_RandomObject_MultiSpawnType_C.ExecuteUbergraph_BP_RandomObject_MultiSpawnType
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RandomObject_MultiSpawnType_C::ExecuteUbergraph_BP_RandomObject_MultiSpawnType(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RandomObject_MultiSpawnType_C", "ExecuteUbergraph_BP_RandomObject_MultiSpawnType");
+
+	Params::BP_RandomObject_MultiSpawnType_C_ExecuteUbergraph_BP_RandomObject_MultiSpawnType Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_RandomObject_MultiSpawnType.BP_RandomObject_MultiSpawnType_C.CheckLoop
 // (BlueprintCallable, BlueprintEvent)
 

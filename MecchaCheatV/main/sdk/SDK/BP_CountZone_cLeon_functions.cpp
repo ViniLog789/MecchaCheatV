@@ -36,4 +36,24 @@ void ABP_CountZone_cLeon_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
 }
 
 
+// Function BP_CountZone_cLeon.BP_CountZone_cLeon_C.ExecuteUbergraph_BP_CountZone_cLeon
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CountZone_cLeon_C::ExecuteUbergraph_BP_CountZone_cLeon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CountZone_cLeon_C", "ExecuteUbergraph_BP_CountZone_cLeon");
+
+	Params::BP_CountZone_cLeon_C_ExecuteUbergraph_BP_CountZone_cLeon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

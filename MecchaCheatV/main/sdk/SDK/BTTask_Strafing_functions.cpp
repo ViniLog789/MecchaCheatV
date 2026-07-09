@@ -88,4 +88,24 @@ void UBTTask_Strafing_C::ReceiveExecuteAI(class AAIController* OwnerController_R
 }
 
 
+// Function BTTask_Strafing.BTTask_Strafing_C.ExecuteUbergraph_BTTask_Strafing
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_Strafing_C::ExecuteUbergraph_BTTask_Strafing(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_Strafing_C", "ExecuteUbergraph_BTTask_Strafing");
+
+	Params::BTTask_Strafing_C_ExecuteUbergraph_BTTask_Strafing Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

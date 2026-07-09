@@ -36,6 +36,26 @@ void UWBP_DAY_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_DAY.WBP_DAY_C.ExecuteUbergraph_WBP_DAY
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_DAY_C::ExecuteUbergraph_WBP_DAY(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_DAY_C", "ExecuteUbergraph_WBP_DAY");
+
+	Params::WBP_DAY_C_ExecuteUbergraph_WBP_DAY Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_DAY.WBP_DAY_C.EndEvent
 // (BlueprintCallable, BlueprintEvent)
 

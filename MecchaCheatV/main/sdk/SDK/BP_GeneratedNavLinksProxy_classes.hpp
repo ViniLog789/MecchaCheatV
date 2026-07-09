@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "AIModule_classes.hpp"
 
 
@@ -20,9 +21,10 @@ SDK_NAMESPACE_START
 class UBP_GeneratedNavLinksProxy_C final : public UGeneratedNavLinksProxy
 {
 public:
-	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0050(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
+	void ExecuteUbergraph_BP_GeneratedNavLinksProxy(int32 EntryPoint);
 	void ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination);
 
 public:

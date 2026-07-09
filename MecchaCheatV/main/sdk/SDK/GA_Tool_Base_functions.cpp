@@ -114,6 +114,26 @@ void UGA_Tool_Base_C::K2_ActivateAbility()
 }
 
 
+// Function GA_Tool_Base.GA_Tool_Base_C.ExecuteUbergraph_GA_Tool_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Tool_Base_C::ExecuteUbergraph_GA_Tool_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Tool_Base_C", "ExecuteUbergraph_GA_Tool_Base");
+
+	Params::GA_Tool_Base_C_ExecuteUbergraph_GA_Tool_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_Tool_Base.GA_Tool_Base_C.EventReceived_1C4DAC504023E166C4A361AD9FA20411
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

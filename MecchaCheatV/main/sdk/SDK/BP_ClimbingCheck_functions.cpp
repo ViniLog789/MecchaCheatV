@@ -36,6 +36,26 @@ void UBP_ClimbingCheck_C::Trigger(const struct FSimulationTickParams& Params_Tri
 }
 
 
+// Function BP_ClimbingCheck.BP_ClimbingCheck_C.ExecuteUbergraph_BP_ClimbingCheck
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_ClimbingCheck_C::ExecuteUbergraph_BP_ClimbingCheck(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ClimbingCheck_C", "ExecuteUbergraph_BP_ClimbingCheck");
+
+	Params::BP_ClimbingCheck_C_ExecuteUbergraph_BP_ClimbingCheck Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_ClimbingCheck.BP_ClimbingCheck_C.Evaluate
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

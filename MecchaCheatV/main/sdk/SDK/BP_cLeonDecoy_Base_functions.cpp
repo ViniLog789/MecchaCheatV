@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_cLeonDecoy_Base.BP_cLeonDecoy_Base_C.ExecuteUbergraph_BP_cLeonDecoy_Base
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_cLeonDecoy_Base_C::ExecuteUbergraph_BP_cLeonDecoy_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_cLeonDecoy_Base_C", "ExecuteUbergraph_BP_cLeonDecoy_Base");
+
+	Params::BP_cLeonDecoy_Base_C_ExecuteUbergraph_BP_cLeonDecoy_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_cLeonDecoy_Base.BP_cLeonDecoy_Base_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:

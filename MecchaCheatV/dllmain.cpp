@@ -114,7 +114,7 @@ extern "C" __declspec(dllexport) DWORD WINAPI MecchaCheatVThread()
         hookingInstance->ApplyHooks();
         hooksApplied = true;
 
-        LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Welcome, to MecchaCheatV\nMeccha Chameleon version: 2.5.0\n");
+        LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Welcome, to MecchaCheatV\nMeccha Chameleon version: 2.5.1\n");
         LOG_RELEASE(FOREGROUND_BLUE | FOREGROUND_INTENSITY, std::string(32, '-').c_str(), "\n");
         LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Menu navigation:\n");
         LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Press", Utils::getKeyName(MenuToggleKey), "to open / close the menu\n");
@@ -140,14 +140,14 @@ extern "C" __declspec(dllexport) DWORD WINAPI MecchaCheatVThread()
     try {
         Config::SaveConfig();
 
-        if (rendererInstance) {
-            ImGui::SaveIniSettingsToDisk((Utils::GetCheatDirectory() + "\\menu.ini").c_str());
-        }
+        if (rendererInstance)
+            if (ImGui::GetCurrentContext())
+                ImGui::SaveIniSettingsToDisk((Utils::GetCheatDirectory() + "\\menu.ini").c_str());
+			else LOG_ERROR("ImGui context is null, cannot save menu.ini. Skipping...");
     }
     catch (...) {}
 
 failedaddr:
-
     if (hooksApplied && hookingInstance)
     {
         try {

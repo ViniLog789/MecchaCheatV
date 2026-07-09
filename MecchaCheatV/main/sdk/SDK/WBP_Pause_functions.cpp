@@ -108,6 +108,26 @@ class UUINavComponent* UWBP_Pause_C::GetInitialFocusComponent()
 }
 
 
+// Function WBP_Pause.WBP_Pause_C.ExecuteUbergraph_WBP_Pause
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Pause_C::ExecuteUbergraph_WBP_Pause(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Pause_C", "ExecuteUbergraph_WBP_Pause");
+
+	Params::WBP_Pause_C_ExecuteUbergraph_WBP_Pause Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Pause.WBP_Pause_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

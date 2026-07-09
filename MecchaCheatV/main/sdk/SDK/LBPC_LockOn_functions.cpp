@@ -50,4 +50,24 @@ void ULBPC_LockOn_C::LockOnWidgetState(bool State)
 }
 
 
+// Function LBPC_LockOn.LBPC_LockOn_C.ExecuteUbergraph_LBPC_LockOn
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_LockOn_C::ExecuteUbergraph_LBPC_LockOn(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_LockOn_C", "ExecuteUbergraph_LBPC_LockOn");
+
+	Params::LBPC_LockOn_C_ExecuteUbergraph_LBPC_LockOn Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_ComboControl_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USkeletalMeshComponent*                 TargetMesh;                                        // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CurrentComboIndex;                                 // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -42,6 +43,7 @@ public:
 	void OnCompleted_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
 	void OnBlendOut_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
 	void LoopInput(bool bEnabled);
+	void ExecuteUbergraph_BPC_ComboControl(int32 EntryPoint);
 	void ComboStart();
 	void CanCombo(bool* CanCombo);
 

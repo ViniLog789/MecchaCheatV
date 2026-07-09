@@ -176,6 +176,26 @@ struct FMovieSceneDynamicBindingResolveResult ULS_TouchMiniPenguin_DirectorBP_C:
 }
 
 
+// Function LS_TouchMiniPenguin.LS_TouchMiniPenguin_DirectorBP_C.ExecuteUbergraph_LS_TouchMiniPenguin_DirectorBP
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULS_TouchMiniPenguin_DirectorBP_C::ExecuteUbergraph_LS_TouchMiniPenguin_DirectorBP(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LS_TouchMiniPenguin_DirectorBP_C", "ExecuteUbergraph_LS_TouchMiniPenguin_DirectorBP");
+
+	Params::LS_TouchMiniPenguin_DirectorBP_C_ExecuteUbergraph_LS_TouchMiniPenguin_DirectorBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function LS_TouchMiniPenguin.LS_TouchMiniPenguin_DirectorBP_C.BP_FirstPersonCharacter_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

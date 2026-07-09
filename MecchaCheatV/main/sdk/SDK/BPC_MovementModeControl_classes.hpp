@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_MovementModeControl_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	EMovementMode                                 DefaultMovementMode;                               // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharacterMovementComponent*            CharacteMovementComp;                              // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -31,6 +31,7 @@ public:
 	void ReceiveBeginPlay();
 	void MoveMentModeReset();
 	void ModeChange(EMovementMode ChangeMode, double Timer);
+	void ExecuteUbergraph_BPC_MovementModeControl(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

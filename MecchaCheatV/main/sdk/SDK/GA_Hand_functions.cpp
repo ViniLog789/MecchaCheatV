@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "GA_Hand_classes.hpp"
+#include "GA_Hand_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -96,6 +97,26 @@ void UGA_Hand_C::K2_ActivateAbility()
 		Func = Class->GetFunction("GA_Hand_C", "K2_ActivateAbility");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Hand.GA_Hand_C.ExecuteUbergraph_GA_Hand
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Hand_C::ExecuteUbergraph_GA_Hand(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Hand_C", "ExecuteUbergraph_GA_Hand");
+
+	Params::GA_Hand_C_ExecuteUbergraph_GA_Hand Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -20,7 +22,7 @@ SDK_NAMESPACE_START
 class UWBP_VoiceChatUserSettings_C final : public UUserWidget
 {
 public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWBP_ReportContent_C*                   WBP_ReportContent;                                 // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_NavSlider_Penguin_C*               WBP_NavSlider_Penguin;                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             UserName;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -37,6 +39,7 @@ public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void PingCheck();
 	void OnFinished_1657203944876F75161AA6986A7C9FD9(const struct FEOSPlayerReportResult& Result);
+	void ExecuteUbergraph_WBP_VoiceChatUserSettings(int32 EntryPoint);
 	void ConstructSetup(class ABP_FirstPersonPlayerState_Online_C* TargetPlayerState);
 	void Construct();
 	void BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();

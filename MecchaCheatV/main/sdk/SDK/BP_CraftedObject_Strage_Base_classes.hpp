@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BP_CraftedObject_Base_classes.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_CraftedObject_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,11 +22,12 @@ SDK_NAMESPACE_START
 class ABP_CraftedObject_Strage_Base_C : public ABP_CraftedObject_Base_C
 {
 public:
-	uint8                                         Pad_350[0x8];                                      // 0x0350(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CraftedObject_Strage_Base_C;     // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         Mass;                                              // 0x0358(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	struct FIntVector2                            MassRange;                                         // 0x035C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_BP_CraftedObject_Strage_Base(int32 EntryPoint);
 	void MassStateUpdate();
 	void ReceiveBeginPlay();
 	void OnRep_Mass();

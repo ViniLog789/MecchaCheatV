@@ -80,6 +80,26 @@ void UWBP_ControllerColorPalet_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_ControllerColorPalet.WBP_ControllerColorPalet_C.ExecuteUbergraph_WBP_ControllerColorPalet
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ControllerColorPalet_C::ExecuteUbergraph_WBP_ControllerColorPalet(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ControllerColorPalet_C", "ExecuteUbergraph_WBP_ControllerColorPalet");
+
+	Params::WBP_ControllerColorPalet_C_ExecuteUbergraph_WBP_ControllerColorPalet Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ControllerColorPalet.WBP_ControllerColorPalet_C.BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_V_K2Node_ComponentBoundEvent_2_UpdateValue__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

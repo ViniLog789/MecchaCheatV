@@ -11,9 +11,30 @@
 #include "Basic.hpp"
 
 #include "WBP_ImportMap_classes.hpp"
+#include "WBP_ImportMap_parameters.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Function WBP_ImportMap.WBP_ImportMap_C.ExecuteUbergraph_WBP_ImportMap
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ImportMap_C::ExecuteUbergraph_WBP_ImportMap(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ImportMap_C", "ExecuteUbergraph_WBP_ImportMap");
+
+	Params::WBP_ImportMap_C_ExecuteUbergraph_WBP_ImportMap Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 
 // Function WBP_ImportMap.WBP_ImportMap_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)

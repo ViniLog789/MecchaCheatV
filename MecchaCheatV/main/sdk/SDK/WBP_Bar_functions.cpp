@@ -76,6 +76,26 @@ void UWBP_Bar_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_Bar.WBP_Bar_C.ExecuteUbergraph_WBP_Bar
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Bar_C::ExecuteUbergraph_WBP_Bar(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Bar_C", "ExecuteUbergraph_WBP_Bar");
+
+	Params::WBP_Bar_C_ExecuteUbergraph_WBP_Bar Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Bar.WBP_Bar_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

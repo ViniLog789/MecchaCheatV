@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BPC_LockOnSystem.BPC_LockOnSystem_C.ExecuteUbergraph_BPC_LockOnSystem
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LockOnSystem_C::ExecuteUbergraph_BPC_LockOnSystem(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LockOnSystem_C", "ExecuteUbergraph_BPC_LockOnSystem");
+
+	Params::BPC_LockOnSystem_C_ExecuteUbergraph_BPC_LockOnSystem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_LockOnSystem.BPC_LockOnSystem_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:

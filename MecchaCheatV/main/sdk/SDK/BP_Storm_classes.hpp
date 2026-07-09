@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class ABP_Storm_C final : public AActor
 {
 public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UNiagaraComponent*                      N_StormLightning1;                                 // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      N_StormLightning;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -75,6 +75,7 @@ public:
 	void MoveCountDownStart(int32 CountDownTime, class FName StopperName);
 	void MinusTime();
 	void ForceStateCheck();
+	void ExecuteUbergraph_BP_Storm(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UBPC_LINK_HandControl_C final : public UActorComponent
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class ABP_FirstPersonCharacter_LINK_C*        As_BP_First_Person_Character_LINK;                 // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 BindActor;                                         // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                LocalAttachPosition;                               // 0x00D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -66,6 +66,7 @@ public:
 	struct FVector                                ThrowVelocity;                                     // 0x0260(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_BPC_LINK_HandControl(int32 EntryPoint);
 	void DetachHandleItem(bool IsThrow);
 	void DetachHandleItem_Server_(const struct FVector& Vel, const struct FVector& AngVel, bool IsThrow);
 	void AddforceForServer(const struct FVector& Force, const struct FVector& Location);

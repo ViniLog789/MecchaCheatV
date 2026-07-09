@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_EnvironmentSystem_DamagedSpawn_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_EnvironmentSystem_Ruins_C final : public ABP_EnvironmentSystem_DamagedSpawn_C
 {
 public:
-	uint8                                         Pad_360[0x8];                                      // 0x0360(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EnvironmentSystem_Ruins_C;       // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBillboardComponent*                    SpawnPosition2;                                    // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBillboardComponent*                    SpawnPosition1;                                    // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
@@ -28,6 +29,7 @@ public:
 	void SpawnMaterial();
 	void ReplicateEvent();
 	void ReceiveDestroyed();
+	void ExecuteUbergraph_BP_EnvironmentSystem_Ruins(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

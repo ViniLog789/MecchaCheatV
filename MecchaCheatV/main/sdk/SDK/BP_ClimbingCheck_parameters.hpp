@@ -26,6 +26,24 @@ public:
 };
 DUMPER7_ASSERTS_BP_ClimbingCheck_C_Trigger;
 
+// Function BP_ClimbingCheck.BP_ClimbingCheck_C.ExecuteUbergraph_BP_ClimbingCheck
+// 0x0238 (0x0238 - 0x0000)
+struct BP_ClimbingCheck_C_ExecuteUbergraph_BP_ClimbingCheck final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSimulationTickParams                  K2Node_Event_Params;                               // 0x0008(0x0120)(ConstParm, ContainsInstancedReference)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_GetDataFromCollection_DidSucceed;      // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12A[0x6];                                      // 0x012A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMyClimbingInputBatch                  CallFunc_K2_GetDataFromCollection_TargetAsRawBytes; // 0x0130(0x00A0)(ConstParm, ContainsInstancedReference)
+	double                                        CallFunc_VSizeSquared_ReturnValue;                 // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLayeredMove_Launch                    K2Node_MakeStruct_LayeredMove_Launch;              // 0x01D8(0x0058)()
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_ClimbingCheck_C_ExecuteUbergraph_BP_ClimbingCheck;
+
 // Function BP_ClimbingCheck.BP_ClimbingCheck_C.Evaluate
 // 0x01E8 (0x01E8 - 0x0000)
 struct BP_ClimbingCheck_C_Evaluate final

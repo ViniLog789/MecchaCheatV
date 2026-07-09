@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UUDS_Occlusion_Portal_C final : public UStaticMeshComponent
 {
 public:
-	uint8                                         Pad_610[0x8];                                      // 0x0610(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0610(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        Sample_Range;                                      // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Distance_Falloff_Exponent;                         // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Directional_Occlusion;                             // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -28,6 +29,7 @@ public:
 
 public:
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_UDS_Occlusion_Portal(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

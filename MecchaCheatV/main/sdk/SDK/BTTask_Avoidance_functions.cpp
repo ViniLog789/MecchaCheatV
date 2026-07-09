@@ -62,4 +62,24 @@ void UBTTask_Avoidance_C::ReceiveExecuteAI(class AAIController* OwnerController_
 }
 
 
+// Function BTTask_Avoidance.BTTask_Avoidance_C.ExecuteUbergraph_BTTask_Avoidance
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_Avoidance_C::ExecuteUbergraph_BTTask_Avoidance(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_Avoidance_C", "ExecuteUbergraph_BTTask_Avoidance");
+
+	Params::BTTask_Avoidance_C_ExecuteUbergraph_BTTask_Avoidance Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

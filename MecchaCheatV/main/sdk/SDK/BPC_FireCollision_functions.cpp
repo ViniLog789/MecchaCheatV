@@ -88,4 +88,24 @@ void UBPC_FireCollision_C::HitEvent(class UPrimitiveComponent* HitComponent, cla
 }
 
 
+// Function BPC_FireCollision.BPC_FireCollision_C.ExecuteUbergraph_BPC_FireCollision
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_FireCollision_C::ExecuteUbergraph_BPC_FireCollision(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_FireCollision_C", "ExecuteUbergraph_BPC_FireCollision");
+
+	Params::BPC_FireCollision_C_ExecuteUbergraph_BPC_FireCollision Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -58,6 +58,26 @@ void UWBP_FPSCounter_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_FPSCounter.WBP_FPSCounter_C.ExecuteUbergraph_WBP_FPSCounter
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FPSCounter_C::ExecuteUbergraph_WBP_FPSCounter(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FPSCounter_C", "ExecuteUbergraph_WBP_FPSCounter");
+
+	Params::WBP_FPSCounter_C_ExecuteUbergraph_WBP_FPSCounter Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_FPSCounter.WBP_FPSCounter_C.OnPaint
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

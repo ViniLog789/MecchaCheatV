@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_EnvironmentSystem_XmasMiniTree_classes.hpp"
+#include "BP_EnvironmentSystem_XmasMiniTree_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,6 +27,26 @@ void ABP_EnvironmentSystem_XmasMiniTree_C::ReceiveDestroyed()
 		Func = Class->GetFunction("BP_EnvironmentSystem_XmasMiniTree_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnvironmentSystem_XmasMiniTree.BP_EnvironmentSystem_XmasMiniTree_C.ExecuteUbergraph_BP_EnvironmentSystem_XmasMiniTree
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnvironmentSystem_XmasMiniTree_C::ExecuteUbergraph_BP_EnvironmentSystem_XmasMiniTree(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_XmasMiniTree_C", "ExecuteUbergraph_BP_EnvironmentSystem_XmasMiniTree");
+
+	Params::BP_EnvironmentSystem_XmasMiniTree_C_ExecuteUbergraph_BP_EnvironmentSystem_XmasMiniTree Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_cLeonGame_Common_C final : public UUserWidget
 {
 public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UVerticalBox*                           NamePlates;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ABP_GameState_cLeon_C*                  As_BP_Game_State_C_Leon;                           // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<class UWBP_ChamelemonName_C*>          Names;                                             // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
@@ -28,6 +29,7 @@ public:
 public:
 	void UpdateNamePlates();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void ExecuteUbergraph_WBP_cLeonGame_Common(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

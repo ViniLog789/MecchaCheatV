@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_CameraWireSpline_classes.hpp"
+#include "BP_CameraWireSpline_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -54,6 +55,26 @@ void ABP_CameraWireSpline_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_CameraWireSpline_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CameraWireSpline.BP_CameraWireSpline_C.ExecuteUbergraph_BP_CameraWireSpline
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CameraWireSpline_C::ExecuteUbergraph_BP_CameraWireSpline(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CameraWireSpline_C", "ExecuteUbergraph_BP_CameraWireSpline");
+
+	Params::BP_CameraWireSpline_C_ExecuteUbergraph_BP_CameraWireSpline Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

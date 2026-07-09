@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ReferencedGlueGroup_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ReferencedGlueGroup_structs.hpp"
 #include "EN_GlueType_structs.hpp"
 
 
@@ -280,6 +280,19 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_LinkManager_C_MergeCheck;
+
+// Function BP_LinkManager.BP_LinkManager_C.ExecuteUbergraph_BP_LinkManager
+// 0x0018 (0x0018 - 0x0000)
+struct BP_LinkManager_C_ExecuteUbergraph_BP_LinkManager final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_LinkDataBank_C*                     CallFunc_GetActorOfClass_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_LinkManager_C_ExecuteUbergraph_BP_LinkManager;
 
 // Function BP_LinkManager.BP_LinkManager_C.AddCustomForce
 // 0x0108 (0x0108 - 0x0000)

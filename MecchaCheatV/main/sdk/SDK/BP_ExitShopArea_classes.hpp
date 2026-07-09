@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_PlayerCounter_Base_classes.hpp"
 
 
@@ -20,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_ExitShopArea_C final : public ABP_PlayerCounter_Base_C
 {
 public:
-	uint8                                         Pad_300[0x8];                                      // 0x0300(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ExitShopArea_C;                  // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBoxComponent*                          Box;                                               // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         OverlapingPlayers_0;                               // 0x0310(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	class ABP_GameState_LINK_C*                   As_BP_Game_State_LINK_0;                           // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -28,6 +29,7 @@ public:
 
 public:
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_ExitShopArea(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

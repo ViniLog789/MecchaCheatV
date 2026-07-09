@@ -30,6 +30,26 @@ void UWBP_SettingVoiceInputDevice_C::Get_ConfigItem_Text_1_Text_0()
 }
 
 
+// Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.ExecuteUbergraph_WBP_SettingVoiceInputDevice
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SettingVoiceInputDevice_C::ExecuteUbergraph_WBP_SettingVoiceInputDevice(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SettingVoiceInputDevice_C", "ExecuteUbergraph_WBP_SettingVoiceInputDevice");
+
+	Params::WBP_SettingVoiceInputDevice_C_ExecuteUbergraph_WBP_SettingVoiceInputDevice Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.ApplySetting
 // (Public, BlueprintCallable, BlueprintEvent)
 

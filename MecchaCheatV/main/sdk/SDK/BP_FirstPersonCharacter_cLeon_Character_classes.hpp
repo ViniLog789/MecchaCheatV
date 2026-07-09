@@ -11,21 +11,22 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
 #include "Mover_structs.hpp"
 #include "BP_FirstPersonCharacter_Main_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C
 // 0x01A0 (0x0CD0 - 0x0B30)
-class ABP_FirstPersonCharacter_cLeon_Character_C : public ABP_FirstPersonCharacter_Main_C
+#pragma pack(push, 0x1)
+class SDK_ALIGN(0x10) ABP_FirstPersonCharacter_cLeon_Character_C : public ABP_FirstPersonCharacter_Main_C
 {
 public:
-	uint8                                         Pad_B30[0x8];                                      // 0x0B30(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonCharacter_cLeon_Character_C; // 0x0B30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UNetworkPhysicsSettingsComponent*       NetworkPhysicsSettings;                            // 0x0B38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        Audio;                                             // 0x0B40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWidgetComponent*                       Nameplate;                                         // 0x0B48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -88,6 +89,7 @@ public:
 	bool                                          CanZoom;                                           // 0x0CC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character(int32 EntryPoint);
 	void MEChange();
 	void BndEvt__BP_FirstPersonCharacter_cLeon_Character_RuntimePaintable_K2Node_ComponentBoundEvent_0_OnDecoyActorCountChanged__DelegateSignature(int32 OldCount, int32 NewCount);
 	void DestroyDecoy();
@@ -198,6 +200,7 @@ public:
 		return GetDefaultObjImpl<ABP_FirstPersonCharacter_cLeon_Character_C>();
 	}
 };
+#pragma pack(pop)
 DUMPER7_ASSERTS_ABP_FirstPersonCharacter_cLeon_Character_C;
 
 SDK_NAMESPACE_END

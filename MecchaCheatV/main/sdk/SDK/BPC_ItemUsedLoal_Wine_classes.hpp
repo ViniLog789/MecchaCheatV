@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BPC_ItemUsedLoal_Base_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BPC_ItemUsedLoal_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_ItemUsedLoal_Wine_C final : public UBPC_ItemUsedLoal_Base_C
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        InfinityStaminaTime;                               // 0x00C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DrunkTime;                                         // 0x00C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_FirstPersonCharacter_LINK_C*        As_BP_First_Person_Character_LINK;                 // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -33,6 +33,7 @@ public:
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BPC_ItemUsedLoal_Wine(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

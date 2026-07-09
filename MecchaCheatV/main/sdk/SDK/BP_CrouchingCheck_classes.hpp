@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Mover_classes.hpp"
 
 
@@ -20,11 +21,12 @@ SDK_NAMESPACE_START
 class UBP_CrouchingCheck_C final : public UBaseMovementModeTransition
 {
 public:
-	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0040(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Trigger(const struct FSimulationTickParams& Params_Trigger);
 	void K2_OnRegistered();
+	void ExecuteUbergraph_BP_CrouchingCheck(int32 EntryPoint);
 
 	struct FTransitionEvalResult Evaluate(const struct FSimulationTickParams& Params_Evaluate) const;
 

@@ -69,6 +69,26 @@ void ABP_CannonBarrel_C::IsChangeImage(bool* IsInteract_IsChangeImage, class FTe
 }
 
 
+// Function BP_CannonBarrel.BP_CannonBarrel_C.ExecuteUbergraph_BP_CannonBarrel
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CannonBarrel_C::ExecuteUbergraph_BP_CannonBarrel(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CannonBarrel_C", "ExecuteUbergraph_BP_CannonBarrel");
+
+	Params::BP_CannonBarrel_C_ExecuteUbergraph_BP_CannonBarrel Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_CannonBarrel.BP_CannonBarrel_C.BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:

@@ -4234,6 +4234,26 @@ void AUltra_Dynamic_Sky_C::Filtered_Moon_Light_Intensity(double Unfiltered, doub
 }
 
 
+// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.ExecuteUbergraph_Ultra_Dynamic_Sky
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AUltra_Dynamic_Sky_C::ExecuteUbergraph_Ultra_Dynamic_Sky(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "ExecuteUbergraph_Ultra_Dynamic_Sky");
+
+	Params::Ultra_Dynamic_Sky_C_ExecuteUbergraph_Ultra_Dynamic_Sky Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Editor Update from Weather
 // (Public, BlueprintCallable, BlueprintEvent)
 

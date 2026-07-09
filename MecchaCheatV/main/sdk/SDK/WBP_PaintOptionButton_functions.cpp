@@ -36,6 +36,26 @@ void UWBP_PaintOptionButton_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_PaintOptionButton.WBP_PaintOptionButton_C.ExecuteUbergraph_WBP_PaintOptionButton
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintOptionButton_C::ExecuteUbergraph_WBP_PaintOptionButton(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintOptionButton_C", "ExecuteUbergraph_WBP_PaintOptionButton");
+
+	Params::WBP_PaintOptionButton_C_ExecuteUbergraph_WBP_PaintOptionButton Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PaintOptionButton.WBP_PaintOptionButton_C.BndEvt__WBP_PaintOptionButton_Button_0_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 

@@ -199,6 +199,26 @@ void UWBP_PaintMode_Cursor_C::GetViewportPosition(struct FVector2D* Positon)
 }
 
 
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ExecuteUbergraph_WBP_PaintMode_Cursor
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::ExecuteUbergraph_WBP_PaintMode_Cursor(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ExecuteUbergraph_WBP_PaintMode_Cursor");
+
+	Params::WBP_PaintMode_Cursor_C_ExecuteUbergraph_WBP_PaintMode_Cursor Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Destruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

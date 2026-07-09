@@ -44,6 +44,26 @@ void ACopyVAT_Animation_C::VATAnimationTimeLine__FinishedFunc()
 }
 
 
+// Function CopyVAT_Animation.CopyVAT_Animation_C.ExecuteUbergraph_CopyVAT_Animation
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ACopyVAT_Animation_C::ExecuteUbergraph_CopyVAT_Animation(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CopyVAT_Animation_C", "ExecuteUbergraph_CopyVAT_Animation");
+
+	Params::CopyVAT_Animation_C_ExecuteUbergraph_CopyVAT_Animation Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function CopyVAT_Animation.CopyVAT_Animation_C.AnimationStart
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

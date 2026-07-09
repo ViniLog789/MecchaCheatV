@@ -50,6 +50,26 @@ void UBP_CrouchingCheck_C::K2_OnRegistered()
 }
 
 
+// Function BP_CrouchingCheck.BP_CrouchingCheck_C.ExecuteUbergraph_BP_CrouchingCheck
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_CrouchingCheck_C::ExecuteUbergraph_BP_CrouchingCheck(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CrouchingCheck_C", "ExecuteUbergraph_BP_CrouchingCheck");
+
+	Params::BP_CrouchingCheck_C_ExecuteUbergraph_BP_CrouchingCheck Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_CrouchingCheck.BP_CrouchingCheck_C.Evaluate
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

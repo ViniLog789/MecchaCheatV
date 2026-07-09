@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "BP_RandomObject_Base_classes.hpp"
+#include "BP_RandomObject_Base_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,6 +41,26 @@ void ABP_RandomObject_Base_C::HideCall()
 		Func = Class->GetFunction("BP_RandomObject_Base_C", "HideCall");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RandomObject_Base.BP_RandomObject_Base_C.ExecuteUbergraph_BP_RandomObject_Base
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RandomObject_Base_C::ExecuteUbergraph_BP_RandomObject_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RandomObject_Base_C", "ExecuteUbergraph_BP_RandomObject_Base");
+
+	Params::BP_RandomObject_Base_C_ExecuteUbergraph_BP_RandomObject_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

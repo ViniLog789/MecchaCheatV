@@ -100,4 +100,24 @@ void ABP_FirstPersonGameMode_C::InpActEvt_IA_Pause_K2Node_EnhancedInputActionEve
 }
 
 
+// Function BP_FirstPersonGameMode.BP_FirstPersonGameMode_C.ExecuteUbergraph_BP_FirstPersonGameMode
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonGameMode_C::ExecuteUbergraph_BP_FirstPersonGameMode(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonGameMode_C", "ExecuteUbergraph_BP_FirstPersonGameMode");
+
+	Params::BP_FirstPersonGameMode_C_ExecuteUbergraph_BP_FirstPersonGameMode Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

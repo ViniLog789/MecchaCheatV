@@ -116,4 +116,24 @@ void UBPC_ItemReplicateController_Magnet_C::ReceiveTick(float DeltaSeconds_Recei
 }
 
 
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.ExecuteUbergraph_BPC_ItemReplicateController_Magnet
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Magnet_C::ExecuteUbergraph_BPC_ItemReplicateController_Magnet(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "ExecuteUbergraph_BPC_ItemReplicateController_Magnet");
+
+	Params::BPC_ItemReplicateController_Magnet_C_ExecuteUbergraph_BPC_ItemReplicateController_Magnet Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

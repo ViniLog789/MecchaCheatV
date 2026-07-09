@@ -72,4 +72,24 @@ void ABP_EnvironmentSystem_Tree1_C::ReceiveDestroyed()
 }
 
 
+// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.ExecuteUbergraph_BP_EnvironmentSystem_Tree1
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnvironmentSystem_Tree1_C::ExecuteUbergraph_BP_EnvironmentSystem_Tree1(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "ExecuteUbergraph_BP_EnvironmentSystem_Tree1");
+
+	Params::BP_EnvironmentSystem_Tree1_C_ExecuteUbergraph_BP_EnvironmentSystem_Tree1 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

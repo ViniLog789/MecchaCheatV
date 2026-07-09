@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "EN_cLeonMainGamePhase_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EN_cLeonGameMode_structs.hpp"
 #include "EN_cLeonGamePhase_structs.hpp"
-#include "ST_cLeonSurvivorVariation_structs.hpp"
+#include "EN_cLeonMainGamePhase_structs.hpp"
 #include "ST_cLeonMapData_structs.hpp"
+#include "ST_cLeonSurvivorVariation_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,7 +27,7 @@ SDK_NAMESPACE_START
 class ABP_GameState_cLeon_C final : public AGameStateBase
 {
 public:
-	uint8                                         Pad_300[0x8];                                      // 0x0300(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBPC_TextChatControl_C*                 BPC_TextChatControl;                               // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	EN_cLeonGamePhase                             CurrentGamePhase;                                  // 0x0318(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -135,6 +136,7 @@ public:
 	void ForceStart();
 	void ForceModeWidgetReset();
 	void FocusChicken();
+	void ExecuteUbergraph_BP_GameState_cLeon(int32 EntryPoint);
 	void EEYAN_Activate();
 	void CountUIReset();
 	void Complete();

@@ -36,4 +36,24 @@ void UWBP_HunterOrSurvivorIcon_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_HunterOrSurvivorIcon.WBP_HunterOrSurvivorIcon_C.ExecuteUbergraph_WBP_HunterOrSurvivorIcon
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HunterOrSurvivorIcon_C::ExecuteUbergraph_WBP_HunterOrSurvivorIcon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HunterOrSurvivorIcon_C", "ExecuteUbergraph_WBP_HunterOrSurvivorIcon");
+
+	Params::WBP_HunterOrSurvivorIcon_C_ExecuteUbergraph_WBP_HunterOrSurvivorIcon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -50,5 +50,14 @@ public:
 };
 DUMPER7_ASSERTS_BPC_RayPositions_C_GetRayPositions;
 
+// Function BPC_RayPositions.BPC_RayPositions_C.ExecuteUbergraph_BPC_RayPositions
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RayPositions_C_ExecuteUbergraph_BPC_RayPositions final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RayPositions_C_ExecuteUbergraph_BPC_RayPositions;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -10,9 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "BP_FirstPersonPlayerController_classes.hpp"
-#include "EN_DamageType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "EN_StanType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "BP_FirstPersonPlayerController_classes.hpp"
+#include "PhysicsCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +24,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonPlayerController_LINK_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
-	uint8                                         Pad_768[0x8];                                      // 0x0768(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonPlayerController_LINK_C; // 0x0768(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void StanDamage(EN_StanType StanType);
@@ -32,6 +34,7 @@ public:
 	void ShotItem_Local_(const struct FTransform& StartTransform, const struct FVector& Velocity, double power, class UClass* Class_0, class AActor* BindActor);
 	void ReceiveBeginPlay();
 	void GetParryState(bool* State);
+	void ExecuteUbergraph_BP_FirstPersonPlayerController_LINK(int32 EntryPoint);
 	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void Damage_Server_(class UObject* ターゲット, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);

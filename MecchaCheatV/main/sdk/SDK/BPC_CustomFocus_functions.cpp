@@ -70,4 +70,24 @@ void UBPC_CustomFocus_C::ReceiveBeginPlay()
 }
 
 
+// Function BPC_CustomFocus.BPC_CustomFocus_C.ExecuteUbergraph_BPC_CustomFocus
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_CustomFocus_C::ExecuteUbergraph_BPC_CustomFocus(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CustomFocus_C", "ExecuteUbergraph_BPC_CustomFocus");
+
+	Params::BPC_CustomFocus_C_ExecuteUbergraph_BPC_CustomFocus Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

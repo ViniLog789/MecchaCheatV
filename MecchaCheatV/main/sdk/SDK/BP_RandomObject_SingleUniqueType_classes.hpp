@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_RandomObject_SingleUniqueType_C final : public ABP_RandomObject_Base_C
 {
 public:
-	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_RandomObject_SingleUniqueType_C; // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   Cube;                                              // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int32                                         PreviewIndex;                                      // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -30,14 +30,15 @@ public:
 	int32                                         CurrentIndex;                                      // 0x02E8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void CheckLoop();
-	void HideCall();
-	void IndexUpdate();
-	void OnRep_CurrentIndex();
-	void RandomCall();
-	void ReceiveBeginPlay();
-	void SetIndex(int32 Index_0, bool* Error);
 	void UserConstructionScript();
+	void SetIndex(int32 Index_0, bool* Error);
+	void ReceiveBeginPlay();
+	void RandomCall();
+	void OnRep_CurrentIndex();
+	void IndexUpdate();
+	void HideCall();
+	void ExecuteUbergraph_BP_RandomObject_SingleUniqueType(int32 EntryPoint);
+	void CheckLoop();
 
 public:
 	static class UClass* StaticClass()
