@@ -59,26 +59,6 @@ void ABP_GenerateRandomBoxLocation_Wall_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_GenerateRandomBoxLocation_Wall.BP_GenerateRandomBoxLocation_Wall_C.ExecuteUbergraph_BP_GenerateRandomBoxLocation_Wall
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GenerateRandomBoxLocation_Wall_C::ExecuteUbergraph_BP_GenerateRandomBoxLocation_Wall(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GenerateRandomBoxLocation_Wall_C", "ExecuteUbergraph_BP_GenerateRandomBoxLocation_Wall");
-
-	Params::BP_GenerateRandomBoxLocation_Wall_C_ExecuteUbergraph_BP_GenerateRandomBoxLocation_Wall Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_GenerateRandomBoxLocation_Wall.BP_GenerateRandomBoxLocation_Wall_C.CheckSide
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

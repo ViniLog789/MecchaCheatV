@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "EN_DamageType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 #include "EN_StanType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "ENUM_SaveDataUpdateType_structs.hpp"
 
 
@@ -26,11 +25,10 @@ SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemBase.BP_ItemBase_C
 // 0x0198 (0x0440 - 0x02A8)
-#pragma pack(push, 0x1)
-class SDK_ALIGN(0x10) ABP_ItemBase_C : public AActor
+class ABP_ItemBase_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDeviceComponent_C*                     DeviceComonent;                                    // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	double                                        DropPower;                                         // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -55,7 +53,6 @@ public:
 	class FText                                   OptionTexts;                                       // 0x0428(0x0010)(Edit, BlueprintVisible, Config, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_BP_ItemBase(int32 EntryPoint);
 	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
 	void UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas);
 	void CreateCoreData();
@@ -104,7 +101,6 @@ public:
 		return GetDefaultObjImpl<ABP_ItemBase_C>();
 	}
 };
-#pragma pack(pop)
 DUMPER7_ASSERTS_ABP_ItemBase_C;
 
 SDK_NAMESPACE_END

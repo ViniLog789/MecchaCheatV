@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UINavigation_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -18,21 +17,22 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C
-// 0x0020 (0x0768 - 0x0748)
+// 0x0028 (0x0770 - 0x0748)
 class ABP_FirstPersonPlayerController_C : public AUINavController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0748(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_748[0x8];                                      // 0x0748(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWidget*>                        AllWidgets;                                        // 0x0750(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	class UWBP_CentorInteract_C*                  Centor_Interact;                                   // 0x0760(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ReceiveTick(float DeltaSeconds);
 	void SendToText(const class FString& MainText, int32 Index_0);
 	void AddMainWidgets();
 	void OnRootWidgetAdded();
 	void OnRootWidgetRemoved();
 	void SetAllWidgetVisibility(bool IsShow);
-	void ExecuteUbergraph_BP_FirstPersonPlayerController(int32 EntryPoint);
 	void ReceiveBeginPlay();
 
 public:

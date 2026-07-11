@@ -40,24 +40,4 @@ void UBTS_NearAttack_C::ReceiveTickAI(class AAIController* OwnerController_Recei
 }
 
 
-// Function BTS_NearAttack.BTS_NearAttack_C.ExecuteUbergraph_BTS_NearAttack
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTS_NearAttack_C::ExecuteUbergraph_BTS_NearAttack(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTS_NearAttack_C", "ExecuteUbergraph_BTS_NearAttack");
-
-	Params::BTS_NearAttack_C_ExecuteUbergraph_BTS_NearAttack Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

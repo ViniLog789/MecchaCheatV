@@ -78,21 +78,21 @@ void UWBP_PaintCursor_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_PaintCursor.WBP_PaintCursor_C.ExecuteUbergraph_WBP_PaintCursor
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_PaintCursor.WBP_PaintCursor_C.IsZoom
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PaintCursor_C::ExecuteUbergraph_WBP_PaintCursor(int32 EntryPoint)
+void UWBP_PaintCursor_C::IsZoom(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintCursor_C", "ExecuteUbergraph_WBP_PaintCursor");
+		Func = Class->GetFunction("WBP_PaintCursor_C", "IsZoom");
 
-	Params::WBP_PaintCursor_C_ExecuteUbergraph_WBP_PaintCursor Parms{};
+	Params::WBP_PaintCursor_C_IsZoom Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_ItemBase_classes.hpp"
 
 
@@ -18,11 +17,9 @@ SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C
 // 0x00C0 (0x0500 - 0x0440)
-#pragma pack(push, 0x1)
-class SDK_ALIGN(0x10) ABP_DamageTool_Base_V2_C : public ABP_ItemBase_C
+class ABP_DamageTool_Base_V2_C : public ABP_ItemBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_DamageTool_Base_V2_C;            // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBPC_LongInputControl_C*                BPC_LongInputControl;                              // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_ComboControl_C*                    BPC_ComboControl;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	double                                        NowDamageMultiply;                                 // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,7 +37,6 @@ public:
 	double                                        ShotRange;                                         // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_DamageTool_Base_V2(int32 EntryPoint);
 	void BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature(class FName EventName);
 	void DefaultMontagePlay();
 	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
@@ -78,7 +74,6 @@ public:
 		return GetDefaultObjImpl<ABP_DamageTool_Base_V2_C>();
 	}
 };
-#pragma pack(pop)
 DUMPER7_ASSERTS_ABP_DamageTool_Base_V2_C;
 
 SDK_NAMESPACE_END

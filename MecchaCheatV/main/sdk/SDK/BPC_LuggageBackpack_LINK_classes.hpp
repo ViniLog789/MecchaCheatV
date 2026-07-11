@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_LuggageBackpack_LINK_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBPC_LuggageBackpack_LINK_C*            BackPackWidget;                                    // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FST_ItemCoreDatas>              BackPackDatas;                                     // 0x00C8(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify)
 	bool                                          IsOpen;                                            // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -47,7 +46,6 @@ public:
 	void GetSumWeight(double* SumWeight);
 	void GetHeightPosition_FromTransform(const struct FTransform& CameraTransform, float Distance, const struct FVector& BodyLocation, struct FVector* Location);
 	void GetHeightPosition(class ABP_FirstPersonCharacter_Main_C* FirstpersonCharacter, float Distance, struct FVector* Location);
-	void ExecuteUbergraph_BPC_LuggageBackpack_LINK(int32 EntryPoint);
 	void CloseBackPack();
 	void ClearAllItems();
 	void ChangeWeightEvent(double Weight);

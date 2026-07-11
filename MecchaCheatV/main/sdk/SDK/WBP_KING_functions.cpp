@@ -36,26 +36,6 @@ void UWBP_KING_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_KING.WBP_KING_C.ExecuteUbergraph_WBP_KING
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_KING_C::ExecuteUbergraph_WBP_KING(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_KING_C", "ExecuteUbergraph_WBP_KING");
-
-	Params::WBP_KING_C_ExecuteUbergraph_WBP_KING Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_KING.WBP_KING_C.AnimationFinish
 // (BlueprintCallable, BlueprintEvent)
 

@@ -126,26 +126,6 @@ void UBPC_HitOnConnect_C::HitEvent(class UPrimitiveComponent* HitComponent, clas
 }
 
 
-// Function BPC_HitOnConnect.BPC_HitOnConnect_C.ExecuteUbergraph_BPC_HitOnConnect
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_HitOnConnect_C::ExecuteUbergraph_BPC_HitOnConnect(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_HitOnConnect_C", "ExecuteUbergraph_BPC_HitOnConnect");
-
-	Params::BPC_HitOnConnect_C_ExecuteUbergraph_BPC_HitOnConnect Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_HitOnConnect.BPC_HitOnConnect_C.DestroySafe
 // (BlueprintCallable, BlueprintEvent)
 

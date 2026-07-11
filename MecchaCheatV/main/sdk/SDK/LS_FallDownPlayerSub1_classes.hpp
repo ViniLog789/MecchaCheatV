@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "LevelSequence_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class ULS_FallDownPlayerSub1_DirectorBP_C final : public ULevelSequenceDirector
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP_2(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
@@ -32,7 +31,6 @@ public:
 	struct FMovieSceneDynamicBindingResolveResult RightPos_DynamicBinding();
 	struct FMovieSceneDynamicBindingResolveResult LeftPos_DynamicBinding();
 	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
-	void ExecuteUbergraph_LS_FallDownPlayerSub1_DirectorBP(int32 EntryPoint);
 	struct FMovieSceneDynamicBindingResolveResult CameraActor_DynamicBinding();
 	void BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
 	struct FMovieSceneDynamicBindingResolveResult BP_FirstPersonCharacter_DynamicBinding_0(int32 PlayerControllerIndex);

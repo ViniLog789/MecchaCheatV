@@ -64,26 +64,6 @@ void UWBP_ConfigGraphic_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.ExecuteUbergraph_WBP_ConfigGraphic
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ConfigGraphic_C::ExecuteUbergraph_WBP_ConfigGraphic(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "ExecuteUbergraph_WBP_ConfigGraphic");
-
-	Params::WBP_ConfigGraphic_C_ExecuteUbergraph_WBP_ConfigGraphic Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.DeleteConfigWidget
 // (BlueprintCallable, BlueprintEvent)
 

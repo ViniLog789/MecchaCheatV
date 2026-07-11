@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UBPC_PhysicsNetDormancyControl_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Wake(class UPrimitiveComponent* WakingComponent, class FName BoneName);
@@ -29,7 +28,6 @@ public:
 	void Sleep(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
 	void SimulatePhysicsCheck();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_PhysicsNetDormancyControl(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -112,26 +112,6 @@ void UWBP_BackPackMenu_C::GrabEndAfterInput()
 }
 
 
-// Function WBP_BackPackMenu.WBP_BackPackMenu_C.ExecuteUbergraph_WBP_BackPackMenu
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_BackPackMenu_C::ExecuteUbergraph_WBP_BackPackMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BackPackMenu_C", "ExecuteUbergraph_WBP_BackPackMenu");
-
-	Params::WBP_BackPackMenu_C_ExecuteUbergraph_WBP_BackPackMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_BackPackMenu.WBP_BackPackMenu_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

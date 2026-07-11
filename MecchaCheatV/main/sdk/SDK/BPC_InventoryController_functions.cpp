@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_InventoryController.BPC_InventoryController_C.ExecuteUbergraph_BPC_InventoryController
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::ExecuteUbergraph_BPC_InventoryController(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "ExecuteUbergraph_BPC_InventoryController");
-
-	Params::BPC_InventoryController_C_ExecuteUbergraph_BPC_InventoryController Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_InventoryController.BPC_InventoryController_C.DropCall(Server)
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:

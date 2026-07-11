@@ -104,26 +104,6 @@ void UWBP_MapContents_C::OnFailure_F47348424771535C48E222B9B9CA8A4E(const class 
 }
 
 
-// Function WBP_MapContents.WBP_MapContents_C.ExecuteUbergraph_WBP_MapContents
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_MapContents_C::ExecuteUbergraph_WBP_MapContents(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MapContents_C", "ExecuteUbergraph_WBP_MapContents");
-
-	Params::WBP_MapContents_C_ExecuteUbergraph_WBP_MapContents Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_MapContents.WBP_MapContents_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -138,15 +118,15 @@ void UWBP_MapContents_C::Construct()
 }
 
 
-// Function WBP_MapContents.WBP_MapContents_C.BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
+// Function WBP_MapContents.WBP_MapContents_C.BndEvt__WBP_MapContents_NavButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
-void UWBP_MapContents_C::BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
+void UWBP_MapContents_C::BndEvt__WBP_MapContents_NavButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MapContents_C", "BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
+		Func = Class->GetFunction("WBP_MapContents_C", "BndEvt__WBP_MapContents_NavButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

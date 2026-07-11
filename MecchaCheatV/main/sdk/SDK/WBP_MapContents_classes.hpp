@@ -10,38 +10,35 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "ST_cLeonMapData_structs.hpp"
+#include "UINavigation_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MapContents.WBP_MapContents_C
-// 0x0078 (0x03B8 - 0x0340)
-class UWBP_MapContents_C final : public UUserWidget
+// 0x0070 (0x0980 - 0x0910)
+class UWBP_MapContents_C final : public UUINavComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             MapName;                                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_ChoseMap;                // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_0;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& MapData)> SelectMap; // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool Rezult)>   RequestFinish;                                     // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          ShowSelectButton;                                  // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_cLeonMapData                       cLeonMapData;                                      // 0x0388(0x0018)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FSlateColor                            TextColor;                                         // 0x03A0(0x0014)(Edit, BlueprintVisible, ExposeOnSpawn)
+	uint8                                         Pad_910[0x8];                                      // 0x0910(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextBlock*                             MapName;                                           // 0x0918(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_0;                                          // 0x0920(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)> SelectMap; // 0x0928(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool Rezult)>   RequestFinish;                                     // 0x0938(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          ShowSelectButton;                                  // 0x0948(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_949[0x7];                                      // 0x0949(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_cLeonMapData                       cLeonMapData;                                      // 0x0950(0x0018)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FSlateColor                            TextColor;                                         // 0x0968(0x0014)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
 	void SelectUpdate(bool State);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnSuccess_F47348424771535C48E222B9B9CA8A4E(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
 	void OnFailure_F47348424771535C48E222B9B9CA8A4E(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void ExecuteUbergraph_WBP_MapContents(int32 EntryPoint);
 	void Construct();
-	void BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
+	void BndEvt__WBP_MapContents_NavButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

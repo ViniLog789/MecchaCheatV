@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "ENUM_ClassType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ST_CopyDatas_structs.hpp"
-#include "ENUM_CameraMode_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,7 +27,7 @@ SDK_NAMESPACE_START
 class ABP_PhotoAnimation_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBoxComponent*                          Box;                                               // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 PhotoMesh;                                         // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         _______Scale_07EBE3424D13DA82E76DDFA1C8F37E14;     // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -71,7 +71,6 @@ public:
 	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
 	void Fix();
 	void Fire(bool MiniFire);
-	void ExecuteUbergraph_BP_PhotoAnimation(int32 EntryPoint);
 	void DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition);
 	void BndEvt__BP_PhotoAnimation_Box_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 

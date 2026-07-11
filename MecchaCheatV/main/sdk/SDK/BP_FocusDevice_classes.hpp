@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class ABP_FocusDevice_C final : public ABP_DeviceBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FocusDevice_C;                   // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2F0[0x8];                                      // 0x02F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBillboardComponent*                    Billboard;                                         // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         CameraLerp_LerpValue_9B37892E4D642D8CC1132CA056C9FC5F; // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            CameraLerp__Direction_9B37892E4D642D8CC1132CA056C9FC5F; // 0x0304(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,7 +40,6 @@ public:
 public:
 	void ReceiveBeginPlay();
 	void LookAtLoop();
-	void ExecuteUbergraph_BP_FocusDevice(int32 EntryPoint);
 	void CameraLerp__UpdateFunc();
 	void CameraLerp__FinishedFunc();
 	void BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue);

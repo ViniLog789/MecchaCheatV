@@ -16,49 +16,41 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Bullet_Base.BP_Bullet_Base_C.ExecuteUbergraph_BP_Bullet_Base
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_Bullet_Base.BP_Bullet_Base_C.StanDamage
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Bullet_Base_C::ExecuteUbergraph_BP_Bullet_Base(int32 EntryPoint)
+void ABP_Bullet_Base_C::StanDamage(EN_StanType StanType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Bullet_Base_C", "ExecuteUbergraph_BP_Bullet_Base");
+		Func = Class->GetFunction("BP_Bullet_Base_C", "StanDamage");
 
-	Params::BP_Bullet_Base_C_ExecuteUbergraph_BP_Bullet_Base Parms{};
+	Params::BP_Bullet_Base_C_StanDamage Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.StanType = StanType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Bullet_Base.BP_Bullet_Base_C.BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature
-// (HasOutParams, BlueprintEvent)
+// Function BP_Bullet_Base.BP_Bullet_Base_C.StaminaDamage
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*              HitComponent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Bullet_Base_C::BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+void ABP_Bullet_Base_C::StaminaDamage(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Bullet_Base_C", "BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature");
+		Func = Class->GetFunction("BP_Bullet_Base_C", "StaminaDamage");
 
-	Params::BP_Bullet_Base_C_BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature Parms{};
+	Params::BP_Bullet_Base_C_StaminaDamage Parms{};
 
-	Parms.HitComponent = HitComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.NormalImpulse = std::move(NormalImpulse);
-	Parms.Hit = std::move(Hit);
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -87,9 +79,9 @@ void ABP_Bullet_Base_C::Snap(const struct FTransform& SnapTransform)
 // Function BP_Bullet_Base.BP_Bullet_Base_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Bullet_Base_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void ABP_Bullet_Base_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
@@ -98,7 +90,7 @@ void ABP_Bullet_Base_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
 
 	Params::BP_Bullet_Base_C_ReceiveTick Parms{};
 
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -115,82 +107,6 @@ void ABP_Bullet_Base_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_Bullet_Base_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Bullet_Base.BP_Bullet_Base_C.DamageToPlayerController
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitRezult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Bullet_Base_C::DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Bullet_Base_C", "DamageToPlayerController");
-
-	Params::BP_Bullet_Base_C_DamageToPlayerController Parms{};
-
-	Parms.TargetActor = TargetActor;
-	Parms.DamageValue = DamageValue;
-	Parms.TeamIndex = TeamIndex;
-	Parms.DamageType = DamageType;
-	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
-	Parms.UnAvoidable = UnAvoidable;
-	Parms.DamageName = DamageName;
-	Parms.HitRezult = std::move(HitRezult);
-	Parms.SourceActor = SourceActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Bullet_Base.BP_Bullet_Base_C.StaminaDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Bullet_Base_C::StaminaDamage(double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Bullet_Base_C", "StaminaDamage");
-
-	Params::BP_Bullet_Base_C_StaminaDamage Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Bullet_Base.BP_Bullet_Base_C.StanDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Bullet_Base_C::StanDamage(EN_StanType StanType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Bullet_Base_C", "StanDamage");
-
-	Params::BP_Bullet_Base_C_StanDamage Parms{};
-
-	Parms.StanType = StanType;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -235,6 +151,42 @@ void ABP_Bullet_Base_C::GetParryState(bool* State)
 }
 
 
+// Function BP_Bullet_Base.BP_Bullet_Base_C.DamageToPlayerController
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitRezult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Bullet_Base_C::DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Bullet_Base_C", "DamageToPlayerController");
+
+	Params::BP_Bullet_Base_C_DamageToPlayerController Parms{};
+
+	Parms.TargetActor = TargetActor;
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.HitRezult = std::move(HitRezult);
+	Parms.SourceActor = SourceActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Bullet_Base.BP_Bullet_Base_C.Damage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -268,6 +220,34 @@ void ABP_Bullet_Base_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageTyp
 
 	if (Finish != nullptr)
 		*Finish = std::move(Parms.Finish);
+}
+
+
+// Function BP_Bullet_Base.BP_Bullet_Base_C.BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              HitComponent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void ABP_Bullet_Base_C::BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Bullet_Base_C", "BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature");
+
+	Params::BP_Bullet_Base_C_BndEvt__BP_Bullet_Base_StaticMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature Parms{};
+
+	Parms.HitComponent = HitComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.NormalImpulse = std::move(NormalImpulse);
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

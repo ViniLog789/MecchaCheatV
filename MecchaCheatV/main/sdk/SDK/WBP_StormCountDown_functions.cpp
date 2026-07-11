@@ -36,24 +36,4 @@ void UWBP_StormCountDown_C::SetTime(int32 Time)
 }
 
 
-// Function WBP_StormCountDown.WBP_StormCountDown_C.ExecuteUbergraph_WBP_StormCountDown
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_StormCountDown_C::ExecuteUbergraph_WBP_StormCountDown(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StormCountDown_C", "ExecuteUbergraph_WBP_StormCountDown");
-
-	Params::WBP_StormCountDown_C_ExecuteUbergraph_WBP_StormCountDown Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

@@ -19,12 +19,12 @@ SDK_NAMESPACE_START
 // Function BPF_cLeon.BPF_cLeon_C.GetTelepportPointName
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class FName*                            HunterTelporterName                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName*                            SurvivorTelporterName                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPF_cLeon_C::GetTelepportPointName(const struct FST_cLeonMapData& MapData, class UObject* __WorldContext, class FName* HunterTelporterName, class FName* SurvivorTelporterName)
+void UBPF_cLeon_C::GetTelepportPointName(const struct FST_cLeonMapData& Mapdata, class UObject* __WorldContext, class FName* HunterTelporterName, class FName* SurvivorTelporterName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,7 +33,7 @@ void UBPF_cLeon_C::GetTelepportPointName(const struct FST_cLeonMapData& MapData,
 
 	Params::BPF_cLeon_C_GetTelepportPointName Parms{};
 
-	Parms.MapData = std::move(MapData);
+	Parms.Mapdata = std::move(Mapdata);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);

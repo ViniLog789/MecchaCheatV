@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_SnowBall_Under_classes.hpp"
-#include "BP_SnowBall_Under_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -41,26 +40,6 @@ void ABP_SnowBall_Under_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_SnowBall_Under_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SnowBall_Under.BP_SnowBall_Under_C.ExecuteUbergraph_BP_SnowBall_Under
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SnowBall_Under_C::ExecuteUbergraph_BP_SnowBall_Under(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SnowBall_Under_C", "ExecuteUbergraph_BP_SnowBall_Under");
-
-	Params::BP_SnowBall_Under_C_ExecuteUbergraph_BP_SnowBall_Under Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

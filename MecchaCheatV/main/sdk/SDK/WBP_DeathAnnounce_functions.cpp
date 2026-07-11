@@ -50,24 +50,4 @@ void UWBP_DeathAnnounce_C::Finish()
 }
 
 
-// Function WBP_DeathAnnounce.WBP_DeathAnnounce_C.ExecuteUbergraph_WBP_DeathAnnounce
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_DeathAnnounce_C::ExecuteUbergraph_WBP_DeathAnnounce(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DeathAnnounce_C", "ExecuteUbergraph_WBP_DeathAnnounce");
-
-	Params::WBP_DeathAnnounce_C_ExecuteUbergraph_WBP_DeathAnnounce Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

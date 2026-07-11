@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class ACopyVAT_Animation_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         VATAnimationTimeLine_MoveLerp_9347C0BE41DCBD7586BFC5A91BA3DECB; // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -37,7 +37,6 @@ public:
 public:
 	void VATAnimationTimeLine__UpdateFunc();
 	void VATAnimationTimeLine__FinishedFunc();
-	void ExecuteUbergraph_CopyVAT_Animation(int32 EntryPoint);
 	void AnimationStart(class UStaticMeshComponent* ToComponent, const struct FST_VAT_Datas& VAT_Datas);
 
 public:

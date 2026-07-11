@@ -112,26 +112,6 @@ void ABP_ModLevelManager_C::LoadCheckStart()
 }
 
 
-// Function BP_ModLevelManager.BP_ModLevelManager_C.ExecuteUbergraph_BP_ModLevelManager
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ModLevelManager_C::ExecuteUbergraph_BP_ModLevelManager(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ModLevelManager_C", "ExecuteUbergraph_BP_ModLevelManager");
-
-	Params::BP_ModLevelManager_C_ExecuteUbergraph_BP_ModLevelManager Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_ModLevelManager.BP_ModLevelManager_C.ClearLevel
 // (BlueprintCallable, BlueprintEvent)
 

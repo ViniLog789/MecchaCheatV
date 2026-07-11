@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UBPC_CharacterStatusGaugeControl_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        max_0;                                             // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Now;                                               // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        AnimationValue;                                    // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -48,7 +47,6 @@ public:
 	void GetNormalizeValue(double* NormalizeValue);
 	void GetNormalizeAnimationValue(double* NormalizeValue);
 	void GetAnimationStartValue(bool Normalize, double* StartValue);
-	void ExecuteUbergraph_BPC_CharacterStatusGaugeControl(int32 EntryPoint);
 	void ChangeValue(double AddValue, double AnimationTime);
 	void BlockAutoHeal();
 	void AutoHealStart();

@@ -119,26 +119,6 @@ void ABP_PresentSpawner_C::GoadGiftBox(class AActor* GiftBox)
 }
 
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.ExecuteUbergraph_BP_PresentSpawner
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PresentSpawner_C::ExecuteUbergraph_BP_PresentSpawner(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "ExecuteUbergraph_BP_PresentSpawner");
-
-	Params::BP_PresentSpawner_C_ExecuteUbergraph_BP_PresentSpawner Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PresentSpawner.BP_PresentSpawner_C.DestroyActor
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

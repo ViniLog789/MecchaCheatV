@@ -50,26 +50,6 @@ void UWBP_LookPoint_C::FinishEvent()
 }
 
 
-// Function WBP_LookPoint.WBP_LookPoint_C.ExecuteUbergraph_WBP_LookPoint
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_LookPoint_C::ExecuteUbergraph_WBP_LookPoint(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LookPoint_C", "ExecuteUbergraph_WBP_LookPoint");
-
-	Params::WBP_LookPoint_C_ExecuteUbergraph_WBP_LookPoint Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_LookPoint.WBP_LookPoint_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

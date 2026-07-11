@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerController_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ReceiveTick");
+
+	Params::BP_FirstPersonPlayerController_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.SendToText
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -95,26 +115,6 @@ void ABP_FirstPersonPlayerController_C::SetAllWidgetVisibility(bool IsShow)
 	Params::BP_FirstPersonPlayerController_C_SetAllWidgetVisibility Parms{};
 
 	Parms.IsShow = IsShow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ExecuteUbergraph_BP_FirstPersonPlayerController
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerController_C::ExecuteUbergraph_BP_FirstPersonPlayerController(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ExecuteUbergraph_BP_FirstPersonPlayerController");
-
-	Params::BP_FirstPersonPlayerController_C_ExecuteUbergraph_BP_FirstPersonPlayerController Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -270,26 +270,6 @@ void UBPC_ItemReplicateController_MagicHand_C::Grab_Replicate_(const struct FVec
 }
 
 
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.ExecuteUbergraph_BPC_ItemReplicateController_MagicHand
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_MagicHand_C::ExecuteUbergraph_BPC_ItemReplicateController_MagicHand(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_MagicHand_C", "ExecuteUbergraph_BPC_ItemReplicateController_MagicHand");
-
-	Params::BPC_ItemReplicateController_MagicHand_C_ExecuteUbergraph_BPC_ItemReplicateController_MagicHand Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.CharacterReplicated
 // (BlueprintCallable, BlueprintEvent)
 

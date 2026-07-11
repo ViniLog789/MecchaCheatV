@@ -80,26 +80,6 @@ void UBPC_AttackCollisionControl_C::OnComponentBeginOverlap(class UPrimitiveComp
 }
 
 
-// Function BPC_AttackCollisionControl.BPC_AttackCollisionControl_C.ExecuteUbergraph_BPC_AttackCollisionControl
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_AttackCollisionControl_C::ExecuteUbergraph_BPC_AttackCollisionControl(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AttackCollisionControl_C", "ExecuteUbergraph_BPC_AttackCollisionControl");
-
-	Params::BPC_AttackCollisionControl_C_ExecuteUbergraph_BPC_AttackCollisionControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_AttackCollisionControl.BPC_AttackCollisionControl_C.EffectStop
 // (BlueprintCallable, BlueprintEvent)
 

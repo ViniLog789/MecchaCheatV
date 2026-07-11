@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_PresentSpawner_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UCapsuleComponent*                      Capsule;                                           // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 Gift_Spawner;                                      // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -39,7 +39,6 @@ public:
 	void ReceiveBeginPlay();
 	void IsHouseAllGoal(bool* AllGoal);
 	void GoadGiftBox(class AActor* GiftBox);
-	void ExecuteUbergraph_BP_PresentSpawner(int32 EntryPoint);
 	void DestroyActor(class AActor* DestroyedActor);
 	void CleanUp();
 	void AddQueue(const class ABP_GoalHouse_C*& HouseActor);

@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "UI_config_classes.hpp"
-#include "UI_config_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,26 +26,6 @@ void UUI_config_C::Show_config()
 		Func = Class->GetFunction("UI_config_C", "Show config");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UI_config.UI_config_C.ExecuteUbergraph_UI_config
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUI_config_C::ExecuteUbergraph_UI_config(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_config_C", "ExecuteUbergraph_UI_config");
-
-	Params::UI_config_C_ExecuteUbergraph_UI_config Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -38,24 +38,4 @@ void UBTTask_RandomLocation_C::ReceiveExecuteAI(class AAIController* OwnerContro
 }
 
 
-// Function BTTask_RandomLocation.BTTask_RandomLocation_C.ExecuteUbergraph_BTTask_RandomLocation
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTTask_RandomLocation_C::ExecuteUbergraph_BTTask_RandomLocation(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTTask_RandomLocation_C", "ExecuteUbergraph_BTTask_RandomLocation");
-
-	Params::BTTask_RandomLocation_C_ExecuteUbergraph_BTTask_RandomLocation Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

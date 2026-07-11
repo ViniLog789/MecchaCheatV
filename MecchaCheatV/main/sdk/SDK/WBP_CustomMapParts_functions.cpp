@@ -130,26 +130,6 @@ void UWBP_CustomMapParts_C::OnFailure_212C9A914520D8F7A114F290F6F7AA59(const cla
 }
 
 
-// Function WBP_CustomMapParts.WBP_CustomMapParts_C.ExecuteUbergraph_WBP_CustomMapParts
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CustomMapParts_C::ExecuteUbergraph_WBP_CustomMapParts(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CustomMapParts_C", "ExecuteUbergraph_WBP_CustomMapParts");
-
-	Params::WBP_CustomMapParts_C_ExecuteUbergraph_WBP_CustomMapParts Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_CustomMapParts.WBP_CustomMapParts_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

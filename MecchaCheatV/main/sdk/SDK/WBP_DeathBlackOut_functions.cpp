@@ -50,26 +50,6 @@ void UWBP_DeathBlackOut_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.ExecuteUbergraph_WBP_DeathBlackOut
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_DeathBlackOut_C::ExecuteUbergraph_WBP_DeathBlackOut(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DeathBlackOut_C", "ExecuteUbergraph_WBP_DeathBlackOut");
-
-	Params::WBP_DeathBlackOut_C_ExecuteUbergraph_WBP_DeathBlackOut Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.AudioZero
 // (BlueprintCallable, BlueprintEvent)
 

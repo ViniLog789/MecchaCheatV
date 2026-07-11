@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_FirstPersonPlayerState_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonPlayerState_Online_C : public ABP_FirstPersonPlayerState_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonPlayerState_Online_C; // 0x0380(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_380[0x8];                                      // 0x0380(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CustomPlayerName;                                  // 0x0388(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(const class FString& Name_0)> OnNameReplicate;                     // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(int32 NewChannel, const TArray<int32>& RemoveTarget)> ChangeVoiceChatChannel; // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -36,7 +35,6 @@ public:
 	void OnDestroySessionComplete_003AED3545F20C424888CCAE2B80C441(class FName SessionName, bool bWasSuccessful);
 	void OnCallFailed_003AED3545F20C424888CCAE2B80C441(class FName SessionName, bool bWasSuccessful);
 	void Kick();
-	void ExecuteUbergraph_BP_FirstPersonPlayerState_Online(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

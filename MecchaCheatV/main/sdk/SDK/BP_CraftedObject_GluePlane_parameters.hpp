@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ItemBindType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -92,22 +92,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0173(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_CraftedObject_GluePlane_C_GetItemInfo;
-
-// Function BP_CraftedObject_GluePlane.BP_CraftedObject_GluePlane_C.ExecuteUbergraph_BP_CraftedObject_GluePlane
-// 0x0018 (0x0018 - 0x0000)
-struct BP_CraftedObject_GluePlane_C_ExecuteUbergraph_BP_CraftedObject_GluePlane final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_OtherActor;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_GluePlane_C_ExecuteUbergraph_BP_CraftedObject_GluePlane;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

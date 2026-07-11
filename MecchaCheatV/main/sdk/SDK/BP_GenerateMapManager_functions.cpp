@@ -296,26 +296,6 @@ void ABP_GenerateMapManager_C::GenerateBell(class UClass* SpawnTargetClass, cons
 }
 
 
-// Function BP_GenerateMapManager.BP_GenerateMapManager_C.ExecuteUbergraph_BP_GenerateMapManager
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GenerateMapManager_C::ExecuteUbergraph_BP_GenerateMapManager(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GenerateMapManager_C", "ExecuteUbergraph_BP_GenerateMapManager");
-
-	Params::BP_GenerateMapManager_C_ExecuteUbergraph_BP_GenerateMapManager Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_GenerateMapManager.BP_GenerateMapManager_C.EnableSpawnArray
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Enum_configItem_before_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class UUI_configItem_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UButton*                                Light_BTN;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UButton*                                Left_BTN;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             ConfigValue_text;                                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -46,7 +45,6 @@ public:
 	void update_configItem();
 	void Update_confg_value();
 	void look_spead(class FText* slook_pead);
-	void ExecuteUbergraph_UI_configItem(int32 EntryPoint);
 	void BndEvt__UI_configItem_Light_BTN_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__UI_configItem_Left_BTN_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 

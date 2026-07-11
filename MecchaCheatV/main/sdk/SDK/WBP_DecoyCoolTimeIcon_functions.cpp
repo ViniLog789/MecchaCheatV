@@ -56,24 +56,4 @@ void UWBP_DecoyCoolTimeIcon_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_DecoyCoolTimeIcon.WBP_DecoyCoolTimeIcon_C.ExecuteUbergraph_WBP_DecoyCoolTimeIcon
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_DecoyCoolTimeIcon_C::ExecuteUbergraph_WBP_DecoyCoolTimeIcon(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DecoyCoolTimeIcon_C", "ExecuteUbergraph_WBP_DecoyCoolTimeIcon");
-
-	Params::WBP_DecoyCoolTimeIcon_C_ExecuteUbergraph_WBP_DecoyCoolTimeIcon Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

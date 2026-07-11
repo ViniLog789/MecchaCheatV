@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BPC_ItemReplicateController_Base_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UBPC_ItemReplicateController_Magnet_C final : public UBPC_ItemReplicateController_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BPC_ItemReplicateController_Magnet_C; // 0x00E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    AddForceTarget;                                    // 0x00E8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -30,7 +29,6 @@ public:
 	void UseItem_Local_(bool State_UseItem_Local_);
 	void SetForceTarget(class UPrimitiveComponent* AddForceTarget);
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ExecuteUbergraph_BPC_ItemReplicateController_Magnet(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

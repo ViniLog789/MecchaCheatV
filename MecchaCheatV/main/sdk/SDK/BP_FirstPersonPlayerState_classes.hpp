@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class ABP_FirstPersonPlayerState_C : public APlayerState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_360[0x8];                                      // 0x0360(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBPC_InventoryController_C*             BPC_InventoryController;                           // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class ABP_FirstPersonCharacter_Main_C*        TargetCharacter;                                   // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -30,7 +29,6 @@ public:
 	void ReceiveCopyProperties(class APlayerState* NewPlayerState);
 	void ReceiveBeginPlay();
 	void Initialization(class ABP_FirstPersonCharacter_Main_C* Character);
-	void ExecuteUbergraph_BP_FirstPersonPlayerState(int32 EntryPoint);
 	void ChangeParamater_flaot_(class FName Name_0, double Value);
 
 public:

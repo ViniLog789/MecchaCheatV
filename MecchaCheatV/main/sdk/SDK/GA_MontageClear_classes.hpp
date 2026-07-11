@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "GameplayAbilities_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UGA_MontageClear_C final : public UGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_3A8[0x8];                                      // 0x03A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnInterrupted_795C47B248738638E80CD9A84449D35B();
@@ -30,7 +29,6 @@ public:
 	void OnBlendOut_795C47B248738638E80CD9A84449D35B();
 	void OnBlendedIn_795C47B248738638E80CD9A84449D35B();
 	void K2_ActivateAbility();
-	void ExecuteUbergraph_GA_MontageClear(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

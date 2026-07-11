@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_BackToBaseArea.BP_BackToBaseArea_C.ExecuteUbergraph_BP_BackToBaseArea
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_BackToBaseArea_C::ExecuteUbergraph_BP_BackToBaseArea(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BackToBaseArea_C", "ExecuteUbergraph_BP_BackToBaseArea");
-
-	Params::BP_BackToBaseArea_C_ExecuteUbergraph_BP_BackToBaseArea Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_BackToBaseArea.BP_BackToBaseArea_C.BndEvt__BP_BackToBaseArea_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:

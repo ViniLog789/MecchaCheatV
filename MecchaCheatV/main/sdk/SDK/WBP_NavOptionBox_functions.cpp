@@ -78,26 +78,6 @@ void UWBP_NavOptionBox_C::OnChangedValue()
 }
 
 
-// Function WBP_NavOptionBox.WBP_NavOptionBox_C.ExecuteUbergraph_WBP_NavOptionBox
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_NavOptionBox_C::ExecuteUbergraph_WBP_NavOptionBox(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavOptionBox_C", "ExecuteUbergraph_WBP_NavOptionBox");
-
-	Params::WBP_NavOptionBox_C_ExecuteUbergraph_WBP_NavOptionBox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_NavOptionBox.WBP_NavOptionBox_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

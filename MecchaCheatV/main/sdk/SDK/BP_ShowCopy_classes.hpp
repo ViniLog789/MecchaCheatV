@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class ABP_ShowCopy_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         HideActor;                                         // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	class UAnimMontage*                           LastMontage;                                       // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -34,7 +33,6 @@ public:
 	void OnInterrupted_B4C244954CE7898DEF0913A0CF8A49C8(class FName NotifyName);
 	void OnCompleted_B4C244954CE7898DEF0913A0CF8A49C8(class FName NotifyName);
 	void OnBlendOut_B4C244954CE7898DEF0913A0CF8A49C8(class FName NotifyName);
-	void ExecuteUbergraph_BP_ShowCopy(int32 EntryPoint);
 	void CopyPreset(class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C* Survivor);
 
 public:

@@ -78,26 +78,6 @@ void UWBP_ComboBox_C::GetResolution()
 }
 
 
-// Function WBP_ComboBox.WBP_ComboBox_C.ExecuteUbergraph_WBP_ComboBox
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ComboBox_C::ExecuteUbergraph_WBP_ComboBox(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_C", "ExecuteUbergraph_WBP_ComboBox");
-
-	Params::WBP_ComboBox_C_ExecuteUbergraph_WBP_ComboBox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ComboBox.WBP_ComboBox_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

@@ -24,21 +24,5 @@ public:
 };
 DUMPER7_ASSERTS_BTTask_LockOnPlayer_C_ReceiveExecuteAI;
 
-// Function BTTask_LockOnPlayer.BTTask_LockOnPlayer_C.ExecuteUbergraph_BTTask_LockOnPlayer
-// 0x0040 (0x0040 - 0x0000)
-struct BTTask_LockOnPlayer_C_ExecuteUbergraph_BTTask_LockOnPlayer final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAIController*                          K2Node_Event_OwnerController;                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  K2Node_Event_ControlledPawn;                       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UBPC_CustomFocus_C*>             CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UCharacterMovementComponent*            CallFunc_GetComponentByClass_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBPC_CustomFocus_C*                     CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BTTask_LockOnPlayer_C_ExecuteUbergraph_BTTask_LockOnPlayer;
-
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

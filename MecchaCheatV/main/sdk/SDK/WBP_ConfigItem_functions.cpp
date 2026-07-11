@@ -348,26 +348,6 @@ void UWBP_ConfigItem_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_ConfigItem.WBP_ConfigItem_C.ExecuteUbergraph_WBP_ConfigItem
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ConfigItem_C::ExecuteUbergraph_WBP_ConfigItem(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigItem_C", "ExecuteUbergraph_WBP_ConfigItem");
-
-	Params::WBP_ConfigItem_C_ExecuteUbergraph_WBP_ConfigItem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ConfigItem.WBP_ConfigItem_C.BndEvt__WBP_ConfigItem_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
 // (BlueprintEvent)
 

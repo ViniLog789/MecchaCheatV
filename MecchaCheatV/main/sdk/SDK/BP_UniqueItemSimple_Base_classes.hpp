@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_ItemBase_classes.hpp"
 
 
@@ -22,13 +21,11 @@ SDK_NAMESPACE_START
 class SDK_ALIGN(0x10) ABP_UniqueItemSimple_Base_C : public ABP_ItemBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UniqueItemSimple_Base_C;         // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBPC_LongInputControl_C*                BPC_LongInputControl;                              // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UAnimMontage*                           DefaultMontage;                                    // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 ReplicateComp;                                     // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_UniqueItemSimple_Base(int32 EntryPoint);
 	void CollisionReset();
 	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply);
 	void Combo(double TimeRange, class FName ComboName);

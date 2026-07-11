@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_TargetPinMain_classes.hpp"
-#include "BP_TargetPinMain_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -55,26 +54,6 @@ void ABP_TargetPinMain_C::PinAnimation__FinishedFunc()
 		Func = Class->GetFunction("BP_TargetPinMain_C", "PinAnimation__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TargetPinMain.BP_TargetPinMain_C.ExecuteUbergraph_BP_TargetPinMain
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TargetPinMain_C::ExecuteUbergraph_BP_TargetPinMain(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TargetPinMain_C", "ExecuteUbergraph_BP_TargetPinMain");
-
-	Params::BP_TargetPinMain_C_ExecuteUbergraph_BP_TargetPinMain Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

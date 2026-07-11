@@ -111,24 +111,4 @@ void UBPC_NearInteract_C::GetSelectActor(class AActor** CurrentSelectActor)
 }
 
 
-// Function BPC_NearInteract.BPC_NearInteract_C.ExecuteUbergraph_BPC_NearInteract
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_NearInteract_C::ExecuteUbergraph_BPC_NearInteract(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NearInteract_C", "ExecuteUbergraph_BPC_NearInteract");
-
-	Params::BPC_NearInteract_C_ExecuteUbergraph_BPC_NearInteract Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

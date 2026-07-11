@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BPC_TaskObject_Base_classes.hpp"
 
 
@@ -21,14 +20,13 @@ SDK_NAMESPACE_START
 class UBPC_TaskObject_FindAndTakeHomeGiftBox_C final : public UBPC_TaskObject_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BPC_TaskObject_FindAndTakeHomeGiftBox_C; // 0x0110(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TargetNum;                                         // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ABP_GoalHouse_C*>                Out_Actors;                                        // 0x0120(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	TArray<class AActor*>                         Generated_Actors;                                  // 0x0130(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox(int32 EntryPoint);
 	void GoalActor(class AActor* Actor);
 	void GeneratedActor(class AActor* GeneratedActor);
 	void TaskStart();

@@ -113,26 +113,6 @@ void ABP_CheckPointIgroo_C::FogActivate()
 }
 
 
-// Function BP_CheckPointIgroo.BP_CheckPointIgroo_C.ExecuteUbergraph_BP_CheckPointIgroo
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckPointIgroo_C::ExecuteUbergraph_BP_CheckPointIgroo(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointIgroo_C", "ExecuteUbergraph_BP_CheckPointIgroo");
-
-	Params::BP_CheckPointIgroo_C_ExecuteUbergraph_BP_CheckPointIgroo Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CheckPointIgroo.BP_CheckPointIgroo_C.CheckState
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

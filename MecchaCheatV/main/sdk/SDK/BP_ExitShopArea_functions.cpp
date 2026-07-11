@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_ExitShopArea_classes.hpp"
-#include "BP_ExitShopArea_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,26 +26,6 @@ void ABP_ExitShopArea_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_ExitShopArea_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ExitShopArea.BP_ExitShopArea_C.ExecuteUbergraph_BP_ExitShopArea
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ExitShopArea_C::ExecuteUbergraph_BP_ExitShopArea(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ExitShopArea_C", "ExecuteUbergraph_BP_ExitShopArea");
-
-	Params::BP_ExitShopArea_C_ExecuteUbergraph_BP_ExitShopArea Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function ABP_EnemyPenguin.ABP_EnemyPenguin_C.ExecuteUbergraph_ABP_EnemyPenguin
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UABP_EnemyPenguin_C::ExecuteUbergraph_ABP_EnemyPenguin(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_EnemyPenguin_C", "ExecuteUbergraph_ABP_EnemyPenguin");
-
-	Params::ABP_EnemyPenguin_C_ExecuteUbergraph_ABP_EnemyPenguin Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ABP_EnemyPenguin.ABP_EnemyPenguin_C.BlueprintUpdateAnimation
 // (Event, Public, BlueprintEvent)
 // Parameters:

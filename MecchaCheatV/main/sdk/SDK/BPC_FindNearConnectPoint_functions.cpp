@@ -179,26 +179,6 @@ void UBPC_FindNearConnectPoint_C::GetNearConnectDatas(TMap<class UPrimitiveCompo
 }
 
 
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.ExecuteUbergraph_BPC_FindNearConnectPoint
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_FindNearConnectPoint_C::ExecuteUbergraph_BPC_FindNearConnectPoint(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FindNearConnectPoint_C", "ExecuteUbergraph_BPC_FindNearConnectPoint");
-
-	Params::BPC_FindNearConnectPoint_C_ExecuteUbergraph_BPC_FindNearConnectPoint Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.DestroySelf
 // (BlueprintCallable, BlueprintEvent)
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "ABP_MainCharacter_PaintMan_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ABP_MainCharacter_PaintMan_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -24,8 +24,7 @@ SDK_NAMESPACE_START
 class UABP_MainCharacter_PaintMan_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_3D8[0x10];                                     // 0x03D8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct ABP_MainCharacter_PaintMan::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;   // 0x03E8(0x0014)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0400(0x0008)()
@@ -110,7 +109,6 @@ public:
 	bool                                          IsCrouch;                                          // 0x1871(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ABP_MainCharacter_PaintMan(int32 EntryPoint);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MainCharacter_PaintMan_AnimGraphNode_TransitionResult_DF0DB5EA4D4EDCA13CF945B0B73635AB();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MainCharacter_PaintMan_AnimGraphNode_TransitionResult_CC2808E4433A1C3B59A9D59EB57E4B4F();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MainCharacter_PaintMan_AnimGraphNode_TransitionResult_CBC44EE44E91363E569AD5A75059FD7D();

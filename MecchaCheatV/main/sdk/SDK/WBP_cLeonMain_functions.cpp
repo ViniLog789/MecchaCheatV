@@ -315,9 +315,9 @@ void UWBP_cLeonMain_C::NamePlateVisibilityChange(bool Visibility)
 // Function WBP_cLeonMain.WBP_cLeonMain_C.MapDataUpdate
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_cLeonMain_C::MapDataUpdate(const struct FST_cLeonMapData& MapData)
+void UWBP_cLeonMain_C::MapDataUpdate(const struct FST_cLeonMapData& Mapdata)
 {
 	static class UFunction* Func = nullptr;
 
@@ -326,7 +326,7 @@ void UWBP_cLeonMain_C::MapDataUpdate(const struct FST_cLeonMapData& MapData)
 
 	Params::WBP_cLeonMain_C_MapDataUpdate Parms{};
 
-	Parms.MapData = std::move(MapData);
+	Parms.Mapdata = std::move(Mapdata);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -427,26 +427,6 @@ void UWBP_cLeonMain_C::GameModeIndexUpdate(int32 Index_0)
 	Params::WBP_cLeonMain_C_GameModeIndexUpdate Parms{};
 
 	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonMain.WBP_cLeonMain_C.ExecuteUbergraph_WBP_cLeonMain
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonMain_C::ExecuteUbergraph_WBP_cLeonMain(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonMain_C", "ExecuteUbergraph_WBP_cLeonMain");
-
-	Params::WBP_cLeonMain_C_ExecuteUbergraph_WBP_cLeonMain Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -20,7 +20,7 @@ SDK_NAMESPACE_START
 class UBPF_cLeon_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void GetTelepportPointName(const struct FST_cLeonMapData& MapData, class UObject* __WorldContext, class FName* HunterTelporterName, class FName* SurvivorTelporterName);
+	static void GetTelepportPointName(const struct FST_cLeonMapData& Mapdata, class UObject* __WorldContext, class FName* HunterTelporterName, class FName* SurvivorTelporterName);
 	static class FText GetCompressText_cLeon(const class FText& TargetText, int32 Index_0, const TMap<class FString, class FString>& ReplaceTargets, class UObject* __WorldContext);
 	static void EqualMapDatas(const struct FST_cLeonMapData& A, const struct FST_cLeonMapData& B, class UObject* __WorldContext, bool* Rezult);
 

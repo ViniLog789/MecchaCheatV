@@ -10,11 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "ST_GenerateBoxLocation_structs.hpp"
 #include "ST_PriorityGenerateComonents_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_GenerateBoxLocation_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -24,7 +23,7 @@ SDK_NAMESPACE_START
 class ABP_GenerateMapManager_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBoxComponent*                          SpawnArea;                                         // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FRandomStream                          RandomSeed;                                        // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor)
@@ -71,7 +70,6 @@ public:
 	void GenerateBoxLocation_Wall(int32 SpawnNum, class UClass* SpawnTargetClass, const struct FVector& TraceBoundSize, double FloorCheckDistance, int32 MaxGenerateCharange, bool IsInfinity, const struct FVector2D& ScaleRange, const struct FVector2D& HeightRange, const struct FRandomStream& Seed);
 	void GenerateBoxLocation(int32 SpawnNum, class UClass* SpawnTargetClass, const struct FVector& TraceBoundSize, double FloorCheckDistance, int32 MaxGenerateCharange, bool IsInfinity, const struct FVector2D& ScaleRange, const struct FRandomStream& Seed);
 	void GenerateBell(class UClass* SpawnTargetClass, const struct FRandomStream& Seed);
-	void ExecuteUbergraph_BP_GenerateMapManager(int32 EntryPoint);
 	void EnableSpawnArray(int32 TileCount, int32 Count, struct FRandomStream& Seed, TArray<int32>* ReturnArray);
 
 public:

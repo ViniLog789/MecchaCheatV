@@ -70,26 +70,6 @@ class FText UWBP_SettingSlider_C::Get_ConfigItem_Text_1_Text_0()
 }
 
 
-// Function WBP_SettingSlider.WBP_SettingSlider_C.ExecuteUbergraph_WBP_SettingSlider
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SettingSlider_C::ExecuteUbergraph_WBP_SettingSlider(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSlider_C", "ExecuteUbergraph_WBP_SettingSlider");
-
-	Params::WBP_SettingSlider_C_ExecuteUbergraph_WBP_SettingSlider Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_SettingSlider.WBP_SettingSlider_C.BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature
 // (BlueprintEvent)
 

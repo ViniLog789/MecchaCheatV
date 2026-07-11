@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.ExecuteUbergraph_BP_CraftedObject_Strage_Base
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Strage_Base_C::ExecuteUbergraph_BP_CraftedObject_Strage_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "ExecuteUbergraph_BP_CraftedObject_Strage_Base");
-
-	Params::BP_CraftedObject_Strage_Base_C_ExecuteUbergraph_BP_CraftedObject_Strage_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.MassStateUpdate
 // (BlueprintCallable, BlueprintEvent)
 

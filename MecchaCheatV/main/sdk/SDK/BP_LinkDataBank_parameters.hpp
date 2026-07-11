@@ -12,10 +12,10 @@
 
 #include "CoreUObject_structs.hpp"
 #include "ReferencedGlueGroup_structs.hpp"
-#include "LinkMergeTargetPrimitives_structs.hpp"
 #include "PrimitiveGlues_structs.hpp"
-#include "LinkMergePoint_structs.hpp"
 #include "ReferencedGlues_structs.hpp"
+#include "LinkMergePoint_structs.hpp"
+#include "LinkMergeTargetPrimitives_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -248,16 +248,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_LinkDataBank_C_FilterOtherBranchPrimitive;
-
-// Function BP_LinkDataBank.BP_LinkDataBank_C.ExecuteUbergraph_BP_LinkDataBank
-// 0x0008 (0x0008 - 0x0000)
-struct BP_LinkDataBank_C_ExecuteUbergraph_BP_LinkDataBank final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_LinkDataBank_C_ExecuteUbergraph_BP_LinkDataBank;
 
 // Function BP_LinkDataBank.BP_LinkDataBank_C.BranchDataMergeCheck
 // 0x0288 (0x0288 - 0x0000)

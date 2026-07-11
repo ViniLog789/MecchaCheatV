@@ -10,26 +10,25 @@
 
 #include "Basic.hpp"
 
+#include "HitMaterial_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ENUM_ActorType_structs.hpp"
-#include "HitMaterial_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
-#include "ENUM_CameraMode_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C
 // 0x0148 (0x03F0 - 0x02A8)
-#pragma pack(push, 0x1)
-class SDK_ALIGN(0x10) ABP_EnablePotoIn_Base_C : public AActor
+class ABP_EnablePotoIn_Base_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBillboardComponent*                    RayPoint_Sub_2;                                    // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_RayPositions_C*                    BPC_RayPositions;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_CollisionSound_C*                  BPC_CollisionSound;                                // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -57,7 +56,6 @@ public:
 	bool                                          EnableTimeStop;                                    // 0x03E5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_EnablePotoIn_Base(int32 EntryPoint);
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
 	void SetMeshDatas(bool KeepScale);
 	void InteractItem();
@@ -100,7 +98,6 @@ public:
 		return GetDefaultObjImpl<ABP_EnablePotoIn_Base_C>();
 	}
 };
-#pragma pack(pop)
 DUMPER7_ASSERTS_ABP_EnablePotoIn_Base_C;
 
 SDK_NAMESPACE_END

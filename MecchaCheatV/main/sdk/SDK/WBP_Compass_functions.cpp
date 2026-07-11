@@ -38,24 +38,4 @@ void UWBP_Compass_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDelta
 }
 
 
-// Function WBP_Compass.WBP_Compass_C.ExecuteUbergraph_WBP_Compass
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Compass_C::ExecuteUbergraph_WBP_Compass(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Compass_C", "ExecuteUbergraph_WBP_Compass");
-
-	Params::WBP_Compass_C_ExecuteUbergraph_WBP_Compass Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

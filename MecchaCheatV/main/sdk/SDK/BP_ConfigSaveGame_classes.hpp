@@ -10,18 +10,20 @@
 
 #include "Basic.hpp"
 
+#include "EN_InputJudgementType_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ConfigSaveGame.BP_ConfigSaveGame_C
-// 0x0060 (0x0088 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class UBP_ConfigSaveGame_C final : public USaveGame
 {
 public:
 	TMap<class FName, double>                     SettingValueMap;                                   // 0x0028(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FString                                 InputDeviceName;                                   // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	EN_InputJudgementType                         InputJudgementType;                                // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

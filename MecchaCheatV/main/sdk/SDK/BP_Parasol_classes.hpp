@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_UniqueItemSimple_Base_classes.hpp"
 
 
@@ -21,12 +20,11 @@ SDK_NAMESPACE_START
 class ABP_Parasol_C final : public ABP_UniqueItemSimple_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Parasol_C;                       // 0x0458(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_458[0x8];                                      // 0x0458(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAudioComponent*                        Air;                                               // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void PickState(bool State_PickState, class ABP_FirstPersonCharacter_Main_C* Character_PickState, int32 SlotIndex_PickState);
-	void ExecuteUbergraph_BP_Parasol(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

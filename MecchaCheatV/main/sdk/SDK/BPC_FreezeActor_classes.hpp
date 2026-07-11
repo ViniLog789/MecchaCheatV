@@ -21,12 +21,11 @@ SDK_NAMESPACE_START
 class UBPC_FreezeActor_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_FreezeActor(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

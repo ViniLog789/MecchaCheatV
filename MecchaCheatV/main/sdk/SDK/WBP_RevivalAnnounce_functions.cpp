@@ -50,24 +50,4 @@ void UWBP_RevivalAnnounce_C::Finish()
 }
 
 
-// Function WBP_RevivalAnnounce.WBP_RevivalAnnounce_C.ExecuteUbergraph_WBP_RevivalAnnounce
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_RevivalAnnounce_C::ExecuteUbergraph_WBP_RevivalAnnounce(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RevivalAnnounce_C", "ExecuteUbergraph_WBP_RevivalAnnounce");
-
-	Params::WBP_RevivalAnnounce_C_ExecuteUbergraph_WBP_RevivalAnnounce Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

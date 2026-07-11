@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ABP_GenerateRandomBoxLocation_Wall_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 SpawnTargetClass;                                  // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FVector                                Half_Size;                                         // 0x02C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
@@ -44,7 +43,6 @@ public:
 public:
 	bool TraceRound(float Radius, const struct FVector& Start, struct FHitResult* OutHit);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_GenerateRandomBoxLocation_Wall(int32 EntryPoint);
 	void CheckSide(const struct FVector& Location, double BoundSizeMultiply, bool* Rezult);
 
 public:

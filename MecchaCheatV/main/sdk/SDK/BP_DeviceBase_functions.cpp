@@ -40,26 +40,6 @@ void ABP_DeviceBase_C::DeviceStateUpdate(const struct FST_EventValue& EventValue
 }
 
 
-// Function BP_DeviceBase.BP_DeviceBase_C.ExecuteUbergraph_BP_DeviceBase
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DeviceBase_C::ExecuteUbergraph_BP_DeviceBase(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DeviceBase_C", "ExecuteUbergraph_BP_DeviceBase");
-
-	Params::BP_DeviceBase_C_ExecuteUbergraph_BP_DeviceBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_DeviceBase.BP_DeviceBase_C.OnStateChange
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

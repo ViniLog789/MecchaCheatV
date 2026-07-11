@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "LevelSequence_classes.hpp"
 
 
@@ -21,7 +20,7 @@ SDK_NAMESPACE_START
 class UTouch_bigpen_DirectorBP_C final : public ULevelSequenceDirector
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
@@ -31,7 +30,6 @@ public:
 	struct FMovieSceneDynamicBindingResolveResult RightPos_DynamicBinding();
 	struct FMovieSceneDynamicBindingResolveResult LeftPos_DynamicBinding();
 	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
-	void ExecuteUbergraph_Touch_bigpen_DirectorBP(int32 EntryPoint);
 	void BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
 
 public:

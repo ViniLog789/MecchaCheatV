@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BTTask_AttackToPlayer.BTTask_AttackToPlayer_C.ExecuteUbergraph_BTTask_AttackToPlayer
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTTask_AttackToPlayer_C::ExecuteUbergraph_BTTask_AttackToPlayer(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTTask_AttackToPlayer_C", "ExecuteUbergraph_BTTask_AttackToPlayer");
-
-	Params::BTTask_AttackToPlayer_C_ExecuteUbergraph_BTTask_AttackToPlayer Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BTTask_AttackToPlayer.BTTask_AttackToPlayer_C.ReceiveExecuteAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:

@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "AIModule_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_AIMoveControl_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharacterMovementComponent*            CharacterMovementComp;                             // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class ACharacter*                             OwnerCharacter;                                    // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(EPathFollowingResult OutPutRezult, class FName AttackName)> MoveEndSignal; // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -35,7 +34,6 @@ public:
 	void OnFail_95EC79A3420BD63D9809D388C58C8FFB(EPathFollowingResult MovementResult);
 	void MoveTo(class AActor* TargetActor, double AcceptanceRadius, double GiveUpTime, double MultiplySpeed, bool StopOnOverlap, class FName AttackName);
 	void MoveStop();
-	void ExecuteUbergraph_BPC_AIMoveControl(int32 EntryPoint);
 	void ClearTimer();
 
 public:

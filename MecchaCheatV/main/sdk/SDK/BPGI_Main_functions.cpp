@@ -30,23 +30,24 @@ void UBPGI_Main_C::CloudSaveSync()
 }
 
 
-// Function BPGI_Main.BPGI_Main_C.ExecuteUbergraph_BPGI_Main
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPGI_Main.BPGI_Main_C.GetBPGI_Main
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBPGI_Main_C**                    Object                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPGI_Main_C::ExecuteUbergraph_BPGI_Main(int32 EntryPoint)
+void UBPGI_Main_C::GetBPGI_Main(class UBPGI_Main_C** Object)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPGI_Main_C", "ExecuteUbergraph_BPGI_Main");
+		Func = Class->GetFunction("BPGI_Main_C", "GetBPGI_Main");
 
-	Params::BPGI_Main_C_ExecuteUbergraph_BPGI_Main Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::BPGI_Main_C_GetBPGI_Main Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Object != nullptr)
+		*Object = Parms.Object;
 }
 
 
@@ -317,6 +318,46 @@ void UBPGI_Main_C::ReceiveInit()
 		Func = Class->GetFunction("BPGI_Main_C", "ReceiveInit");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPGI_Main.BPGI_Main_C.UpdateInputJType
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_InputJudgementType                   InputJType_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPGI_Main_C::UpdateInputJType(EN_InputJudgementType InputJType_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPGI_Main_C", "UpdateInputJType");
+
+	Params::BPGI_Main_C_UpdateInputJType Parms{};
+
+	Parms.InputJType_0 = InputJType_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPGI_Main.BPGI_Main_C.UpdateLastInputDeviceAll
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EInputType                              LastInputDeviceAll_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPGI_Main_C::UpdateLastInputDeviceAll(EInputType LastInputDeviceAll_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPGI_Main_C", "UpdateLastInputDeviceAll");
+
+	Params::BPGI_Main_C_UpdateLastInputDeviceAll Parms{};
+
+	Parms.LastInputDeviceAll_0 = LastInputDeviceAll_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

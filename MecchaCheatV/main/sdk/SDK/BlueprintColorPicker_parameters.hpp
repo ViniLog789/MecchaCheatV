@@ -52,6 +52,15 @@ public:
 };
 DUMPER7_ASSERTS_ColorPicker_SampleViewportAtCursorAndApply;
 
+// Function BlueprintColorPicker.ColorPicker.SetGBufferSamplingCanvasSlotPosition
+// 0x0010 (0x0010 - 0x0000)
+struct ColorPicker_SetGBufferSamplingCanvasSlotPosition final
+{
+public:
+	struct FVector2D                              CanvasSlotPosition;                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ColorPicker_SetGBufferSamplingCanvasSlotPosition;
+
 // Function BlueprintColorPicker.ColorPicker.SetMetallicRoughnessSampleMaterial
 // 0x0008 (0x0008 - 0x0000)
 struct ColorPicker_SetMetallicRoughnessSampleMaterial final
@@ -87,6 +96,15 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_ColorPicker_SetPickerColorMaterialAndSampleMaterial;
+
+// Function BlueprintColorPicker.ColorPicker.StartGBufferSampling
+// 0x0001 (0x0001 - 0x0000)
+struct ColorPicker_StartGBufferSampling final
+{
+public:
+	bool                                          bMalualCanvasPoistion;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ColorPicker_StartGBufferSampling;
 
 // Function BlueprintColorPicker.ColorPicker.StopGBufferSampling
 // 0x0001 (0x0001 - 0x0000)

@@ -10,31 +10,39 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ST_InputDeviceImage_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "UINavigation_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_KeyImage.WBP_KeyImage_C
-// 0x0078 (0x03B8 - 0x0340)
+// 0x0108 (0x0448 - 0x0340)
 class UWBP_KeyImage_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UImage*                                 Image_58;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBorder*                                Border_153;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class FName                                   ButtonName;                                        // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<class FName, struct FST_InputDeviceImage> ButtonDB;                                         // 0x0360(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
 	bool                                          UseLoopUpdate;                                     // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BackGroundVisibility;                              // 0x03B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsController;                                      // 0x03B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BackGroundVisibility;                              // 0x03B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AutoSwitch;                                        // 0x03B3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B4[0x4];                                      // 0x03B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DefaultInputDeviceName;                            // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          UseBegingUpdate;                                   // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseOverrideImage;                                  // 0x03C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CA[0x6];                                      // 0x03CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_InputDeviceImage                   OverrideImages;                                    // 0x03D0(0x0078)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
 
 public:
+	void UpdateInputDeviceAll(EInputType InputType);
 	void UpdateImage();
+	void SetIsController(bool IsController);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_KeyImage(int32 EntryPoint);
 	void Construct();
 
 public:

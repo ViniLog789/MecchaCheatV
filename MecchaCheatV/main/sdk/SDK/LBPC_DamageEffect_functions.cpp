@@ -94,24 +94,4 @@ void ULBPC_DamageEffect_C::ReceiveBeginPlay()
 }
 
 
-// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ExecuteUbergraph_LBPC_DamageEffect
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULBPC_DamageEffect_C::ExecuteUbergraph_LBPC_DamageEffect(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_DamageEffect_C", "ExecuteUbergraph_LBPC_DamageEffect");
-
-	Params::LBPC_DamageEffect_C_ExecuteUbergraph_LBPC_DamageEffect Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

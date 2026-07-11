@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_C::ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_C_ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.MEChange
 // (BlueprintCallable, BlueprintEvent)
 

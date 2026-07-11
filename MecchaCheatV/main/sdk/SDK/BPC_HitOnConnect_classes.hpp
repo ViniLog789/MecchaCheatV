@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_HitOnConnect_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_FirstPersonCharacter_LINK_C*        OwnerCharacter;                                    // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
@@ -30,7 +30,6 @@ public:
 	void ReceiveBeginPlay();
 	void IsCanConnect(class UPrimitiveComponent* HitPrimitive, class ABP_FirstPersonGameMode_Online_LINK_C* GameModeLINK, bool* Rezult);
 	void HitEvent(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void ExecuteUbergraph_BPC_HitOnConnect(int32 EntryPoint);
 	void DestroySafe();
 
 public:

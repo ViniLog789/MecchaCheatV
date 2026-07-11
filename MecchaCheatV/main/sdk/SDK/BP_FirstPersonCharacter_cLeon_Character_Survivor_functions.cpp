@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Survivor.BP_FirstPersonCharacter_cLeon_Character_Survivor_C.ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Survivor
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Survivor_C::ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Survivor(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Survivor_C", "ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Survivor");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Survivor_C_ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character_Survivor Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_FirstPersonCharacter_cLeon_Character_Survivor.BP_FirstPersonCharacter_cLeon_Character_Survivor_C.SetStencilValue(Server)
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:

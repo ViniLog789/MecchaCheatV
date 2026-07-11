@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_KeyImage.WBP_KeyImage_C.UpdateInputDeviceAll
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EInputType                              InputType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_KeyImage_C::UpdateInputDeviceAll(EInputType InputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_KeyImage_C", "UpdateInputDeviceAll");
+
+	Params::WBP_KeyImage_C_UpdateInputDeviceAll Parms{};
+
+	Parms.InputType = InputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_KeyImage.WBP_KeyImage_C.UpdateImage
 // (BlueprintCallable, BlueprintEvent)
 
@@ -27,6 +47,26 @@ void UWBP_KeyImage_C::UpdateImage()
 		Func = Class->GetFunction("WBP_KeyImage_C", "UpdateImage");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_KeyImage.WBP_KeyImage_C.SetIsController
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsController                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_KeyImage_C::SetIsController(bool IsController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_KeyImage_C", "SetIsController");
+
+	Params::WBP_KeyImage_C_SetIsController Parms{};
+
+	Parms.IsController = IsController;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -45,26 +85,6 @@ void UWBP_KeyImage_C::PreConstruct(bool IsDesignTime_PreConstruct)
 	Params::WBP_KeyImage_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_KeyImage.WBP_KeyImage_C.ExecuteUbergraph_WBP_KeyImage
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_KeyImage_C::ExecuteUbergraph_WBP_KeyImage(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_KeyImage_C", "ExecuteUbergraph_WBP_KeyImage");
-
-	Params::WBP_KeyImage_C_ExecuteUbergraph_WBP_KeyImage Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

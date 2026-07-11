@@ -26668,7 +26668,7 @@ public:
 
 public:
 	class USparseVolumeTextureFrame* GetCurrentFrame();
-	void GetCurrentFramesForInterpolation(class USparseVolumeTextureFrame** Frame0, class USparseVolumeTextureFrame** Frame1, float* LerpAlpha);
+	void GetCurrentFramesForInterpolation(class USparseVolumeTextureFrame** Frame0, class USparseVolumeTextureFrame** frame1, float* LerpAlpha);
 	float GetDuration();
 	float GetFractionalFrameIndex();
 	class USparseVolumeTextureFrame* GetFrameByIndex(int32 FrameIndex);

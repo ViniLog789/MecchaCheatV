@@ -44,26 +44,6 @@ void ABP_SoundDevice_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_SoundDevice.BP_SoundDevice_C.ExecuteUbergraph_BP_SoundDevice
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SoundDevice_C::ExecuteUbergraph_BP_SoundDevice(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundDevice_C", "ExecuteUbergraph_BP_SoundDevice");
-
-	Params::BP_SoundDevice_C_ExecuteUbergraph_BP_SoundDevice Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_SoundDevice.BP_SoundDevice_C.BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

@@ -27,22 +27,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_MovementModeControl_C_ModeChange;
 
-// Function BPC_MovementModeControl.BPC_MovementModeControl_C.ExecuteUbergraph_BPC_MovementModeControl
-// 0x0040 (0x0040 - 0x0000)
-struct BPC_MovementModeControl_C_ExecuteUbergraph_BPC_MovementModeControl final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 K2Node_CustomEvent_ChangeMode;                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_CustomEvent_Timer;                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0028(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class UCharacterMovementComponent*            CallFunc_GetComponentByClass_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_MovementModeControl_C_ExecuteUbergraph_BPC_MovementModeControl;
-
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

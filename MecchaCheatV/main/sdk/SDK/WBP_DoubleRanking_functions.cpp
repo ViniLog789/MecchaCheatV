@@ -36,24 +36,4 @@ void UWBP_DoubleRanking_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_DoubleRanking.WBP_DoubleRanking_C.ExecuteUbergraph_WBP_DoubleRanking
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_DoubleRanking_C::ExecuteUbergraph_WBP_DoubleRanking(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DoubleRanking_C", "ExecuteUbergraph_WBP_DoubleRanking");
-
-	Params::WBP_DoubleRanking_C_ExecuteUbergraph_WBP_DoubleRanking Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

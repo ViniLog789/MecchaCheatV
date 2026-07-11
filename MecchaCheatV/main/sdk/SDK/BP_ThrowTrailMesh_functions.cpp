@@ -50,26 +50,6 @@ void ABP_ThrowTrailMesh_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.ExecuteUbergraph_BP_ThrowTrailMesh
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ThrowTrailMesh_C::ExecuteUbergraph_BP_ThrowTrailMesh(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ThrowTrailMesh_C", "ExecuteUbergraph_BP_ThrowTrailMesh");
-
-	Params::BP_ThrowTrailMesh_C_ExecuteUbergraph_BP_ThrowTrailMesh Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.CreateMesh
 // (Public, BlueprintCallable, BlueprintEvent)
 

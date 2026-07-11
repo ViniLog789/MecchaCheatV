@@ -139,26 +139,6 @@ void ABP_SnowBall_Top_C::GetParryState(bool* State)
 }
 
 
-// Function BP_SnowBall_Top.BP_SnowBall_Top_C.ExecuteUbergraph_BP_SnowBall_Top
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SnowBall_Top_C::ExecuteUbergraph_BP_SnowBall_Top(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SnowBall_Top_C", "ExecuteUbergraph_BP_SnowBall_Top");
-
-	Params::BP_SnowBall_Top_C_ExecuteUbergraph_BP_SnowBall_Top Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_SnowBall_Top.BP_SnowBall_Top_C.DamageToPlayerController
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

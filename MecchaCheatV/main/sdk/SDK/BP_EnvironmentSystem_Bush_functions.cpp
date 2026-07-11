@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_EnvironmentSystem_Bush_classes.hpp"
-#include "BP_EnvironmentSystem_Bush_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,26 +26,6 @@ void ABP_EnvironmentSystem_Bush_C::ReceiveDestroyed()
 		Func = Class->GetFunction("BP_EnvironmentSystem_Bush_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnvironmentSystem_Bush.BP_EnvironmentSystem_Bush_C.ExecuteUbergraph_BP_EnvironmentSystem_Bush
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnvironmentSystem_Bush_C::ExecuteUbergraph_BP_EnvironmentSystem_Bush(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Bush_C", "ExecuteUbergraph_BP_EnvironmentSystem_Bush");
-
-	Params::BP_EnvironmentSystem_Bush_C_ExecuteUbergraph_BP_EnvironmentSystem_Bush Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

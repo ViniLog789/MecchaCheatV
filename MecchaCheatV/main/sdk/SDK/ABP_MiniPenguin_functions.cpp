@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function ABP_MiniPenguin.ABP_MiniPenguin_C.ExecuteUbergraph_ABP_MiniPenguin
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UABP_MiniPenguin_C::ExecuteUbergraph_ABP_MiniPenguin(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MiniPenguin_C", "ExecuteUbergraph_ABP_MiniPenguin");
-
-	Params::ABP_MiniPenguin_C_ExecuteUbergraph_ABP_MiniPenguin Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ABP_MiniPenguin.ABP_MiniPenguin_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniPenguin_AnimGraphNode_TransitionResult_4E49FAE24595B658CDCDB9AA6E945C84
 // (BlueprintEvent)
 

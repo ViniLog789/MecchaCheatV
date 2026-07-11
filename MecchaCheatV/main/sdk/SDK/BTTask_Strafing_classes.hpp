@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "EN_StrafingDirection_structs.hpp"
 #include "AIModule_classes.hpp"
 
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class UBTTask_Strafing_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	EN_StrafingDirection                          Strafing_Direction;                                // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EN_StrafingDirection>                  Select_Strafing_Direction;                         // 0x00B8(0x0010)(Edit, BlueprintVisible)
@@ -34,7 +33,6 @@ public:
 	void Select_World_Direction(EN_StrafingDirection Strafing_Direction, class APawn* ControlePawn, struct FVector* World_Direction);
 	void ReceiveTickAI(class AAIController* OwnerController_ReceiveTickAI, class APawn* ControlledPawn_ReceiveTickAI, float DeltaSeconds_ReceiveTickAI);
 	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
-	void ExecuteUbergraph_BTTask_Strafing(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -70,24 +70,4 @@ void UWBP_CurrentWeight_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_CurrentWeight.WBP_CurrentWeight_C.ExecuteUbergraph_WBP_CurrentWeight
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CurrentWeight_C::ExecuteUbergraph_WBP_CurrentWeight(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CurrentWeight_C", "ExecuteUbergraph_WBP_CurrentWeight");
-
-	Params::WBP_CurrentWeight_C_ExecuteUbergraph_WBP_CurrentWeight Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

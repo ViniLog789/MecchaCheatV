@@ -16,6 +16,46 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.UpdateInputDeviceAll
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EInputType                              InputType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::UpdateInputDeviceAll(EInputType InputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "UpdateInputDeviceAll");
+
+	Params::WBP_PaintMode_Cursor_C_UpdateInputDeviceAll Parms{};
+
+	Parms.InputType = InputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.UpdateInputButtonVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EInputType                              Selection                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintMode_Cursor_C::UpdateInputButtonVisibility(EInputType Selection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "UpdateInputButtonVisibility");
+
+	Params::WBP_PaintMode_Cursor_C_UpdateInputButtonVisibility Parms{};
+
+	Parms.Selection = Selection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -196,26 +236,6 @@ void UWBP_PaintMode_Cursor_C::GetViewportPosition(struct FVector2D* Positon)
 
 	if (Positon != nullptr)
 		*Positon = std::move(Parms.Positon);
-}
-
-
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.ExecuteUbergraph_WBP_PaintMode_Cursor
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PaintMode_Cursor_C::ExecuteUbergraph_WBP_PaintMode_Cursor(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "ExecuteUbergraph_WBP_PaintMode_Cursor");
-
-	Params::WBP_PaintMode_Cursor_C_ExecuteUbergraph_WBP_PaintMode_Cursor Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

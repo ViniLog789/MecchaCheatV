@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_GeneratedNavLinksProxy.BP_GeneratedNavLinksProxy_C.ExecuteUbergraph_BP_GeneratedNavLinksProxy
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_GeneratedNavLinksProxy_C::ExecuteUbergraph_BP_GeneratedNavLinksProxy(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GeneratedNavLinksProxy_C", "ExecuteUbergraph_BP_GeneratedNavLinksProxy");
-
-	Params::BP_GeneratedNavLinksProxy_C_ExecuteUbergraph_BP_GeneratedNavLinksProxy Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_GeneratedNavLinksProxy.BP_GeneratedNavLinksProxy_C.ReceiveSmartLinkReached
 // (Event, Public, BlueprintEvent)
 // Parameters:

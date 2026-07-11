@@ -111,17 +111,6 @@ public:
 };
 DUMPER7_ASSERTS_LS_FallDownPlayerSub1_DirectorBP_C_HeadPosition_DynamicBinding;
 
-// Function LS_FallDownPlayerSub1.LS_FallDownPlayerSub1_DirectorBP_C.ExecuteUbergraph_LS_FallDownPlayerSub1_DirectorBP
-// 0x0010 (0x0010 - 0x0000)
-struct LS_FallDownPlayerSub1_DirectorBP_C_ExecuteUbergraph_LS_FallDownPlayerSub1_DirectorBP final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        K2Node_CustomEvent_BP_FirstPersonCharacter;        // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LS_FallDownPlayerSub1_DirectorBP_C_ExecuteUbergraph_LS_FallDownPlayerSub1_DirectorBP;
-
 // Function LS_FallDownPlayerSub1.LS_FallDownPlayerSub1_DirectorBP_C.CameraActor_DynamicBinding
 // 0x0038 (0x0038 - 0x0000)
 struct LS_FallDownPlayerSub1_DirectorBP_C_CameraActor_DynamicBinding final

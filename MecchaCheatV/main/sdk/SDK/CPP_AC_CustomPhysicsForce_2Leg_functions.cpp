@@ -98,24 +98,4 @@ void UCPP_AC_CustomPhysicsForce_2Leg_C::ReceiveBeginPlay()
 }
 
 
-// Function CPP_AC_CustomPhysicsForce_2Leg.CPP_AC_CustomPhysicsForce_2Leg_C.ExecuteUbergraph_CPP_AC_CustomPhysicsForce_2Leg
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCPP_AC_CustomPhysicsForce_2Leg_C::ExecuteUbergraph_CPP_AC_CustomPhysicsForce_2Leg(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CPP_AC_CustomPhysicsForce_2Leg_C", "ExecuteUbergraph_CPP_AC_CustomPhysicsForce_2Leg");
-
-	Params::CPP_AC_CustomPhysicsForce_2Leg_C_ExecuteUbergraph_CPP_AC_CustomPhysicsForce_2Leg Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

@@ -211,26 +211,6 @@ void ABP_Glue_CustomPhysics_V2_C::GetParryState(bool* State)
 }
 
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ExecuteUbergraph_BP_Glue_CustomPhysics_V2
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Glue_CustomPhysics_V2_C::ExecuteUbergraph_BP_Glue_CustomPhysics_V2(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ExecuteUbergraph_BP_Glue_CustomPhysics_V2");
-
-	Params::BP_Glue_CustomPhysics_V2_C_ExecuteUbergraph_BP_Glue_CustomPhysics_V2 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DebugVisualize__UpdateFunc
 // (BlueprintEvent)
 

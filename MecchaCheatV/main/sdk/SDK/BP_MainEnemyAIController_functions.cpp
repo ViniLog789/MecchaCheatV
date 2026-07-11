@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BP_MainEnemyAIController_classes.hpp"
-#include "BP_MainEnemyAIController_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -41,26 +40,6 @@ void ABP_MainEnemyAIController_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_MainEnemyAIController_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MainEnemyAIController.BP_MainEnemyAIController_C.ExecuteUbergraph_BP_MainEnemyAIController
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MainEnemyAIController_C::ExecuteUbergraph_BP_MainEnemyAIController(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MainEnemyAIController_C", "ExecuteUbergraph_BP_MainEnemyAIController");
-
-	Params::BP_MainEnemyAIController_C_ExecuteUbergraph_BP_MainEnemyAIController Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

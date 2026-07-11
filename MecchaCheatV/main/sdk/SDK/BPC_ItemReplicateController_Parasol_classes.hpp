@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BPC_ItemReplicateController_Base_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UBPC_ItemReplicateController_Parasol_C final : public UBPC_ItemReplicateController_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BPC_ItemReplicateController_Parasol_C; // 0x00E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    AddForceTarget;                                    // 0x00E8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        MinDropSpeed;                                      // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsedItem;                                        // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -35,7 +35,6 @@ public:
 	void OpenParasol_Server_();
 	void OpenParasol_Replicate_();
 	void ForceClose();
-	void ExecuteUbergraph_BPC_ItemReplicateController_Parasol(int32 EntryPoint);
 	void AddForceNoDrop();
 
 public:

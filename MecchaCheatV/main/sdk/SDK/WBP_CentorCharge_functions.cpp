@@ -70,24 +70,4 @@ void UWBP_CentorCharge_C::PlayChargeSound()
 }
 
 
-// Function WBP_CentorCharge.WBP_CentorCharge_C.ExecuteUbergraph_WBP_CentorCharge
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CentorCharge_C::ExecuteUbergraph_WBP_CentorCharge(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CentorCharge_C", "ExecuteUbergraph_WBP_CentorCharge");
-
-	Params::WBP_CentorCharge_C_ExecuteUbergraph_WBP_CentorCharge Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

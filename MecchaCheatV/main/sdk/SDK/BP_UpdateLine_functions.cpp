@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_UpdateLine.BP_UpdateLine_C.ExecuteUbergraph_BP_UpdateLine
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_UpdateLine_C::ExecuteUbergraph_BP_UpdateLine(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UpdateLine_C", "ExecuteUbergraph_BP_UpdateLine");
-
-	Params::BP_UpdateLine_C_ExecuteUbergraph_BP_UpdateLine Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_UpdateLine.BP_UpdateLine_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 

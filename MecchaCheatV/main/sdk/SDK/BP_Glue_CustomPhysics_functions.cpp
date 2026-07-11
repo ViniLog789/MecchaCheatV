@@ -133,26 +133,6 @@ void ABP_Glue_CustomPhysics_C::LINK_Overlap(class UPrimitiveComponent* Primitive
 }
 
 
-// Function BP_Glue_CustomPhysics.BP_Glue_CustomPhysics_C.ExecuteUbergraph_BP_Glue_CustomPhysics
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Glue_CustomPhysics_C::ExecuteUbergraph_BP_Glue_CustomPhysics(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_C", "ExecuteUbergraph_BP_Glue_CustomPhysics");
-
-	Params::BP_Glue_CustomPhysics_C_ExecuteUbergraph_BP_Glue_CustomPhysics Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Glue_CustomPhysics.BP_Glue_CustomPhysics_C.DebugVisualize__UpdateFunc
 // (BlueprintEvent)
 

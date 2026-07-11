@@ -114,6 +114,31 @@ bool UColorPicker::SampleViewportAtCursorAndApply()
 }
 
 
+// Function BlueprintColorPicker.ColorPicker.SetGBufferSamplingCanvasSlotPosition
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 CanvasSlotPosition                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UColorPicker::SetGBufferSamplingCanvasSlotPosition(const struct FVector2D& CanvasSlotPosition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ColorPicker", "SetGBufferSamplingCanvasSlotPosition");
+
+	Params::ColorPicker_SetGBufferSamplingCanvasSlotPosition Parms{};
+
+	Parms.CanvasSlotPosition = std::move(CanvasSlotPosition);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function BlueprintColorPicker.ColorPicker.SetMetallicRoughnessSampleMaterial
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -205,18 +230,24 @@ void UColorPicker::SetPickerColorMaterialAndSampleMaterial(const struct FLinearC
 
 // Function BlueprintColorPicker.ColorPicker.StartGBufferSampling
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bMalualCanvasPoistion                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UColorPicker::StartGBufferSampling()
+void UColorPicker::StartGBufferSampling(bool bMalualCanvasPoistion)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ColorPicker", "StartGBufferSampling");
 
+	Params::ColorPicker_StartGBufferSampling Parms{};
+
+	Parms.bMalualCanvasPoistion = bMalualCanvasPoistion;
+
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

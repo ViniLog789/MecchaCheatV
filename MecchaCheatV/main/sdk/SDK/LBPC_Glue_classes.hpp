@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +21,7 @@ SDK_NAMESPACE_START
 class ULBPC_Glue_C final : public USceneComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_240[0x8];                                      // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    OwnerPrimitive;                                    // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPhysicsConstraintComponent*            ConstraintComp;                                    // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FVector>                        AttachPositions;                                   // 0x0258(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -31,7 +30,6 @@ public:
 	void UniqueFillter(TArray<struct FHitResult>& HitRezults, TArray<struct FHitResult>* Out);
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_LBPC_Glue(int32 EntryPoint);
 	void DoConnect(const struct FHitResult& HitRezult1, const struct FHitResult& HitRezult2);
 	void ConstraintSetup(class UPhysicsConstraintComponent* ConstraintComponent);
 	void Connect();

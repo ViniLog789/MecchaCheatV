@@ -58,24 +58,4 @@ void UWBP_LocalRecord_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
-// Function WBP_LocalRecord.WBP_LocalRecord_C.ExecuteUbergraph_WBP_LocalRecord
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_LocalRecord_C::ExecuteUbergraph_WBP_LocalRecord(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LocalRecord_C", "ExecuteUbergraph_WBP_LocalRecord");
-
-	Params::WBP_LocalRecord_C_ExecuteUbergraph_WBP_LocalRecord Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

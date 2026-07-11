@@ -10,9 +10,7 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "PenguinHotel_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -23,7 +21,7 @@ SDK_NAMESPACE_START
 class UWBP_Item_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_KeyImage_C*                        WBP_KeyImage;                                      // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             StackCount;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 ItemImage;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -39,7 +37,6 @@ public:
 	void SetData(const struct FCPP_GameItemData& ItemData, int32 StackCount);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void PlaySlotAnim(bool IsSelect);
-	void ExecuteUbergraph_WBP_Item(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

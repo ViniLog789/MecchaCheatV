@@ -76,26 +76,6 @@ void UWBP_ReportContent_C::OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const str
 }
 
 
-// Function WBP_ReportContent.WBP_ReportContent_C.ExecuteUbergraph_WBP_ReportContent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ReportContent_C::ExecuteUbergraph_WBP_ReportContent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportContent_C", "ExecuteUbergraph_WBP_ReportContent");
-
-	Params::WBP_ReportContent_C_ExecuteUbergraph_WBP_ReportContent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ReportContent.WBP_ReportContent_C.BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
 // (BlueprintEvent)
 

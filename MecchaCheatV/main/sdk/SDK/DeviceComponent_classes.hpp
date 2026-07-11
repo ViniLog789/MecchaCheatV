@@ -10,10 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
-#include "EN_DeviceOnlineMode_structs.hpp"
 #include "ST_EventValue_structs.hpp"
+#include "EN_DeviceOnlineMode_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -23,7 +22,7 @@ SDK_NAMESPACE_START
 class UDeviceComponent_C final : public UActorComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(const struct FST_EventValue& SignalValue)> signal;                 // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<class AActor*>                         SignalActors;                                      // 0x00D0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TMulticastInlineDelegate<void(const struct FST_EventValue& SignalValue)> OnSignal;               // 0x00E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -34,7 +33,6 @@ public:
 	void CallSignal_Client_(const struct FST_EventValue& SignalValue);
 	void CallSignal_Replicate_(const struct FST_EventValue& SignalValue);
 	void CallSignal_Server_(const struct FST_EventValue& SignalValue);
-	void ExecuteUbergraph_DeviceComponent(int32 EntryPoint);
 	void OnSignal_Event(const struct FST_EventValue& SignalValue);
 	void ReceiveBeginPlay();
 	void Recive_Bind(class UDeviceComponent_C* DeviceComp);

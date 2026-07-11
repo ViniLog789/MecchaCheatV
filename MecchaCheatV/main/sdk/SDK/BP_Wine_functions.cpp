@@ -337,26 +337,6 @@ void ABP_Wine_C::IsChangeImage(bool* IsInteract_IsChangeImage, class FText* Over
 }
 
 
-// Function BP_Wine.BP_Wine_C.ExecuteUbergraph_BP_Wine
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::ExecuteUbergraph_BP_Wine(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "ExecuteUbergraph_BP_Wine");
-
-	Params::BP_Wine_C_ExecuteUbergraph_BP_Wine Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Wine.BP_Wine_C.DefaultMontagePlay
 // (BlueprintCallable, BlueprintEvent)
 

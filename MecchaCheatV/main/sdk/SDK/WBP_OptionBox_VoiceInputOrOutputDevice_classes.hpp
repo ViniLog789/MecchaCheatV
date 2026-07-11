@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "WBP_NavOptionBox_classes.hpp"
 
 
@@ -21,7 +20,6 @@ SDK_NAMESPACE_START
 class UWBP_OptionBox_VoiceInputOrOutputDevice_C final : public UWBP_NavOptionBox_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WBP_OptionBox_VoiceInputOrOutputDevice_C; // 0x09D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          IsInputDevice;                                     // 0x09E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9E1[0x7];                                      // 0x09E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         DeviceIDs;                                         // 0x09E8(0x0010)(Edit, BlueprintVisible)
@@ -30,7 +28,6 @@ public:
 	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnValueChangeEvent();
-	void ExecuteUbergraph_WBP_OptionBox_VoiceInputOrOutputDevice(int32 EntryPoint);
 	void Construct();
 
 public:

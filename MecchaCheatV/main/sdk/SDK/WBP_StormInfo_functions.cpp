@@ -82,24 +82,4 @@ void UWBP_StormInfo_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
 }
 
 
-// Function WBP_StormInfo.WBP_StormInfo_C.ExecuteUbergraph_WBP_StormInfo
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_StormInfo_C::ExecuteUbergraph_WBP_StormInfo(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StormInfo_C", "ExecuteUbergraph_WBP_StormInfo");
-
-	Params::WBP_StormInfo_C_ExecuteUbergraph_WBP_StormInfo Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END
