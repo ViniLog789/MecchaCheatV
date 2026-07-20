@@ -19,7 +19,7 @@ SDK_NAMESPACE_START
 // Function BPF_cLeon.BPF_cLeon_C.GetTelepportPointName
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class FName*                            HunterTelporterName                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName*                            SurvivorTelporterName                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -78,8 +78,8 @@ class FText UBPF_cLeon_C::GetCompressText_cLeon(const class FText& TargetText, i
 // Function BPF_cLeon.BPF_cLeon_C.EqualMapDatas
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FST_cLeonMapData&          A                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const struct FST_cLeonMapData&          B                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          A                                                      (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          B                                                      (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -51,7 +51,7 @@ public:
 
 public:
 	void UpdateScreenEvent();
-	void Show_config(class UWidget* BeforeWidget);
+	void Show_Config(class UWidget* BeforeWidget);
 	void ScreenTypeSettingsUpdate();
 	void InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	class UUINavComponent* GetInitialFocusComponent();

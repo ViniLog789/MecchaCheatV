@@ -14,12 +14,13 @@
 SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_cLeonMapData.ST_cLeonMapData
-// 0x0018 (0x0018 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct FST_cLeonMapData final
 {
 public:
 	class FString                                 ModId_3_54B048284F395DDB26B2F4BADE1293C9;          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class UBP_cLeonMapData_C*                     Mapdata_5_ABE3AF044AA133AA3D62F990279A8BBB;        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           Tag_9_320E60C74BC994F6ADA130B59AF657FD;            // 0x0018(0x0010)(Edit, BlueprintVisible)
 };
 DUMPER7_ASSERTS_FST_cLeonMapData;
 

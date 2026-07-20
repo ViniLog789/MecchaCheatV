@@ -828,6 +828,16 @@ public:
 };
 DUMPER7_ASSERTS_CustomProgramFunctionLibrary_HashStringMD5;
 
+// Function PenguinHotel.CustomProgramFunctionLibrary.SanitizeInappropriateWords
+// 0x0020 (0x0020 - 0x0000)
+struct CustomProgramFunctionLibrary_SanitizeInappropriateWords final
+{
+public:
+	class FString                                 Source;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomProgramFunctionLibrary_SanitizeInappropriateWords;
+
 // Function PenguinHotel.DynamicCapsuleHeightControlInterface.SetDynamicCapsuleCrouching
 // 0x0001 (0x0001 - 0x0000)
 struct DynamicCapsuleHeightControlInterface_SetDynamicCapsuleCrouching final
@@ -1215,27 +1225,27 @@ public:
 DUMPER7_ASSERTS_PenTabletBlueprintLibrary_IsPenTabletConnected;
 
 // Function PenguinHotel.RuntimePaintCopyComponent.ApplyPaintSnapshot
-// 0x0128 (0x0128 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct RuntimePaintCopyComponent_ApplyPaintSnapshot final
 {
 public:
-	struct FRuntimePaintCopySnapshot              Snapshot;                                          // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bApplyPoseToPoseableMesh;                          // 0x0120(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0121(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRuntimePaintCopySnapshot              Snapshot;                                          // 0x0000(0x0168)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bApplyPoseToPoseableMesh;                          // 0x0168(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0169(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16A[0x6];                                      // 0x016A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintCopyComponent_ApplyPaintSnapshot;
 
 // Function PenguinHotel.RuntimePaintCopyComponent.ApplyPaintSnapshotToMesh
-// 0x0130 (0x0130 - 0x0000)
+// 0x0178 (0x0178 - 0x0000)
 struct RuntimePaintCopyComponent_ApplyPaintSnapshotToMesh final
 {
 public:
 	class UMeshComponent*                         TargetMeshComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRuntimePaintCopySnapshot              Snapshot;                                          // 0x0008(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bApplyPoseToPoseableMesh;                          // 0x0128(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0129(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12A[0x6];                                      // 0x012A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRuntimePaintCopySnapshot              Snapshot;                                          // 0x0008(0x0168)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bApplyPoseToPoseableMesh;                          // 0x0170(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0171(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_172[0x6];                                      // 0x0172(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintCopyComponent_ApplyPaintSnapshotToMesh;
 
@@ -1254,16 +1264,16 @@ public:
 DUMPER7_ASSERTS_RuntimePaintCopyComponent_BeginSharedMaterialCopy;
 
 // Function PenguinHotel.RuntimePaintCopyComponent.CapturePaintSnapshotFromSource
-// 0x0138 (0x0138 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct RuntimePaintCopyComponent_CapturePaintSnapshotFromSource final
 {
 public:
 	class URuntimePaintableComponent*             SourcePaintComponent;                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMeshComponent*                         SourceMeshComponent;                               // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRuntimePaintCopySnapshot              OutSnapshot;                                       // 0x0010(0x0120)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          bIncludePose;                                      // 0x0130(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0131(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRuntimePaintCopySnapshot              OutSnapshot;                                       // 0x0010(0x0168)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          bIncludePose;                                      // 0x0178(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0179(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17A[0x6];                                      // 0x017A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintCopyComponent_CapturePaintSnapshotFromSource;
 
@@ -1389,12 +1399,12 @@ public:
 DUMPER7_ASSERTS_RuntimePaintRelayComponent_RelayTextureSyncToServer;
 
 // Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayCompactPaint
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct RuntimePaintRelayComponent_ServerRelayCompactPaint final
 {
 public:
 	class URuntimePaintableComponent*             PaintComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCompactPaintStroke                    Stroke;                                            // 0x0008(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCompactPaintStroke                    Stroke;                                            // 0x0008(0x0040)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RuntimePaintRelayComponent_ServerRelayCompactPaint;
 
@@ -2058,11 +2068,11 @@ public:
 DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastApplyDecoyCopyFromLocalView;
 
 // Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaint
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct RuntimePaintableComponent_MulticastCompactPaint final
 {
 public:
-	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0040)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastCompactPaint;
 
@@ -2085,11 +2095,11 @@ public:
 DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastCompactPaintBatchToOthers;
 
 // Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaintToOthers
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct RuntimePaintableComponent_MulticastCompactPaintToOthers final
 {
 public:
-	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0040)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastCompactPaintToOthers;
 
@@ -2211,10 +2221,10 @@ public:
 	class UMeshComponent*                         MeshComponent;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ScreenPosition;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APlayerController*                      PlayerController;                                  // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaintChannelData                      ChannelData;                                       // 0x0020(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EPaintChannel                                 Channel;                                           // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCachedTriangles;                               // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPaintChannelData                      ChannelData;                                       // 0x0020(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EPaintChannel                                 Channel;                                           // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCachedTriangles;                               // 0x0045(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScreenSpacePaintResult                ReturnValue;                                       // 0x0048(0x0048)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_PaintAtScreenPosition;
@@ -2225,22 +2235,23 @@ struct RuntimePaintableComponent_PaintAtUV final
 {
 public:
 	struct FVector2D                              Uv;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaintChannelData                      ChannelData;                                       // 0x0010(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EPaintChannel                                 Channel;                                           // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPaintChannelData                      ChannelData;                                       // 0x0010(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EPaintChannel                                 Channel;                                           // 0x0034(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_PaintAtUV;
 
 // Function PenguinHotel.RuntimePaintableComponent.PaintAtUVWithBrush
-// 0x0060 (0x0060 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct RuntimePaintableComponent_PaintAtUVWithBrush final
 {
 public:
 	struct FVector2D                              Uv;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaintChannelData                      ChannelData;                                       // 0x0010(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRuntimeBrushSettings                  BrushSettings;                                     // 0x0030(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EPaintChannel                                 Channel;                                           // 0x0058(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPaintChannelData                      ChannelData;                                       // 0x0010(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRuntimeBrushSettings                  BrushSettings;                                     // 0x0038(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EPaintChannel                                 Channel;                                           // 0x0060(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_PaintAtUVWithBrush;
 
@@ -2251,10 +2262,10 @@ struct RuntimePaintableComponent_PaintAtWorldPosition final
 public:
 	class UMeshComponent*                         MeshComponent;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                WorldLocation;                                     // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaintChannelData                      ChannelData;                                       // 0x0020(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EPaintChannel                                 Channel;                                           // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0041(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPaintChannelData                      ChannelData;                                       // 0x0020(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EPaintChannel                                 Channel;                                           // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0045(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_PaintAtWorldPosition;
 
@@ -2265,9 +2276,9 @@ struct RuntimePaintableComponent_PaintStrokeUV final
 public:
 	struct FVector2D                              UvStart;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              UvEnd;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaintChannelData                      ChannelData;                                       // 0x0020(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EPaintChannel                                 Channel;                                           // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPaintChannelData                      ChannelData;                                       // 0x0020(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EPaintChannel                                 Channel;                                           // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_PaintStrokeUV;
 
@@ -2277,9 +2288,9 @@ struct RuntimePaintableComponent_RequestPaintOnServer final
 {
 public:
 	struct FVector2D                              Uv;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaintChannelData                      ChannelData;                                       // 0x0010(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EPaintChannel                                 Channel;                                           // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPaintChannelData                      ChannelData;                                       // 0x0010(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EPaintChannel                                 Channel;                                           // 0x0034(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_RequestPaintOnServer;
 
@@ -2307,18 +2318,18 @@ struct RuntimePaintableComponent_SendPaintToServer final
 {
 public:
 	struct FVector2D                              Uv;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaintChannelData                      ChannelData;                                       // 0x0010(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EPaintChannel                                 Channel;                                           // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPaintChannelData                      ChannelData;                                       // 0x0010(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EPaintChannel                                 Channel;                                           // 0x0034(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_SendPaintToServer;
 
 // Function PenguinHotel.RuntimePaintableComponent.ServerCompactPaint
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct RuntimePaintableComponent_ServerCompactPaint final
 {
 public:
-	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0040)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_ServerCompactPaint;
 

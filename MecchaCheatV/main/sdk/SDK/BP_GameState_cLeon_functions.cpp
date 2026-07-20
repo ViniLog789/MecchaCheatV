@@ -16,147 +16,734 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.Winner
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AddToViewDataForce
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonPlayerState_Online_C*WinnerPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<int32>&                    Points                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_GameState_cLeon_C::Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState)
+void ABP_GameState_cLeon_C::AddToViewDataForce(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "Winner");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "AddToViewDataForce");
 
-	Params::BP_GameState_cLeon_C_Winner Parms{};
+	Params::BP_GameState_cLeon_C_AddToViewDataForce Parms{};
 
-	Parms.WinnerPlayerState = WinnerPlayerState;
+	Parms.SourcePlayerState = SourcePlayerState;
+	Parms.PlayerStates = std::move(PlayerStates);
+	Parms.Points = std::move(Points);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateSend
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AddToViewDatas
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<int32>&                    Points                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_GameState_cLeon_C::UpdateSend()
+void ABP_GameState_cLeon_C::AddToViewDatas(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateSend");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "AddToViewDatas");
+
+	Params::BP_GameState_cLeon_C_AddToViewDatas Parms{};
+
+	Parms.SourcePlayerState = SourcePlayerState;
+	Parms.PlayerStates = std::move(PlayerStates);
+	Parms.Points = std::move(Points);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AllHunterStencilOff
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::AllHunterStencilOff()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "AllHunterStencilOff");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateRanking
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.BodyTypeSelectWidget
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
-void ABP_GameState_cLeon_C::UpdateRanking()
+void ABP_GameState_cLeon_C::BodyTypeSelectWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateRanking");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "BodyTypeSelectWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateBulletWidget
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ClearWatchRanking
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::ClearWatchRanking()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ClearWatchRanking");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.Complete
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::Complete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "Complete");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.CountUIReset
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::CountUIReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "CountUIReset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.EEYAN_Activate
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::EEYAN_Activate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "EEYAN_Activate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.FocusChicken
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::FocusChicken()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "FocusChicken");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ForceModeWidgetReset
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::ForceModeWidgetReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ForceModeWidgetReset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ForceStart
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::ForceStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ForceStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GameEndSurvivorStop
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::GameEndSurvivorStop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "GameEndSurvivorStop");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetAllMapDatas
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FST_cLeonMapData>*        ReturnMapArray                                         (Parm, OutParm)
+
+void ABP_GameState_cLeon_C::GetAllMapDatas(TArray<struct FST_cLeonMapData>* ReturnMapArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "GetAllMapDatas");
+
+	Params::BP_GameState_cLeon_C_GetAllMapDatas Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ReturnMapArray != nullptr)
+		*ReturnMapArray = std::move(Parms.ReturnMapArray);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetDoubleRanking
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TMap<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*, int32>*ReturnMap                                              (Parm, OutParm)
+
+void ABP_GameState_cLeon_C::GetDoubleRanking(TMap<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*, int32>* ReturnMap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "GetDoubleRanking");
+
+	Params::BP_GameState_cLeon_C_GetDoubleRanking Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ReturnMap != nullptr)
+		*ReturnMap = std::move(Parms.ReturnMap);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetRandomMapData
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FST_cLeonMapData*                ReturnMapArray                                         (Parm, OutParm, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::GetRandomMapData(struct FST_cLeonMapData* ReturnMapArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "GetRandomMapData");
+
+	Params::BP_GameState_cLeon_C_GetRandomMapData Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ReturnMapArray != nullptr)
+		*ReturnMapArray = std::move(Parms.ReturnMapArray);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.InitPlayerState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::InitPlayerState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "InitPlayerState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.IsLivePlayerState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class ABP_FirstPersonPlayerState_Online_cLeon_C*&ItemToFind                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsLive                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::IsLivePlayerState(const class ABP_FirstPersonPlayerState_Online_cLeon_C*& ItemToFind, bool* IsLive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "IsLivePlayerState");
+
+	Params::BP_GameState_cLeon_C_IsLivePlayerState Parms{};
+
+	Parms.ItemToFind = ItemToFind;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsLive != nullptr)
+		*IsLive = Parms.IsLive;
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.KillLog
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*HunterPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*SurvivorPlayerState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::KillLog(class ABP_FirstPersonPlayerState_Online_cLeon_C* HunterPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SurvivorPlayerState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "KillLog");
+
+	Params::BP_GameState_cLeon_C_KillLog Parms{};
+
+	Parms.HunterPlayerState = HunterPlayerState;
+	Parms.SurvivorPlayerState = SurvivorPlayerState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.MaxPlayerChange
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   max_0                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_cLeon_C::UpdateBulletWidget(int32 Current)
+void ABP_GameState_cLeon_C::MaxPlayerChange(int32 Current, int32 max_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateBulletWidget");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "MaxPlayerChange");
 
-	Params::BP_GameState_cLeon_C_UpdateBulletWidget Parms{};
+	Params::BP_GameState_cLeon_C_MaxPlayerChange Parms{};
 
 	Parms.Current = Current;
+	Parms.max_0 = max_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRankning(Client)
-// (Net, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<int32>&                    NewPoints                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// int32                                   UpdateTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SyncRankning(Client)");
-
-	Params::BP_GameState_cLeon_C_SyncRankning_Client_ Parms{};
-
-	Parms.PlayerStates = std::move(PlayerStates);
-	Parms.NewPoints = std::move(NewPoints);
-	Parms.UpdateTime = UpdateTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRanking(Server)
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ModDownloadWait
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_GameState_cLeon_C::SyncRanking_Server_()
+void ABP_GameState_cLeon_C::ModDownloadWait()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SyncRanking(Server)");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ModDownloadWait");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Local)
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PopupIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ModStateUpdate
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_GameState_cLeon_C::ShowPopup_Local_(int32 PopupIndex)
+void ABP_GameState_cLeon_C::ModStateUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPopup(Local)");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ModStateUpdate");
 
-	Params::BP_GameState_cLeon_C_ShowPopup_Local_ Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.PopupIndex = PopupIndex;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_ChickenSearchTarget
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_ChickenSearchTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_ChickenSearchTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_CurrentPreviewMapData
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_CurrentPreviewMapData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_CurrentPreviewMapData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_Filter_Horror
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_Filter_Horror()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_Filter_Horror");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_Filter_Monochrome
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_Filter_Monochrome()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_Filter_Monochrome");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_Filter_Mosaic
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_Filter_Mosaic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_Filter_Mosaic");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_GameMode
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_GameMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_GameMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_HuntersPlayerState
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_HuntersPlayerState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_HuntersPlayerState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_JoinPlayerState
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_JoinPlayerState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_JoinPlayerState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_LiveSurvivors_PlayerState
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_LiveSurvivors_PlayerState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_LiveSurvivors_PlayerState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_MainGamePhase
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_MainGamePhase()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_MainGamePhase");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_NeedModId
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_NeedModId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_NeedModId");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_TimerNumber
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_TimerNumber()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_TimerNumber");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_TimerTextIndex
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_TimerTextIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_TimerTextIndex");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.PlayTeleportMovie
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::PlayTeleportMovie()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "PlayTeleportMovie");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.RankingWidgetUpdate
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsShow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::RankingWidgetUpdate(bool IsShow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "RankingWidgetUpdate");
+
+	Params::BP_GameState_cLeon_C_RankingWidgetUpdate Parms{};
+
+	Parms.IsShow = IsShow;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Client)
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PopupIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_GameState_cLeon_C::ShowPopup_Client_(int32 PopupIndex)
+void ABP_GameState_cLeon_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPopup(Client)");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ReceiveBeginPlay");
 
-	Params::BP_GameState_cLeon_C_ShowPopup_Client_ Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.PopupIndex = PopupIndex;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetChickenAlpha
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::SetChickenAlpha()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetChickenAlpha");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetCopyTarget
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::SetCopyTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetCopyTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetMaxTimerTime
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   MaxTimerTime_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::SetMaxTimerTime(int32 MaxTimerTime_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetMaxTimerTime");
+
+	Params::BP_GameState_cLeon_C_SetMaxTimerTime Parms{};
+
+	Parms.MaxTimerTime_0 = MaxTimerTime_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetSyncRankingLoopState
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::SetSyncRankingLoopState(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetSyncRankingLoopState");
+
+	Params::BP_GameState_cLeon_C_SetSyncRankingLoopState Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetTimerNumber
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   TimerNumber_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::SetTimerNumber(int32 TimerNumber_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetTimerNumber");
+
+	Params::BP_GameState_cLeon_C_SetTimerNumber Parms{};
+
+	Parms.TimerNumber_0 = TimerNumber_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetTimerTextIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   TimerTextIndex_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::SetTimerTextIndex(int32 TimerTextIndex_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetTimerTextIndex");
+
+	Params::BP_GameState_cLeon_C_SetTimerTextIndex Parms{};
+
+	Parms.TimerTextIndex_0 = TimerTextIndex_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowAllSurvivors
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::ShowAllSurvivors()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowAllSurvivors");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowDeathWidget
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerState*                     TargetPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_cLeon_C::ShowDeathWidget(class APlayerState* TargetPlayerState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowDeathWidget");
+
+	Params::BP_GameState_cLeon_C_ShowDeathWidget Parms{};
+
+	Parms.TargetPlayerState = TargetPlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -186,713 +773,147 @@ void ABP_GameState_cLeon_C::ShowPointAddPopup(class ABP_FirstPersonPlayerState_O
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowDeathWidget
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Client)
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerState*                     TargetPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   PopupIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_cLeon_C::ShowDeathWidget(class APlayerState* TargetPlayerState)
+void ABP_GameState_cLeon_C::ShowPopup_Client_(int32 PopupIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowDeathWidget");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPopup(Client)");
 
-	Params::BP_GameState_cLeon_C_ShowDeathWidget Parms{};
+	Params::BP_GameState_cLeon_C_ShowPopup_Client_ Parms{};
 
-	Parms.TargetPlayerState = TargetPlayerState;
+	Parms.PopupIndex = PopupIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowAllSurvivors
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::ShowAllSurvivors()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowAllSurvivors");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetTimerTextIndex
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   TimerTextIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::SetTimerTextIndex(int32 TimerTextIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetTimerTextIndex");
-
-	Params::BP_GameState_cLeon_C_SetTimerTextIndex Parms{};
-
-	Parms.TimerTextIndex = TimerTextIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetTimerNumber
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   TimerNumber                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::SetTimerNumber(int32 TimerNumber)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetTimerNumber");
-
-	Params::BP_GameState_cLeon_C_SetTimerNumber Parms{};
-
-	Parms.TimerNumber = TimerNumber;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetSyncRankingLoopState
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ShowPopup(Local)
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PopupIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_cLeon_C::SetSyncRankingLoopState(bool State)
+void ABP_GameState_cLeon_C::ShowPopup_Local_(int32 PopupIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetSyncRankingLoopState");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "ShowPopup(Local)");
 
-	Params::BP_GameState_cLeon_C_SetSyncRankingLoopState Parms{};
+	Params::BP_GameState_cLeon_C_ShowPopup_Local_ Parms{};
 
-	Parms.State = State;
+	Parms.PopupIndex = PopupIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetMaxTimerTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRanking(Server)
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::SyncRanking_Server_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SyncRanking(Server)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SyncRankning(Client)
+// (Net, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   MaxTimerTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<int32>&                    NewPoints                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   UpdateTime_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_cLeon_C::SetMaxTimerTime(int32 MaxTimerTime)
+void ABP_GameState_cLeon_C::SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetMaxTimerTime");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SyncRankning(Client)");
 
-	Params::BP_GameState_cLeon_C_SetMaxTimerTime Parms{};
+	Params::BP_GameState_cLeon_C_SyncRankning_Client_ Parms{};
 
-	Parms.MaxTimerTime = MaxTimerTime;
+	Parms.PlayerStates = std::move(PlayerStates);
+	Parms.NewPoints = std::move(NewPoints);
+	Parms.UpdateTime_0 = UpdateTime_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetCopyTarget
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::SetCopyTarget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetCopyTarget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetChickenAlpha
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::SetChickenAlpha()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetChickenAlpha");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.RankingWidgetUpdate
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsShow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::RankingWidgetUpdate(bool IsShow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "RankingWidgetUpdate");
-
-	Params::BP_GameState_cLeon_C_RankingWidgetUpdate Parms{};
-
-	Parms.IsShow = IsShow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.PlayTeleportMovie
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::PlayTeleportMovie()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "PlayTeleportMovie");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_TimerTextIndex
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_TimerTextIndex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_TimerTextIndex");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_TimerNumber
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_TimerNumber()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_TimerNumber");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_NeedModId
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_NeedModId()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_NeedModId");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_MainGamePhase
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_MainGamePhase()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_MainGamePhase");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_LiveSurvivors_PlayerState
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_LiveSurvivors_PlayerState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_LiveSurvivors_PlayerState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_JoinPlayerState
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_JoinPlayerState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_JoinPlayerState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_HuntersPlayerState
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_HuntersPlayerState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_HuntersPlayerState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_GameMode
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_GameMode()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_GameMode");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_Filter_Mosaic
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_Filter_Mosaic()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_Filter_Mosaic");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_Filter_Monochrome
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_Filter_Monochrome()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_Filter_Monochrome");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_Filter_Horror
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_Filter_Horror()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_Filter_Horror");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_CurrentPreviewMapData
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_CurrentPreviewMapData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_CurrentPreviewMapData");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_ChickenSearchTarget
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::OnRep_ChickenSearchTarget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_ChickenSearchTarget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ModStateUpdate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::ModStateUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ModStateUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ModDownloadWait
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::ModDownloadWait()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ModDownloadWait");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.MaxPlayerChange
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateBulletWidget
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   max_0                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_cLeon_C::MaxPlayerChange(int32 Current, int32 max_0)
+void ABP_GameState_cLeon_C::UpdateBulletWidget(int32 Current)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "MaxPlayerChange");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateBulletWidget");
 
-	Params::BP_GameState_cLeon_C_MaxPlayerChange Parms{};
+	Params::BP_GameState_cLeon_C_UpdateBulletWidget Parms{};
 
 	Parms.Current = Current;
-	Parms.max_0 = max_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.KillLog
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonPlayerState_Online_cLeon_C*HunterPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonPlayerState_Online_cLeon_C*SurvivorPlayerState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::KillLog(class ABP_FirstPersonPlayerState_Online_cLeon_C* HunterPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SurvivorPlayerState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "KillLog");
-
-	Params::BP_GameState_cLeon_C_KillLog Parms{};
-
-	Parms.HunterPlayerState = HunterPlayerState;
-	Parms.SurvivorPlayerState = SurvivorPlayerState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.IsLivePlayerState
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class ABP_FirstPersonPlayerState_Online_cLeon_C*&ItemToFind                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// bool*                                   IsLive                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_cLeon_C::IsLivePlayerState(const class ABP_FirstPersonPlayerState_Online_cLeon_C*& ItemToFind, bool* IsLive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "IsLivePlayerState");
-
-	Params::BP_GameState_cLeon_C_IsLivePlayerState Parms{};
-
-	Parms.ItemToFind = ItemToFind;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsLive != nullptr)
-		*IsLive = Parms.IsLive;
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.InitPlayerState
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::InitPlayerState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "InitPlayerState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetDoubleRanking
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TMap<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*, int32>*ReturnMap                                              (Parm, OutParm)
-
-void ABP_GameState_cLeon_C::GetDoubleRanking(TMap<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*, int32>* ReturnMap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "GetDoubleRanking");
-
-	Params::BP_GameState_cLeon_C_GetDoubleRanking Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ReturnMap != nullptr)
-		*ReturnMap = std::move(Parms.ReturnMap);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetAllMapDatas
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<struct FST_cLeonMapData>*        ReturnMapArray                                         (Parm, OutParm)
-
-void ABP_GameState_cLeon_C::GetAllMapDatas(TArray<struct FST_cLeonMapData>* ReturnMapArray)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "GetAllMapDatas");
-
-	Params::BP_GameState_cLeon_C_GetAllMapDatas Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ReturnMapArray != nullptr)
-		*ReturnMapArray = std::move(Parms.ReturnMapArray);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GameEndSurvivorStop
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::GameEndSurvivorStop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "GameEndSurvivorStop");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ForceStart
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateRanking
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_GameState_cLeon_C::ForceStart()
+void ABP_GameState_cLeon_C::UpdateRanking()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ForceStart");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateRanking");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ForceModeWidgetReset
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::ForceModeWidgetReset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ForceModeWidgetReset");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.FocusChicken
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::FocusChicken()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "FocusChicken");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.EEYAN_Activate
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::EEYAN_Activate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "EEYAN_Activate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.CountUIReset
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::CountUIReset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "CountUIReset");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.Complete
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateSend
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_GameState_cLeon_C::Complete()
+void ABP_GameState_cLeon_C::UpdateSend()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "Complete");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateSend");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.ClearWatchRanking
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::ClearWatchRanking()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "ClearWatchRanking");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.BodyTypeSelectWidget
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.Winner
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::BodyTypeSelectWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "BodyTypeSelectWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AllHunterStencilOff
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_cLeon_C::AllHunterStencilOff()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "AllHunterStencilOff");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AddToViewDatas
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<int32>&                    Points                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class ABP_FirstPersonPlayerState_Online_C*WinnerPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_cLeon_C::AddToViewDatas(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points)
+void ABP_GameState_cLeon_C::Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "AddToViewDatas");
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "Winner");
 
-	Params::BP_GameState_cLeon_C_AddToViewDatas Parms{};
+	Params::BP_GameState_cLeon_C_Winner Parms{};
 
-	Parms.SourcePlayerState = SourcePlayerState;
-	Parms.PlayerStates = std::move(PlayerStates);
-	Parms.Points = std::move(Points);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AddToViewDataForce
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<int32>&                    Points                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_GameState_cLeon_C::AddToViewDataForce(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_cLeon_C", "AddToViewDataForce");
-
-	Params::BP_GameState_cLeon_C_AddToViewDataForce Parms{};
-
-	Parms.SourcePlayerState = SourcePlayerState;
-	Parms.PlayerStates = std::move(PlayerStates);
-	Parms.Points = std::move(Points);
+	Parms.WinnerPlayerState = WinnerPlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

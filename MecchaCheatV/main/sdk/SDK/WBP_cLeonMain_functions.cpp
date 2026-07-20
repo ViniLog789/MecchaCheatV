@@ -315,7 +315,7 @@ void UWBP_cLeonMain_C::NamePlateVisibilityChange(bool Visibility)
 // Function WBP_cLeonMain.WBP_cLeonMain_C.MapDataUpdate
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
 void UWBP_cLeonMain_C::MapDataUpdate(const struct FST_cLeonMapData& Mapdata)
 {

@@ -12045,9 +12045,9 @@ public:
 };
 DUMPER7_ASSERTS_UMaterialExpressionDistance;
 
-// Class Engine.spotlight
+// Class Engine.SpotLight
 // 0x0008 (0x02C0 - 0x02B8)
-class Aspotlight : public ALight
+class ASpotLight : public ALight
 {
 public:
 	class USpotLightComponent*                    SpotLightComponent;                                // 0x02B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
@@ -12059,22 +12059,22 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("spotlight")
+		STATIC_CLASS_IMPL("SpotLight")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"spotlight")
+		STATIC_NAME_IMPL(L"SpotLight")
 	}
-	static class Aspotlight* GetDefaultObj()
+	static class ASpotLight* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<Aspotlight>();
+		return GetDefaultObjImpl<ASpotLight>();
 	}
 };
-DUMPER7_ASSERTS_Aspotlight;
+DUMPER7_ASSERTS_ASpotLight;
 
 // Class Engine.GeneratedMeshAreaLight
 // 0x0000 (0x02C0 - 0x02C0)
-class AGeneratedMeshAreaLight final : public Aspotlight
+class AGeneratedMeshAreaLight final : public ASpotLight
 {
 public:
 	static class UClass* StaticClass()
@@ -36371,7 +36371,7 @@ public:
 	static float PerlinNoise1D(const float Value);
 	static bool PointsAreCoplanar(const TArray<struct FVector>& Points, float Tolerance);
 	static struct FVector ProjectPointOnToPlane(const struct FVector& Point, const struct FVector& PlaneBase, const struct FVector& PlaneNormal);
-	static struct FVector ProjectVectorOntoPlane(const struct FVector& V, const struct FVector& PlaneNormal);
+	static struct FVector ProjectVectorOnToPlane(const struct FVector& V, const struct FVector& PlaneNormal);
 	static struct FVector ProjectVectorOnToVector(const struct FVector& V, const struct FVector& Target);
 	static float Quat_AngularDistance(const struct FQuat& A, const struct FQuat& B);
 	static void Quat_EnforceShortestArcWith(struct FQuat& A, const struct FQuat& B);

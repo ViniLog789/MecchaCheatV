@@ -201,8 +201,9 @@ void UWBP_PaintMode_Cursor_C::OnGBufferColorPicked(const struct FLinearColor& Pi
 // Parameters:
 // float                                   NewMetallic                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   NewRoughness                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   NewEmissive                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PaintMode_Cursor_C::MetallicOrRoughnessChanged(float NewMetallic, float NewRoughness)
+void UWBP_PaintMode_Cursor_C::MetallicOrRoughnessChanged(float NewMetallic, float NewRoughness, float NewEmissive)
 {
 	static class UFunction* Func = nullptr;
 
@@ -213,6 +214,7 @@ void UWBP_PaintMode_Cursor_C::MetallicOrRoughnessChanged(float NewMetallic, floa
 
 	Parms.NewMetallic = NewMetallic;
 	Parms.NewRoughness = NewRoughness;
+	Parms.NewEmissive = NewEmissive;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -343,8 +345,9 @@ void UWBP_PaintMode_Cursor_C::BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_
 // const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Metallic                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Roughness                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Emissive                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PaintMode_Cursor_C::BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature(const struct FLinearColor& Color, double Metallic, double Roughness)
+void UWBP_PaintMode_Cursor_C::BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature(const struct FLinearColor& Color, double Metallic, double Roughness, double Emissive)
 {
 	static class UFunction* Func = nullptr;
 
@@ -356,6 +359,7 @@ void UWBP_PaintMode_Cursor_C::BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPa
 	Parms.Color = std::move(Color);
 	Parms.Metallic = Metallic;
 	Parms.Roughness = Roughness;
+	Parms.Emissive = Emissive;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

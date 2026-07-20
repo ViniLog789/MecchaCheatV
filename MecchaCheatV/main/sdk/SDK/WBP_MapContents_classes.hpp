@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "ST_cLeonMapData_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UINavigation_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MapContents.WBP_MapContents_C
-// 0x0070 (0x0980 - 0x0910)
+// 0x0080 (0x0990 - 0x0910)
 class UWBP_MapContents_C final : public UUINavComponent
 {
 public:
@@ -29,11 +29,12 @@ public:
 	TMulticastInlineDelegate<void(bool Rezult)>   RequestFinish;                                     // 0x0938(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          ShowSelectButton;                                  // 0x0948(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_949[0x7];                                      // 0x0949(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_cLeonMapData                       cLeonMapData;                                      // 0x0950(0x0018)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FSlateColor                            TextColor;                                         // 0x0968(0x0014)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FST_cLeonMapData                       cLeonMapData;                                      // 0x0950(0x0028)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FSlateColor                            TextColor;                                         // 0x0978(0x0014)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
 	void SelectUpdate(bool State);
+	void ReUpdate();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnSuccess_F47348424771535C48E222B9B9CA8A4E(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
 	void OnFailure_F47348424771535C48E222B9B9CA8A4E(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);

@@ -6,12 +6,12 @@
 * https://github.com/Encryqed/Dumper-7
 */
 
-// Package: WBP_LockOn_0
+// Package: WBP_LockOn
 
 #include "Basic.hpp"
 
-#include "WBP_LockOn_0_classes.hpp"
-#include "WBP_LockOn_0_parameters.hpp"
+#include "WBP_LockOn_classes.hpp"
+#include "WBP_LockOn_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 // Parameters:
 // bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void WBP_LockOn_0::UWBP_LockOn_C::ValueVisible(bool State)
+void WBP_LockOn::UWBP_LockOn_C::ValueVisible(bool State)
 {
 	static class UFunction* Func = nullptr;
 
@@ -41,7 +41,7 @@ void WBP_LockOn_0::UWBP_LockOn_C::ValueVisible(bool State)
 // Parameters:
 // const class FString&                    StringValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void WBP_LockOn_0::UWBP_LockOn_C::SetValue(const class FString& StringValue)
+void WBP_LockOn::UWBP_LockOn_C::SetValue(const class FString& StringValue)
 {
 	static class UFunction* Func = nullptr;
 
@@ -61,7 +61,7 @@ void WBP_LockOn_0::UWBP_LockOn_C::SetValue(const class FString& StringValue)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void WBP_LockOn_0::UWBP_LockOn_C::SetMultiplyValue(double Value)
+void WBP_LockOn::UWBP_LockOn_C::SetMultiplyValue(double Value)
 {
 	static class UFunction* Func = nullptr;
 
@@ -81,7 +81,7 @@ void WBP_LockOn_0::UWBP_LockOn_C::SetMultiplyValue(double Value)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void WBP_LockOn_0::UWBP_LockOn_C::SetColor(double Value)
+void WBP_LockOn::UWBP_LockOn_C::SetColor(double Value)
 {
 	static class UFunction* Func = nullptr;
 

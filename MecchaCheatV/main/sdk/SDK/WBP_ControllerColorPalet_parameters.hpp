@@ -17,13 +17,14 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_ControllerColorPalet.WBP_ControllerColorPalet_C.UpdateDefaultValue
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WBP_ControllerColorPalet_C_UpdateDefaultValue final
 {
 public:
 	struct FLinearColor                           DefaultColor;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Metallic;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Roughness;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Emissive;                                          // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ControllerColorPalet_C_UpdateDefaultValue;
 
@@ -94,6 +95,16 @@ public:
 	bool                                          UpdateCall;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ControllerColorPalet_C_BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_H_K2Node_ComponentBoundEvent_0_UpdateValue__DelegateSignature;
+
+// Function WBP_ControllerColorPalet.WBP_ControllerColorPalet_C.BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_E_K2Node_ComponentBoundEvent_5_UpdateValue__DelegateSignature
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_ControllerColorPalet_C_BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_E_K2Node_ComponentBoundEvent_5_UpdateValue__DelegateSignature final
+{
+public:
+	struct FLinearColor                           ChangedColor;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UpdateCall;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ControllerColorPalet_C_BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_E_K2Node_ComponentBoundEvent_5_UpdateValue__DelegateSignature;
 
 // Function WBP_ControllerColorPalet.WBP_ControllerColorPalet_C.AddSliderValue
 // 0x0008 (0x0008 - 0x0000)

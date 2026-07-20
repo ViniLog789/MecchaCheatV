@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RandomWeatherVariation_State_structs.hpp"
 #include "UDW_WeatherState_Structure_structs.hpp"
+#include "RandomWeatherVariation_State_structs.hpp"
 
 
 SDK_NAMESPACE_START

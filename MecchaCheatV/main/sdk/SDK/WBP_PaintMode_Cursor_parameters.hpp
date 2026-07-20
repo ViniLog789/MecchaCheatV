@@ -133,12 +133,13 @@ public:
 DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_OnGBufferColorPicked;
 
 // Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.MetallicOrRoughnessChanged
-// 0x0008 (0x0008 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct WBP_PaintMode_Cursor_C_MetallicOrRoughnessChanged final
 {
 public:
 	float                                         NewMetallic;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         NewRoughness;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NewEmissive;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_MetallicOrRoughnessChanged;
 
@@ -177,13 +178,14 @@ public:
 DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_ColorChanged;
 
 // Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WBP_PaintMode_Cursor_C_BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature final
 {
 public:
 	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Metallic;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Roughness;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Emissive;                                          // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature;
 

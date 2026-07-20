@@ -170,9 +170,10 @@ void UColorPicker::SetMetallicRoughnessSampleMaterial(class UMaterialInterface* 
 // const struct FLinearColor&              NewColor                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   NewMetallic                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   NewRoughness                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewEmissive                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bBroadcastChanges                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UColorPicker::SetPickerColorAndMaterialValues(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness, bool bBroadcastChanges)
+void UColorPicker::SetPickerColorAndMaterialValues(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness, float NewEmissive, bool bBroadcastChanges)
 {
 	static class UFunction* Func = nullptr;
 
@@ -184,6 +185,7 @@ void UColorPicker::SetPickerColorAndMaterialValues(const struct FLinearColor& Ne
 	Parms.NewColor = std::move(NewColor);
 	Parms.NewMetallic = NewMetallic;
 	Parms.NewRoughness = NewRoughness;
+	Parms.NewEmissive = NewEmissive;
 	Parms.bBroadcastChanges = bBroadcastChanges;
 
 	auto Flgs = Func->FunctionFlags;
@@ -201,10 +203,11 @@ void UColorPicker::SetPickerColorAndMaterialValues(const struct FLinearColor& Ne
 // const struct FLinearColor&              NewColor                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   NewMetallic                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   NewRoughness                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewEmissive                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMaterialInterface*               NewSampleMaterial                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bBroadcastChanges                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UColorPicker::SetPickerColorMaterialAndSampleMaterial(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness, class UMaterialInterface* NewSampleMaterial, bool bBroadcastChanges)
+void UColorPicker::SetPickerColorMaterialAndSampleMaterial(const struct FLinearColor& NewColor, float NewMetallic, float NewRoughness, float NewEmissive, class UMaterialInterface* NewSampleMaterial, bool bBroadcastChanges)
 {
 	static class UFunction* Func = nullptr;
 
@@ -216,6 +219,7 @@ void UColorPicker::SetPickerColorMaterialAndSampleMaterial(const struct FLinearC
 	Parms.NewColor = std::move(NewColor);
 	Parms.NewMetallic = NewMetallic;
 	Parms.NewRoughness = NewRoughness;
+	Parms.NewEmissive = NewEmissive;
 	Parms.NewSampleMaterial = NewSampleMaterial;
 	Parms.bBroadcastChanges = bBroadcastChanges;
 

@@ -376,13 +376,61 @@ void UWBP_cLeonGameSettings_C::OnClickWithClass(class UWBP_BodySelect_C* SelfObj
 }
 
 
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStateChange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    RandomState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::RandomStateChange(class UWBP_MapContentsWithRandom_C* SelfWidget, bool RandomState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "RandomStateChange");
+
+	Params::WBP_cLeonGameSettings_C_RandomStateChange Parms{};
+
+	Parms.SelfWidget = SelfWidget;
+	Parms.RandomState = RandomState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStructUpdate
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FST_cLeonMapData&          StructRef                                              (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    RandomState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FST_cLeonMapData*                ReturnItem                                             (Parm, OutParm, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::RandomStructUpdate(const struct FST_cLeonMapData& StructRef, bool RandomState, struct FST_cLeonMapData* ReturnItem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "RandomStructUpdate");
+
+	Params::WBP_cLeonGameSettings_C_RandomStructUpdate Parms{};
+
+	Parms.StructRef = std::move(StructRef);
+	Parms.RandomState = RandomState;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ReturnItem != nullptr)
+		*ReturnItem = std::move(Parms.ReturnItem);
+}
+
+
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMap
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWBP_MapContents_C*               SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)
+void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)
 {
 	static class UFunction* Func = nullptr;
 
@@ -401,10 +449,10 @@ void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContents_C* SelfWidget, c
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMapMain
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWBP_MapContents_C*               SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_cLeonGameSettings_C::SelectMapMain(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)
+void UWBP_cLeonGameSettings_C::SelectMapMain(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)
 {
 	static class UFunction* Func = nullptr;
 

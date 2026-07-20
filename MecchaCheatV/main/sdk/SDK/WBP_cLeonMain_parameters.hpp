@@ -141,11 +141,11 @@ public:
 DUMPER7_ASSERTS_WBP_cLeonMain_C_NamePlateVisibilityChange;
 
 // Function WBP_cLeonMain.WBP_cLeonMain_C.MapDataUpdate
-// 0x0018 (0x0018 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WBP_cLeonMain_C_MapDataUpdate final
 {
 public:
-	struct FST_cLeonMapData                       Mapdata;                                           // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FST_cLeonMapData                       Mapdata;                                           // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_cLeonMain_C_MapDataUpdate;
 

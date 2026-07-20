@@ -36,6 +36,20 @@ void UWBP_MapContents_C::SelectUpdate(bool State)
 }
 
 
+// Function WBP_MapContents.WBP_MapContents_C.ReUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_MapContents_C::ReUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MapContents_C", "ReUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_MapContents.WBP_MapContents_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:

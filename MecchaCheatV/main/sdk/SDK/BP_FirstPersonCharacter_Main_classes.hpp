@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PhysicsCore_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "Mover_structs.hpp"
 #include "MoverExamples_classes.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 #include "EN_DamageType_structs.hpp"
 #include "DeathType_structs.hpp"
@@ -55,7 +55,7 @@ public:
 	class UBPC_LockOnSystem_C*                    BPC_LockOnSystem;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   LeftItemPositon_3;                                 // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   LeftItemPositon_2;                                 // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    spotlight;                                         // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight;                                         // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   LeftItemPositon_1;                                 // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   RightItemPositon;                                  // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 FirstPersonMesh;                                   // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)

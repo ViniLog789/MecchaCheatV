@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ControllerGradientSlider.WBP_ControllerGradientSlider_C
-// 0x00A0 (0x03E0 - 0x0340)
+// 0x00B0 (0x03F0 - 0x0340)
 class UWBP_ControllerGradientSlider_C final : public UUserWidget
 {
 public:
@@ -40,6 +40,8 @@ public:
 	class UMaterialInstanceDynamic*               DynamicMaterial;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CurrentBarColor;                                   // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShowSidePalet;                                     // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D9[0x7];                                      // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x03E0(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void UpdateSliderBar(double NormalizeValue);

@@ -2563,6 +2563,34 @@ class FString UCustomProgramFunctionLibrary::HashStringMD5(const class FString& 
 }
 
 
+// Function PenguinHotel.CustomProgramFunctionLibrary.SanitizeInappropriateWords
+// (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class FString&                    Source                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UCustomProgramFunctionLibrary::SanitizeInappropriateWords(const class FString& Source)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomProgramFunctionLibrary", "SanitizeInappropriateWords");
+
+	Params::CustomProgramFunctionLibrary_SanitizeInappropriateWords Parms{};
+
+	Parms.Source = std::move(Source);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PenguinHotel.DynamicCapsuleHeightControlInterface.ClearDynamicCapsuleDesiredHalfHeight
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 

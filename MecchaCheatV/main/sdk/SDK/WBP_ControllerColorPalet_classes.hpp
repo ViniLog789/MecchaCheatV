@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ControllerColorPalet.WBP_ControllerColorPalet_C
-// 0x0078 (0x03B8 - 0x0340)
+// 0x0080 (0x03C0 - 0x0340)
 class UWBP_ControllerColorPalet_C final : public UUserWidget
 {
 public:
@@ -27,16 +27,17 @@ public:
 	class UWBP_ControllerGradientSlider_C*        WBP_ControllerGradientSlider_R;                    // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_ControllerGradientSlider_C*        WBP_ControllerGradientSlider_M;                    // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_ControllerGradientSlider_C*        WBP_ControllerGradientSlider_H;                    // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                RezultColor;                                       // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UWBP_ControllerGradientSlider_C*> Sliders;                                          // 0x0378(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	int32                                         CurrentIndex;                                      // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C[0x4];                                      // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_ControllerGradientSlider_C*        SelectSlider;                                      // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           DefaultColor;                                      // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(const struct FLinearColor& Color, double Metallic, double Roughness)> UpdateParamaterValues; // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWBP_ControllerGradientSlider_C*        WBP_ControllerGradientSlider_E;                    // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                RezultColor;                                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWBP_ControllerGradientSlider_C*> Sliders;                                          // 0x0380(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         CurrentIndex;                                      // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_ControllerGradientSlider_C*        SelectSlider;                                      // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           DefaultColor;                                      // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const struct FLinearColor& Color, double Metallic, double Roughness, double Emissive)> UpdateParamaterValues; // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateDefaultValue(const struct FLinearColor& DefaultColor, double Metallic, double Roughness);
+	void UpdateDefaultValue(const struct FLinearColor& DefaultColor, double Metallic, double Roughness, double Emissive);
 	void SelectSlide(int32 AddValue);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_V_K2Node_ComponentBoundEvent_2_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);
@@ -44,6 +45,7 @@ public:
 	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_R_K2Node_ComponentBoundEvent_4_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);
 	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_M_K2Node_ComponentBoundEvent_3_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);
 	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_H_K2Node_ComponentBoundEvent_0_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);
+	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_E_K2Node_ComponentBoundEvent_5_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);
 	void AddSliderValue(double Value);
 
 public:

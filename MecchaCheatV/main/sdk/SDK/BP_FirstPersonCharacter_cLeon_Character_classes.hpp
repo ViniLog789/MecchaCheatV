@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "BP_FirstPersonCharacter_Main_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BP_FirstPersonCharacter_Main_classes.hpp"
 #include "UINavigation_structs.hpp"
 #include "Mover_structs.hpp"
 
@@ -90,6 +90,7 @@ public:
 	uint8                                         Pad_CC1[0x7];                                      // 0x0CC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUINavPCComponent*                      UINavComp;                                         // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         BrushEmissive;                                     // 0x0CD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void MEChange();

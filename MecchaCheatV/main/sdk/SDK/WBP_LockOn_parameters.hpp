@@ -6,7 +6,7 @@
 * https://github.com/Encryqed/Dumper-7
 */
 
-// Package: WBP_LockOn_0
+// Package: WBP_LockOn
 
 #include "Basic.hpp"
 
