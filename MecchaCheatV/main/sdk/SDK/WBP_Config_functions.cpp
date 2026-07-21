@@ -30,19 +30,19 @@ void UWBP_Config_C::UpdateScreenEvent()
 }
 
 
-// Function WBP_Config.WBP_Config_C.Show Config
+// Function WBP_Config.WBP_Config_C.Show config
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget*                          BeforeWidget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Config_C::Show_Config(class UWidget* BeforeWidget)
+void UWBP_Config_C::Show_config(class UWidget* BeforeWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "Show Config");
+		Func = Class->GetFunction("WBP_Config_C", "Show config");
 
-	Params::WBP_Config_C_Show_Config Parms{};
+	Params::WBP_Config_C_Show_config Parms{};
 
 	Parms.BeforeWidget = BeforeWidget;
 

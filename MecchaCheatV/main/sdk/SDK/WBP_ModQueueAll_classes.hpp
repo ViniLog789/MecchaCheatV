@@ -36,20 +36,20 @@ public:
 	TMulticastInlineDelegate<void()>              Complete;                                          // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateWait();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void OnSuccess_F78BBAD84186A9297376358454884094(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void OnReturn();
-	void OnFailure_F78BBAD84186A9297376358454884094(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void OnDestroySessionComplete_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
-	void OnCallFailed_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
-	void GetWaitPlayers(class FString* ReturnNames, bool* CompleteState);
-	void DownloadCheck();
-	void Construct();
-	void CheckInstalledItems(bool* ReturnInstalled, bool* ReturnDownloading);
-	void BndEvt__WBP_ModQueueAll_UINavButtonBase_209_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_ModQueueAll_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
 	void BndEvt__WBP_ModQueueAll_LongTapButton_OnAnimation_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
+	void BndEvt__WBP_ModQueueAll_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
+	void BndEvt__WBP_ModQueueAll_UINavButtonBase_209_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void CheckInstalledItems(bool* ReturnInstalled, bool* ReturnDownloading);
+	void Construct();
+	void DownloadCheck();
+	void GetWaitPlayers(class FString* ReturnNames, bool* CompleteState);
+	void OnCallFailed_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
+	void OnDestroySessionComplete_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
+	void OnFailure_F78BBAD84186A9297376358454884094(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
+	void OnReturn();
+	void OnSuccess_F78BBAD84186A9297376358454884094(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
+	void PreConstruct(bool IsDesignTime);
+	void UpdateWait();
 
 public:
 	static class UClass* StaticClass()

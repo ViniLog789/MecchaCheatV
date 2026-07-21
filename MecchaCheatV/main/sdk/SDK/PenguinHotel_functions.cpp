@@ -2563,6 +2563,34 @@ class FString UCustomProgramFunctionLibrary::HashStringMD5(const class FString& 
 }
 
 
+// Function PenguinHotel.CustomProgramFunctionLibrary.IsInGame
+// (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomProgramFunctionLibrary::IsInGame(const class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomProgramFunctionLibrary", "IsInGame");
+
+	Params::CustomProgramFunctionLibrary_IsInGame Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PenguinHotel.CustomProgramFunctionLibrary.SanitizeInappropriateWords
 // (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
 // Parameters:

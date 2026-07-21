@@ -87,7 +87,7 @@ void ABP_RandomObject_RandomScale_C::ReceiveBeginPlay()
 
 
 // Function BP_RandomObject_RandomScale.BP_RandomObject_RandomScale_C.SetIndex
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool*                                   Error                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

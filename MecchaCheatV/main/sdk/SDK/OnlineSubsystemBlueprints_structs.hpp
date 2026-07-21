@@ -1151,7 +1151,7 @@ struct FSessionSearchParamBP final
 {
 public:
 	struct FVariantDataBP                         Data;                                              // 0x0000(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EOnlineComparisonOp_                          OP;                                                // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOnlineComparisonOp_                          Op;                                                // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ID;                                                // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

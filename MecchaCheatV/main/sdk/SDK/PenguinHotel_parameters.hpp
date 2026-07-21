@@ -828,6 +828,17 @@ public:
 };
 DUMPER7_ASSERTS_CustomProgramFunctionLibrary_HashStringMD5;
 
+// Function PenguinHotel.CustomProgramFunctionLibrary.IsInGame
+// 0x0010 (0x0010 - 0x0000)
+struct CustomProgramFunctionLibrary_IsInGame final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_CustomProgramFunctionLibrary_IsInGame;
+
 // Function PenguinHotel.CustomProgramFunctionLibrary.SanitizeInappropriateWords
 // 0x0020 (0x0020 - 0x0000)
 struct CustomProgramFunctionLibrary_SanitizeInappropriateWords final

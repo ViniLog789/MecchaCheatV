@@ -15,15 +15,15 @@
 
 SDK_NAMESPACE_START
 
-// Function UI_config.UI_config_C.Show Config
+// Function UI_config.UI_config_C.Show config
 // (BlueprintCallable, BlueprintEvent)
 
-void UUI_config_C::Show_Config()
+void UUI_config_C::Show_config()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_config_C", "Show Config");
+		Func = Class->GetFunction("UI_config_C", "Show config");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

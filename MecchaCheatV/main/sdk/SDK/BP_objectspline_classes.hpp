@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_objectspline.BP_objectspline_C
-// 0x0048 (0x02F0 - 0x02A8)
+// 0x0050 (0x02F8 - 0x02A8)
 class ABP_objectspline_C final : public AActor
 {
 public:
@@ -28,6 +28,7 @@ public:
 	double                                        mesh_l;                                            // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               meshRotation;                                      // 0x02D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	double                                        mesh_space;                                        // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CollisionProfileName;                              // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

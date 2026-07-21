@@ -36186,7 +36186,7 @@ public:
 	static struct FLinearColor LinearColor_Black();
 	static struct FLinearColor LinearColor_Blue();
 	static struct FLinearColor LinearColor_Desaturated(const struct FLinearColor& InColor, float InDesaturation);
-	static float LinearColor_Distance(const struct FLinearColor& c1, const struct FLinearColor& c2);
+	static float LinearColor_Distance(const struct FLinearColor& C1, const struct FLinearColor& C2);
 	static float LinearColor_GetLuminance(const struct FLinearColor& InColor);
 	static float LinearColor_GetMax(const struct FLinearColor& InColor);
 	static float LinearColor_GetMin(const struct FLinearColor& InColor);
@@ -36371,7 +36371,7 @@ public:
 	static float PerlinNoise1D(const float Value);
 	static bool PointsAreCoplanar(const TArray<struct FVector>& Points, float Tolerance);
 	static struct FVector ProjectPointOnToPlane(const struct FVector& Point, const struct FVector& PlaneBase, const struct FVector& PlaneNormal);
-	static struct FVector ProjectVectorOnToPlane(const struct FVector& V, const struct FVector& PlaneNormal);
+	static struct FVector ProjectVectorOntoPlane(const struct FVector& V, const struct FVector& PlaneNormal);
 	static struct FVector ProjectVectorOnToVector(const struct FVector& V, const struct FVector& Target);
 	static float Quat_AngularDistance(const struct FQuat& A, const struct FQuat& B);
 	static void Quat_EnforceShortestArcWith(struct FQuat& A, const struct FQuat& B);

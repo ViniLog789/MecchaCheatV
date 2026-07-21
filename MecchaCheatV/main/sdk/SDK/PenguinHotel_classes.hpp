@@ -460,6 +460,7 @@ public:
 	static bool GetRootMotionDelta(class USkeletalMeshComponent* SkeletalMeshComp, struct FTransform* OutDeltaTransform);
 	static void GetTrappedText(const class FString& Source, const class FString& ID, class FString* Value, class FString* OutSource);
 	static class FString HashStringMD5(const class FString& Source);
+	static bool IsInGame(const class UObject* WorldContextObject);
 	static class FString SanitizeInappropriateWords(const class FString& Source);
 
 public:

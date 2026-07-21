@@ -37935,8 +37935,8 @@ DUMPER7_ASSERTS_KismetMathLibrary_LinearColor_Desaturated;
 struct KismetMathLibrary_LinearColor_Distance final
 {
 public:
-	struct FLinearColor                           c1;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           c2;                                                // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           C1;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           C2;                                                // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KismetMathLibrary_LinearColor_Distance;
@@ -40052,16 +40052,16 @@ public:
 };
 DUMPER7_ASSERTS_KismetMathLibrary_ProjectPointOnToPlane;
 
-// Function Engine.KismetMathLibrary.ProjectVectorOnToPlane
+// Function Engine.KismetMathLibrary.ProjectVectorOntoPlane
 // 0x0048 (0x0048 - 0x0000)
-struct KismetMathLibrary_ProjectVectorOnToPlane final
+struct KismetMathLibrary_ProjectVectorOntoPlane final
 {
 public:
 	struct FVector                                V;                                                 // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                PlaneNormal;                                       // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_KismetMathLibrary_ProjectVectorOnToPlane;
+DUMPER7_ASSERTS_KismetMathLibrary_ProjectVectorOntoPlane;
 
 // Function Engine.KismetMathLibrary.ProjectVectorOnToVector
 // 0x0048 (0x0048 - 0x0000)

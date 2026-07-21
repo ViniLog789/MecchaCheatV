@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 

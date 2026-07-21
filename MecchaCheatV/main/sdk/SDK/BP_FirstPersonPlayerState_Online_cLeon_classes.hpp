@@ -37,17 +37,17 @@ public:
 	TSet<class ABP_FirstPersonPlayerState_Online_cLeon_C*> RecivedPlayer;                            // 0x0418(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
-	void ReceiveBeginPlay();
-	void OnWriteUserFileProgress64_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
-	void OnWriteUserFileComplete_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
-	void OnWriteUserFileCanceled_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
-	void OnRep_CurrentME_Point();
-	void OnRep_CurrentEEYAN_Point();
-	void OnCallFailed_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
-	void GiveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState);
-	void AddMEPoint_Server_();
-	void AddMEPoint();
 	void AddEEYANPoint_Server_();
+	void AddMEPoint();
+	void AddMEPoint_Server_();
+	void GiveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState);
+	void OnCallFailed_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
+	void OnRep_CurrentEEYAN_Point();
+	void OnRep_CurrentME_Point();
+	void OnWriteUserFileCanceled_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
+	void OnWriteUserFileComplete_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
+	void OnWriteUserFileProgress64_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
+	void ReceiveBeginPlay();
 	void ReciveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* Source);
 	void SetBodyClass(class UClass* CurrentBodyClass_0);
 	void SetModState(bool ModState_0);

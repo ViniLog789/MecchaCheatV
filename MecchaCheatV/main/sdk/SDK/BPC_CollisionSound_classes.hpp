@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "HitMaterial_structs.hpp"
 #include "Engine_classes.hpp"
+#include "HitMaterial_structs.hpp"
 
 
 SDK_NAMESPACE_START

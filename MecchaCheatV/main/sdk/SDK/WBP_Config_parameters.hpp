@@ -16,14 +16,14 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Config.WBP_Config_C.Show Config
+// Function WBP_Config.WBP_Config_C.Show config
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_Config_C_Show_Config final
+struct WBP_Config_C_Show_config final
 {
 public:
 	class UWidget*                                BeforeWidget;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_Config_C_Show_Config;
+DUMPER7_ASSERTS_WBP_Config_C_Show_config;
 
 // Function WBP_Config.WBP_Config_C.InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)
