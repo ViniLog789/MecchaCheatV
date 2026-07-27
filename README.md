@@ -1,4 +1,4 @@
-Current game version: 2.9.0
+Current game version: 3.3.1
 
 **How to install:**
 
