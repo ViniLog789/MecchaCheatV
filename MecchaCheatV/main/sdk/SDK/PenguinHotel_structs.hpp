@@ -100,61 +100,6 @@ enum class EPaintPerformancePreset : uint8
 	EPaintPerformancePreset_MAX              = 4,
 };
 
-// ScriptStruct PenguinHotel.CPP_MergedNumberData
-// 0x0050 (0x0050 - 0x0000)
-struct FCPP_MergedNumberData final
-{
-public:
-	TMap<int32, float>                            Weights;                                           // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCPP_MergedNumberData;
-
-// ScriptStruct PenguinHotel.CPP_MoveTargetNumberData
-// 0x00A0 (0x00A0 - 0x0000)
-struct FCPP_MoveTargetNumberData final
-{
-public:
-	TMap<class UPrimitiveComponent*, int32>       UpperTargets;                                      // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FCPP_MergedNumberData                  MergedNumberData;                                  // 0x0050(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCPP_MoveTargetNumberData;
-
-// ScriptStruct PenguinHotel.CPP_WaveInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FCPP_WaveInfo final
-{
-public:
-	TMap<class UPrimitiveComponent*, float>       TargetPower;                                       // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCPP_WaveInfo;
-
-// ScriptStruct PenguinHotel.BandwidthProbeResult
-// 0x0018 (0x0018 - 0x0000)
-struct FBandwidthProbeResult final
-{
-public:
-	bool                                          bSucceeded;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MeasuredBytesPerSec;                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeasuredPerClientBytesPerSec;                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BaselineAvgLagSeconds;                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PeakAvgLagSeconds;                                 // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumClients;                                        // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBandwidthProbeResult;
-
-// ScriptStruct PenguinHotel.EOSPlayerReportResult
-// 0x0028 (0x0028 - 0x0000)
-struct FEOSPlayerReportResult final
-{
-public:
-	bool                                          bSucceeded;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ResultCode;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ErrorMessage;                                      // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEOSPlayerReportResult;
-
 // ScriptStruct PenguinHotel.BandwidthStats
 // 0x0020 (0x0020 - 0x0000)
 struct FBandwidthStats final
@@ -171,16 +116,32 @@ public:
 };
 DUMPER7_ASSERTS_FBandwidthStats;
 
-// ScriptStruct PenguinHotel.CPP_TouchPointDatas
-// 0x0058 (0x0058 - 0x0000)
-struct FCPP_TouchPointDatas final
+// ScriptStruct PenguinHotel.RuntimePaintReplicationPressure
+// 0x0010 (0x0010 - 0x0000)
+struct FRuntimePaintReplicationPressure final
 {
 public:
-	TMap<struct FIntVector, struct FVector>       GroupedVectors;                                    // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         QueuedBatchCount;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         QueuedStrokeCount;                                 // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxStrokesPerTick;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EstimatedTicksToDrain;                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCPP_TouchPointDatas;
+DUMPER7_ASSERTS_FRuntimePaintReplicationPressure;
+
+// ScriptStruct PenguinHotel.BandwidthProbeResult
+// 0x0018 (0x0018 - 0x0000)
+struct FBandwidthProbeResult final
+{
+public:
+	bool                                          bSucceeded;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MeasuredBytesPerSec;                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MeasuredPerClientBytesPerSec;                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaselineAvgLagSeconds;                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PeakAvgLagSeconds;                                 // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumClients;                                        // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBandwidthProbeResult;
 
 // ScriptStruct PenguinHotel.CPP_GameItemData
 // 0x0050 (0x0058 - 0x0008)
@@ -207,26 +168,6 @@ public:
 	TMap<int32, float>                            Weights;                                           // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCPP_StaticWeightDatas;
-
-// ScriptStruct PenguinHotel.CPP_BakedWeightData
-// 0x0018 (0x0018 - 0x0000)
-struct FCPP_BakedWeightData final
-{
-public:
-	TArray<class UPrimitiveComponent*>            ComputedPrimitives;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-	float                                         BakedWeight;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FCPP_BakedWeightData;
-
-// ScriptStruct PenguinHotel.CPP_BakedBrunchData
-// 0x0050 (0x0050 - 0x0000)
-struct FCPP_BakedBrunchData final
-{
-public:
-	TMap<class UPrimitiveComponent*, struct FCPP_BakedWeightData> BakedWeightDatas;                  // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCPP_BakedBrunchData;
 
 // ScriptStruct PenguinHotel.CPP_ComputedWeight
 // 0x0010 (0x0010 - 0x0000)
@@ -282,6 +223,68 @@ public:
 	TMap<class UPrimitiveComponent*, float>       DynamicMeshAndPower;                               // 0x00D0(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCPP_GlueRefGroup;
+
+// ScriptStruct PenguinHotel.EOSPlayerReportResult
+// 0x0028 (0x0028 - 0x0000)
+struct FEOSPlayerReportResult final
+{
+public:
+	bool                                          bSucceeded;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ResultCode;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ErrorMessage;                                      // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEOSPlayerReportResult;
+
+// ScriptStruct PenguinHotel.CPP_TouchPointDatas
+// 0x0058 (0x0058 - 0x0000)
+struct FCPP_TouchPointDatas final
+{
+public:
+	TMap<struct FIntVector, struct FVector>       GroupedVectors;                                    // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCPP_TouchPointDatas;
+
+// ScriptStruct PenguinHotel.CPP_MergedNumberData
+// 0x0050 (0x0050 - 0x0000)
+struct FCPP_MergedNumberData final
+{
+public:
+	TMap<int32, float>                            Weights;                                           // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCPP_MergedNumberData;
+
+// ScriptStruct PenguinHotel.CPP_MoveTargetNumberData
+// 0x00A0 (0x00A0 - 0x0000)
+struct FCPP_MoveTargetNumberData final
+{
+public:
+	TMap<class UPrimitiveComponent*, int32>       UpperTargets;                                      // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FCPP_MergedNumberData                  MergedNumberData;                                  // 0x0050(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCPP_MoveTargetNumberData;
+
+// ScriptStruct PenguinHotel.CPP_BakedWeightData
+// 0x0018 (0x0018 - 0x0000)
+struct FCPP_BakedWeightData final
+{
+public:
+	TArray<class UPrimitiveComponent*>            ComputedPrimitives;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	float                                         BakedWeight;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCPP_BakedWeightData;
+
+// ScriptStruct PenguinHotel.CPP_BakedBrunchData
+// 0x0050 (0x0050 - 0x0000)
+struct FCPP_BakedBrunchData final
+{
+public:
+	TMap<class UPrimitiveComponent*, struct FCPP_BakedWeightData> BakedWeightDatas;                  // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCPP_BakedBrunchData;
 
 // ScriptStruct PenguinHotel.CPP_CurrentForceWave
 // 0x0018 (0x0018 - 0x0000)
@@ -389,6 +392,15 @@ public:
 	TMap<class UPrimitiveComponent*, struct FCPP_OrderInfo> OrderInfos;                              // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCPP_OrderInfoDatas;
+
+// ScriptStruct PenguinHotel.CPP_WaveInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FCPP_WaveInfo final
+{
+public:
+	TMap<class UPrimitiveComponent*, float>       TargetPower;                                       // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCPP_WaveInfo;
 
 // ScriptStruct PenguinHotel.CPP_BlockForceInfo
 // 0x0050 (0x0050 - 0x0000)
@@ -661,18 +673,6 @@ public:
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FQueuedRuntimePaintOutgoingBatch;
-
-// ScriptStruct PenguinHotel.RuntimePaintReplicationPressure
-// 0x0010 (0x0010 - 0x0000)
-struct FRuntimePaintReplicationPressure final
-{
-public:
-	int32                                         QueuedBatchCount;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         QueuedStrokeCount;                                 // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxStrokesPerTick;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EstimatedTicksToDrain;                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRuntimePaintReplicationPressure;
 
 // ScriptStruct PenguinHotel.BrushQueryResult
 // 0x0070 (0x0070 - 0x0000)

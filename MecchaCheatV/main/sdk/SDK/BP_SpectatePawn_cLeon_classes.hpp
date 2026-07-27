@@ -39,27 +39,31 @@ public:
 	class ABP_GameState_cLeon_C*                  As_BP_Game_State_C_Leon;                           // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SwitchNamePlateVisibility();
-	void SpectateTargetChange(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState, class APawn* Pawn);
-	void Setup();
-	void SetLocation(const struct FVector& NewLocation);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceivePossessed(class AController* NewController_ReceivePossessed);
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
 	void ProvocationRemote(class ABP_FirstPersonCharacter_cLeon_Character_C* Target);
 	void OnRep_SelfController();
 	void OnRep_CanBackBody();
 	void NamePlateUpdate();
 	void MiniReplicateMovement();
-	void InpActEvt_Two_K2Node_InputKeyEvent_4(const struct FKey& Key);
-	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_One_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	void InpActEvt_Two_K2Node_InputKeyEvent_8(const struct FKey& Key);
+	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_6(const struct FKey& Key);
+	void InpActEvt_One_K2Node_InputKeyEvent_4(const struct FKey& Key);
 	void InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_Four_K2Node_InputKeyEvent_3(const struct FKey& Key);
-	void InpActEvt_Five_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_Gamepad_DPad_Up_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	void InpActEvt_Gamepad_DPad_Down_K2Node_InputKeyEvent_3(const struct FKey& Key);
+	void InpActEvt_Four_K2Node_InputKeyEvent_7(const struct FKey& Key);
+	void InpActEvt_Five_K2Node_InputKeyEvent_5(const struct FKey& Key);
 	void FreeCameraChange();
 	void BackBody();
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void ReceivePossessed(class AController* NewController);
+	void ReceiveTick(float DeltaSeconds);
+	void SetLocation(const struct FVector& NewLocation);
+	void Setup();
+	void SpectateTargetChange(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState_0, class APawn* Pawn);
+	void SwitchNamePlateVisibility();
 
 public:
 	static class UClass* StaticClass()

@@ -38,14 +38,14 @@ public:
 	void SyncCoreWeightDatas(const TArray<double>& WeightValue);
 	void SyncCall();
 	void SelectIndex(int32 Index_0);
-	void RespawnItem(int32 ItemIndex, const struct FTransform& CameraTransform, class ABP_FirstPersonCharacter_Main_C* FirstpersonCharacter, bool CanSpawn, class AActor** SpawnedObject);
+	void RespawnItem(int32 ItemIndex, const struct FTransform& CameraTransform, class ABP_FirstPersonCharacter_Main_C* FirstPersonCharacter, bool CanSpawn, class AActor** SpawnedObject);
 	void OpenBackPack();
 	void OnRep_BackPackDatas();
 	void MapUpdate(TArray<double>& WeightValues);
 	void GetSyncWeights(TArray<double>* Weights);
 	void GetSumWeight(double* SumWeight);
 	void GetHeightPosition_FromTransform(const struct FTransform& CameraTransform, float Distance, const struct FVector& BodyLocation, struct FVector* Location);
-	void GetHeightPosition(class ABP_FirstPersonCharacter_Main_C* FirstpersonCharacter, float Distance, struct FVector* Location);
+	void GetHeightPosition(class ABP_FirstPersonCharacter_Main_C* FirstPersonCharacter, float Distance, struct FVector* Location);
 	void CloseBackPack();
 	void ClearAllItems();
 	void ChangeWeightEvent(double Weight);

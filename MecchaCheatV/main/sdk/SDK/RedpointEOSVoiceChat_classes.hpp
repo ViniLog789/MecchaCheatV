@@ -105,11 +105,11 @@ public:
 DUMPER7_ASSERTS_URedpointSoundSubmix;
 
 // Class RedpointEOSVoiceChat.RedpointVoiceChatSoundWave
-// 0x0060 (0x0460 - 0x0400)
+// 0x0048 (0x0448 - 0x0400)
 class URedpointVoiceChatSoundWave final : public USoundWave
 {
 public:
-	uint8                                         Pad_400[0x60];                                     // 0x0400(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_400[0x48];                                     // 0x0400(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

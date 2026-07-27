@@ -16,6 +16,30 @@
 
 SDK_NAMESPACE_START
 
+// Function GeometryFramework.DynamicMeshProcessorBlueprint.ProcessDynamicMesh
+// (RequiredAPI, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bFailed                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicMeshProcessorBlueprint::ProcessDynamicMesh(class UDynamicMesh* TargetMesh, bool* bFailed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicMeshProcessorBlueprint", "ProcessDynamicMesh");
+
+	Params::DynamicMeshProcessorBlueprint_ProcessDynamicMesh Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bFailed != nullptr)
+		*bFailed = Parms.bFailed;
+}
+
+
 // Function GeometryFramework.BaseDynamicMeshComponent.ClearOverrideRenderMaterial
 // (RequiredAPI, Native, Public, BlueprintCallable)
 
@@ -1250,30 +1274,6 @@ EDynamicMeshComponentTangentsMode UDynamicMeshComponent::GetTangentsTypePure() c
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function GeometryFramework.DynamicMeshProcessorBlueprint.ProcessDynamicMesh
-// (RequiredAPI, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool*                                   bFailed                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UDynamicMeshProcessorBlueprint::ProcessDynamicMesh(class UDynamicMesh* TargetMesh, bool* bFailed)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DynamicMeshProcessorBlueprint", "ProcessDynamicMesh");
-
-	Params::DynamicMeshProcessorBlueprint_ProcessDynamicMesh Parms{};
-
-	Parms.TargetMesh = TargetMesh;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bFailed != nullptr)
-		*bFailed = Parms.bFailed;
 }
 
 

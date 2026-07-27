@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "Engine_structs.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -75,385 +75,6 @@ public:
 	class UOnlineAchievementsSubsystemWriteAchievements* ReturnValue;                                // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineAchievementsSubsystemWriteAchievements_WriteAchievements;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.BlockPlayers
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUser_BlockPlayers final
-{
-public:
-	TArray<class FString>                         PlayerNames;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_BlockPlayers;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAudioInputDeviceMuted
-// 0x0001 (0x0001 - 0x0000)
-struct VoiceChatUser_GetAudioInputDeviceMuted final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetAudioInputDeviceMuted;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAudioInputVolume
-// 0x0004 (0x0004 - 0x0000)
-struct VoiceChatUser_GetAudioInputVolume final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetAudioInputVolume;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAudioOutputDeviceMuted
-// 0x0001 (0x0001 - 0x0000)
-struct VoiceChatUser_GetAudioOutputDeviceMuted final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetAudioOutputDeviceMuted;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAudioOutputVolume
-// 0x0004 (0x0004 - 0x0000)
-struct VoiceChatUser_GetAudioOutputVolume final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetAudioOutputVolume;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAvailableInputDeviceInfos
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUser_GetAvailableInputDeviceInfos final
-{
-public:
-	TArray<struct FVoiceChatDeviceInfoBP>         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetAvailableInputDeviceInfos;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAvailableOutputDeviceInfos
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUser_GetAvailableOutputDeviceInfos final
-{
-public:
-	TArray<struct FVoiceChatDeviceInfoBP>         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetAvailableOutputDeviceInfos;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetChannels
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUser_GetChannels final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetChannels;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetChannelType
-// 0x0018 (0x0018 - 0x0000)
-struct VoiceChatUser_GetChannelType final
-{
-public:
-	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVoiceChatChannelType_                        ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetChannelType;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetDefaultInputDeviceInfo
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUser_GetDefaultInputDeviceInfo final
-{
-public:
-	struct FVoiceChatDeviceInfoBP                 ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetDefaultInputDeviceInfo;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetDefaultOutputDeviceInfo
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUser_GetDefaultOutputDeviceInfo final
-{
-public:
-	struct FVoiceChatDeviceInfoBP                 ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetDefaultOutputDeviceInfo;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetInputDeviceInfo
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUser_GetInputDeviceInfo final
-{
-public:
-	struct FVoiceChatDeviceInfoBP                 ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetInputDeviceInfo;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetLoggedInPlayerName
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUser_GetLoggedInPlayerName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetLoggedInPlayerName;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetOutputDeviceInfo
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUser_GetOutputDeviceInfo final
-{
-public:
-	struct FVoiceChatDeviceInfoBP                 ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetOutputDeviceInfo;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetPlayersInChannel
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUser_GetPlayersInChannel final
-{
-public:
-	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetPlayersInChannel;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetPlayerVolume
-// 0x0018 (0x0018 - 0x0000)
-struct VoiceChatUser_GetPlayerVolume final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetPlayerVolume;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetSetting
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUser_GetSetting final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetSetting;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetTransmitChannels
-// 0x0050 (0x0050 - 0x0000)
-struct VoiceChatUser_GetTransmitChannels final
-{
-public:
-	TSet<class FString>                           ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetTransmitChannels;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.GetTransmitMode
-// 0x0001 (0x0001 - 0x0000)
-struct VoiceChatUser_GetTransmitMode final
-{
-public:
-	EVoiceChatTransmitMode_                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_GetTransmitMode;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.InsecureGetJoinToken
-// 0x0038 (0x0038 - 0x0000)
-struct VoiceChatUser_InsecureGetJoinToken final
-{
-public:
-	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVoiceChatChannelType_                        ChannelType;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVoiceChatChannel3dPropertiesBP        Channel3dProperties;                               // 0x0014(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_InsecureGetJoinToken;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.InsecureGetLoginToken
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUser_InsecureGetLoginToken final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_InsecureGetLoginToken;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.IsChannelPlayerMuted
-// 0x0028 (0x0028 - 0x0000)
-struct VoiceChatUser_IsChannelPlayerMuted final
-{
-public:
-	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 playerName;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VoiceChatUser_IsChannelPlayerMuted;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.IsLoggedIn
-// 0x0001 (0x0001 - 0x0000)
-struct VoiceChatUser_IsLoggedIn final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_IsLoggedIn;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.IsLoggingIn
-// 0x0001 (0x0001 - 0x0000)
-struct VoiceChatUser_IsLoggingIn final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_IsLoggingIn;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.IsPlayerMuted
-// 0x0018 (0x0018 - 0x0000)
-struct VoiceChatUser_IsPlayerMuted final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VoiceChatUser_IsPlayerMuted;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.IsPlayerTalking
-// 0x0018 (0x0018 - 0x0000)
-struct VoiceChatUser_IsPlayerTalking final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VoiceChatUser_IsPlayerTalking;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.Set3DPosition
-// 0x0028 (0x0028 - 0x0000)
-struct VoiceChatUser_Set3DPosition final
-{
-public:
-	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SpeakerPosition;                                   // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_Set3DPosition;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetAudioInputDeviceMuted
-// 0x0001 (0x0001 - 0x0000)
-struct VoiceChatUser_SetAudioInputDeviceMuted final
-{
-public:
-	bool                                          bIsMuted;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetAudioInputDeviceMuted;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetAudioInputVolume
-// 0x0004 (0x0004 - 0x0000)
-struct VoiceChatUser_SetAudioInputVolume final
-{
-public:
-	float                                         Volume;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetAudioInputVolume;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetAudioOutputDeviceMuted
-// 0x0001 (0x0001 - 0x0000)
-struct VoiceChatUser_SetAudioOutputDeviceMuted final
-{
-public:
-	bool                                          bIsMuted;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetAudioOutputDeviceMuted;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetAudioOutputVolume
-// 0x0004 (0x0004 - 0x0000)
-struct VoiceChatUser_SetAudioOutputVolume final
-{
-public:
-	float                                         Volume;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetAudioOutputVolume;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetChannelPlayerMuted
-// 0x0028 (0x0028 - 0x0000)
-struct VoiceChatUser_SetChannelPlayerMuted final
-{
-public:
-	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 playerName;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAudioMuted;                                       // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetChannelPlayerMuted;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetInputDeviceId
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUser_SetInputDeviceId final
-{
-public:
-	class FString                                 InputDeviceId;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetInputDeviceId;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetOutputDeviceId
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUser_SetOutputDeviceId final
-{
-public:
-	class FString                                 OutputDeviceId;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetOutputDeviceId;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetPlayerMuted
-// 0x0018 (0x0018 - 0x0000)
-struct VoiceChatUser_SetPlayerMuted final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMuted;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetPlayerMuted;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetPlayerVolume
-// 0x0018 (0x0018 - 0x0000)
-struct VoiceChatUser_SetPlayerVolume final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Volume;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetPlayerVolume;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.SetSetting
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUser_SetSetting final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_SetSetting;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.TransmitToSpecificChannels
-// 0x0050 (0x0050 - 0x0000)
-struct VoiceChatUser_TransmitToSpecificChannels final
-{
-public:
-	TSet<class FString>                           ChannelNames;                                      // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_TransmitToSpecificChannels;
-
-// Function OnlineSubsystemBlueprints.VoiceChatUser.UnblockPlayers
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUser_UnblockPlayers final
-{
-public:
-	TArray<class FString>                         PlayerNames;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUser_UnblockPlayers;
 
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemQueryAchievements.QueryAchievements
 // 0x0040 (0x0040 - 0x0000)
@@ -687,194 +308,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineChatSubsystem_SendRoomChat;
 
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_BoolToFOnlineSessionSettingBP
-// 0x0040 (0x0040 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_BoolToFOnlineSessionSettingBP final
-{
-public:
-	bool                                          InData;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOnlineSessionSettingBP                ReturnValue;                                       // 0x0008(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_BoolToFOnlineSessionSettingBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_BoolToFVariantDataBP
-// 0x0038 (0x0038 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_BoolToFVariantDataBP final
-{
-public:
-	bool                                          InData;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVariantDataBP                         ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_BoolToFVariantDataBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_DoubleToFOnlineSessionSettingBP
-// 0x0040 (0x0040 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_DoubleToFOnlineSessionSettingBP final
-{
-public:
-	double                                        InData;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineSessionSettingBP                ReturnValue;                                       // 0x0008(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_DoubleToFOnlineSessionSettingBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_DoubleToFVariantDataBP
-// 0x0038 (0x0038 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_DoubleToFVariantDataBP final
-{
-public:
-	double                                        InData;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVariantDataBP                         ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_DoubleToFVariantDataBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FOnlineSessionSettingBPToBool
-// 0x0040 (0x0040 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToBool final
-{
-public:
-	struct FOnlineSessionSettingBP                InData;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToBool;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FOnlineSessionSettingBPToDouble
-// 0x0040 (0x0040 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToDouble final
-{
-public:
-	struct FOnlineSessionSettingBP                InData;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToDouble;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FOnlineSessionSettingBPToInt64
-// 0x0040 (0x0040 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToInt64 final
-{
-public:
-	struct FOnlineSessionSettingBP                InData;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int64                                         ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToInt64;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FOnlineSessionSettingBPToString
-// 0x0048 (0x0048 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToString final
-{
-public:
-	struct FOnlineSessionSettingBP                InData;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToString;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FVariantDataBPToBool
-// 0x0038 (0x0038 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToBool final
-{
-public:
-	struct FVariantDataBP                         InData;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToBool;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FVariantDataBPToDouble
-// 0x0038 (0x0038 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToDouble final
-{
-public:
-	struct FVariantDataBP                         InData;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToDouble;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FVariantDataBPToInt64
-// 0x0038 (0x0038 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToInt64 final
-{
-public:
-	struct FVariantDataBP                         InData;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int64                                         ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToInt64;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FVariantDataBPToString
-// 0x0040 (0x0040 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToString final
-{
-public:
-	struct FVariantDataBP                         InData;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToString;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_Int64ToFOnlineSessionSettingBP
-// 0x0040 (0x0040 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_Int64ToFOnlineSessionSettingBP final
-{
-public:
-	int64                                         InData;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineSessionSettingBP                ReturnValue;                                       // 0x0008(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_Int64ToFOnlineSessionSettingBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_Int64ToFVariantDataBP
-// 0x0038 (0x0038 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_Int64ToFVariantDataBP final
-{
-public:
-	int64                                         InData;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVariantDataBP                         ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_Int64ToFVariantDataBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_StringToFOnlineSessionSettingBP
-// 0x0048 (0x0048 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_StringToFOnlineSessionSettingBP final
-{
-public:
-	class FString                                 InData;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineSessionSettingBP                ReturnValue;                                       // 0x0010(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_StringToFOnlineSessionSettingBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_StringToFVariantDataBP
-// 0x0040 (0x0040 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_Conv_StringToFVariantDataBP final
-{
-public:
-	class FString                                 InData;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVariantDataBP                         ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_StringToFVariantDataBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.EqualEqual_FOnlineSessionSettingBPFOnlineSessionSettingBP
-// 0x0078 (0x0078 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_EqualEqual_FOnlineSessionSettingBPFOnlineSessionSettingBP final
-{
-public:
-	struct FOnlineSessionSettingBP                InA;                                               // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FOnlineSessionSettingBP                InB;                                               // 0x0038(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_EqualEqual_FOnlineSessionSettingBPFOnlineSessionSettingBP;
-
-// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.EqualEqual_FVariantDataBPFVariantDataBP
-// 0x0068 (0x0068 - 0x0000)
-struct RedpointOSSv1BlueprintFunctionLibrary_EqualEqual_FVariantDataBPFVariantDataBP final
-{
-public:
-	struct FVariantDataBP                         InA;                                               // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVariantDataBP                         InB;                                               // 0x0030(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_EqualEqual_FVariantDataBPFVariantDataBP;
-
 // Function OnlineSubsystemBlueprints.OnlineEntitlementsSubsystem.GetAllEntitlements
 // 0x0050 (0x0050 - 0x0000)
 struct OnlineEntitlementsSubsystem_GetAllEntitlements final
@@ -929,20 +362,6 @@ public:
 	class UOnlineEntitlementsSubsystemQueryEntitlements* ReturnValue;                                // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements;
-
-// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemSendInvite.SendInvite
-// 0x0058 (0x0058 - 0x0000)
-struct OnlineFriendsSubsystemSendInvite_SendInvite final
-{
-public:
-	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineFriendsSubsystemSendInvite*      ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineFriendsSubsystemSendInvite_SendInvite;
 
 // Function OnlineSubsystemBlueprints.OnlineEventsSubsystem.IsSubsystemAvailable
 // 0x0001 (0x0001 - 0x0000)
@@ -1080,16 +499,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineExternalUISubsystem_ShowPlatformMessageBox;
 
-// Function OnlineSubsystemBlueprints.VoiceChatUserLogout.Logout
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUserLogout_Logout final
-{
-public:
-	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UVoiceChatUserLogout*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUserLogout_Logout;
-
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowLoginUI.ShowLoginUI
 // 0x0018 (0x0018 - 0x0000)
 struct OnlineExternalUISubsystemShowLoginUI_ShowLoginUI final
@@ -1116,65 +525,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineExternalUISubsystemShowAccountCreationUI_ShowAccountCreationUI;
 
-// Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystem.FinalizePurchase
-// 0x0050 (0x0050 - 0x0000)
-struct OnlinePurchaseSubsystem_FinalizePurchase final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReceiptId;                                         // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReceiptInfo;                                       // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlinePurchaseSubsystem_FinalizePurchase;
-
-// Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystem.GetReceipts
-// 0x0040 (0x0040 - 0x0000)
-struct OnlinePurchaseSubsystem_GetReceipts final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UPurchaseReceipt*>               OutReceipts;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlinePurchaseSubsystem_GetReceipts;
-
-// Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystem.IsAllowedToPurchase
-// 0x0038 (0x0038 - 0x0000)
-struct OnlinePurchaseSubsystem_IsAllowedToPurchase final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_OnlinePurchaseSubsystem_IsAllowedToPurchase;
-
-// Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystem.IsSubsystemAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct OnlinePurchaseSubsystem_IsSubsystemAvailable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlinePurchaseSubsystem_IsSubsystemAvailable;
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchResults
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineSessionSearch_GetSearchResults final
-{
-public:
-	TArray<struct FOnlineSessionSearchResultBP>   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSearch_GetSearchResults;
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchState
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineSessionSearch_GetSearchState final
-{
-public:
-	EOnlineAsyncTaskState_                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSearch_GetSearchState;
-
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowWebURL.ShowWebURL
 // 0x0058 (0x0058 - 0x0000)
 struct OnlineExternalUISubsystemShowWebURL_ShowWebURL final
@@ -1198,19 +548,6 @@ public:
 	class UOnlineExternalUISubsystemShowProfileUI* ReturnValue;                                      // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineExternalUISubsystemShowProfileUI_ShowProfileUI;
-
-// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemReadFriendsList.ReadFriendsList
-// 0x0028 (0x0028 - 0x0000)
-struct OnlineFriendsSubsystemReadFriendsList_ReadFriendsList final
-{
-public:
-	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ListName;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineFriendsSubsystemReadFriendsList* ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineFriendsSubsystemReadFriendsList_ReadFriendsList;
 
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowStoreUI.ShowStoreUI
 // 0x0040 (0x0040 - 0x0000)
@@ -1237,19 +574,6 @@ public:
 	class UOnlineExternalUISubsystemShowSendMessageUI* ReturnValue;                                  // 0x00E8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI;
-
-// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemBlockPlayer.BlockPlayer
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineFriendsSubsystemBlockPlayer_BlockPlayer final
-{
-public:
-	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineFriendsSubsystemBlockPlayer*     ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineFriendsSubsystemBlockPlayer_BlockPlayer;
 
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowSendMessageToUserUI.ShowSendMessageToUserUI
 // 0x0120 (0x0120 - 0x0000)
@@ -1284,20 +608,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineGameActivitySubsystem_UpdatePlayerLocation;
 
-// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemRejectInvite.RejectInvite
-// 0x0058 (0x0058 - 0x0000)
-struct OnlineFriendsSubsystemRejectInvite_RejectInvite final
-{
-public:
-	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineFriendsSubsystemRejectInvite*    ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineFriendsSubsystemRejectInvite_RejectInvite;
-
 // Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemStartActivity.StartActivity
 // 0x00A0 (0x00A0 - 0x0000)
 struct OnlineGameActivitySubsystemStartActivity_StartActivity final
@@ -1326,17 +636,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineGameActivitySubsystemEndActivity_EndActivity;
 
-// Function OnlineSubsystemBlueprints.VoiceChatUserLeaveChannel.LeaveChannel
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUserLeaveChannel_LeaveChannel final
-{
-public:
-	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ChannelName;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UVoiceChatUserLeaveChannel*             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VoiceChatUserLeaveChannel_LeaveChannel;
-
 // Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemResetAllActiveActivities.ResetAllActiveActivities
 // 0x0040 (0x0040 - 0x0000)
 struct OnlineGameActivitySubsystemResetAllActiveActivities_ResetAllActiveActivities final
@@ -1360,19 +659,6 @@ public:
 	class UOnlineGameActivitySubsystemResumeActivity* ReturnValue;                                   // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineGameActivitySubsystemResumeActivity_ResumeActivity;
-
-// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemAddRecentPlayers.AddRecentPlayers
-// 0x0060 (0x0060 - 0x0000)
-struct OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers final
-{
-public:
-	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FReportPlayedWithUserInfo>      InRecentPlayers;                                   // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 ListName;                                          // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineFriendsSubsystemAddRecentPlayers* ReturnValue;                                      // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers;
 
 // Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityAvailability.SetActivityAvailability
 // 0x0058 (0x0058 - 0x0000)
@@ -1400,17 +686,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority;
 
-// Function OnlineSubsystemBlueprints.OnlinePartySubsystemCleanupParties.CleanupParties
-// 0x0040 (0x0040 - 0x0000)
-struct OnlinePartySubsystemCleanupParties_CleanupParties final
-{
-public:
-	class UOnlinePartySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlinePartySubsystemCleanupParties*    ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlinePartySubsystemCleanupParties_CleanupParties;
-
 // Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystem.IsSubsystemAvailable
 // 0x0001 (0x0001 - 0x0000)
 struct OnlineGameItemStatsSubsystem_IsSubsystemAvailable final
@@ -1432,17 +707,6 @@ public:
 	class UOnlineGameItemStatsSubsystemItemUsage* ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineGameItemStatsSubsystemItemUsage_ItemUsage;
-
-// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryBlockedPlayers.QueryBlockedPlayers
-// 0x0040 (0x0040 - 0x0000)
-struct OnlineFriendsSubsystemQueryBlockedPlayers_QueryBlockedPlayers final
-{
-public:
-	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineFriendsSubsystemQueryBlockedPlayers* ReturnValue;                                   // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineFriendsSubsystemQueryBlockedPlayers_QueryBlockedPlayers;
 
 // Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemImpact.ItemImpact
 // 0x0070 (0x0070 - 0x0000)
@@ -1472,20 +736,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation;
 
-// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemDeleteFriendAlias.DeleteFriendAlias
-// 0x0058 (0x0058 - 0x0000)
-struct OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias final
-{
-public:
-	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineFriendsSubsystemDeleteFriendAlias* ReturnValue;                                     // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias;
-
 // Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemAvailabilityChange.ItemAvailabilityChange
 // 0x0060 (0x0060 - 0x0000)
 struct OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange final
@@ -1511,21 +761,6 @@ public:
 	class UOnlineGameItemStatsSubsystemItemInventoryChange* ReturnValue;                             // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineGameItemStatsSubsystemItemInventoryChange_ItemInventoryChange;
-
-// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemWriteUserFile.WriteUserFile
-// 0x0060 (0x0060 - 0x0000)
-struct OnlineUserCloudSubsystemWriteUserFile_WriteUserFile final
-{
-public:
-	class UOnlineUserCloudSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFileData*                              FileContents;                                      // 0x0048(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCompressBeforeUpload;                             // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineUserCloudSubsystemWriteUserFile* ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineUserCloudSubsystemWriteUserFile_WriteUserFile;
 
 // Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemLoadoutChange.ItemLoadoutChange
 // 0x0060 (0x0060 - 0x0000)
@@ -1566,19 +801,6 @@ public:
 	class FString                                 Ns;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineGroupsSubsystem_SetNamespace;
-
-// Function OnlineSubsystemBlueprints.OnlinePartySubsystemPromoteMember.PromoteMember
-// 0x0078 (0x0078 - 0x0000)
-struct OnlinePartySubsystemPromoteMember_PromoteMember final
-{
-public:
-	class UOnlinePartySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPartyId*                               PartyId;                                           // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       TargetMemberId;                                    // 0x0040(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlinePartySubsystemPromoteMember*     ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlinePartySubsystemPromoteMember_PromoteMember;
 
 // Function OnlineSubsystemBlueprints.OnlineHelpers.Conv_FUniqueNetIdReplToString
 // 0x0040 (0x0040 - 0x0000)
@@ -1919,18 +1141,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineIdentitySubsystem_IsSubsystemAvailable;
 
-// Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryUserIdMapping.QueryUserIdMapping
-// 0x0050 (0x0050 - 0x0000)
-struct OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping final
-{
-public:
-	class UOnlineUserSubsystem*                   Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplayNameOrEmail;                                // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineUserSubsystemQueryUserIdMapping* ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping;
-
 // Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemLogin.Login
 // 0x0048 (0x0048 - 0x0000)
 struct OnlineIdentitySubsystemLogin_Login final
@@ -1956,17 +1166,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineIdentitySubsystemLogout_Logout;
 
-// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemEnumerateUserFiles.EnumerateUserFiles
-// 0x0040 (0x0040 - 0x0000)
-struct OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles final
-{
-public:
-	class UOnlineUserCloudSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineUserCloudSubsystemEnumerateUserFiles* ReturnValue;                                  // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles;
-
 // Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemAutoLogin.AutoLogin
 // 0x0018 (0x0018 - 0x0000)
 struct OnlineIdentitySubsystemAutoLogin_AutoLogin final
@@ -1989,19 +1188,6 @@ public:
 	class UOnlineIdentitySubsystemRevokeAuthToken* ReturnValue;                                      // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken;
-
-// Function OnlineSubsystemBlueprints.OnlinePartySubsystemCancelInvitation.CancelInvitation
-// 0x0078 (0x0078 - 0x0000)
-struct OnlinePartySubsystemCancelInvitation_CancelInvitation final
-{
-public:
-	class UOnlinePartySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       TargetUserId;                                      // 0x0038(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPartyId*                               PartyId;                                           // 0x0068(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlinePartySubsystemCancelInvitation*  ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlinePartySubsystemCancelInvitation_CancelInvitation;
 
 // Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemGetUserPrivilege.GetUserPrivilege
 // 0x0048 (0x0048 - 0x0000)
@@ -2059,18 +1245,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineLeaderboardsSubsystem_WriteLeaderboards;
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelMatchmaking.CancelMatchmaking
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       SearchingPlayerId;                                 // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SessionName;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemCancelMatchmaking* ReturnValue;                                     // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking;
-
 // Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboards.ReadLeaderboards
 // 0x0028 (0x0028 - 0x0000)
 struct OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards final
@@ -2095,19 +1269,6 @@ public:
 	class UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends* ReturnValue;                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends;
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCreateSession.CreateSession
-// 0x0198 (0x0198 - 0x0000)
-struct OnlineSessionSubsystemCreateSession_CreateSession final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       HostingPlayerId;                                   // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SessionName;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineSessionSettingsBP               NewSessionSettings;                                // 0x0040(0x0150)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemCreateSession*   ReturnValue;                                       // 0x0190(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemCreateSession_CreateSession;
 
 // Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank.ReadLeaderboardsAroundRank
 // 0x0028 (0x0028 - 0x0000)
@@ -2135,20 +1296,6 @@ public:
 	class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser* ReturnValue;                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser;
-
-// Function OnlineSubsystemBlueprints.OnlinePartySubsystemLeaveParty.LeaveParty
-// 0x0050 (0x0050 - 0x0000)
-struct OnlinePartySubsystemLeaveParty_LeaveParty final
-{
-public:
-	class UOnlinePartySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPartyId*                               PartyId;                                           // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSynchronizeLeave;                                 // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlinePartySubsystemLeaveParty*        ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlinePartySubsystemLeaveParty_LeaveParty;
 
 // Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetLobbyMetadataValue
 // 0x0080 (0x0080 - 0x0000)
@@ -2271,17 +1418,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineLobbySubsystemCreateLobby_CreateLobby;
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemDestroySession.DestroySession
-// 0x0018 (0x0018 - 0x0000)
-struct OnlineSessionSubsystemDestroySession_DestroySession final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemDestroySession*  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemDestroySession_DestroySession;
-
 // Function OnlineSubsystemBlueprints.OnlineLobbySubsystemUpdateLobby.UpdateLobby
 // 0x0050 (0x0050 - 0x0000)
 struct OnlineLobbySubsystemUpdateLobby_UpdateLobby final
@@ -2307,18 +1443,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineLobbySubsystemDeleteLobby_DeleteLobby;
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemUnregisterPlayers.UnregisterPlayers
-// 0x0028 (0x0028 - 0x0000)
-struct OnlineSessionSubsystemUnregisterPlayers_UnregisterPlayers final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FUniqueNetIdRepl>               Players;                                           // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemUnregisterPlayers* ReturnValue;                                     // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemUnregisterPlayers_UnregisterPlayers;
-
 // Function OnlineSubsystemBlueprints.OnlineLobbySubsystemConnectLobby.ConnectLobby
 // 0x0048 (0x0048 - 0x0000)
 struct OnlineLobbySubsystemConnectLobby_ConnectLobby final
@@ -2342,20 +1466,6 @@ public:
 	class UOnlineLobbySubsystemDisconnectLobby*   ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineLobbySubsystemDisconnectLobby_DisconnectLobby;
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessionById.FindSessionById
-// 0x00B0 (0x00B0 - 0x0000)
-struct OnlineSessionSubsystemFindSessionById_FindSessionById final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       SearchingUserId;                                   // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       SessionId;                                         // 0x0038(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0068(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserData;                                          // 0x0098(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemFindSessionById* ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemFindSessionById_FindSessionById;
 
 // Function OnlineSubsystemBlueprints.OnlineLobbySubsystemUpdateMemberSelf.UpdateMemberSelf
 // 0x0050 (0x0050 - 0x0000)
@@ -2382,20 +1492,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineLobbySubsystemSearch_Search;
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemUpdateSession.UpdateSession
-// 0x0170 (0x0170 - 0x0000)
-struct OnlineSessionSubsystemUpdateSession_UpdateSession final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineSessionSettingsBP               UpdatedSessionSettings;                            // 0x0010(0x0150)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bShouldRefreshOnlineData;                          // 0x0160(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineSessionSubsystemUpdateSession*   ReturnValue;                                       // 0x0168(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemUpdateSession_UpdateSession;
-
 // Function OnlineSubsystemBlueprints.OnlineLobbySubsystemKickMember.KickMember
 // 0x0078 (0x0078 - 0x0000)
 struct OnlineLobbySubsystemKickMember_KickMember final
@@ -2417,19 +1513,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineMessageSanitizerSubsystem_IsSubsystemAvailable;
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindFriendSession.FindFriendSession
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineSessionSubsystemFindFriendSession_FindFriendSession final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       Friend;                                            // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemFindFriendSession* ReturnValue;                                     // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemFindFriendSession_FindFriendSession;
 
 // Function OnlineSubsystemBlueprints.OnlineMessageSanitizerSubsystemSanitizeDisplayName.SanitizeDisplayName
 // 0x0020 (0x0020 - 0x0000)
@@ -2509,18 +1592,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlineMessageSubsystem_IsSubsystemAvailable;
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemUnregisterLocalPlayer.UnregisterLocalPlayer
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineSessionSubsystemUnregisterLocalPlayer_UnregisterLocalPlayer final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SessionName;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemUnregisterLocalPlayer* ReturnValue;                                 // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemUnregisterLocalPlayer_UnregisterLocalPlayer;
-
 // Function OnlineSubsystemBlueprints.OnlinePresenceSubsystem.GetCachedPresence
 // 0x00E0 (0x00E0 - 0x0000)
 struct OnlinePresenceSubsystem_GetCachedPresence final
@@ -2568,17 +1639,6 @@ public:
 };
 DUMPER7_ASSERTS_OnlinePresenceSubsystemSetPresence_SetPresence;
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemPingSearchResults.PingSearchResults
-// 0x01C8 (0x01C8 - 0x0000)
-struct OnlineSessionSubsystemPingSearchResults_PingSearchResults final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineSessionSearchResultBP           SearchResult;                                      // 0x0008(0x01B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemPingSearchResults* ReturnValue;                                     // 0x01C0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineSessionSubsystemPingSearchResults_PingSearchResults;
-
 // Function OnlineSubsystemBlueprints.OnlinePresenceSubsystemQueryPresence.QueryPresence
 // 0x0040 (0x0040 - 0x0000)
 struct OnlinePresenceSubsystemQueryPresence_QueryPresence final
@@ -2589,6 +1649,47 @@ public:
 	class UOnlinePresenceSubsystemQueryPresence*  ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlinePresenceSubsystemQueryPresence_QueryPresence;
+
+// Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystem.FinalizePurchase
+// 0x0050 (0x0050 - 0x0000)
+struct OnlinePurchaseSubsystem_FinalizePurchase final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReceiptId;                                         // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReceiptInfo;                                       // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlinePurchaseSubsystem_FinalizePurchase;
+
+// Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystem.GetReceipts
+// 0x0040 (0x0040 - 0x0000)
+struct OnlinePurchaseSubsystem_GetReceipts final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UPurchaseReceipt*>               OutReceipts;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlinePurchaseSubsystem_GetReceipts;
+
+// Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystem.IsAllowedToPurchase
+// 0x0038 (0x0038 - 0x0000)
+struct OnlinePurchaseSubsystem_IsAllowedToPurchase final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_OnlinePurchaseSubsystem_IsAllowedToPurchase;
+
+// Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystem.IsSubsystemAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct OnlinePurchaseSubsystem_IsSubsystemAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlinePurchaseSubsystem_IsSubsystemAvailable;
 
 // Function OnlineSubsystemBlueprints.OnlinePurchaseSubsystemCheckout.Checkout
 // 0x0060 (0x0060 - 0x0000)
@@ -3368,6 +2469,17 @@ public:
 };
 DUMPER7_ASSERTS_OnlineUserCloudSubsystem_RequestUsageInfo;
 
+// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemEnumerateUserFiles.EnumerateUserFiles
+// 0x0040 (0x0040 - 0x0000)
+struct OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles final
+{
+public:
+	class UOnlineUserCloudSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineUserCloudSubsystemEnumerateUserFiles* ReturnValue;                                  // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles;
+
 // Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemReadUserFile.ReadUserFile
 // 0x0050 (0x0050 - 0x0000)
 struct OnlineUserCloudSubsystemReadUserFile_ReadUserFile final
@@ -3379,6 +2491,21 @@ public:
 	class UOnlineUserCloudSubsystemReadUserFile*  ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineUserCloudSubsystemReadUserFile_ReadUserFile;
+
+// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemWriteUserFile.WriteUserFile
+// 0x0060 (0x0060 - 0x0000)
+struct OnlineUserCloudSubsystemWriteUserFile_WriteUserFile final
+{
+public:
+	class UOnlineUserCloudSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFileData*                              FileContents;                                      // 0x0048(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCompressBeforeUpload;                             // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineUserCloudSubsystemWriteUserFile* ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineUserCloudSubsystemWriteUserFile_WriteUserFile;
 
 // Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemDeleteUserFile.DeleteUserFile
 // 0x0058 (0x0058 - 0x0000)
@@ -3463,6 +2590,18 @@ public:
 	class UOnlineUserSubsystemQueryUserInfo*      ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineUserSubsystemQueryUserInfo_QueryUserInfo;
+
+// Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryUserIdMapping.QueryUserIdMapping
+// 0x0050 (0x0050 - 0x0000)
+struct OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping final
+{
+public:
+	class UOnlineUserSubsystem*                   Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplayNameOrEmail;                                // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineUserSubsystemQueryUserIdMapping* ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping;
 
 // Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryExternalIdMappings.QueryExternalIdMappings
 // 0x0068 (0x0068 - 0x0000)
@@ -4480,6 +3619,24 @@ public:
 };
 DUMPER7_ASSERTS_NamedOnlineSession_GetValue;
 
+// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchResults
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineSessionSearch_GetSearchResults final
+{
+public:
+	TArray<struct FOnlineSessionSearchResultBP>   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSearch_GetSearchResults;
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchState
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineSessionSearch_GetSearchState final
+{
+public:
+	EOnlineAsyncTaskState_                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSearch_GetSearchState;
+
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetCurrencyCode
 // 0x0010 (0x0010 - 0x0000)
 struct OnlineStoreOffer_GetCurrencyCode final
@@ -4597,6 +3754,194 @@ public:
 };
 DUMPER7_ASSERTS_OnlineStoreOffer_IsPurchasable;
 
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_BoolToFOnlineSessionSettingBP
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_BoolToFOnlineSessionSettingBP final
+{
+public:
+	bool                                          InData;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineSessionSettingBP                ReturnValue;                                       // 0x0008(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_BoolToFOnlineSessionSettingBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_BoolToFVariantDataBP
+// 0x0038 (0x0038 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_BoolToFVariantDataBP final
+{
+public:
+	bool                                          InData;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVariantDataBP                         ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_BoolToFVariantDataBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_DoubleToFOnlineSessionSettingBP
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_DoubleToFOnlineSessionSettingBP final
+{
+public:
+	double                                        InData;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOnlineSessionSettingBP                ReturnValue;                                       // 0x0008(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_DoubleToFOnlineSessionSettingBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_DoubleToFVariantDataBP
+// 0x0038 (0x0038 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_DoubleToFVariantDataBP final
+{
+public:
+	double                                        InData;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVariantDataBP                         ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_DoubleToFVariantDataBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FOnlineSessionSettingBPToBool
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToBool final
+{
+public:
+	struct FOnlineSessionSettingBP                InData;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToBool;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FOnlineSessionSettingBPToDouble
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToDouble final
+{
+public:
+	struct FOnlineSessionSettingBP                InData;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToDouble;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FOnlineSessionSettingBPToInt64
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToInt64 final
+{
+public:
+	struct FOnlineSessionSettingBP                InData;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int64                                         ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToInt64;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FOnlineSessionSettingBPToString
+// 0x0048 (0x0048 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToString final
+{
+public:
+	struct FOnlineSessionSettingBP                InData;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FOnlineSessionSettingBPToString;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FVariantDataBPToBool
+// 0x0038 (0x0038 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToBool final
+{
+public:
+	struct FVariantDataBP                         InData;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToBool;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FVariantDataBPToDouble
+// 0x0038 (0x0038 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToDouble final
+{
+public:
+	struct FVariantDataBP                         InData;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToDouble;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FVariantDataBPToInt64
+// 0x0038 (0x0038 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToInt64 final
+{
+public:
+	struct FVariantDataBP                         InData;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int64                                         ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToInt64;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_FVariantDataBPToString
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToString final
+{
+public:
+	struct FVariantDataBP                         InData;                                            // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_FVariantDataBPToString;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_Int64ToFOnlineSessionSettingBP
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_Int64ToFOnlineSessionSettingBP final
+{
+public:
+	int64                                         InData;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOnlineSessionSettingBP                ReturnValue;                                       // 0x0008(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_Int64ToFOnlineSessionSettingBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_Int64ToFVariantDataBP
+// 0x0038 (0x0038 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_Int64ToFVariantDataBP final
+{
+public:
+	int64                                         InData;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVariantDataBP                         ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_Int64ToFVariantDataBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_StringToFOnlineSessionSettingBP
+// 0x0048 (0x0048 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_StringToFOnlineSessionSettingBP final
+{
+public:
+	class FString                                 InData;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOnlineSessionSettingBP                ReturnValue;                                       // 0x0010(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_StringToFOnlineSessionSettingBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.Conv_StringToFVariantDataBP
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_Conv_StringToFVariantDataBP final
+{
+public:
+	class FString                                 InData;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVariantDataBP                         ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_Conv_StringToFVariantDataBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.EqualEqual_FOnlineSessionSettingBPFOnlineSessionSettingBP
+// 0x0078 (0x0078 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_EqualEqual_FOnlineSessionSettingBPFOnlineSessionSettingBP final
+{
+public:
+	struct FOnlineSessionSettingBP                InA;                                               // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FOnlineSessionSettingBP                InB;                                               // 0x0038(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_EqualEqual_FOnlineSessionSettingBPFOnlineSessionSettingBP;
+
+// Function OnlineSubsystemBlueprints.RedpointOSSv1BlueprintFunctionLibrary.EqualEqual_FVariantDataBPFVariantDataBP
+// 0x0068 (0x0068 - 0x0000)
+struct RedpointOSSv1BlueprintFunctionLibrary_EqualEqual_FVariantDataBPFVariantDataBP final
+{
+public:
+	struct FVariantDataBP                         InA;                                               // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVariantDataBP                         InB;                                               // 0x0030(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RedpointOSSv1BlueprintFunctionLibrary_EqualEqual_FVariantDataBPFVariantDataBP;
+
 // Function OnlineSubsystemBlueprints.RedpointOSSv1OnlinePartyRequestToJoinInfo.GetDisplayName
 // 0x0010 (0x0010 - 0x0000)
 struct RedpointOSSv1OnlinePartyRequestToJoinInfo_GetDisplayName final
@@ -4642,6 +3987,385 @@ public:
 };
 DUMPER7_ASSERTS_RedpointOSSv1OnlinePartyRequestToJoinInfo_GetUserId;
 
+// Function OnlineSubsystemBlueprints.VoiceChatUser.BlockPlayers
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUser_BlockPlayers final
+{
+public:
+	TArray<class FString>                         PlayerNames;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_BlockPlayers;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAudioInputDeviceMuted
+// 0x0001 (0x0001 - 0x0000)
+struct VoiceChatUser_GetAudioInputDeviceMuted final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetAudioInputDeviceMuted;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAudioInputVolume
+// 0x0004 (0x0004 - 0x0000)
+struct VoiceChatUser_GetAudioInputVolume final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetAudioInputVolume;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAudioOutputDeviceMuted
+// 0x0001 (0x0001 - 0x0000)
+struct VoiceChatUser_GetAudioOutputDeviceMuted final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetAudioOutputDeviceMuted;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAudioOutputVolume
+// 0x0004 (0x0004 - 0x0000)
+struct VoiceChatUser_GetAudioOutputVolume final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetAudioOutputVolume;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAvailableInputDeviceInfos
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUser_GetAvailableInputDeviceInfos final
+{
+public:
+	TArray<struct FVoiceChatDeviceInfoBP>         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetAvailableInputDeviceInfos;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetAvailableOutputDeviceInfos
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUser_GetAvailableOutputDeviceInfos final
+{
+public:
+	TArray<struct FVoiceChatDeviceInfoBP>         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetAvailableOutputDeviceInfos;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetChannels
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUser_GetChannels final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetChannels;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetChannelType
+// 0x0018 (0x0018 - 0x0000)
+struct VoiceChatUser_GetChannelType final
+{
+public:
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVoiceChatChannelType_                        ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetChannelType;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetDefaultInputDeviceInfo
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUser_GetDefaultInputDeviceInfo final
+{
+public:
+	struct FVoiceChatDeviceInfoBP                 ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetDefaultInputDeviceInfo;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetDefaultOutputDeviceInfo
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUser_GetDefaultOutputDeviceInfo final
+{
+public:
+	struct FVoiceChatDeviceInfoBP                 ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetDefaultOutputDeviceInfo;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetInputDeviceInfo
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUser_GetInputDeviceInfo final
+{
+public:
+	struct FVoiceChatDeviceInfoBP                 ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetInputDeviceInfo;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetLoggedInPlayerName
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUser_GetLoggedInPlayerName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetLoggedInPlayerName;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetOutputDeviceInfo
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUser_GetOutputDeviceInfo final
+{
+public:
+	struct FVoiceChatDeviceInfoBP                 ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetOutputDeviceInfo;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetPlayersInChannel
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUser_GetPlayersInChannel final
+{
+public:
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetPlayersInChannel;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetPlayerVolume
+// 0x0018 (0x0018 - 0x0000)
+struct VoiceChatUser_GetPlayerVolume final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetPlayerVolume;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetSetting
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUser_GetSetting final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetSetting;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetTransmitChannels
+// 0x0050 (0x0050 - 0x0000)
+struct VoiceChatUser_GetTransmitChannels final
+{
+public:
+	TSet<class FString>                           ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetTransmitChannels;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.GetTransmitMode
+// 0x0001 (0x0001 - 0x0000)
+struct VoiceChatUser_GetTransmitMode final
+{
+public:
+	EVoiceChatTransmitMode_                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_GetTransmitMode;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.InsecureGetJoinToken
+// 0x0038 (0x0038 - 0x0000)
+struct VoiceChatUser_InsecureGetJoinToken final
+{
+public:
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVoiceChatChannelType_                        ChannelType;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVoiceChatChannel3dPropertiesBP        Channel3dProperties;                               // 0x0014(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_InsecureGetJoinToken;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.InsecureGetLoginToken
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUser_InsecureGetLoginToken final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_InsecureGetLoginToken;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.IsChannelPlayerMuted
+// 0x0028 (0x0028 - 0x0000)
+struct VoiceChatUser_IsChannelPlayerMuted final
+{
+public:
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 playerName;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VoiceChatUser_IsChannelPlayerMuted;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.IsLoggedIn
+// 0x0001 (0x0001 - 0x0000)
+struct VoiceChatUser_IsLoggedIn final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_IsLoggedIn;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.IsLoggingIn
+// 0x0001 (0x0001 - 0x0000)
+struct VoiceChatUser_IsLoggingIn final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_IsLoggingIn;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.IsPlayerMuted
+// 0x0018 (0x0018 - 0x0000)
+struct VoiceChatUser_IsPlayerMuted final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VoiceChatUser_IsPlayerMuted;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.IsPlayerTalking
+// 0x0018 (0x0018 - 0x0000)
+struct VoiceChatUser_IsPlayerTalking final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VoiceChatUser_IsPlayerTalking;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.Set3DPosition
+// 0x0028 (0x0028 - 0x0000)
+struct VoiceChatUser_Set3DPosition final
+{
+public:
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SpeakerPosition;                                   // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_Set3DPosition;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetAudioInputDeviceMuted
+// 0x0001 (0x0001 - 0x0000)
+struct VoiceChatUser_SetAudioInputDeviceMuted final
+{
+public:
+	bool                                          bIsMuted;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetAudioInputDeviceMuted;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetAudioInputVolume
+// 0x0004 (0x0004 - 0x0000)
+struct VoiceChatUser_SetAudioInputVolume final
+{
+public:
+	float                                         Volume;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetAudioInputVolume;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetAudioOutputDeviceMuted
+// 0x0001 (0x0001 - 0x0000)
+struct VoiceChatUser_SetAudioOutputDeviceMuted final
+{
+public:
+	bool                                          bIsMuted;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetAudioOutputDeviceMuted;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetAudioOutputVolume
+// 0x0004 (0x0004 - 0x0000)
+struct VoiceChatUser_SetAudioOutputVolume final
+{
+public:
+	float                                         Volume;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetAudioOutputVolume;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetChannelPlayerMuted
+// 0x0028 (0x0028 - 0x0000)
+struct VoiceChatUser_SetChannelPlayerMuted final
+{
+public:
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 playerName;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAudioMuted;                                       // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetChannelPlayerMuted;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetInputDeviceId
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUser_SetInputDeviceId final
+{
+public:
+	class FString                                 InputDeviceId;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetInputDeviceId;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetOutputDeviceId
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUser_SetOutputDeviceId final
+{
+public:
+	class FString                                 OutputDeviceId;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetOutputDeviceId;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetPlayerMuted
+// 0x0018 (0x0018 - 0x0000)
+struct VoiceChatUser_SetPlayerMuted final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMuted;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetPlayerMuted;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetPlayerVolume
+// 0x0018 (0x0018 - 0x0000)
+struct VoiceChatUser_SetPlayerVolume final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Volume;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetPlayerVolume;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.SetSetting
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUser_SetSetting final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_SetSetting;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.TransmitToSpecificChannels
+// 0x0050 (0x0050 - 0x0000)
+struct VoiceChatUser_TransmitToSpecificChannels final
+{
+public:
+	TSet<class FString>                           ChannelNames;                                      // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_TransmitToSpecificChannels;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUser.UnblockPlayers
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUser_UnblockPlayers final
+{
+public:
+	TArray<class FString>                         PlayerNames;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUser_UnblockPlayers;
+
 // Function OnlineSubsystemBlueprints.VoiceChatUserLogin.Login
 // 0x0038 (0x0038 - 0x0000)
 struct VoiceChatUserLogin_Login final
@@ -4655,6 +4379,16 @@ public:
 	class UVoiceChatUserLogin*                    ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_VoiceChatUserLogin_Login;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUserLogout.Logout
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUserLogout_Logout final
+{
+public:
+	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVoiceChatUserLogout*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUserLogout_Logout;
 
 // Function OnlineSubsystemBlueprints.VoiceChatUserJoinChannel.JoinChannel
 // 0x0048 (0x0048 - 0x0000)
@@ -4671,6 +4405,17 @@ public:
 	class UVoiceChatUserJoinChannel*              ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_VoiceChatUserJoinChannel_JoinChannel;
+
+// Function OnlineSubsystemBlueprints.VoiceChatUserLeaveChannel.LeaveChannel
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUserLeaveChannel_LeaveChannel final
+{
+public:
+	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ChannelName;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVoiceChatUserLeaveChannel*             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VoiceChatUserLeaveChannel_LeaveChannel;
 
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystem.GetBlockedPlayers
 // 0x0048 (0x0048 - 0x0000)
@@ -4759,6 +4504,19 @@ public:
 };
 DUMPER7_ASSERTS_OnlineFriendsSubsystem_IsSubsystemAvailable;
 
+// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemReadFriendsList.ReadFriendsList
+// 0x0028 (0x0028 - 0x0000)
+struct OnlineFriendsSubsystemReadFriendsList_ReadFriendsList final
+{
+public:
+	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ListName;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineFriendsSubsystemReadFriendsList* ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineFriendsSubsystemReadFriendsList_ReadFriendsList;
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemDeleteFriendsList.DeleteFriendsList
 // 0x0028 (0x0028 - 0x0000)
 struct OnlineFriendsSubsystemDeleteFriendsList_DeleteFriendsList final
@@ -4771,6 +4529,20 @@ public:
 	class UOnlineFriendsSubsystemDeleteFriendsList* ReturnValue;                                     // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineFriendsSubsystemDeleteFriendsList_DeleteFriendsList;
+
+// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemSendInvite.SendInvite
+// 0x0058 (0x0058 - 0x0000)
+struct OnlineFriendsSubsystemSendInvite_SendInvite final
+{
+public:
+	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineFriendsSubsystemSendInvite*      ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineFriendsSubsystemSendInvite_SendInvite;
 
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemAcceptInvite.AcceptInvite
 // 0x0058 (0x0058 - 0x0000)
@@ -4785,6 +4557,20 @@ public:
 	class UOnlineFriendsSubsystemAcceptInvite*    ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineFriendsSubsystemAcceptInvite_AcceptInvite;
+
+// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemRejectInvite.RejectInvite
+// 0x0058 (0x0058 - 0x0000)
+struct OnlineFriendsSubsystemRejectInvite_RejectInvite final
+{
+public:
+	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineFriendsSubsystemRejectInvite*    ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineFriendsSubsystemRejectInvite_RejectInvite;
 
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemSetFriendAlias.SetFriendAlias
 // 0x0068 (0x0068 - 0x0000)
@@ -4801,6 +4587,20 @@ public:
 };
 DUMPER7_ASSERTS_OnlineFriendsSubsystemSetFriendAlias_SetFriendAlias;
 
+// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemDeleteFriendAlias.DeleteFriendAlias
+// 0x0058 (0x0058 - 0x0000)
+struct OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias final
+{
+public:
+	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineFriendsSubsystemDeleteFriendAlias* ReturnValue;                                     // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias;
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemDeleteFriend.DeleteFriend
 // 0x0058 (0x0058 - 0x0000)
 struct OnlineFriendsSubsystemDeleteFriend_DeleteFriend final
@@ -4815,6 +4615,19 @@ public:
 };
 DUMPER7_ASSERTS_OnlineFriendsSubsystemDeleteFriend_DeleteFriend;
 
+// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemAddRecentPlayers.AddRecentPlayers
+// 0x0060 (0x0060 - 0x0000)
+struct OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers final
+{
+public:
+	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FReportPlayedWithUserInfo>      InRecentPlayers;                                   // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ListName;                                          // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineFriendsSubsystemAddRecentPlayers* ReturnValue;                                      // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers;
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryRecentPlayers.QueryRecentPlayers
 // 0x0050 (0x0050 - 0x0000)
 struct OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers final
@@ -4826,6 +4639,19 @@ public:
 	class UOnlineFriendsSubsystemQueryRecentPlayers* ReturnValue;                                    // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers;
+
+// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemBlockPlayer.BlockPlayer
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineFriendsSubsystemBlockPlayer_BlockPlayer final
+{
+public:
+	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineFriendsSubsystemBlockPlayer*     ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineFriendsSubsystemBlockPlayer_BlockPlayer;
 
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemUnblockPlayer.UnblockPlayer
 // 0x0048 (0x0048 - 0x0000)
@@ -4839,6 +4665,17 @@ public:
 	class UOnlineFriendsSubsystemUnblockPlayer*   ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineFriendsSubsystemUnblockPlayer_UnblockPlayer;
+
+// Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryBlockedPlayers.QueryBlockedPlayers
+// 0x0040 (0x0040 - 0x0000)
+struct OnlineFriendsSubsystemQueryBlockedPlayers_QueryBlockedPlayers final
+{
+public:
+	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineFriendsSubsystemQueryBlockedPlayers* ReturnValue;                                   // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineFriendsSubsystemQueryBlockedPlayers_QueryBlockedPlayers;
 
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryFriendSettings.QueryFriendSettings
 // 0x0040 (0x0040 - 0x0000)
@@ -5174,6 +5011,17 @@ public:
 };
 DUMPER7_ASSERTS_OnlinePartySubsystemRestoreInvites_RestoreInvites;
 
+// Function OnlineSubsystemBlueprints.OnlinePartySubsystemCleanupParties.CleanupParties
+// 0x0040 (0x0040 - 0x0000)
+struct OnlinePartySubsystemCleanupParties_CleanupParties final
+{
+public:
+	class UOnlinePartySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlinePartySubsystemCleanupParties*    ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlinePartySubsystemCleanupParties_CleanupParties;
+
 // Function OnlineSubsystemBlueprints.OnlinePartySubsystemCreateParty.CreateParty
 // 0x0088 (0x0088 - 0x0000)
 struct OnlinePartySubsystemCreateParty_CreateParty final
@@ -5214,6 +5062,20 @@ public:
 };
 DUMPER7_ASSERTS_OnlinePartySubsystemJoinParty_JoinParty;
 
+// Function OnlineSubsystemBlueprints.OnlinePartySubsystemLeaveParty.LeaveParty
+// 0x0050 (0x0050 - 0x0000)
+struct OnlinePartySubsystemLeaveParty_LeaveParty final
+{
+public:
+	class UOnlinePartySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPartyId*                               PartyId;                                           // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSynchronizeLeave;                                 // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlinePartySubsystemLeaveParty*        ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlinePartySubsystemLeaveParty_LeaveParty;
+
 // Function OnlineSubsystemBlueprints.OnlinePartySubsystemSendInvitation.SendInvitation
 // 0x0078 (0x0078 - 0x0000)
 struct OnlinePartySubsystemSendInvitation_SendInvitation final
@@ -5227,6 +5089,19 @@ public:
 };
 DUMPER7_ASSERTS_OnlinePartySubsystemSendInvitation_SendInvitation;
 
+// Function OnlineSubsystemBlueprints.OnlinePartySubsystemCancelInvitation.CancelInvitation
+// 0x0078 (0x0078 - 0x0000)
+struct OnlinePartySubsystemCancelInvitation_CancelInvitation final
+{
+public:
+	class UOnlinePartySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       TargetUserId;                                      // 0x0038(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPartyId*                               PartyId;                                           // 0x0068(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlinePartySubsystemCancelInvitation*  ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlinePartySubsystemCancelInvitation_CancelInvitation;
+
 // Function OnlineSubsystemBlueprints.OnlinePartySubsystemKickMember.KickMember
 // 0x0078 (0x0078 - 0x0000)
 struct OnlinePartySubsystemKickMember_KickMember final
@@ -5239,6 +5114,19 @@ public:
 	class UOnlinePartySubsystemKickMember*        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlinePartySubsystemKickMember_KickMember;
+
+// Function OnlineSubsystemBlueprints.OnlinePartySubsystemPromoteMember.PromoteMember
+// 0x0078 (0x0078 - 0x0000)
+struct OnlinePartySubsystemPromoteMember_PromoteMember final
+{
+public:
+	class UOnlinePartySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPartyId*                               PartyId;                                           // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       TargetMemberId;                                    // 0x0040(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlinePartySubsystemPromoteMember*     ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlinePartySubsystemPromoteMember_PromoteMember;
 
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystem.CreateSessionIdFromString
 // 0x0040 (0x0040 - 0x0000)
@@ -5379,6 +5267,19 @@ public:
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystem_SendSessionInviteToFriends;
 
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCreateSession.CreateSession
+// 0x0198 (0x0198 - 0x0000)
+struct OnlineSessionSubsystemCreateSession_CreateSession final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       HostingPlayerId;                                   // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SessionName;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOnlineSessionSettingsBP               NewSessionSettings;                                // 0x0040(0x0150)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemCreateSession*   ReturnValue;                                       // 0x0190(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemCreateSession_CreateSession;
+
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemStartSession.StartSession
 // 0x0018 (0x0018 - 0x0000)
 struct OnlineSessionSubsystemStartSession_StartSession final
@@ -5390,6 +5291,20 @@ public:
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystemStartSession_StartSession;
 
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemUpdateSession.UpdateSession
+// 0x0170 (0x0170 - 0x0000)
+struct OnlineSessionSubsystemUpdateSession_UpdateSession final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOnlineSessionSettingsBP               UpdatedSessionSettings;                            // 0x0010(0x0150)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bShouldRefreshOnlineData;                          // 0x0160(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSessionSubsystemUpdateSession*   ReturnValue;                                       // 0x0168(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemUpdateSession_UpdateSession;
+
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemEndSession.EndSession
 // 0x0018 (0x0018 - 0x0000)
 struct OnlineSessionSubsystemEndSession_EndSession final
@@ -5400,6 +5315,17 @@ public:
 	class UOnlineSessionSubsystemEndSession*      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystemEndSession_EndSession;
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemDestroySession.DestroySession
+// 0x0018 (0x0018 - 0x0000)
+struct OnlineSessionSubsystemDestroySession_DestroySession final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemDestroySession*  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemDestroySession_DestroySession;
 
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemStartMatchmaking.StartMatchmaking
 // 0x0180 (0x0180 - 0x0000)
@@ -5415,6 +5341,18 @@ public:
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystemStartMatchmaking_StartMatchmaking;
 
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelMatchmaking.CancelMatchmaking
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       SearchingPlayerId;                                 // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SessionName;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemCancelMatchmaking* ReturnValue;                                     // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking;
+
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessions.FindSessions
 // 0x0048 (0x0048 - 0x0000)
 struct OnlineSessionSubsystemFindSessions_FindSessions final
@@ -5427,6 +5365,20 @@ public:
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystemFindSessions_FindSessions;
 
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessionById.FindSessionById
+// 0x00B0 (0x00B0 - 0x0000)
+struct OnlineSessionSubsystemFindSessionById_FindSessionById final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       SearchingUserId;                                   // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       SessionId;                                         // 0x0038(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0068(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserData;                                          // 0x0098(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemFindSessionById* ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemFindSessionById_FindSessionById;
+
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelFindSessions.CancelFindSessions
 // 0x0010 (0x0010 - 0x0000)
 struct OnlineSessionSubsystemCancelFindSessions_CancelFindSessions final
@@ -5436,6 +5388,17 @@ public:
 	class UOnlineSessionSubsystemCancelFindSessions* ReturnValue;                                    // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystemCancelFindSessions_CancelFindSessions;
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemPingSearchResults.PingSearchResults
+// 0x01C8 (0x01C8 - 0x0000)
+struct OnlineSessionSubsystemPingSearchResults_PingSearchResults final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOnlineSessionSearchResultBP           SearchResult;                                      // 0x0008(0x01B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemPingSearchResults* ReturnValue;                                     // 0x01C0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemPingSearchResults_PingSearchResults;
 
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemJoinSession.JoinSession
 // 0x0200 (0x0200 - 0x0000)
@@ -5449,6 +5412,19 @@ public:
 	class UOnlineSessionSubsystemJoinSession*     ReturnValue;                                       // 0x01F8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystemJoinSession_JoinSession;
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindFriendSession.FindFriendSession
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineSessionSubsystemFindFriendSession_FindFriendSession final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       Friend;                                            // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemFindFriendSession* ReturnValue;                                     // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemFindFriendSession_FindFriendSession;
 
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemRegisterPlayers.RegisterPlayers
 // 0x0030 (0x0030 - 0x0000)
@@ -5464,6 +5440,18 @@ public:
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystemRegisterPlayers_RegisterPlayers;
 
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemUnregisterPlayers.UnregisterPlayers
+// 0x0028 (0x0028 - 0x0000)
+struct OnlineSessionSubsystemUnregisterPlayers_UnregisterPlayers final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FUniqueNetIdRepl>               Players;                                           // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemUnregisterPlayers* ReturnValue;                                     // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemUnregisterPlayers_UnregisterPlayers;
+
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemRegisterLocalPlayer.RegisterLocalPlayer
 // 0x0048 (0x0048 - 0x0000)
 struct OnlineSessionSubsystemRegisterLocalPlayer_RegisterLocalPlayer final
@@ -5475,6 +5463,18 @@ public:
 	class UOnlineSessionSubsystemRegisterLocalPlayer* ReturnValue;                                   // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineSessionSubsystemRegisterLocalPlayer_RegisterLocalPlayer;
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemUnregisterLocalPlayer.UnregisterLocalPlayer
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineSessionSubsystemUnregisterLocalPlayer_UnregisterLocalPlayer final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SessionName;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemUnregisterLocalPlayer* ReturnValue;                                 // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineSessionSubsystemUnregisterLocalPlayer_UnregisterLocalPlayer;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Synthesis_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Synthesis_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AudioMixer_classes.hpp"

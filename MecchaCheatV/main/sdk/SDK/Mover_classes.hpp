@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "MotionWarping_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Mover_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "NetworkPrediction_classes.hpp"
-#include "GameplayTags_structs.hpp"
 #include "AnimGraphRuntime_classes.hpp"
-#include "MotionWarping_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -1424,55 +1424,6 @@ public:
 };
 DUMPER7_ASSERTS_UWaterMovementUtils;
 
-// Class Mover.FlyingMode
-// 0x0010 (0x0080 - 0x0070)
-class UFlyingMode : public UBaseMovementMode
-{
-public:
-	bool                                          bRespectDistanceOverWalkableSurfaces;              // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FlyingMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FlyingMode")
-	}
-	static class UFlyingMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFlyingMode>();
-	}
-};
-DUMPER7_ASSERTS_UFlyingMode;
-
-// Class Mover.PhysicsDrivenFlyingMode
-// 0x0010 (0x0090 - 0x0080)
-class UPhysicsDrivenFlyingMode : public UFlyingMode
-{
-public:
-	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TwistTorqueLimit;                                  // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SwingTorqueLimit;                                  // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PhysicsDrivenFlyingMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PhysicsDrivenFlyingMode")
-	}
-	static class UPhysicsDrivenFlyingMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPhysicsDrivenFlyingMode>();
-	}
-};
-DUMPER7_ASSERTS_UPhysicsDrivenFlyingMode;
-
 // Class Mover.MoverPathedPhysicsLiaisonComponent
 // 0x0320 (0x05A0 - 0x0280)
 class UMoverPathedPhysicsLiaisonComponent final : public UMoverNetworkPhysicsLiaisonComponentBase
@@ -1668,6 +1619,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFallingMode;
+
+// Class Mover.FlyingMode
+// 0x0010 (0x0080 - 0x0070)
+class UFlyingMode : public UBaseMovementMode
+{
+public:
+	bool                                          bRespectDistanceOverWalkableSurfaces;              // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FlyingMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FlyingMode")
+	}
+	static class UFlyingMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFlyingMode>();
+	}
+};
+DUMPER7_ASSERTS_UFlyingMode;
 
 // Class Mover.SwimmingMode
 // 0x00B8 (0x0128 - 0x0070)
@@ -2008,6 +1983,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPhysicsDrivenFallingMode;
+
+// Class Mover.PhysicsDrivenFlyingMode
+// 0x0010 (0x0090 - 0x0080)
+class UPhysicsDrivenFlyingMode : public UFlyingMode
+{
+public:
+	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TwistTorqueLimit;                                  // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SwingTorqueLimit;                                  // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PhysicsDrivenFlyingMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PhysicsDrivenFlyingMode")
+	}
+	static class UPhysicsDrivenFlyingMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPhysicsDrivenFlyingMode>();
+	}
+};
+DUMPER7_ASSERTS_UPhysicsDrivenFlyingMode;
 
 // Class Mover.PhysicsDrivenSwimmingMode
 // 0x0018 (0x0140 - 0x0128)

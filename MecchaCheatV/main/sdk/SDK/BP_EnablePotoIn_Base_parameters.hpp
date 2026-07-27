@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_CameraMode_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
 #include "ENUM_ActorType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 #include "Engine_structs.hpp"
@@ -174,7 +174,7 @@ DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetItemInfo;
 struct BP_EnablePotoIn_Base_C_GetParentCharacter final
 {
 public:
-	class ABP_FirstPersonCharacter_Main_C*        FirstpersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        FirstPersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetParentCharacter;
 

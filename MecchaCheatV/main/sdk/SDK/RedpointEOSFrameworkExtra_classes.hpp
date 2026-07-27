@@ -13,12 +13,12 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "RedpointEOSFrameworkExtra_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "GameplayAbilities_classes.hpp"
-#include "EnhancedInput_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "RedpointEOSFrameworkExtra_structs.hpp"
+#include "EnhancedInput_classes.hpp"
 
 
 SDK_NAMESPACE_START

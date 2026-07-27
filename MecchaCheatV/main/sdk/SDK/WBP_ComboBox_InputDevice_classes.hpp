@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EN_InputJudgementType_structs.hpp"
 #include "UMG_classes.hpp"
+#include "EN_InputJudgementType_structs.hpp"
 
 
 SDK_NAMESPACE_START

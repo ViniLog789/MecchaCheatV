@@ -63,15 +63,6 @@ public:
 };
 DUMPER7_ASSERTS_FSharedPackageMapItem;
 
-// ScriptStruct NetworkPrediction.ReplicationProxy
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x10) FReplicationProxy final
-{
-public:
-	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FReplicationProxy;
-
 // ScriptStruct NetworkPrediction.SharedPackageMap
 // 0x0010 (0x0010 - 0x0000)
 struct FSharedPackageMap final
@@ -80,6 +71,15 @@ public:
 	TArray<struct FSharedPackageMapItem>          Items;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSharedPackageMap;
+
+// ScriptStruct NetworkPrediction.ReplicationProxy
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x10) FReplicationProxy final
+{
+public:
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FReplicationProxy;
 
 // ScriptStruct NetworkPrediction.ServerReplicationRPCParameter
 // 0x0018 (0x0018 - 0x0000)

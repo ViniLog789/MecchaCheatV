@@ -49,15 +49,6 @@ enum class EEulerRotationOrder : uint8
 	EEulerRotationOrder_MAX                  = 6,
 };
 
-// ScriptStruct AnimationCore.FABRIKChainLink
-// 0x0050 (0x0050 - 0x0000)
-struct alignas(0x08) FFABRIKChainLink final
-{
-public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFABRIKChainLink;
-
 // ScriptStruct AnimationCore.Axis
 // 0x0020 (0x0020 - 0x0000)
 struct FAxis final
@@ -128,17 +119,6 @@ public:
 	bool                                          bZ;                                                // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFilterOptionPerAxis;
-
-// ScriptStruct AnimationCore.TransformNoScale
-// 0x0040 (0x0040 - 0x0000)
-struct FTransformNoScale final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Rotation;                                          // 0x0020(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTransformNoScale;
 
 // ScriptStruct AnimationCore.TransformFilter
 // 0x0009 (0x0009 - 0x0000)
@@ -263,5 +243,25 @@ public:
 	struct FVector                                Scale;                                             // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FEulerTransform;
+
+// ScriptStruct AnimationCore.FABRIKChainLink
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FFABRIKChainLink final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFABRIKChainLink;
+
+// ScriptStruct AnimationCore.TransformNoScale
+// 0x0040 (0x0040 - 0x0000)
+struct FTransformNoScale final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Rotation;                                          // 0x0020(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTransformNoScale;
 
 SDK_NAMESPACE_END

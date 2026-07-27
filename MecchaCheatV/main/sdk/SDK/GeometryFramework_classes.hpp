@@ -12,13 +12,123 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "GeometryFramework_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "GeometryFramework_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Class GeometryFramework.DynamicMeshProcessorBlueprint
+// 0x0000 (0x0028 - 0x0028)
+class UDynamicMeshProcessorBlueprint final : public UObject
+{
+public:
+	void ProcessDynamicMesh(class UDynamicMesh* TargetMesh, bool* bFailed);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DynamicMeshProcessorBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicMeshProcessorBlueprint")
+	}
+	static class UDynamicMeshProcessorBlueprint* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDynamicMeshProcessorBlueprint>();
+	}
+};
+DUMPER7_ASSERTS_UDynamicMeshProcessorBlueprint;
+
+// Class GeometryFramework.MeshCommandChangeTarget
+// 0x0000 (0x0000 - 0x0000)
+class IMeshCommandChangeTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MeshCommandChangeTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshCommandChangeTarget")
+	}
+	static class IMeshCommandChangeTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IMeshCommandChangeTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IMeshCommandChangeTarget;
+
+// Class GeometryFramework.MeshReplacementCommandChangeTarget
+// 0x0000 (0x0000 - 0x0000)
+class IMeshReplacementCommandChangeTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MeshReplacementCommandChangeTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshReplacementCommandChangeTarget")
+	}
+	static class IMeshReplacementCommandChangeTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IMeshReplacementCommandChangeTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IMeshReplacementCommandChangeTarget;
+
+// Class GeometryFramework.MeshVertexCommandChangeTarget
+// 0x0000 (0x0000 - 0x0000)
+class IMeshVertexCommandChangeTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MeshVertexCommandChangeTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshVertexCommandChangeTarget")
+	}
+	static class IMeshVertexCommandChangeTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IMeshVertexCommandChangeTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IMeshVertexCommandChangeTarget;
 
 // Class GeometryFramework.BaseDynamicMeshComponent
 // 0x0080 (0x05F0 - 0x0570)
@@ -158,116 +268,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UDynamicMeshComponent;
-
-// Class GeometryFramework.DynamicMeshProcessorBlueprint
-// 0x0000 (0x0028 - 0x0028)
-class UDynamicMeshProcessorBlueprint final : public UObject
-{
-public:
-	void ProcessDynamicMesh(class UDynamicMesh* TargetMesh, bool* bFailed);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DynamicMeshProcessorBlueprint")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DynamicMeshProcessorBlueprint")
-	}
-	static class UDynamicMeshProcessorBlueprint* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDynamicMeshProcessorBlueprint>();
-	}
-};
-DUMPER7_ASSERTS_UDynamicMeshProcessorBlueprint;
-
-// Class GeometryFramework.MeshCommandChangeTarget
-// 0x0000 (0x0000 - 0x0000)
-class IMeshCommandChangeTarget final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MeshCommandChangeTarget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MeshCommandChangeTarget")
-	}
-	static class IMeshCommandChangeTarget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IMeshCommandChangeTarget>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IMeshCommandChangeTarget;
-
-// Class GeometryFramework.MeshReplacementCommandChangeTarget
-// 0x0000 (0x0000 - 0x0000)
-class IMeshReplacementCommandChangeTarget final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MeshReplacementCommandChangeTarget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MeshReplacementCommandChangeTarget")
-	}
-	static class IMeshReplacementCommandChangeTarget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IMeshReplacementCommandChangeTarget>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IMeshReplacementCommandChangeTarget;
-
-// Class GeometryFramework.MeshVertexCommandChangeTarget
-// 0x0000 (0x0000 - 0x0000)
-class IMeshVertexCommandChangeTarget final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MeshVertexCommandChangeTarget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MeshVertexCommandChangeTarget")
-	}
-	static class IMeshVertexCommandChangeTarget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IMeshVertexCommandChangeTarget>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IMeshVertexCommandChangeTarget;
 
 // Class GeometryFramework.DynamicMeshActor
 // 0x0018 (0x02C0 - 0x02A8)

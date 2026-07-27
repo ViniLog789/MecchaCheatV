@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "FinishFilter_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
-#include "EN_LINK_PlayerStateValueType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
-#include "EnhancedInput_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
-#include "EN_DamageType_structs.hpp"
+#include "EN_LINK_PlayerStateValueType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "FinishFilter_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "PenguinHotel_structs.hpp"
 
@@ -220,22 +220,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x020E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_RezultCheck;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ResetAllStates
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ResetAllStates final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBPC_ItemUsedLoal_Base_C*>       CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UBPC_ItemUsedLoal_Base_C*               CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ResetAllStates;
 
 // Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

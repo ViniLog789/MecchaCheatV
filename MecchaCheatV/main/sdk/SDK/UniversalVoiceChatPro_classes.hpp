@@ -73,7 +73,7 @@ public:
 	void setOverrideLocallySourceEffectPath(bool enableSourceEffect, bool overrideLocally, const class FString& _pathToSourceEffectAsset);
 	void setSourceChainEffectAssetPath(bool enableSourceChainEffect, const class FString& _pathToSourceChainEffect);
 	void SetVoiceVolume(float Volume);
-	bool startSpeaking(bool _shouldHearMyOwnVoice, bool IsGlobal, const TArray<int32>& radioChannel, bool useRange, float MaxRange);
+	bool startSpeaking(bool _shouldHearMyOwnVoice, bool isGlobal, const TArray<int32>& radioChannel, bool useRange, float MaxRange);
 
 public:
 	static class UClass* StaticClass()
@@ -196,8 +196,8 @@ public:
 	static void VoiceChatSetRawMicrophoneGain(float Gain);
 	static bool VoiceChatSetSourceChainEffectPath(bool enableSourceChainEffect, const class FString& _pathToSourceChainEffectAsset);
 	static void VoiceChatSetThresholdSendData(float thresholdSendData);
-	static bool VoiceChatStartSpeak(bool _shouldHearMyOwnVoice, bool IsGlobal, int32 radioChannel, bool useProximity, float maxProximityRange);
-	static bool VoiceChatStartSpeakTeamArray(bool _shouldHearMyOwnVoice, bool IsGlobal, const TArray<int32>& radioChannel, bool useProximity, float maxProximityRange);
+	static bool VoiceChatStartSpeak(bool _shouldHearMyOwnVoice, bool isGlobal, int32 radioChannel, bool useProximity, float maxProximityRange);
+	static bool VoiceChatStartSpeakTeamArray(bool _shouldHearMyOwnVoice, bool isGlobal, const TArray<int32>& radioChannel, bool useProximity, float maxProximityRange);
 	static bool VoiceChatStopSpeak();
 	static void VoiceChatUseAndroidCommunicationMode(bool use);
 	static bool VoiceChatWasInitAudioVoiceChatQuality();

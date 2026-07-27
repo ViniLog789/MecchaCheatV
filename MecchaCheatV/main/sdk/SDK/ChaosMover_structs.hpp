@@ -47,17 +47,6 @@ public:
 };
 DUMPER7_ASSERTS_FChaosCharacterApplyVelocityEffect;
 
-// ScriptStruct ChaosMover.ChaosMoverCharacterSimState
-// 0x0020 (0x0028 - 0x0008)
-struct FChaosMoverCharacterSimState final : public FMoverDataStructBase
-{
-public:
-	struct FVector                                TargetDeltaPosition;                               // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetDeltaFacing;                                 // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChaosMoverCharacterSimState;
-
 // ScriptStruct ChaosMover.ChaosMoverLaunchInputs
 // 0x0020 (0x0028 - 0x0008)
 struct FChaosMoverLaunchInputs final : public FMoverDataStructBase
@@ -68,6 +57,17 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FChaosMoverLaunchInputs;
+
+// ScriptStruct ChaosMover.ChaosMoverCharacterSimState
+// 0x0020 (0x0028 - 0x0008)
+struct FChaosMoverCharacterSimState final : public FMoverDataStructBase
+{
+public:
+	struct FVector                                TargetDeltaPosition;                               // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetDeltaFacing;                                 // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChaosMoverCharacterSimState;
 
 // ScriptStruct ChaosMover.ChaosMoverSimulationDefaultInputs
 // 0x00F0 (0x00F8 - 0x0008)

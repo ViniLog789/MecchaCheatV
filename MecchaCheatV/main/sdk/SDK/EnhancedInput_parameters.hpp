@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "EnhancedInput_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -406,7 +406,7 @@ DUMPER7_ASSERTS_EnhancedInputLibrary_GetBoundActionValue;
 struct EnhancedInputLibrary_GetMappingName final
 {
 public:
-	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_EnhancedInputLibrary_GetMappingName;
@@ -416,7 +416,7 @@ DUMPER7_ASSERTS_EnhancedInputLibrary_GetMappingName;
 struct EnhancedInputLibrary_GetPlayerMappableKeySettings final
 {
 public:
-	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPlayerMappableKeySettings*             ReturnValue;                                       // 0x0050(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_EnhancedInputLibrary_GetPlayerMappableKeySettings;
@@ -426,7 +426,7 @@ DUMPER7_ASSERTS_EnhancedInputLibrary_GetPlayerMappableKeySettings;
 struct EnhancedInputLibrary_IsActionKeyMappingPlayerMappable final
 {
 public:
-	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -799,7 +799,7 @@ struct InputMappingContext_MapKey final
 public:
 	const class UInputAction*                     Action;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKey                                   ToKey;                                             // 0x0008(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEnhancedActionKeyMapping              ReturnValue;                                       // 0x0020(0x0050)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FEnhancedActionKeyMapping              ReturnValue;                                       // 0x0020(0x0050)(Parm, OutParm, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_InputMappingContext_MapKey;
 
@@ -913,7 +913,7 @@ struct PlayerMappableInputConfig_GetMappingByName final
 {
 public:
 	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEnhancedActionKeyMapping              ReturnValue;                                       // 0x0008(0x0050)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FEnhancedActionKeyMapping              ReturnValue;                                       // 0x0008(0x0050)(Parm, OutParm, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PlayerMappableInputConfig_GetMappingByName;
 

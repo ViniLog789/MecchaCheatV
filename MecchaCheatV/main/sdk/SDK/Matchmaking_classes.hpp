@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "OnlineSubsystemUtils_classes.hpp"
-#include "Engine_classes.hpp"
 #include "Matchmaking_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START

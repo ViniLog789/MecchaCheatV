@@ -172,6 +172,15 @@ public:
 };
 DUMPER7_ASSERTS_FImageCenterInfo;
 
+// ScriptStruct CameraCalibrationCore.DistortionInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FDistortionInfo final
+{
+public:
+	TArray<float>                                 Parameters;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDistortionInfo;
+
 // ScriptStruct CameraCalibrationCore.NodalPointOffset
 // 0x0040 (0x0040 - 0x0000)
 struct FNodalPointOffset final
@@ -182,15 +191,6 @@ public:
 	struct FQuat                                  RotationOffset;                                    // 0x0020(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FNodalPointOffset;
-
-// ScriptStruct CameraCalibrationCore.DistortionInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FDistortionInfo final
-{
-public:
-	TArray<float>                                 Parameters;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDistortionInfo;
 
 // ScriptStruct CameraCalibrationCore.STMapInfo
 // 0x0010 (0x0010 - 0x0000)

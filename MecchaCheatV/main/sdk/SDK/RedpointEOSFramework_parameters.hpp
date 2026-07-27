@@ -39,6 +39,16 @@ public:
 };
 DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_GetAvailableVoiceChatAudioDevices;
 
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.GetDedicatedServerPublicKey
+// 0x0018 (0x0018 - 0x0000)
+struct RedpointFrameworkBlueprintLibrary_GetDedicatedServerPublicKey final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_GetDedicatedServerPublicKey;
+
 // Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.GetGameSession
 // 0x0010 (0x0010 - 0x0000)
 struct RedpointFrameworkBlueprintLibrary_GetGameSession final
@@ -58,6 +68,18 @@ public:
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_GetInputPlatformAndPlayerDebugState;
+
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.GetRemotePlayerAntiCheatStatus
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointFrameworkBlueprintLibrary_GetRemotePlayerAntiCheatStatus final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERedpointFrameworkRemotePlayerAntiCheatStatus ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_GetRemotePlayerAntiCheatStatus;
 
 // Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.GetVoiceChatAudioInputDevice
 // 0x0060 (0x0060 - 0x0000)
@@ -246,6 +268,15 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RedpointFrameworkLocalPlayerSubsystem_IsPrimaryPartyLeader;
+
+// Function RedpointEOSFramework.RedpointFrameworkLocalPlayerSubsystem.IsVoiceChatEnabledInPrimaryParty
+// 0x0001 (0x0001 - 0x0000)
+struct RedpointFrameworkLocalPlayerSubsystem_IsVoiceChatEnabledInPrimaryParty final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointFrameworkLocalPlayerSubsystem_IsVoiceChatEnabledInPrimaryParty;
 
 // Function RedpointEOSFramework.RedpointFrameworkSubsystem.FetchAvatar
 // 0x0078 (0x0078 - 0x0000)
@@ -573,6 +604,18 @@ public:
 };
 DUMPER7_ASSERTS_RedpointPartyMember_PartyMemberChanged;
 
+// Function RedpointEOSFramework.RedpointSetPartyVoiceChatEnabledAsyncAction.SetVoiceChatEnabled
+// 0x0018 (0x0018 - 0x0000)
+struct RedpointSetPartyVoiceChatEnabledAsyncAction_SetVoiceChatEnabled final
+{
+public:
+	class URedpointFrameworkLocalPlayerSubsystem* LocalPlayerSubsystem_0;                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled_0;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URedpointSetPartyVoiceChatEnabledAsyncAction* ReturnValue;                                 // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointSetPartyVoiceChatEnabledAsyncAction_SetVoiceChatEnabled;
+
 // Function RedpointEOSFramework.RedpointStartupScreen.OnLoginFailed
 // 0x0020 (0x0020 - 0x0000)
 struct RedpointStartupScreen_OnLoginFailed final
@@ -738,6 +781,15 @@ public:
 };
 DUMPER7_ASSERTS_RedpointVoiceChatComponent_SetProximityType;
 
+// Function RedpointEOSFramework.RedpointVoiceChatComponent.SetSilencedWhenNoAnchorPoint
+// 0x0001 (0x0001 - 0x0000)
+struct RedpointVoiceChatComponent_SetSilencedWhenNoAnchorPoint final
+{
+public:
+	bool                                          bInSilencedWhenNoAnchorPoint;                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointVoiceChatComponent_SetSilencedWhenNoAnchorPoint;
+
 // Function RedpointEOSFramework.RedpointVoiceChatComponent.SetVoiceChatGroup
 // 0x0004 (0x0004 - 0x0000)
 struct RedpointVoiceChatComponent_SetVoiceChatGroup final
@@ -839,6 +891,15 @@ public:
 	ERedpointVoiceChatProximityType               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RedpointVoiceChatComponent_GetProximityType;
+
+// Function RedpointEOSFramework.RedpointVoiceChatComponent.GetSilencedWhenNoAnchorPoint
+// 0x0001 (0x0001 - 0x0000)
+struct RedpointVoiceChatComponent_GetSilencedWhenNoAnchorPoint final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RedpointVoiceChatComponent_GetSilencedWhenNoAnchorPoint;
 
 // Function RedpointEOSFramework.RedpointVoiceChatComponent.GetVoiceChatGroup
 // 0x0004 (0x0004 - 0x0000)

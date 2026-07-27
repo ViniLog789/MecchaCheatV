@@ -126,16 +126,6 @@ public:
 };
 DUMPER7_ASSERTS_FMediaMetadataItemBPT;
 
-// ScriptStruct MediaAssets.MediaCaptureDevice
-// 0x0020 (0x0020 - 0x0000)
-struct FMediaCaptureDevice final
-{
-public:
-	class FText                                   DisplayName;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
-	class FString                                 URL;                                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMediaCaptureDevice;
-
 // ScriptStruct MediaAssets.MediaMetadataItemsBPT
 // 0x0010 (0x0010 - 0x0000)
 struct FMediaMetadataItemsBPT final
@@ -165,5 +155,15 @@ public:
 	float                                         TimeToLookAhead;                                   // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMediaSourceCacheSettings;
+
+// ScriptStruct MediaAssets.MediaCaptureDevice
+// 0x0020 (0x0020 - 0x0000)
+struct FMediaCaptureDevice final
+{
+public:
+	class FText                                   DisplayName;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
+	class FString                                 URL;                                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMediaCaptureDevice;
 
 SDK_NAMESPACE_END

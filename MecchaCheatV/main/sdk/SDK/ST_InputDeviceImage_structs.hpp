@@ -14,13 +14,14 @@
 SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_InputDeviceImage.ST_InputDeviceImage
-// 0x0078 (0x0078 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct FST_InputDeviceImage final
 {
 public:
 	TSoftObjectPtr<class UTexture2D>              KeyboardMouse_11_5DAE4EF94AE209952390D58EB91DB89C; // 0x0000(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UTexture2D>              PS_12_2C35690F4491D9162F43A2B1F556ECB7;            // 0x0028(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UTexture2D>              Xbox_13_1ED912DE44AD9AD49BE763AA8485A91F;          // 0x0050(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              Switch2_16_441D54D74CB54BA70495438CF6DF509E;       // 0x0078(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FST_InputDeviceImage;
 

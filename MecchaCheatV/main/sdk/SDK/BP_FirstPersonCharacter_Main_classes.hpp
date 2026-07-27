@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PhysicsCore_structs.hpp"
-#include "Mover_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "MoverExamples_classes.hpp"
+#include "Mover_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
-#include "EN_DamageType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 #include "DeathType_structs.hpp"
 #include "EN_StanType_structs.hpp"
 
@@ -411,7 +411,7 @@ public:
 	void GetParryState(bool* State);
 	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
-	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter);
+	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter);
 	bool GetStateValue(class FName TargetName);
 	void GetCharacterMoverComp(class UCharacterMoverComponent** CharacterMoverComponent);
 

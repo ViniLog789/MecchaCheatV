@@ -282,6 +282,15 @@ public:
 };
 DUMPER7_ASSERTS_FCharRange;
 
+// ScriptStruct Slate.CharRangeList
+// 0x0010 (0x0010 - 0x0000)
+struct FCharRangeList final
+{
+public:
+	TArray<struct FCharRange>                     Ranges;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCharRangeList;
+
 // ScriptStruct Slate.VirtualKeyboardOptions
 // 0x0001 (0x0001 - 0x0000)
 struct FVirtualKeyboardOptions final
@@ -290,6 +299,15 @@ public:
 	bool                                          bEnableAutocorrect;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FVirtualKeyboardOptions;
+
+// ScriptStruct Slate.CustomizedToolMenuSection
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuSection final
+{
+public:
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenuSection;
 
 // ScriptStruct Slate.InputChord
 // 0x0020 (0x0020 - 0x0000)
@@ -315,15 +333,6 @@ public:
 };
 DUMPER7_ASSERTS_FAnchors;
 
-// ScriptStruct Slate.CharRangeList
-// 0x0010 (0x0010 - 0x0000)
-struct FCharRangeList final
-{
-public:
-	TArray<struct FCharRange>                     Ranges;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCharRangeList;
-
 // ScriptStruct Slate.InputPreprocessorRegistrationKey
 // 0x0008 (0x0008 - 0x0000)
 struct FInputPreprocessorRegistrationKey final
@@ -343,15 +352,6 @@ public:
 	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCustomizedToolMenuEntry;
-
-// ScriptStruct Slate.CustomizedToolMenuSection
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuSection final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCustomizedToolMenuSection;
 
 // ScriptStruct Slate.CustomizedToolMenuNameArray
 // 0x0010 (0x0010 - 0x0000)

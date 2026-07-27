@@ -549,13 +549,13 @@ void UMicrophoneSpeakComponent::SetVoiceVolume(float Volume)
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    _shouldHearMyOwnVoice                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    IsGlobal                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    isGlobal                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<int32>&                    radioChannel                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    useRange                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   MaxRange                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UMicrophoneSpeakComponent::startSpeaking(bool _shouldHearMyOwnVoice, bool IsGlobal, const TArray<int32>& radioChannel, bool useRange, float MaxRange)
+bool UMicrophoneSpeakComponent::startSpeaking(bool _shouldHearMyOwnVoice, bool isGlobal, const TArray<int32>& radioChannel, bool useRange, float MaxRange)
 {
 	static class UFunction* Func = nullptr;
 
@@ -565,7 +565,7 @@ bool UMicrophoneSpeakComponent::startSpeaking(bool _shouldHearMyOwnVoice, bool I
 	Params::MicrophoneSpeakComponent_startSpeaking Parms{};
 
 	Parms._shouldHearMyOwnVoice = _shouldHearMyOwnVoice;
-	Parms.IsGlobal = IsGlobal;
+	Parms.isGlobal = isGlobal;
 	Parms.radioChannel = std::move(radioChannel);
 	Parms.useRange = useRange;
 	Parms.MaxRange = MaxRange;
@@ -2039,13 +2039,13 @@ void UUniversalVoiceChat::VoiceChatSetThresholdSendData(float thresholdSendData)
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                                    _shouldHearMyOwnVoice                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    IsGlobal                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    isGlobal                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   radioChannel                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    useProximity                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   maxProximityRange                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UUniversalVoiceChat::VoiceChatStartSpeak(bool _shouldHearMyOwnVoice, bool IsGlobal, int32 radioChannel, bool useProximity, float maxProximityRange)
+bool UUniversalVoiceChat::VoiceChatStartSpeak(bool _shouldHearMyOwnVoice, bool isGlobal, int32 radioChannel, bool useProximity, float maxProximityRange)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2055,7 +2055,7 @@ bool UUniversalVoiceChat::VoiceChatStartSpeak(bool _shouldHearMyOwnVoice, bool I
 	Params::UniversalVoiceChat_VoiceChatStartSpeak Parms{};
 
 	Parms._shouldHearMyOwnVoice = _shouldHearMyOwnVoice;
-	Parms.IsGlobal = IsGlobal;
+	Parms.isGlobal = isGlobal;
 	Parms.radioChannel = radioChannel;
 	Parms.useProximity = useProximity;
 	Parms.maxProximityRange = maxProximityRange;
@@ -2075,13 +2075,13 @@ bool UUniversalVoiceChat::VoiceChatStartSpeak(bool _shouldHearMyOwnVoice, bool I
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                                    _shouldHearMyOwnVoice                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    IsGlobal                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    isGlobal                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<int32>&                    radioChannel                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    useProximity                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   maxProximityRange                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UUniversalVoiceChat::VoiceChatStartSpeakTeamArray(bool _shouldHearMyOwnVoice, bool IsGlobal, const TArray<int32>& radioChannel, bool useProximity, float maxProximityRange)
+bool UUniversalVoiceChat::VoiceChatStartSpeakTeamArray(bool _shouldHearMyOwnVoice, bool isGlobal, const TArray<int32>& radioChannel, bool useProximity, float maxProximityRange)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2091,7 +2091,7 @@ bool UUniversalVoiceChat::VoiceChatStartSpeakTeamArray(bool _shouldHearMyOwnVoic
 	Params::UniversalVoiceChat_VoiceChatStartSpeakTeamArray Parms{};
 
 	Parms._shouldHearMyOwnVoice = _shouldHearMyOwnVoice;
-	Parms.IsGlobal = IsGlobal;
+	Parms.isGlobal = isGlobal;
 	Parms.radioChannel = std::move(radioChannel);
 	Parms.useProximity = useProximity;
 	Parms.maxProximityRange = maxProximityRange;

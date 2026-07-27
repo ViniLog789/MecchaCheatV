@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "ST_ItemCoreDatas_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
 #include "UMG_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_EmoteMenu.WBP_EmoteMenu_C
-// 0x0080 (0x03C0 - 0x0340)
+// 0x0098 (0x03D8 - 0x0340)
 class UWBP_EmoteMenu_C final : public UUserWidget
 {
 public:
@@ -26,13 +26,16 @@ public:
 	class UWBP_RadialMenu_C*                      WBP_RadialMenue;                                   // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_KeyImage_C*                        WBP_KeyImage_1;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_KeyImage_C*                        WBP_KeyImage;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Open;                                              // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FST_ItemCoreDatas>              CoreDatas;                                         // 0x0368(0x0010)(Edit, BlueprintVisible, Interp, ExposeOnSpawn)
-	TMulticastInlineDelegate<void(class UClass* EmoteData, int32 Index_0)> SelectIndex;              // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(int32 Index_0)> HoverIndex;                                        // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         BeforeSelectIndex;                                 // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Non_Select_Color;                                  // 0x039C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Select_Color;                                      // 0x03AC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_57;                                      // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Open;                                              // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FST_ItemCoreDatas>              CoreDatas;                                         // 0x0370(0x0010)(Edit, BlueprintVisible, Interp, ExposeOnSpawn)
+	TMulticastInlineDelegate<void(class UClass* EmoteData, int32 Index_0)> SelectIndex;              // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 Index_0)> HoverIndex;                                        // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         BeforeSelectIndex;                                 // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Non_Select_Color;                                  // 0x03A4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Select_Color;                                      // 0x03B4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CentorText;                                        // 0x03C8(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
 	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);

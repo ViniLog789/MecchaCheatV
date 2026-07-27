@@ -38,6 +38,26 @@ public:
 };
 DUMPER7_ASSERTS_UGauntletTestController;
 
+// Class Gauntlet.GauntletTestControllerBootTest
+// 0x0000 (0x0030 - 0x0030)
+class UGauntletTestControllerBootTest final : public UGauntletTestController
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GauntletTestControllerBootTest")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GauntletTestControllerBootTest")
+	}
+	static class UGauntletTestControllerBootTest* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGauntletTestControllerBootTest>();
+	}
+};
+DUMPER7_ASSERTS_UGauntletTestControllerBootTest;
+
 // Class Gauntlet.GauntletTestControllerErrorTest
 // 0x0020 (0x0050 - 0x0030)
 class UGauntletTestControllerErrorTest final : public UGauntletTestController
@@ -60,25 +80,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGauntletTestControllerErrorTest;
-
-// Class Gauntlet.GauntletTestControllerBootTest
-// 0x0000 (0x0030 - 0x0030)
-class UGauntletTestControllerBootTest final : public UGauntletTestController
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GauntletTestControllerBootTest")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GauntletTestControllerBootTest")
-	}
-	static class UGauntletTestControllerBootTest* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGauntletTestControllerBootTest>();
-	}
-};
-DUMPER7_ASSERTS_UGauntletTestControllerBootTest;
 
 SDK_NAMESPACE_END

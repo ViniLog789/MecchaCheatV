@@ -576,7 +576,7 @@ struct FHairGroupsLOD final
 public:
 	float                                         AutoLODBias;                                       // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FHairLODSettings>               Lods;                                              // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FHairLODSettings>               LODs;                                              // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FHairGroupsLOD;
 
@@ -829,31 +829,6 @@ public:
 };
 DUMPER7_ASSERTS_FHairGroupsRendering;
 
-// ScriptStruct HairStrandsCore.MovieSceneGroomCacheParams
-// 0x0020 (0x0020 - 0x0000)
-struct FMovieSceneGroomCacheParams
-{
-public:
-	class UGroomCache*                            GroomCache;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	struct FFrameNumber                           FirstLoopStartFrameOffset;                         // 0x0008(0x0004)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           StartFrameOffset;                                  // 0x000C(0x0004)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           EndFrameOffset;                                    // 0x0010(0x0004)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayRate;                                          // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bReverse : 1;                                      // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMovieSceneGroomCacheParams;
-
-// ScriptStruct HairStrandsCore.MovieSceneGroomCacheSectionTemplateParameters
-// 0x0008 (0x0028 - 0x0020)
-struct FMovieSceneGroomCacheSectionTemplateParameters final : public FMovieSceneGroomCacheParams
-{
-public:
-	struct FFrameNumber                           SectionStartTime;                                  // 0x0020(0x0004)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           SectionEndTime;                                    // 0x0024(0x0004)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMovieSceneGroomCacheSectionTemplateParameters;
-
 // ScriptStruct HairStrandsCore.GoomBindingGroupInfo
 // 0x0010 (0x0010 - 0x0000)
 struct FGoomBindingGroupInfo final
@@ -937,6 +912,31 @@ public:
 	bool                                          bUseUniqueGuide;                                   // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGroomBuildSettings;
+
+// ScriptStruct HairStrandsCore.MovieSceneGroomCacheParams
+// 0x0020 (0x0020 - 0x0000)
+struct FMovieSceneGroomCacheParams
+{
+public:
+	class UGroomCache*                            GroomCache;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FFrameNumber                           FirstLoopStartFrameOffset;                         // 0x0008(0x0004)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           StartFrameOffset;                                  // 0x000C(0x0004)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           EndFrameOffset;                                    // 0x0010(0x0004)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayRate;                                          // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bReverse : 1;                                      // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMovieSceneGroomCacheParams;
+
+// ScriptStruct HairStrandsCore.MovieSceneGroomCacheSectionTemplateParameters
+// 0x0008 (0x0028 - 0x0020)
+struct FMovieSceneGroomCacheSectionTemplateParameters final : public FMovieSceneGroomCacheParams
+{
+public:
+	struct FFrameNumber                           SectionStartTime;                                  // 0x0020(0x0004)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           SectionEndTime;                                    // 0x0024(0x0004)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMovieSceneGroomCacheSectionTemplateParameters;
 
 // ScriptStruct HairStrandsCore.MovieSceneGroomCacheSectionTemplate
 // 0x0028 (0x0048 - 0x0020)

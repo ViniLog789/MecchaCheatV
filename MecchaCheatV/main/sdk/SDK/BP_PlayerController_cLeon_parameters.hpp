@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EnhancedInput_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "InputCore_structs.hpp"
 
 
@@ -44,41 +44,68 @@ public:
 };
 DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_GetPawnCentorLocation;
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Ctrl+Shift_H_K2Node_InputKeyEvent_0
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Ctrl+Shift_H_K2Node_InputKeyEvent_3
 // 0x0018 (0x0018 - 0x0000)
-struct BP_PlayerController_cLeon_C_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0 final
+struct BP_PlayerController_cLeon_C_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_3 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0;
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_3;
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_G_K2Node_InputKeyEvent_1
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_G_K2Node_InputKeyEvent_4
 // 0x0018 (0x0018 - 0x0000)
-struct BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_1 final
+struct BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_4 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_1;
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_4;
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Six_K2Node_InputKeyEvent_2
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2
 // 0x0018 (0x0018 - 0x0000)
-struct BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_2 final
+struct BP_PlayerController_cLeon_C_InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_2;
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2;
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Three_K2Node_InputKeyEvent_3
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1
 // 0x0018 (0x0018 - 0x0000)
-struct BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_3 final
+struct BP_PlayerController_cLeon_C_InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_3;
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerController_cLeon_C_InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Six_K2Node_InputKeyEvent_5
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_5 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_5;
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Three_K2Node_InputKeyEvent_6
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_6 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_6;
 
 // Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_U_K2Node_InputDebugKeyEvent_0
 // 0x0038 (0x0038 - 0x0000)

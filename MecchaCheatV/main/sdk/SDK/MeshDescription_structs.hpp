@@ -33,6 +33,13 @@ public:
 };
 DUMPER7_ASSERTS_FElementID;
 
+// ScriptStruct MeshDescription.PolygonID
+// 0x0000 (0x0004 - 0x0004)
+struct FPolygonID final : public FElementID
+{
+};
+DUMPER7_ASSERTS_FPolygonID;
+
 // ScriptStruct MeshDescription.VertexID
 // 0x0000 (0x0004 - 0x0004)
 struct FVertexID final : public FElementID
@@ -74,12 +81,5 @@ struct FPolygonGroupID final : public FElementID
 {
 };
 DUMPER7_ASSERTS_FPolygonGroupID;
-
-// ScriptStruct MeshDescription.PolygonID
-// 0x0000 (0x0004 - 0x0004)
-struct FPolygonID final : public FElementID
-{
-};
-DUMPER7_ASSERTS_FPolygonID;
 
 SDK_NAMESPACE_END

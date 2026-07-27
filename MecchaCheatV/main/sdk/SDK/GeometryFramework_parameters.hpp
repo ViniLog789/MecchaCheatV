@@ -17,6 +17,17 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function GeometryFramework.DynamicMeshProcessorBlueprint.ProcessDynamicMesh
+// 0x0010 (0x0010 - 0x0000)
+struct DynamicMeshProcessorBlueprint_ProcessDynamicMesh final
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFailed;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DynamicMeshProcessorBlueprint_ProcessDynamicMesh;
+
 // Function GeometryFramework.BaseDynamicMeshComponent.GetDynamicMesh
 // 0x0008 (0x0008 - 0x0000)
 struct BaseDynamicMeshComponent_GetDynamicMesh final
@@ -425,17 +436,6 @@ public:
 	EDynamicMeshComponentTangentsMode             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DynamicMeshComponent_GetTangentsTypePure;
-
-// Function GeometryFramework.DynamicMeshProcessorBlueprint.ProcessDynamicMesh
-// 0x0010 (0x0010 - 0x0000)
-struct DynamicMeshProcessorBlueprint_ProcessDynamicMesh final
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFailed;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DynamicMeshProcessorBlueprint_ProcessDynamicMesh;
 
 // Function GeometryFramework.DynamicMeshActor.AllocateComputeMesh
 // 0x0008 (0x0008 - 0x0000)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "IKRig_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -71,6 +71,42 @@ public:
 };
 DUMPER7_ASSERTS_IKRetargetCurveRemapController_SetSettings;
 
+// Function IKRig.IKRetargetFKChainsController.GetSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRetargetFKChainsController_GetSettings final
+{
+public:
+	struct FIKRetargetFKChainsOpSettings          ReturnValue;                                       // 0x0000(0x0040)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetFKChainsController_GetSettings;
+
+// Function IKRig.IKRetargetFKChainsController.SetSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRetargetFKChainsController_SetSettings final
+{
+public:
+	struct FIKRetargetFKChainsOpSettings          InSettings;                                        // 0x0000(0x0040)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetFKChainsController_SetSettings;
+
+// Function IKRig.IKRetargetIKChainsController.GetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetIKChainsController_GetSettings final
+{
+public:
+	struct FIKRetargetIKChainsOpSettings          ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetIKChainsController_GetSettings;
+
+// Function IKRig.IKRetargetIKChainsController.SetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetIKChainsController_SetSettings final
+{
+public:
+	struct FIKRetargetIKChainsOpSettings          InSettings;                                        // 0x0000(0x0038)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetIKChainsController_SetSettings;
+
 // Function IKRig.RetargetProfileLibrary.CopyRetargetProfileFromRetargetAsset
 // 0x0130 (0x0130 - 0x0000)
 struct RetargetProfileLibrary_CopyRetargetProfileFromRetargetAsset final
@@ -91,42 +127,6 @@ public:
 	class UIKRetargetOpControllerBase*            ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RetargetProfileLibrary_GetOpControllerFromRetargetProfile;
-
-// Function IKRig.IKRetargetIKChainsController.GetSettings
-// 0x0038 (0x0038 - 0x0000)
-struct IKRetargetIKChainsController_GetSettings final
-{
-public:
-	struct FIKRetargetIKChainsOpSettings          ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetIKChainsController_GetSettings;
-
-// Function IKRig.IKRetargetIKChainsController.SetSettings
-// 0x0038 (0x0038 - 0x0000)
-struct IKRetargetIKChainsController_SetSettings final
-{
-public:
-	struct FIKRetargetIKChainsOpSettings          InSettings;                                        // 0x0000(0x0038)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetIKChainsController_SetSettings;
-
-// Function IKRig.IKRetargetFKChainsController.GetSettings
-// 0x0040 (0x0040 - 0x0000)
-struct IKRetargetFKChainsController_GetSettings final
-{
-public:
-	struct FIKRetargetFKChainsOpSettings          ReturnValue;                                       // 0x0000(0x0040)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetFKChainsController_GetSettings;
-
-// Function IKRig.IKRetargetFKChainsController.SetSettings
-// 0x0040 (0x0040 - 0x0000)
-struct IKRetargetFKChainsController_SetSettings final
-{
-public:
-	struct FIKRetargetFKChainsOpSettings          InSettings;                                        // 0x0000(0x0040)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetFKChainsController_SetSettings;
 
 // Function IKRig.IKGoalCreatorInterface.AddIKGoals
 // 0x0050 (0x0050 - 0x0000)

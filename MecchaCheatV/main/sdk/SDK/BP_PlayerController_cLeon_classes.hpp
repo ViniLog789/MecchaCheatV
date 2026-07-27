@@ -48,10 +48,13 @@ public:
 	void EEYAN_State(bool State);
 	void Finish();
 	void GetPawnCentorLocation(struct FVector* ReturnLocation);
-	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0(const struct FKey& Key);
-	void InpActEvt_G_K2Node_InputKeyEvent_1(const struct FKey& Key);
-	void InpActEvt_Six_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_Three_K2Node_InputKeyEvent_3(const struct FKey& Key);
+	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_3(const struct FKey& Key);
+	void InpActEvt_G_K2Node_InputKeyEvent_4(const struct FKey& Key);
+	void InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	void InpActEvt_Six_K2Node_InputKeyEvent_5(const struct FKey& Key);
+	void InpActEvt_Three_K2Node_InputKeyEvent_6(const struct FKey& Key);
 	void InpActEvt_U_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
 	class AActor* NearSurvivor_IgnoreSelf(const struct FVector& Location, const struct FVector& Direction, float* OutDotProduct);
 	void OnNamePlateVisibilityChange(bool Visibility);

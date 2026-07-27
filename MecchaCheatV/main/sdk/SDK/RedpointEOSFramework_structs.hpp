@@ -35,6 +35,16 @@ enum class ERedpointAvatarLoadingIndicator : uint8
 	ERedpointAvatarLoadingIndicator_MAX      = 3,
 };
 
+// Enum RedpointEOSFramework.ERedpointFrameworkRemotePlayerAntiCheatStatus
+// NumValues: 0x0004
+enum class ERedpointFrameworkRemotePlayerAntiCheatStatus : uint8
+{
+	Insecure                                 = 0,
+	LocalVerified                            = 1,
+	RemoteVerified                           = 2,
+	ERedpointFrameworkRemotePlayerAntiCheatStatus_MAX = 3,
+};
+
 // Enum RedpointEOSFramework.ERedpointFriendListEntryInviteStatus
 // NumValues: 0x0006
 enum class ERedpointFriendListEntryInviteStatus : uint8
@@ -172,16 +182,17 @@ public:
 DUMPER7_ASSERTS_FRedpointVoiceChatAudioDevice;
 
 // ScriptStruct RedpointEOSFramework.RedpointVoiceChatChannelConnection
-// 0x0048 (0x0048 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct FRedpointVoiceChatChannelConnection final
 {
 public:
 	bool                                          bIsUnmanagedChannel;                               // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ManagedChannelLobbyId;                             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UnmanagedChannelBaseUrl;                           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UnmanagedChannelName;                              // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UnmanagedChannelAuthenticationToken;               // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ClientPlayerId;                                    // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ManagedChannelLobbyId;                             // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UnmanagedChannelBaseUrl;                           // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UnmanagedChannelName;                              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UnmanagedChannelAuthenticationToken;               // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRedpointVoiceChatChannelConnection;
 

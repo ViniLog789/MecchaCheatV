@@ -63,15 +63,12 @@ enum class EGameplayTagSelectionType : uint8
 	EGameplayTagSelectionType_MAX            = 4,
 };
 
-// ScriptStruct GameplayTags.GameplayTagRedirect
-// 0x0010 (0x0010 - 0x0000)
-struct FGameplayTagRedirect final
+// ScriptStruct GameplayTags.GameplayTagNetSerializerConfig
+// 0x0000 (0x0010 - 0x0010)
+struct FGameplayTagNetSerializerConfig final : public FNetSerializerConfig
 {
-public:
-	class FName                                   OldTagName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   NewTagName;                                        // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGameplayTagRedirect;
+DUMPER7_ASSERTS_FGameplayTagNetSerializerConfig;
 
 // ScriptStruct GameplayTags.GameplayTag
 // 0x0008 (0x0008 - 0x0000)
@@ -81,13 +78,6 @@ public:
 	class FName                                   TagName;                                           // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, SaveGame, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FGameplayTag;
-
-// ScriptStruct GameplayTags.GameplayTagContainerNetSerializerConfig
-// 0x0000 (0x0010 - 0x0010)
-struct FGameplayTagContainerNetSerializerConfig final : public FNetSerializerConfig
-{
-};
-DUMPER7_ASSERTS_FGameplayTagContainerNetSerializerConfig;
 
 // ScriptStruct GameplayTags.GameplayTagContainer
 // 0x0020 (0x0020 - 0x0000)
@@ -131,12 +121,22 @@ public:
 };
 DUMPER7_ASSERTS_FGameplayTagCreationWidgetHelper;
 
-// ScriptStruct GameplayTags.GameplayTagNetSerializerConfig
+// ScriptStruct GameplayTags.GameplayTagContainerNetSerializerConfig
 // 0x0000 (0x0010 - 0x0010)
-struct FGameplayTagNetSerializerConfig final : public FNetSerializerConfig
+struct FGameplayTagContainerNetSerializerConfig final : public FNetSerializerConfig
 {
 };
-DUMPER7_ASSERTS_FGameplayTagNetSerializerConfig;
+DUMPER7_ASSERTS_FGameplayTagContainerNetSerializerConfig;
+
+// ScriptStruct GameplayTags.GameplayTagRedirect
+// 0x0010 (0x0010 - 0x0000)
+struct FGameplayTagRedirect final
+{
+public:
+	class FName                                   OldTagName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NewTagName;                                        // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayTagRedirect;
 
 // ScriptStruct GameplayTags.GameplayTagTableRow
 // 0x0018 (0x0020 - 0x0008)

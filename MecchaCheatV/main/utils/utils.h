@@ -21,7 +21,6 @@ namespace Utils
     void ChangeName(SDK::APawn* myPlayer, std::string name);
     bool isSurvivor(SDK::AActor* actor);
     bool isHunter(SDK::AActor* actor);
-    void KillSurvivor(SDK::APawn* myPlayer, SDK::AActor* actor);
     void RequestTeleport(const SDK::FVector& location);
     void RequestTeleportToActor(SDK::AActor* target);
     void ProcessTeleport(SDK::APawn* myPlayer);

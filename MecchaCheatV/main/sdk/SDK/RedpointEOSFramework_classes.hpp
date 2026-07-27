@@ -112,8 +112,10 @@ class URedpointFrameworkBlueprintLibrary final : public UBlueprintFunctionLibrar
 {
 public:
 	static TArray<struct FRedpointVoiceChatAudioDevice> GetAvailableVoiceChatAudioDevices(class UObject* WorldContextObject);
+	static class FString GetDedicatedServerPublicKey(class UObject* WorldContextObject);
 	static class AGameSession* GetGameSession(class AGameModeBase* GameMode);
 	static class FString GetInputPlatformAndPlayerDebugState(class UObject* WorldContextObject);
+	static ERedpointFrameworkRemotePlayerAntiCheatStatus GetRemotePlayerAntiCheatStatus(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId);
 	static struct FRedpointVoiceChatAudioDevice GetVoiceChatAudioInputDevice(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId);
 	static struct FRedpointVoiceChatAudioDevice GetVoiceChatAudioOutputDevice(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId);
 	static bool IsGlobalVoiceChatAudioFeatureEnabled(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId, ERedpointVoiceChatAudioFeature AudioFeature);
@@ -162,6 +164,7 @@ public:
 
 	class UParty* GetPrimaryParty() const;
 	bool IsPrimaryPartyLeader() const;
+	bool IsVoiceChatEnabledInPrimaryParty() const;
 
 public:
 	static class UClass* StaticClass()
@@ -779,6 +782,35 @@ public:
 };
 DUMPER7_ASSERTS_ARedpointPartyMember;
 
+// Class RedpointEOSFramework.RedpointSetPartyVoiceChatEnabledAsyncAction
+// 0x0020 (0x0050 - 0x0030)
+class URedpointSetPartyVoiceChatEnabledAsyncAction final : public UBlueprintAsyncActionBase
+{
+public:
+	TMulticastInlineDelegate<void(bool bSuccessful)> OnComplete;                                     // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class URedpointFrameworkLocalPlayerSubsystem* LocalPlayerSubsystem;                              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	bool                                          bEnabled;                                          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class URedpointSetPartyVoiceChatEnabledAsyncAction* SetVoiceChatEnabled(class URedpointFrameworkLocalPlayerSubsystem* LocalPlayerSubsystem_0, bool bEnabled_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RedpointSetPartyVoiceChatEnabledAsyncAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RedpointSetPartyVoiceChatEnabledAsyncAction")
+	}
+	static class URedpointSetPartyVoiceChatEnabledAsyncAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URedpointSetPartyVoiceChatEnabledAsyncAction>();
+	}
+};
+DUMPER7_ASSERTS_URedpointSetPartyVoiceChatEnabledAsyncAction;
+
 // Class RedpointEOSFramework.RedpointSquareBox
 // 0x0028 (0x01A8 - 0x0180)
 class URedpointSquareBox final : public UContentWidget
@@ -974,7 +1006,8 @@ public:
 	struct FUniqueNetIdRepl                       SpeakerPlayerId;                                   // 0x02A0(0x0030)(Net, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundAttenuation*                      SpeakerAttenuationSettings;                        // 0x02D0(0x0008)(Net, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<class FName>                           AudioComponentTags;                                // 0x02D8(0x0010)(Net, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E8[0x8];                                      // 0x02E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSilenced;                                         // 0x02E8(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1062,24 +1095,26 @@ public:
 DUMPER7_ASSERTS_URedpointVoiceChatClientComponentGameInstanceSubsystem;
 
 // Class RedpointEOSFramework.RedpointVoiceChatComponent
-// 0x00E0 (0x0198 - 0x00B8)
+// 0x0148 (0x0200 - 0x00B8)
 class URedpointVoiceChatComponent final : public UActorComponent
 {
 public:
 	uint8                                         Pad_B8[0x4];                                       // 0x00B8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         VoiceChatGroup;                                    // 0x00BC(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	ERedpointVoiceChatProximityType               ProximityType;                                     // 0x00C0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      AttenuationSettings;                               // 0x00C8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	struct FRedpointVoiceChatChannelConnection    Connection;                                        // 0x00D0(0x0048)(Net, RepNotify, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  PossessedPawn;                                     // 0x0120(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class AActor*                                 CustomAudioAnchorPoint;                            // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class AActor*                                 AudioAnchorPoint;                                  // 0x0130(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class URedpointVoiceChatAnchorPointComponent* AudioAnchorPointComponent;                         // 0x0138(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	uint8                                         Pad_140[0x38];                                     // 0x0140(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FString& ChannelName)> OnVoiceChatChannelJoined;       // 0x0178(0x0010)(Edit, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& PreviousChannelName)> OnVoiceChatChannelLeft; // 0x0188(0x0010)(Edit, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	bool                                          bSilencedWhenNoAnchorPoint;                        // 0x00C1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C2[0x56];                                      // 0x00C2(0x0056)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      AttenuationSettings;                               // 0x0118(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FRedpointVoiceChatChannelConnection    Connection;                                        // 0x0120(0x0058)(Net, RepNotify, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_178[0x8];                                      // 0x0178(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  PossessedPawn;                                     // 0x0180(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class AActor*                                 CustomAudioAnchorPoint;                            // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class APlayerState*                           PreviousPlayerState;                               // 0x0190(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class AActor*                                 AudioAnchorPoint;                                  // 0x0198(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class URedpointVoiceChatAnchorPointComponent* AudioAnchorPointComponent;                         // 0x01A0(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_1A8[0x38];                                     // 0x01A8(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class FString& ChannelName)> OnVoiceChatChannelJoined;       // 0x01E0(0x0010)(Edit, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& PreviousChannelName)> OnVoiceChatChannelLeft; // 0x01F0(0x0010)(Edit, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	void OnPossessedPawnChanged(class APawn* OldPawn, class APawn* NewPawn);
@@ -1093,6 +1128,7 @@ public:
 	void SetOutputMuted(bool bMuted);
 	void SetOutputVolume(float Volume);
 	void SetProximityType(ERedpointVoiceChatProximityType InProximityType);
+	void SetSilencedWhenNoAnchorPoint(bool bInSilencedWhenNoAnchorPoint);
 	void SetVoiceChatGroup(int32 InVoiceChatGroup);
 
 	TArray<struct FUniqueNetIdRepl> GetAllMemberUserIds() const;
@@ -1105,6 +1141,7 @@ public:
 	TArray<struct FUniqueNetIdRepl> GetOtherMemberUserIds() const;
 	float GetOutputVolume() const;
 	ERedpointVoiceChatProximityType GetProximityType() const;
+	bool GetSilencedWhenNoAnchorPoint() const;
 	int32 GetVoiceChatGroup() const;
 	bool IsHardMutedOnServer() const;
 	bool IsInputMuted() const;

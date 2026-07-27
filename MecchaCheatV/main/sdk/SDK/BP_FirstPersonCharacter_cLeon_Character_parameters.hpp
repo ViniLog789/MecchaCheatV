@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "UINavigation_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Mover_structs.hpp"
-#include "EnhancedInput_structs.hpp"
-#include "UINavigation_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -179,6 +179,24 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_CustomCrouch_Server_;
 
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_0
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_0 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_0;
+
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_1
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_1 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_1;
+
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_IA_CopyCreate_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)
 struct BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_IA_CopyCreate_K2Node_EnhancedInputActionEvent_0 final
@@ -239,23 +257,23 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_4;
 
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Five_K2Node_InputKeyEvent_0
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Five_K2Node_InputKeyEvent_2
 // 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Five_K2Node_InputKeyEvent_0 final
+struct BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Five_K2Node_InputKeyEvent_2 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Five_K2Node_InputKeyEvent_0;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Five_K2Node_InputKeyEvent_2;
 
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Two_K2Node_InputKeyEvent_1
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Two_K2Node_InputKeyEvent_3
 // 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Two_K2Node_InputKeyEvent_1 final
+struct BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Two_K2Node_InputKeyEvent_3 final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Two_K2Node_InputKeyEvent_1;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Two_K2Node_InputKeyEvent_3;
 
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_IA_Provocation_K2Node_EnhancedInputActionEvent_5
 // 0x0030 (0x0030 - 0x0000)

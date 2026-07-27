@@ -440,9 +440,9 @@ void ABP_EnablePotoIn_Base_C::GetItemInfo(ENUM_HandType* HandType, ENUM_ClassTyp
 // Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetParentCharacter
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnablePotoIn_Base_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter)
+void ABP_EnablePotoIn_Base_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter)
 {
 	static class UFunction* Func = nullptr;
 
@@ -453,8 +453,8 @@ void ABP_EnablePotoIn_Base_C::GetParentCharacter(class ABP_FirstPersonCharacter_
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (FirstpersonCharacter != nullptr)
-		*FirstpersonCharacter = Parms.FirstpersonCharacter;
+	if (FirstPersonCharacter != nullptr)
+		*FirstPersonCharacter = Parms.FirstPersonCharacter;
 }
 
 

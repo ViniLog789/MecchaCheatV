@@ -107,14 +107,14 @@ extern "C" __declspec(dllexport) DWORD WINAPI MecchaCheatVThread()
 			LOG_RELEASE(FOREGROUND_RED, "Failed to verify the ProcessEvent address.\nThe specified address does not appear to point to a valid function.\n\nMecchaCheatV will now unload automatically to prevent a crash."); // for console
             goto failedaddr;
         }
-
+        
         AHK(hookingInstance->OriginalPresent, Hooks::HkPresent); // ADD_HOOK
         AHK(Globals::hookedProcessEvent, Hooks::HkProcessEvent);
 
         hookingInstance->ApplyHooks();
         hooksApplied = true;
 
-        LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Welcome, to MecchaCheatV\nMeccha Chameleon version: 3.0.0\n");
+        LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Welcome, to MecchaCheatV\nMeccha Chameleon version: 3.3.1\n");
         LOG_RELEASE(FOREGROUND_BLUE | FOREGROUND_INTENSITY, std::string(32, '-').c_str(), "\n");
         LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Menu navigation:\n");
         LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Press", Utils::getKeyName(MenuToggleKey), "to open / close the menu\n");

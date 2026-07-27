@@ -760,6 +760,46 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::CustomCrouch_Server_(double Hei
 }
 
 
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_0(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_0");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_0 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_1
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_1(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_1");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_1 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_IA_CopyCreate_K2Node_EnhancedInputActionEvent_0
 // (BlueprintEvent)
 // Parameters:
@@ -890,19 +930,19 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::InpActEvt_IA_Shot_K2Node_Enhanc
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Five_K2Node_InputKeyEvent_0
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Five_K2Node_InputKeyEvent_2
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_C::InpActEvt_Five_K2Node_InputKeyEvent_0(const struct FKey& Key)
+void ABP_FirstPersonCharacter_cLeon_Character_C::InpActEvt_Five_K2Node_InputKeyEvent_2(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "InpActEvt_Five_K2Node_InputKeyEvent_0");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "InpActEvt_Five_K2Node_InputKeyEvent_2");
 
-	Params::BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Five_K2Node_InputKeyEvent_0 Parms{};
+	Params::BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Five_K2Node_InputKeyEvent_2 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -910,19 +950,19 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::InpActEvt_Five_K2Node_InputKeyE
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Two_K2Node_InputKeyEvent_1
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.InpActEvt_Two_K2Node_InputKeyEvent_3
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_C::InpActEvt_Two_K2Node_InputKeyEvent_1(const struct FKey& Key)
+void ABP_FirstPersonCharacter_cLeon_Character_C::InpActEvt_Two_K2Node_InputKeyEvent_3(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "InpActEvt_Two_K2Node_InputKeyEvent_1");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "InpActEvt_Two_K2Node_InputKeyEvent_3");
 
-	Params::BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Two_K2Node_InputKeyEvent_1 Parms{};
+	Params::BP_FirstPersonCharacter_cLeon_Character_C_InpActEvt_Two_K2Node_InputKeyEvent_3 Parms{};
 
 	Parms.Key = std::move(Key);
 

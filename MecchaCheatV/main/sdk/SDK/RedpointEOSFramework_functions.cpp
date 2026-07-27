@@ -74,6 +74,34 @@ TArray<struct FRedpointVoiceChatAudioDevice> URedpointFrameworkBlueprintLibrary:
 }
 
 
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.GetDedicatedServerPublicKey
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString URedpointFrameworkBlueprintLibrary::GetDedicatedServerPublicKey(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RedpointFrameworkBlueprintLibrary", "GetDedicatedServerPublicKey");
+
+	Params::RedpointFrameworkBlueprintLibrary_GetDedicatedServerPublicKey Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.GetGameSession
 // (Final, BlueprintAuthorityOnly, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -118,6 +146,36 @@ class FString URedpointFrameworkBlueprintLibrary::GetInputPlatformAndPlayerDebug
 	Params::RedpointFrameworkBlueprintLibrary_GetInputPlatformAndPlayerDebugState Parms{};
 
 	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.GetRemotePlayerAntiCheatStatus
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          PlayerId                                               (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ERedpointFrameworkRemotePlayerAntiCheatStatusReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ERedpointFrameworkRemotePlayerAntiCheatStatus URedpointFrameworkBlueprintLibrary::GetRemotePlayerAntiCheatStatus(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RedpointFrameworkBlueprintLibrary", "GetRemotePlayerAntiCheatStatus");
+
+	Params::RedpointFrameworkBlueprintLibrary_GetRemotePlayerAntiCheatStatus Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerId = std::move(PlayerId);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -613,6 +671,31 @@ bool URedpointFrameworkLocalPlayerSubsystem::IsPrimaryPartyLeader() const
 		Func = Class->GetFunction("RedpointFrameworkLocalPlayerSubsystem", "IsPrimaryPartyLeader");
 
 	Params::RedpointFrameworkLocalPlayerSubsystem_IsPrimaryPartyLeader Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RedpointEOSFramework.RedpointFrameworkLocalPlayerSubsystem.IsVoiceChatEnabledInPrimaryParty
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URedpointFrameworkLocalPlayerSubsystem::IsVoiceChatEnabledInPrimaryParty() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RedpointFrameworkLocalPlayerSubsystem", "IsVoiceChatEnabledInPrimaryParty");
+
+	Params::RedpointFrameworkLocalPlayerSubsystem_IsVoiceChatEnabledInPrimaryParty Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1549,6 +1632,36 @@ void ARedpointPartyMember::PartyMemberChanged(const struct FRedpointPartyMemberI
 }
 
 
+// Function RedpointEOSFramework.RedpointSetPartyVoiceChatEnabledAsyncAction.SetVoiceChatEnabled
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class URedpointFrameworkLocalPlayerSubsystem*LocalPlayerSubsystem_0                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnabled_0                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class URedpointSetPartyVoiceChatEnabledAsyncAction*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class URedpointSetPartyVoiceChatEnabledAsyncAction* URedpointSetPartyVoiceChatEnabledAsyncAction::SetVoiceChatEnabled(class URedpointFrameworkLocalPlayerSubsystem* LocalPlayerSubsystem_0, bool bEnabled_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RedpointSetPartyVoiceChatEnabledAsyncAction", "SetVoiceChatEnabled");
+
+	Params::RedpointSetPartyVoiceChatEnabledAsyncAction_SetVoiceChatEnabled Parms{};
+
+	Parms.LocalPlayerSubsystem_0 = LocalPlayerSubsystem_0;
+	Parms.bEnabled_0 = bEnabled_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function RedpointEOSFramework.RedpointStartupScreen.OnLoginFailed
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -2010,6 +2123,31 @@ void URedpointVoiceChatComponent::SetProximityType(ERedpointVoiceChatProximityTy
 }
 
 
+// Function RedpointEOSFramework.RedpointVoiceChatComponent.SetSilencedWhenNoAnchorPoint
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInSilencedWhenNoAnchorPoint                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URedpointVoiceChatComponent::SetSilencedWhenNoAnchorPoint(bool bInSilencedWhenNoAnchorPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RedpointVoiceChatComponent", "SetSilencedWhenNoAnchorPoint");
+
+	Params::RedpointVoiceChatComponent_SetSilencedWhenNoAnchorPoint Parms{};
+
+	Parms.bInSilencedWhenNoAnchorPoint = bInSilencedWhenNoAnchorPoint;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function RedpointEOSFramework.RedpointVoiceChatComponent.SetVoiceChatGroup
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2279,6 +2417,31 @@ ERedpointVoiceChatProximityType URedpointVoiceChatComponent::GetProximityType() 
 		Func = Class->GetFunction("RedpointVoiceChatComponent", "GetProximityType");
 
 	Params::RedpointVoiceChatComponent_GetProximityType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RedpointEOSFramework.RedpointVoiceChatComponent.GetSilencedWhenNoAnchorPoint
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URedpointVoiceChatComponent::GetSilencedWhenNoAnchorPoint() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RedpointVoiceChatComponent", "GetSilencedWhenNoAnchorPoint");
+
+	Params::RedpointVoiceChatComponent_GetSilencedWhenNoAnchorPoint Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

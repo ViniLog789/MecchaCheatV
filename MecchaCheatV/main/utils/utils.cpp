@@ -301,26 +301,6 @@ bool Utils::isHunter(SDK::AActor* actor)
     if (!baseClass) return false;
     return baseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::StaticClass());
 }
-// thx phxgg
-void Utils::KillSurvivor(SDK::APawn* myPlayer, SDK::AActor* actor)
-{
-    if (!myPlayer || !actor || myPlayer == actor || !isHunter(myPlayer) || !isSurvivor(actor) || isDead(actor))
-        return;
-
-    auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(myPlayer);
-    auto* survivor = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*>(actor);
-    if (!isObjectValid(hunter) || !isObjectValid(survivor))
-        return;
-
-    SDK::UFunction* fn = hunter->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "KillPlayer");
-    if (!fn)
-        return;
-
-    SDK::Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer parms{};
-    parms.FirstpersonCharacter = survivor;
-    parms.SourcePlayerState = static_cast<SDK::ABP_FirstPersonPlayerState_Online_cLeon_C*>(hunter->MyPlayerState);
-    hunter->ProcessEvent(fn, &parms);
-}
 
 void Utils::RequestTeleport(const SDK::FVector& location)
 {

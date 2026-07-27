@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "LinkMergeTargetPrimitives_structs.hpp"
-#include "ReferencedGlues_structs.hpp"
-#include "LinkMergePoint_structs.hpp"
 #include "PenguinHotel_structs.hpp"
 #include "PenguinHotel_classes.hpp"
+#include "LinkMergeTargetPrimitives_structs.hpp"
+#include "LinkMergePoint_structs.hpp"
+#include "ReferencedGlues_structs.hpp"
 #include "PrimitiveGlues_structs.hpp"
 
 

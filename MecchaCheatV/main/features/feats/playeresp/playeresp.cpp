@@ -2,7 +2,7 @@
 #include "playeresp.h"
 #include <algorithm>
 
-using namespace MecchaCheatV::Features::Visuals;
+using namespace MecchaCheatV::Features::Visuals; // maybe my code is bad
 
 static std::unordered_map<SDK::USkeletalMesh*, std::vector<std::pair<int32_t, int32_t>>> g_BonePairsCache;
 
@@ -33,6 +33,9 @@ PlayerESP::PlayerESP() : FeatureCore("Player ESP", TYPE_VISUALS)
     DECLARE_CONFIG(GetConfigManager(), "InvisibleColor", ImColor, ImColor(255, 0, 0, 255));
     DECLARE_CONFIG(GetConfigManager(), "HunterColor", ImColor, ImColor(255, 215, 0, 255));
     DECLARE_CONFIG(GetConfigManager(), "SurvivorColor", ImColor, ImColor(0, 222, 236, 255));
+
+    DECLARE_CONFIG(GetConfigManager(), "ShowDeathMarkers", bool, true);
+    DECLARE_CONFIG(GetConfigManager(), "DeathMarkerColor", ImColor, ImColor(255, 0, 0, 255));
 }
 
 void PlayerESP::DrawSkeleton(SDK::USkeletalMeshComponent* Mesh, SDK::APlayerController* PC, ImDrawList* drawList, ImU32 color, float thickness)
@@ -196,6 +199,14 @@ void PlayerESP::DrawSnapline(ImDrawList* drawList, const SDK::FVector2D& target,
     drawList->AddLine(screenCenter, ImVec2(target.X, target.Y), color, thickness);
 }
 
+void PlayerESP::DrawDeathMarker(ImDrawList* drawList, const SDK::FVector2D& screenPos, ImU32 color, float size)
+{
+    float half = size * 0.5f;
+    drawList->AddLine(ImVec2(screenPos.X - half, screenPos.Y - half), ImVec2(screenPos.X + half, screenPos.Y + half), color, 2.0f);
+    drawList->AddLine(ImVec2(screenPos.X + half, screenPos.Y - half), ImVec2(screenPos.X - half, screenPos.Y + half), color, 2.0f);
+    drawList->AddCircle(ImVec2(screenPos.X, screenPos.Y), size * 0.7f, color, 12, 1.5f);
+}
+
 std::string PlayerESP::GetRoleText(SDK::AActor* actor)
 {
     if (!actor || !Utils::isObjectValid(actor)) return "";
@@ -205,6 +216,9 @@ std::string PlayerESP::GetRoleText(SDK::AActor* actor)
 
     if (actor->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C::StaticClass()))
         return "Survivor";
+
+    if (actor->IsA(SDK::ABP_SpectatePawn_cLeon_C::StaticClass()))
+        return "Spectator";
 
     return "";
 }
@@ -260,6 +274,8 @@ void PlayerESP::OnRender()
     const bool showLocalPlayer = CONFIG_BOOL(GetConfigManager(), "ShowLocalPlayer");
     const bool showSkeleton = CONFIG_BOOL(GetConfigManager(), "ShowSkeleton");
     const float skeletonThickness = CONFIG_FLOAT(GetConfigManager(), "SkeletonThickness");
+    const bool showDeathMarkers = CONFIG_BOOL(GetConfigManager(), "ShowDeathMarkers");
+    const ImColor deathMarkerColor = CONFIG_COLOR(GetConfigManager(), "DeathMarkerColor");
 
     auto acknowledgedPawn = Utils::GetAcknowledgedPawn();
     auto drawList = ImGui::GetBackgroundDrawList();
@@ -270,6 +286,28 @@ void PlayerESP::OnRender()
 
     int32_t numElements = playerArray.Num();
     if (numElements <= 0 || numElements > 200) return;
+
+    std::unordered_set<SDK::APlayerState*> currentPlayers;
+    for (int32_t i = 0; i < numElements; ++i)
+    {
+        SDK::APlayerState* player = nullptr;
+        try
+        {
+            if (!playerArray.IsValidIndex(i)) break;
+            player = playerArray[i];
+        }
+        catch (const std::exception&) { break; }
+        if (player && Utils::isObjectValid(player))
+            currentPlayers.insert(player);
+    }
+
+    for (auto it = m_LastAlivePositions.begin(); it != m_LastAlivePositions.end(); )
+    {
+        if (currentPlayers.find(it->first) == currentPlayers.end())
+            it = m_LastAlivePositions.erase(it);
+        else
+            ++it;
+    }
 
     for (int32_t i = 0; i < numElements; ++i)
     {
@@ -294,21 +332,91 @@ void PlayerESP::OnRender()
         if (!pawn || !Utils::isObjectValid(pawn))
             continue;
 
-        if (!pawn->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass()))
+        bool isCharacter = pawn->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass());
+        bool isSpectator = pawn->IsA(SDK::ABP_SpectatePawn_cLeon_C::StaticClass());
+
+        if (!isCharacter && !isSpectator)
             continue;
 
-        auto character = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(pawn);
-        if (!character || !Utils::isObjectValid(character))
-            continue;
+        SDK::USkeletalMeshComponent* mesh = nullptr;
 
-        auto mesh = character->Mesh;
-        if (!mesh || !Utils::isObjectValid(mesh))
+        if (isCharacter)
+        {
+            auto character = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(pawn);
+
+            if (!character || !Utils::isObjectValid(character))
+                continue;
+
+            mesh = character->Mesh;
+
+            if (!mesh || !Utils::isObjectValid(mesh))
+                continue;
+
+            // update last alive position for this player
+            SDK::FVector loc = pawn->K2_GetActorLocation();
+            m_LastAlivePositions[player] = loc;
+        }
+
+        if (isSpectator)
+        {
+            if (!showDeathMarkers)
+                continue;
+
+            auto it = m_LastAlivePositions.find(player);
+            if (it == m_LastAlivePositions.end())
+                continue;
+
+            SDK::FVector2D screenPos;
+            if (!Utils::WorldToScreen(it->second, screenPos, false))
+                continue;
+
+            DrawDeathMarker(drawList, screenPos, deathMarkerColor, 15.0f);
+
+            std::string markerText;
+            if (showName)
+            {
+                if (player->PlayerNamePrivate.IsValid())
+                {
+                    std::string nameStr = player->PlayerNamePrivate.ToString();
+                    if (!nameStr.empty())
+                        markerText += nameStr;
+                }
+                else
+                    markerText += "Unknown";
+            }
+            if (showDistance && hasLocalLocation)
+            {
+                SDK::FVector diff = it->second - localLocation;
+                float distance = sqrtf(diff.X * diff.X + diff.Y * diff.Y + diff.Z * diff.Z) / 100.0f;
+                char distText[32];
+                snprintf(distText, sizeof(distText), " [%dm]", static_cast<int>(distance));
+                markerText += distText;
+            }
+            if (!markerText.empty())
+            {
+                ImVec2 textSize = ImGui::CalcTextSize(markerText.c_str());
+                float scaledWidth = textSize.x * textScale;
+                float scaledHeight = textSize.y * textScale;
+                float textX = screenPos.X - scaledWidth * 0.5f;
+                float textY = screenPos.Y - scaledHeight - 8.0f;
+                ImU32 outlineColor = IM_COL32(0, 0, 0, 200);
+                float scaledFontSize = baseFontSize * textScale;
+                drawList->AddText(currentFont, scaledFontSize, ImVec2(textX - 1, textY), outlineColor, markerText.c_str());
+                drawList->AddText(currentFont, scaledFontSize, ImVec2(textX + 1, textY), outlineColor, markerText.c_str());
+                drawList->AddText(currentFont, scaledFontSize, ImVec2(textX, textY - 1), outlineColor, markerText.c_str());
+                drawList->AddText(currentFont, scaledFontSize, ImVec2(textX, textY + 1), outlineColor, markerText.c_str());
+                drawList->AddText(currentFont, scaledFontSize, ImVec2(textX, textY), deathMarkerColor, markerText.c_str());
+            }
             continue;
+        }
 
         if (!showLocalPlayer && (pawn == acknowledgedPawn || pawn == localPawn))
             continue;
 
-        bool dead = mesh->IsAnySimulatingPhysics();
+        bool dead = false;
+        if (mesh && Utils::isObjectValid(mesh))
+            dead = mesh->IsAnySimulatingPhysics();
+
         if (!showDead && dead)
             continue;
 
@@ -320,7 +428,7 @@ void PlayerESP::OnRender()
 
         ImU32 playerColor = GetPlayerColor(pawn, isHunter, false);
 
-        if (showSkeleton)
+        if (showSkeleton && mesh && Utils::isObjectValid(mesh))
             DrawSkeleton(mesh, localPC, drawList, playerColor, skeletonThickness);
 
         float minX, minY, maxX, maxY;
@@ -507,6 +615,16 @@ void PlayerESP::OnMenuRender()
     bool showLocalPlayer = CONFIG_BOOL(GetConfigManager(), "ShowLocalPlayer");
     if (ImGui::Checkbox("Show Local Player", &showLocalPlayer))
         SET_CONFIG_VALUE(GetConfigManager(), "ShowLocalPlayer", bool, showLocalPlayer);
+
+    ImGui::Separator();
+
+    bool showDeathMarkers = CONFIG_BOOL(GetConfigManager(), "ShowDeathMarkers");
+    if (ImGui::Checkbox("Show Death Markers (Spectators)", &showDeathMarkers))
+        SET_CONFIG_VALUE(GetConfigManager(), "ShowDeathMarkers", bool, showDeathMarkers);
+    ImGui::SameLine();
+    ImColor deathMarkerCol = CONFIG_COLOR(GetConfigManager(), "DeathMarkerColor");
+    if (ImGui::ColorEdit4("##DeathMarkerColor", (float*)&deathMarkerCol, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_NoLabel))
+        SET_CONFIG_VALUE(GetConfigManager(), "DeathMarkerColor", ImColor, deathMarkerCol);
 
     ImGui::Separator();
 

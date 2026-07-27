@@ -166,6 +166,106 @@ void UIKRetargetCurveRemapController::SetSettings(const struct FIKRetargetCurveR
 }
 
 
+// Function IKRig.IKRetargetFKChainsController.GetSettings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FIKRetargetFKChainsOpSettings    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FIKRetargetFKChainsOpSettings UIKRetargetFKChainsController::GetSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("IKRetargetFKChainsController", "GetSettings");
+
+	Params::IKRetargetFKChainsController_GetSettings Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function IKRig.IKRetargetFKChainsController.SetSettings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FIKRetargetFKChainsOpSettings&InSettings                                             (Parm, NativeAccessSpecifierPublic)
+
+void UIKRetargetFKChainsController::SetSettings(const struct FIKRetargetFKChainsOpSettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("IKRetargetFKChainsController", "SetSettings");
+
+	Params::IKRetargetFKChainsController_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function IKRig.IKRetargetIKChainsController.GetSettings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FIKRetargetIKChainsOpSettings    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FIKRetargetIKChainsOpSettings UIKRetargetIKChainsController::GetSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("IKRetargetIKChainsController", "GetSettings");
+
+	Params::IKRetargetIKChainsController_GetSettings Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function IKRig.IKRetargetIKChainsController.SetSettings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FIKRetargetIKChainsOpSettings&InSettings                                             (Parm, NativeAccessSpecifierPublic)
+
+void UIKRetargetIKChainsController::SetSettings(const struct FIKRetargetIKChainsOpSettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("IKRetargetIKChainsController", "SetSettings");
+
+	Params::IKRetargetIKChainsController_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function IKRig.RetargetProfileLibrary.CopyRetargetProfileFromRetargetAsset
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -223,106 +323,6 @@ class UIKRetargetOpControllerBase* URetargetProfileLibrary::GetOpControllerFromR
 	InRetargetProfile = std::move(Parms.InRetargetProfile);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function IKRig.IKRetargetIKChainsController.GetSettings
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FIKRetargetIKChainsOpSettings    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FIKRetargetIKChainsOpSettings UIKRetargetIKChainsController::GetSettings()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IKRetargetIKChainsController", "GetSettings");
-
-	Params::IKRetargetIKChainsController_GetSettings Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function IKRig.IKRetargetIKChainsController.SetSettings
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FIKRetargetIKChainsOpSettings&InSettings                                             (Parm, NativeAccessSpecifierPublic)
-
-void UIKRetargetIKChainsController::SetSettings(const struct FIKRetargetIKChainsOpSettings& InSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IKRetargetIKChainsController", "SetSettings");
-
-	Params::IKRetargetIKChainsController_SetSettings Parms{};
-
-	Parms.InSettings = std::move(InSettings);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function IKRig.IKRetargetFKChainsController.GetSettings
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FIKRetargetFKChainsOpSettings    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FIKRetargetFKChainsOpSettings UIKRetargetFKChainsController::GetSettings()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IKRetargetFKChainsController", "GetSettings");
-
-	Params::IKRetargetFKChainsController_GetSettings Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function IKRig.IKRetargetFKChainsController.SetSettings
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FIKRetargetFKChainsOpSettings&InSettings                                             (Parm, NativeAccessSpecifierPublic)
-
-void UIKRetargetFKChainsController::SetSettings(const struct FIKRetargetFKChainsOpSettings& InSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IKRetargetFKChainsController", "SetSettings");
-
-	Params::IKRetargetFKChainsController_SetSettings Parms{};
-
-	Parms.InSettings = std::move(InSettings);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 

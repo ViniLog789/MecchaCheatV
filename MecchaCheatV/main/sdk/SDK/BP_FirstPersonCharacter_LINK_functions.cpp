@@ -413,7 +413,7 @@ void ABP_FirstPersonCharacter_LINK_C::ResetPowerValue()
 
 
 // Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ResetAllStates
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_FirstPersonCharacter_LINK_C::ResetAllStates()
 {

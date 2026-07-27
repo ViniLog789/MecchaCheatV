@@ -16,40 +16,40 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ModQueueAll.WBP_ModQueueAll_C
-// 0x0090 (0x0580 - 0x04F0)
+// 0x0090 (0x0588 - 0x04F8)
 class UWBP_ModQueueAll_C final : public UUINavWidget
 {
 public:
-	uint8                                         Pad_4F0[0x8];                                      // 0x04F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_3;                           // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_2;                           // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_1;                           // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock;                             // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUINavButtonBase*                       UINavButtonBase_209;                               // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_113;                                     // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_1;                       // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation;                         // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_70;                                          // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 Item_Id;                                           // 0x0540(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              CheckTrue;                                         // 0x0550(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              ForceStart;                                        // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              Complete;                                          // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	uint8                                         Pad_4F8[0x8];                                      // 0x04F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_3;                           // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_2;                           // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock_1;                           // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock;                             // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUINavButtonBase*                       UINavButtonBase_209;                               // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_113;                                     // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_1;                       // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation;                         // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_70;                                          // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FString                                 Item_Id;                                           // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              CheckTrue;                                         // 0x0558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              ForceStart;                                        // 0x0568(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              Complete;                                          // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void BndEvt__WBP_ModQueueAll_LongTapButton_OnAnimation_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
-	void BndEvt__WBP_ModQueueAll_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
-	void BndEvt__WBP_ModQueueAll_UINavButtonBase_209_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void CheckInstalledItems(bool* ReturnInstalled, bool* ReturnDownloading);
-	void Construct();
-	void DownloadCheck();
-	void GetWaitPlayers(class FString* ReturnNames, bool* CompleteState);
-	void OnCallFailed_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
-	void OnDestroySessionComplete_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
-	void OnFailure_F78BBAD84186A9297376358454884094(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void OnReturn();
-	void OnSuccess_F78BBAD84186A9297376358454884094(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void PreConstruct(bool IsDesignTime);
 	void UpdateWait();
+	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void OnSuccess_F78BBAD84186A9297376358454884094(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
+	void OnReturn();
+	void OnFailure_F78BBAD84186A9297376358454884094(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
+	void OnDestroySessionComplete_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
+	void OnCallFailed_20A1B5B44A276C069768D3A60A80535F(class FName SessionName, bool bWasSuccessful);
+	void GetWaitPlayers(class FString* ReturnNames, bool* CompleteState);
+	void DownloadCheck();
+	void Construct();
+	void CheckInstalledItems(bool* ReturnInstalled, bool* ReturnDownloading);
+	void BndEvt__WBP_ModQueueAll_UINavButtonBase_209_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WBP_ModQueueAll_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
+	void BndEvt__WBP_ModQueueAll_LongTapButton_OnAnimation_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

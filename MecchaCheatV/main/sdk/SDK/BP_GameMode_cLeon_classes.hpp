@@ -76,7 +76,7 @@ public:
 	void RemoveGamePlayer(bool IsLogout, class AController* Controller);
 	void ReceiveBeginPlay();
 	void ModComplete();
-	void KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState);
+	void KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState);
 	void K2_PostLogin(class APlayerController* NewPlayer_K2_PostLogin);
 	void K2_OnRestartPlayer(class AController* NewPlayer_K2_OnRestartPlayer);
 	void K2_OnLogout(class AController* ExitingController_K2_OnLogout);

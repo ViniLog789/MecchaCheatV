@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_CameraMode_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
+#include "HitMaterial_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "HitMaterial_structs.hpp"
-#include "ENUM_ActorType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 
@@ -77,7 +77,7 @@ public:
 	void InPhotoFunc();
 	void SetScaleValues();
 	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
-	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter);
+	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter);
 	void GetActorInfo(struct FTransform* DefaultTransform, bool* Not_In_Shot, struct FVector* CentorPosition, bool* IsPenguin, ENUM_ActorType* ActorType, bool* NonInPhoto);
 	void GetCentorPosition(TArray<struct FVector>* CentorPosition);
 	void GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale);

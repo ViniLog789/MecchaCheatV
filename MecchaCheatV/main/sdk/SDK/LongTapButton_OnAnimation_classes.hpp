@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UINavigation_classes.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UINavigation_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -46,6 +46,7 @@ public:
 	bool                                          ActiveState;                                       // 0x09E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9E9[0x7];                                      // 0x09E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               DynamicButtonMaterial;                             // 0x09F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         FontSize;                                          // 0x09F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateCompressedTextIndex(int32 CompressedTextIndex);

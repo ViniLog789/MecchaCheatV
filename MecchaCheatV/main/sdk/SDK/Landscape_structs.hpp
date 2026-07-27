@@ -280,15 +280,6 @@ enum class ELandscapeTextureUsage : uint8
 	ELandscapeTextureUsage_MAX               = 3,
 };
 
-// ScriptStruct Landscape.HeightmapData
-// 0x0008 (0x0008 - 0x0000)
-struct FHeightmapData final
-{
-public:
-	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FHeightmapData;
-
 // ScriptStruct Landscape.LandscapeLayerBrush
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FLandscapeLayerBrush final
@@ -380,6 +371,15 @@ public:
 	TArray<class ULandscapeWeightmapUsage*>       TextureUsages;                                     // 0x0020(0x0010)(ZeroConstructor, Transient, NonTransactional, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FWeightmapData;
+
+// ScriptStruct Landscape.HeightmapData
+// 0x0008 (0x0008 - 0x0000)
+struct FHeightmapData final
+{
+public:
+	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FHeightmapData;
 
 // ScriptStruct Landscape.LandscapeLayerComponentData
 // 0x0038 (0x0038 - 0x0000)

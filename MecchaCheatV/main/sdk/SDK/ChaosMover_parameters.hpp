@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Mover_structs.hpp"
-#include "ChaosMover_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ChaosMover_structs.hpp"
+#include "Mover_structs.hpp"
 #include "Engine_structs.hpp"
 
 

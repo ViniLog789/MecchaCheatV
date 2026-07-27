@@ -161,7 +161,7 @@ DUMPER7_ASSERTS_BP_GameMode_cLeon_C_RemoveGamePlayer;
 struct BP_GameMode_cLeon_C_KillPlayer final
 {
 public:
-	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameMode_cLeon_C_KillPlayer;

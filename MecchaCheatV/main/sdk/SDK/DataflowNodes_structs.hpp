@@ -12,8 +12,8 @@
 
 #include "DataflowCore_structs.hpp"
 #include "Chaos_structs.hpp"
-#include "DataflowEnginePlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "DataflowEnginePlugin_structs.hpp"
 
 
 SDK_NAMESPACE_START

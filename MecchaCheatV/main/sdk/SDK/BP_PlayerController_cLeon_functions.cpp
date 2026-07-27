@@ -127,19 +127,19 @@ void ABP_PlayerController_cLeon_C::GetPawnCentorLocation(struct FVector* ReturnL
 }
 
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Ctrl+Shift_H_K2Node_InputKeyEvent_0
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Ctrl+Shift_H_K2Node_InputKeyEvent_3
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerController_cLeon_C::InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0(const struct FKey& Key)
+void ABP_PlayerController_cLeon_C::InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_3(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Ctrl+Shift_H_K2Node_InputKeyEvent_0");
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Ctrl+Shift_H_K2Node_InputKeyEvent_3");
 
-	Params::BP_PlayerController_cLeon_C_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0 Parms{};
+	Params::BP_PlayerController_cLeon_C_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_3 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -147,19 +147,19 @@ void ABP_PlayerController_cLeon_C::InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_0
 }
 
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_G_K2Node_InputKeyEvent_1
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_G_K2Node_InputKeyEvent_4
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerController_cLeon_C::InpActEvt_G_K2Node_InputKeyEvent_1(const struct FKey& Key)
+void ABP_PlayerController_cLeon_C::InpActEvt_G_K2Node_InputKeyEvent_4(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_G_K2Node_InputKeyEvent_1");
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_G_K2Node_InputKeyEvent_4");
 
-	Params::BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_1 Parms{};
+	Params::BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_4 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -167,19 +167,19 @@ void ABP_PlayerController_cLeon_C::InpActEvt_G_K2Node_InputKeyEvent_1(const stru
 }
 
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Six_K2Node_InputKeyEvent_2
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerController_cLeon_C::InpActEvt_Six_K2Node_InputKeyEvent_2(const struct FKey& Key)
+void ABP_PlayerController_cLeon_C::InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Six_K2Node_InputKeyEvent_2");
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2");
 
-	Params::BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_2 Parms{};
+	Params::BP_PlayerController_cLeon_C_InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -187,19 +187,79 @@ void ABP_PlayerController_cLeon_C::InpActEvt_Six_K2Node_InputKeyEvent_2(const st
 }
 
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Three_K2Node_InputKeyEvent_3
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerController_cLeon_C::InpActEvt_Three_K2Node_InputKeyEvent_3(const struct FKey& Key)
+void ABP_PlayerController_cLeon_C::InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Three_K2Node_InputKeyEvent_3");
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1");
 
-	Params::BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_3 Parms{};
+	Params::BP_PlayerController_cLeon_C_InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0");
+
+	Params::BP_PlayerController_cLeon_C_InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Six_K2Node_InputKeyEvent_5
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::InpActEvt_Six_K2Node_InputKeyEvent_5(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Six_K2Node_InputKeyEvent_5");
+
+	Params::BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_5 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Three_K2Node_InputKeyEvent_6
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::InpActEvt_Three_K2Node_InputKeyEvent_6(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Three_K2Node_InputKeyEvent_6");
+
+	Params::BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_6 Parms{};
 
 	Parms.Key = std::move(Key);
 
