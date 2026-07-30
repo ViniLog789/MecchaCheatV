@@ -53,6 +53,15 @@ enum class EAudioParameterType : uint8
 	EAudioParameterType_MAX                  = 14,
 };
 
+// ScriptStruct AudioExtensions.SoundWaveCloudStreamingPlatformSettings
+// 0x0001 (0x0001 - 0x0000)
+struct FSoundWaveCloudStreamingPlatformSettings final
+{
+public:
+	ESoundWaveCloudStreamingPlatformEnableType    EnablementSetting;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSoundWaveCloudStreamingPlatformSettings;
+
 // ScriptStruct AudioExtensions.SoundGeneratorOutput
 // 0x0008 (0x0008 - 0x0000)
 struct FSoundGeneratorOutput
@@ -70,15 +79,6 @@ public:
 	ESoundWaveCloudStreamingPlatformProjectEnableType EnablementSetting;                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSoundWaveCloudStreamingPlatformProjectSettings;
-
-// ScriptStruct AudioExtensions.SoundWaveCloudStreamingPlatformSettings
-// 0x0001 (0x0001 - 0x0000)
-struct FSoundWaveCloudStreamingPlatformSettings final
-{
-public:
-	ESoundWaveCloudStreamingPlatformEnableType    EnablementSetting;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSoundWaveCloudStreamingPlatformSettings;
 
 // ScriptStruct AudioExtensions.AudioParameter
 // 0x00A0 (0x00A0 - 0x0000)

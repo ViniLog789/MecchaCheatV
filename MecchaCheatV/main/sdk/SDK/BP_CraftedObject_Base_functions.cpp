@@ -328,9 +328,9 @@ void ABP_CraftedObject_Base_C::Damage(double DamageValue, int32 TeamIndex, EN_Da
 // Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParentCharacter
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CraftedObject_Base_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter)
+void ABP_CraftedObject_Base_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter)
 {
 	static class UFunction* Func = nullptr;
 
@@ -341,8 +341,8 @@ void ABP_CraftedObject_Base_C::GetParentCharacter(class ABP_FirstPersonCharacter
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (FirstPersonCharacter != nullptr)
-		*FirstPersonCharacter = Parms.FirstPersonCharacter;
+	if (FirstpersonCharacter != nullptr)
+		*FirstpersonCharacter = Parms.FirstpersonCharacter;
 }
 
 

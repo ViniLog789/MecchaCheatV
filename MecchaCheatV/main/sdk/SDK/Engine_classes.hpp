@@ -12,22 +12,22 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "RenderCore_structs.hpp"
-#include "AudioPlatformConfiguration_structs.hpp"
 #include "Engine_structs.hpp"
 #include "AudioExtensions_structs.hpp"
 #include "AudioExtensions_classes.hpp"
 #include "InputCore_structs.hpp"
+#include "RenderCore_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "PhysicsCore_classes.hpp"
 #include "ClothingSystemRuntimeInterface_structs.hpp"
 #include "FieldNotification_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "AudioPlatformConfiguration_structs.hpp"
 #include "DeveloperSettings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "Chaos_structs.hpp"
 #include "IrisCore_classes.hpp"
 #include "MeshDescription_classes.hpp"
-#include "SlateCore_structs.hpp"
 #include "PacketHandler_classes.hpp"
 #include "NetCore_structs.hpp"
 #include "NetCore_classes.hpp"
@@ -37101,7 +37101,7 @@ DUMPER7_ASSERTS_ULevelInstanceSubsystem;
 
 // Class Engine.LevelScriptActor
 // 0x0008 (0x02B0 - 0x02A8)
-class ALevelScriptActor final : public AActor
+class ALevelScriptActor : public AActor
 {
 public:
 	uint8                                         bInputEnabled : 1;                                 // 0x02A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))

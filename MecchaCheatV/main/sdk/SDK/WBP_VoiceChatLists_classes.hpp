@@ -16,12 +16,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_VoiceChatLists.WBP_VoiceChatLists_C
-// 0x0010 (0x0350 - 0x0340)
+// 0x0018 (0x0358 - 0x0340)
 class UWBP_VoiceChatLists_C final : public UUserWidget
 {
 public:
 	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVerticalBox*                           VerticalBox_19;                                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URedpointVoiceChatComponent*            VoiceComp;                                         // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void VoiceStateUpdate();

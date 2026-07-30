@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ST_InputDeviceImage_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_KeyImageComboBase.ST_KeyImageComboBase
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct FST_KeyImageComboBase final
 {
 public:
@@ -26,12 +26,13 @@ public:
 	bool                                          AutoSwitch_20_2EDF9E994D763F10ABF64786ADB9D60A;    // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BackGroundVisbility_31_582F96DD4AF7336F2524DCB061E1F57B; // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseOverrideImage_22_D468AAAA4D93DEAD73E68F98FC943910; // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_InputDeviceImage                   OverrideImages_11_CCF46EA144A44E17658770BA0962B842; // 0x0010(0x00A0)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FVector2D                              Size_28_96ACBFB44887CC931F5557928272F024;          // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   HarfText_17_E46697A145CE2BEB0C8ADEB54B0724A5;      // 0x00C0(0x0010)(Edit, BlueprintVisible)
-	double                                        TextSize_16_D09B28D949AE625BA6F433B66A7E2E6F;      // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFont*                                  Font_25_0C89814D45EDCC1806C2438C7F3C363E;          // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseSwitch2MouseImage_34_17F98D114AA4DBA8D8243EA8E9C39F46; // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_InputDeviceImage                   OverrideImages_11_CCF46EA144A44E17658770BA0962B842; // 0x0010(0x00C8)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FVector2D                              Size_28_96ACBFB44887CC931F5557928272F024;          // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   HarfText_17_E46697A145CE2BEB0C8ADEB54B0724A5;      // 0x00E8(0x0010)(Edit, BlueprintVisible)
+	double                                        TextSize_16_D09B28D949AE625BA6F433B66A7E2E6F;      // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFont*                                  Font_25_0C89814D45EDCC1806C2438C7F3C363E;          // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FST_KeyImageComboBase;
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UniversalObjectLocator_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UniversalObjectLocator_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -749,6 +749,17 @@ public:
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMovieSceneSequencePlaybackSettings;
+
+// ScriptStruct MovieScene.TestMovieSceneStruct
+// 0x0020 (0x0020 - 0x0000)
+struct FTestMovieSceneStruct final
+{
+public:
+	float                                         First;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Second;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Vector;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTestMovieSceneStruct;
 
 // ScriptStruct MovieScene.MovieSceneTimeTransform
 // 0x000C (0x000C - 0x0000)
@@ -1989,16 +2000,5 @@ struct FTestMovieSceneEvalTemplate final : public FMovieSceneEvalTemplate
 {
 };
 DUMPER7_ASSERTS_FTestMovieSceneEvalTemplate;
-
-// ScriptStruct MovieScene.TestMovieSceneStruct
-// 0x0020 (0x0020 - 0x0000)
-struct FTestMovieSceneStruct final
-{
-public:
-	float                                         First;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Second;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Vector;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTestMovieSceneStruct;
 
 SDK_NAMESPACE_END

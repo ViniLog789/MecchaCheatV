@@ -511,9 +511,9 @@ void UBPC_LINK_HandControl_C::TargetPositionUpdate(class UPhysicsHandleComponent
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector*                         WorldPositon                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator*                        worldRotation                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FRotator*                        WorldRotation                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UBPC_LINK_HandControl_C::GetWorldAttachPosition(struct FVector* WorldPositon, struct FRotator* worldRotation)
+void UBPC_LINK_HandControl_C::GetWorldAttachPosition(struct FVector* WorldPositon, struct FRotator* WorldRotation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -527,8 +527,8 @@ void UBPC_LINK_HandControl_C::GetWorldAttachPosition(struct FVector* WorldPosito
 	if (WorldPositon != nullptr)
 		*WorldPositon = std::move(Parms.WorldPositon);
 
-	if (worldRotation != nullptr)
-		*worldRotation = std::move(Parms.worldRotation);
+	if (WorldRotation != nullptr)
+		*WorldRotation = std::move(Parms.WorldRotation);
 }
 
 

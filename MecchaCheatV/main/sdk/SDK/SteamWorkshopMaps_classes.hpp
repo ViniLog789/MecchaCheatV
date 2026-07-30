@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SteamWorkshopMaps_structs.hpp"
 #include "Engine_classes.hpp"
+#include "SteamWorkshopMaps_structs.hpp"
 
 
 SDK_NAMESPACE_START

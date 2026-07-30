@@ -74,13 +74,13 @@ public:
 	void OnBlendOut_85995EF044945821EC08CDAD261FDD89(class FName NotifyName);
 	void OnBlendOut_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName);
 	void OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName);
-	void KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState);
+	void KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState);
 	void InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, float ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, float TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, const class UInputAction* SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3);
 	void InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_Crouch_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InfinityBulletEnd();
-	void HitSuccess(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter);
+	void HitSuccess(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter);
 	void CheckViewInSurvivor();
 	void CheckViewInPlayers(class AActor* TargetActor, bool UseBoundCentor, int32* Rezult);
 	void ChangeViewMode(class FName ModeName_ChangeViewMode, bool Quick_ChangeViewMode);

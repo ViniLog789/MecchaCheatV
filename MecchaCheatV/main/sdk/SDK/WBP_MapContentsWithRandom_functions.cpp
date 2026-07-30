@@ -108,9 +108,9 @@ void UWBP_MapContentsWithRandom_C::BndEvt__WBP_MapContentsWithRandom_WBP_RandomT
 // (BlueprintEvent)
 // Parameters:
 // class UWBP_MapContents_C*               SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_MapContentsWithRandom_C::BndEvt__WBP_MapContentsWithRandom_WBP_MapContents_K2Node_ComponentBoundEvent_1_SelectMap__DelegateSignature(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)
+void UWBP_MapContentsWithRandom_C::BndEvt__WBP_MapContentsWithRandom_WBP_MapContents_K2Node_ComponentBoundEvent_1_SelectMap__DelegateSignature(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& MapData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -120,7 +120,7 @@ void UWBP_MapContentsWithRandom_C::BndEvt__WBP_MapContentsWithRandom_WBP_MapCont
 	Params::WBP_MapContentsWithRandom_C_BndEvt__WBP_MapContentsWithRandom_WBP_MapContents_K2Node_ComponentBoundEvent_1_SelectMap__DelegateSignature Parms{};
 
 	Parms.SelfWidget = SelfWidget;
-	Parms.Mapdata = std::move(Mapdata);
+	Parms.MapData = std::move(MapData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

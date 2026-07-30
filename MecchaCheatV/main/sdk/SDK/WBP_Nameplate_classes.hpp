@@ -28,7 +28,7 @@ public:
 	class UImage*                                 Image;                                             // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetPlayerName(const class FString& playerName);
+	void SetPlayerName(const class FString& PlayerName);
 	void SetME(int32 Point);
 	void SetEEYAN(int32 Point);
 	void SetColor(const struct FSlateColor& Color_and_Opacity);

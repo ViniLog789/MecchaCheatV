@@ -25,7 +25,7 @@ public:
 	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_RandomToggle_C*                    WBP_RandomToggle;                                  // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_MapContents_C*                     WBP_MapContents;                                   // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)> SelectMap; // 0x0358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& MapData)> SelectMap; // 0x0358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(class UWBP_MapContentsWithRandom_C* SelfWidget, bool RandomState)> RandomStateChange; // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FST_cLeonMapData                       C_Leon_Map_Data;                                   // 0x0378(0x0028)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          RandomState;                                       // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
@@ -38,7 +38,7 @@ public:
 	void ForceUpdate();
 	void Construct();
 	void BndEvt__WBP_MapContentsWithRandom_WBP_RandomToggle_K2Node_ComponentBoundEvent_0_UpdateRandomState__DelegateSignature(bool NewState);
-	void BndEvt__WBP_MapContentsWithRandom_WBP_MapContents_K2Node_ComponentBoundEvent_1_SelectMap__DelegateSignature(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& Mapdata);
+	void BndEvt__WBP_MapContentsWithRandom_WBP_MapContents_K2Node_ComponentBoundEvent_1_SelectMap__DelegateSignature(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& MapData);
 
 public:
 	static class UClass* StaticClass()

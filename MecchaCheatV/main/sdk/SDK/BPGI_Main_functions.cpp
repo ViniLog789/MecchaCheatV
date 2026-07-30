@@ -127,6 +127,30 @@ void UBPGI_Main_C::OnCallFailed_4473CEAA43FDA8DFD02079B1F2500B1B(bool bWasSucces
 }
 
 
+// Function BPGI_Main.BPGI_Main_C.OnInputDeviceConnectionChange_イベント
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EInputDeviceConnectionState             NewConnectionState                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPlatformUserId&           PlatformUserId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FInputDeviceId&            InputDeviceId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPGI_Main_C::OnInputDeviceConnectionChange_イベント(EInputDeviceConnectionState NewConnectionState, const struct FPlatformUserId& PlatformUserId, const struct FInputDeviceId& InputDeviceId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPGI_Main_C", "OnInputDeviceConnectionChange_イベント");
+
+	Params::BPGI_Main_C_OnInputDeviceConnectionChange_イベント Parms{};
+
+	Parms.NewConnectionState = NewConnectionState;
+	Parms.PlatformUserId = std::move(PlatformUserId);
+	Parms.InputDeviceId = std::move(InputDeviceId);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPGI_Main.BPGI_Main_C.OnReadUserFileComplete_4473CEAA43FDA8DFD02079B1F2500B1B
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

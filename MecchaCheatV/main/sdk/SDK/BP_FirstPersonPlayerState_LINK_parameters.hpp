@@ -183,7 +183,7 @@ DUMPER7_ASSERTS_BP_FirstPersonPlayerState_LINK_C_GetStateValue;
 struct BP_FirstPersonPlayerState_LINK_C_GetCustomPlayerName final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonPlayerState_LINK_C_GetCustomPlayerName;
 

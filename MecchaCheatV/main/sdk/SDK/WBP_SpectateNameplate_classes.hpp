@@ -29,7 +29,7 @@ public:
 	void ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
 	void SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void GetCustomPlayerName(class FString* playerName);
+	void GetCustomPlayerName(class FString* PlayerName);
 
 public:
 	static class UClass* StaticClass()

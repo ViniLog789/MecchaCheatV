@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "UINavigation_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "EnhancedInput_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -181,7 +181,7 @@ public:
 DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_Tick;
 
 // Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.UpdateInputButtonVisibility
-// 0x000D (0x000D - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WBP_PaintMode_Cursor_C_UpdateInputButtonVisibility final
 {
 public:
@@ -197,7 +197,10 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_7;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_8;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_9;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlatformName_ReturnValue;              // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PaintMode_Cursor_C_UpdateInputButtonVisibility;
 

@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ApplySettings
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonPlayerController_C::ApplySettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ApplySettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:

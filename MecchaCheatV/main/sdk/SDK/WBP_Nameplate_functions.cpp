@@ -19,9 +19,9 @@ SDK_NAMESPACE_START
 // Function WBP_Nameplate.WBP_Nameplate_C.SetPlayerName
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    PlayerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_Nameplate_C::SetPlayerName(const class FString& playerName)
+void UWBP_Nameplate_C::SetPlayerName(const class FString& PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -30,7 +30,7 @@ void UWBP_Nameplate_C::SetPlayerName(const class FString& playerName)
 
 	Params::WBP_Nameplate_C_SetPlayerName Parms{};
 
-	Parms.playerName = std::move(playerName);
+	Parms.PlayerName = std::move(PlayerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

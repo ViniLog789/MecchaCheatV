@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "FinishFilter_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 #include "EN_LINK_PlayerStateValueType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EN_DamageType_structs.hpp"
-#include "FinishFilter_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "EnhancedInput_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
@@ -33,7 +33,7 @@ SDK_PARAM_NAMESPACE_START
 struct BP_FirstPersonCharacter_LINK_C_UpdateNameplate final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UWBP_Nameplate_C*                       CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

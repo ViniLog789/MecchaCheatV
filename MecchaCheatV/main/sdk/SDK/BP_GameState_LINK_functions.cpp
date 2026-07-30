@@ -467,9 +467,9 @@ void ABP_GameState_LINK_C::RevivalAnnounce_Server_(class ABP_FirstPersonPlayerSt
 // Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Client)
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    PlayerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::RevivalAnnounce_Client_(const class FString& playerName)
+void ABP_GameState_LINK_C::RevivalAnnounce_Client_(const class FString& PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -478,7 +478,7 @@ void ABP_GameState_LINK_C::RevivalAnnounce_Client_(const class FString& playerNa
 
 	Params::BP_GameState_LINK_C_RevivalAnnounce_Client_ Parms{};
 
-	Parms.playerName = std::move(playerName);
+	Parms.PlayerName = std::move(PlayerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -809,9 +809,9 @@ void ABP_GameState_LINK_C::DeathAnnounce_Server_(class ABP_FirstPersonPlayerStat
 // Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Client)
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    PlayerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::DeathAnnounce_Client_(const class FString& playerName)
+void ABP_GameState_LINK_C::DeathAnnounce_Client_(const class FString& PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -820,7 +820,7 @@ void ABP_GameState_LINK_C::DeathAnnounce_Client_(const class FString& playerName
 
 	Params::BP_GameState_LINK_C_DeathAnnounce_Client_ Parms{};
 
-	Parms.playerName = std::move(playerName);
+	Parms.PlayerName = std::move(PlayerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

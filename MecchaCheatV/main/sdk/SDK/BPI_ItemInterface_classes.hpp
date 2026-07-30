@@ -27,7 +27,7 @@ public:
 	void SetMeshDatas(bool KeepScale);
 	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
 	void InteractItem();
-	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter);
+	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter);
 	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
 	void DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition);
 

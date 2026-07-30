@@ -16,15 +16,37 @@
 
 SDK_NAMESPACE_START
 
+// Function BPF_cLeon.BPF_cLeon_C.SetSwitchMouseState
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    UseMouse                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPF_cLeon_C::SetSwitchMouseState(bool UseMouse, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPF_cLeon_C", "SetSwitchMouseState");
+
+	Params::BPF_cLeon_C_SetSwitchMouseState Parms{};
+
+	Parms.UseMouse = UseMouse;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPF_cLeon.BPF_cLeon_C.GetTelepportPointName
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class FName*                            HunterTelporterName                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName*                            SurvivorTelporterName                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPF_cLeon_C::GetTelepportPointName(const struct FST_cLeonMapData& Mapdata, class UObject* __WorldContext, class FName* HunterTelporterName, class FName* SurvivorTelporterName)
+void UBPF_cLeon_C::GetTelepportPointName(const struct FST_cLeonMapData& MapData, class UObject* __WorldContext, class FName* HunterTelporterName, class FName* SurvivorTelporterName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,7 +55,7 @@ void UBPF_cLeon_C::GetTelepportPointName(const struct FST_cLeonMapData& Mapdata,
 
 	Params::BPF_cLeon_C_GetTelepportPointName Parms{};
 
-	Parms.Mapdata = std::move(Mapdata);
+	Parms.MapData = std::move(MapData);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);

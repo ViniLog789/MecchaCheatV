@@ -88,7 +88,7 @@ public:
 	void CurrentWeightUpdate(double Value);
 	void SetHandPositionValues(struct FTransform& TrasnformVariable, double& WeightVariable);
 	void TargetPositionUpdate(class UPhysicsHandleComponent* HandleComponent, const struct FVector& position);
-	void GetWorldAttachPosition(struct FVector* WorldPositon, struct FRotator* worldRotation);
+	void GetWorldAttachPosition(struct FVector* WorldPositon, struct FRotator* WorldRotation);
 	void SetHandle(class UPhysicsHandleComponent* Handle_Component);
 	void SetDamping(class UPrimitiveComponent* Primitive, bool State);
 	bool IsGrab();

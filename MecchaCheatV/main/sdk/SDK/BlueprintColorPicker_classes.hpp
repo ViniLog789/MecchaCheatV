@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class BlueprintColorPicker.ColorPicker
-// 0x0438 (0x05A0 - 0x0168)
+// 0x0478 (0x05E0 - 0x0168)
 class UColorPicker final : public UWidget
 {
 public:
@@ -54,17 +54,17 @@ public:
 	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            EyedropperIcon;                                    // 0x0250(0x00B0)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
 	class FText                                   EyedropperButtonText;                              // 0x0300(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	uint8                                         Pad_310[0x1A0];                                    // 0x0310(0x01A0)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 PixelInspectorBufferFinalColor[0x2];               // 0x04B0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class UTextureRenderTarget2D*                 PixelInspectorBufferSceneColor[0x2];               // 0x04C0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class UTextureRenderTarget2D*                 PixelInspectorBufferHDR[0x2];                      // 0x04D0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class UTextureRenderTarget2D*                 PixelInspectorBufferA[0x2];                        // 0x04E0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class UTextureRenderTarget2D*                 PixelInspectorBufferBCDEF[0x2];                    // 0x04F0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	uint8                                         Pad_500[0x10];                                     // 0x0500(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 CachedSamplingRT;                                  // 0x0510(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class AActor*                                 CachedSamplingActor;                               // 0x0518(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class USceneCaptureComponent2D*               CachedSamplingComponent;                           // 0x0520(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	uint8                                         Pad_528[0x78];                                     // 0x0528(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_310[0x1E8];                                    // 0x0310(0x01E8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 PixelInspectorBufferFinalColor[0x2];               // 0x04F8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTextureRenderTarget2D*                 PixelInspectorBufferSceneColor[0x2];               // 0x0508(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTextureRenderTarget2D*                 PixelInspectorBufferHDR[0x2];                      // 0x0518(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTextureRenderTarget2D*                 PixelInspectorBufferA[0x2];                        // 0x0528(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTextureRenderTarget2D*                 PixelInspectorBufferBCDEF[0x2];                    // 0x0538(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_548[0x10];                                     // 0x0548(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 CachedSamplingRT;                                  // 0x0558(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class AActor*                                 CachedSamplingActor;                               // 0x0560(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class USceneCaptureComponent2D*               CachedSamplingComponent;                           // 0x0568(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_570[0x70];                                     // 0x0570(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool SampleViewportGBuffer(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FLinearColor* OutBaseColor, float* OutMetallic, float* OutRoughness, class UMaterialInterface* OptionalMetallicRoughnessMaterial);

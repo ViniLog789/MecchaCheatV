@@ -19,7 +19,7 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_VoiceChatState.WBP_VoiceChatState_C.UpdateVisual
-// 0x0070 (0x0070 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WBP_VoiceChatState_C_UpdateVisual final
 {
 public:
@@ -27,22 +27,28 @@ public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerVoiceChatActor*                  CallFunc_VoiceChatGetMyLocalPlayerVoiceChat_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_VoiceChatIsSpeaking_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_VoiceChatGetMicrophoneRuntimeVolumeFromPlayerState_ReturnValue; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_VoiceChatGetMuteAllPlayers_ReturnValue;   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x001C(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0030(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default_2;                           // 0x0044(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default_3;                           // 0x0058(0x0014)()
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x000C(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0020(0x0014)()
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URedpointVoiceChatComponent*            CallFunc_GetComponentByClass_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0048(0x0014)()
+	bool                                          CallFunc_IsOutputMuted_ReturnValue;                // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInputMuted_ReturnValue;                 // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x005F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalUserSpeaking_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x0064(0x0014)()
+	struct FSlateColor                            K2Node_Select_Default_2;                           // 0x0078(0x0014)()
+	struct FSlateColor                            K2Node_Select_Default_3;                           // 0x008C(0x0014)()
+	struct FSlateColor                            K2Node_Select_Default_4;                           // 0x00A0(0x0014)()
 };
 DUMPER7_ASSERTS_WBP_VoiceChatState_C_UpdateVisual;
 
@@ -53,7 +59,6 @@ struct WBP_VoiceChatState_C_SetMicrophoneVolume final
 public:
 	float                                         Volume;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_VoiceChatSetMicrophoneVolume_ReturnValue; // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_VoiceChatState_C_SetMicrophoneVolume;
 
@@ -75,9 +80,9 @@ public:
 };
 DUMPER7_ASSERTS_WBP_VoiceChatState_C_MovieChange;
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1
+// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_3
 // 0x0030 (0x0030 - 0x0000)
-struct WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1 final
+struct WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_3 final
 {
 public:
 	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -85,11 +90,11 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1;
+DUMPER7_ASSERTS_WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_3;
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0
+// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_2
 // 0x0030 (0x0030 - 0x0000)
-struct WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0 final
+struct WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_2 final
 {
 public:
 	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -97,11 +102,11 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0;
+DUMPER7_ASSERTS_WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_2;
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3
+// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_1
 // 0x0030 (0x0030 - 0x0000)
-struct WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3 final
+struct WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_1 final
 {
 public:
 	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -109,11 +114,11 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3;
+DUMPER7_ASSERTS_WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_1;
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2
+// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)
-struct WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2 final
+struct WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_0 final
 {
 public:
 	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -121,16 +126,14 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2;
+DUMPER7_ASSERTS_WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_0;
 
 // Function WBP_VoiceChatState.WBP_VoiceChatState_C.ChannelCheck
-// 0x0008 (0x0008 - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct WBP_VoiceChatState_C_ChannelCheck final
 {
 public:
 	int32                                         channelToCheck;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_VoiceChatCheckRegisteredToChannel_ReturnValue; // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_VoiceChatAddChannel_ReturnValue;          // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_VoiceChatState_C_ChannelCheck;
 

@@ -46,7 +46,7 @@ DUMPER7_ASSERTS_WBP_SpectateNameplate_C_PreConstruct;
 struct WBP_SpectateNameplate_C_GetCustomPlayerName final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_SpectateNameplate_C_GetCustomPlayerName;
 

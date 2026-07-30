@@ -381,9 +381,9 @@ void ABP_FirstPersonPlayerState_LINK_C::GetStateValue(EN_LINK_PlayerStateValueTy
 // Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.GetCustomPlayerName
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString*                          playerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          PlayerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::GetCustomPlayerName(class FString* playerName)
+void ABP_FirstPersonPlayerState_LINK_C::GetCustomPlayerName(class FString* PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -394,8 +394,8 @@ void ABP_FirstPersonPlayerState_LINK_C::GetCustomPlayerName(class FString* playe
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (playerName != nullptr)
-		*playerName = std::move(Parms.playerName);
+	if (PlayerName != nullptr)
+		*PlayerName = std::move(Parms.PlayerName);
 }
 
 

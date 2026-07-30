@@ -16,6 +16,144 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SwitchNamePlateVisibility
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_SpectatePawn_cLeon_C::SwitchNamePlateVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "SwitchNamePlateVisibility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SpectateTargetChange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SpectatePawn_cLeon_C::SpectateTargetChange(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState, class APawn* Pawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "SpectateTargetChange");
+
+	Params::BP_SpectatePawn_cLeon_C_SpectateTargetChange Parms{};
+
+	Parms.PlayerState = PlayerState;
+	Parms.Pawn = Pawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.Setup
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_SpectatePawn_cLeon_C::Setup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "Setup");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SetLocation
+// (Net, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   NewLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SpectatePawn_cLeon_C::SetLocation(const struct FVector& NewLocation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "SetLocation");
+
+	Params::BP_SpectatePawn_cLeon_C_SetLocation Parms{};
+
+	Parms.NewLocation = std::move(NewLocation);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SpectatePawn_cLeon_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceiveTick");
+
+	Params::BP_SpectatePawn_cLeon_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceivePossessed
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// class AController*                      NewController_ReceivePossessed                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SpectatePawn_cLeon_C::ReceivePossessed(class AController* NewController_ReceivePossessed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceivePossessed");
+
+	Params::BP_SpectatePawn_cLeon_C_ReceivePossessed Parms{};
+
+	Parms.NewController_ReceivePossessed = NewController_ReceivePossessed;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_SpectatePawn_cLeon_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SpectatePawn_cLeon_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ProvocationRemote
 // (Net, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -321,144 +459,6 @@ void ABP_SpectatePawn_cLeon_C::BackBody()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "BackBody");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SpectatePawn_cLeon_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_SpectatePawn_cLeon_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceivePossessed
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
-// Parameters:
-// class AController*                      NewController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SpectatePawn_cLeon_C::ReceivePossessed(class AController* NewController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceivePossessed");
-
-	Params::BP_SpectatePawn_cLeon_C_ReceivePossessed Parms{};
-
-	Parms.NewController = NewController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SpectatePawn_cLeon_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceiveTick");
-
-	Params::BP_SpectatePawn_cLeon_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SetLocation
-// (Net, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   NewLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SpectatePawn_cLeon_C::SetLocation(const struct FVector& NewLocation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "SetLocation");
-
-	Params::BP_SpectatePawn_cLeon_C_SetLocation Parms{};
-
-	Parms.NewLocation = std::move(NewLocation);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.Setup
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_SpectatePawn_cLeon_C::Setup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "Setup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SpectateTargetChange
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonPlayerState_Online_cLeon_C*PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SpectatePawn_cLeon_C::SpectateTargetChange(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState_0, class APawn* Pawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "SpectateTargetChange");
-
-	Params::BP_SpectatePawn_cLeon_C_SpectateTargetChange Parms{};
-
-	Parms.PlayerState_0 = PlayerState_0;
-	Parms.Pawn = Pawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SwitchNamePlateVisibility
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_SpectatePawn_cLeon_C::SwitchNamePlateVisibility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "SwitchNamePlateVisibility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

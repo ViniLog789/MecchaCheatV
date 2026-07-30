@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "RedpointEOSFrameworkExtra_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "Engine_structs.hpp"
+#include "RedpointEOSFrameworkExtra_structs.hpp"
 
 
 SDK_NAMESPACE_START

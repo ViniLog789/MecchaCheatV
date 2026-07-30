@@ -30,6 +30,66 @@ void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAni
 }
 
 
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -354,28 +414,6 @@ void UWBP_cLeonGameSettings_C::Construct()
 }
 
 
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.OnClickWithClass
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_BodySelect_C*                SelfObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           BodyClass                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::OnClickWithClass(class UWBP_BodySelect_C* SelfObject, class UClass* BodyClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "OnClickWithClass");
-
-	Params::WBP_cLeonGameSettings_C_OnClickWithClass Parms{};
-
-	Parms.SelfObject = SelfObject;
-	Parms.BodyClass = BodyClass;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStateChange
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -428,9 +466,9 @@ void UWBP_cLeonGameSettings_C::RandomStructUpdate(const struct FST_cLeonMapData&
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)
+void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& MapData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -440,7 +478,7 @@ void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContentsWithRandom_C* Sel
 	Params::WBP_cLeonGameSettings_C_SelectMap Parms{};
 
 	Parms.SelfWidget = SelfWidget;
-	Parms.Mapdata = std::move(Mapdata);
+	Parms.MapData = std::move(MapData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -450,9 +488,9 @@ void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContentsWithRandom_C* Sel
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_cLeonGameSettings_C::SelectMapMain(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& Mapdata)
+void UWBP_cLeonGameSettings_C::SelectMapMain(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& MapData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -462,7 +500,7 @@ void UWBP_cLeonGameSettings_C::SelectMapMain(class UWBP_MapContentsWithRandom_C*
 	Params::WBP_cLeonGameSettings_C_SelectMapMain Parms{};
 
 	Parms.SelfWidget = SelfWidget;
-	Parms.Mapdata = std::move(Mapdata);
+	Parms.MapData = std::move(MapData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -273,7 +273,7 @@ DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_12AC
 struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer final
 {
 public:
-	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer;
@@ -331,7 +331,7 @@ DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Cr
 struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess final
 {
 public:
-	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess;
 

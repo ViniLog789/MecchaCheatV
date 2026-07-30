@@ -151,7 +151,7 @@ public:
 	bool                                          bHasPartyMember;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 playerName;                                        // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerName;                                        // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, class FString>            PlayerUserAttributes;                              // 0x0048(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FRedpointPartyAttributeValue> PartyMemberAttributes;                  // 0x0098(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	bool                                          bIsPartyLeader;                                    // 0x00E8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

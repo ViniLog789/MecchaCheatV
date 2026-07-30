@@ -17,6 +17,33 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature;
+
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature
 // 0x0018 (0x0018 - 0x0000)
 struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature final
@@ -107,16 +134,6 @@ public:
 };
 DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature;
 
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.OnClickWithClass
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_cLeonGameSettings_C_OnClickWithClass final
-{
-public:
-	class UWBP_BodySelect_C*                      SelfObject;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 BodyClass;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_OnClickWithClass;
-
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStateChange
 // 0x0010 (0x0010 - 0x0000)
 struct WBP_cLeonGameSettings_C_RandomStateChange final
@@ -154,7 +171,7 @@ struct WBP_cLeonGameSettings_C_SelectMap final
 {
 public:
 	class UWBP_MapContentsWithRandom_C*           SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FST_cLeonMapData                       Mapdata;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FST_cLeonMapData                       MapData;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_SelectMap;
 
@@ -164,7 +181,7 @@ struct WBP_cLeonGameSettings_C_SelectMapMain final
 {
 public:
 	class UWBP_MapContentsWithRandom_C*           SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FST_cLeonMapData                       Mapdata;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FST_cLeonMapData                       MapData;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_SelectMapMain;
 

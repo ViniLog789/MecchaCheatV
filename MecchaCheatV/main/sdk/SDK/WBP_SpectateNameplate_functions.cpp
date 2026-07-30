@@ -79,9 +79,9 @@ void UWBP_SpectateNameplate_C::PreConstruct(bool IsDesignTime_PreConstruct)
 // Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.GetCustomPlayerName
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString*                          playerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          PlayerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_SpectateNameplate_C::GetCustomPlayerName(class FString* playerName)
+void UWBP_SpectateNameplate_C::GetCustomPlayerName(class FString* PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -92,8 +92,8 @@ void UWBP_SpectateNameplate_C::GetCustomPlayerName(class FString* playerName)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (playerName != nullptr)
-		*playerName = std::move(Parms.playerName);
+	if (PlayerName != nullptr)
+		*PlayerName = std::move(Parms.PlayerName);
 }
 
 

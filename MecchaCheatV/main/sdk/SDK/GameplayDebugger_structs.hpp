@@ -99,6 +99,17 @@ public:
 };
 DUMPER7_ASSERTS_FGameplayDebuggerCategoryData;
 
+// ScriptStruct GameplayDebugger.GameplayDebuggerPlayerData
+// 0x0018 (0x0018 - 0x0000)
+struct FGameplayDebuggerPlayerData final
+{
+public:
+	class UGameplayDebuggerLocalController*       Controller;                                        // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInputComponent*                        InputComponent;                                    // 0x0008(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class AGameplayDebuggerCategoryReplicator*    Replicator;                                        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FGameplayDebuggerPlayerData;
+
 // ScriptStruct GameplayDebugger.GameplayDebuggerNetPack
 // 0x0018 (0x0018 - 0x0000)
 struct FGameplayDebuggerNetPack final
@@ -173,16 +184,5 @@ public:
 	TArray<struct FGameplayDebuggerInputConfig>   InputHandlers;                                     // 0x0018(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGameplayDebuggerExtensionConfig;
-
-// ScriptStruct GameplayDebugger.GameplayDebuggerPlayerData
-// 0x0018 (0x0018 - 0x0000)
-struct FGameplayDebuggerPlayerData final
-{
-public:
-	class UGameplayDebuggerLocalController*       Controller;                                        // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UInputComponent*                        InputComponent;                                    // 0x0008(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class AGameplayDebuggerCategoryReplicator*    Replicator;                                        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FGameplayDebuggerPlayerData;
 
 SDK_NAMESPACE_END

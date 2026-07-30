@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 
 
@@ -68,16 +68,11 @@ public:
 DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_Spawn;
 
 // Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.SetupVoiceChatPlayer
-// 0x0080 (0x0080 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct BP_FirstPersonGameMode_V2_C_SetupVoiceChatPlayer final
 {
 public:
 	class AActor*                                 Owner_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerVoiceChatActor*                  CallFunc_FinishSpawningActor_ReturnValue;          // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_SetupVoiceChatPlayer;
 

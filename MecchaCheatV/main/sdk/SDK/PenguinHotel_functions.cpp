@@ -2345,31 +2345,6 @@ void UCustomProgramFunctionLibrary::FilterActorsByInterface(const TArray<class A
 }
 
 
-// Function PenguinHotel.CustomProgramFunctionLibrary.GetActiveVoiceInputDevice
-// (Final, Native, Static, Private, BlueprintCallable)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UCustomProgramFunctionLibrary::GetActiveVoiceInputDevice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CustomProgramFunctionLibrary", "GetActiveVoiceInputDevice");
-
-	Params::CustomProgramFunctionLibrary_GetActiveVoiceInputDevice Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PenguinHotel.CustomProgramFunctionLibrary.GetNearestActor
 // (Final, Native, Static, Private, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -2616,6 +2591,33 @@ class FString UCustomProgramFunctionLibrary::SanitizeInappropriateWords(const cl
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.CustomProgramFunctionLibrary.SetEditableTextKeyboardType
+// (Final, Native, Static, Private, BlueprintCallable)
+// Parameters:
+// class UEditableText*                    EditableText                                           (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EVirtualKeyboardType                    KeyboardType                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCustomProgramFunctionLibrary::SetEditableTextKeyboardType(class UEditableText* EditableText, EVirtualKeyboardType KeyboardType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomProgramFunctionLibrary", "SetEditableTextKeyboardType");
+
+	Params::CustomProgramFunctionLibrary_SetEditableTextKeyboardType Parms{};
+
+	Parms.EditableText = EditableText;
+	Parms.KeyboardType = KeyboardType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

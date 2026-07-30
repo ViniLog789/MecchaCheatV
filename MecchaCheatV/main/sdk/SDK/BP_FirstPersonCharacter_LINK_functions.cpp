@@ -19,9 +19,9 @@ SDK_NAMESPACE_START
 // Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.UpdateNameplate
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    PlayerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_LINK_C::UpdateNameplate(const class FString& playerName)
+void ABP_FirstPersonCharacter_LINK_C::UpdateNameplate(const class FString& PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -30,7 +30,7 @@ void ABP_FirstPersonCharacter_LINK_C::UpdateNameplate(const class FString& playe
 
 	Params::BP_FirstPersonCharacter_LINK_C_UpdateNameplate Parms{};
 
-	Parms.playerName = std::move(playerName);
+	Parms.PlayerName = std::move(PlayerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

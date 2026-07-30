@@ -27,6 +27,7 @@ public:
 	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ApplySettings();
 	void ReceiveTick(float DeltaSeconds);
 	void SendToText(const class FString& MainText, int32 Index_0);
 	void AddMainWidgets();

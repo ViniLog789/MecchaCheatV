@@ -225,7 +225,7 @@ DUMPER7_ASSERTS_BP_GameState_LINK_C_RevivalAnnounce_Server_;
 struct BP_GameState_LINK_C_RevivalAnnounce_Client_ final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_LINK_C_RevivalAnnounce_Client_;
 
@@ -338,7 +338,7 @@ DUMPER7_ASSERTS_BP_GameState_LINK_C_DeathAnnounce_Server_;
 struct BP_GameState_LINK_C_DeathAnnounce_Client_ final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_LINK_C_DeathAnnounce_Client_;
 

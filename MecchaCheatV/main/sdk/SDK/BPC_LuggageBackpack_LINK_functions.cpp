@@ -75,11 +75,11 @@ void UBPC_LuggageBackpack_LINK_C::SelectIndex(int32 Index_0)
 // Parameters:
 // int32                                   ItemIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FTransform&                CameraTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  FirstPersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    CanSpawn                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor**                          SpawnedObject                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LuggageBackpack_LINK_C::RespawnItem(int32 ItemIndex, const struct FTransform& CameraTransform, class ABP_FirstPersonCharacter_Main_C* FirstPersonCharacter, bool CanSpawn, class AActor** SpawnedObject)
+void UBPC_LuggageBackpack_LINK_C::RespawnItem(int32 ItemIndex, const struct FTransform& CameraTransform, class ABP_FirstPersonCharacter_Main_C* FirstpersonCharacter, bool CanSpawn, class AActor** SpawnedObject)
 {
 	static class UFunction* Func = nullptr;
 
@@ -90,7 +90,7 @@ void UBPC_LuggageBackpack_LINK_C::RespawnItem(int32 ItemIndex, const struct FTra
 
 	Parms.ItemIndex = ItemIndex;
 	Parms.CameraTransform = std::move(CameraTransform);
-	Parms.FirstPersonCharacter = FirstPersonCharacter;
+	Parms.FirstpersonCharacter = FirstpersonCharacter;
 	Parms.CanSpawn = CanSpawn;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -223,11 +223,11 @@ void UBPC_LuggageBackpack_LINK_C::GetHeightPosition_FromTransform(const struct F
 // Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetHeightPosition
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  FirstPersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // float                                   Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector*                         Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LuggageBackpack_LINK_C::GetHeightPosition(class ABP_FirstPersonCharacter_Main_C* FirstPersonCharacter, float Distance, struct FVector* Location)
+void UBPC_LuggageBackpack_LINK_C::GetHeightPosition(class ABP_FirstPersonCharacter_Main_C* FirstpersonCharacter, float Distance, struct FVector* Location)
 {
 	static class UFunction* Func = nullptr;
 
@@ -236,7 +236,7 @@ void UBPC_LuggageBackpack_LINK_C::GetHeightPosition(class ABP_FirstPersonCharact
 
 	Params::BPC_LuggageBackpack_LINK_C_GetHeightPosition Parms{};
 
-	Parms.FirstPersonCharacter = FirstPersonCharacter;
+	Parms.FirstpersonCharacter = FirstpersonCharacter;
 	Parms.Distance = Distance;
 
 	UObject::ProcessEvent(Func, &Parms);

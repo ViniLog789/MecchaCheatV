@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Chooser_structs.hpp"
-#include "ProxyTable_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ProxyTable_structs.hpp"
 
 
 SDK_NAMESPACE_START

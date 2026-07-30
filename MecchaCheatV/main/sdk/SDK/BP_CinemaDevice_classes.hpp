@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EN_CinemaPlayMode_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BP_DeviceBase_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EN_CinemaPlayMode_structs.hpp"
 
 
 SDK_NAMESPACE_START

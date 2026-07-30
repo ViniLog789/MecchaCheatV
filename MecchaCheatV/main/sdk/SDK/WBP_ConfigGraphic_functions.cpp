@@ -92,6 +92,20 @@ void UWBP_ConfigGraphic_C::Construct()
 }
 
 
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.BndEvt__WBP_ConfigGraphic_WBP_PerformaiceMode_K2Node_ComponentBoundEvent_3_UpdateSettings__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_ConfigGraphic_C::BndEvt__WBP_ConfigGraphic_WBP_PerformaiceMode_K2Node_ComponentBoundEvent_3_UpdateSettings__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "BndEvt__WBP_ConfigGraphic_WBP_PerformaiceMode_K2Node_ComponentBoundEvent_3_UpdateSettings__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature
 // (BlueprintEvent)
 

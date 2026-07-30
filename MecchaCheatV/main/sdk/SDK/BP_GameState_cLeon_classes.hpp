@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "EN_cLeonGamePhase_structs.hpp"
-#include "Engine_classes.hpp"
-#include "ST_cLeonMapData_structs.hpp"
-#include "EN_cLeonGameMode_structs.hpp"
 #include "EN_cLeonMainGamePhase_structs.hpp"
+#include "EN_cLeonGamePhase_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ST_cLeonSurvivorVariation_structs.hpp"
+#include "EN_cLeonGameMode_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -80,7 +80,7 @@ public:
 	TArray<struct FST_cLeonSurvivorVariation>     SurvivorVariations;                                // 0x0550(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMulticastInlineDelegate<void(int32 Num)>     InitDecoyWidget;                                   // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(const TArray<double>& CoolTimes)> UpdateDecoyCoolTime;             // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const struct FST_cLeonMapData& Mapdata)> MapDataUpdate;            // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FST_cLeonMapData& MapData)> MapDataUpdate;            // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(int32 Current, int32 max_0)> PlayerNumUpdate;                      // 0x0590(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FIntVector2                            JoinPlayerState;                                   // 0x05A0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	int32                                         MaxBullet;                                         // 0x05A8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

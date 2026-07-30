@@ -22,7 +22,7 @@ class IBPI_Spectate_C final
 public:
 	void ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
 	void SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character);
-	void GetCustomPlayerName(class FString* playerName);
+	void GetCustomPlayerName(class FString* PlayerName);
 
 public:
 	static class UClass* StaticClass()

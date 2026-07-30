@@ -298,109 +298,6 @@ public:
 };
 DUMPER7_ASSERTS_UAudioMaterialSliderWidgetStyle;
 
-// Class AudioWidgets.AudioSliderBase
-// 0x0748 (0x08B0 - 0x0168)
-class alignas(0x10) UAudioSliderBase : public UWidget
-{
-public:
-	float                                         Value;                                             // 0x0168(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   UnitsText;                                         // 0x0170(0x0010)(Edit, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TextLabelBackgroundColor;                          // 0x0180(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             TextLabelBackgroundColorDelegate;                  // 0x0190(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowLabelOnlyOnHover;                              // 0x01A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowUnitsText;                                     // 0x01A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsUnitsTextReadOnly;                               // 0x01A2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsValueTextReadOnly;                               // 0x01A3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             ValueDelegate;                                     // 0x01A4(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderBackgroundColor;                             // 0x01B4(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             SliderBackgroundColorDelegate;                     // 0x01C4(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderBarColor;                                    // 0x01D4(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             SliderBarColorDelegate;                            // 0x01E4(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderThumbColor;                                  // 0x01F4(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             SliderThumbColorDelegate;                          // 0x0204(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           WidgetBackgroundColor;                             // 0x0214(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             WidgetBackgroundColorDelegate;                     // 0x0224(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOrientation                                  Orientation;                                       // 0x0234(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_235[0x3];                                      // 0x0235(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x0238(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_248[0x668];                                    // 0x0248(0x0668)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	float GetLinValue(const float OutputValue);
-	float GetOutputValue(const float InSliderValue);
-	float GetSliderValue(const float OutputValue);
-	void SetShowLabelOnlyOnHover(const bool bShowLabelOnlyOnHover);
-	void SetShowUnitsText(const bool bShowUnitsText);
-	void SetSliderBackgroundColor(const struct FLinearColor& InValue);
-	void SetSliderBarColor(const struct FLinearColor& InValue);
-	void SetSliderThumbColor(const struct FLinearColor& InValue);
-	void SetTextLabelBackgroundColor(const struct FSlateColor& InColor);
-	void SetUnitsText(const class FText& Units);
-	void SetUnitsTextReadOnly(const bool bIsReadOnly);
-	void SetValueTextReadOnly(const bool bIsReadOnly);
-	void SetWidgetBackgroundColor(const struct FLinearColor& InValue);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioSliderBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioSliderBase")
-	}
-	static class UAudioSliderBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioSliderBase>();
-	}
-};
-DUMPER7_ASSERTS_UAudioSliderBase;
-
-// Class AudioWidgets.AudioSlider
-// 0x0010 (0x08C0 - 0x08B0)
-class UAudioSlider : public UAudioSliderBase
-{
-public:
-	TWeakObjectPtr<class UCurveFloat>             LinToOutputCurve;                                  // 0x08B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UCurveFloat>             OutputToLinCurve;                                  // 0x08B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioSlider")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioSlider")
-	}
-	static class UAudioSlider* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioSlider>();
-	}
-};
-DUMPER7_ASSERTS_UAudioSlider;
-
-// Class AudioWidgets.AudioVolumeSlider
-// 0x0000 (0x08C0 - 0x08C0)
-class UAudioVolumeSlider final : public UAudioSlider
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioVolumeSlider")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioVolumeSlider")
-	}
-	static class UAudioVolumeSlider* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioVolumeSlider>();
-	}
-};
-DUMPER7_ASSERTS_UAudioVolumeSlider;
-
 // Class AudioWidgets.AudioMeter
 // 0x04E8 (0x0650 - 0x0168)
 class UAudioMeter final : public UWidget
@@ -590,6 +487,109 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAudioFrequencyRadialSlider;
+
+// Class AudioWidgets.AudioSliderBase
+// 0x0748 (0x08B0 - 0x0168)
+class alignas(0x10) UAudioSliderBase : public UWidget
+{
+public:
+	float                                         Value;                                             // 0x0168(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   UnitsText;                                         // 0x0170(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TextLabelBackgroundColor;                          // 0x0180(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             TextLabelBackgroundColorDelegate;                  // 0x0190(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowLabelOnlyOnHover;                              // 0x01A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowUnitsText;                                     // 0x01A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUnitsTextReadOnly;                               // 0x01A2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsValueTextReadOnly;                               // 0x01A3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             ValueDelegate;                                     // 0x01A4(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderBackgroundColor;                             // 0x01B4(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             SliderBackgroundColorDelegate;                     // 0x01C4(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderBarColor;                                    // 0x01D4(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             SliderBarColorDelegate;                            // 0x01E4(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderThumbColor;                                  // 0x01F4(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             SliderThumbColorDelegate;                          // 0x0204(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           WidgetBackgroundColor;                             // 0x0214(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             WidgetBackgroundColorDelegate;                     // 0x0224(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOrientation                                  Orientation;                                       // 0x0234(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_235[0x3];                                      // 0x0235(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x0238(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_248[0x668];                                    // 0x0248(0x0668)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	float GetLinValue(const float OutputValue);
+	float GetOutputValue(const float InSliderValue);
+	float GetSliderValue(const float OutputValue);
+	void SetShowLabelOnlyOnHover(const bool bShowLabelOnlyOnHover);
+	void SetShowUnitsText(const bool bShowUnitsText);
+	void SetSliderBackgroundColor(const struct FLinearColor& InValue);
+	void SetSliderBarColor(const struct FLinearColor& InValue);
+	void SetSliderThumbColor(const struct FLinearColor& InValue);
+	void SetTextLabelBackgroundColor(const struct FSlateColor& InColor);
+	void SetUnitsText(const class FText& Units);
+	void SetUnitsTextReadOnly(const bool bIsReadOnly);
+	void SetValueTextReadOnly(const bool bIsReadOnly);
+	void SetWidgetBackgroundColor(const struct FLinearColor& InValue);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioSliderBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioSliderBase")
+	}
+	static class UAudioSliderBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioSliderBase>();
+	}
+};
+DUMPER7_ASSERTS_UAudioSliderBase;
+
+// Class AudioWidgets.AudioSlider
+// 0x0010 (0x08C0 - 0x08B0)
+class UAudioSlider : public UAudioSliderBase
+{
+public:
+	TWeakObjectPtr<class UCurveFloat>             LinToOutputCurve;                                  // 0x08B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UCurveFloat>             OutputToLinCurve;                                  // 0x08B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioSlider")
+	}
+	static class UAudioSlider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioSlider>();
+	}
+};
+DUMPER7_ASSERTS_UAudioSlider;
+
+// Class AudioWidgets.AudioVolumeSlider
+// 0x0000 (0x08C0 - 0x08C0)
+class UAudioVolumeSlider final : public UAudioSlider
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioVolumeSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioVolumeSlider")
+	}
+	static class UAudioVolumeSlider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioVolumeSlider>();
+	}
+};
+DUMPER7_ASSERTS_UAudioVolumeSlider;
 
 // Class AudioWidgets.AudioFrequencySlider
 // 0x0010 (0x08C0 - 0x08B0)

@@ -377,7 +377,7 @@ DUMPER7_ASSERTS_MediaPlayer_SetBlockOnTime;
 struct MediaPlayer_SetDesiredPlayerName final
 {
 public:
-	class FName                                   playerName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PlayerName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MediaPlayer_SetDesiredPlayerName;
 

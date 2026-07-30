@@ -11,9 +11,10 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Mover_structs.hpp"
 #include "PenguinHotel_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Mover_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -746,15 +747,6 @@ public:
 };
 DUMPER7_ASSERTS_CustomProgramFunctionLibrary_FilterActorsByInterface;
 
-// Function PenguinHotel.CustomProgramFunctionLibrary.GetActiveVoiceInputDevice
-// 0x0010 (0x0010 - 0x0000)
-struct CustomProgramFunctionLibrary_GetActiveVoiceInputDevice final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CustomProgramFunctionLibrary_GetActiveVoiceInputDevice;
-
 // Function PenguinHotel.CustomProgramFunctionLibrary.GetNearestActor
 // 0x0038 (0x0038 - 0x0000)
 struct CustomProgramFunctionLibrary_GetNearestActor final
@@ -848,6 +840,17 @@ public:
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CustomProgramFunctionLibrary_SanitizeInappropriateWords;
+
+// Function PenguinHotel.CustomProgramFunctionLibrary.SetEditableTextKeyboardType
+// 0x0010 (0x0010 - 0x0000)
+struct CustomProgramFunctionLibrary_SetEditableTextKeyboardType final
+{
+public:
+	class UEditableText*                          EditableText;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVirtualKeyboardType                          KeyboardType;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_CustomProgramFunctionLibrary_SetEditableTextKeyboardType;
 
 // Function PenguinHotel.DynamicCapsuleHeightControlInterface.SetDynamicCapsuleCrouching
 // 0x0001 (0x0001 - 0x0000)

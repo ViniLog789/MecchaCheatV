@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_cLeonToggleSwitch.WBP_cLeonToggleSwitch_C
-// 0x00D0 (0x0410 - 0x0340)
+// 0x00F8 (0x0438 - 0x0340)
 class UWBP_cLeonToggleSwitch_C final : public UUserWidget
 {
 public:
@@ -29,9 +29,10 @@ public:
 	class FName                                   Button_Name;                                       // 0x035C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          Is_Controller;                                     // 0x0364(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_365[0x3];                                      // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_InputDeviceImage                   Override_Images;                                   // 0x0368(0x00A0)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          Use_Override_Image;                                // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Auto_Switch;                                       // 0x0409(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_InputDeviceImage                   Override_Images;                                   // 0x0368(0x00C8)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          Use_Override_Image;                                // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Auto_Switch;                                       // 0x0431(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Use_Auto_Switch_2Mouse;                            // 0x0432(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void SetToggleState(bool ToggleState);

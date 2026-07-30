@@ -21,7 +21,7 @@ SDK_PARAM_NAMESPACE_START
 struct WBP_Nameplate_C_SetPlayerName final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Nameplate_C_SetPlayerName;
 

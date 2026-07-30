@@ -10,9 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "UINavigation_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -37,6 +38,7 @@ public:
 	uint8                                         Pad_961[0x7];                                      // 0x0961(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   DefaultText;                                       // 0x0968(0x0010)(Edit, BlueprintVisible)
 	class FText                                   EmptyDefaultText;                                  // 0x0978(0x0010)(Edit, BlueprintVisible)
+	EVirtualKeyboardType                          Keyboard_Type;                                     // 0x0988(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void TextNumUpdate();

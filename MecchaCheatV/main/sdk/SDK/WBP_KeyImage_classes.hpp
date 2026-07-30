@@ -18,7 +18,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_KeyImage.WBP_KeyImage_C
-// 0x0130 (0x0470 - 0x0340)
+// 0x0158 (0x0498 - 0x0340)
 class UWBP_KeyImage_C final : public UUserWidget
 {
 public:
@@ -31,12 +31,13 @@ public:
 	bool                                          IsController;                                      // 0x03B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          BackGroundVisibility;                              // 0x03B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          AutoSwitch;                                        // 0x03B3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_3B4[0x4];                                      // 0x03B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          UseAutoSwitch2Mouse;                               // 0x03B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_3B5[0x3];                                      // 0x03B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 DefaultInputDeviceName;                            // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          UseBegingUpdate;                                   // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseOverrideImage;                                  // 0x03C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_3CA[0x6];                                      // 0x03CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_InputDeviceImage                   OverrideImages;                                    // 0x03D0(0x00A0)(Edit, BlueprintVisible, ContainsInstancedReference, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FST_InputDeviceImage                   OverrideImages;                                    // 0x03D0(0x00C8)(Edit, BlueprintVisible, ContainsInstancedReference, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void UpdateInputDeviceAll(EInputType InputType);

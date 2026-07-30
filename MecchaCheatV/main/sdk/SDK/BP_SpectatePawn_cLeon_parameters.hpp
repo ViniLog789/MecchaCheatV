@@ -10,13 +10,50 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SpectateTargetChange
+// 0x0010 (0x0010 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_SpectateTargetChange final
+{
+public:
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Pawn;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_SpectateTargetChange;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SetLocation
+// 0x0018 (0x0018 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_SetLocation final
+{
+public:
+	struct FVector                                NewLocation;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_SetLocation;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ReceiveTick;
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceivePossessed
+// 0x0008 (0x0008 - 0x0000)
+struct BP_SpectatePawn_cLeon_C_ReceivePossessed final
+{
+public:
+	class AController*                            NewController_ReceivePossessed;                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ReceivePossessed;
 
 // Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ProvocationRemote
 // 0x0008 (0x0008 - 0x0000)
@@ -128,43 +165,6 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_InpActEvt_Five_K2Node_InputKeyEvent_5;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceivePossessed
-// 0x0008 (0x0008 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_ReceivePossessed final
-{
-public:
-	class AController*                            NewController;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ReceivePossessed;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_ReceiveTick;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SetLocation
-// 0x0018 (0x0018 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_SetLocation final
-{
-public:
-	struct FVector                                NewLocation;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_SetLocation;
-
-// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.SpectateTargetChange
-// 0x0010 (0x0010 - 0x0000)
-struct BP_SpectatePawn_cLeon_C_SpectateTargetChange final
-{
-public:
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Pawn;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SpectatePawn_cLeon_C_SpectateTargetChange;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

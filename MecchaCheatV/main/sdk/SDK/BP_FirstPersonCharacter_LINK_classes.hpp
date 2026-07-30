@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "BP_FirstPersonCharacter_Main_classes.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
 #include "EN_LINK_PlayerStateValueType_structs.hpp"
-#include "BP_FirstPersonCharacter_Main_classes.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -70,7 +70,7 @@ public:
 	bool                                          CurrentEmotePlay;                                  // 0x0D68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateNameplate(const class FString& playerName);
+	void UpdateNameplate(const class FString& PlayerName);
 	void UpdateBackpackWeight(double BackpackWeight);
 	void Unzip_Server_(const struct FVector& RespawnPosition);
 	void Unzip_Client_();

@@ -315,9 +315,9 @@ void UWBP_cLeonMain_C::NamePlateVisibilityChange(bool Visibility)
 // Function WBP_cLeonMain.WBP_cLeonMain_C.MapDataUpdate
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_cLeonMapData&          Mapdata                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_cLeonMain_C::MapDataUpdate(const struct FST_cLeonMapData& Mapdata)
+void UWBP_cLeonMain_C::MapDataUpdate(const struct FST_cLeonMapData& MapData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -326,7 +326,7 @@ void UWBP_cLeonMain_C::MapDataUpdate(const struct FST_cLeonMapData& Mapdata)
 
 	Params::WBP_cLeonMain_C_MapDataUpdate Parms{};
 
-	Parms.Mapdata = std::move(Mapdata);
+	Parms.MapData = std::move(MapData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

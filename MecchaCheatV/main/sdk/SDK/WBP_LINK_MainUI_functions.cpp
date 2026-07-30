@@ -333,9 +333,9 @@ void UWBP_LINK_MainUI_C::AddTaskBlock(const class FText& TaskText, int32 SumProg
 // Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddPlayerRevivalUI
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    PlayerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_LINK_MainUI_C::AddPlayerRevivalUI(const class FString& playerName)
+void UWBP_LINK_MainUI_C::AddPlayerRevivalUI(const class FString& PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -344,7 +344,7 @@ void UWBP_LINK_MainUI_C::AddPlayerRevivalUI(const class FString& playerName)
 
 	Params::WBP_LINK_MainUI_C_AddPlayerRevivalUI Parms{};
 
-	Parms.playerName = std::move(playerName);
+	Parms.PlayerName = std::move(PlayerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -353,9 +353,9 @@ void UWBP_LINK_MainUI_C::AddPlayerRevivalUI(const class FString& playerName)
 // Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddPlayerDeathUI
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    PlayerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_LINK_MainUI_C::AddPlayerDeathUI(const class FString& playerName)
+void UWBP_LINK_MainUI_C::AddPlayerDeathUI(const class FString& PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -364,7 +364,7 @@ void UWBP_LINK_MainUI_C::AddPlayerDeathUI(const class FString& playerName)
 
 	Params::WBP_LINK_MainUI_C_AddPlayerDeathUI Parms{};
 
-	Parms.playerName = std::move(playerName);
+	Parms.PlayerName = std::move(PlayerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

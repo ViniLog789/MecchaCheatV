@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PenguinHotel_structs.hpp"
 #include "Mover_structs.hpp"
+#include "PenguinHotel_structs.hpp"
 
 
 SDK_NAMESPACE_START

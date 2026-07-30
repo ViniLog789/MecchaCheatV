@@ -17,14 +17,15 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C
-// 0x0028 (0x0368 - 0x0340)
+// 0x0030 (0x0370 - 0x0340)
 class UWBP_VoiceChatControlPanel_C final : public UUserWidget
 {
 public:
 	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_SettingVoiceInputDevice_C*         WBP_SettingVoiceInputDevice;                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_52;                                      // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FUniqueNetIdRepl>               BoxTarget;                                         // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWBP_SettingVoiceOuputDevice_C*         WBP_SettingVoiceOuputDevice;                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SettingVoiceInputDevice_C*         WBP_SettingVoiceInputDevice;                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_52;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FUniqueNetIdRepl>               BoxTarget;                                         // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void Construct();

@@ -16,12 +16,23 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BPF_cLeon.BPF_cLeon_C.SetSwitchMouseState
+// 0x0010 (0x0010 - 0x0000)
+struct BPF_cLeon_C_SetSwitchMouseState final
+{
+public:
+	bool                                          UseMouse;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPF_cLeon_C_SetSwitchMouseState;
+
 // Function BPF_cLeon.BPF_cLeon_C.GetTelepportPointName
 // 0x00A8 (0x00A8 - 0x0000)
 struct BPF_cLeon_C_GetTelepportPointName final
 {
 public:
-	struct FST_cLeonMapData                       Mapdata;                                           // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FST_cLeonMapData                       MapData;                                           // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   HunterTelporterName;                               // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   SurvivorTelporterName;                             // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

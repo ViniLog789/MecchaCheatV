@@ -39,6 +39,14 @@ public:
 	class ABP_GameState_cLeon_C*                  As_BP_Game_State_C_Leon;                           // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void SwitchNamePlateVisibility();
+	void SpectateTargetChange(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState, class APawn* Pawn);
+	void Setup();
+	void SetLocation(const struct FVector& NewLocation);
+	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ReceivePossessed(class AController* NewController_ReceivePossessed);
+	void ReceiveDestroyed();
+	void ReceiveBeginPlay();
 	void ProvocationRemote(class ABP_FirstPersonCharacter_cLeon_Character_C* Target);
 	void OnRep_SelfController();
 	void OnRep_CanBackBody();
@@ -56,14 +64,6 @@ public:
 	void InpActEvt_Five_K2Node_InputKeyEvent_5(const struct FKey& Key);
 	void FreeCameraChange();
 	void BackBody();
-	void ReceiveBeginPlay();
-	void ReceiveDestroyed();
-	void ReceivePossessed(class AController* NewController);
-	void ReceiveTick(float DeltaSeconds);
-	void SetLocation(const struct FVector& NewLocation);
-	void Setup();
-	void SpectateTargetChange(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState_0, class APawn* Pawn);
-	void SwitchNamePlateVisibility();
 
 public:
 	static class UClass* StaticClass()

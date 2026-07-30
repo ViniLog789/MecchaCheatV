@@ -105,7 +105,7 @@ void ABP_FirstPersonGameMode_V2_C::Spawn(class AController* Controller)
 
 
 // Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.SetupVoiceChatPlayer
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 

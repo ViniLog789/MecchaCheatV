@@ -59,9 +59,9 @@ void IBPI_Spectate_C::SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main
 // Function BPI_Spectate.BPI_Spectate_C.GetCustomPlayerName
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString*                          playerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          PlayerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void IBPI_Spectate_C::GetCustomPlayerName(class FString* playerName)
+void IBPI_Spectate_C::GetCustomPlayerName(class FString* PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -72,8 +72,8 @@ void IBPI_Spectate_C::GetCustomPlayerName(class FString* playerName)
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 
-	if (playerName != nullptr)
-		*playerName = std::move(Parms.playerName);
+	if (PlayerName != nullptr)
+		*PlayerName = std::move(Parms.PlayerName);
 }
 
 

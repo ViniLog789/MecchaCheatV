@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "UINavigation_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "UINavigation_structs.hpp"
 #include "EN_InputJudgementType_structs.hpp"
 
 
@@ -64,6 +65,18 @@ public:
 	class FString                                 Filename;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPGI_Main_C_OnCallFailed_4473CEAA43FDA8DFD02079B1F2500B1B;
+
+// Function BPGI_Main.BPGI_Main_C.OnInputDeviceConnectionChange_イベント
+// 0x000C (0x000C - 0x0000)
+struct BPGI_Main_C_OnInputDeviceConnectionChange_イベント final
+{
+public:
+	EInputDeviceConnectionState                   NewConnectionState;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPlatformUserId                        PlatformUserId;                                    // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputDeviceId                         InputDeviceId;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPGI_Main_C_OnInputDeviceConnectionChange_イベント;
 
 // Function BPGI_Main.BPGI_Main_C.OnReadUserFileComplete_4473CEAA43FDA8DFD02079B1F2500B1B
 // 0x0048 (0x0048 - 0x0000)

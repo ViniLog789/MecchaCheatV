@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EN_LINK_GamePhase_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EN_LINK_GamePhase_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -71,7 +71,7 @@ public:
 	void SendToText_Local_(const class FString& Text, int32 MessageType);
 	void SendToText_Client_(const class FString& Text, int32 MessageType);
 	void RevivalAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete);
-	void RevivalAnnounce_Client_(const class FString& playerName);
+	void RevivalAnnounce_Client_(const class FString& PlayerName);
 	void ReplicateSound(class USoundBase* Sound);
 	void RemoveWidget_Global_();
 	void RemoveTaskWidget(const class FString& Key);
@@ -91,7 +91,7 @@ public:
 	void GameClear();
 	void ExitShopAreaUpdate(class AActor* Actor, bool State);
 	void DeathAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete);
-	void DeathAnnounce_Client_(const class FString& playerName);
+	void DeathAnnounce_Client_(const class FString& PlayerName);
 	void CloseAnnounce();
 	void CinemaManequinAttach(const TArray<class AController*>& Controllers);
 	void AddWidget_Global_(class UClass* WidgetClass);

@@ -131,7 +131,7 @@ DUMPER7_ASSERTS_UMediaSource;
 class UBaseMediaSource : public UMediaSource
 {
 public:
-	class FName                                   playerName;                                        // 0x0080(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FName                                   PlayerName;                                        // 0x0080(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -289,7 +289,7 @@ public:
 	bool Seek(const struct FTimespan& Time);
 	bool SelectTrack(EMediaPlayerTrack TrackType, int32 TrackIndex);
 	void SetBlockOnTime(const struct FTimespan& Time);
-	void SetDesiredPlayerName(class FName playerName);
+	void SetDesiredPlayerName(class FName PlayerName);
 	bool SetLooping(bool Looping);
 	void SetMediaOptions(const class UMediaSource* Options);
 	bool SetNativeVolume(float Volume);

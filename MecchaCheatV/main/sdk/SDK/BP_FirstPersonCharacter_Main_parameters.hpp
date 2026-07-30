@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 #include "FinishFilter_structs.hpp"
-#include "PenguinHotel_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 #include "Mover_structs.hpp"
+#include "PenguinHotel_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "DeathType_structs.hpp"
 #include "EN_StanType_structs.hpp"
@@ -2117,7 +2117,7 @@ DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_GetItemInfo;
 struct BP_FirstPersonCharacter_Main_C_GetParentCharacter final
 {
 public:
-	class ABP_FirstPersonCharacter_Main_C*        FirstPersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        FirstpersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_GetParentCharacter;
 

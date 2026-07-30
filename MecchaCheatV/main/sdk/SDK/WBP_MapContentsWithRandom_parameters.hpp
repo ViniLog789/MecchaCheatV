@@ -49,7 +49,7 @@ struct WBP_MapContentsWithRandom_C_BndEvt__WBP_MapContentsWithRandom_WBP_MapCont
 {
 public:
 	class UWBP_MapContents_C*                     SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FST_cLeonMapData                       Mapdata;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FST_cLeonMapData                       MapData;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_MapContentsWithRandom_C_BndEvt__WBP_MapContentsWithRandom_WBP_MapContents_K2Node_ComponentBoundEvent_1_SelectMap__DelegateSignature;
 

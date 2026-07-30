@@ -67,20 +67,6 @@ bool UWBP_VoiceChatState_C::SetMicrophoneVolume(float Volume)
 }
 
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.Reset
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_VoiceChatState_C::Reset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatState_C", "Reset");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_VoiceChatState.WBP_VoiceChatState_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -149,7 +135,7 @@ void UWBP_VoiceChatState_C::IsCinemaModeCheck()
 }
 
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1
+// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_3
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -157,14 +143,14 @@ void UWBP_VoiceChatState_C::IsCinemaModeCheck()
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatState_C", "InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1");
+		Func = Class->GetFunction("WBP_VoiceChatState_C", "InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_3");
 
-	Params::WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1 Parms{};
+	Params::WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_3 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -175,7 +161,7 @@ void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInpu
 }
 
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0
+// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_2
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -183,14 +169,14 @@ void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInpu
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatState_C", "InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WBP_VoiceChatState_C", "InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_2");
 
-	Params::WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0 Parms{};
+	Params::WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_2 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -201,7 +187,7 @@ void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInpu
 }
 
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3
+// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -209,14 +195,14 @@ void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInpu
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatState_C", "InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3");
+		Func = Class->GetFunction("WBP_VoiceChatState_C", "InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_1");
 
-	Params::WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3 Parms{};
+	Params::WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_1 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -227,7 +213,7 @@ void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInpu
 }
 
 
-// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2
+// Function WBP_VoiceChatState.WBP_VoiceChatState_C.InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_0
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -235,14 +221,14 @@ void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInpu
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWBP_VoiceChatState_C::InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatState_C", "InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2");
+		Func = Class->GetFunction("WBP_VoiceChatState_C", "InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_0");
 
-	Params::WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2 Parms{};
+	Params::WBP_VoiceChatState_C_InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_0 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;

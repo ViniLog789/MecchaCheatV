@@ -12,11 +12,12 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Mover_classes.hpp"
+#include "AIModule_classes.hpp"
 #include "PenguinHotel_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "AIModule_classes.hpp"
+#include "Mover_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -453,7 +454,6 @@ public:
 	static void ApplyTorqueForce(class UPrimitiveComponent* Component, const struct FRotator& RotationA, const struct FRotator& RotationB, float Strength, bool bAccelChange);
 	static struct FRotator CalculateTorqueForRotation(const struct FRotator& RotationA, const struct FRotator& RotationB);
 	static void FilterActorsByInterface(const TArray<class AActor*>& Actors, TSubclassOf<class IInterface> Interface, TArray<class AActor*>* OutActors);
-	static class FString GetActiveVoiceInputDevice();
 	static class AActor* GetNearestActor(const struct FVector& Location, const TArray<class AActor*>& Actors, float* OutDistance);
 	static class AActor* GetNearestActorByDotProduct(const struct FVector& Location, const struct FVector& Direction, const TArray<class AActor*>& Actors, float* OutDotProduct);
 	static float GetPawnRemoteViewPitch(class APawn* Pawn);
@@ -462,6 +462,7 @@ public:
 	static class FString HashStringMD5(const class FString& Source);
 	static bool IsInGame(const class UObject* WorldContextObject);
 	static class FString SanitizeInappropriateWords(const class FString& Source);
+	static void SetEditableTextKeyboardType(class UEditableText* EditableText, EVirtualKeyboardType KeyboardType);
 
 public:
 	static class UClass* StaticClass()

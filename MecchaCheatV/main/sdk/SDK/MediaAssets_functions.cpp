@@ -1011,9 +1011,9 @@ void UMediaPlayer::SetBlockOnTime(const struct FTimespan& Time)
 // Function MediaAssets.MediaPlayer.SetDesiredPlayerName
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// class FName                             playerName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             PlayerName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMediaPlayer::SetDesiredPlayerName(class FName playerName)
+void UMediaPlayer::SetDesiredPlayerName(class FName PlayerName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1022,7 +1022,7 @@ void UMediaPlayer::SetDesiredPlayerName(class FName playerName)
 
 	Params::MediaPlayer_SetDesiredPlayerName Parms{};
 
-	Parms.playerName = playerName;
+	Parms.PlayerName = PlayerName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

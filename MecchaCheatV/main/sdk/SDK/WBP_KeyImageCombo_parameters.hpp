@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "UINavigation_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ST_KeyImageComboBase_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "UINavigation_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -29,7 +29,7 @@ public:
 DUMPER7_ASSERTS_WBP_KeyImageCombo_C_UpdateInputDeviceAll;
 
 // Function WBP_KeyImageCombo.WBP_KeyImageCombo_C.SetUpInputIcon
-// 0x0200 (0x0200 - 0x0000)
+// 0x0228 (0x0228 - 0x0000)
 struct WBP_KeyImageCombo_C_SetUpInputIcon final
 {
 public:
@@ -43,27 +43,27 @@ public:
 	class UWBP_KeyImage_C*                        CallFunc_Create_ReturnValue_1;                     // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_KeyImageComboBase                  CallFunc_Array_Get_Item;                           // 0x0048(0x00E0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0130(0x0060)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X;                          // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Len_ReturnValue;                          // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x01B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B5[0x3];                                      // 0x01B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USizeBox*                               CallFunc_SpawnObject_ReturnValue;                  // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBoxSlot*                     CallFunc_SlotAsHorizontalBoxSlot_ReturnValue_1;    // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue_1;                   // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue_2;                   // 0x01D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable;                              // 0x01E0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast; // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetHeightOverride_InHeightOverride_ImplicitCast; // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_KeyImageComboBase                  CallFunc_Array_Get_Item;                           // 0x0048(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0158(0x0060)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x01B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Len_ReturnValue;                          // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x01DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DD[0x3];                                      // 0x01DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x01E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E5[0x3];                                      // 0x01E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USizeBox*                               CallFunc_SpawnObject_ReturnValue;                  // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBoxSlot*                     CallFunc_SlotAsHorizontalBoxSlot_ReturnValue_1;    // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue_1;                   // 0x01F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue_2;                   // 0x0200(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Temp_struct_Variable;                              // 0x0208(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast; // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetHeightOverride_InHeightOverride_ImplicitCast; // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_KeyImageCombo_C_SetUpInputIcon;
 
