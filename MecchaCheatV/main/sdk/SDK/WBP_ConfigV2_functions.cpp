@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_ConfigV2.WBP_ConfigV2_C.UpdateVisual
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   TargetIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ConfigV2_C::UpdateVisual(int32 TargetIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigV2_C", "UpdateVisual");
+
+	Params::WBP_ConfigV2_C_UpdateVisual Parms{};
+
+	Parms.TargetIndex = TargetIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ConfigV2.WBP_ConfigV2_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -33,6 +53,26 @@ void UWBP_ConfigV2_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDelt
 
 	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
 	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ConfigV2.WBP_ConfigV2_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ConfigV2_C::PreConstruct(bool IsDesignTime_PreConstruct)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigV2_C", "PreConstruct");
+
+	Params::WBP_ConfigV2_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -130,6 +170,20 @@ void UWBP_ConfigV2_C::Construct()
 }
 
 
+// Function WBP_ConfigV2.WBP_ConfigV2_C.BndEvt__WBP_ConfigV2_WBP_BackButton_K2Node_ComponentBoundEvent_5_OnClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_ConfigV2_C::BndEvt__WBP_ConfigV2_WBP_BackButton_K2Node_ComponentBoundEvent_5_OnClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigV2_C", "BndEvt__WBP_ConfigV2_WBP_BackButton_K2Node_ComponentBoundEvent_5_OnClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_ConfigV2.WBP_ConfigV2_C.BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_VoiceChat_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
 // (BlueprintEvent)
 
@@ -181,34 +235,6 @@ void UWBP_ConfigV2_C::BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_GameGeneral
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_ConfigV2_C", "BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_GameGeneral_K2Node_ComponentBoundEvent_3_PushEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConfigV2.WBP_ConfigV2_C.BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_FriendList_K2Node_ComponentBoundEvent_7_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_ConfigV2_C::BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_FriendList_K2Node_ComponentBoundEvent_7_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigV2_C", "BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_FriendList_K2Node_ComponentBoundEvent_7_PushEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConfigV2.WBP_ConfigV2_C.BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_FAQ_K2Node_ComponentBoundEvent_5_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_ConfigV2_C::BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_FAQ_K2Node_ComponentBoundEvent_5_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigV2_C", "BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_FAQ_K2Node_ComponentBoundEvent_5_PushEnd__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

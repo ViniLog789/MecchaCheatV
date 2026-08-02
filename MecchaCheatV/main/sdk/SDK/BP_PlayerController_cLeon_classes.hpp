@@ -44,6 +44,7 @@ public:
 public:
 	void AddBodyTypeSesttings();
 	void AddMainWidgets();
+	void BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_1_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent* Component, bool bReset);
 	void CameraReset();
 	void ChoseBodyClose();
 	void EEYAN_State(bool State);

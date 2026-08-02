@@ -27,6 +27,58 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_UpdateRemainBullet;
 
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.HitSuccess
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess final
+{
+public:
+	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AntiChatTrace
+// 0x0020 (0x0020 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AntiChatTrace final
+{
+public:
+	struct FVector                                End;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_cLeon_Character_C* Target;                                        // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AntiChatTrace;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ChangeViewMode
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ChangeViewMode final
+{
+public:
+	class FName                                   ModeName;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Quick;                                             // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ChangeViewMode;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AddtoViewDatas(Server)
+// 0x0020 (0x0020 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AddtoViewDatas_Server_ final
+{
+public:
+	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> PlayerStates;                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<int32>                                 Points;                                            // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AddtoViewDatas_Server_;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SpawnShotEffect(Client)
+// 0x0040 (0x0040 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SpawnShotEffect_Client_ final
+{
+public:
+	struct FVector                                Endpoint;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHit;                                             // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               HitRotation;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         Seed;                                              // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SpawnShotEffect_Client_;
+
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SpawnShotEffect(Server)
 // 0x0040 (0x0040 - 0x0000)
 struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SpawnShotEffect_Server_ final
@@ -53,242 +105,24 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SpawnShotEffect_Local_;
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SpawnShotEffect(Client)
-// 0x0040 (0x0040 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SpawnShotEffect_Client_ final
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.KillPlayer
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer final
 {
 public:
-	struct FVector                                Endpoint;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHit;                                             // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               HitRotation;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         Seed;                                              // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SpawnShotEffect_Client_;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer;
 
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
 struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ReceiveTick final
 {
 public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ReceiveTick;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnRep_FoundTargetPlayerState
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnRep_FoundTargetPlayerState final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnRep_FoundTargetPlayerState;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_85995EF044945821EC08CDAD261FDD89
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_85995EF044945821EC08CDAD261FDD89 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_85995EF044945821EC08CDAD261FDD89;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_85995EF044945821EC08CDAD261FDD89
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_85995EF044945821EC08CDAD261FDD89 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_85995EF044945821EC08CDAD261FDD89;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_B6C494744BD8085F199D4791408CEB6E
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_B6C494744BD8085F199D4791408CEB6E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_B6C494744BD8085F199D4791408CEB6E;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_85995EF044945821EC08CDAD261FDD89
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_85995EF044945821EC08CDAD261FDD89 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_85995EF044945821EC08CDAD261FDD89;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_53A71DDF483CC968C1A61DAF788E875A
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_53A71DDF483CC968C1A61DAF788E875A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_53A71DDF483CC968C1A61DAF788E875A;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_B6C494744BD8085F199D4791408CEB6E
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_B6C494744BD8085F199D4791408CEB6E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_B6C494744BD8085F199D4791408CEB6E;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_85995EF044945821EC08CDAD261FDD89
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_85995EF044945821EC08CDAD261FDD89 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_85995EF044945821EC08CDAD261FDD89;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_53A71DDF483CC968C1A61DAF788E875A
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_53A71DDF483CC968C1A61DAF788E875A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_53A71DDF483CC968C1A61DAF788E875A;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_12AC243E438FB95C3F7F978927A1E9CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_12AC243E438FB95C3F7F978927A1E9CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_12AC243E438FB95C3F7F978927A1E9CD;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_B6C494744BD8085F199D4791408CEB6E
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_B6C494744BD8085F199D4791408CEB6E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_B6C494744BD8085F199D4791408CEB6E;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_85995EF044945821EC08CDAD261FDD89
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_85995EF044945821EC08CDAD261FDD89 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_85995EF044945821EC08CDAD261FDD89;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_53A71DDF483CC968C1A61DAF788E875A
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_53A71DDF483CC968C1A61DAF788E875A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_53A71DDF483CC968C1A61DAF788E875A;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.KillPlayer
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer final
-{
-public:
-	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 final
-{
-public:
-	struct FInputActionValue                      ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3; // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3; // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3; // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3; // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3;
 
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)
@@ -301,6 +135,141 @@ public:
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_85995EF044945821EC08CDAD261FDD89
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_85995EF044945821EC08CDAD261FDD89 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_85995EF044945821EC08CDAD261FDD89;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_85995EF044945821EC08CDAD261FDD89
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_85995EF044945821EC08CDAD261FDD89 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_85995EF044945821EC08CDAD261FDD89;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_85995EF044945821EC08CDAD261FDD89
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_85995EF044945821EC08CDAD261FDD89 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_85995EF044945821EC08CDAD261FDD89;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_85995EF044945821EC08CDAD261FDD89
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_85995EF044945821EC08CDAD261FDD89 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_85995EF044945821EC08CDAD261FDD89;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_85995EF044945821EC08CDAD261FDD89
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_85995EF044945821EC08CDAD261FDD89 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_85995EF044945821EC08CDAD261FDD89;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_B6C494744BD8085F199D4791408CEB6E
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_B6C494744BD8085F199D4791408CEB6E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_B6C494744BD8085F199D4791408CEB6E;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_B6C494744BD8085F199D4791408CEB6E
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_B6C494744BD8085F199D4791408CEB6E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_B6C494744BD8085F199D4791408CEB6E;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_B6C494744BD8085F199D4791408CEB6E
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_B6C494744BD8085F199D4791408CEB6E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_B6C494744BD8085F199D4791408CEB6E;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_53A71DDF483CC968C1A61DAF788E875A
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_53A71DDF483CC968C1A61DAF788E875A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_53A71DDF483CC968C1A61DAF788E875A;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_53A71DDF483CC968C1A61DAF788E875A
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_53A71DDF483CC968C1A61DAF788E875A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_53A71DDF483CC968C1A61DAF788E875A;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_53A71DDF483CC968C1A61DAF788E875A
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_53A71DDF483CC968C1A61DAF788E875A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_53A71DDF483CC968C1A61DAF788E875A;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A;
 
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_1
 // 0x0030 (0x0030 - 0x0000)
@@ -326,14 +295,75 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Crouch_K2Node_EnhancedInputActionEvent_2;
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.HitSuccess
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_12AC243E438FB95C3F7F978927A1E9CD
 // 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess final
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_12AC243E438FB95C3F7F978927A1E9CD final
 {
 public:
-	class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_12AC243E438FB95C3F7F978927A1E9CD;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnRep_FoundTargetPlayerState
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnRep_FoundTargetPlayerState final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnRep_FoundTargetPlayerState;
 
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.CheckViewInPlayers
 // 0x0370 (0x0370 - 0x0000)
@@ -396,36 +426,6 @@ public:
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0368(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_CheckViewInPlayers;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ChangeViewMode
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ChangeViewMode final
-{
-public:
-	class FName                                   ModeName_ChangeViewMode;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Quick_ChangeViewMode;                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ChangeViewMode;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AntiChatTrace
-// 0x0020 (0x0020 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AntiChatTrace final
-{
-public:
-	struct FVector                                End;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_cLeon_Character_C* Target;                                        // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AntiChatTrace;
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AddtoViewDatas(Server)
-// 0x0020 (0x0020 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AddtoViewDatas_Server_ final
-{
-public:
-	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> PlayerStates;                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<int32>                                 Points;                                            // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AddtoViewDatas_Server_;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

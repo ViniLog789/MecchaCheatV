@@ -30,6 +30,20 @@ void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAni
 }
 
 
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -411,6 +425,26 @@ void UWBP_cLeonGameSettings_C::Construct()
 		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.GetInitialFocusComponent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUINavComponent*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UUINavComponent* UWBP_cLeonGameSettings_C::GetInitialFocusComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "GetInitialFocusComponent");
+
+	Params::WBP_cLeonGameSettings_C_GetInitialFocusComponent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

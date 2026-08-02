@@ -11,22 +11,23 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
-#include "Engine_structs.hpp"
-#include "PhysicsCore_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
-#include "Mover_structs.hpp"
-#include "MoverExamples_classes.hpp"
-#include "ENUM_HandType_structs.hpp"
-#include "EN_DamageType_structs.hpp"
+#include "EN_InputBlockDeviceType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 #include "DeathType_structs.hpp"
+#include "PhysicsCore_structs.hpp"
 #include "EN_StanType_structs.hpp"
+#include "Mover_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "MoverExamples_classes.hpp"
+#include "EN_DamageType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C
-// 0x0748 (0x0B30 - 0x03E8)
+// 0x0758 (0x0B40 - 0x03E8)
 class ABP_FirstPersonCharacter_Main_C : public AMoverExamplesCharacter
 {
 public:
@@ -222,12 +223,17 @@ public:
 	bool                                          IsPossessed;                                       // 0x0B2D(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	bool                                          DontSendCameraPitch;                               // 0x0B2E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseYawRotation;                                    // 0x0B2F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InvertX;                                           // 0x0B30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InvertY;                                           // 0x0B31(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ViewResetCheck();
+	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
+	void StanDamage(EN_StanType StanType);
+	void StaminaDamage(double Value);
 	void Recharge();
+	void UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas);
 	void BndEvt__BP_FirstPersonCharacter_BPC_LongInputControlAvoidDash_K2Node_ComponentBoundEvent_6_SinglePush__DelegateSignature();
-	void SetCurrentItem(int32 SlotIndex, const struct FCPP_GameItemData& ItemData, const struct FST_ItemCoreDatas& CoreData);
 	void ChangeViewEnd();
 	void SetCameraFreeRotation_Server_(bool Value);
 	void SetCameraFreeRotation(bool Value);
@@ -242,11 +248,9 @@ public:
 	void ReplicateLaunch(const struct FVector& Launch_Velocity);
 	void PlaySound_Owner_(class USoundBase* Sound);
 	void DamagedAnimation_Owner_(double DamageValue, bool UnAvoidable);
-	void AvoidEnd();
 	void ChangeInteractUITickEvent();
 	void SetUpEndPlayerState();
 	void SetHealthValue_Server_(double TargetValue);
-	void InventoryStackUpdateSignal();
 	void ClimbingValue(double DeltaTime);
 	void OnSyncedPlayerState();
 	void ChangeSpectatingPlayer(class ABP_FirstPersonCharacter_Main_C* Character);
@@ -254,10 +258,11 @@ public:
 	void ClimbingEndJump();
 	void ClimbingFinish(bool IsEndJump);
 	void ClimbingForce();
-	void SetFreeLook(bool State);
+	void AvoidEnd();
 	void SetSpectatingState(bool State);
 	void SetClimbingState_Server_(bool State);
-	void ClimbingStart();
+	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
+	void SetFreeLook(bool State);
 	void OnLanded_1(const struct FHitResult& Hit);
 	void ChangeViewMode(class FName ModeName, bool Quick);
 	void SetWarpTargetLocation(class FName WarpTargetName, const struct FVector& TargetLocation);
@@ -270,49 +275,47 @@ public:
 	void CameraPitch(double ViewPitch_0);
 	void ShotEvent(bool State);
 	void DashStateChage(bool State);
+	void ClimbingStart();
 	void BndEvt__BP_FirstPersonCharacter_BPC_LongInputControlAvoidDash_K2Node_ComponentBoundEvent_8_InputEnd__DelegateSignature(double PushTime);
 	void BndEvt__BP_FirstPersonCharacter_BPC_LongInputControlAvoidDash_K2Node_ComponentBoundEvent_7_LongPushStart__DelegateSignature();
-	void SetIceMode(bool IceState);
 	void BndEvt__BP_FirstPersonCharacter_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_5_ChangeAnimationEnd__DelegateSignature();
 	void StanEnd();
 	void Stan(double StanTime);
+	void SetIceMode(bool IceState);
 	void StaminaUpdate(double AddValue, double AnimationTime, double SubAnimationTime);
 	void BndEvt__BP_FirstPersonCharacter_BPC_StaminaGauge_Sub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature(double UpdateValue);
 	void StaminaSubAnimation();
-	void Item_Enter(class ABP_ItemBase_C* SendItem);
 	void BndEvt__BP_FirstPersonCharacter_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_2_ChangedValue__DelegateSignature(double UpdateValue);
 	void BndEvt__BP_FirstPersonCharacter_BPC_HPGaugeControl_Sub_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature(double UpdateValue);
 	void HPBarSubAnimation();
+	void Interact_Server_(class AActor* TargetActor, int32 SlotIndex);
 	void BndEvt__BP_FirstPersonCharacter_BPC_HPGaugeControl_K2Node_ComponentBoundEvent_0_ChangedValue__DelegateSignature(double UpdateValue);
 	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply);
 	void CollisionReset();
 	void Combo(double TimeRange, class FName ComboName);
-	void StaminaDamage(double Value);
-	void StanDamage(EN_StanType StanType);
-	void SetIsCrouching(bool IsCrouching_0);
 	void DashStateUpdate();
-	void SetIsCrouching_Server_(bool IsCrouching_0);
 	void AutoHeal();
-	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
 	void AutoHealStart();
+	void InteractItem();
 	void ReleaseRightItem();
-	void Interact_Server_(class AActor* TargetActor, int32 SlotIndex);
+	void SetMeshDatas(bool KeepScale);
 	void DamagedAnimation(double DamageValue, bool UnAvoidable);
-	void UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas);
+	void SetIsCrouching(bool IsCrouching_0);
 	void AddActor(class AActor* Actor);
 	void DeleteActor(class AActor* Actor);
-	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
+	void SetIsCrouching_Server_(bool IsCrouching_0);
 	void ItemShakeStart();
+	void DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition);
 	void DeathUIShowAndAwait();
 	void DeathEvent(EDeathType DeathType, class AActor* Bind_Asset);
-	void DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition);
-	void SetMeshDatas(bool KeepScale);
-	void SlotChange_Server_(int32 SlotValue);
-	void InteractItem();
 	void Interact(class AActor* Actor);
 	void ReceiveBeginPlay();
+	void Item_Enter(class ABP_ItemBase_C* SendItem);
+	void InventoryStackUpdateSignal();
+	void SetCurrentItem(int32 SlotIndex, const struct FCPP_GameItemData& ItemData, const struct FST_ItemCoreDatas& CoreData);
 	void InventoryUpdateSignal();
-	void InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void SlotChange_Server_(int32 SlotValue);
+	void InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
@@ -330,23 +333,24 @@ public:
 	void InpActEvt_T_K2Node_InputDebugKeyEvent_3(const struct FKey& Key, const struct FInputActionValue& ActionValue);
 	void InpActEvt_I_K2Node_InputDebugKeyEvent_4(const struct FKey& Key, const struct FInputActionValue& ActionValue);
 	void InpActEvt_N_K2Node_InputDebugKeyEvent_5(const struct FKey& Key, const struct FInputActionValue& ActionValue);
-	void InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_H_K2Node_InputDebugKeyEvent_6(const struct FKey& Key, const struct FInputActionValue& ActionValue);
-	void InpActEvt_IA_ModeChange_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_ModeChange_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_Ctrl_Alt_Shift_R_K2Node_InputKeyEvent_3(const struct FKey& Key);
+	void InpActEvt_IA_Dash_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Dash_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_Dash_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_Dash_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Dash_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Dash_K2Node_EnhancedInputActionEvent_15(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Look_Controller_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_Y_K2Node_InputDebugKeyEvent_7(const struct FKey& Key, const struct FInputActionValue& ActionValue);
-	void InpActEvt_IA_SlotChange_K2Node_EnhancedInputActionEvent_16(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_Ctrl_R_K2Node_InputDebugKeyEvent_8(const struct FKey& Key, const struct FInputActionValue& ActionValue);
-	void InpActEvt_IA_Aim_Release_K2Node_EnhancedInputActionEvent_17(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Aim_K2Node_EnhancedInputActionEvent_18(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Aim_K2Node_EnhancedInputActionEvent_19(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Release_K2Node_EnhancedInputActionEvent_20(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_21(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Aim_Release_K2Node_EnhancedInputActionEvent_15(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Aim_K2Node_EnhancedInputActionEvent_16(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Aim_K2Node_EnhancedInputActionEvent_17(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Release_K2Node_EnhancedInputActionEvent_18(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_19(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_20(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_21(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_SlotChange_K2Node_EnhancedInputActionEvent_22(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void CameraAnimation__UpdateFunc();
 	void CameraAnimation__FinishedFunc();
 	void ItemShake__FootStepTrac__EventFunc();
@@ -406,12 +410,13 @@ public:
 	void ConvertTransfrom();
 	void OnRep_ViewPitch();
 	void OnRep_IsPossessed();
+	void GetInputViewDevice(EN_InputBlockDeviceType* DeviceType);
 	void look_spead(class FText* slook_pead);
 	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
 	void GetParryState(bool* State);
 	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
-	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter);
+	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter);
 	bool GetStateValue(class FName TargetName);
 	void GetCharacterMoverComp(class UCharacterMoverComponent** CharacterMoverComponent);
 

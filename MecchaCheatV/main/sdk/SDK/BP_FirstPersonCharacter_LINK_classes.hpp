@@ -10,64 +10,64 @@
 
 #include "Basic.hpp"
 
+#include "EN_DamageType_structs.hpp"
+#include "EN_LINK_PlayerStateValueType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_FirstPersonCharacter_Main_classes.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "EN_LINK_PlayerStateValueType_structs.hpp"
-#include "OnlineSubsystemBlueprints_structs.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C
-// 0x0240 (0x0D70 - 0x0B30)
+// 0x0240 (0x0D80 - 0x0B40)
 class ABP_FirstPersonCharacter_LINK_C final : public ABP_FirstPersonCharacter_Main_C
 {
 public:
-	uint8                                         Pad_B30[0x8];                                      // 0x0B30(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBillboardComponent*                    ItemDropPoint;                                     // 0x0B38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_LinkCharacterCustomControl_C*      BPC_LinkCharacterCustomControl;                    // 0x0B40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       Nameplate;                                         // 0x0B48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ULBPC_ComponentDistanceVisualUpdate_C*  LBPC_ComponentDistanceVisualUpdate;                // 0x0B50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_LongInputControl_C*                BPC_LongInputControl_LeftClick;                    // 0x0B58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCPP_AC_CustomPhysicsForce_2Leg_C*      CPP_AC_CustomPhysicsForce_2Leg;                    // 0x0B60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioCaptureComponent*                 AudioCapture;                                      // 0x0B68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPhysicsHandleComponent*                PhysicsHandle_R;                                   // 0x0B70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_LINK_HandControl_C*                BPC_LINK_HandControl_R;                            // 0x0B78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             HandTransform_R;                                   // 0x0B80(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HandWeight_R;                                      // 0x0BE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxHandLength;                                     // 0x0BE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             HandTransform_L;                                   // 0x0BF0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HandWeight_L;                                      // 0x0C50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HandPower;                                         // 0x0C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWBP_LINK_MainUI_C*                     LINK_MainUI;                                       // 0x0C60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UClass*>                         GiveAbilitys;                                      // 0x0C68(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class ABP_FirstPersonGameMode_Online_LINK_C*  GameMode_LINK;                                     // 0x0C78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFreeze;                                          // 0x0C80(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C81[0x7];                                      // 0x0C81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        AttractionDistance;                                // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerState_LINK_C*      MyPlayerState_LINK;                                // 0x0C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               BodyMaterial;                                      // 0x0C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentVoiceScale;                                 // 0x0CA0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA8[0x8];                                      // 0x0CA8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             DeathPointTransform;                               // 0x0CB0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Delta_Seconds;                                     // 0x0D10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D14[0x4];                                      // 0x0D14(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        OverDamageValue;                                   // 0x0D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_GameState_LINK_C*                   As_BP_Game_State_LINK;                             // 0x0D20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_MiniPenguin_C*                      MyMiniPenguin;                                     // 0x0D28(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_TargetPinMain_C*                    TargetPin;                                         // 0x0D30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerController_LINK_C* As_BP_First_Person_Player_Controller_LINK;         // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        BeforeBaseWeight;                                  // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultHealth;                                     // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RevivalHealth;                                     // 0x0D50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsEmoteSelect;                                     // 0x0D58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D59[0x7];                                      // 0x0D59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_EmoteMenu_C*                       EmoteMenuWidget;                                   // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CurrentEmotePlay;                                  // 0x0D68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBillboardComponent*                    ItemDropPoint;                                     // 0x0B40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_LinkCharacterCustomControl_C*      BPC_LinkCharacterCustomControl;                    // 0x0B48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       Nameplate;                                         // 0x0B50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ULBPC_ComponentDistanceVisualUpdate_C*  LBPC_ComponentDistanceVisualUpdate;                // 0x0B58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_LongInputControl_C*                BPC_LongInputControl_LeftClick;                    // 0x0B60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCPP_AC_CustomPhysicsForce_2Leg_C*      CPP_AC_CustomPhysicsForce_2Leg;                    // 0x0B68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioCaptureComponent*                 AudioCapture;                                      // 0x0B70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPhysicsHandleComponent*                PhysicsHandle_R;                                   // 0x0B78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_LINK_HandControl_C*                BPC_LINK_HandControl_R;                            // 0x0B80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B88[0x8];                                      // 0x0B88(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             HandTransform_R;                                   // 0x0B90(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HandWeight_R;                                      // 0x0BF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxHandLength;                                     // 0x0BF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             HandTransform_L;                                   // 0x0C00(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HandWeight_L;                                      // 0x0C60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HandPower;                                         // 0x0C68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_LINK_MainUI_C*                     LINK_MainUI;                                       // 0x0C70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UClass*>                         GiveAbilitys;                                      // 0x0C78(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class ABP_FirstPersonGameMode_Online_LINK_C*  GameMode_LINK;                                     // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFreeze;                                          // 0x0C90(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C91[0x7];                                      // 0x0C91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        AttractionDistance;                                // 0x0C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_LINK_C*      MyPlayerState_LINK;                                // 0x0CA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               BodyMaterial;                                      // 0x0CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentVoiceScale;                                 // 0x0CB0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB8[0x8];                                      // 0x0CB8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             DeathPointTransform;                               // 0x0CC0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Delta_Seconds;                                     // 0x0D20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D24[0x4];                                      // 0x0D24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        OverDamageValue;                                   // 0x0D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_GameState_LINK_C*                   As_BP_Game_State_LINK;                             // 0x0D30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_MiniPenguin_C*                      MyMiniPenguin;                                     // 0x0D38(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_TargetPinMain_C*                    TargetPin;                                         // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerController_LINK_C* As_BP_First_Person_Player_Controller_LINK;         // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        BeforeBaseWeight;                                  // 0x0D50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultHealth;                                     // 0x0D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RevivalHealth;                                     // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsEmoteSelect;                                     // 0x0D68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D69[0x7];                                      // 0x0D69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_EmoteMenu_C*                       EmoteMenuWidget;                                   // 0x0D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurrentEmotePlay;                                  // 0x0D78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateNameplate(const class FString& PlayerName);

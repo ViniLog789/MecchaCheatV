@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_CraftedObject_Base_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_CraftedObject_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START

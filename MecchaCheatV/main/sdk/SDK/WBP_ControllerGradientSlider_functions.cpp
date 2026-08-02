@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function WBP_ControllerGradientSlider.WBP_ControllerGradientSlider_C.UpdateSliderBar
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  NormalizeValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -129,6 +129,26 @@ void UWBP_ControllerGradientSlider_C::Construct()
 		Func = Class->GetFunction("WBP_ControllerGradientSlider_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ControllerGradientSlider.WBP_ControllerGradientSlider_C.BndEvt__WBP_ControllerGradientSlider_Slider_73_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ControllerGradientSlider_C::BndEvt__WBP_ControllerGradientSlider_Slider_73_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ControllerGradientSlider_C", "BndEvt__WBP_ControllerGradientSlider_Slider_73_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
+
+	Params::WBP_ControllerGradientSlider_C_BndEvt__WBP_ControllerGradientSlider_Slider_73_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

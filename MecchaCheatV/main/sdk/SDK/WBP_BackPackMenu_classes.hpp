@@ -33,7 +33,7 @@ public:
 	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
 	void ReUpdate();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void GrabEndAfterInput();
 	void Construct();
 

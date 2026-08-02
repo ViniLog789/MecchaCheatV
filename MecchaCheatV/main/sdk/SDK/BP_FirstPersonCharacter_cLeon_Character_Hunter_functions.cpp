@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InfinityBulletEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InfinityBulletEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "InfinityBulletEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.UpdateRemainBullet
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -31,6 +45,174 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::UpdateRemainBullet(int32
 	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_UpdateRemainBullet Parms{};
 
 	Parms.BulletNum = BulletNum;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.HitSuccess
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_cLeon_Character_C*FirstPersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::HitSuccess(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "HitSuccess");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess Parms{};
+
+	Parms.FirstPersonCharacter = FirstPersonCharacter;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AntiChatTrace
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   End                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_cLeon_Character_C*Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::AntiChatTrace(const struct FVector& End, class ABP_FirstPersonCharacter_cLeon_Character_C* Target)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "AntiChatTrace");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AntiChatTrace Parms{};
+
+	Parms.End = std::move(End);
+	Parms.Target = Target;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ChangeViewMode
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             ModeName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Quick                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ChangeViewMode(class FName ModeName, bool Quick)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "ChangeViewMode");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ChangeViewMode Parms{};
+
+	Parms.ModeName = ModeName;
+	Parms.Quick = Quick;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ChangeViewEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ChangeViewEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "ChangeViewEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AddtoViewDatas(Server)
+// (Net, NetServer, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<int32>&                    Points                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::AddtoViewDatas_Server_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "AddtoViewDatas(Server)");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AddtoViewDatas_Server_ Parms{};
+
+	Parms.PlayerStates = std::move(PlayerStates);
+	Parms.Points = std::move(Points);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SendToView
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::SendToView()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "SendToView");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.CheckViewInSurvivor
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::CheckViewInSurvivor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "CheckViewInSurvivor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ShowCrown
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ShowCrown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "ShowCrown");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SpawnShotEffect(Client)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Endpoint                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsHit                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  HitRotation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   Seed                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::SpawnShotEffect_Client_(const struct FVector& Endpoint, bool IsHit, const struct FRotator& HitRotation, int32 Seed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "SpawnShotEffect(Client)");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SpawnShotEffect_Client_ Parms{};
+
+	Parms.Endpoint = std::move(Endpoint);
+	Parms.IsHit = IsHit;
+	Parms.HitRotation = std::move(HitRotation);
+	Parms.Seed = Seed;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -88,66 +270,48 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::SpawnShotEffect_Local_(c
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SpawnShotEffect(Client)
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   Endpoint                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsHit                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FRotator&                  HitRotation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Seed                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::SpawnShotEffect_Client_(const struct FVector& Endpoint, bool IsHit, const struct FRotator& HitRotation, int32 Seed)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "SpawnShotEffect(Client)");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SpawnShotEffect_Client_ Parms{};
-
-	Parms.Endpoint = std::move(Endpoint);
-	Parms.IsHit = IsHit;
-	Parms.HitRotation = std::move(HitRotation);
-	Parms.Seed = Seed;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ShowCrown
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ShowCrown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "ShowCrown");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SendToView
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.PlayerControllerSetup
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::SendToView()
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::PlayerControllerSetup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "SendToView");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "PlayerControllerSetup");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.KillPlayer
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_cLeon_Character_C*FirstPersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "KillPlayer");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer Parms{};
+
+	Parms.FirstPersonCharacter = FirstPersonCharacter;
+	Parms.SourcePlayerState = SourcePlayerState;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
@@ -156,7 +320,7 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ReceiveTick(float DeltaS
 
 	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ReceiveTick Parms{};
 
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -176,303 +340,27 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.PlayerControllerSetup
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::PlayerControllerSetup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "PlayerControllerSetup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnRep_FoundTargetPlayerState
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnRep_FoundTargetPlayerState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnRep_FoundTargetPlayerState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnRep_CurrentBullet
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnRep_CurrentBullet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnRep_CurrentBullet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
 // Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0");
 
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E Parms{};
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0 Parms{};
 
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_85995EF044945821EC08CDAD261FDD89
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyEnd_85995EF044945821EC08CDAD261FDD89(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyEnd_85995EF044945821EC08CDAD261FDD89");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_85995EF044945821EC08CDAD261FDD89 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_85995EF044945821EC08CDAD261FDD89
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyBegin_85995EF044945821EC08CDAD261FDD89(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyBegin_85995EF044945821EC08CDAD261FDD89");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_85995EF044945821EC08CDAD261FDD89 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_B6C494744BD8085F199D4791408CEB6E
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnInterrupted_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnInterrupted_B6C494744BD8085F199D4791408CEB6E");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_B6C494744BD8085F199D4791408CEB6E Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_85995EF044945821EC08CDAD261FDD89
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnInterrupted_85995EF044945821EC08CDAD261FDD89(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnInterrupted_85995EF044945821EC08CDAD261FDD89");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_85995EF044945821EC08CDAD261FDD89 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_53A71DDF483CC968C1A61DAF788E875A
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnInterrupted_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnInterrupted_53A71DDF483CC968C1A61DAF788E875A");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_53A71DDF483CC968C1A61DAF788E875A Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_B6C494744BD8085F199D4791408CEB6E
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnCompleted_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnCompleted_B6C494744BD8085F199D4791408CEB6E");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_B6C494744BD8085F199D4791408CEB6E Parms{};
-
-	Parms.NotifyName = NotifyName;
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -491,66 +379,6 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnCompleted_85995EF04494
 		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnCompleted_85995EF044945821EC08CDAD261FDD89");
 
 	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_85995EF044945821EC08CDAD261FDD89 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_53A71DDF483CC968C1A61DAF788E875A
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnCompleted_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnCompleted_53A71DDF483CC968C1A61DAF788E875A");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_53A71DDF483CC968C1A61DAF788E875A Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_12AC243E438FB95C3F7F978927A1E9CD
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnCompleted_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnCompleted_12AC243E438FB95C3F7F978927A1E9CD");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_12AC243E438FB95C3F7F978927A1E9CD Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_B6C494744BD8085F199D4791408CEB6E
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnBlendOut_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnBlendOut_B6C494744BD8085F199D4791408CEB6E");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_B6C494744BD8085F199D4791408CEB6E Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -578,6 +406,186 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnBlendOut_85995EF044945
 }
 
 
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_85995EF044945821EC08CDAD261FDD89
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnInterrupted_85995EF044945821EC08CDAD261FDD89(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnInterrupted_85995EF044945821EC08CDAD261FDD89");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_85995EF044945821EC08CDAD261FDD89 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_85995EF044945821EC08CDAD261FDD89
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyBegin_85995EF044945821EC08CDAD261FDD89(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyBegin_85995EF044945821EC08CDAD261FDD89");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_85995EF044945821EC08CDAD261FDD89 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_85995EF044945821EC08CDAD261FDD89
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyEnd_85995EF044945821EC08CDAD261FDD89(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyEnd_85995EF044945821EC08CDAD261FDD89");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_85995EF044945821EC08CDAD261FDD89 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_B6C494744BD8085F199D4791408CEB6E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnCompleted_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnCompleted_B6C494744BD8085F199D4791408CEB6E");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_B6C494744BD8085F199D4791408CEB6E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_B6C494744BD8085F199D4791408CEB6E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnBlendOut_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnBlendOut_B6C494744BD8085F199D4791408CEB6E");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_B6C494744BD8085F199D4791408CEB6E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_B6C494744BD8085F199D4791408CEB6E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnInterrupted_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnInterrupted_B6C494744BD8085F199D4791408CEB6E");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_B6C494744BD8085F199D4791408CEB6E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_B6C494744BD8085F199D4791408CEB6E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_B6C494744BD8085F199D4791408CEB6E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_53A71DDF483CC968C1A61DAF788E875A
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnCompleted_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnCompleted_53A71DDF483CC968C1A61DAF788E875A");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_53A71DDF483CC968C1A61DAF788E875A Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_53A71DDF483CC968C1A61DAF788E875A
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -598,19 +606,19 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnBlendOut_53A71DDF483CC
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_53A71DDF483CC968C1A61DAF788E875A
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnInterrupted_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnInterrupted_53A71DDF483CC968C1A61DAF788E875A");
 
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD Parms{};
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_53A71DDF483CC968C1A61DAF788E875A Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -618,75 +626,41 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnBlendOut_12AC243E438FB
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.KillPlayer
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_cLeon_Character_C*FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "KillPlayer");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A");
 
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer Parms{};
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_53A71DDF483CC968C1A61DAF788E875A Parms{};
 
-	Parms.FirstpersonCharacter = FirstpersonCharacter;
-	Parms.SourcePlayerState = SourcePlayerState;
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3
-// (BlueprintEvent)
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FInputActionValue&         ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, float ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, float TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3, const class UInputAction* SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A");
 
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 Parms{};
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_53A71DDF483CC968C1A61DAF788E875A Parms{};
 
-	Parms.ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 = std::move(ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3);
-	Parms.ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 = ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3;
-	Parms.TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 = TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3;
-	Parms.SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 = SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0
-// (BlueprintEvent)
-// Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_KeepRotation_K2Node_EnhancedInputActionEvent_0 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -744,49 +718,141 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Crouch_K2No
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InfinityBulletEnd
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnCompleted_12AC243E438FB95C3F7F978927A1E9CD
 // (BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InfinityBulletEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "InfinityBulletEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.HitSuccess
-// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_cLeon_Character_C*FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::HitSuccess(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnCompleted_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "HitSuccess");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnCompleted_12AC243E438FB95C3F7F978927A1E9CD");
 
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_HitSuccess Parms{};
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnCompleted_12AC243E438FB95C3F7F978927A1E9CD Parms{};
 
-	Parms.FirstpersonCharacter = FirstpersonCharacter;
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.CheckViewInSurvivor
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::CheckViewInSurvivor()
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "CheckViewInSurvivor");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnInterrupted_12AC243E438FB95C3F7F978927A1E9CD Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyBegin_12AC243E438FB95C3F7F978927A1E9CD Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_OnNotifyEnd_12AC243E438FB95C3F7F978927A1E9CD Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_3 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnRep_FoundTargetPlayerState
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnRep_FoundTargetPlayerState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnRep_FoundTargetPlayerState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -818,83 +884,17 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::CheckViewInPlayers(class
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ChangeViewMode
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.OnRep_CurrentBullet
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             ModeName_ChangeViewMode                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Quick_ChangeViewMode                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ChangeViewMode(class FName ModeName_ChangeViewMode, bool Quick_ChangeViewMode)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::OnRep_CurrentBullet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "ChangeViewMode");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_ChangeViewMode Parms{};
-
-	Parms.ModeName_ChangeViewMode = ModeName_ChangeViewMode;
-	Parms.Quick_ChangeViewMode = Quick_ChangeViewMode;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.ChangeViewEnd
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::ChangeViewEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "ChangeViewEnd");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "OnRep_CurrentBullet");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AntiChatTrace
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   End                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_cLeon_Character_C*Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::AntiChatTrace(const struct FVector& End, class ABP_FirstPersonCharacter_cLeon_Character_C* Target)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "AntiChatTrace");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AntiChatTrace Parms{};
-
-	Parms.End = std::move(End);
-	Parms.Target = Target;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AddtoViewDatas(Server)
-// (Net, NetServer, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>&PlayerStates                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<int32>&                    Points                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::AddtoViewDatas_Server_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "AddtoViewDatas(Server)");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AddtoViewDatas_Server_ Parms{};
-
-	Parms.PlayerStates = std::move(PlayerStates);
-	Parms.Points = std::move(Points);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

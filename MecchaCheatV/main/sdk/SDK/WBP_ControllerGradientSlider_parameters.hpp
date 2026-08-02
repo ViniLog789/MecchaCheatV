@@ -11,25 +11,18 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_ControllerGradientSlider.WBP_ControllerGradientSlider_C.UpdateSliderBar
-// 0x0080 (0x0080 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WBP_ControllerGradientSlider_C_UpdateSliderBar final
 {
 public:
 	double                                        NormalizeValue;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetDesiredSize_ReturnValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FWidgetTransform                       K2Node_MakeStruct_WidgetTransform;                 // 0x0048(0x0038)(NoDestructor)
+	float                                         CallFunc_SetValue_InValue_ImplicitCast;            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ControllerGradientSlider_C_UpdateSliderBar;
 
@@ -69,6 +62,15 @@ public:
 	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ControllerGradientSlider_C_PreConstruct;
+
+// Function WBP_ControllerGradientSlider.WBP_ControllerGradientSlider_C.BndEvt__WBP_ControllerGradientSlider_Slider_73_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_ControllerGradientSlider_C_BndEvt__WBP_ControllerGradientSlider_Slider_73_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ControllerGradientSlider_C_BndEvt__WBP_ControllerGradientSlider_Slider_73_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature;
 
 // Function WBP_ControllerGradientSlider.WBP_ControllerGradientSlider_C.AddSliderValue
 // 0x0008 (0x0008 - 0x0000)

@@ -431,10 +431,10 @@ void ABP_GameMode_cLeon_C::ModComplete()
 // Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.KillPlayer
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_cLeon_Character_C*FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_cLeon_Character_C*FirstPersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class ABP_FirstPersonPlayerState_Online_cLeon_C*SourcePlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameMode_cLeon_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState)
+void ABP_GameMode_cLeon_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -443,7 +443,7 @@ void ABP_GameMode_cLeon_C::KillPlayer(class ABP_FirstPersonCharacter_cLeon_Chara
 
 	Params::BP_GameMode_cLeon_C_KillPlayer Parms{};
 
-	Parms.FirstpersonCharacter = FirstpersonCharacter;
+	Parms.FirstPersonCharacter = FirstPersonCharacter;
 	Parms.SourcePlayerState = SourcePlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);

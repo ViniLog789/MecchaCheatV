@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_SaveDataUpdateType_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "ENUM_SaveDataUpdateType_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -134,6 +134,16 @@ public:
 };
 DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature;
 
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.GetInitialFocusComponent
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_GetInitialFocusComponent final
+{
+public:
+	class UUINavComponent*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_GetInitialFocusComponent;
+
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStateChange
 // 0x0010 (0x0010 - 0x0000)
 struct WBP_cLeonGameSettings_C_RandomStateChange final

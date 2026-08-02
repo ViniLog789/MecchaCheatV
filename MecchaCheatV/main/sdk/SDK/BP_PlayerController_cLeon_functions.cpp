@@ -44,6 +44,28 @@ void ABP_PlayerController_cLeon_C::AddMainWidgets()
 }
 
 
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_1_ActorComponentActivatedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UActorComponent*                  Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    bReset                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_1_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent* Component, bool bReset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_1_ActorComponentActivatedSignature__DelegateSignature");
+
+	Params::BP_PlayerController_cLeon_C_BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_1_ActorComponentActivatedSignature__DelegateSignature Parms{};
+
+	Parms.Component = Component;
+	Parms.bReset = bReset;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.CameraReset
 // (BlueprintCallable, BlueprintEvent)
 

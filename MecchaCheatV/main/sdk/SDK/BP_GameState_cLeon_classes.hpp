@@ -12,11 +12,11 @@
 
 #include "EN_cLeonMainGamePhase_structs.hpp"
 #include "EN_cLeonGamePhase_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ST_cLeonSurvivorVariation_structs.hpp"
 #include "EN_cLeonGameMode_structs.hpp"
-#include "ST_cLeonMapData_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ST_cLeonMapData_structs.hpp"
+#include "ST_cLeonSurvivorVariation_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -90,60 +90,60 @@ public:
 	class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C* ChickenSearchTarget;                  // 0x05D0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState);
-	void UpdateSend();
-	void UpdateRanking();
-	void UpdateBulletWidget(int32 Current);
-	void SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime);
-	void SyncRanking_Server_();
-	void ShowPopup_Local_(int32 PopupIndex);
-	void ShowPopup_Client_(int32 PopupIndex);
-	void ShowPointAddPopup(class ABP_FirstPersonPlayerState_Online_cLeon_C* TargetPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, int32 Point);
-	void ShowDeathWidget(class APlayerState* TargetPlayerState);
-	void ShowAllSurvivors();
-	void SetTimerTextIndex(int32 TimerTextIndex);
-	void SetTimerNumber(int32 TimerNumber);
-	void SetSyncRankingLoopState(bool State);
-	void SetMaxTimerTime(int32 MaxTimerTime);
-	void SetCopyTarget();
-	void SetChickenAlpha();
-	void ReceiveBeginPlay();
-	void RankingWidgetUpdate(bool IsShow);
-	void PlayTeleportMovie();
-	void OnRep_TimerTextIndex();
-	void OnRep_TimerNumber();
-	void OnRep_NeedModId();
-	void OnRep_MainGamePhase();
-	void OnRep_LiveSurvivors_PlayerState();
-	void OnRep_JoinPlayerState();
-	void OnRep_HuntersPlayerState();
-	void OnRep_GameMode();
-	void OnRep_Filter_Mosaic();
-	void OnRep_Filter_Monochrome();
-	void OnRep_Filter_Horror();
-	void OnRep_CurrentPreviewMapData();
-	void OnRep_ChickenSearchTarget();
-	void ModStateUpdate();
-	void ModDownloadWait();
-	void MaxPlayerChange(int32 Current, int32 max_0);
-	void KillLog(class ABP_FirstPersonPlayerState_Online_cLeon_C* HunterPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SurvivorPlayerState);
-	void IsLivePlayerState(const class ABP_FirstPersonPlayerState_Online_cLeon_C*& ItemToFind, bool* IsLive);
-	void InitPlayerState();
-	void GetRandomMapData(struct FST_cLeonMapData* ReturnMapArray);
-	void GetDoubleRanking(TMap<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*, int32>* ReturnMap);
-	void GetAllMapDatas(TArray<struct FST_cLeonMapData>* ReturnMapArray);
-	void GameEndSurvivorStop();
-	void ForceStart();
-	void ForceModeWidgetReset();
-	void FocusChicken();
-	void EEYAN_Activate();
-	void CountUIReset();
-	void Complete();
-	void ClearWatchRanking();
-	void BodyTypeSelectWidget();
-	void AllHunterStencilOff();
-	void AddToViewDatas(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);
 	void AddToViewDataForce(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);
+	void AddToViewDatas(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);
+	void AllHunterStencilOff();
+	void BodyTypeSelectWidget();
+	void ClearWatchRanking();
+	void Complete();
+	void CountUIReset();
+	void EEYAN_Activate();
+	void FocusChicken();
+	void ForceModeWidgetReset();
+	void ForceStart();
+	void GameEndSurvivorStop();
+	void GetAllMapDatas(TArray<struct FST_cLeonMapData>* ReturnMapArray);
+	void GetDoubleRanking(TMap<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*, int32>* ReturnMap);
+	void GetRandomMapData(struct FST_cLeonMapData* ReturnMapArray);
+	void InitPlayerState();
+	void IsLivePlayerState(const class ABP_FirstPersonPlayerState_Online_cLeon_C*& ItemToFind, bool* IsLive);
+	void KillLog(class ABP_FirstPersonPlayerState_Online_cLeon_C* HunterPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SurvivorPlayerState);
+	void MaxPlayerChange(int32 Current, int32 max_0);
+	void ModDownloadWait();
+	void ModStateUpdate();
+	void OnRep_ChickenSearchTarget();
+	void OnRep_CurrentPreviewMapData();
+	void OnRep_Filter_Horror();
+	void OnRep_Filter_Monochrome();
+	void OnRep_Filter_Mosaic();
+	void OnRep_GameMode();
+	void OnRep_HuntersPlayerState();
+	void OnRep_JoinPlayerState();
+	void OnRep_LiveSurvivors_PlayerState();
+	void OnRep_MainGamePhase();
+	void OnRep_NeedModId();
+	void OnRep_TimerNumber();
+	void OnRep_TimerTextIndex();
+	void PlayTeleportMovie();
+	void RankingWidgetUpdate(bool IsShow);
+	void ReceiveBeginPlay();
+	void SetChickenAlpha();
+	void SetCopyTarget();
+	void SetMaxTimerTime(int32 MaxTimerTime_0);
+	void SetSyncRankingLoopState(bool State);
+	void SetTimerNumber(int32 TimerNumber_0);
+	void SetTimerTextIndex(int32 TimerTextIndex_0);
+	void ShowAllSurvivors();
+	void ShowDeathWidget(class APlayerState* TargetPlayerState);
+	void ShowPointAddPopup(class ABP_FirstPersonPlayerState_Online_cLeon_C* TargetPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, int32 Point);
+	void ShowPopup_Client_(int32 PopupIndex);
+	void ShowPopup_Local_(int32 PopupIndex);
+	void SyncRanking_Server_();
+	void SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime_0);
+	void UpdateBulletWidget(int32 Current);
+	void UpdateRanking();
+	void UpdateSend();
+	void Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState);
 
 public:
 	static class UClass* StaticClass()

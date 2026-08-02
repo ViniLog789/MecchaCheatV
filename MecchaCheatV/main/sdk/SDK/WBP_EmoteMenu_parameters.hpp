@@ -36,9 +36,9 @@ public:
 };
 DUMPER7_ASSERTS_WBP_EmoteMenu_C_PreConstruct;
 
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_1
 // 0x0030 (0x0030 - 0x0000)
-struct WBP_EmoteMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0 final
+struct WBP_EmoteMenu_C_InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_1 final
 {
 public:
 	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -46,7 +46,19 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_EmoteMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0;
+DUMPER7_ASSERTS_WBP_EmoteMenu_C_InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_1;
+
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.InpActEvt_IA_Look_Controller_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_EmoteMenu_C_InpActEvt_IA_Look_Controller_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_EmoteMenu_C_InpActEvt_IA_Look_Controller_K2Node_EnhancedInputActionEvent_0;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

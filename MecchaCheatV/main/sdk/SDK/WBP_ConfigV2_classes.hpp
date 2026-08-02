@@ -16,46 +16,44 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ConfigV2.WBP_ConfigV2_C
-// 0x00B8 (0x05B0 - 0x04F8)
+// 0x00A8 (0x05A0 - 0x04F8)
 class UWBP_ConfigV2_C final : public UUINavWidget
 {
 public:
 	uint8                                         Pad_4F8[0x8];                                      // 0x04F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_VoiceChatControlPanel_C*           WBP_VoiceChatControlPanel;                         // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_KeyImage_C*                        WBP_KeyImage_2;                                    // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_KeyImage_C*                        WBP_KeyImage_1;                                    // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_KeyImage_C*                        WBP_KeyImage;                                      // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_FriendList_C*                      WBP_FriendList;                                    // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_FPSCounter_C*                      WBP_FPSCounter;                                    // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ConfigSound_C*                     WBP_ConfigSound;                                   // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ConfigGraphic_C*                   WBP_ConfigGraphic;                                 // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ConfigGameGeneral_C*               WBP_ConfigGameGeneral;                             // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ConfigFAQ_C*                       WBP_ConfigFAQ;                                     // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CompressTextBlock_C*               WBP_CompressTextBlock;                             // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_VoiceChat;               // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_Sound;                   // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_Graphic;                 // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_GameGeneral;             // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_FriendList;              // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_FAQ;                     // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_BackToLobby;                         // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget*                                CurrentSideWidget;                                 // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LastHoverdButton;                                  // 0x0598(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              Return;                                            // 0x05A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWBP_KeyImage_C*                        WBP_KeyImage_1;                                    // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_KeyImage_C*                        WBP_KeyImage;                                      // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_FPSCounter_C*                      WBP_FPSCounter;                                    // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ConfigSound_C*                     WBP_ConfigSound;                                   // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ConfigGraphic_C*                   WBP_ConfigGraphic;                                 // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ConfigGameGeneral_C*               WBP_ConfigGameGeneral;                             // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BackButton_C*                      WBP_BackButton;                                    // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_VoiceChat;               // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_Sound;                   // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_Graphic;                 // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_GameGeneral;             // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_BackToLobby;                         // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget*                                CurrentSideWidget;                                 // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LastHoverdButton;                                  // 0x0570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              Return;                                            // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class ULongTapButton_OnAnimation_C*>   SideButtonArray;                                   // 0x0588(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         CurrentSelectIndex;                                // 0x0598(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void UpdateVisual(int32 TargetIndex);
 	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
+	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnReturn();
 	void OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1(class FName SessionName, bool bWasSuccessful);
 	void OnCallFailed_E994E3BA416B92D5C7D03FB3DBF5BBA1(class FName SessionName, bool bWasSuccessful);
 	class UUINavComponent* GetInitialFocusComponent();
 	void Construct();
+	void BndEvt__WBP_ConfigV2_WBP_BackButton_K2Node_ComponentBoundEvent_5_OnClickedEvent__DelegateSignature();
 	void BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_VoiceChat_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 	void BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_Sound_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
 	void BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_Graphic_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
 	void BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_GameGeneral_K2Node_ComponentBoundEvent_3_PushEnd__DelegateSignature();
-	void BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_FriendList_K2Node_ComponentBoundEvent_7_PushEnd__DelegateSignature();
-	void BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_FAQ_K2Node_ComponentBoundEvent_5_PushEnd__DelegateSignature();
 	void BndEvt__WBP_ConfigV2_LongTapButton_BackToLobby_K2Node_ComponentBoundEvent_4_PushEnd__DelegateSignature();
 
 public:
