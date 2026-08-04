@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "EN_InputJudgementType_structs.hpp"
 #include "ST_OptionObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START

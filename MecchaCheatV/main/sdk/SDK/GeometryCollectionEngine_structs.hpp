@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Chaos_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -94,15 +94,6 @@ enum class EGeometryCollectionDebugDrawActorHideGeometry : uint8
 	EGeometryCollectionDebugDrawActorHideGeometry_MAX = 5,
 };
 
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionRepStateData
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x08) FGeometryCollectionRepStateData final
-{
-public:
-	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FGeometryCollectionRepStateData;
-
 // ScriptStruct GeometryCollectionEngine.ChaosTrailingEventData
 // 0x0050 (0x0050 - 0x0000)
 struct FChaosTrailingEventData final
@@ -128,17 +119,14 @@ public:
 };
 DUMPER7_ASSERTS_FChaosBreakingEventData;
 
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionDamagePropagationData
-// 0x000C (0x000C - 0x0000)
-struct FGeometryCollectionDamagePropagationData final
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionRepStateData
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x08) FGeometryCollectionRepStateData final
 {
 public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BreakDamagePropagationFactor;                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShockDamagePropagationFactor;                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGeometryCollectionDamagePropagationData;
+DUMPER7_ASSERTS_FGeometryCollectionRepStateData;
 
 // ScriptStruct GeometryCollectionEngine.ChaosCollisionEventData
 // 0x0080 (0x0080 - 0x0000)
@@ -165,6 +153,18 @@ public:
 	int32                                         ParticleIndex;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FChaosRemovalEventData;
+
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionDamagePropagationData
+// 0x000C (0x000C - 0x0000)
+struct FGeometryCollectionDamagePropagationData final
+{
+public:
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BreakDamagePropagationFactor;                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShockDamagePropagationFactor;                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGeometryCollectionDamagePropagationData;
 
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionRepDynamicData
 // 0x0018 (0x0018 - 0x0000)

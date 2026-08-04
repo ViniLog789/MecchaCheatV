@@ -240,6 +240,20 @@ void UWBP_ConfigV2_C::BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_GameGeneral
 }
 
 
+// Function WBP_ConfigV2.WBP_ConfigV2_C.BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_Friend_K2Node_ComponentBoundEvent_6_PushEnd__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_ConfigV2_C::BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_Friend_K2Node_ComponentBoundEvent_6_PushEnd__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigV2_C", "BndEvt__WBP_ConfigV2_LongTapButton_OnAnimation_Friend_K2Node_ComponentBoundEvent_6_PushEnd__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_ConfigV2.WBP_ConfigV2_C.BndEvt__WBP_ConfigV2_LongTapButton_BackToLobby_K2Node_ComponentBoundEvent_4_PushEnd__DelegateSignature
 // (BlueprintEvent)
 

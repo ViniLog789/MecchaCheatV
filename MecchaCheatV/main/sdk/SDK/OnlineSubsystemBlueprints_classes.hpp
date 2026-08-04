@@ -10,13 +10,43 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Class OnlineSubsystemBlueprints.OnlineAchievementsSubsystem
+// 0x0088 (0x00B8 - 0x0030)
+class UOnlineAchievementsSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, const class FString& AchievementId)> OnAchievementUnlocked; // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	EOnlineCachedResult_ GetCachedAchievement(const struct FUniqueNetIdRepl& PlayerId, const class FString& AchievementId, struct FOnlineAchievementBP* OutAchievement);
+	EOnlineCachedResult_ GetCachedAchievementDescription(const class FString& AchievementId, struct FOnlineAchievementDescBP* OutAchievementDesc);
+	EOnlineCachedResult_ GetCachedAchievements(const struct FUniqueNetIdRepl& PlayerId, TArray<struct FOnlineAchievementBP>* OutAchievements);
+	bool IsSubsystemAvailable();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineAchievementsSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineAchievementsSubsystem")
+	}
+	static class UOnlineAchievementsSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineAchievementsSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UOnlineAchievementsSubsystem;
 
 // Class OnlineSubsystemBlueprints.OnlineAchievementsSubsystemWriteAchievements
 // 0x0070 (0x00A0 - 0x0030)
@@ -48,99 +78,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnlineAchievementsSubsystemWriteAchievements;
-
-// Class OnlineSubsystemBlueprints.OnlineLobbySubsystemDeleteLobby
-// 0x0070 (0x00A0 - 0x0030)
-class UOnlineLobbySubsystemDeleteLobby final : public UBlueprintAsyncActionBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FOnlineErrorInfo& Error, const struct FUniqueNetIdRepl& UserId)> OnCallFailed; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const struct FOnlineErrorInfo& Error, const struct FUniqueNetIdRepl& UserId)> OnLobbyOperationComplete; // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineLobbySubsystem*                  __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ULobbyId*                               __Store__LobbyId;                                  // 0x0098(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-
-public:
-	static class UOnlineLobbySubsystemDeleteLobby* DeleteLobby(class UOnlineLobbySubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnlineLobbySubsystemDeleteLobby")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnlineLobbySubsystemDeleteLobby")
-	}
-	static class UOnlineLobbySubsystemDeleteLobby* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineLobbySubsystemDeleteLobby>();
-	}
-};
-DUMPER7_ASSERTS_UOnlineLobbySubsystemDeleteLobby;
-
-// Class OnlineSubsystemBlueprints.OnlineLobbyTransaction
-// 0x0010 (0x0038 - 0x0028)
-class UOnlineLobbyTransaction final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void DeleteMetadata(const class FString& Key);
-	void DeleteMetadataByArray(const TArray<class FString>& MetaDataKeys);
-	void SetCapacity(int64 Capacity);
-	void SetLocked(bool Locked);
-	void SetMetadata(const class FString& Key, const struct FVariantDataBP& Value);
-	void SetMetadataByMap(const TMap<class FString, struct FVariantDataBP>& MetaData);
-	void SetPublic(bool Public);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnlineLobbyTransaction")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnlineLobbyTransaction")
-	}
-	static class UOnlineLobbyTransaction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineLobbyTransaction>();
-	}
-};
-DUMPER7_ASSERTS_UOnlineLobbyTransaction;
-
-// Class OnlineSubsystemBlueprints.OnlineAchievementsSubsystem
-// 0x0088 (0x00B8 - 0x0030)
-class UOnlineAchievementsSubsystem final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, const class FString& AchievementId)> OnAchievementUnlocked; // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-
-public:
-	EOnlineCachedResult_ GetCachedAchievement(const struct FUniqueNetIdRepl& PlayerId, const class FString& AchievementId, struct FOnlineAchievementBP* OutAchievement);
-	EOnlineCachedResult_ GetCachedAchievementDescription(const class FString& AchievementId, struct FOnlineAchievementDescBP* OutAchievementDesc);
-	EOnlineCachedResult_ GetCachedAchievements(const struct FUniqueNetIdRepl& PlayerId, TArray<struct FOnlineAchievementBP>* OutAchievements);
-	bool IsSubsystemAvailable();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnlineAchievementsSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnlineAchievementsSubsystem")
-	}
-	static class UOnlineAchievementsSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineAchievementsSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UOnlineAchievementsSubsystem;
 
 // Class OnlineSubsystemBlueprints.OnlineAchievementsSubsystemQueryAchievements
 // 0x0068 (0x0098 - 0x0030)
@@ -1675,6 +1612,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnlineLobbySubsystemUpdateLobby;
+
+// Class OnlineSubsystemBlueprints.OnlineLobbySubsystemDeleteLobby
+// 0x0070 (0x00A0 - 0x0030)
+class UOnlineLobbySubsystemDeleteLobby final : public UBlueprintAsyncActionBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FOnlineErrorInfo& Error, const struct FUniqueNetIdRepl& UserId)> OnCallFailed; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FOnlineErrorInfo& Error, const struct FUniqueNetIdRepl& UserId)> OnLobbyOperationComplete; // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineLobbySubsystem*                  __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ULobbyId*                               __Store__LobbyId;                                  // 0x0098(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+
+public:
+	static class UOnlineLobbySubsystemDeleteLobby* DeleteLobby(class UOnlineLobbySubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineLobbySubsystemDeleteLobby")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineLobbySubsystemDeleteLobby")
+	}
+	static class UOnlineLobbySubsystemDeleteLobby* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineLobbySubsystemDeleteLobby>();
+	}
+};
+DUMPER7_ASSERTS_UOnlineLobbySubsystemDeleteLobby;
 
 // Class OnlineSubsystemBlueprints.OnlineLobbySubsystemConnectLobby
 // 0x0070 (0x00A0 - 0x0030)
@@ -3655,6 +3623,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ULobby;
+
+// Class OnlineSubsystemBlueprints.OnlineLobbyTransaction
+// 0x0010 (0x0038 - 0x0028)
+class UOnlineLobbyTransaction final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void DeleteMetadata(const class FString& Key);
+	void DeleteMetadataByArray(const TArray<class FString>& MetaDataKeys);
+	void SetCapacity(int64 Capacity);
+	void SetLocked(bool Locked);
+	void SetMetadata(const class FString& Key, const struct FVariantDataBP& Value);
+	void SetMetadataByMap(const TMap<class FString, struct FVariantDataBP>& MetaData);
+	void SetPublic(bool Public);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineLobbyTransaction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineLobbyTransaction")
+	}
+	static class UOnlineLobbyTransaction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineLobbyTransaction>();
+	}
+};
+DUMPER7_ASSERTS_UOnlineLobbyTransaction;
 
 // Class OnlineSubsystemBlueprints.OnlineLobbyMemberTransaction
 // 0x0010 (0x0038 - 0x0028)

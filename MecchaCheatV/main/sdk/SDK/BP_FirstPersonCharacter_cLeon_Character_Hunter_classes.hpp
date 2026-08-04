@@ -42,6 +42,8 @@ public:
 	int32                                         CheatCheck;                                        // 0x0DD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void SetCastShadow_Server_(bool BodyShadow_0);
+	void SetCastShadow(bool BodyShadow_0);
 	void InfinityBulletEnd();
 	void UpdateRemainBullet(int32 BulletNum);
 	void HitSuccess(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstPersonCharacter);

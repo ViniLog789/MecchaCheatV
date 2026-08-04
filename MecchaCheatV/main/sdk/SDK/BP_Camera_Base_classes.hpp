@@ -12,8 +12,8 @@
 
 #include "ENUM_ItemBindType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ENUM_CameraMode_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
 #include "BP_ItemBase_classes.hpp"
 #include "ENUM_HandType_structs.hpp"
 

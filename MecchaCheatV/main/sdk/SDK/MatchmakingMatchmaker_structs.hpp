@@ -40,19 +40,22 @@ enum class EMatchmakerHostConfigurationAttributeFilterComparison : uint8
 	EMatchmakerHostConfigurationAttributeFilterComparison_MAX = 6,
 };
 
-// ScriptStruct MatchmakingMatchmaker.MatchmakerProgressInfo
+// ScriptStruct MatchmakingMatchmaker.MatchmakerHostConfigurationAttributeFilter
 // 0x0038 (0x0038 - 0x0000)
-struct FMatchmakerProgressInfo final
+struct FMatchmakerHostConfigurationAttributeFilter final
 {
 public:
-	class FName                                   StepName;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   CurrentStatus;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	class FText                                   CurrentDetail;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	float                                         CurrentProgress;                                   // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              EstimatedTimeOfCompletion;                         // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AttributeName;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMatchmakerHostConfigurationAttributeFilterType AttributeType;                                   // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AttributeValueString;                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         AttributeValueInt64;                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AttributeValueFloat;                               // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttributeValueBoolean;                             // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMatchmakerHostConfigurationAttributeFilterComparison Comparison;                                // 0x0035(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMatchmakerProgressInfo;
+DUMPER7_ASSERTS_FMatchmakerHostConfigurationAttributeFilter;
 
 // ScriptStruct MatchmakingMatchmaker.MatchmakerResultTeam
 // 0x0050 (0x0050 - 0x0000)
@@ -71,23 +74,6 @@ public:
 	TArray<struct FMatchmakerResultTeam>          Teams;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMatchmakerResult;
-
-// ScriptStruct MatchmakingMatchmaker.MatchmakerHostConfigurationAttributeFilter
-// 0x0038 (0x0038 - 0x0000)
-struct FMatchmakerHostConfigurationAttributeFilter final
-{
-public:
-	class FString                                 AttributeName;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMatchmakerHostConfigurationAttributeFilterType AttributeType;                                   // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AttributeValueString;                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         AttributeValueInt64;                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AttributeValueFloat;                               // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AttributeValueBoolean;                             // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMatchmakerHostConfigurationAttributeFilterComparison Comparison;                                // 0x0035(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMatchmakerHostConfigurationAttributeFilter;
 
 // ScriptStruct MatchmakingMatchmaker.MatchmakerHostConfiguration
 // 0x0108 (0x0108 - 0x0000)
@@ -113,5 +99,19 @@ public:
 	TMap<struct FUniqueNetIdRepl, int32>          UserTeamAssignments;                               // 0x00B8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMatchmakerHostConfiguration;
+
+// ScriptStruct MatchmakingMatchmaker.MatchmakerProgressInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FMatchmakerProgressInfo final
+{
+public:
+	class FName                                   StepName;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   CurrentStatus;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	class FText                                   CurrentDetail;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	float                                         CurrentProgress;                                   // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              EstimatedTimeOfCompletion;                         // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMatchmakerProgressInfo;
 
 SDK_NAMESPACE_END

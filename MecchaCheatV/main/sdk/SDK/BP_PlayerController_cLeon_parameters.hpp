@@ -18,16 +18,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_1_ActorComponentActivatedSignature__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct BP_PlayerController_cLeon_C_BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_1_ActorComponentActivatedSignature__DelegateSignature final
-{
-public:
-	class UActorComponent*                        Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          bReset;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_1_ActorComponentActivatedSignature__DelegateSignature;
-
 // Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.EEYAN_State
 // 0x0001 (0x0001 - 0x0000)
 struct BP_PlayerController_cLeon_C_EEYAN_State final

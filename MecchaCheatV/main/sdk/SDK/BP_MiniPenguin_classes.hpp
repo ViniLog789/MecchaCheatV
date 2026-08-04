@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "AIModule_structs.hpp"
-#include "MoverExamples_classes.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "MoverExamples_classes.hpp"
+#include "AIModule_structs.hpp"
 #include "EN_StanType_structs.hpp"
 
 

@@ -486,46 +486,6 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::PaintModeCancel()
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetCastShadow(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    BodyShadow_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_C::SetCastShadow_Server_(bool BodyShadow_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "SetCastShadow(Server)");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow_Server_ Parms{};
-
-	Parms.BodyShadow_0 = BodyShadow_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetCastShadow
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    BodyShadow_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_C::SetCastShadow(bool BodyShadow_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "SetCastShadow");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow Parms{};
-
-	Parms.BodyShadow_0 = BodyShadow_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.PaintTick
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1896,6 +1856,46 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::cLeonGetPlayerState(class ABP_F
 
 	if (PlayerState_0 != nullptr)
 		*PlayerState_0 = Parms.PlayerState_0;
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetCastShadow(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    BodyShadow_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_C::SetCastShadow_Server_(bool BodyShadow_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "SetCastShadow(Server)");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow_Server_ Parms{};
+
+	Parms.BodyShadow_0 = BodyShadow_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetCastShadow
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    BodyShadow_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_C::SetCastShadow(bool BodyShadow_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "SetCastShadow");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow Parms{};
+
+	Parms.BodyShadow_0 = BodyShadow_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

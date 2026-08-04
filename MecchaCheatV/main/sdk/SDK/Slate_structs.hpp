@@ -281,17 +281,6 @@ public:
 };
 DUMPER7_ASSERTS_FVirtualKeyboardOptions;
 
-// ScriptStruct Slate.InputPreprocessorRegistrationKey
-// 0x0008 (0x0008 - 0x0000)
-struct FInputPreprocessorRegistrationKey final
-{
-public:
-	EInputPreProcessorType                        Type;                                              // 0x0000(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Priority;                                          // 0x0004(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FInputPreprocessorRegistrationKey;
-
 // ScriptStruct Slate.InputChord
 // 0x0020 (0x0020 - 0x0000)
 struct FInputChord final
@@ -334,6 +323,17 @@ public:
 	TArray<struct FCharRange>                     Ranges;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCharRangeList;
+
+// ScriptStruct Slate.InputPreprocessorRegistrationKey
+// 0x0008 (0x0008 - 0x0000)
+struct FInputPreprocessorRegistrationKey final
+{
+public:
+	EInputPreProcessorType                        Type;                                              // 0x0000(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Priority;                                          // 0x0004(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FInputPreprocessorRegistrationKey;
 
 // ScriptStruct Slate.CustomizedToolMenuEntry
 // 0x0004 (0x0004 - 0x0000)

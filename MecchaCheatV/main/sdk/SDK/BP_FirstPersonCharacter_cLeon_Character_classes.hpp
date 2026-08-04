@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "ST_ItemCoreDataArray_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
-#include "UINavigation_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "BP_FirstPersonCharacter_Main_classes.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
 #include "EN_InputBlockDeviceType_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "ST_ItemCoreDataArray_structs.hpp"
+#include "BP_FirstPersonCharacter_Main_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UINavigation_structs.hpp"
 #include "Mover_structs.hpp"
 
 
@@ -125,8 +125,6 @@ public:
 	void ShowDeathWidget();
 	void DashCancel();
 	void PaintModeCancel();
-	void SetCastShadow_Server_(bool BodyShadow_0);
-	void SetCastShadow(bool BodyShadow_0);
 	void PaintTick();
 	void SelectEmote(class UClass* EmoteData, int32 Index_0);
 	void DeathPlayer();
@@ -188,6 +186,8 @@ public:
 	void UseDecoy(bool* IsUse);
 	void GetInputViewDevice(EN_InputBlockDeviceType* DeviceType);
 	void cLeonGetPlayerState(class ABP_FirstPersonPlayerState_Online_cLeon_C** PlayerState_0);
+	void SetCastShadow_Server_(bool BodyShadow_0);
+	void SetCastShadow(bool BodyShadow_0);
 	void ChangeViewMode(class FName ModeName, bool Quick);
 	void PlayerControllerSetup();
 	void ReceiveTick(float DeltaSeconds);

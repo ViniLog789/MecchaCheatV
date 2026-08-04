@@ -98,7 +98,7 @@ extern "C" __declspec(dllexport) DWORD WINAPI MecchaCheatVThread()
         oss << std::hex << std::uppercase << std::setfill('0');
 
         for (int i = 0; i < 16; i++)
-            oss << std::setw(2) << (int)bytes[i] << ' ';
+            oss << std::setw(2) << (int)bytes[i] << ' '; 
 
 		bool likelyFunction = IsLikelyFunction((void*)addr);
         if (!likelyFunction)
@@ -114,7 +114,7 @@ extern "C" __declspec(dllexport) DWORD WINAPI MecchaCheatVThread()
         hookingInstance->ApplyHooks();
         hooksApplied = true;
 
-        LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Welcome, to MecchaCheatV\nMeccha Chameleon version: 3.5.0\n");
+        LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Welcome, to MecchaCheatV\nMeccha Chameleon version: 3.5.2\n");
         LOG_RELEASE(FOREGROUND_BLUE | FOREGROUND_INTENSITY, std::string(32, '-').c_str(), "\n");
         LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Menu navigation:\n");
         LOG_RELEASE(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, "Press", Utils::getKeyName(MenuToggleKey), "to open / close the menu\n");

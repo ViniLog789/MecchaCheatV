@@ -18,6 +18,24 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SetCastShadow(Server)
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SetCastShadow_Server_ final
+{
+public:
+	bool                                          BodyShadow_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SetCastShadow_Server_;
+
+// Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.SetCastShadow
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SetCastShadow final
+{
+public:
+	bool                                          BodyShadow_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_SetCastShadow;
+
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.UpdateRemainBullet
 // 0x0004 (0x0004 - 0x0000)
 struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_UpdateRemainBullet final

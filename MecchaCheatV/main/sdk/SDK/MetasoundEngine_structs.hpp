@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "AudioExtensions_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "MetasoundFrontend_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START

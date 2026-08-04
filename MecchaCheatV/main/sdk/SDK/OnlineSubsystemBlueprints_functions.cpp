@@ -16,247 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemWriteAchievements.WriteAchievements
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UOnlineAchievementsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FUniqueNetIdRepl&          PlayerId                                               (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineAchievementsWrite*         WriteObject                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineAchievementsSubsystemWriteAchievements*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineAchievementsSubsystemWriteAchievements* UOnlineAchievementsSubsystemWriteAchievements::WriteAchievements(class UOnlineAchievementsSubsystem* Subsystem, const struct FUniqueNetIdRepl& PlayerId, class UOnlineAchievementsWrite* WriteObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineAchievementsSubsystemWriteAchievements", "WriteAchievements");
-
-	Params::OnlineAchievementsSubsystemWriteAchievements_WriteAchievements Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.PlayerId = std::move(PlayerId);
-	Parms.WriteObject = WriteObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystemDeleteLobby.DeleteLobby
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UOnlineLobbySubsystem*            Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FUniqueNetIdRepl&          UserId                                                 (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLobbySubsystemDeleteLobby* ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineLobbySubsystemDeleteLobby* UOnlineLobbySubsystemDeleteLobby::DeleteLobby(class UOnlineLobbySubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineLobbySubsystemDeleteLobby", "DeleteLobby");
-
-	Params::OnlineLobbySubsystemDeleteLobby_DeleteLobby Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.UserId = std::move(UserId);
-	Parms.LobbyId = LobbyId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadata
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UOnlineLobbyTransaction::DeleteMetadata(const class FString& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbyTransaction", "DeleteMetadata");
-
-	Params::OnlineLobbyTransaction_DeleteMetadata Parms{};
-
-	Parms.Key = std::move(Key);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadataByArray
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<class FString>&            MetaDataKeys                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UOnlineLobbyTransaction::DeleteMetadataByArray(const TArray<class FString>& MetaDataKeys)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbyTransaction", "DeleteMetadataByArray");
-
-	Params::OnlineLobbyTransaction_DeleteMetadataByArray Parms{};
-
-	Parms.MetaDataKeys = std::move(MetaDataKeys);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetCapacity
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int64                                   Capacity                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UOnlineLobbyTransaction::SetCapacity(int64 Capacity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbyTransaction", "SetCapacity");
-
-	Params::OnlineLobbyTransaction_SetCapacity Parms{};
-
-	Parms.Capacity = Capacity;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetLocked
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    Locked                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UOnlineLobbyTransaction::SetLocked(bool Locked)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbyTransaction", "SetLocked");
-
-	Params::OnlineLobbyTransaction_SetLocked Parms{};
-
-	Parms.Locked = Locked;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetMetadata
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVariantDataBP&            Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UOnlineLobbyTransaction::SetMetadata(const class FString& Key, const struct FVariantDataBP& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbyTransaction", "SetMetadata");
-
-	Params::OnlineLobbyTransaction_SetMetadata Parms{};
-
-	Parms.Key = std::move(Key);
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetMetadataByMap
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TMap<class FString, struct FVariantDataBP>&MetaData                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UOnlineLobbyTransaction::SetMetadataByMap(const TMap<class FString, struct FVariantDataBP>& MetaData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbyTransaction", "SetMetadataByMap");
-
-	Params::OnlineLobbyTransaction_SetMetadataByMap Parms{};
-
-	Parms.MetaData = std::move(MetaData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetPublic
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    Public                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UOnlineLobbyTransaction::SetPublic(bool Public)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbyTransaction", "SetPublic");
-
-	Params::OnlineLobbyTransaction_SetPublic Parms{};
-
-	Parms.Public = Public;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystem.GetCachedAchievement
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -373,6 +132,38 @@ bool UOnlineAchievementsSubsystem::IsSubsystemAvailable()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemWriteAchievements.WriteAchievements
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UOnlineAchievementsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          PlayerId                                               (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineAchievementsWrite*         WriteObject                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineAchievementsSubsystemWriteAchievements*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineAchievementsSubsystemWriteAchievements* UOnlineAchievementsSubsystemWriteAchievements::WriteAchievements(class UOnlineAchievementsSubsystem* Subsystem, const struct FUniqueNetIdRepl& PlayerId, class UOnlineAchievementsWrite* WriteObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineAchievementsSubsystemWriteAchievements", "WriteAchievements");
+
+	Params::OnlineAchievementsSubsystemWriteAchievements_WriteAchievements Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.PlayerId = std::move(PlayerId);
+	Parms.WriteObject = WriteObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -3974,6 +3765,38 @@ class UOnlineLobbySubsystemUpdateLobby* UOnlineLobbySubsystemUpdateLobby::Update
 	Parms.UserId = std::move(UserId);
 	Parms.LobbyId = LobbyId;
 	Parms.Transaction = Transaction;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystemDeleteLobby.DeleteLobby
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UOnlineLobbySubsystem*            Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          UserId                                                 (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLobbySubsystemDeleteLobby* ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineLobbySubsystemDeleteLobby* UOnlineLobbySubsystemDeleteLobby::DeleteLobby(class UOnlineLobbySubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineLobbySubsystemDeleteLobby", "DeleteLobby");
+
+	Params::OnlineLobbySubsystemDeleteLobby_DeleteLobby Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.UserId = std::move(UserId);
+	Parms.LobbyId = LobbyId;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -9061,6 +8884,183 @@ struct FUniqueNetIdRepl ULobby::GetOwnerId()
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadata
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineLobbyTransaction::DeleteMetadata(const class FString& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbyTransaction", "DeleteMetadata");
+
+	Params::OnlineLobbyTransaction_DeleteMetadata Parms{};
+
+	Parms.Key = std::move(Key);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadataByArray
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            MetaDataKeys                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UOnlineLobbyTransaction::DeleteMetadataByArray(const TArray<class FString>& MetaDataKeys)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbyTransaction", "DeleteMetadataByArray");
+
+	Params::OnlineLobbyTransaction_DeleteMetadataByArray Parms{};
+
+	Parms.MetaDataKeys = std::move(MetaDataKeys);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetCapacity
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int64                                   Capacity                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineLobbyTransaction::SetCapacity(int64 Capacity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbyTransaction", "SetCapacity");
+
+	Params::OnlineLobbyTransaction_SetCapacity Parms{};
+
+	Parms.Capacity = Capacity;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetLocked
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Locked                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineLobbyTransaction::SetLocked(bool Locked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbyTransaction", "SetLocked");
+
+	Params::OnlineLobbyTransaction_SetLocked Parms{};
+
+	Parms.Locked = Locked;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetMetadata
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVariantDataBP&            Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UOnlineLobbyTransaction::SetMetadata(const class FString& Key, const struct FVariantDataBP& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbyTransaction", "SetMetadata");
+
+	Params::OnlineLobbyTransaction_SetMetadata Parms{};
+
+	Parms.Key = std::move(Key);
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetMetadataByMap
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TMap<class FString, struct FVariantDataBP>&MetaData                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UOnlineLobbyTransaction::SetMetadataByMap(const TMap<class FString, struct FVariantDataBP>& MetaData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbyTransaction", "SetMetadataByMap");
+
+	Params::OnlineLobbyTransaction_SetMetadataByMap Parms{};
+
+	Parms.MetaData = std::move(MetaData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetPublic
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Public                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineLobbyTransaction::SetPublic(bool Public)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbyTransaction", "SetPublic");
+
+	Params::OnlineLobbyTransaction_SetPublic Parms{};
+
+	Parms.Public = Public;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

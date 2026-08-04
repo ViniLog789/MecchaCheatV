@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_BrushPlane.BP_BrushPlane_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_BrushPlane_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BrushPlane_C", "ReceiveTick");
+
+	Params::BP_BrushPlane_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_BrushPlane.BP_BrushPlane_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -27,26 +47,6 @@ void ABP_BrushPlane_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_BrushPlane_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BrushPlane.BP_BrushPlane_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_BrushPlane_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BrushPlane_C", "ReceiveTick");
-
-	Params::BP_BrushPlane_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

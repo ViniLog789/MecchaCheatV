@@ -533,23 +533,17 @@ public:
 };
 DUMPER7_ASSERTS_FEnvTraceData;
 
-// ScriptStruct AIModule.SimpleIndexedHandleBase
+// ScriptStruct AIModule.AISenseAffiliationFilter
 // 0x0004 (0x0004 - 0x0000)
-struct alignas(0x04) FSimpleIndexedHandleBase
+struct alignas(0x04) FAISenseAffiliationFilter final
 {
 public:
-	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         bDetectEnemies : 1;                                // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDetectNeutrals : 1;                               // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDetectFriendlies : 1;                             // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSimpleIndexedHandleBase;
-
-// ScriptStruct AIModule.IndexedHandleBase
-// 0x0004 (0x0008 - 0x0004)
-struct FIndexedHandleBase final : public FSimpleIndexedHandleBase
-{
-public:
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FIndexedHandleBase;
+DUMPER7_ASSERTS_FAISenseAffiliationFilter;
 
 // ScriptStruct AIModule.AIStimulus
 // 0x0058 (0x0058 - 0x0000)
@@ -747,6 +741,24 @@ public:
 	uint8                                         TeamID;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FGenericTeamId;
+
+// ScriptStruct AIModule.SimpleIndexedHandleBase
+// 0x0004 (0x0004 - 0x0000)
+struct alignas(0x04) FSimpleIndexedHandleBase
+{
+public:
+	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSimpleIndexedHandleBase;
+
+// ScriptStruct AIModule.IndexedHandleBase
+// 0x0004 (0x0008 - 0x0004)
+struct FIndexedHandleBase final : public FSimpleIndexedHandleBase
+{
+public:
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FIndexedHandleBase;
 
 // ScriptStruct AIModule.CompactIndexedHandleBase
 // 0x0004 (0x0004 - 0x0000)
@@ -1082,18 +1094,6 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FActorPerceptionBlueprintInfo;
-
-// ScriptStruct AIModule.AISenseAffiliationFilter
-// 0x0004 (0x0004 - 0x0000)
-struct alignas(0x04) FAISenseAffiliationFilter final
-{
-public:
-	uint8                                         bDetectEnemies : 1;                                // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDetectNeutrals : 1;                               // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDetectFriendlies : 1;                             // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAISenseAffiliationFilter;
 
 // ScriptStruct AIModule.AINoiseEvent
 // 0x0040 (0x0040 - 0x0000)

@@ -12,9 +12,9 @@
 
 #include "MovieScene_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "MovieSceneTracks_structs.hpp"
 #include "SequencerScripting_structs.hpp"
 #include "Engine_structs.hpp"
+#include "MovieSceneTracks_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -846,6 +846,48 @@ public:
 };
 DUMPER7_ASSERTS_MovieSceneScriptingEventChannel_GetKeysByIndex;
 
+// Function SequencerScripting.MovieSceneMaterialTrackExtensions.GetMaterialIndex
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneMaterialTrackExtensions_GetMaterialIndex final
+{
+public:
+	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneMaterialTrackExtensions_GetMaterialIndex;
+
+// Function SequencerScripting.MovieSceneMaterialTrackExtensions.GetMaterialInfo
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneMaterialTrackExtensions_GetMaterialInfo final
+{
+public:
+	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FComponentMaterialInfo                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneMaterialTrackExtensions_GetMaterialInfo;
+
+// Function SequencerScripting.MovieSceneMaterialTrackExtensions.SetMaterialIndex
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneMaterialTrackExtensions_SetMaterialIndex final
+{
+public:
+	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaterialIndex;                                     // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneMaterialTrackExtensions_SetMaterialIndex;
+
+// Function SequencerScripting.MovieSceneMaterialTrackExtensions.SetMaterialInfo
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneMaterialTrackExtensions_SetMaterialInfo final
+{
+public:
+	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FComponentMaterialInfo                 MaterialInfo;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneMaterialTrackExtensions_SetMaterialInfo;
+
 // Function SequencerScripting.MovieSceneScriptingFloatKey.SetArriveTangent
 // 0x0004 (0x0004 - 0x0000)
 struct MovieSceneScriptingFloatKey_SetArriveTangent final
@@ -1013,88 +1055,120 @@ public:
 };
 DUMPER7_ASSERTS_MovieSceneScriptingFloatKey_GetValue;
 
-// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.GetMaterialIndex
-// 0x0010 (0x0010 - 0x0000)
-struct MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex final
-{
-public:
-	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex;
-
-// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.GetMaterialInfo
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.AddKey
 // 0x0018 (0x0018 - 0x0000)
-struct MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo final
+struct MovieSceneScriptingParticleChannel_AddKey final
 {
 public:
-	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FComponentMaterialInfo                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EParticleKey                                  NewParticleValue;                                  // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SubFrame;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMovieSceneScriptingParticleKey*        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo;
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_AddKey;
 
-// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.SetMaterialIndex
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.RemoveKey
+// 0x0008 (0x0008 - 0x0000)
+struct MovieSceneScriptingParticleChannel_RemoveKey final
+{
+public:
+	class UMovieSceneScriptingKey*                Key;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_RemoveKey;
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.SetDefault
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneScriptingParticleChannel_SetDefault final
+{
+public:
+	EParticleKey                                  InDefaultValue;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_SetDefault;
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.Transform
+// 0x0030 (0x0030 - 0x0000)
+struct MovieSceneScriptingParticleChannel_Transform final
+{
+public:
+	struct FFrameNumber                           OffsetFrame;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Scale;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           PivotFrame;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSequencerScriptingRange               ScriptingRange;                                    // 0x0014(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_Transform;
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.ComputeEffectiveRange
+// 0x0014 (0x0014 - 0x0000)
+struct MovieSceneScriptingParticleChannel_ComputeEffectiveRange final
+{
+public:
+	struct FSequencerScriptingRange               ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_ComputeEffectiveRange;
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.EvaluateKeys
+// 0x0030 (0x0030 - 0x0000)
+struct MovieSceneScriptingParticleChannel_EvaluateKeys final
+{
+public:
+	struct FSequencerScriptingRange               Range;                                             // 0x0000(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFrameRate                             FrameRate;                                         // 0x0014(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EParticleKey>                          ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_EvaluateKeys;
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetDefault
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneScriptingParticleChannel_GetDefault final
+{
+public:
+	EParticleKey                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_GetDefault;
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetKeys
 // 0x0010 (0x0010 - 0x0000)
-struct MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex final
+struct MovieSceneScriptingParticleChannel_GetKeys final
 {
 public:
-	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaterialIndex;                                     // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex;
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_GetKeys;
 
-// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.SetMaterialInfo
-// 0x0018 (0x0018 - 0x0000)
-struct MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo final
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingParticleChannel_GetKeysByIndex final
 {
 public:
-	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FComponentMaterialInfo                 MaterialInfo;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo;
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_GetKeysByIndex;
 
-// Function SequencerScripting.MovieSceneScriptingStringKey.SetTime
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneScriptingStringKey_SetTime final
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetNumKeys
+// 0x0004 (0x0004 - 0x0000)
+struct MovieSceneScriptingParticleChannel_GetNumKeys final
 {
 public:
-	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneScriptingStringKey_SetTime;
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_GetNumKeys;
 
-// Function SequencerScripting.MovieSceneScriptingStringKey.SetValue
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneScriptingStringKey_SetValue final
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.HasDefault
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneScriptingParticleChannel_HasDefault final
 {
 public:
-	class FString                                 InNewValue;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneScriptingStringKey_SetValue;
-
-// Function SequencerScripting.MovieSceneScriptingStringKey.GetTime
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneScriptingStringKey_GetTime final
-{
-public:
-	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneScriptingStringKey_GetTime;
-
-// Function SequencerScripting.MovieSceneScriptingStringKey.GetValue
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneScriptingStringKey_GetValue final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneScriptingStringKey_GetValue;
+DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_HasDefault;
 
 // Function SequencerScripting.MovieSceneScriptingFloatChannel.AddKey
 // 0x0018 (0x0018 - 0x0000)
@@ -1411,6 +1485,36 @@ public:
 };
 DUMPER7_ASSERTS_MovieSceneScriptingIntegerChannel_HasDefault;
 
+// Function SequencerScripting.MovieSceneEventTrackExtensions.AddEventRepeaterSection
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneEventTrackExtensions_AddEventRepeaterSection final
+{
+public:
+	class UMovieSceneEventTrack*                  InTrack;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneEventRepeaterSection*        ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneEventTrackExtensions_AddEventRepeaterSection;
+
+// Function SequencerScripting.MovieSceneEventTrackExtensions.AddEventTriggerSection
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneEventTrackExtensions_AddEventTriggerSection final
+{
+public:
+	class UMovieSceneEventTrack*                  InTrack;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneEventTriggerSection*         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneEventTrackExtensions_AddEventTriggerSection;
+
+// Function SequencerScripting.MovieSceneEventTrackExtensions.GetBoundObjectPropertyClass
+// 0x0030 (0x0030 - 0x0000)
+struct MovieSceneEventTrackExtensions_GetBoundObjectPropertyClass final
+{
+public:
+	struct FMovieSceneEvent                       EventKey;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UClass*                                 ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneEventTrackExtensions_GetBoundObjectPropertyClass;
+
 // Function SequencerScripting.MovieSceneScriptingObjectPathKey.SetTime
 // 0x000C (0x000C - 0x0000)
 struct MovieSceneScriptingObjectPathKey_SetTime final
@@ -1451,153 +1555,6 @@ public:
 	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MovieSceneScriptingObjectPathKey_GetValue;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.AddChildFolder
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneFolderExtensions_AddChildFolder final
-{
-public:
-	class UMovieSceneFolder*                      TargetFolder;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneFolder*                      FolderToAdd;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_AddChildFolder;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.AddChildObjectBinding
-// 0x0028 (0x0028 - 0x0000)
-struct MovieSceneFolderExtensions_AddChildObjectBinding final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMovieSceneBindingProxy                InObjectBinding;                                   // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_AddChildObjectBinding;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.AddChildTrack
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneFolderExtensions_AddChildTrack final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneTrack*                       InTrack;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_AddChildTrack;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.GetChildFolders
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneFolderExtensions_GetChildFolders final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMovieSceneFolder*>              ReturnValue;                                       // 0x0008(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetChildFolders;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.GetChildObjectBindings
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneFolderExtensions_GetChildObjectBindings final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FMovieSceneBindingProxy>        ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetChildObjectBindings;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.GetChildTracks
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneFolderExtensions_GetChildTracks final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMovieSceneTrack*>               ReturnValue;                                       // 0x0008(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetChildTracks;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.GetFolderColor
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneFolderExtensions_GetFolderColor final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetFolderColor;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.GetFolderName
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneFolderExtensions_GetFolderName final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetFolderName;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildFolder
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneFolderExtensions_RemoveChildFolder final
-{
-public:
-	class UMovieSceneFolder*                      TargetFolder;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneFolder*                      FolderToRemove;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_RemoveChildFolder;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildObjectBinding
-// 0x0028 (0x0028 - 0x0000)
-struct MovieSceneFolderExtensions_RemoveChildObjectBinding final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMovieSceneBindingProxy                InObjectBinding;                                   // 0x0008(0x0018)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_RemoveChildObjectBinding;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildTrack
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneFolderExtensions_RemoveChildTrack final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneTrack*                       InTrack;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_RemoveChildTrack;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.SetFolderColor
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneFolderExtensions_SetFolderColor final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 InFolderColor;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_SetFolderColor;
-
-// Function SequencerScripting.MovieSceneFolderExtensions.SetFolderName
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneFolderExtensions_SetFolderName final
-{
-public:
-	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InFolderName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneFolderExtensions_SetFolderName;
 
 // Function SequencerScripting.MovieSceneScriptingObjectPathChannel.AddKey
 // 0x0020 (0x0020 - 0x0000)
@@ -1725,120 +1682,46 @@ public:
 };
 DUMPER7_ASSERTS_MovieSceneScriptingParticleKey_GetValue;
 
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.AddKey
-// 0x0018 (0x0018 - 0x0000)
-struct MovieSceneScriptingParticleChannel_AddKey final
+// Function SequencerScripting.MovieSceneScriptingStringKey.SetTime
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneScriptingStringKey_SetTime final
 {
 public:
-	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EParticleKey                                  NewParticleValue;                                  // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SubFrame;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneScriptingParticleKey*        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_AddKey;
+DUMPER7_ASSERTS_MovieSceneScriptingStringKey_SetTime;
 
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.RemoveKey
-// 0x0008 (0x0008 - 0x0000)
-struct MovieSceneScriptingParticleChannel_RemoveKey final
-{
-public:
-	class UMovieSceneScriptingKey*                Key;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_RemoveKey;
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.SetDefault
-// 0x0001 (0x0001 - 0x0000)
-struct MovieSceneScriptingParticleChannel_SetDefault final
-{
-public:
-	EParticleKey                                  InDefaultValue;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_SetDefault;
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.Transform
-// 0x0030 (0x0030 - 0x0000)
-struct MovieSceneScriptingParticleChannel_Transform final
-{
-public:
-	struct FFrameNumber                           OffsetFrame;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Scale;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           PivotFrame;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSequencerScriptingRange               ScriptingRange;                                    // 0x0014(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_Transform;
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.ComputeEffectiveRange
-// 0x0014 (0x0014 - 0x0000)
-struct MovieSceneScriptingParticleChannel_ComputeEffectiveRange final
-{
-public:
-	struct FSequencerScriptingRange               ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_ComputeEffectiveRange;
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.EvaluateKeys
-// 0x0030 (0x0030 - 0x0000)
-struct MovieSceneScriptingParticleChannel_EvaluateKeys final
-{
-public:
-	struct FSequencerScriptingRange               Range;                                             // 0x0000(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFrameRate                             FrameRate;                                         // 0x0014(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EParticleKey>                          ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_EvaluateKeys;
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetDefault
-// 0x0001 (0x0001 - 0x0000)
-struct MovieSceneScriptingParticleChannel_GetDefault final
-{
-public:
-	EParticleKey                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_GetDefault;
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetKeys
+// Function SequencerScripting.MovieSceneScriptingStringKey.SetValue
 // 0x0010 (0x0010 - 0x0000)
-struct MovieSceneScriptingParticleChannel_GetKeys final
+struct MovieSceneScriptingStringKey_SetValue final
 {
 public:
-	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	class FString                                 InNewValue;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_GetKeys;
+DUMPER7_ASSERTS_MovieSceneScriptingStringKey_SetValue;
 
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetKeysByIndex
-// 0x0020 (0x0020 - 0x0000)
-struct MovieSceneScriptingParticleChannel_GetKeysByIndex final
+// Function SequencerScripting.MovieSceneScriptingStringKey.GetTime
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneScriptingStringKey_GetTime final
 {
 public:
-	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_GetKeysByIndex;
+DUMPER7_ASSERTS_MovieSceneScriptingStringKey_GetTime;
 
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetNumKeys
-// 0x0004 (0x0004 - 0x0000)
-struct MovieSceneScriptingParticleChannel_GetNumKeys final
+// Function SequencerScripting.MovieSceneScriptingStringKey.GetValue
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneScriptingStringKey_GetValue final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_GetNumKeys;
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.HasDefault
-// 0x0001 (0x0001 - 0x0000)
-struct MovieSceneScriptingParticleChannel_HasDefault final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneScriptingParticleChannel_HasDefault;
+DUMPER7_ASSERTS_MovieSceneScriptingStringKey_GetValue;
 
 // Function SequencerScripting.MovieSceneScriptingStringChannel.AddKey
 // 0x0028 (0x0028 - 0x0000)
@@ -2164,77 +2047,194 @@ public:
 };
 DUMPER7_ASSERTS_MovieSceneBindingExtensions_SetSpawnableBindingID;
 
-// Function SequencerScripting.MovieSceneEventTrackExtensions.AddEventRepeaterSection
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneEventTrackExtensions_AddEventRepeaterSection final
+// Function SequencerScripting.MovieSceneFolderExtensions.AddChildFolder
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneFolderExtensions_AddChildFolder final
 {
 public:
-	class UMovieSceneEventTrack*                  InTrack;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneEventRepeaterSection*        ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneFolder*                      TargetFolder;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneFolder*                      FolderToAdd;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MovieSceneEventTrackExtensions_AddEventRepeaterSection;
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_AddChildFolder;
 
-// Function SequencerScripting.MovieSceneEventTrackExtensions.AddEventTriggerSection
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneEventTrackExtensions_AddEventTriggerSection final
+// Function SequencerScripting.MovieSceneFolderExtensions.AddChildObjectBinding
+// 0x0028 (0x0028 - 0x0000)
+struct MovieSceneFolderExtensions_AddChildObjectBinding final
 {
 public:
-	class UMovieSceneEventTrack*                  InTrack;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneEventTriggerSection*         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMovieSceneBindingProxy                InObjectBinding;                                   // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MovieSceneEventTrackExtensions_AddEventTriggerSection;
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_AddChildObjectBinding;
 
-// Function SequencerScripting.MovieSceneEventTrackExtensions.GetBoundObjectPropertyClass
-// 0x0030 (0x0030 - 0x0000)
-struct MovieSceneEventTrackExtensions_GetBoundObjectPropertyClass final
+// Function SequencerScripting.MovieSceneFolderExtensions.AddChildTrack
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneFolderExtensions_AddChildTrack final
 {
 public:
-	struct FMovieSceneEvent                       EventKey;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UClass*                                 ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneTrack*                       InTrack;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MovieSceneEventTrackExtensions_GetBoundObjectPropertyClass;
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_AddChildTrack;
 
-// Function SequencerScripting.MovieSceneMaterialTrackExtensions.GetMaterialIndex
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneMaterialTrackExtensions_GetMaterialIndex final
+// Function SequencerScripting.MovieSceneFolderExtensions.GetChildFolders
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneFolderExtensions_GetChildFolders final
 {
 public:
-	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneFolder*>              ReturnValue;                                       // 0x0008(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetChildFolders;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.GetChildObjectBindings
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneFolderExtensions_GetChildObjectBindings final
+{
+public:
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMovieSceneBindingProxy>        ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetChildObjectBindings;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.GetChildTracks
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneFolderExtensions_GetChildTracks final
+{
+public:
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneTrack*>               ReturnValue;                                       // 0x0008(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetChildTracks;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.GetFolderColor
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneFolderExtensions_GetFolderColor final
+{
+public:
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetFolderColor;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.GetFolderName
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneFolderExtensions_GetFolderName final
+{
+public:
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_GetFolderName;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildFolder
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneFolderExtensions_RemoveChildFolder final
+{
+public:
+	class UMovieSceneFolder*                      TargetFolder;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneFolder*                      FolderToRemove;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_RemoveChildFolder;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildObjectBinding
+// 0x0028 (0x0028 - 0x0000)
+struct MovieSceneFolderExtensions_RemoveChildObjectBinding final
+{
+public:
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMovieSceneBindingProxy                InObjectBinding;                                   // 0x0008(0x0018)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_RemoveChildObjectBinding;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildTrack
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneFolderExtensions_RemoveChildTrack final
+{
+public:
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneTrack*                       InTrack;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_RemoveChildTrack;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.SetFolderColor
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneFolderExtensions_SetFolderColor final
+{
+public:
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 InFolderColor;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_SetFolderColor;
+
+// Function SequencerScripting.MovieSceneFolderExtensions.SetFolderName
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneFolderExtensions_SetFolderName final
+{
+public:
+	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InFolderName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneFolderExtensions_SetFolderName;
+
+// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.GetMaterialIndex
+// 0x0010 (0x0010 - 0x0000)
+struct MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex final
+{
+public:
+	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MovieSceneMaterialTrackExtensions_GetMaterialIndex;
+DUMPER7_ASSERTS_MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex;
 
-// Function SequencerScripting.MovieSceneMaterialTrackExtensions.GetMaterialInfo
+// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.GetMaterialInfo
 // 0x0018 (0x0018 - 0x0000)
-struct MovieSceneMaterialTrackExtensions_GetMaterialInfo final
+struct MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo final
 {
 public:
-	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FComponentMaterialInfo                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneMaterialTrackExtensions_GetMaterialInfo;
+DUMPER7_ASSERTS_MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo;
 
-// Function SequencerScripting.MovieSceneMaterialTrackExtensions.SetMaterialIndex
+// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.SetMaterialIndex
 // 0x0010 (0x0010 - 0x0000)
-struct MovieSceneMaterialTrackExtensions_SetMaterialIndex final
+struct MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex final
 {
 public:
-	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaterialIndex;                                     // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MovieSceneMaterialTrackExtensions_SetMaterialIndex;
+DUMPER7_ASSERTS_MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex;
 
-// Function SequencerScripting.MovieSceneMaterialTrackExtensions.SetMaterialInfo
+// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.SetMaterialInfo
 // 0x0018 (0x0018 - 0x0000)
-struct MovieSceneMaterialTrackExtensions_SetMaterialInfo final
+struct MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo final
 {
 public:
-	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FComponentMaterialInfo                 MaterialInfo;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneMaterialTrackExtensions_SetMaterialInfo;
+DUMPER7_ASSERTS_MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo;
 
 // Function SequencerScripting.MovieScenePropertyTrackExtensions.GetByteTrackEnum
 // 0x0010 (0x0010 - 0x0000)

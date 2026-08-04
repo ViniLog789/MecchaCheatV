@@ -131,6 +131,30 @@ public:
 };
 DUMPER7_ASSERTS_UBandwidthProbeAsyncAction;
 
+// Class PenguinHotel.BPControllableSpectatorPawn
+// 0x0008 (0x0358 - 0x0350)
+class ABPControllableSpectatorPawn : public ASpectatorPawn
+{
+public:
+	float                                         XSensitivity;                                      // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YSensitivity;                                      // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BPControllableSpectatorPawn")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPControllableSpectatorPawn")
+	}
+	static class ABPControllableSpectatorPawn* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABPControllableSpectatorPawn>();
+	}
+};
+DUMPER7_ASSERTS_ABPControllableSpectatorPawn;
+
 // Class PenguinHotel.CPP_AC_CustomPhysicsForce
 // 0x0190 (0x0248 - 0x00B8)
 class UCPP_AC_CustomPhysicsForce : public UActorComponent

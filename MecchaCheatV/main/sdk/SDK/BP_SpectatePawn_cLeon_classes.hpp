@@ -10,33 +10,33 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
+#include "PenguinHotel_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C
-// 0x0068 (0x03B8 - 0x0350)
-class ABP_SpectatePawn_cLeon_C final : public ASpectatorPawn
+// 0x0068 (0x03C0 - 0x0358)
+class ABP_SpectatePawn_cLeon_C final : public ABPControllableSpectatorPawn
 {
 public:
-	uint8                                         Pad_350[0x8];                                      // 0x0350(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraComponent*                       Camera;                                            // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpringArmComponent*                    SpringArm;                                         // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_Main_C*        SpectateTarget;                                    // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Spectate_cLeon_C*                  SpectateWidget;                                    // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AController*                            SelfController;                                    // 0x0378(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          Current_Name_Plate_Visibility;                     // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_381[0x3];                                      // 0x0381(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NamePlateVisibilityType;                           // 0x0384(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFreeCamera;                                      // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_389[0x7];                                      // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_PlayerController_cLeon_C*           As_BP_Player_Controller_C_Leon;                    // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UFloatingPawnMovement*                  FloatingPawn;                                      // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_Main_C*        MyMainBody;                                        // 0x03A0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          CanBackBody;                                       // 0x03A8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_GameState_cLeon_C*                  As_BP_Game_State_C_Leon;                           // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_358[0x8];                                      // 0x0358(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraComponent*                       Camera;                                            // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpringArmComponent*                    SpringArm;                                         // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        SpectateTarget;                                    // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Spectate_cLeon_C*                  SpectateWidget;                                    // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AController*                            SelfController;                                    // 0x0380(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          Current_Name_Plate_Visibility;                     // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_389[0x3];                                      // 0x0389(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NamePlateVisibilityType;                           // 0x038C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFreeCamera;                                      // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_PlayerController_cLeon_C*           As_BP_Player_Controller_C_Leon;                    // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UFloatingPawnMovement*                  FloatingPawn;                                      // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        MyMainBody;                                        // 0x03A8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          CanBackBody;                                       // 0x03B0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_GameState_cLeon_C*                  As_BP_Game_State_C_Leon;                           // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SwitchNamePlateVisibility();
@@ -44,6 +44,7 @@ public:
 	void Setup();
 	void SetLocation(const struct FVector& NewLocation);
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ReceiveRestarted();
 	void ReceivePossessed(class AController* NewController_ReceivePossessed);
 	void ReceiveDestroyed();
 	void ReceiveBeginPlay();
@@ -64,6 +65,7 @@ public:
 	void InpActEvt_Five_K2Node_InputKeyEvent_5(const struct FKey& Key);
 	void FreeCameraChange();
 	void BackBody();
+	void ApplySettings();
 
 public:
 	static class UClass* StaticClass()

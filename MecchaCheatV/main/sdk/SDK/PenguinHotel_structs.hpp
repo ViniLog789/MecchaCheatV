@@ -100,14 +100,22 @@ enum class EPaintPerformancePreset : uint8
 	EPaintPerformancePreset_MAX              = 4,
 };
 
-// ScriptStruct PenguinHotel.CPP_MergedNumberData
-// 0x0050 (0x0050 - 0x0000)
-struct FCPP_MergedNumberData final
+// ScriptStruct PenguinHotel.CPP_GameItemData
+// 0x0050 (0x0058 - 0x0008)
+struct FCPP_GameItemData final : public FTableRowBase
 {
 public:
-	TMap<int32, float>                            Weights;                                           // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGuid                                  UniqueID;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameItemType                                 ItemType;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             ItemImage;                                         // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     ItemClass;                                         // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StackCount;                                        // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           OptionTags;                                        // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FText                                   ItemNameAndInfo;                                   // 0x0048(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCPP_MergedNumberData;
+DUMPER7_ASSERTS_FCPP_GameItemData;
 
 // ScriptStruct PenguinHotel.BandwidthProbeResult
 // 0x0018 (0x0018 - 0x0000)
@@ -124,17 +132,28 @@ public:
 };
 DUMPER7_ASSERTS_FBandwidthProbeResult;
 
-// ScriptStruct PenguinHotel.CPP_OrderInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FCPP_OrderInfo final
+// ScriptStruct PenguinHotel.CPP_MergedNumberData
+// 0x0050 (0x0050 - 0x0000)
+struct FCPP_MergedNumberData final
 {
 public:
-	class UPrimitiveComponent*                    TargetPrimitive;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UPrimitiveComponent*                    BeforePrimitive;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	float                                         WeightValue;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<int32, float>                            Weights;                                           // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCPP_OrderInfo;
+DUMPER7_ASSERTS_FCPP_MergedNumberData;
+
+// ScriptStruct PenguinHotel.ModMapJsonInfo
+// 0x0060 (0x0060 - 0x0000)
+struct FModMapJsonInfo final
+{
+public:
+	class FString                                 ModId;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplayName;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Author;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Version;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PakFile;                                           // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LevelPath;                                         // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FModMapJsonInfo;
 
 // ScriptStruct PenguinHotel.EOSPlayerReportResult
 // 0x0028 (0x0028 - 0x0000)
@@ -174,23 +193,6 @@ public:
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCPP_TouchPointDatas;
-
-// ScriptStruct PenguinHotel.CPP_GameItemData
-// 0x0050 (0x0058 - 0x0008)
-struct FCPP_GameItemData final : public FTableRowBase
-{
-public:
-	struct FGuid                                  UniqueID;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameItemType                                 ItemType;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             ItemImage;                                         // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     ItemClass;                                         // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StackCount;                                        // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           OptionTags;                                        // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FText                                   ItemNameAndInfo;                                   // 0x0048(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCPP_GameItemData;
 
 // ScriptStruct PenguinHotel.CPP_StaticWeightDatas
 // 0x0050 (0x0050 - 0x0000)
@@ -317,6 +319,18 @@ public:
 	TArray<class UPrimitiveComponent*>            EndPointRootPrimitives;                            // 0x0018(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FCPP_HitPointInfo;
+
+// ScriptStruct PenguinHotel.CPP_OrderInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FCPP_OrderInfo final
+{
+public:
+	class UPrimitiveComponent*                    TargetPrimitive;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UPrimitiveComponent*                    BeforePrimitive;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	float                                         WeightValue;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCPP_OrderInfo;
 
 // ScriptStruct PenguinHotel.CPP_SingleOrderInfo
 // 0x00C8 (0x00C8 - 0x0000)
@@ -451,20 +465,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FPlanetSearchRezult;
-
-// ScriptStruct PenguinHotel.ModMapJsonInfo
-// 0x0060 (0x0060 - 0x0000)
-struct FModMapJsonInfo final
-{
-public:
-	class FString                                 ModId;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplayName;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Author;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Version;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PakFile;                                           // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LevelPath;                                         // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FModMapJsonInfo;
 
 // ScriptStruct PenguinHotel.IoStoreModLevelInfo
 // 0x0080 (0x0080 - 0x0000)

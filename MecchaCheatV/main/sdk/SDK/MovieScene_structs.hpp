@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "UniversalObjectLocator_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UniversalObjectLocator_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -710,6 +710,25 @@ public:
 };
 DUMPER7_ASSERTS_FMovieSceneSequenceLoopCount;
 
+// ScriptStruct MovieScene.MovieSceneEvalTemplate
+// 0x0010 (0x0020 - 0x0010)
+struct FMovieSceneEvalTemplate : public FMovieSceneEvalTemplateBase
+{
+public:
+	EMovieSceneCompletionMode                     CompletionMode;                                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UMovieSceneSection>      SourceSectionPtr;                                  // 0x0014(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMovieSceneEvalTemplate;
+
+// ScriptStruct MovieScene.TestMovieSceneEvalTemplate
+// 0x0000 (0x0020 - 0x0020)
+struct FTestMovieSceneEvalTemplate final : public FMovieSceneEvalTemplate
+{
+};
+DUMPER7_ASSERTS_FTestMovieSceneEvalTemplate;
+
 // ScriptStruct MovieScene.MovieSceneSequenceTickInterval
 // 0x000C (0x000C - 0x0000)
 struct FMovieSceneSequenceTickInterval final
@@ -749,17 +768,6 @@ public:
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMovieSceneSequencePlaybackSettings;
-
-// ScriptStruct MovieScene.TestMovieSceneStruct
-// 0x0020 (0x0020 - 0x0000)
-struct FTestMovieSceneStruct final
-{
-public:
-	float                                         First;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Second;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Vector;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTestMovieSceneStruct;
 
 // ScriptStruct MovieScene.MovieSceneTimeTransform
 // 0x000C (0x000C - 0x0000)
@@ -1162,18 +1170,6 @@ public:
 	bool                                          bIsValid;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FOptionalMovieSceneBlendType;
-
-// ScriptStruct MovieScene.MovieSceneEvalTemplate
-// 0x0010 (0x0020 - 0x0010)
-struct FMovieSceneEvalTemplate : public FMovieSceneEvalTemplateBase
-{
-public:
-	EMovieSceneCompletionMode                     CompletionMode;                                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class UMovieSceneSection>      SourceSectionPtr;                                  // 0x0014(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMovieSceneEvalTemplate;
 
 // ScriptStruct MovieScene.MovieSceneEvalTemplatePtr
 // 0x0088 (0x0088 - 0x0000)
@@ -1994,11 +1990,15 @@ public:
 };
 DUMPER7_ASSERTS_FMovieSceneSubSectionOriginOverrideMask;
 
-// ScriptStruct MovieScene.TestMovieSceneEvalTemplate
-// 0x0000 (0x0020 - 0x0020)
-struct FTestMovieSceneEvalTemplate final : public FMovieSceneEvalTemplate
+// ScriptStruct MovieScene.TestMovieSceneStruct
+// 0x0020 (0x0020 - 0x0000)
+struct FTestMovieSceneStruct final
 {
+public:
+	float                                         First;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Second;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Vector;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTestMovieSceneEvalTemplate;
+DUMPER7_ASSERTS_FTestMovieSceneStruct;
 
 SDK_NAMESPACE_END

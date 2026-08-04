@@ -106,6 +106,20 @@ void ABP_SpectatePawn_cLeon_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
 }
 
 
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceiveRestarted
+// (Event, Public, BlueprintEvent)
+
+void ABP_SpectatePawn_cLeon_C::ReceiveRestarted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ReceiveRestarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ReceivePossessed
 // (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
 // Parameters:
@@ -459,6 +473,20 @@ void ABP_SpectatePawn_cLeon_C::BackBody()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "BackBody");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SpectatePawn_cLeon.BP_SpectatePawn_cLeon_C.ApplySettings
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_SpectatePawn_cLeon_C::ApplySettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatePawn_cLeon_C", "ApplySettings");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

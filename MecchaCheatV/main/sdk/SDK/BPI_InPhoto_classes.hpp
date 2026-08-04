@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "ENUM_CameraMode_structs.hpp"
 #include "ENUM_ActorType_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EN_GlueType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PenguinHotel_classes.hpp"
+#include "EN_GlueType_structs.hpp"
 
 
 SDK_NAMESPACE_START

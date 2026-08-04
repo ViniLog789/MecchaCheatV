@@ -10,101 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "Engine_structs.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemWriteAchievements.WriteAchievements
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineAchievementsSubsystemWriteAchievements_WriteAchievements final
-{
-public:
-	class UOnlineAchievementsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineAchievementsWrite*               WriteObject;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineAchievementsSubsystemWriteAchievements* ReturnValue;                                // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineAchievementsSubsystemWriteAchievements_WriteAchievements;
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystemDeleteLobby.DeleteLobby
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineLobbySubsystemDeleteLobby_DeleteLobby final
-{
-public:
-	class UOnlineLobbySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULobbyId*                               LobbyId;                                           // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLobbySubsystemDeleteLobby*       ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineLobbySubsystemDeleteLobby_DeleteLobby;
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadata
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineLobbyTransaction_DeleteMetadata final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineLobbyTransaction_DeleteMetadata;
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadataByArray
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineLobbyTransaction_DeleteMetadataByArray final
-{
-public:
-	TArray<class FString>                         MetaDataKeys;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineLobbyTransaction_DeleteMetadataByArray;
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetCapacity
-// 0x0008 (0x0008 - 0x0000)
-struct OnlineLobbyTransaction_SetCapacity final
-{
-public:
-	int64                                         Capacity;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineLobbyTransaction_SetCapacity;
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetLocked
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineLobbyTransaction_SetLocked final
-{
-public:
-	bool                                          Locked;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineLobbyTransaction_SetLocked;
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetMetadata
-// 0x0040 (0x0040 - 0x0000)
-struct OnlineLobbyTransaction_SetMetadata final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVariantDataBP                         Value;                                             // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineLobbyTransaction_SetMetadata;
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetMetadataByMap
-// 0x0050 (0x0050 - 0x0000)
-struct OnlineLobbyTransaction_SetMetadataByMap final
-{
-public:
-	TMap<class FString, struct FVariantDataBP>    MetaData;                                          // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineLobbyTransaction_SetMetadataByMap;
-
-// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetPublic
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineLobbyTransaction_SetPublic final
-{
-public:
-	bool                                          Public;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OnlineLobbyTransaction_SetPublic;
 
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystem.GetCachedAchievement
 // 0x0060 (0x0060 - 0x0000)
@@ -151,6 +63,18 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineAchievementsSubsystem_IsSubsystemAvailable;
+
+// Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemWriteAchievements.WriteAchievements
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineAchievementsSubsystemWriteAchievements_WriteAchievements final
+{
+public:
+	class UOnlineAchievementsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineAchievementsWrite*               WriteObject;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineAchievementsSubsystemWriteAchievements* ReturnValue;                                // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineAchievementsSubsystemWriteAchievements_WriteAchievements;
 
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemQueryAchievements.QueryAchievements
 // 0x0040 (0x0040 - 0x0000)
@@ -1506,6 +1430,18 @@ public:
 	class UOnlineLobbySubsystemUpdateLobby*       ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OnlineLobbySubsystemUpdateLobby_UpdateLobby;
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystemDeleteLobby.DeleteLobby
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineLobbySubsystemDeleteLobby_DeleteLobby final
+{
+public:
+	class UOnlineLobbySubsystem*                  Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULobbyId*                               LobbyId;                                           // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLobbySubsystemDeleteLobby*       ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineLobbySubsystemDeleteLobby_DeleteLobby;
 
 // Function OnlineSubsystemBlueprints.OnlineLobbySubsystemConnectLobby.ConnectLobby
 // 0x0048 (0x0048 - 0x0000)
@@ -3342,6 +3278,70 @@ public:
 	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_Lobby_GetOwnerId;
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadata
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineLobbyTransaction_DeleteMetadata final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineLobbyTransaction_DeleteMetadata;
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadataByArray
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineLobbyTransaction_DeleteMetadataByArray final
+{
+public:
+	TArray<class FString>                         MetaDataKeys;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineLobbyTransaction_DeleteMetadataByArray;
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetCapacity
+// 0x0008 (0x0008 - 0x0000)
+struct OnlineLobbyTransaction_SetCapacity final
+{
+public:
+	int64                                         Capacity;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineLobbyTransaction_SetCapacity;
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetLocked
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineLobbyTransaction_SetLocked final
+{
+public:
+	bool                                          Locked;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineLobbyTransaction_SetLocked;
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetMetadata
+// 0x0040 (0x0040 - 0x0000)
+struct OnlineLobbyTransaction_SetMetadata final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVariantDataBP                         Value;                                             // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineLobbyTransaction_SetMetadata;
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetMetadataByMap
+// 0x0050 (0x0050 - 0x0000)
+struct OnlineLobbyTransaction_SetMetadataByMap final
+{
+public:
+	TMap<class FString, struct FVariantDataBP>    MetaData;                                          // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineLobbyTransaction_SetMetadataByMap;
+
+// Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.SetPublic
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineLobbyTransaction_SetPublic final
+{
+public:
+	bool                                          Public;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OnlineLobbyTransaction_SetPublic;
 
 // Function OnlineSubsystemBlueprints.OnlineLobbyMemberTransaction.DeleteMetadata
 // 0x0010 (0x0010 - 0x0000)

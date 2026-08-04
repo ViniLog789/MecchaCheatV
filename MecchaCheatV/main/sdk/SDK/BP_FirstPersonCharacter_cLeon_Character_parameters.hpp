@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "EN_InputBlockDeviceType_structs.hpp"
-#include "Mover_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "Mover_structs.hpp"
+#include "EN_InputBlockDeviceType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UINavigation_structs.hpp"
 #include "InputCore_structs.hpp"
 
@@ -93,24 +93,6 @@ public:
 	int32                                         StencilValue;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_SetStencilValue_Game_;
-
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetCastShadow(Server)
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow_Server_ final
-{
-public:
-	bool                                          BodyShadow_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow_Server_;
-
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetCastShadow
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow final
-{
-public:
-	bool                                          BodyShadow_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow;
 
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SelectEmote
 // 0x0010 (0x0010 - 0x0000)
@@ -830,6 +812,24 @@ public:
 	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState_0;                                  // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_cLeonGetPlayerState;
+
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetCastShadow(Server)
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow_Server_ final
+{
+public:
+	bool                                          BodyShadow_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow_Server_;
+
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetCastShadow
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow final
+{
+public:
+	bool                                          BodyShadow_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_SetCastShadow;
 
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.ChangeViewMode
 // 0x000C (0x000C - 0x0000)
