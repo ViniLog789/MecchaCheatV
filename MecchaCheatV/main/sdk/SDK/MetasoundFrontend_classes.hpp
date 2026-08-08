@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MetasoundFrontend_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MetasoundFrontend_structs.hpp"
 
 
 SDK_NAMESPACE_START

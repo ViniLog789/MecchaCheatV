@@ -98,6 +98,16 @@ public:
 };
 DUMPER7_ASSERTS_FNNEDenoiserInputMappingData;
 
+// ScriptStruct NNEDenoiser.NNEDenoiserOutputMappingData
+// 0x0008 (0x0020 - 0x0018)
+struct FNNEDenoiserOutputMappingData final : public FNNEDenoiserBaseMappingData
+{
+public:
+	EOutputResourceName                           Resource;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FNNEDenoiserOutputMappingData;
+
 // ScriptStruct NNEDenoiser.NNEDenoiserTemporalInputMappingData
 // 0x0008 (0x0020 - 0x0018)
 struct FNNEDenoiserTemporalInputMappingData final : public FNNEDenoiserBaseMappingData
@@ -108,16 +118,6 @@ public:
 	int32                                         FrameIndex;                                        // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FNNEDenoiserTemporalInputMappingData;
-
-// ScriptStruct NNEDenoiser.NNEDenoiserOutputMappingData
-// 0x0008 (0x0020 - 0x0018)
-struct FNNEDenoiserOutputMappingData final : public FNNEDenoiserBaseMappingData
-{
-public:
-	EOutputResourceName                           Resource;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FNNEDenoiserOutputMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserTemporalOutputMappingData
 // 0x0008 (0x0020 - 0x0018)

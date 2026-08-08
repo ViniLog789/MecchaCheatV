@@ -30,6 +30,26 @@ void UWBP_TextChatVisualBox_C::UpdateBorderState()
 }
 
 
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.SendToMessage
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Message                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_TextChatVisualBox_C::SendToMessage(const class FString& Message)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "SendToMessage");
+
+	Params::WBP_TextChatVisualBox_C_SendToMessage Parms{};
+
+	Parms.Message = std::move(Message);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ReciveText
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -69,6 +89,60 @@ void UWBP_TextChatVisualBox_C::PreConstruct(bool IsDesignTime_PreConstruct)
 	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.OnTextChanged_B5CE5F4F420F6A44D417FB8A3A340B74
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_TextChatVisualBox_C::OnTextChanged_B5CE5F4F420F6A44D417FB8A3A340B74(const class FString& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "OnTextChanged_B5CE5F4F420F6A44D417FB8A3A340B74");
+
+	Params::WBP_TextChatVisualBox_C_OnTextChanged_B5CE5F4F420F6A44D417FB8A3A340B74 Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.OnConfirmed_B5CE5F4F420F6A44D417FB8A3A340B74
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_TextChatVisualBox_C::OnConfirmed_B5CE5F4F420F6A44D417FB8A3A340B74(const class FString& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "OnConfirmed_B5CE5F4F420F6A44D417FB8A3A340B74");
+
+	Params::WBP_TextChatVisualBox_C_OnConfirmed_B5CE5F4F420F6A44D417FB8A3A340B74 Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.OnCanceled_B5CE5F4F420F6A44D417FB8A3A340B74
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_TextChatVisualBox_C::OnCanceled_B5CE5F4F420F6A44D417FB8A3A340B74()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "OnCanceled_B5CE5F4F420F6A44D417FB8A3A340B74");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

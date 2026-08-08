@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
+#include "MetasoundFrontend_structs.hpp"
+#include "MetasoundEngine_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MetasoundFrontend_structs.hpp"
-#include "MetasoundEngine_structs.hpp"
 
 
 SDK_NAMESPACE_START

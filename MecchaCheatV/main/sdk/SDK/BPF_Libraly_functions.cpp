@@ -16,6 +16,30 @@
 
 SDK_NAMESPACE_START
 
+// Function BPF_Libraly.BPF_Libraly_C.SaveConfigs
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FST_OptionObject&          Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPF_Libraly_C::SaveConfigs(class FName Key, const struct FST_OptionObject& Value, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPF_Libraly_C", "SaveConfigs");
+
+	Params::BPF_Libraly_C_SaveConfigs Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = std::move(Value);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPF_Libraly.BPF_Libraly_C.FullToHarfNumberString
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

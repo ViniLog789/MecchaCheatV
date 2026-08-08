@@ -78,6 +78,34 @@ void UWBP_ConfigGameGeneral_C::Construct()
 }
 
 
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertY_K2Node_ComponentBoundEvent_2_UpdateSettings__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_ConfigGameGeneral_C::BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertY_K2Node_ComponentBoundEvent_2_UpdateSettings__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertY_K2Node_ComponentBoundEvent_2_UpdateSettings__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertX_K2Node_ComponentBoundEvent_1_UpdateSettings__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_ConfigGameGeneral_C::BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertX_K2Node_ComponentBoundEvent_1_UpdateSettings__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertX_K2Node_ComponentBoundEvent_1_UpdateSettings__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature
 // (BlueprintEvent)
 

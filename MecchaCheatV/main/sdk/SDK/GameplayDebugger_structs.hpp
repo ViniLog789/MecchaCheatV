@@ -87,17 +87,22 @@ public:
 };
 DUMPER7_ASSERTS_FGameplayDebuggerInputConfig;
 
-// ScriptStruct GameplayDebugger.GameplayDebuggerExtensionConfig
-// 0x0028 (0x0028 - 0x0000)
-struct FGameplayDebuggerExtensionConfig final
+// ScriptStruct GameplayDebugger.GameplayDebuggerCategoryConfig
+// 0x0030 (0x0030 - 0x0000)
+struct FGameplayDebuggerCategoryConfig final
 {
 public:
-	class FString                                 ExtensionName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayDebuggerOverrideMode                 UseExtension;                                      // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayDebuggerInputConfig>   InputHandlers;                                     // 0x0018(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 CategoryName;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SlotIdx;                                           // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayDebuggerOverrideMode                 ActiveInGame;                                      // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayDebuggerOverrideMode                 ActiveInSimulate;                                  // 0x0015(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayDebuggerOverrideMode                 Hidden;                                            // 0x0016(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bOverrideSlotIdx : 1;                              // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayDebuggerInputConfig>   InputHandlers;                                     // 0x0020(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGameplayDebuggerExtensionConfig;
+DUMPER7_ASSERTS_FGameplayDebuggerCategoryConfig;
 
 // ScriptStruct GameplayDebugger.GameplayDebuggerShape
 // 0x0028 (0x0028 - 0x0000)
@@ -157,22 +162,17 @@ public:
 };
 DUMPER7_ASSERTS_FGameplayDebuggerVisLogSync;
 
-// ScriptStruct GameplayDebugger.GameplayDebuggerCategoryConfig
-// 0x0030 (0x0030 - 0x0000)
-struct FGameplayDebuggerCategoryConfig final
+// ScriptStruct GameplayDebugger.GameplayDebuggerExtensionConfig
+// 0x0028 (0x0028 - 0x0000)
+struct FGameplayDebuggerExtensionConfig final
 {
 public:
-	class FString                                 CategoryName;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SlotIdx;                                           // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayDebuggerOverrideMode                 ActiveInGame;                                      // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayDebuggerOverrideMode                 ActiveInSimulate;                                  // 0x0015(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayDebuggerOverrideMode                 Hidden;                                            // 0x0016(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bOverrideSlotIdx : 1;                              // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayDebuggerInputConfig>   InputHandlers;                                     // 0x0020(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 ExtensionName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayDebuggerOverrideMode                 UseExtension;                                      // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayDebuggerInputConfig>   InputHandlers;                                     // 0x0018(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGameplayDebuggerCategoryConfig;
+DUMPER7_ASSERTS_FGameplayDebuggerExtensionConfig;
 
 // ScriptStruct GameplayDebugger.GameplayDebuggerPlayerData
 // 0x0018 (0x0018 - 0x0000)

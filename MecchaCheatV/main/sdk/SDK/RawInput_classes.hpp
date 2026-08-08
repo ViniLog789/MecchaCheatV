@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "RawInput_structs.hpp"
 #include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
-#include "RawInput_structs.hpp"
 
 
 SDK_NAMESPACE_START

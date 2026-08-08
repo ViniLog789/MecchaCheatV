@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C
-// 0x0028 (0x0770 - 0x0748)
+// 0x0030 (0x0778 - 0x0748)
 class ABP_FirstPersonPlayerController_C : public AUINavController
 {
 public:
@@ -25,10 +25,11 @@ public:
 	TArray<class UWidget*>                        AllWidgets;                                        // 0x0750(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	class UWBP_CentorInteract_C*                  Centor_Interact;                                   // 0x0760(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanCommunication;                                  // 0x0770(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplySettings();
-	void ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void SendToText(const class FString& MainText, int32 Index_0);
 	void AddMainWidgets();
 	void OnRootWidgetAdded();

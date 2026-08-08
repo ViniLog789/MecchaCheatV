@@ -10,15 +10,31 @@
 
 #include "Basic.hpp"
 
+#include "ST_OptionObject_structs.hpp"
+#include "UMG_structs.hpp"
 #include "HitMaterial_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "ENUM_SaveDataUpdateType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function BPF_Libraly.BPF_Libraly_C.SaveConfigs
+// 0x0060 (0x0060 - 0x0000)
+struct BPF_Libraly_C_SaveConfigs final
+{
+public:
+	class FName                                   Key;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_OptionObject                       Value;                                             // 0x0008(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USaveGame*                              CallFunc_LoadGameFromSlot_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_ConfigSaveGame_C*                   K2Node_DynamicCast_AsBP_Config_Save_Game;          // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPF_Libraly_C_SaveConfigs;
 
 // Function BPF_Libraly.BPF_Libraly_C.FullToHarfNumberString
 // 0x0120 (0x0120 - 0x0000)

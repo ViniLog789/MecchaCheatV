@@ -33,9 +33,9 @@ void ABP_FirstPersonPlayerController_C::ApplySettings()
 // Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerController_C::ReceiveTick(float DeltaSeconds)
+void ABP_FirstPersonPlayerController_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
 {
 	static class UFunction* Func = nullptr;
 
@@ -44,7 +44,7 @@ void ABP_FirstPersonPlayerController_C::ReceiveTick(float DeltaSeconds)
 
 	Params::BP_FirstPersonPlayerController_C_ReceiveTick Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

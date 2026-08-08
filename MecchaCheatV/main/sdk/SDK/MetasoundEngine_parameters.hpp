@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "AudioExtensions_structs.hpp"
 #include "MetasoundFrontend_structs.hpp"
 #include "MetasoundEngine_structs.hpp"
-#include "AudioExtensions_structs.hpp"
 
 
 SDK_NAMESPACE_START

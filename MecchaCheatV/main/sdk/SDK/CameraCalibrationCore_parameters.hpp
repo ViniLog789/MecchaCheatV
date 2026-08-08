@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CameraCalibrationCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CameraCalibrationCore_structs.hpp"
 
 
 SDK_NAMESPACE_START

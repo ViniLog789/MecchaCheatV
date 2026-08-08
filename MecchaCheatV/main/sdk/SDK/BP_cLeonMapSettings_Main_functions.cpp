@@ -16,57 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractEnd
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_cLeonMapSettings_Main_C::BPI_InteractEnd()
+void ABP_cLeonMapSettings_Main_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_cLeonMapSettings_Main_C", "BPI_InteractEnd");
+		Func = Class->GetFunction("BP_cLeonMapSettings_Main_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractStart(Local)
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  First_Person                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_cLeonMapSettings_Main_C::BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_cLeonMapSettings_Main_C", "BPI_InteractStart(Local)");
-
-	Params::BP_cLeonMapSettings_Main_C_BPI_InteractStart_Local_ Parms{};
-
-	Parms.First_Person = First_Person;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractStart(Server)
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  First_Person                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_cLeonMapSettings_Main_C::BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_cLeonMapSettings_Main_C", "BPI_InteractStart(Server)");
-
-	Params::BP_cLeonMapSettings_Main_C_BPI_InteractStart_Server_ Parms{};
-
-	Parms.First_Person = First_Person;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -95,15 +55,55 @@ void ABP_cLeonMapSettings_Main_C::IsChangeImage(bool* IsInteract, class FText* O
 }
 
 
-// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractStart(Server)
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  First_Person                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_cLeonMapSettings_Main_C::ReceiveBeginPlay()
+void ABP_cLeonMapSettings_Main_C::BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_cLeonMapSettings_Main_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_cLeonMapSettings_Main_C", "BPI_InteractStart(Server)");
+
+	Params::BP_cLeonMapSettings_Main_C_BPI_InteractStart_Server_ Parms{};
+
+	Parms.First_Person = First_Person;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractStart(Local)
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  First_Person                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_cLeonMapSettings_Main_C::BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_cLeonMapSettings_Main_C", "BPI_InteractStart(Local)");
+
+	Params::BP_cLeonMapSettings_Main_C_BPI_InteractStart_Local_ Parms{};
+
+	Parms.First_Person = First_Person;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_cLeonMapSettings_Main_C::BPI_InteractEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_cLeonMapSettings_Main_C", "BPI_InteractEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

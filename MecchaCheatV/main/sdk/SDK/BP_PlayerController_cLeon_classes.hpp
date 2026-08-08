@@ -16,53 +16,56 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PlayerController_cLeon.BP_PlayerController_cLeon_C
-// 0x0088 (0x07F8 - 0x0770)
+// 0x0088 (0x0800 - 0x0778)
 class ABP_PlayerController_cLeon_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
-	uint8                                         Pad_770[0x8];                                      // 0x0770(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class URedpointVoiceChatComponent*            RedpointVoiceChat;                                 // 0x0778(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class URuntimePaintRelayComponent*            RuntimePaintRelay;                                 // 0x0780(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWBP_cLeonMain_C*                       MainWidget;                                        // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CameraFadeValue;                                   // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCanPenteration;                                  // 0x0798(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_799[0x7];                                      // 0x0799(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool IsCanPenteration)> CanPenterationUpdate;                      // 0x07A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool Visibility)> NamePlateVisibilityChange;                       // 0x07B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsPlayMovie;                                       // 0x07C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WatchRankingVisibility;                            // 0x07C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GlobalNameplateVisibility;                         // 0x07C2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          YYEAN_Activate;                                    // 0x07C3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C4[0x4];                                      // 0x07C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_EEYAN_Arrow_C*                      EEYAN_Arrow;                                       // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CurrentSelectActor;                                // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(const class FString& Name_0)> eeyan;                               // 0x07D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UWBP_ChooseBody_C*                      ChooseBody;                                        // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanPenterationForce;                               // 0x07F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WidgetVisibileState;                               // 0x07F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_778[0x8];                                      // 0x0778(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class URedpointVoiceChatComponent*            RedpointVoiceChat;                                 // 0x0780(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class URuntimePaintRelayComponent*            RuntimePaintRelay;                                 // 0x0788(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWBP_cLeonMain_C*                       MainWidget;                                        // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CameraFadeValue;                                   // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCanPenteration;                                  // 0x07A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7A1[0x7];                                      // 0x07A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool IsCanPenteration)> CanPenterationUpdate;                      // 0x07A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool Visibility)> NamePlateVisibilityChange;                       // 0x07B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsPlayMovie;                                       // 0x07C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WatchRankingVisibility;                            // 0x07C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GlobalNameplateVisibility;                         // 0x07CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          YYEAN_Activate;                                    // 0x07CB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7CC[0x4];                                      // 0x07CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_EEYAN_Arrow_C*                      EEYAN_Arrow;                                       // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CurrentSelectActor;                                // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const class FString& Name_0)> eeyan;                               // 0x07E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWBP_ChooseBody_C*                      ChooseBody;                                        // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanPenterationForce;                               // 0x07F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WidgetVisibileState;                               // 0x07F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddBodyTypeSesttings();
-	void AddMainWidgets();
-	void ApplySettings();
-	void CameraReset();
-	void ChoseBodyClose();
-	void EEYAN_State(bool State);
-	void Finish();
-	void GetPawnCentorLocation(struct FVector* ReturnLocation);
-	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_3(const struct FKey& Key);
-	void InpActEvt_G_K2Node_InputKeyEvent_4(const struct FKey& Key);
-	void InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_1(const struct FKey& Key);
-	void InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_0(const struct FKey& Key);
-	void InpActEvt_Six_K2Node_InputKeyEvent_5(const struct FKey& Key);
-	void InpActEvt_Three_K2Node_InputKeyEvent_6(const struct FKey& Key);
-	void InpActEvt_U_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
-	class AActor* NearSurvivor_IgnoreSelf(const struct FVector& Location, const struct FVector& Direction, float* OutDotProduct);
-	void OnNamePlateVisibilityChange(bool Visibility);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
 	void TeleportMovie();
+	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ReceiveBeginPlay();
+	void OnNamePlateVisibilityChange(bool Visibility);
+	class AActor* NearSurvivor_IgnoreSelf(const struct FVector& Location, const struct FVector& Direction, float* OutDotProduct);
+	void InpActEvt_U_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
+	void InpActEvt_Three_K2Node_InputKeyEvent_8(const struct FKey& Key);
+	void InpActEvt_Six_K2Node_InputKeyEvent_7(const struct FKey& Key);
+	void InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	void InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_3(const struct FKey& Key);
+	void InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_4(const struct FKey& Key);
+	void InpActEvt_G_K2Node_InputKeyEvent_6(const struct FKey& Key);
+	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_5(const struct FKey& Key);
+	void hide();
+	void GetPawnCentorLocation(struct FVector* ReturnLocation);
+	void Finish();
+	void EEYAN_State(bool State);
+	void ChoseBodyClose();
+	void CameraReset();
+	void ApplySettings();
+	void AddMainWidgets();
+	void AddBodyTypeSesttings();
 
 public:
 	static class UClass* StaticClass()

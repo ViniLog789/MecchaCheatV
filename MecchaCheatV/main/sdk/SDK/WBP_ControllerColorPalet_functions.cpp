@@ -20,11 +20,12 @@ SDK_NAMESPACE_START
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FLinearColor&              DefaultColor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              HSV                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Metallic                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Roughness                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Emissive                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ControllerColorPalet_C::UpdateDefaultValue(const struct FLinearColor& DefaultColor, double Metallic, double Roughness, double Emissive)
+void UWBP_ControllerColorPalet_C::UpdateDefaultValue(const struct FLinearColor& DefaultColor, const struct FLinearColor& HSV, double Metallic, double Roughness, double Emissive)
 {
 	static class UFunction* Func = nullptr;
 
@@ -34,6 +35,7 @@ void UWBP_ControllerColorPalet_C::UpdateDefaultValue(const struct FLinearColor& 
 	Params::WBP_ControllerColorPalet_C_UpdateDefaultValue Parms{};
 
 	Parms.DefaultColor = std::move(DefaultColor);
+	Parms.HSV = std::move(HSV);
 	Parms.Metallic = Metallic;
 	Parms.Roughness = Roughness;
 	Parms.Emissive = Emissive;

@@ -711,6 +711,45 @@ public:
 };
 DUMPER7_ASSERTS_CustomAIController_GetHeadLocRot;
 
+// Function PenguinHotel.CustomFunctionLibraryNintendo.GetNintendoBpCurrentSettings
+// 0x0018 (0x0018 - 0x0000)
+struct CustomFunctionLibraryNintendo_GetNintendoBpCurrentSettings final
+{
+public:
+	bool                                          bFreeCommunication;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FNintendoRestrictionLevelSetting> RestrictionLevels;                               // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_GetNintendoBpCurrentSettings;
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.HasNintendoFreeCommunicationSetting
+// 0x0001 (0x0001 - 0x0000)
+struct CustomFunctionLibraryNintendo_HasNintendoFreeCommunicationSetting final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_HasNintendoFreeCommunicationSetting;
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoFreeCommunicationAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct CustomFunctionLibraryNintendo_IsNintendoFreeCommunicationAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_IsNintendoFreeCommunicationAvailable;
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.TryBeginNintendoFreeCommunication
+// 0x0002 (0x0002 - 0x0000)
+struct CustomFunctionLibraryNintendo_TryBeginNintendoFreeCommunication final
+{
+public:
+	bool                                          bShowUI;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_TryBeginNintendoFreeCommunication;
+
 // Function PenguinHotel.CustomProgramFunctionLibrary.ApplyTorqueForce
 // 0x0040 (0x0040 - 0x0000)
 struct CustomProgramFunctionLibrary_ApplyTorqueForce final
@@ -1184,6 +1223,20 @@ public:
 	TArray<class AActor*>                         TargetActroList;                                   // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MyGameModeBase_GetSeamlessTravelActorListBPF;
+
+// Function PenguinHotel.NintendoModelessKeyboardAsyncAction.OpenNintendoModelessKeyboard
+// 0x0038 (0x0038 - 0x0000)
+struct NintendoModelessKeyboardAsyncAction_OpenNintendoModelessKeyboard final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InitialText;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OkText;                                            // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBlockInputUntilClosed;                            // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNintendoModelessKeyboardAsyncAction*   ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NintendoModelessKeyboardAsyncAction_OpenNintendoModelessKeyboard;
 
 // Function PenguinHotel.OnlineBlueprints.ClientTravelURL
 // 0x0020 (0x0020 - 0x0000)

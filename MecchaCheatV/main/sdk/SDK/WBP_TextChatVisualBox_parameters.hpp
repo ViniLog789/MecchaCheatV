@@ -10,12 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.SendToMessage
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_TextChatVisualBox_C_SendToMessage final
+{
+public:
+	class FString                                 Message;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_SendToMessage;
 
 // Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ReciveText
 // 0x0018 (0x0018 - 0x0000)
@@ -35,6 +44,24 @@ public:
 	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_PreConstruct;
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.OnTextChanged_B5CE5F4F420F6A44D417FB8A3A340B74
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_TextChatVisualBox_C_OnTextChanged_B5CE5F4F420F6A44D417FB8A3A340B74 final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_OnTextChanged_B5CE5F4F420F6A44D417FB8A3A340B74;
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.OnConfirmed_B5CE5F4F420F6A44D417FB8A3A340B74
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_TextChatVisualBox_C_OnConfirmed_B5CE5F4F420F6A44D417FB8A3A340B74 final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_OnConfirmed_B5CE5F4F420F6A44D417FB8A3A340B74;
 
 // Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)

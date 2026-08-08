@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "EN_DamageType_structs.hpp"
 #include "BP_FirstPersonPlayerController_classes.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonPlayerController_LINK.BP_FirstPersonPlayerController_LINK_C
-// 0x0008 (0x0778 - 0x0770)
+// 0x0008 (0x0780 - 0x0778)
 class ABP_FirstPersonPlayerController_LINK_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
-	uint8                                         Pad_770[0x8];                                      // 0x0770(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_778[0x8];                                      // 0x0778(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void StanDamage(EN_StanType StanType);

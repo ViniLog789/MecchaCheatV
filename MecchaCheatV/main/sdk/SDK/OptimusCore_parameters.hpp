@@ -10,48 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "OptimusCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "OptimusCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function OptimusCore.OptimusDeformer.GetComponentBindings
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusDeformer_GetComponentBindings final
-{
-public:
-	TArray<class UOptimusComponentSourceBinding*> ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OptimusDeformer_GetComponentBindings;
-
-// Function OptimusCore.OptimusDeformer.GetPrimaryComponentBinding
-// 0x0008 (0x0008 - 0x0000)
-struct OptimusDeformer_GetPrimaryComponentBinding final
-{
-public:
-	class UOptimusComponentSourceBinding*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OptimusDeformer_GetPrimaryComponentBinding;
-
-// Function OptimusCore.OptimusDeformer.GetResources
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusDeformer_GetResources final
-{
-public:
-	TArray<class UOptimusResourceDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OptimusDeformer_GetResources;
-
-// Function OptimusCore.OptimusDeformer.GetVariables
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusDeformer_GetVariables final
-{
-public:
-	TArray<class UOptimusVariableDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_OptimusDeformer_GetVariables;
 
 // Function OptimusCore.OptimusNode.SetGraphPosition
 // 0x0018 (0x0018 - 0x0000)
@@ -99,6 +63,42 @@ public:
 	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OptimusNode_GetNodeName;
+
+// Function OptimusCore.OptimusDeformer.GetComponentBindings
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusDeformer_GetComponentBindings final
+{
+public:
+	TArray<class UOptimusComponentSourceBinding*> ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OptimusDeformer_GetComponentBindings;
+
+// Function OptimusCore.OptimusDeformer.GetPrimaryComponentBinding
+// 0x0008 (0x0008 - 0x0000)
+struct OptimusDeformer_GetPrimaryComponentBinding final
+{
+public:
+	class UOptimusComponentSourceBinding*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OptimusDeformer_GetPrimaryComponentBinding;
+
+// Function OptimusCore.OptimusDeformer.GetResources
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusDeformer_GetResources final
+{
+public:
+	TArray<class UOptimusResourceDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OptimusDeformer_GetResources;
+
+// Function OptimusCore.OptimusDeformer.GetVariables
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusDeformer_GetVariables final
+{
+public:
+	TArray<class UOptimusVariableDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_OptimusDeformer_GetVariables;
 
 // Function OptimusCore.OptimusDeformerInstance.EnqueueTriggerGraph
 // 0x000C (0x000C - 0x0000)

@@ -30,6 +30,20 @@ void UWBP_NavInputTextBlock_C::TextNumUpdate()
 }
 
 
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SettingsUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_NavInputTextBlock_C::SettingsUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "SettingsUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetInputText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -131,6 +145,20 @@ void UWBP_NavInputTextBlock_C::GetInputText(class FString* Text)
 
 	if (Text != nullptr)
 		*Text = std::move(Parms.Text);
+}
+
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.ForceNumberCommit
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_NavInputTextBlock_C::ForceNumberCommit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "ForceNumberCommit");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

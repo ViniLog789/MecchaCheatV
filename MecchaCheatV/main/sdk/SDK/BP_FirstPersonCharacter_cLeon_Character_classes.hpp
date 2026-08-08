@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
-#include "EN_InputBlockDeviceType_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "ST_ItemCoreDataArray_structs.hpp"
-#include "BP_FirstPersonCharacter_Main_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UINavigation_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
 #include "Mover_structs.hpp"
+#include "BP_FirstPersonCharacter_Main_classes.hpp"
+#include "SlateCore_structs.hpp"
+#include "EN_InputBlockDeviceType_structs.hpp"
+#include "UINavigation_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C
-// 0x01C0 (0x0D00 - 0x0B40)
+// 0x01D0 (0x0D10 - 0x0B40)
 class ABP_FirstPersonCharacter_cLeon_Character_C : public ABP_FirstPersonCharacter_Main_C
 {
 public:
@@ -93,6 +93,7 @@ public:
 	class UUINavPCComponent*                      UINavComp;                                         // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         BrushEmissive;                                     // 0x0CF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           LastHSV;                                           // 0x0CF4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void MEChange();

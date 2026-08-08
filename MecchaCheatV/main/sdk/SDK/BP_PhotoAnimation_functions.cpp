@@ -249,9 +249,9 @@ void ABP_PhotoAnimation_C::InteractItem()
 // Function BP_PhotoAnimation.BP_PhotoAnimation_C.GetParentCharacter
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PhotoAnimation_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstPersonCharacter)
+void ABP_PhotoAnimation_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter)
 {
 	static class UFunction* Func = nullptr;
 
@@ -262,8 +262,8 @@ void ABP_PhotoAnimation_C::GetParentCharacter(class ABP_FirstPersonCharacter_Mai
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (FirstPersonCharacter != nullptr)
-		*FirstPersonCharacter = Parms.FirstPersonCharacter;
+	if (FirstpersonCharacter != nullptr)
+		*FirstpersonCharacter = Parms.FirstpersonCharacter;
 }
 
 

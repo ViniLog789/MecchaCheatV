@@ -11,148 +11,30 @@
 #include "Basic.hpp"
 
 #include "ST_cLeonMapData_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature final
-{
-public:
-	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature final
-{
-public:
-	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature final
-{
-public:
-	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_17_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_17_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_17_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_15_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_15_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_15_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_16_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_16_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_16_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_6_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_6_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_6_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.GetInitialFocusComponent
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_cLeonGameSettings_C_GetInitialFocusComponent final
-{
-public:
-	class UUINavComponent*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_GetInitialFocusComponent;
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStateChange
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_cLeonGameSettings_C_RandomStateChange final
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMapMain
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_cLeonGameSettings_C_SelectMapMain final
 {
 public:
 	class UWBP_MapContentsWithRandom_C*           SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          RandomState;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_cLeonMapData                       MapData;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_RandomStateChange;
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_SelectMapMain;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMap
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_cLeonGameSettings_C_SelectMap final
+{
+public:
+	class UWBP_MapContentsWithRandom_C*           SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FST_cLeonMapData                       MapData;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_SelectMap;
 
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStructUpdate
 // 0x00B8 (0x00B8 - 0x0000)
@@ -175,25 +57,133 @@ public:
 };
 DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_RandomStructUpdate;
 
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMap
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_cLeonGameSettings_C_SelectMap final
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStateChange
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_RandomStateChange final
 {
 public:
 	class UWBP_MapContentsWithRandom_C*           SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FST_cLeonMapData                       MapData;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          RandomState;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_SelectMap;
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_RandomStateChange;
 
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMapMain
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_cLeonGameSettings_C_SelectMapMain final
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.GetInitialFocusComponent
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_GetInitialFocusComponent final
 {
 public:
-	class UWBP_MapContentsWithRandom_C*           SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FST_cLeonMapData                       MapData;                                           // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class UUINavComponent*                        ReturnValue_GetInitialFocusComponent;              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_SelectMapMain;
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_GetInitialFocusComponent;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_30_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_30_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_30_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_23_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_23_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_23_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_22_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_22_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_22_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_GameTime_K2Node_ComponentBoundEvent_27_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_GameTime_K2Node_ComponentBoundEvent_27_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_GameTime_K2Node_ComponentBoundEvent_27_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_29_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_29_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_29_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_25_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_25_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_25_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_24_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_24_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_24_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_26_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_26_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_26_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_28_TextChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_28_TextChanged__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_28_TextChanged__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature;
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

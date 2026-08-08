@@ -16,455 +16,45 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature(bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature(bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature(bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_4_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_17_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_17_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_17_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_17_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_15_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_15_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_15_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_15_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_16_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_16_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_16_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_16_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_6_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_6_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_6_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_6_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_GameTime_K2Node_ComponentBoundEvent_1_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature");
-
-	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NavInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_14_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_CanShowHunterWatchRanking_K2Node_ComponentBoundEvent_12_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_CanShowHunterWatchRanking_K2Node_ComponentBoundEvent_12_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_CanShowHunterWatchRanking_K2Node_ComponentBoundEvent_12_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterHorror_K2Node_ComponentBoundEvent_8_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterHorror_K2Node_ComponentBoundEvent_8_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterHorror_K2Node_ComponentBoundEvent_8_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMonochrome_K2Node_ComponentBoundEvent_7_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMonochrome_K2Node_ComponentBoundEvent_7_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMonochrome_K2Node_ComponentBoundEvent_7_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMosaic_K2Node_ComponentBoundEvent_9_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMosaic_K2Node_ComponentBoundEvent_9_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMosaic_K2Node_ComponentBoundEvent_9_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_GameMode_K2Node_ComponentBoundEvent_5_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_GameMode_K2Node_ComponentBoundEvent_5_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_GameMode_K2Node_ComponentBoundEvent_5_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_LimitBullet_K2Node_ComponentBoundEvent_13_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_LimitBullet_K2Node_ComponentBoundEvent_13_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_LimitBullet_K2Node_ComponentBoundEvent_13_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_1_K2Node_ComponentBoundEvent_11_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_1_K2Node_ComponentBoundEvent_11_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_1_K2Node_ComponentBoundEvent_11_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_K2Node_ComponentBoundEvent_10_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_K2Node_ComponentBoundEvent_10_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_K2Node_ComponentBoundEvent_10_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_cLeonGameSettings_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.GetInitialFocusComponent
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUINavComponent*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UUINavComponent* UWBP_cLeonGameSettings_C::GetInitialFocusComponent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "GetInitialFocusComponent");
-
-	Params::WBP_cLeonGameSettings_C_GetInitialFocusComponent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStateChange
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMapMain
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    RandomState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_cLeonGameSettings_C::RandomStateChange(class UWBP_MapContentsWithRandom_C* SelfWidget, bool RandomState)
+void UWBP_cLeonGameSettings_C::SelectMapMain(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& MapData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "RandomStateChange");
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "SelectMapMain");
 
-	Params::WBP_cLeonGameSettings_C_RandomStateChange Parms{};
+	Params::WBP_cLeonGameSettings_C_SelectMapMain Parms{};
 
 	Parms.SelfWidget = SelfWidget;
-	Parms.RandomState = RandomState;
+	Parms.MapData = std::move(MapData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMap
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& MapData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "SelectMap");
+
+	Params::WBP_cLeonGameSettings_C_SelectMap Parms{};
+
+	Parms.SelfWidget = SelfWidget;
+	Parms.MapData = std::move(MapData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -496,47 +86,439 @@ void UWBP_cLeonGameSettings_C::RandomStructUpdate(const struct FST_cLeonMapData&
 }
 
 
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMap
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.RandomStateChange
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    RandomState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_cLeonGameSettings_C::SelectMap(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& MapData)
+void UWBP_cLeonGameSettings_C::RandomStateChange(class UWBP_MapContentsWithRandom_C* SelfWidget, bool RandomState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "SelectMap");
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "RandomStateChange");
 
-	Params::WBP_cLeonGameSettings_C_SelectMap Parms{};
+	Params::WBP_cLeonGameSettings_C_RandomStateChange Parms{};
 
 	Parms.SelfWidget = SelfWidget;
-	Parms.MapData = std::move(MapData);
+	Parms.RandomState = RandomState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.SelectMapMain
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.GetInitialFocusComponent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWBP_MapContentsWithRandom_C*     SelfWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// class UUINavComponent*                  ReturnValue_GetInitialFocusComponent                   (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_cLeonGameSettings_C::SelectMapMain(class UWBP_MapContentsWithRandom_C* SelfWidget, const struct FST_cLeonMapData& MapData)
+class UUINavComponent* UWBP_cLeonGameSettings_C::GetInitialFocusComponent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "SelectMapMain");
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "GetInitialFocusComponent");
 
-	Params::WBP_cLeonGameSettings_C_SelectMapMain Parms{};
-
-	Parms.SelfWidget = SelfWidget;
-	Parms.MapData = std::move(MapData);
+	Params::WBP_cLeonGameSettings_C_GetInitialFocusComponent Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_30_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_30_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_30_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_LimitBullet_K2Node_ComponentBoundEvent_30_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_23_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_23_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_23_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterWait_K2Node_ComponentBoundEvent_23_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_22_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_22_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_22_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_HunterNum_K2Node_ComponentBoundEvent_22_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_GameTime_K2Node_ComponentBoundEvent_27_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_GameTime_K2Node_ComponentBoundEvent_27_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_GameTime_K2Node_ComponentBoundEvent_27_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_GameTime_K2Node_ComponentBoundEvent_27_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_29_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_29_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_29_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ForceProvocationTime_K2Node_ComponentBoundEvent_29_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_25_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_25_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_25_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenSearch_K2Node_ComponentBoundEvent_25_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_24_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_24_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_24_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenLook_K2Node_ComponentBoundEvent_24_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_26_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_26_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_26_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_ChickenAnswer_K2Node_ComponentBoundEvent_26_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_28_TextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_28_TextChanged__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_28_TextChanged__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_NumberOnlyInputTextBlock_CheckAnswersTime_K2Node_ComponentBoundEvent_28_TextChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_K2Node_ComponentBoundEvent_10_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_K2Node_ComponentBoundEvent_10_OnValueChangedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_K2Node_ComponentBoundEvent_10_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_1_K2Node_ComponentBoundEvent_11_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_1_K2Node_ComponentBoundEvent_11_OnValueChangedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_MapSelect_1_K2Node_ComponentBoundEvent_11_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_LimitBullet_K2Node_ComponentBoundEvent_13_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_LimitBullet_K2Node_ComponentBoundEvent_13_OnValueChangedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_LimitBullet_K2Node_ComponentBoundEvent_13_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_GameMode_K2Node_ComponentBoundEvent_5_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_GameMode_K2Node_ComponentBoundEvent_5_OnValueChangedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_GameMode_K2Node_ComponentBoundEvent_5_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMosaic_K2Node_ComponentBoundEvent_9_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMosaic_K2Node_ComponentBoundEvent_9_OnValueChangedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMosaic_K2Node_ComponentBoundEvent_9_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMonochrome_K2Node_ComponentBoundEvent_7_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMonochrome_K2Node_ComponentBoundEvent_7_OnValueChangedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterMonochrome_K2Node_ComponentBoundEvent_7_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterHorror_K2Node_ComponentBoundEvent_8_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterHorror_K2Node_ComponentBoundEvent_8_OnValueChangedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_FilterHorror_K2Node_ComponentBoundEvent_8_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_CanShowHunterWatchRanking_K2Node_ComponentBoundEvent_12_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_CanShowHunterWatchRanking_K2Node_ComponentBoundEvent_12_OnValueChangedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_NavOptionBox_CanShowHunterWatchRanking_K2Node_ComponentBoundEvent_12_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMosaic_K2Node_ComponentBoundEvent_18_ChangeValue__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterMonochrome_K2Node_ComponentBoundEvent_19_ChangeValue__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_WBP_BoolSwitcher_FilterHorror_K2Node_ComponentBoundEvent_20_ChangeValue__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

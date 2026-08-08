@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EnhancedInput_structs.hpp"
-#include "Mover_structs.hpp"
 #include "EN_InputBlockDeviceType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Mover_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "UINavigation_structs.hpp"
 #include "InputCore_structs.hpp"
 
@@ -609,7 +609,7 @@ public:
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_Zoom;
 
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.PaintViewLookUpdate
-// 0x0128 (0x0128 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct BP_FirstPersonCharacter_cLeon_Character_C_PaintViewLookUpdate final
 {
 public:
@@ -629,10 +629,13 @@ public:
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_5; // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      CallFunc_GetBoundActionValue_ReturnValue_6;        // 0x00D8(0x0020)(NoDestructor)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_6; // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputActionValue                      CallFunc_GetBoundActionValue_ReturnValue_7;        // 0x0100(0x0020)(NoDestructor)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_7; // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      CallFunc_GetBoundActionValue_ReturnValue_7;        // 0x00F8(0x0020)(NoDestructor)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_6; // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_7; // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x011A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputActionValue                      CallFunc_GetBoundActionValue_ReturnValue_8;        // 0x0120(0x0020)(NoDestructor)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_8; // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_PaintViewLookUpdate;
 

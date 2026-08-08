@@ -89,9 +89,9 @@ public:
 	void Construct();
 	void ColorPickKeep(bool State, bool Commit);
 	void ColorPick();
-	void ColorChanged(const struct FLinearColor& NewColor);
+	void ColorChanged(const struct FLinearColor& NewColor, const struct FLinearColor& NewColorHSV);
 	void BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature();
-	void BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature(const struct FLinearColor& Color, double Metallic, double Roughness, double Emissive);
+	void BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature(const struct FLinearColor& Color, const struct FLinearColor& HSV, double Metallic, double Roughness, double Emissive);
 	void AddSliderValue(double Value);
 	void AddCursorPosition(const struct FVector2D& AddValue);
 

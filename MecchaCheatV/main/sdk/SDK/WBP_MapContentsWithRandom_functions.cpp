@@ -70,6 +70,29 @@ void UWBP_MapContentsWithRandom_C::ForceUpdate()
 }
 
 
+// Function WBP_MapContentsWithRandom.WBP_MapContentsWithRandom_C.DoCustomNavigation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_MapContentsWithRandom_C::DoCustomNavigation(EUINavigation Navigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MapContentsWithRandom_C", "DoCustomNavigation");
+
+	Params::WBP_MapContentsWithRandom_C_DoCustomNavigation Parms{};
+
+	Parms.Navigation = Navigation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_MapContentsWithRandom.WBP_MapContentsWithRandom_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

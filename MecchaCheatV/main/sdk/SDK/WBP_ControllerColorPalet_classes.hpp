@@ -34,10 +34,10 @@ public:
 	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_ControllerGradientSlider_C*        SelectSlider;                                      // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           DefaultColor;                                      // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(const struct FLinearColor& Color, double Metallic, double Roughness, double Emissive)> UpdateParamaterValues; // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FLinearColor& Color, const struct FLinearColor& HSV, double Metallic, double Roughness, double Emissive)> UpdateParamaterValues; // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateDefaultValue(const struct FLinearColor& DefaultColor, double Metallic, double Roughness, double Emissive);
+	void UpdateDefaultValue(const struct FLinearColor& DefaultColor, const struct FLinearColor& HSV, double Metallic, double Roughness, double Emissive);
 	void SelectSlide(int32 AddValue);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void BndEvt__WBP_ControllerColorPalet_WBP_ControllerGradientSlider_V_K2Node_ComponentBoundEvent_2_UpdateValue__DelegateSignature(const struct FLinearColor& ChangedColor, bool UpdateCall);

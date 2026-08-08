@@ -18,7 +18,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MapContentsWithRandom.WBP_MapContentsWithRandom_C
-// 0x0078 (0x03B8 - 0x0340)
+// 0x0090 (0x03D0 - 0x0340)
 class UWBP_MapContentsWithRandom_C final : public UUserWidget
 {
 public:
@@ -31,11 +31,15 @@ public:
 	bool                                          RandomState;                                       // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_3A1[0x3];                                      // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            Text_Color;                                        // 0x03A4(0x0014)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class UWidget*                                DownTarget;                                        // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                UpTarget;                                          // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          RandomButtonVisibility;                            // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SelectUpdate(bool State);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ForceUpdate();
+	class UWidget* DoCustomNavigation(EUINavigation Navigation);
 	void Construct();
 	void BndEvt__WBP_MapContentsWithRandom_WBP_RandomToggle_K2Node_ComponentBoundEvent_0_UpdateRandomState__DelegateSignature(bool NewState);
 	void BndEvt__WBP_MapContentsWithRandom_WBP_MapContents_K2Node_ComponentBoundEvent_1_SelectMap__DelegateSignature(class UWBP_MapContents_C* SelfWidget, const struct FST_cLeonMapData& MapData);

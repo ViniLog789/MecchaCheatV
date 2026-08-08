@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ComputeFramework_classes.hpp"
-#include "HairStrandsDeformer_structs.hpp"
 #include "OptimusCore_classes.hpp"
+#include "HairStrandsDeformer_structs.hpp"
+#include "ComputeFramework_classes.hpp"
 
 
 SDK_NAMESPACE_START

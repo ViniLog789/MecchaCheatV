@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RigLogicModule_structs.hpp"
 #include "Engine_classes.hpp"
+#include "RigLogicModule_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 

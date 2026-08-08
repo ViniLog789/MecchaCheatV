@@ -30,6 +30,7 @@ public:
 	TArray<struct FST_KeyImageComboBase>          KeyInput;                                          // 0x0360(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	TArray<struct FST_KeyImageComboBase>          ControllerInput;                                   // 0x0370(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	bool                                          IsController;                                      // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DontChangeOnSwitch;                                // 0x0381(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateInputDeviceAll(EInputType InputType);

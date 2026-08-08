@@ -281,6 +281,16 @@ public:
 };
 DUMPER7_ASSERTS_FVirtualKeyboardOptions;
 
+// ScriptStruct Slate.Anchors
+// 0x0020 (0x0020 - 0x0000)
+struct FAnchors final
+{
+public:
+	struct FVector2D                              Minimum;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Maximum;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnchors;
+
 // ScriptStruct Slate.InputChord
 // 0x0020 (0x0020 - 0x0000)
 struct FInputChord final
@@ -294,16 +304,6 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FInputChord;
-
-// ScriptStruct Slate.Anchors
-// 0x0020 (0x0020 - 0x0000)
-struct FAnchors final
-{
-public:
-	struct FVector2D                              Minimum;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Maximum;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAnchors;
 
 // ScriptStruct Slate.CharRange
 // 0x0004 (0x0004 - 0x0000)

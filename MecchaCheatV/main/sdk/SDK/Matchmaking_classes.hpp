@@ -45,6 +45,29 @@ public:
 };
 DUMPER7_ASSERTS_ADedicatedServerMatchmakingBeaconClient;
 
+// Class Matchmaking.DedicatedServerMatchmakingBeaconHostObject
+// 0x0008 (0x02D8 - 0x02D0)
+class ADedicatedServerMatchmakingBeaconHostObject final : public AOnlineBeaconHostObject
+{
+public:
+	class ADedicatedServerMatchmakingBeaconHost*  HostOwner;                                         // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DedicatedServerMatchmakingBeaconHostObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DedicatedServerMatchmakingBeaconHostObject")
+	}
+	static class ADedicatedServerMatchmakingBeaconHostObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ADedicatedServerMatchmakingBeaconHostObject>();
+	}
+};
+DUMPER7_ASSERTS_ADedicatedServerMatchmakingBeaconHostObject;
+
 // Class Matchmaking.DedicatedServerMatchmakingBeaconHost
 // 0x0100 (0x03A8 - 0x02A8)
 class ADedicatedServerMatchmakingBeaconHost final : public AActor
@@ -83,28 +106,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ADedicatedServerMatchmakingBeaconHost;
-
-// Class Matchmaking.DedicatedServerMatchmakingBeaconHostObject
-// 0x0008 (0x02D8 - 0x02D0)
-class ADedicatedServerMatchmakingBeaconHostObject final : public AOnlineBeaconHostObject
-{
-public:
-	class ADedicatedServerMatchmakingBeaconHost*  HostOwner;                                         // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DedicatedServerMatchmakingBeaconHostObject")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DedicatedServerMatchmakingBeaconHostObject")
-	}
-	static class ADedicatedServerMatchmakingBeaconHostObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ADedicatedServerMatchmakingBeaconHostObject>();
-	}
-};
-DUMPER7_ASSERTS_ADedicatedServerMatchmakingBeaconHostObject;
 
 SDK_NAMESPACE_END

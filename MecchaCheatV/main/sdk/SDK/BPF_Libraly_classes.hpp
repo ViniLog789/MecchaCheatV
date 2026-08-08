@@ -23,6 +23,7 @@ SDK_NAMESPACE_START
 class UBPF_Libraly_C final : public UBlueprintFunctionLibrary
 {
 public:
+	static void SaveConfigs(class FName Key, const struct FST_OptionObject& Value, class UObject* __WorldContext);
 	static void FullToHarfNumberString(const class FString& String, class UObject* __WorldContext, class FString* Rezult);
 	static void GetCollisionSound(EHitMaterial MaterialType, class UObject* __WorldContext, class USoundBase** Sound);
 	static void PlaySoundAndReportNoise(class USoundBase* Sound, const struct FVector& Location, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, const class AActor* OwningActor, float MaxRange, class FName Tag, class AActor* Instigator, bool DebugDraw, class UObject* __WorldContext);

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EnhancedInput_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "DeveloperSettings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_structs.hpp"

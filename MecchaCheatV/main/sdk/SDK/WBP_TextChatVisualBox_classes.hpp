@@ -32,8 +32,12 @@ public:
 
 public:
 	void UpdateBorderState();
+	void SendToMessage(const class FString& Message);
 	void ReciveText(const class FString& MainString, int32 Index_0);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void OnTextChanged_B5CE5F4F420F6A44D417FB8A3A340B74(const class FString& Text);
+	void OnConfirmed_B5CE5F4F420F6A44D417FB8A3A340B74(const class FString& Text);
+	void OnCanceled_B5CE5F4F420F6A44D417FB8A3A340B74();
 	void InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void AddText(const class FString& TargetText, int32 MessageType);

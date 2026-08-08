@@ -39,14 +39,17 @@ public:
 	class FText                                   DefaultText;                                       // 0x0968(0x0010)(Edit, BlueprintVisible)
 	class FText                                   EmptyDefaultText;                                  // 0x0978(0x0010)(Edit, BlueprintVisible)
 	EVirtualKeyboardType                          Keyboard_Type;                                     // 0x0988(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          NoVirtualKeyBoardIsCS;                             // 0x0989(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void TextNumUpdate();
+	void SettingsUpdate();
 	void SetInputText(const class FText& InText);
 	void SetEditableText(const class FText& InText);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	class FString GetNumerText(const class FText& InText);
 	void GetInputText(class FString* Text);
+	void ForceNumberCommit();
 	void Construct();
 	void BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text);

@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
 #include "PenguinHotel_classes.hpp"
 #include "ENUM_HandType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C
-// 0x0078 (0x03C0 - 0x0348)
+// 0x0088 (0x03D0 - 0x0348)
 class ABP_FirstPersonGameMode_V2_C : public AMyGameModeBase
 {
 public:
@@ -34,6 +34,7 @@ public:
 	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAttenuation*                      VoiceChatSoundAtt;                                 // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(int32 Current, int32 max_0)> MaxPlayerChange;                      // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class UInputMappingContext*>           UseMappingContexts;                                // 0x03C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void UpdateSpawnedControllers();

@@ -470,6 +470,33 @@ public:
 };
 DUMPER7_ASSERTS_ACustomAIController;
 
+// Class PenguinHotel.CustomFunctionLibraryNintendo
+// 0x0000 (0x0028 - 0x0028)
+class UCustomFunctionLibraryNintendo final : public UBlueprintFunctionLibrary
+{
+public:
+	static void EndNintendoFreeCommunication();
+	static void GetNintendoBpCurrentSettings(bool* bFreeCommunication, TArray<struct FNintendoRestrictionLevelSetting>* RestrictionLevels);
+	static bool HasNintendoFreeCommunicationSetting();
+	static bool IsNintendoFreeCommunicationAvailable();
+	static bool TryBeginNintendoFreeCommunication(bool bShowUI);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CustomFunctionLibraryNintendo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CustomFunctionLibraryNintendo")
+	}
+	static class UCustomFunctionLibraryNintendo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCustomFunctionLibraryNintendo>();
+	}
+};
+DUMPER7_ASSERTS_UCustomFunctionLibraryNintendo;
+
 // Class PenguinHotel.CustomProgramFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UCustomProgramFunctionLibrary final : public UBlueprintFunctionLibrary
@@ -829,6 +856,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMyLevelLoadingFunctionLibrary;
+
+// Class PenguinHotel.NintendoModelessKeyboardAsyncAction
+// 0x0070 (0x00A0 - 0x0030)
+class UNintendoModelessKeyboardAsyncAction final : public UBlueprintAsyncActionBase
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class FString& Text)> OnConfirmed;                           // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& Text)> OnTextChanged;                         // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnCanceled;                                        // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_68[0x38];                                      // 0x0068(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UNintendoModelessKeyboardAsyncAction* OpenNintendoModelessKeyboard(class UObject* WorldContextObject, const class FString& InitialText, const class FString& OkText, bool bBlockInputUntilClosed);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NintendoModelessKeyboardAsyncAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NintendoModelessKeyboardAsyncAction")
+	}
+	static class UNintendoModelessKeyboardAsyncAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNintendoModelessKeyboardAsyncAction>();
+	}
+};
+DUMPER7_ASSERTS_UNintendoModelessKeyboardAsyncAction;
 
 // Class PenguinHotel.OnlineBlueprints
 // 0x0000 (0x0028 - 0x0028)

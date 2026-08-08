@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EN_ThrowState_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "EN_ThrowState_structs.hpp"
 #include "AttackType_structs.hpp"
 
 

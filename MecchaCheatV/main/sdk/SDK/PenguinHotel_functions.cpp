@@ -2251,6 +2251,133 @@ void ACustomAIController::GetHeadLocRot(struct FVector* OutLocation, struct FRot
 }
 
 
+// Function PenguinHotel.CustomFunctionLibraryNintendo.EndNintendoFreeCommunication
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UCustomFunctionLibraryNintendo::EndNintendoFreeCommunication()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "EndNintendoFreeCommunication");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.GetNintendoBpCurrentSettings
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool*                                   bFreeCommunication                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FNintendoRestrictionLevelSetting>*RestrictionLevels                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UCustomFunctionLibraryNintendo::GetNintendoBpCurrentSettings(bool* bFreeCommunication, TArray<struct FNintendoRestrictionLevelSetting>* RestrictionLevels)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "GetNintendoBpCurrentSettings");
+
+	Params::CustomFunctionLibraryNintendo_GetNintendoBpCurrentSettings Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bFreeCommunication != nullptr)
+		*bFreeCommunication = Parms.bFreeCommunication;
+
+	if (RestrictionLevels != nullptr)
+		*RestrictionLevels = std::move(Parms.RestrictionLevels);
+}
+
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.HasNintendoFreeCommunicationSetting
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomFunctionLibraryNintendo::HasNintendoFreeCommunicationSetting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "HasNintendoFreeCommunicationSetting");
+
+	Params::CustomFunctionLibraryNintendo_HasNintendoFreeCommunicationSetting Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoFreeCommunicationAvailable
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomFunctionLibraryNintendo::IsNintendoFreeCommunicationAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "IsNintendoFreeCommunicationAvailable");
+
+	Params::CustomFunctionLibraryNintendo_IsNintendoFreeCommunicationAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.TryBeginNintendoFreeCommunication
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bShowUI                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomFunctionLibraryNintendo::TryBeginNintendoFreeCommunication(bool bShowUI)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "TryBeginNintendoFreeCommunication");
+
+	Params::CustomFunctionLibraryNintendo_TryBeginNintendoFreeCommunication Parms{};
+
+	Parms.bShowUI = bShowUI;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PenguinHotel.CustomProgramFunctionLibrary.ApplyTorqueForce
 // (Final, Native, Static, Private, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -3570,6 +3697,40 @@ void AMyGameModeBase::GetSeamlessTravelActorListBPF(bool bToTransition, TArray<c
 
 	if (ActorList != nullptr)
 		*ActorList = std::move(Parms.ActorList);
+}
+
+
+// Function PenguinHotel.NintendoModelessKeyboardAsyncAction.OpenNintendoModelessKeyboard
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InitialText                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    OkText                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bBlockInputUntilClosed                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNintendoModelessKeyboardAsyncAction*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNintendoModelessKeyboardAsyncAction* UNintendoModelessKeyboardAsyncAction::OpenNintendoModelessKeyboard(class UObject* WorldContextObject, const class FString& InitialText, const class FString& OkText, bool bBlockInputUntilClosed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NintendoModelessKeyboardAsyncAction", "OpenNintendoModelessKeyboard");
+
+	Params::NintendoModelessKeyboardAsyncAction_OpenNintendoModelessKeyboard Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.InitialText = std::move(InitialText);
+	Parms.OkText = std::move(OkText);
+	Parms.bBlockInputUntilClosed = bBlockInputUntilClosed;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

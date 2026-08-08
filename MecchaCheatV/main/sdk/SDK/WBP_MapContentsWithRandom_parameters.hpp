@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "ST_cLeonMapData_structs.hpp"
 
 
@@ -33,6 +34,25 @@ public:
 	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_MapContentsWithRandom_C_PreConstruct;
+
+// Function WBP_MapContentsWithRandom.WBP_MapContentsWithRandom_C.DoCustomNavigation
+// 0x0048 (0x0048 - 0x0000)
+struct WBP_MapContentsWithRandom_C_DoCustomNavigation final
+{
+public:
+	EUINavigation                                 Navigation;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EUINavigation                                 Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                Temp_object_Variable;                              // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                Temp_object_Variable_1;                            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                Temp_object_Variable_2;                            // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                Temp_object_Variable_3;                            // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                Temp_object_Variable_4;                            // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_MapContentsWithRandom_C_DoCustomNavigation;
 
 // Function WBP_MapContentsWithRandom.WBP_MapContentsWithRandom_C.BndEvt__WBP_MapContentsWithRandom_WBP_RandomToggle_K2Node_ComponentBoundEvent_0_UpdateRandomState__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
