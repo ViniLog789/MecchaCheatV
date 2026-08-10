@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ST_OptionObject_structs.hpp"
 #include "EN_InputJudgementType_structs.hpp"
+#include "ST_OptionObject_structs.hpp"
 #include "Engine_classes.hpp"
 
 

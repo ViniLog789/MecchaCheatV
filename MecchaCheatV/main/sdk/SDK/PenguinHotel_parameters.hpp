@@ -1058,6 +1058,254 @@ public:
 };
 DUMPER7_ASSERTS_DynamicCapsulePhysicsDrivenLibrary_CanSetCapsuleHalfHeight;
 
+// Function PenguinHotel.DynamicCrouchMoverComponent.CrouchWithHalfHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_CrouchWithHalfHeight final
+{
+public:
+	float                                         NewCrouchedHalfHeight;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_CrouchWithHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.MulticastSetCrouchState
+// 0x000C (0x000C - 0x0000)
+struct DynamicCrouchMoverComponent_MulticastSetCrouchState final
+{
+public:
+	bool                                          bNewCrouching;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NewDesiredHalfHeight;                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewCrouchedHalfHeight;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_MulticastSetCrouchState;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.MulticastSetPrimaryVisualComponentRelativeHeight
+// 0x0008 (0x0008 - 0x0000)
+struct DynamicCrouchMoverComponent_MulticastSetPrimaryVisualComponentRelativeHeight final
+{
+public:
+	bool                                          bNewHasOverride;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NewRelativeHeight;                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_MulticastSetPrimaryVisualComponentRelativeHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.OnMoverPostSimulationTick
+// 0x0010 (0x0010 - 0x0000)
+struct DynamicCrouchMoverComponent_OnMoverPostSimulationTick final
+{
+public:
+	struct FMoverTimeStep                         TimeStep;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_OnMoverPostSimulationTick;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.ServerSetCrouchState
+// 0x000C (0x000C - 0x0000)
+struct DynamicCrouchMoverComponent_ServerSetCrouchState final
+{
+public:
+	bool                                          bNewCrouching;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NewDesiredHalfHeight;                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewCrouchedHalfHeight;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_ServerSetCrouchState;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.ServerSetPrimaryVisualComponentRelativeHeight
+// 0x0008 (0x0008 - 0x0000)
+struct DynamicCrouchMoverComponent_ServerSetPrimaryVisualComponentRelativeHeight final
+{
+public:
+	bool                                          bNewHasOverride;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NewRelativeHeight;                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_ServerSetPrimaryVisualComponentRelativeHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetCrouchedCapsuleHalfHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_SetCrouchedCapsuleHalfHeight final
+{
+public:
+	float                                         NewHalfHeight;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_SetCrouchedCapsuleHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetCrouching
+// 0x0001 (0x0001 - 0x0000)
+struct DynamicCrouchMoverComponent_SetCrouching final
+{
+public:
+	bool                                          bNewCrouching;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_SetCrouching;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetDesiredCapsuleHalfHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_SetDesiredCapsuleHalfHeight final
+{
+public:
+	float                                         NewHalfHeight;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_SetDesiredCapsuleHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetPrimaryVisualComponentRelativeHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_SetPrimaryVisualComponentRelativeHeight final
+{
+public:
+	float                                         NewRelativeHeight;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_SetPrimaryVisualComponentRelativeHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetStandingCapsuleHalfHeight
+// 0x0008 (0x0008 - 0x0000)
+struct DynamicCrouchMoverComponent_SetStandingCapsuleHalfHeight final
+{
+public:
+	float                                         NewHalfHeight;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_SetStandingCapsuleHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.CanSetCapsuleHalfHeight
+// 0x0008 (0x0008 - 0x0000)
+struct DynamicCrouchMoverComponent_CanSetCapsuleHalfHeight final
+{
+public:
+	float                                         NewHalfHeight;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_CanSetCapsuleHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.CanStandUp
+// 0x0001 (0x0001 - 0x0000)
+struct DynamicCrouchMoverComponent_CanStandUp final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_CanStandUp;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetCrouchedCapsuleHalfHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_GetCrouchedCapsuleHalfHeight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetCrouchedCapsuleHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetCurrentCapsuleHalfHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_GetCurrentCapsuleHalfHeight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetCurrentCapsuleHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetDesiredCapsuleHalfHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_GetDesiredCapsuleHalfHeight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetDesiredCapsuleHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetForwardVector
+// 0x0018 (0x0018 - 0x0000)
+struct DynamicCrouchMoverComponent_GetForwardVector final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetForwardVector;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetForwardVelocity
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_GetForwardVelocity final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetForwardVelocity;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetOwnerRelativeVelocity
+// 0x0018 (0x0018 - 0x0000)
+struct DynamicCrouchMoverComponent_GetOwnerRelativeVelocity final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetOwnerRelativeVelocity;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetPrimaryVisualComponentRelativeHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_GetPrimaryVisualComponentRelativeHeight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetPrimaryVisualComponentRelativeHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetRightVector
+// 0x0018 (0x0018 - 0x0000)
+struct DynamicCrouchMoverComponent_GetRightVector final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetRightVector;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetRightVelocity
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_GetRightVelocity final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetRightVelocity;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetStandingCapsuleHalfHeight
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_GetStandingCapsuleHalfHeight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetStandingCapsuleHalfHeight;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetUpVector
+// 0x0018 (0x0018 - 0x0000)
+struct DynamicCrouchMoverComponent_GetUpVector final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetUpVector;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetUpVelocity
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicCrouchMoverComponent_GetUpVelocity final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_GetUpVelocity;
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.HasPrimaryVisualComponentRelativeHeight
+// 0x0001 (0x0001 - 0x0000)
+struct DynamicCrouchMoverComponent_HasPrimaryVisualComponentRelativeHeight final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DynamicCrouchMoverComponent_HasPrimaryVisualComponentRelativeHeight;
+
 // Function PenguinHotel.EOSPlayerReportAsyncAction.SendEOSPlayerReport
 // 0x0058 (0x0058 - 0x0000)
 struct EOSPlayerReportAsyncAction_SendEOSPlayerReport final

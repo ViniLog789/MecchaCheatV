@@ -39,6 +39,15 @@ enum class EMediaPlateEventState : uint8
 	MAX                                      = 9,
 };
 
+// ScriptStruct MediaPlate.MediaTextureResourceSettings
+// 0x0001 (0x0001 - 0x0000)
+struct FMediaTextureResourceSettings final
+{
+public:
+	bool                                          bEnableGenMips;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMediaTextureResourceSettings;
+
 // ScriptStruct MediaPlate.MediaPlateResource
 // 0x0068 (0x0068 - 0x0000)
 struct FMediaPlateResource final
@@ -51,14 +60,5 @@ public:
 	TSoftObjectPtr<class UMediaPlaylist>          SourcePlaylist;                                    // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FMediaPlateResource;
-
-// ScriptStruct MediaPlate.MediaTextureResourceSettings
-// 0x0001 (0x0001 - 0x0000)
-struct FMediaTextureResourceSettings final
-{
-public:
-	bool                                          bEnableGenMips;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMediaTextureResourceSettings;
 
 SDK_NAMESPACE_END

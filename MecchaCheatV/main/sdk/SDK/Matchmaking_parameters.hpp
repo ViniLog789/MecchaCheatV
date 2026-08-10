@@ -16,25 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function Matchmaking.DedicatedServerMatchmakingBeaconClient.OnReserveForMatchResult
-// 0x0001 (0x0001 - 0x0000)
-struct DedicatedServerMatchmakingBeaconClient_OnReserveForMatchResult final
-{
-public:
-	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DedicatedServerMatchmakingBeaconClient_OnReserveForMatchResult;
-
-// Function Matchmaking.DedicatedServerMatchmakingBeaconClient.ReserveForMatch
-// 0x0020 (0x0020 - 0x0000)
-struct DedicatedServerMatchmakingBeaconClient_ReserveForMatch final
-{
-public:
-	TArray<struct FDedicatedServerMatchmakingBeaconClientMatchMember> MatchMembers;                  // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<int32>                                 TeamSizes;                                         // 0x0010(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DedicatedServerMatchmakingBeaconClient_ReserveForMatch;
-
 // Function Matchmaking.DedicatedServerMatchmakingBeaconHost.GetCurrentReservation
 // 0x0018 (0x0018 - 0x0000)
 struct DedicatedServerMatchmakingBeaconHost_GetCurrentReservation final
@@ -72,6 +53,25 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DedicatedServerMatchmakingBeaconHost_IsReserved;
+
+// Function Matchmaking.DedicatedServerMatchmakingBeaconClient.OnReserveForMatchResult
+// 0x0001 (0x0001 - 0x0000)
+struct DedicatedServerMatchmakingBeaconClient_OnReserveForMatchResult final
+{
+public:
+	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DedicatedServerMatchmakingBeaconClient_OnReserveForMatchResult;
+
+// Function Matchmaking.DedicatedServerMatchmakingBeaconClient.ReserveForMatch
+// 0x0020 (0x0020 - 0x0000)
+struct DedicatedServerMatchmakingBeaconClient_ReserveForMatch final
+{
+public:
+	TArray<struct FDedicatedServerMatchmakingBeaconClientMatchMember> MatchMembers;                  // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<int32>                                 TeamSizes;                                         // 0x0010(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DedicatedServerMatchmakingBeaconClient_ReserveForMatch;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

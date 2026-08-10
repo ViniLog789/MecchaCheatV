@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "PBIK_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "PBIK_structs.hpp"
 #include "RigVM_structs.hpp"
 
 
@@ -36,9 +36,9 @@ public:
 };
 DUMPER7_ASSERTS_FChaosDestructionEvent_SWC;
 
-// PropertyBag Transient.PropertyBag_ee3222c5ecc61613
+// PropertyBag Transient.PropertyBag_ab2ae20357fb52f7
 // 0x0158 (0x0158 - 0x0000)
-struct FPropertyBag_ee3222c5ecc61613 final
+struct FPropertyBag_ab2ae20357fb52f7 final
 {
 public:
 	struct FRigElementKey                         RigVMModel___RigUnit_SetTransform_Item__Const;     // 0x0000(0x000C)(Edit, NoDestructor, HasGetValueTypeHash)
@@ -75,11 +75,11 @@ public:
 	struct FPBIKSolverSettings                    RigVMModel___PBIK_Settings__Const;                 // 0x0110(0x0040)(Edit, NoDestructor)
 	struct FPBIKDebug                             RigVMModel___PBIK_Debug__Const;                    // 0x0150(0x0008)(Edit, NoDestructor)
 };
-DUMPER7_ASSERTS_FPropertyBag_ee3222c5ecc61613;
+DUMPER7_ASSERTS_FPropertyBag_ab2ae20357fb52f7;
 
-// PropertyBag Transient.PropertyBag_8fca6fe4a0190fcb
+// PropertyBag Transient.PropertyBag_73d9301f540f9dc9
 // 0x05E0 (0x05E0 - 0x0000)
-struct FPropertyBag_8fca6fe4a0190fcb final
+struct FPropertyBag_73d9301f540f9dc9 final
 {
 public:
 	struct FTransform                             RigVMModel___RigUnit_GetTransform_1_Transform;     // 0x0000(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -146,6 +146,6 @@ public:
 	TArray<TArray<int32>>                         RigVMModel___PBIK_EffectorSolverIndices;           // 0x05C0(0x0010)(Edit)
 	TArray<struct FPBIKWorkData>                  RigVMModel___PBIK_WorkData;                        // 0x05D0(0x0010)(Edit)
 };
-DUMPER7_ASSERTS_FPropertyBag_8fca6fe4a0190fcb;
+DUMPER7_ASSERTS_FPropertyBag_73d9301f540f9dc9;
 
 SDK_NAMESPACE_END

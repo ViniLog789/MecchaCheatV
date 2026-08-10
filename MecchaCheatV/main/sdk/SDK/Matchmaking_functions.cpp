@@ -16,58 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function Matchmaking.DedicatedServerMatchmakingBeaconClient.OnReserveForMatchResult
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// bool                                    bWasSuccessful                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ADedicatedServerMatchmakingBeaconClient::OnReserveForMatchResult(bool bWasSuccessful)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DedicatedServerMatchmakingBeaconClient", "OnReserveForMatchResult");
-
-	Params::DedicatedServerMatchmakingBeaconClient_OnReserveForMatchResult Parms{};
-
-	Parms.bWasSuccessful = bWasSuccessful;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Matchmaking.DedicatedServerMatchmakingBeaconClient.ReserveForMatch
-// (Net, NetReliable, Native, Event, Public, NetServer)
-// Parameters:
-// const TArray<struct FDedicatedServerMatchmakingBeaconClientMatchMember>&MatchMembers                                           (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const TArray<int32>&                    TeamSizes                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void ADedicatedServerMatchmakingBeaconClient::ReserveForMatch(const TArray<struct FDedicatedServerMatchmakingBeaconClientMatchMember>& MatchMembers, const TArray<int32>& TeamSizes)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DedicatedServerMatchmakingBeaconClient", "ReserveForMatch");
-
-	Params::DedicatedServerMatchmakingBeaconClient_ReserveForMatch Parms{};
-
-	Parms.MatchMembers = std::move(MatchMembers);
-	Parms.TeamSizes = std::move(TeamSizes);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function Matchmaking.DedicatedServerMatchmakingBeaconHost.MatchEnded
 // (Final, Native, Public, BlueprintCallable)
 
@@ -189,6 +137,58 @@ bool ADedicatedServerMatchmakingBeaconHost::IsReserved() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Matchmaking.DedicatedServerMatchmakingBeaconClient.OnReserveForMatchResult
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// bool                                    bWasSuccessful                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ADedicatedServerMatchmakingBeaconClient::OnReserveForMatchResult(bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DedicatedServerMatchmakingBeaconClient", "OnReserveForMatchResult");
+
+	Params::DedicatedServerMatchmakingBeaconClient_OnReserveForMatchResult Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Matchmaking.DedicatedServerMatchmakingBeaconClient.ReserveForMatch
+// (Net, NetReliable, Native, Event, Public, NetServer)
+// Parameters:
+// const TArray<struct FDedicatedServerMatchmakingBeaconClientMatchMember>&MatchMembers                                           (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    TeamSizes                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void ADedicatedServerMatchmakingBeaconClient::ReserveForMatch(const TArray<struct FDedicatedServerMatchmakingBeaconClientMatchMember>& MatchMembers, const TArray<int32>& TeamSizes)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DedicatedServerMatchmakingBeaconClient", "ReserveForMatch");
+
+	Params::DedicatedServerMatchmakingBeaconClient_ReserveForMatch Parms{};
+
+	Parms.MatchMembers = std::move(MatchMembers);
+	Parms.TeamSizes = std::move(TeamSizes);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

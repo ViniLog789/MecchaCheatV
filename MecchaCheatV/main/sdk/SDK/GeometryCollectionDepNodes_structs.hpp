@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "DataflowEnginePlugin_structs.hpp"
 #include "Chaos_structs.hpp"
+#include "DataflowEnginePlugin_structs.hpp"
 #include "DataflowCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 

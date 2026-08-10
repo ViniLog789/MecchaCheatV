@@ -15,19 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// ScriptStruct ABP_MiniPenguin.ABP_MiniPenguin_C.AnimBlueprintGeneratedMutableData
-// 0x0013 (0x0014 - 0x0001)
-struct ABP_MiniPenguin::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-public:
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty;                                   // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_0;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_1;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_2;                                 // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ABP_MiniPenguin__FAnimBlueprintGeneratedMutableData;
-
 // ScriptStruct ABP_MiniPenguin.ABP_MiniPenguin_C.AnimBlueprintGeneratedConstantData
 // 0x092F (0x0930 - 0x0001)
 struct ABP_MiniPenguin::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
@@ -103,5 +90,18 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose;                  // 0x0900(0x0030)()
 };
 DUMPER7_ASSERTS_ABP_MiniPenguin__FAnimBlueprintGeneratedConstantData;
+
+// ScriptStruct ABP_MiniPenguin.ABP_MiniPenguin_C.AnimBlueprintGeneratedMutableData
+// 0x0013 (0x0014 - 0x0001)
+struct ABP_MiniPenguin::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+public:
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty;                                   // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_0;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_1;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_2;                                 // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MiniPenguin__FAnimBlueprintGeneratedMutableData;
 
 SDK_NAMESPACE_END

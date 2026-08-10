@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "RedpointEOSFramework_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "RedpointEOSFramework_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"

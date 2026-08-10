@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "OptimusCore_classes.hpp"
 #include "HairStrandsDeformer_structs.hpp"
+#include "OptimusCore_classes.hpp"
 #include "ComputeFramework_classes.hpp"
 
 

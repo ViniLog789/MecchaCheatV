@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "MediaAssets_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ImgMedia_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START

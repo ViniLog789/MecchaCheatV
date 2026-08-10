@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ST_ItemCoreDataArray_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
-#include "Mover_structs.hpp"
 #include "BP_FirstPersonCharacter_Main_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ST_ItemCoreDataArray_structs.hpp"
 #include "EN_InputBlockDeviceType_structs.hpp"
 #include "UINavigation_structs.hpp"
 
@@ -24,76 +23,74 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C
-// 0x01D0 (0x0D10 - 0x0B40)
+// 0x01C0 (0x0D00 - 0x0B40)
 class ABP_FirstPersonCharacter_cLeon_Character_C : public ABP_FirstPersonCharacter_Main_C
 {
 public:
-	class UNetworkPhysicsSettingsComponent*       NetworkPhysicsSettings;                            // 0x0B40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ULBPC_ComponentDistanceVisualUpdate_C*  LBPC_ComponentDistanceVisualUpdate;                // 0x0B40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        Audio;                                             // 0x0B48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWidgetComponent*                       Nameplate;                                         // 0x0B50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ULBPC_ComponentDistanceVisualUpdate_C*  LBPC_ComponentDistanceVisualUpdate;                // 0x0B58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDynamicCapsuleHeightControlComponent*  DynamicCapsuleHeightControl;                       // 0x0B60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Sphere;                                            // 0x0B68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class URuntimePaintableComponent*             RuntimePaintable;                                  // 0x0B70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UScreenSpaceBrushQuery*                 ScreenSpaceBrushQuery;                             // 0x0B78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPaintViewLock;                                   // 0x0B80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPaintMode;                                       // 0x0B81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B82[0x6];                                      // 0x0B82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              PaintCameraDistanceRange;                          // 0x0B88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CurrentViewportMode;                               // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWBP_PaintMode_Cursor_C*                PaintModeWidget;                                   // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ABP_BrushPlane_C*                       BrushPlane;                                        // 0x0BA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CurrentPaintColor;                                 // 0x0BB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              BrushRadiusRange;                                  // 0x0BC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              PreLocation;                                       // 0x0BD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_PlayerController_cLeon_C*           PlayerController_cLeon;                            // 0x0BE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsViewDefeultFPS;                                  // 0x0BE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BE9[0x7];                                      // 0x0BE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              BrushMetallicAndRoughness;                         // 0x0BF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBrushing;                                        // 0x0C00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CompleteInitialize;                                // 0x0C01(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C02[0x6];                                      // 0x0C02(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_EmoteMenu_C*                       Emote_Menu_Widget;                                 // 0x0C08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsEmoteSelect;                                     // 0x0C10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C11[0x7];                                      // 0x0C11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FST_ItemCoreDatas>              EmoteCoreDatas_1;                                  // 0x0C18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FST_ItemCoreDatas>              EmoteCoreDatas_2;                                  // 0x0C28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FST_ItemCoreDataArray>          EmoteArray;                                        // 0x0C38(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UAnimMontage*                           CurrentPlayEmote;                                  // 0x0C48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanEmote;                                          // 0x0C50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BodyShadow;                                        // 0x0C51(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHunter;                                          // 0x0C52(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseKeepCamera;                                     // 0x0C53(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLiveSelf;                                        // 0x0C54(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C55[0x3];                                      // 0x0C55(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_GameState_cLeon_C*                  Game_State_C_Leon;                                 // 0x0C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerState_Online_cLeon_C* LastMyPlayerState;                              // 0x0C60(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BodyVisibility;                                    // 0x0C68(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          LocalFound;                                        // 0x0C69(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C6A[0x6];                                      // 0x0C6A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CurrentRadius;                                     // 0x0C70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HideBlock;                                         // 0x0C78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CurrentNamePlateVisibility;                        // 0x0C79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C7A[0x2];                                      // 0x0C7A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NamePlateVisibilityType;                           // 0x0C7C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            NamePlateColor;                                    // 0x0C80(0x0014)(Edit, BlueprintVisible)
-	uint8                                         Pad_C94[0x4];                                      // 0x0C94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              BrushSizeChangeStartPos;                           // 0x0C98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_SpectatePawn_cLeon_C*               CurrentSpectatePawn;                               // 0x0CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanFreeSpectate;                                   // 0x0CB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CurrentLocalAlpha;                                 // 0x0CB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanMove;                                           // 0x0CB2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CB3[0x1];                                      // 0x0CB3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentEmotePage;                                  // 0x0CB4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<double>                                DecoyCoolTimes;                                    // 0x0CB8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        DecoyCoolTimeDefault;                              // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 DecoyActorClass;                                   // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanZoom;                                           // 0x0CD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD9[0x7];                                      // 0x0CD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUINavPCComponent*                      UINavComp;                                         // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         BrushEmissive;                                     // 0x0CF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           LastHSV;                                           // 0x0CF4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x0B58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class URuntimePaintableComponent*             RuntimePaintable;                                  // 0x0B60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScreenSpaceBrushQuery*                 ScreenSpaceBrushQuery;                             // 0x0B68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPaintViewLock;                                   // 0x0B70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPaintMode;                                       // 0x0B71(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B72[0x6];                                      // 0x0B72(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              PaintCameraDistanceRange;                          // 0x0B78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CurrentViewportMode;                               // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_PaintMode_Cursor_C*                PaintModeWidget;                                   // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ABP_BrushPlane_C*                       BrushPlane;                                        // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CurrentPaintColor;                                 // 0x0BA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              BrushRadiusRange;                                  // 0x0BB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              PreLocation;                                       // 0x0BC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_PlayerController_cLeon_C*           PlayerController_cLeon;                            // 0x0BD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsViewDefeultFPS;                                  // 0x0BD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BD9[0x7];                                      // 0x0BD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              BrushMetallicAndRoughness;                         // 0x0BE0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBrushing;                                        // 0x0BF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CompleteInitialize;                                // 0x0BF1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BF2[0x6];                                      // 0x0BF2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_EmoteMenu_C*                       Emote_Menu_Widget;                                 // 0x0BF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsEmoteSelect;                                     // 0x0C00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C01[0x7];                                      // 0x0C01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FST_ItemCoreDatas>              EmoteCoreDatas_1;                                  // 0x0C08(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FST_ItemCoreDatas>              EmoteCoreDatas_2;                                  // 0x0C18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FST_ItemCoreDataArray>          EmoteArray;                                        // 0x0C28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UAnimMontage*                           CurrentPlayEmote;                                  // 0x0C38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanEmote;                                          // 0x0C40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BodyShadow;                                        // 0x0C41(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHunter;                                          // 0x0C42(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseKeepCamera;                                     // 0x0C43(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsLiveSelf;                                        // 0x0C44(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C45[0x3];                                      // 0x0C45(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_GameState_cLeon_C*                  Game_State_C_Leon;                                 // 0x0C48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* LastMyPlayerState;                              // 0x0C50(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BodyVisibility;                                    // 0x0C58(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          LocalFound;                                        // 0x0C59(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C5A[0x6];                                      // 0x0C5A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CurrentRadius;                                     // 0x0C60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HideBlock;                                         // 0x0C68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurrentNamePlateVisibility;                        // 0x0C69(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C6A[0x2];                                      // 0x0C6A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NamePlateVisibilityType;                           // 0x0C6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            NamePlateColor;                                    // 0x0C70(0x0014)(Edit, BlueprintVisible)
+	uint8                                         Pad_C84[0x4];                                      // 0x0C84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              BrushSizeChangeStartPos;                           // 0x0C88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_SpectatePawn_cLeon_C*               CurrentSpectatePawn;                               // 0x0C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanFreeSpectate;                                   // 0x0CA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurrentLocalAlpha;                                 // 0x0CA1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanMove;                                           // 0x0CA2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA3[0x1];                                      // 0x0CA3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentEmotePage;                                  // 0x0CA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<double>                                DecoyCoolTimes;                                    // 0x0CA8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        DecoyCoolTimeDefault;                              // 0x0CB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 DecoyActorClass;                                   // 0x0CC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanZoom;                                           // 0x0CC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC9[0x7];                                      // 0x0CC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUINavPCComponent*                      UINavComp;                                         // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         BrushEmissive;                                     // 0x0CE0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           LastHSV;                                           // 0x0CE4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void MEChange();
@@ -131,9 +128,9 @@ public:
 	void DeathPlayer();
 	void ReceiveRestarted();
 	void DeltaUpdate();
+	void BndEvt__BP_FirstPersonCharacter_cLeon_Character_DynamicCrouchMover_K2Node_ComponentBoundEvent_0_DynamicCrouchMover_OnCapsuleHalfHeightChanged__DelegateSignature(float NewCapsuleHalfHeight);
 	void SetIsClimbing(bool IsClimbing_0);
 	void CustomCrouch_Client_(double Height, bool Is_Crouching_Input_0);
-	void BndEvt__BP_FirstPersonCharacter_cLeon_Character_ExtendedPhysicsCharacterMoverComponent_K2Node_ComponentBoundEvent_0_Mover_OnStanceChanged__DelegateSignature(EStanceMode OldStance, EStanceMode NewStance);
 	void CustomCrouch_Server_(double Height, bool Is_Crouching_Input_0);
 	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_0(const struct FKey& Key);
 	void InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_1(const struct FKey& Key);
@@ -176,7 +173,6 @@ public:
 	void Zoom(double PlusValue);
 	void PaintViewLookUpdate();
 	void OnRep_AnimationIndex();
-	void ProduceInput(int32 SimTimeMs, struct FMoverInputCmdContext* InputCmdResult);
 	void OnRep_BodyShadow();
 	bool CanDash();
 	void OnRep_BodyVisibility();

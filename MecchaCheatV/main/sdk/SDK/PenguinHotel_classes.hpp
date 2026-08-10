@@ -749,6 +749,72 @@ public:
 };
 DUMPER7_ASSERTS_UDynamicCapsulePhysicsDrivenLibrary;
 
+// Class PenguinHotel.DynamicCrouchMoverComponent
+// 0x0030 (0x0530 - 0x0500)
+class UDynamicCrouchMoverComponent final : public UCharacterMoverComponent
+{
+public:
+	TMulticastInlineDelegate<void(float NewCapsuleHalfHeight)> OnCapsuleHalfHeightChanged;           // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	bool                                          bUseRootComponentForGroundChecks;                  // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsCrouching;                                      // 0x0511(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_512[0x2];                                      // 0x0512(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DesiredCapsuleHalfHeight;                          // 0x0514(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         StandingCapsuleHalfHeight;                         // 0x0518(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         CrouchedCapsuleHalfHeight;                         // 0x051C(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasPrimaryVisualRelativeHeight;                   // 0x0520(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_521[0x3];                                      // 0x0521(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PrimaryVisualRelativeHeight;                       // 0x0524(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_528[0x8];                                      // 0x0528(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ClearDesiredCapsuleHalfHeight();
+	void ClearPrimaryVisualComponentRelativeHeight();
+	void CrouchWithHalfHeight(float NewCrouchedHalfHeight);
+	void MulticastSetCrouchState(bool bNewCrouching, float NewDesiredHalfHeight, float NewCrouchedHalfHeight);
+	void MulticastSetPrimaryVisualComponentRelativeHeight(bool bNewHasOverride, float NewRelativeHeight);
+	void OnMoverPostSimulationTick(const struct FMoverTimeStep& TimeStep);
+	void OnRep_CrouchState();
+	void OnRep_PrimaryVisualRelativeHeight();
+	void ServerSetCrouchState(bool bNewCrouching, float NewDesiredHalfHeight, float NewCrouchedHalfHeight);
+	void ServerSetPrimaryVisualComponentRelativeHeight(bool bNewHasOverride, float NewRelativeHeight);
+	void SetCrouchedCapsuleHalfHeight(float NewHalfHeight);
+	void SetCrouching(bool bNewCrouching);
+	void SetDesiredCapsuleHalfHeight(float NewHalfHeight);
+	void SetPrimaryVisualComponentRelativeHeight(float NewRelativeHeight);
+	bool SetStandingCapsuleHalfHeight(float NewHalfHeight);
+
+	bool CanSetCapsuleHalfHeight(float NewHalfHeight) const;
+	bool CanStandUp() const;
+	float GetCrouchedCapsuleHalfHeight() const;
+	float GetCurrentCapsuleHalfHeight() const;
+	float GetDesiredCapsuleHalfHeight() const;
+	struct FVector GetForwardVector() const;
+	float GetForwardVelocity() const;
+	struct FVector GetOwnerRelativeVelocity() const;
+	float GetPrimaryVisualComponentRelativeHeight() const;
+	struct FVector GetRightVector() const;
+	float GetRightVelocity() const;
+	float GetStandingCapsuleHalfHeight() const;
+	struct FVector GetUpVector() const;
+	float GetUpVelocity() const;
+	bool HasPrimaryVisualComponentRelativeHeight() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DynamicCrouchMoverComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicCrouchMoverComponent")
+	}
+	static class UDynamicCrouchMoverComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDynamicCrouchMoverComponent>();
+	}
+};
+DUMPER7_ASSERTS_UDynamicCrouchMoverComponent;
+
 // Class PenguinHotel.EOSPlayerReportAsyncAction
 // 0x0070 (0x00A0 - 0x0030)
 class UEOSPlayerReportAsyncAction final : public UBlueprintAsyncActionBase

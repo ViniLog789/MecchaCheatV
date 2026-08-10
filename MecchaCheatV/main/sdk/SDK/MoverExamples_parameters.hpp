@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MoverExamples_structs.hpp"
 #include "Mover_structs.hpp"
+#include "MoverExamples_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

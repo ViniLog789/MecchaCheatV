@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "HairStrandsSolver_structs.hpp"
 #include "DataflowSimulation_structs.hpp"
+#include "HairStrandsSolver_structs.hpp"
 #include "Engine_classes.hpp"
 
 

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "UDS_Space_Parent_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "UDS_Planet_Lightsource_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -564,6 +564,26 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::DeltaUpdate()
 }
 
 
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.BndEvt__BP_FirstPersonCharacter_cLeon_Character_DynamicCrouchMover_K2Node_ComponentBoundEvent_0_DynamicCrouchMover_OnCapsuleHalfHeightChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// float                                   NewCapsuleHalfHeight                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_cLeon_Character_C::BndEvt__BP_FirstPersonCharacter_cLeon_Character_DynamicCrouchMover_K2Node_ComponentBoundEvent_0_DynamicCrouchMover_OnCapsuleHalfHeightChanged__DelegateSignature(float NewCapsuleHalfHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "BndEvt__BP_FirstPersonCharacter_cLeon_Character_DynamicCrouchMover_K2Node_ComponentBoundEvent_0_DynamicCrouchMover_OnCapsuleHalfHeightChanged__DelegateSignature");
+
+	Params::BP_FirstPersonCharacter_cLeon_Character_C_BndEvt__BP_FirstPersonCharacter_cLeon_Character_DynamicCrouchMover_K2Node_ComponentBoundEvent_0_DynamicCrouchMover_OnCapsuleHalfHeightChanged__DelegateSignature Parms{};
+
+	Parms.NewCapsuleHalfHeight = NewCapsuleHalfHeight;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetIsClimbing
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -606,30 +626,8 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::CustomCrouch_Client_(double Hei
 }
 
 
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.BndEvt__BP_FirstPersonCharacter_cLeon_Character_ExtendedPhysicsCharacterMoverComponent_K2Node_ComponentBoundEvent_0_Mover_OnStanceChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EStanceMode                             OldStance                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EStanceMode                             NewStance                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_cLeon_Character_C::BndEvt__BP_FirstPersonCharacter_cLeon_Character_ExtendedPhysicsCharacterMoverComponent_K2Node_ComponentBoundEvent_0_Mover_OnStanceChanged__DelegateSignature(EStanceMode OldStance, EStanceMode NewStance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "BndEvt__BP_FirstPersonCharacter_cLeon_Character_ExtendedPhysicsCharacterMoverComponent_K2Node_ComponentBoundEvent_0_Mover_OnStanceChanged__DelegateSignature");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_C_BndEvt__BP_FirstPersonCharacter_cLeon_Character_ExtendedPhysicsCharacterMoverComponent_K2Node_ComponentBoundEvent_0_Mover_OnStanceChanged__DelegateSignature Parms{};
-
-	Parms.OldStance = OldStance;
-	Parms.NewStance = NewStance;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.CustomCrouch(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Height                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Is_Crouching_Input_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1646,30 +1644,6 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::OnRep_AnimationIndex()
 		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_AnimationIndex");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.ProduceInput
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   SimTimeMs                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FMoverInputCmdContext*           InputCmdResult                                         (Parm, OutParm)
-
-void ABP_FirstPersonCharacter_cLeon_Character_C::ProduceInput(int32 SimTimeMs, struct FMoverInputCmdContext* InputCmdResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "ProduceInput");
-
-	Params::BP_FirstPersonCharacter_cLeon_Character_C_ProduceInput Parms{};
-
-	Parms.SimTimeMs = SimTimeMs;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (InputCmdResult != nullptr)
-		*InputCmdResult = std::move(Parms.InputCmdResult);
 }
 
 

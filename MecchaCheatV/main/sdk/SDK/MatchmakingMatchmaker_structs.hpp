@@ -40,24 +40,6 @@ enum class EMatchmakerHostConfigurationAttributeFilterComparison : uint8
 	EMatchmakerHostConfigurationAttributeFilterComparison_MAX = 6,
 };
 
-// ScriptStruct MatchmakingMatchmaker.MatchmakerResultTeam
-// 0x0050 (0x0050 - 0x0000)
-struct FMatchmakerResultTeam final
-{
-public:
-	TMap<int32, struct FUniqueNetIdRepl>          Slots;                                             // 0x0000(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMatchmakerResultTeam;
-
-// ScriptStruct MatchmakingMatchmaker.MatchmakerResult
-// 0x0010 (0x0010 - 0x0000)
-struct FMatchmakerResult final
-{
-public:
-	TArray<struct FMatchmakerResultTeam>          Teams;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMatchmakerResult;
-
 // ScriptStruct MatchmakingMatchmaker.MatchmakerHostConfigurationAttributeFilter
 // 0x0038 (0x0038 - 0x0000)
 struct FMatchmakerHostConfigurationAttributeFilter final
@@ -99,6 +81,24 @@ public:
 	TMap<struct FUniqueNetIdRepl, int32>          UserTeamAssignments;                               // 0x00B8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMatchmakerHostConfiguration;
+
+// ScriptStruct MatchmakingMatchmaker.MatchmakerResultTeam
+// 0x0050 (0x0050 - 0x0000)
+struct FMatchmakerResultTeam final
+{
+public:
+	TMap<int32, struct FUniqueNetIdRepl>          Slots;                                             // 0x0000(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMatchmakerResultTeam;
+
+// ScriptStruct MatchmakingMatchmaker.MatchmakerResult
+// 0x0010 (0x0010 - 0x0000)
+struct FMatchmakerResult final
+{
+public:
+	TArray<struct FMatchmakerResultTeam>          Teams;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMatchmakerResult;
 
 // ScriptStruct MatchmakingMatchmaker.MatchmakerProgressInfo
 // 0x0038 (0x0038 - 0x0000)

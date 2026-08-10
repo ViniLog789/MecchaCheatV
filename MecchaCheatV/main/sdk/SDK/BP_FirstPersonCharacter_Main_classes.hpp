@@ -11,17 +11,17 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
-#include "DeathType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "PhysicsCore_structs.hpp"
-#include "EN_DamageType_structs.hpp"
-#include "Mover_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "MoverExamples_classes.hpp"
+#include "PhysicsCore_structs.hpp"
+#include "Mover_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
-#include "EN_StanType_structs.hpp"
+#include "DeathType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "EN_InputBlockDeviceType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -32,8 +32,8 @@ class ABP_FirstPersonCharacter_Main_C : public AMoverExamplesCharacter
 {
 public:
 	uint8                                         Pad_3E8[0x8];                                      // 0x03E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBPC_NearInteract_C*                    BPC_NearInteract;                                  // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UExtendedPhysicsCharacterMoverComponent_C* ExtendedPhysicsCharacterMoverComponent;         // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDynamicCrouchMoverComponent*           DynamicCrouchMover;                                // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_NearInteract_C*                    BPC_NearInteract;                                  // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USphereComponent*                       HeadPosition;                                      // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USpringArmComponent*                    SpringArm;                                         // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UCapsuleComponent*                      OverapCollision;                                   // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -258,16 +258,16 @@ public:
 	void ClimbingEndJump();
 	void ClimbingFinish(bool IsEndJump);
 	void ClimbingForce();
-	void AvoidEnd();
 	void SetSpectatingState(bool State);
 	void SetClimbingState_Server_(bool State);
-	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
-	void SetFreeLook(bool State);
+	void AvoidEnd();
 	void OnLanded_1(const struct FHitResult& Hit);
 	void ChangeViewMode(class FName ModeName, bool Quick);
 	void SetWarpTargetLocation(class FName WarpTargetName, const struct FVector& TargetLocation);
 	void SetMovementMode_Server_(EMovementMode NewMovementMode, bool StopMovement_0);
 	void ServerCamaraTick();
+	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
+	void SetFreeLook(bool State);
 	void InteractGimmick_Client_(class UObject* ターゲット, class ABP_FirstPersonCharacter_Main_C* First_Person);
 	void InteractGimmick_Server_(class UObject* ターゲット, class ABP_FirstPersonCharacter_Main_C* First_Person);
 	void AimEvent(bool State);
@@ -275,38 +275,38 @@ public:
 	void CameraPitch(double ViewPitch_0);
 	void ShotEvent(bool State);
 	void DashStateChage(bool State);
-	void ClimbingStart();
 	void BndEvt__BP_FirstPersonCharacter_BPC_LongInputControlAvoidDash_K2Node_ComponentBoundEvent_8_InputEnd__DelegateSignature(double PushTime);
 	void BndEvt__BP_FirstPersonCharacter_BPC_LongInputControlAvoidDash_K2Node_ComponentBoundEvent_7_LongPushStart__DelegateSignature();
+	void ClimbingStart();
 	void BndEvt__BP_FirstPersonCharacter_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_5_ChangeAnimationEnd__DelegateSignature();
 	void StanEnd();
 	void Stan(double StanTime);
-	void SetIceMode(bool IceState);
 	void StaminaUpdate(double AddValue, double AnimationTime, double SubAnimationTime);
 	void BndEvt__BP_FirstPersonCharacter_BPC_StaminaGauge_Sub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature(double UpdateValue);
 	void StaminaSubAnimation();
 	void BndEvt__BP_FirstPersonCharacter_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_2_ChangedValue__DelegateSignature(double UpdateValue);
 	void BndEvt__BP_FirstPersonCharacter_BPC_HPGaugeControl_Sub_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature(double UpdateValue);
 	void HPBarSubAnimation();
-	void Interact_Server_(class AActor* TargetActor, int32 SlotIndex);
 	void BndEvt__BP_FirstPersonCharacter_BPC_HPGaugeControl_K2Node_ComponentBoundEvent_0_ChangedValue__DelegateSignature(double UpdateValue);
 	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply);
 	void CollisionReset();
 	void Combo(double TimeRange, class FName ComboName);
+	void SetIceMode(bool IceState);
 	void DashStateUpdate();
 	void AutoHeal();
 	void AutoHealStart();
-	void InteractItem();
 	void ReleaseRightItem();
+	void InteractItem();
 	void SetMeshDatas(bool KeepScale);
 	void DamagedAnimation(double DamageValue, bool UnAvoidable);
-	void SetIsCrouching(bool IsCrouching_0);
 	void AddActor(class AActor* Actor);
 	void DeleteActor(class AActor* Actor);
+	void SetIsCrouching(bool IsCrouching_0);
 	void SetIsCrouching_Server_(bool IsCrouching_0);
 	void ItemShakeStart();
 	void DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition);
 	void DeathUIShowAndAwait();
+	void Interact_Server_(class AActor* TargetActor, int32 SlotIndex);
 	void DeathEvent(EDeathType DeathType, class AActor* Bind_Asset);
 	void Interact(class AActor* Actor);
 	void ReceiveBeginPlay();

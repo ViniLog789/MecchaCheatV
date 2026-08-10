@@ -12,12 +12,12 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Chaos_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "AudioExtensions_structs.hpp"
 #include "ImageCore_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "FieldNotification_structs.hpp"
+#include "Chaos_structs.hpp"
 #include "UniversalObjectLocator_structs.hpp"
 #include "RenderCore_structs.hpp"
 #include "TypedElementFramework_structs.hpp"

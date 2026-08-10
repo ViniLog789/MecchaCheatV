@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "EN_ThrowState_structs.hpp"
 #include "AttackType_structs.hpp"
+#include "EN_ThrowState_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -12,7 +12,6 @@
 
 #include "EN_InputBlockDeviceType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Mover_structs.hpp"
 #include "EnhancedInput_structs.hpp"
 #include "UINavigation_structs.hpp"
 #include "InputCore_structs.hpp"
@@ -104,6 +103,15 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_SelectEmote;
 
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.BndEvt__BP_FirstPersonCharacter_cLeon_Character_DynamicCrouchMover_K2Node_ComponentBoundEvent_0_DynamicCrouchMover_OnCapsuleHalfHeightChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_C_BndEvt__BP_FirstPersonCharacter_cLeon_Character_DynamicCrouchMover_K2Node_ComponentBoundEvent_0_DynamicCrouchMover_OnCapsuleHalfHeightChanged__DelegateSignature final
+{
+public:
+	float                                         NewCapsuleHalfHeight;                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_BndEvt__BP_FirstPersonCharacter_cLeon_Character_DynamicCrouchMover_K2Node_ComponentBoundEvent_0_DynamicCrouchMover_OnCapsuleHalfHeightChanged__DelegateSignature;
+
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.SetIsClimbing
 // 0x0001 (0x0001 - 0x0000)
 struct BP_FirstPersonCharacter_cLeon_Character_C_SetIsClimbing final
@@ -122,16 +130,6 @@ public:
 	bool                                          Is_Crouching_Input_0;                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_CustomCrouch_Client_;
-
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.BndEvt__BP_FirstPersonCharacter_cLeon_Character_ExtendedPhysicsCharacterMoverComponent_K2Node_ComponentBoundEvent_0_Mover_OnStanceChanged__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_C_BndEvt__BP_FirstPersonCharacter_cLeon_Character_ExtendedPhysicsCharacterMoverComponent_K2Node_ComponentBoundEvent_0_Mover_OnStanceChanged__DelegateSignature final
-{
-public:
-	EStanceMode                                   OldStance;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EStanceMode                                   NewStance;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_BndEvt__BP_FirstPersonCharacter_cLeon_Character_ExtendedPhysicsCharacterMoverComponent_K2Node_ComponentBoundEvent_0_Mover_OnStanceChanged__DelegateSignature;
 
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.CustomCrouch(Server)
 // 0x0010 (0x0010 - 0x0000)
@@ -638,20 +636,6 @@ public:
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_8; // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_PaintViewLookUpdate;
-
-// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.ProduceInput
-// 0x0040 (0x0040 - 0x0000)
-struct BP_FirstPersonCharacter_cLeon_Character_C_ProduceInput final
-{
-public:
-	int32                                         SimTimeMs;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMoverInputCmdContext                  InputCmdResult;                                    // 0x0008(0x0010)(Parm, OutParm)
-	struct FMoverInputCmdContext                  CallFunc_ProduceInput_InputCmdResult;              // 0x0018(0x0010)()
-	TScriptInterface<class IDynamicCapsuleHeightControlInterface> K2Node_DynamicCast_AsDynamic_Capsule_Height_Control_Interface; // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_ProduceInput;
 
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.OnRep_BodyShadow
 // 0x0040 (0x0040 - 0x0000)

@@ -3273,6 +3273,750 @@ bool UDynamicCapsulePhysicsDrivenLibrary::CanSetCapsuleHalfHeight(class UCapsule
 }
 
 
+// Function PenguinHotel.DynamicCrouchMoverComponent.ClearDesiredCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable)
+
+void UDynamicCrouchMoverComponent::ClearDesiredCapsuleHalfHeight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "ClearDesiredCapsuleHalfHeight");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.ClearPrimaryVisualComponentRelativeHeight
+// (Final, Native, Public, BlueprintCallable)
+
+void UDynamicCrouchMoverComponent::ClearPrimaryVisualComponentRelativeHeight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "ClearPrimaryVisualComponentRelativeHeight");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.CrouchWithHalfHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewCrouchedHalfHeight                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::CrouchWithHalfHeight(float NewCrouchedHalfHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "CrouchWithHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_CrouchWithHalfHeight Parms{};
+
+	Parms.NewCrouchedHalfHeight = NewCrouchedHalfHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.MulticastSetCrouchState
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// bool                                    bNewCrouching                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewDesiredHalfHeight                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewCrouchedHalfHeight                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::MulticastSetCrouchState(bool bNewCrouching, float NewDesiredHalfHeight, float NewCrouchedHalfHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "MulticastSetCrouchState");
+
+	Params::DynamicCrouchMoverComponent_MulticastSetCrouchState Parms{};
+
+	Parms.bNewCrouching = bNewCrouching;
+	Parms.NewDesiredHalfHeight = NewDesiredHalfHeight;
+	Parms.NewCrouchedHalfHeight = NewCrouchedHalfHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.MulticastSetPrimaryVisualComponentRelativeHeight
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// bool                                    bNewHasOverride                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewRelativeHeight                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::MulticastSetPrimaryVisualComponentRelativeHeight(bool bNewHasOverride, float NewRelativeHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "MulticastSetPrimaryVisualComponentRelativeHeight");
+
+	Params::DynamicCrouchMoverComponent_MulticastSetPrimaryVisualComponentRelativeHeight Parms{};
+
+	Parms.bNewHasOverride = bNewHasOverride;
+	Parms.NewRelativeHeight = NewRelativeHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.OnMoverPostSimulationTick
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// const struct FMoverTimeStep&            TimeStep                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::OnMoverPostSimulationTick(const struct FMoverTimeStep& TimeStep)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "OnMoverPostSimulationTick");
+
+	Params::DynamicCrouchMoverComponent_OnMoverPostSimulationTick Parms{};
+
+	Parms.TimeStep = std::move(TimeStep);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.OnRep_CrouchState
+// (Final, Native, Protected)
+
+void UDynamicCrouchMoverComponent::OnRep_CrouchState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "OnRep_CrouchState");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.OnRep_PrimaryVisualRelativeHeight
+// (Final, Native, Protected)
+
+void UDynamicCrouchMoverComponent::OnRep_PrimaryVisualRelativeHeight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "OnRep_PrimaryVisualRelativeHeight");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.ServerSetCrouchState
+// (Net, NetReliable, Native, Event, Protected, NetServer)
+// Parameters:
+// bool                                    bNewCrouching                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewDesiredHalfHeight                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewCrouchedHalfHeight                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::ServerSetCrouchState(bool bNewCrouching, float NewDesiredHalfHeight, float NewCrouchedHalfHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "ServerSetCrouchState");
+
+	Params::DynamicCrouchMoverComponent_ServerSetCrouchState Parms{};
+
+	Parms.bNewCrouching = bNewCrouching;
+	Parms.NewDesiredHalfHeight = NewDesiredHalfHeight;
+	Parms.NewCrouchedHalfHeight = NewCrouchedHalfHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.ServerSetPrimaryVisualComponentRelativeHeight
+// (Net, NetReliable, Native, Event, Protected, NetServer)
+// Parameters:
+// bool                                    bNewHasOverride                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   NewRelativeHeight                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::ServerSetPrimaryVisualComponentRelativeHeight(bool bNewHasOverride, float NewRelativeHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "ServerSetPrimaryVisualComponentRelativeHeight");
+
+	Params::DynamicCrouchMoverComponent_ServerSetPrimaryVisualComponentRelativeHeight Parms{};
+
+	Parms.bNewHasOverride = bNewHasOverride;
+	Parms.NewRelativeHeight = NewRelativeHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetCrouchedCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewHalfHeight                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::SetCrouchedCapsuleHalfHeight(float NewHalfHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "SetCrouchedCapsuleHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_SetCrouchedCapsuleHalfHeight Parms{};
+
+	Parms.NewHalfHeight = NewHalfHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetCrouching
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bNewCrouching                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::SetCrouching(bool bNewCrouching)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "SetCrouching");
+
+	Params::DynamicCrouchMoverComponent_SetCrouching Parms{};
+
+	Parms.bNewCrouching = bNewCrouching;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetDesiredCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewHalfHeight                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::SetDesiredCapsuleHalfHeight(float NewHalfHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "SetDesiredCapsuleHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_SetDesiredCapsuleHalfHeight Parms{};
+
+	Parms.NewHalfHeight = NewHalfHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetPrimaryVisualComponentRelativeHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewRelativeHeight                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicCrouchMoverComponent::SetPrimaryVisualComponentRelativeHeight(float NewRelativeHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "SetPrimaryVisualComponentRelativeHeight");
+
+	Params::DynamicCrouchMoverComponent_SetPrimaryVisualComponentRelativeHeight Parms{};
+
+	Parms.NewRelativeHeight = NewRelativeHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.SetStandingCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewHalfHeight                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDynamicCrouchMoverComponent::SetStandingCapsuleHalfHeight(float NewHalfHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "SetStandingCapsuleHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_SetStandingCapsuleHalfHeight Parms{};
+
+	Parms.NewHalfHeight = NewHalfHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.CanSetCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   NewHalfHeight                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDynamicCrouchMoverComponent::CanSetCapsuleHalfHeight(float NewHalfHeight) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "CanSetCapsuleHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_CanSetCapsuleHalfHeight Parms{};
+
+	Parms.NewHalfHeight = NewHalfHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.CanStandUp
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDynamicCrouchMoverComponent::CanStandUp() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "CanStandUp");
+
+	Params::DynamicCrouchMoverComponent_CanStandUp Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetCrouchedCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDynamicCrouchMoverComponent::GetCrouchedCapsuleHalfHeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetCrouchedCapsuleHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_GetCrouchedCapsuleHalfHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetCurrentCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDynamicCrouchMoverComponent::GetCurrentCapsuleHalfHeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetCurrentCapsuleHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_GetCurrentCapsuleHalfHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetDesiredCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDynamicCrouchMoverComponent::GetDesiredCapsuleHalfHeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetDesiredCapsuleHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_GetDesiredCapsuleHalfHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetForwardVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UDynamicCrouchMoverComponent::GetForwardVector() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetForwardVector");
+
+	Params::DynamicCrouchMoverComponent_GetForwardVector Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetForwardVelocity
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDynamicCrouchMoverComponent::GetForwardVelocity() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetForwardVelocity");
+
+	Params::DynamicCrouchMoverComponent_GetForwardVelocity Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetOwnerRelativeVelocity
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UDynamicCrouchMoverComponent::GetOwnerRelativeVelocity() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetOwnerRelativeVelocity");
+
+	Params::DynamicCrouchMoverComponent_GetOwnerRelativeVelocity Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetPrimaryVisualComponentRelativeHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDynamicCrouchMoverComponent::GetPrimaryVisualComponentRelativeHeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetPrimaryVisualComponentRelativeHeight");
+
+	Params::DynamicCrouchMoverComponent_GetPrimaryVisualComponentRelativeHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetRightVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UDynamicCrouchMoverComponent::GetRightVector() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetRightVector");
+
+	Params::DynamicCrouchMoverComponent_GetRightVector Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetRightVelocity
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDynamicCrouchMoverComponent::GetRightVelocity() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetRightVelocity");
+
+	Params::DynamicCrouchMoverComponent_GetRightVelocity Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetStandingCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDynamicCrouchMoverComponent::GetStandingCapsuleHalfHeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetStandingCapsuleHalfHeight");
+
+	Params::DynamicCrouchMoverComponent_GetStandingCapsuleHalfHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetUpVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UDynamicCrouchMoverComponent::GetUpVector() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetUpVector");
+
+	Params::DynamicCrouchMoverComponent_GetUpVector Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.GetUpVelocity
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDynamicCrouchMoverComponent::GetUpVelocity() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "GetUpVelocity");
+
+	Params::DynamicCrouchMoverComponent_GetUpVelocity Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.DynamicCrouchMoverComponent.HasPrimaryVisualComponentRelativeHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDynamicCrouchMoverComponent::HasPrimaryVisualComponentRelativeHeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicCrouchMoverComponent", "HasPrimaryVisualComponentRelativeHeight");
+
+	Params::DynamicCrouchMoverComponent_HasPrimaryVisualComponentRelativeHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PenguinHotel.EOSPlayerReportAsyncAction.SendEOSPlayerReport
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

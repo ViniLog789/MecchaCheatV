@@ -13,8 +13,8 @@
 #include "UINavigation_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "EnhancedInput_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 
 
 SDK_NAMESPACE_START
