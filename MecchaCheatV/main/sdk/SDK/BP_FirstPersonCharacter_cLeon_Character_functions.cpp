@@ -1812,6 +1812,20 @@ void ABP_FirstPersonCharacter_cLeon_Character_C::GetInputViewDevice(EN_InputBloc
 }
 
 
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.Load and Setting Apply
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonCharacter_cLeon_Character_C::Load_and_Setting_Apply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "Load and Setting Apply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.cLeonGetPlayerState
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

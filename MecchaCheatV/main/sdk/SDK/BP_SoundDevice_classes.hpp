@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_DeviceBase_classes.hpp"
 #include "EN_SoundPlayType_structs.hpp"
+#include "BP_DeviceBase_classes.hpp"
 
 
 SDK_NAMESPACE_START

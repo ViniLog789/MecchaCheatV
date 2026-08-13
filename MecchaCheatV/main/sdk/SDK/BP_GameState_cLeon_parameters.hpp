@@ -12,6 +12,7 @@
 
 #include "ST_cLeonMapData_structs.hpp"
 #include "SteamWorkshopMaps_structs.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "EN_cLeonMainGamePhase_structs.hpp"
 
 
@@ -222,25 +223,29 @@ public:
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_OnRep_Filter_Horror;
 
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.ModStateUpdate
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BP_GameState_cLeon_C_ModStateUpdate final
 {
 public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USteamWorkshopMapSubsystem*             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FSteamWorkshopItemInfo>         CallFunc_GetSubscribedWorkshopItems_OutItems;      // 0x0018(0x0010)(ReferenceParm)
-	class FString                                 CallFunc_GetSubscribedWorkshopItems_ErrorMessage;  // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSubscribedWorkshopItems_ReturnValue;   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSteamWorkshopItemInfo                 CallFunc_Array_Get_Item;                           // 0x0040(0x0018)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_cLeonMapData                       K2Node_MakeStruct_ST_cLeonMapData;                 // 0x0060(0x0028)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USteamWorkshopMapSubsystem*             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FSteamWorkshopItemInfo>         CallFunc_GetSubscribedWorkshopItems_OutItems;      // 0x0010(0x0010)(ReferenceParm)
+	class FString                                 CallFunc_GetSubscribedWorkshopItems_ErrorMessage;  // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSubscribedWorkshopItems_ReturnValue;   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSteamWorkshopItemInfo                 CallFunc_Array_Get_Item;                           // 0x0038(0x0018)()
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_cLeonMapData                       K2Node_MakeStruct_ST_cLeonMapData;                 // 0x0058(0x0028)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlatformName_ReturnValue;              // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_ModStateUpdate;
 
@@ -326,12 +331,19 @@ public:
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_GetDoubleRanking;
 
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetAllMapDatas
-// 0x0020 (0x0020 - 0x0000)
+// 0x01C8 (0x01C8 - 0x0000)
 struct BP_GameState_cLeon_C_GetAllMapDatas final
 {
 public:
 	TArray<struct FST_cLeonMapData>               ReturnMapArray;                                    // 0x0000(0x0010)(Parm, OutParm)
 	TArray<struct FST_cLeonMapData>               ReturnArray;                                       // 0x0010(0x0010)(Edit, BlueprintVisible)
+	class FName                                   Temp_name_Variable;                                // 0x0020(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0038(0x0150)()
+	struct FOnlineSessionSettingBP                CallFunc_Map_Find_Value;                           // 0x0188(0x0038)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_GetAllMapDatas;
 

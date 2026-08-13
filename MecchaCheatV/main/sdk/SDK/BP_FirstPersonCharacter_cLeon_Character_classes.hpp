@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "BP_FirstPersonCharacter_Main_classes.hpp"
-#include "SlateCore_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
-#include "Engine_structs.hpp"
 #include "ST_ItemCoreDataArray_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "BP_FirstPersonCharacter_Main_classes.hpp"
 #include "EN_InputBlockDeviceType_structs.hpp"
 #include "UINavigation_structs.hpp"
 
@@ -23,7 +23,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C
-// 0x01C0 (0x0D00 - 0x0B40)
+// 0x01D0 (0x0D10 - 0x0B40)
 class ABP_FirstPersonCharacter_cLeon_Character_C : public ABP_FirstPersonCharacter_Main_C
 {
 public:
@@ -91,6 +91,10 @@ public:
 	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         BrushEmissive;                                     // 0x0CE0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           LastHSV;                                           // 0x0CE4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CF4[0x4];                                      // 0x0CF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FloorDiff;                                         // 0x0CF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BrushSpeed;                                        // 0x0D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TraceHead;                                         // 0x0D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void MEChange();
@@ -182,6 +186,7 @@ public:
 	void SetDecoyVisibility(bool Visibility);
 	void UseDecoy(bool* IsUse);
 	void GetInputViewDevice(EN_InputBlockDeviceType* DeviceType);
+	void Load_and_Setting_Apply();
 	void cLeonGetPlayerState(class ABP_FirstPersonPlayerState_Online_cLeon_C** PlayerState_0);
 	void SetCastShadow_Server_(bool BodyShadow_0);
 	void SetCastShadow(bool BodyShadow_0);

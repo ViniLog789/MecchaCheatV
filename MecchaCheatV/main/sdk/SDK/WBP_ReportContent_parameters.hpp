@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "PenguinHotel_structs.hpp"
 
 
@@ -42,6 +43,17 @@ public:
 	struct FEOSPlayerReportResult                 Result;                                            // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_ReportContent_C_OnFinished_8BE5134246B81962AB20AC90BBF1E4BD;
+
+// Function WBP_ReportContent.WBP_ReportContent_C.DoCustomNavigation
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_ReportContent_C_DoCustomNavigation final
+{
+public:
+	EUINavigation                                 Navigation;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ReportContent_C_DoCustomNavigation;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

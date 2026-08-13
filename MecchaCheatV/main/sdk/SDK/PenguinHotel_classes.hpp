@@ -212,6 +212,7 @@ public:
 
 public:
 	static void CPP_UpdateLine(class UObject* WorldContextObject, TArray<class AActor*>* OutSignalDevices, class UNiagaraSystem* NiagaraTemplate, TArray<class UNiagaraComponent*>* SpawnedNiagaraComponents);
+	static bool FindNearestNonOverlappingCapsuleLocation(class UObject* WorldContextObject, const struct FVector& DesiredLocation, float CapsuleRadius, float CapsuleHalfHeight, struct FVector* OutLocation, ECollisionChannel CollisionChannel, float HorizontalSearchRadius, float UpSearchDistance, float DownSearchDistance, float HorizontalStep, float VerticalStep, int32 AngularSteps, const TArray<class AActor*>& ActorsToIgnore, bool bRequireFloorBelow, float FloorCheckDistance, ECollisionChannel FloorTraceChannel, bool bDebugDraw, float DebugDrawTime);
 
 public:
 	static class UClass* StaticClass()
@@ -479,6 +480,7 @@ public:
 	static void GetNintendoBpCurrentSettings(bool* bFreeCommunication, TArray<struct FNintendoRestrictionLevelSetting>* RestrictionLevels);
 	static bool HasNintendoFreeCommunicationSetting();
 	static bool IsNintendoFreeCommunicationAvailable();
+	static bool IsNintendoParentalControlEnabled();
 	static bool TryBeginNintendoFreeCommunication(bool bShowUI);
 
 public:

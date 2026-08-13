@@ -26,11 +26,11 @@ public:
 	class ABP_GameMode_cLeon_C*                   As_BP_Game_Mode_C_Leon;                            // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
-	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
-	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);
 	void BPI_InteractEnd();
+	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);
+	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
+	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

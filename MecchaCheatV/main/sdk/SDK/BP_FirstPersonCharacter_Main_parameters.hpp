@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "EN_DamageType_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
-#include "PenguinHotel_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "DeathType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
-#include "FinishFilter_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "FinishFilter_structs.hpp"
 #include "EN_InputBlockDeviceType_structs.hpp"
+#include "PenguinHotel_structs.hpp"
 #include "Mover_structs.hpp"
 #include "EnhancedInput_structs.hpp"
 #include "UMG_structs.hpp"
 #include "ST_OptionObject_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "DeathType_structs.hpp"
 #include "EN_StanType_structs.hpp"
 
 
@@ -1758,32 +1758,33 @@ public:
 	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMoverLaunchInputs                     K2Node_MakeStruct_MoverLaunchInputs;               // 0x00D0(0x0028)()
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_VSizeSquared_ReturnValue;                 // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSizeSquared_ReturnValue;                 // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_102[0x6];                                      // 0x0102(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default_1;                           // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector_X;                            // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Z;                            // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default;                             // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default_1;                           // 0x0162(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0163(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_164[0xC];                                      // 0x0164(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetRootMotionDelta_OutDeltaTransform;     // 0x0170(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetRootMotionDelta_ReturnValue;           // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue_1;               // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMoverDataCollection                   K2Node_MakeStruct_MoverDataCollection;             // 0x01F0(0x0010)()
-	struct FVector                                CallFunc_SelectVector_ReturnValue_2;               // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_SelectVector_ReturnValue_3;               // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMoverInputCmdContext                  K2Node_MakeStruct_MoverInputCmdContext;            // 0x0230(0x0010)()
-	struct FMyClimbingInputBatch                  K2Node_MakeStruct_MyClimbingInputBatch;            // 0x0240(0x00A0)(ContainsInstancedReference)
-	struct FRotator                               CallFunc_GetControlRotation_ReturnValue;           // 0x02E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetRootMotionDelta_OutDeltaTransform;     // 0x0160(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetRootMotionDelta_ReturnValue;           // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMoverDataCollection                   K2Node_MakeStruct_MoverDataCollection;             // 0x01D0(0x0010)()
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMoverInputCmdContext                  K2Node_MakeStruct_MoverInputCmdContext;            // 0x01E8(0x0010)()
+	struct FVector                                CallFunc_SelectVector_ReturnValue_1;               // 0x01F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_SelectVector_ReturnValue_2;               // 0x0210(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetControlRotation_ReturnValue;           // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_SelectVector_ReturnValue_3;               // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMyClimbingInputBatch                  K2Node_MakeStruct_MyClimbingInputBatch;            // 0x0258(0x00A0)(ContainsInstancedReference)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_OnProduceInputInBlueprint;
 

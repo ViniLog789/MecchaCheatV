@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ST_EventValue_structs.hpp"
 #include "EN_CinemaPlayMode_structs.hpp"
+#include "ST_EventValue_structs.hpp"
 
 
 SDK_NAMESPACE_START

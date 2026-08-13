@@ -76,6 +76,29 @@ void UWBP_ReportContent_C::OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const str
 }
 
 
+// Function WBP_ReportContent.WBP_ReportContent_C.DoCustomNavigation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_ReportContent_C::DoCustomNavigation(EUINavigation Navigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ReportContent_C", "DoCustomNavigation");
+
+	Params::WBP_ReportContent_C_DoCustomNavigation Parms{};
+
+	Parms.Navigation = Navigation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_ReportContent.WBP_ReportContent_C.BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
 // (BlueprintEvent)
 

@@ -106,6 +106,52 @@ void UWBP_VoiceChatUserSettings_C::OnFinished_1657203944876F75161AA6986A7C9FD9(c
 }
 
 
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.DoCustomNavigation_TopReportContent
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_VoiceChatUserSettings_C::DoCustomNavigation_TopReportContent(EUINavigation Navigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "DoCustomNavigation_TopReportContent");
+
+	Params::WBP_VoiceChatUserSettings_C_DoCustomNavigation_TopReportContent Parms{};
+
+	Parms.Navigation = Navigation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.DoCustomNavigation_SliderTop
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_VoiceChatUserSettings_C::DoCustomNavigation_SliderTop(EUINavigation Navigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "DoCustomNavigation_SliderTop");
+
+	Params::WBP_VoiceChatUserSettings_C_DoCustomNavigation_SliderTop Parms{};
+
+	Parms.Navigation = Navigation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ConstructSetup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -742,6 +742,70 @@ void UCPP_FunctionLibrary::CPP_UpdateLine(class UObject* WorldContextObject, TAr
 }
 
 
+// Function PenguinHotel.CPP_FunctionLibrary.FindNearestNonOverlappingCapsuleLocation
+// (Final, Native, Static, Private, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   DesiredLocation                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CapsuleRadius                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CapsuleHalfHeight                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         OutLocation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ECollisionChannel                       CollisionChannel                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   HorizontalSearchRadius                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   UpSearchDistance                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DownSearchDistance                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   HorizontalStep                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   VerticalStep                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   AngularSteps                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            ActorsToIgnore                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
+// bool                                    bRequireFloorBelow                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   FloorCheckDistance                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ECollisionChannel                       FloorTraceChannel                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDebugDraw                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DebugDrawTime                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCPP_FunctionLibrary::FindNearestNonOverlappingCapsuleLocation(class UObject* WorldContextObject, const struct FVector& DesiredLocation, float CapsuleRadius, float CapsuleHalfHeight, struct FVector* OutLocation, ECollisionChannel CollisionChannel, float HorizontalSearchRadius, float UpSearchDistance, float DownSearchDistance, float HorizontalStep, float VerticalStep, int32 AngularSteps, const TArray<class AActor*>& ActorsToIgnore, bool bRequireFloorBelow, float FloorCheckDistance, ECollisionChannel FloorTraceChannel, bool bDebugDraw, float DebugDrawTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CPP_FunctionLibrary", "FindNearestNonOverlappingCapsuleLocation");
+
+	Params::CPP_FunctionLibrary_FindNearestNonOverlappingCapsuleLocation Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.DesiredLocation = std::move(DesiredLocation);
+	Parms.CapsuleRadius = CapsuleRadius;
+	Parms.CapsuleHalfHeight = CapsuleHalfHeight;
+	Parms.CollisionChannel = CollisionChannel;
+	Parms.HorizontalSearchRadius = HorizontalSearchRadius;
+	Parms.UpSearchDistance = UpSearchDistance;
+	Parms.DownSearchDistance = DownSearchDistance;
+	Parms.HorizontalStep = HorizontalStep;
+	Parms.VerticalStep = VerticalStep;
+	Parms.AngularSteps = AngularSteps;
+	Parms.ActorsToIgnore = std::move(ActorsToIgnore);
+	Parms.bRequireFloorBelow = bRequireFloorBelow;
+	Parms.FloorCheckDistance = FloorCheckDistance;
+	Parms.FloorTraceChannel = FloorTraceChannel;
+	Parms.bDebugDraw = bDebugDraw;
+	Parms.DebugDrawTime = DebugDrawTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutLocation != nullptr)
+		*OutLocation = std::move(Parms.OutLocation);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PenguinHotel.CPP_Glue.AddCustomRevicePower
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -2338,6 +2402,31 @@ bool UCustomFunctionLibraryNintendo::IsNintendoFreeCommunicationAvailable()
 		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "IsNintendoFreeCommunicationAvailable");
 
 	Params::CustomFunctionLibraryNintendo_IsNintendoFreeCommunicationAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoParentalControlEnabled
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomFunctionLibraryNintendo::IsNintendoParentalControlEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "IsNintendoParentalControlEnabled");
+
+	Params::CustomFunctionLibraryNintendo_IsNintendoParentalControlEnabled Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

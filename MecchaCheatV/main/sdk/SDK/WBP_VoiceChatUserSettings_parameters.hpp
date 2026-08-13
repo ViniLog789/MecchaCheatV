@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "PenguinHotel_structs.hpp"
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "PenguinHotel_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -44,6 +45,33 @@ public:
 	struct FEOSPlayerReportResult                 Result;                                            // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_OnFinished_1657203944876F75161AA6986A7C9FD9;
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.DoCustomNavigation_TopReportContent
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_VoiceChatUserSettings_C_DoCustomNavigation_TopReportContent final
+{
+public:
+	EUINavigation                                 Navigation;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_DoCustomNavigation_TopReportContent;
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.DoCustomNavigation_SliderTop
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_VoiceChatUserSettings_C_DoCustomNavigation_SliderTop final
+{
+public:
+	EUINavigation                                 Navigation;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_DoCustomNavigation_SliderTop;
 
 // Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ConstructSetup
 // 0x0008 (0x0008 - 0x0000)

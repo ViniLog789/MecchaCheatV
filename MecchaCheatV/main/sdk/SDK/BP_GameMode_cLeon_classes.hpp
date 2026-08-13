@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_FirstPersonGameMode_V2_classes.hpp"
 #include "EN_cLeonBodyType_structs.hpp"
+#include "BP_FirstPersonGameMode_V2_classes.hpp"
 
 
 SDK_NAMESPACE_START

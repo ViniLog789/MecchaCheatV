@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character_Survivor_Default_Cube_1point4.BP_FirstPersonCharacter_cLeon_Character_Survivor_Default_Cube_1point4_C
-// 0x0000 (0x0D70 - 0x0D70)
+// 0x0000 (0x0D90 - 0x0D90)
 class ABP_FirstPersonCharacter_cLeon_Character_Survivor_Default_Cube_1point4_C final : public ABP_FirstPersonCharacter_cLeon_Character_Survivor_Default_Base_C
 {
 public:

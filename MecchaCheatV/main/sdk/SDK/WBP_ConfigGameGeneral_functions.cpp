@@ -120,6 +120,20 @@ void UWBP_ConfigGameGeneral_C::BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_S
 }
 
 
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_BrushSencibility_K2Node_ComponentBoundEvent_3_UpdateScreenSetting__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_ConfigGameGeneral_C::BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_BrushSencibility_K2Node_ComponentBoundEvent_3_UpdateScreenSetting__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_BrushSencibility_K2Node_ComponentBoundEvent_3_UpdateScreenSetting__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.ApplySettings
 // (BlueprintCallable, BlueprintEvent)
 

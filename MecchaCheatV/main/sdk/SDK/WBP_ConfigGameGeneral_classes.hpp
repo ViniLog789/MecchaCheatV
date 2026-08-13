@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C
-// 0x0058 (0x0398 - 0x0340)
+// 0x0060 (0x03A0 - 0x0340)
 class UWBP_ConfigGameGeneral_C final : public UUserWidget
 {
 public:
@@ -25,12 +25,13 @@ public:
 	class UWBP_ToggleOption_C*                    WBP_ToggleOption_InvertX;                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_SettingSlider_C*                   WBP_SettingSlider_Sencibility;                     // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_SettingSlider_C*                   WBP_SettingSlider_Difficulty;                      // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ComboBox_InputDevice_C*            WBP_ComboBox_InputDevice;                          // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_0;                                     // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_0;                                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget*                                Before_Widget;                                     // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_ConfigSaveGame_C*                   As_BP_Config_Save_Game;                            // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UBPGI_Main_C*                           As_BPGI_Main;                                      // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWBP_SettingSlider_C*                   WBP_SettingSlider_BrushSencibility;                // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ComboBox_InputDevice_C*            WBP_ComboBox_InputDevice;                          // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_0;                                     // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget*                                Before_Widget;                                     // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_ConfigSaveGame_C*                   As_BP_Config_Save_Game;                            // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UBPGI_Main_C*                           As_BPGI_Main;                                      // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ScreenTypeSettingsUpdate();
@@ -40,6 +41,7 @@ public:
 	void BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertY_K2Node_ComponentBoundEvent_2_UpdateSettings__DelegateSignature();
 	void BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertX_K2Node_ComponentBoundEvent_1_UpdateSettings__DelegateSignature();
 	void BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature();
+	void BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_BrushSencibility_K2Node_ComponentBoundEvent_3_UpdateScreenSetting__DelegateSignature();
 	void ApplySettings();
 
 public:

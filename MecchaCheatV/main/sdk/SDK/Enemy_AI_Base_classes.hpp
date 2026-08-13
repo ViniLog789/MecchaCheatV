@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "EN_DamageType_structs.hpp"
-#include "ST_AttackDatas_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EN_ThrowState_structs.hpp"
 #include "EN_StrafingDirection_structs.hpp"
+#include "AttackType_structs.hpp"
 #include "EN_EnemyType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EN_ThrowState_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "ST_AttackDatas_structs.hpp"
+#include "AIModule_structs.hpp"
 #include "ENUM_ActorType_structs.hpp"
 #include "EN_StanType_structs.hpp"
 #include "ENUM_CameraMode_structs.hpp"
-#include "AIModule_structs.hpp"
-#include "AttackType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -95,7 +95,7 @@ public:
 	bool                                          IsStrafing;                                        // 0x08F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8F5[0x3];                                      // 0x08F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ReciveDamageValue;                                 // 0x08F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class WBP_LockOn::UWBP_LockOn_C*              LockOnUI;                                          // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class WBP_LockOn_0::UWBP_LockOn_C*            LockOnUI;                                          // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        MaxHealth;                                         // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Add_Multiply;                                      // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(EN_ThrowState ThrowState)> ThrowEvent;                             // 0x0918(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)

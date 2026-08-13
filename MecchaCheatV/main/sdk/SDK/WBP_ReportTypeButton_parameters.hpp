@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
+
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
@@ -31,6 +33,17 @@ public:
 	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ReportTypeButton_C_PreConstruct;
+
+// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.DoCustomNavigation
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_ReportTypeButton_C_DoCustomNavigation final
+{
+public:
+	EUINavigation                                 Navigation;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ReportTypeButton_C_DoCustomNavigation;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

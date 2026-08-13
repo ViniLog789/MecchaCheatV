@@ -40,6 +40,7 @@ public:
 	class FText                                   EmptyDefaultText;                                  // 0x0978(0x0010)(Edit, BlueprintVisible)
 	EVirtualKeyboardType                          Keyboard_Type;                                     // 0x0988(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          NoVirtualKeyBoardIsCS;                             // 0x0989(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SanitizeInappropriateWords;                        // 0x098A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void TextNumUpdate();

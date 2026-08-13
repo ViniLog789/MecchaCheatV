@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UINavigation_structs.hpp"
 #include "ST_KeyImageComboBase_structs.hpp"
 #include "UMG_classes.hpp"
-#include "UINavigation_structs.hpp"
 
 
 SDK_NAMESPACE_START

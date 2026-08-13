@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "UINavigation_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ReportTypeButton.WBP_ReportTypeButton_C
-// 0x0030 (0x0940 - 0x0910)
+// 0x0040 (0x0950 - 0x0910)
 class UWBP_ReportTypeButton_C final : public UUINavComponent
 {
 public:
@@ -26,10 +27,12 @@ public:
 	int32                                         Index_0;                                           // 0x0928(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_92C[0x4];                                      // 0x092C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(class UWBP_ReportTypeButton_C* SelfObject)> OnPushButton;          // 0x0930(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWidget*                                UnderContent;                                      // 0x0940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void SelectStateUpdate(bool State);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	class UWidget* DoCustomNavigation(EUINavigation Navigation);
 	void Construct();
 	void BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 

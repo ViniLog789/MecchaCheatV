@@ -11,30 +11,33 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ReportContent.WBP_ReportContent_C
-// 0x0070 (0x03B0 - 0x0340)
+// 0x0078 (0x03B8 - 0x0340)
 class UWBP_ReportContent_C final : public UUserWidget
 {
 public:
 	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWrapBox*                               WrapBox_24;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_NavMultipleInputTextBlock_C*       WBP_NavMultipleInputTextBlock;                     // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation;                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           ReportButton;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_0;                                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FUniqueNetIdRepl                       TargetUniqueId;                                    // 0x0368(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	int32                                         CurrentSelectReportCategory;                       // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWBP_ReportTypeButton_C*>        ReportButtons;                                     // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UWBP_ReportTypeButton_C*                ZeroContentTop;                                    // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnPushButton(class UWBP_ReportTypeButton_C* SelfObject);
 	void OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const struct FEOSPlayerReportResult& Result);
+	class UWidget* DoCustomNavigation(EUINavigation Navigation);
 	void BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 
 public:
