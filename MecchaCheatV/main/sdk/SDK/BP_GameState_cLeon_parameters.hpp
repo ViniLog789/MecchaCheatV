@@ -10,10 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "EN_cLeonMainGamePhase_structs.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "ST_cLeonMapData_structs.hpp"
 #include "SteamWorkshopMaps_structs.hpp"
-#include "OnlineSubsystemBlueprints_structs.hpp"
-#include "EN_cLeonMainGamePhase_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,6 +28,31 @@ public:
 	class ABP_FirstPersonPlayerState_Online_C*    WinnerPlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_Winner;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateMOUEEYOState
+// 0x0050 (0x0050 - 0x0000)
+struct BP_GameState_cLeon_C_UpdateMOUEEYOState final
+{
+public:
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* K2Node_DynamicCast_AsBP_First_Person_Player_State_Online_C_Leon; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_cLeonMainGamePhase                         Temp_byte_Variable;                                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ABP_FirstPersonPlayerState_Online_C*> CallFunc_GetAllActorsOfClass_OutActors;       // 0x0020(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIntVector2                            K2Node_MakeStruct_IntVector2;                      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_UpdateMOUEEYOState;
 
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateBulletWidget
 // 0x0004 (0x0004 - 0x0000)

@@ -94,21 +94,15 @@ enum class EGeometryCollectionDebugDrawActorHideGeometry : uint8
 	EGeometryCollectionDebugDrawActorHideGeometry_MAX = 5,
 };
 
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionSource
-// 0x00B0 (0x00B0 - 0x0000)
-struct FGeometryCollectionSource final
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionRenderResourceSizeInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FGeometryCollectionRenderResourceSizeInfo final
 {
 public:
-	struct FSoftObjectPath                        SourceGeometryObject;                              // 0x0000(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             LocalTransform;                                    // 0x0020(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             SourceMaterial;                                    // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<float>                                 InstanceCustomData;                                // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bAddInternalMaterials;                             // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSplitComponents;                                  // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetInternalFromMaterialIndex;                     // 0x00A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A3[0xD];                                       // 0x00A3(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint64                                        MeshResourcesSize;                                 // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint64                                        NaniteResourcesSize;                               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGeometryCollectionSource;
+DUMPER7_ASSERTS_FGeometryCollectionRenderResourceSizeInfo;
 
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionRepStateData
 // 0x0040 (0x0040 - 0x0000)
@@ -200,14 +194,55 @@ public:
 };
 DUMPER7_ASSERTS_FGeometryCollectionRepData;
 
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionDebugDrawWarningMessage
-// 0x0001 (0x0001 - 0x0000)
-struct FGeometryCollectionDebugDrawWarningMessage final
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionLevelSetData
+// 0x0010 (0x0010 - 0x0000)
+struct FGeometryCollectionLevelSetData final
 {
 public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         MinLevelSetResolution;                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxLevelSetResolution;                             // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinClusterLevelSetResolution;                      // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxClusterLevelSetResolution;                      // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGeometryCollectionDebugDrawWarningMessage;
+DUMPER7_ASSERTS_FGeometryCollectionLevelSetData;
+
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionCollisionParticleData
+// 0x0008 (0x0008 - 0x0000)
+struct FGeometryCollectionCollisionParticleData final
+{
+public:
+	float                                         CollisionParticlesFraction;                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumCollisionParticles;                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGeometryCollectionCollisionParticleData;
+
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionCollisionTypeData
+// 0x0024 (0x0024 - 0x0000)
+struct FGeometryCollectionCollisionTypeData final
+{
+public:
+	ECollisionTypeEnum                            CollisionType;                                     // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EImplicitTypeEnum                             ImplicitType;                                      // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryCollectionLevelSetData        LevelSet;                                          // 0x0004(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryCollectionCollisionParticleData CollisionParticles;                              // 0x0014(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         CollisionObjectReductionPercentage;                // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CollisionMarginFraction;                           // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGeometryCollectionCollisionTypeData;
+
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionSizeSpecificData
+// 0x0020 (0x0020 - 0x0000)
+struct FGeometryCollectionSizeSpecificData final
+{
+public:
+	float                                         MaxSize;                                           // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGeometryCollectionCollisionTypeData> CollisionShapes;                             // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         DamageThreshold;                                   // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGeometryCollectionSizeSpecificData;
 
 // ScriptStruct GeometryCollectionEngine.GeomComponentCacheParameters
 // 0x0050 (0x0050 - 0x0000)
@@ -302,6 +337,15 @@ public:
 };
 DUMPER7_ASSERTS_FChaosTrailingEventRequestSettings;
 
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionDebugDrawWarningMessage
+// 0x0001 (0x0001 - 0x0000)
+struct FGeometryCollectionDebugDrawWarningMessage final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGeometryCollectionDebugDrawWarningMessage;
+
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionDebugDrawActorSelectedRigidBody
 // 0x0018 (0x0018 - 0x0000)
 struct FGeometryCollectionDebugDrawActorSelectedRigidBody final
@@ -313,6 +357,22 @@ public:
 	class AGeometryCollectionActor*               GeometryCollection;                                // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FGeometryCollectionDebugDrawActorSelectedRigidBody;
+
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionSource
+// 0x00B0 (0x00B0 - 0x0000)
+struct FGeometryCollectionSource final
+{
+public:
+	struct FSoftObjectPath                        SourceGeometryObject;                              // 0x0000(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             LocalTransform;                                    // 0x0020(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             SourceMaterial;                                    // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<float>                                 InstanceCustomData;                                // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bAddInternalMaterials;                             // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSplitComponents;                                  // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetInternalFromMaterialIndex;                     // 0x00A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A3[0xD];                                       // 0x00A3(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGeometryCollectionSource;
 
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionAutoInstanceMesh
 // 0x0030 (0x0030 - 0x0000)
@@ -340,56 +400,6 @@ public:
 };
 DUMPER7_ASSERTS_FGeometryCollectionEmbeddedExemplar;
 
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionLevelSetData
-// 0x0010 (0x0010 - 0x0000)
-struct FGeometryCollectionLevelSetData final
-{
-public:
-	int32                                         MinLevelSetResolution;                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxLevelSetResolution;                             // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinClusterLevelSetResolution;                      // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxClusterLevelSetResolution;                      // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGeometryCollectionLevelSetData;
-
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionCollisionParticleData
-// 0x0008 (0x0008 - 0x0000)
-struct FGeometryCollectionCollisionParticleData final
-{
-public:
-	float                                         CollisionParticlesFraction;                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumCollisionParticles;                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGeometryCollectionCollisionParticleData;
-
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionCollisionTypeData
-// 0x0024 (0x0024 - 0x0000)
-struct FGeometryCollectionCollisionTypeData final
-{
-public:
-	ECollisionTypeEnum                            CollisionType;                                     // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EImplicitTypeEnum                             ImplicitType;                                      // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryCollectionLevelSetData        LevelSet;                                          // 0x0004(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGeometryCollectionCollisionParticleData CollisionParticles;                              // 0x0014(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         CollisionObjectReductionPercentage;                // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CollisionMarginFraction;                           // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGeometryCollectionCollisionTypeData;
-
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionSizeSpecificData
-// 0x0020 (0x0020 - 0x0000)
-struct FGeometryCollectionSizeSpecificData final
-{
-public:
-	float                                         MaxSize;                                           // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGeometryCollectionCollisionTypeData> CollisionShapes;                             // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         DamageThreshold;                                   // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FGeometryCollectionSizeSpecificData;
-
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionProxyMeshData
 // 0x0020 (0x0020 - 0x0000)
 struct FGeometryCollectionProxyMeshData final
@@ -399,15 +409,5 @@ public:
 	TArray<struct FTransform3f>                   MeshTransforms;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGeometryCollectionProxyMeshData;
-
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionRenderResourceSizeInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FGeometryCollectionRenderResourceSizeInfo final
-{
-public:
-	uint64                                        MeshResourcesSize;                                 // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint64                                        NaniteResourcesSize;                               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGeometryCollectionRenderResourceSizeInfo;
 
 SDK_NAMESPACE_END

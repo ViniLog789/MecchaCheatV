@@ -312,6 +312,28 @@ void UWBP_cLeonMain_C::NamePlateVisibilityChange(bool Visibility)
 }
 
 
+// Function WBP_cLeonMain.WBP_cLeonMain_C.MOUIIYO_Change
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FIntVector2&               ValueAndMax                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ButtonActiveState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonMain_C::MOUIIYO_Change(const struct FIntVector2& ValueAndMax, bool ButtonActiveState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonMain_C", "MOUIIYO_Change");
+
+	Params::WBP_cLeonMain_C_MOUIIYO_Change Parms{};
+
+	Parms.ValueAndMax = std::move(ValueAndMax);
+	Parms.ButtonActiveState = ButtonActiveState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_cLeonMain.WBP_cLeonMain_C.MapDataUpdate
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

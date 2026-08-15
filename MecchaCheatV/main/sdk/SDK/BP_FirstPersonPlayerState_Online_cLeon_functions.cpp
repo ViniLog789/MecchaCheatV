@@ -150,6 +150,20 @@ void ABP_FirstPersonPlayerState_Online_cLeon_C::SetBodyClass(class UClass* Curre
 }
 
 
+// Function BP_FirstPersonPlayerState_Online_cLeon.BP_FirstPersonPlayerState_Online_cLeon_C.SendMouiiyo
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonPlayerState_Online_cLeon_C::SendMouiiyo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_Online_cLeon_C", "SendMouiiyo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_FirstPersonPlayerState_Online_cLeon.BP_FirstPersonPlayerState_Online_cLeon_C.ReciveEEYAN
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:

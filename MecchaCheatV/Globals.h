@@ -20,7 +20,7 @@ namespace MecchaCheatV::Globals
 	inline HMODULE globalModule{};
 	inline std::atomic<bool> CheatWork{ false };
 	inline int MenuToggleKey = VK_RETURN; // Enter
-	inline std::string Version = "1.11.0";
+	inline std::string Version = "1.12.0";
 	inline const char* GitHubRepository = "https://github.com/ViniLog789/MecchaCheatV";
 	inline ProcessEvent_t hookedProcessEvent = nullptr;
 	inline bool needTeleport = false;

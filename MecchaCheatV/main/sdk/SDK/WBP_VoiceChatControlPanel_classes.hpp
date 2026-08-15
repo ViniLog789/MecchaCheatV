@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C
-// 0x0030 (0x0370 - 0x0340)
+// 0x0038 (0x0378 - 0x0340)
 class UWBP_VoiceChatControlPanel_C final : public UUserWidget
 {
 public:
@@ -26,6 +26,7 @@ public:
 	class UWBP_SettingVoiceInputDevice_C*         WBP_SettingVoiceInputDevice;                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UScrollBox*                             ScrollBox_52;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<struct FUniqueNetIdRepl>               BoxTarget;                                         // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWBP_VoiceChatUserSettings_C*           PreContent;                                        // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();

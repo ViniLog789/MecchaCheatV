@@ -18,7 +18,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C
-// 0x0060 (0x03A0 - 0x0340)
+// 0x0098 (0x03D8 - 0x0340)
 class UWBP_VoiceChatUserSettings_C final : public UUserWidget
 {
 public:
@@ -29,11 +29,17 @@ public:
 	class UTextBlock*                             PingText;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_Kick_1;                  // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_Kick;                    // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_99;                                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          UseVoiceChatSettings;                              // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 UserNameString;                                    // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UWidget*                                OverrideTop;                                       // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation_BAN;                     // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_99;                                          // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_0;                                          // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          UseVoiceChatSettings;                              // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 UserNameString;                                    // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UWidget*                                OverrideTop;                                       // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              ReGenerate;                                        // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWidget*                                OverrideUnerContents;                              // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_VoiceChatUserSettings_C*           UnderContent;                                      // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UWidget*                                FromTopContent;                                    // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
@@ -43,11 +49,13 @@ public:
 	void OnFinished_1657203944876F75161AA6986A7C9FD9(const struct FEOSPlayerReportResult& Result);
 	class UWidget* DoCustomNavigation_TopReportContent(EUINavigation Navigation);
 	class UWidget* DoCustomNavigation_SliderTop(EUINavigation Navigation);
+	class UWidget* DoCustomNavigation(EUINavigation Navigation);
 	void ConstructSetup(class ABP_FirstPersonPlayerState_Online_C* TargetPlayerState);
 	void Construct();
 	void BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
 	void BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
 	void BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
+	void BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_BAN_K2Node_ComponentBoundEvent_3_PushEnd__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

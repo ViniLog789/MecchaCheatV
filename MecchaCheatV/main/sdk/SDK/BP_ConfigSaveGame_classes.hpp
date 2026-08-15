@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "EN_InputJudgementType_structs.hpp"
-#include "ST_OptionObject_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ST_OptionObject_structs.hpp"
 
 
 SDK_NAMESPACE_START

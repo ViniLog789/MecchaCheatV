@@ -4502,6 +4502,33 @@ void UModBlueprintLibrary::UnloadModLevelInstance(class ULevelStreamingDynamic* 
 }
 
 
+// Function PenguinHotel.MyGameModeBase.BanPlayer
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Reason                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AMyGameModeBase::BanPlayer(class APlayerController* PlayerController, const class FString& Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MyGameModeBase", "BanPlayer");
+
+	Params::MyGameModeBase_BanPlayer Parms{};
+
+	Parms.PlayerController = PlayerController;
+	Parms.Reason = std::move(Reason);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PenguinHotel.MyGameModeBase.GetSeamlessTravelActorListBPF
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PlayerController_cLeon.BP_PlayerController_cLeon_C
-// 0x0088 (0x0800 - 0x0778)
+// 0x0098 (0x0810 - 0x0778)
 class ABP_PlayerController_cLeon_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
@@ -40,6 +40,9 @@ public:
 	class UWBP_ChooseBody_C*                      ChooseBody;                                        // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CanPenterationForce;                               // 0x07F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WidgetVisibileState;                               // 0x07F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7FA[0x6];                                      // 0x07FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_GameState_cLeon_C*                  As_BP_Game_State_C_Leon;                           // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerStatecLeon;                               // 0x0808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void TeleportMovie();
@@ -48,15 +51,15 @@ public:
 	void OnNamePlateVisibilityChange(bool Visibility);
 	class AActor* NearSurvivor_IgnoreSelf(const struct FVector& Location, const struct FVector& Direction, float* OutDotProduct);
 	void InpActEvt_U_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
-	void InpActEvt_Three_K2Node_InputKeyEvent_8(const struct FKey& Key);
-	void InpActEvt_Six_K2Node_InputKeyEvent_7(const struct FKey& Key);
+	void InpActEvt_Three_K2Node_InputKeyEvent_6(const struct FKey& Key);
+	void InpActEvt_Six_K2Node_InputKeyEvent_5(const struct FKey& Key);
+	void InpActEvt_IA_MOUIIYO_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_EEYAN_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_1(const struct FKey& Key);
 	void InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0(const struct FKey& Key);
-	void InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_3(const struct FKey& Key);
-	void InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_4(const struct FKey& Key);
-	void InpActEvt_G_K2Node_InputKeyEvent_6(const struct FKey& Key);
-	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_5(const struct FKey& Key);
+	void InpActEvt_Gamepad_FaceButton_Right_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_3(const struct FKey& Key);
+	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_4(const struct FKey& Key);
 	void hide();
 	void GetPawnCentorLocation(struct FVector* ReturnLocation);
 	void Finish();

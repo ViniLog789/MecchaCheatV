@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Niagara_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Niagara_structs.hpp"
 
 
 SDK_NAMESPACE_START

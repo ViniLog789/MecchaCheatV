@@ -99,15 +99,16 @@ public:
 };
 DUMPER7_ASSERTS_FGameplayDebuggerCategoryData;
 
-// ScriptStruct GameplayDebugger.GameplayDebuggerNetPack
+// ScriptStruct GameplayDebugger.GameplayDebuggerPlayerData
 // 0x0018 (0x0018 - 0x0000)
-struct FGameplayDebuggerNetPack final
+struct FGameplayDebuggerPlayerData final
 {
 public:
-	class AGameplayDebuggerCategoryReplicator*    Owner;                                             // 0x0000(0x0008)(ZeroConstructor, RepSkip, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<struct FGameplayDebuggerCategoryData>  SavedData;                                         // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	class UGameplayDebuggerLocalController*       Controller;                                        // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInputComponent*                        InputComponent;                                    // 0x0008(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class AGameplayDebuggerCategoryReplicator*    Replicator;                                        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FGameplayDebuggerNetPack;
+DUMPER7_ASSERTS_FGameplayDebuggerPlayerData;
 
 // ScriptStruct GameplayDebugger.GameplayDebuggerDebugActor
 // 0x0014 (0x0014 - 0x0000)
@@ -120,6 +121,16 @@ public:
 	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGameplayDebuggerDebugActor;
+
+// ScriptStruct GameplayDebugger.GameplayDebuggerNetPack
+// 0x0018 (0x0018 - 0x0000)
+struct FGameplayDebuggerNetPack final
+{
+public:
+	class AGameplayDebuggerCategoryReplicator*    Owner;                                             // 0x0000(0x0008)(ZeroConstructor, RepSkip, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<struct FGameplayDebuggerCategoryData>  SavedData;                                         // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FGameplayDebuggerNetPack;
 
 // ScriptStruct GameplayDebugger.GameplayDebuggerVisLogSync
 // 0x0010 (0x0010 - 0x0000)
@@ -173,16 +184,5 @@ public:
 	TArray<struct FGameplayDebuggerInputConfig>   InputHandlers;                                     // 0x0018(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGameplayDebuggerExtensionConfig;
-
-// ScriptStruct GameplayDebugger.GameplayDebuggerPlayerData
-// 0x0018 (0x0018 - 0x0000)
-struct FGameplayDebuggerPlayerData final
-{
-public:
-	class UGameplayDebuggerLocalController*       Controller;                                        // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UInputComponent*                        InputComponent;                                    // 0x0008(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class AGameplayDebuggerCategoryReplicator*    Replicator;                                        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FGameplayDebuggerPlayerData;
 
 SDK_NAMESPACE_END

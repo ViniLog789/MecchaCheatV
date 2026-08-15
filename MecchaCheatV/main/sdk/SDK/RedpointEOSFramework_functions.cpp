@@ -358,6 +358,66 @@ bool URedpointFrameworkBlueprintLibrary::IsRedpointFrameworkFreeEdition()
 }
 
 
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.IsVoiceChatDisabledByPlatformOverride
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          PlayerId                                               (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URedpointFrameworkBlueprintLibrary::IsVoiceChatDisabledByPlatformOverride(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RedpointFrameworkBlueprintLibrary", "IsVoiceChatDisabledByPlatformOverride");
+
+	Params::RedpointFrameworkBlueprintLibrary_IsVoiceChatDisabledByPlatformOverride Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerId = std::move(PlayerId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.IsVoiceChatEnabled
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          PlayerId                                               (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URedpointFrameworkBlueprintLibrary::IsVoiceChatEnabled(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RedpointFrameworkBlueprintLibrary", "IsVoiceChatEnabled");
+
+	Params::RedpointFrameworkBlueprintLibrary_IsVoiceChatEnabled Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerId = std::move(PlayerId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.KickPlayerController
 // (Final, BlueprintAuthorityOnly, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -521,6 +581,35 @@ void URedpointFrameworkBlueprintLibrary::SetVoiceChatAudioOutputDevice(class UOb
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.PlayerId = std::move(PlayerId);
 	Parms.DeviceID = std::move(DeviceID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.SetVoiceChatEnabled
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          PlayerId                                               (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URedpointFrameworkBlueprintLibrary::SetVoiceChatEnabled(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId, bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RedpointFrameworkBlueprintLibrary", "SetVoiceChatEnabled");
+
+	Params::RedpointFrameworkBlueprintLibrary_SetVoiceChatEnabled Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerId = std::move(PlayerId);
+	Parms.bEnabled = bEnabled;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

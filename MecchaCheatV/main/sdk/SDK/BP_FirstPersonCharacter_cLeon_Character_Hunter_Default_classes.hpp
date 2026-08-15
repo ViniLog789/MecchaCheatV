@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character_Hunter_Default.BP_FirstPersonCharacter_cLeon_Character_Hunter_Default_C
-// 0x0000 (0x0DF0 - 0x0DF0)
+// 0x0000 (0x0E00 - 0x0E00)
 class ABP_FirstPersonCharacter_cLeon_Character_Hunter_Default_C final : public ABP_FirstPersonCharacter_cLeon_Character_Hunter_C
 {
 public:

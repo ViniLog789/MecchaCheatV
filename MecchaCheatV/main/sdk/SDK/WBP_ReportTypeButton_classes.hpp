@@ -28,10 +28,12 @@ public:
 	uint8                                         Pad_92C[0x4];                                      // 0x092C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(class UWBP_ReportTypeButton_C* SelfObject)> OnPushButton;          // 0x0930(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UWidget*                                UnderContent;                                      // 0x0940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UWidget*                                TopContent;                                        // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void SelectStateUpdate(bool State);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	class UWidget* DoCustomNavigationTop(EUINavigation Navigation);
 	class UWidget* DoCustomNavigation(EUINavigation Navigation);
 	void Construct();
 	void BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();

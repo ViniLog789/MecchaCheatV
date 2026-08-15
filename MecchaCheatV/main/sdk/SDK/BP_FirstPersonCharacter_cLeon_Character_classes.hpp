@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "ST_ItemCoreDataArray_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
+#include "ST_ItemCoreDataArray_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
-#include "BP_FirstPersonCharacter_Main_classes.hpp"
 #include "EN_InputBlockDeviceType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "BP_FirstPersonCharacter_Main_classes.hpp"
+#include "Engine_structs.hpp"
 #include "UINavigation_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C
-// 0x01D0 (0x0D10 - 0x0B40)
+// 0x01E0 (0x0D20 - 0x0B40)
 class ABP_FirstPersonCharacter_cLeon_Character_C : public ABP_FirstPersonCharacter_Main_C
 {
 public:
@@ -95,6 +95,7 @@ public:
 	double                                        FloorDiff;                                         // 0x0CF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        BrushSpeed;                                        // 0x0D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TraceHead;                                         // 0x0D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TraceHeadRadius;                                   // 0x0D10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void MEChange();

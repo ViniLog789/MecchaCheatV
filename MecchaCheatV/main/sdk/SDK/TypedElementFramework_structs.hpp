@@ -43,23 +43,14 @@ struct FTypedElementClassDefaultObjectTag final : public FEditorDataStorageTag
 };
 DUMPER7_ASSERTS_FTypedElementClassDefaultObjectTag;
 
-// ScriptStruct TypedElementFramework.EditorDataStorageColumn
-// 0x0000 (0x0000 - 0x0000)
-#pragma pack(push, 0x1)
-struct SDK_ALIGN(0x01) FEditorDataStorageColumn
-{
-};
-#pragma pack(pop)
-DUMPER7_ASSERTS_FEditorDataStorageColumn;
-
-// ScriptStruct TypedElementFramework.ObjectOverrideColumn
-// 0x0001 (0x0001 - 0x0000)
-struct FObjectOverrideColumn final : public FEditorDataStorageColumn
+// ScriptStruct TypedElementFramework.SCCUserInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FSCCUserInfo final
 {
 public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Name;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FObjectOverrideColumn;
+DUMPER7_ASSERTS_FSCCUserInfo;
 
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -69,6 +60,15 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FScriptTypedElementHandle;
+
+// ScriptStruct TypedElementFramework.EditorDataStorageColumn
+// 0x0000 (0x0000 - 0x0000)
+#pragma pack(push, 0x1)
+struct SDK_ALIGN(0x01) FEditorDataStorageColumn
+{
+};
+#pragma pack(pop)
+DUMPER7_ASSERTS_FEditorDataStorageColumn;
 
 // ScriptStruct TypedElementFramework.TypedElementViewportOutlineColorColumn
 // 0x0001 (0x0001 - 0x0000)
@@ -134,6 +134,15 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTypedElementWorldColumn;
+
+// ScriptStruct TypedElementFramework.WidgetFactoryConstructorTypeInfoColumn
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FWidgetFactoryConstructorTypeInfoColumn final : public FEditorDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FWidgetFactoryConstructorTypeInfoColumn;
 
 // ScriptStruct TypedElementFramework.TypedElementPropertyBagPlaceholderTag
 // 0x0000 (0x0001 - 0x0001)
@@ -310,6 +319,15 @@ public:
 };
 DUMPER7_ASSERTS_FNameColumn;
 
+// ScriptStruct TypedElementFramework.ObjectOverrideColumn
+// 0x0001 (0x0001 - 0x0000)
+struct FObjectOverrideColumn final : public FEditorDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FObjectOverrideColumn;
+
 // ScriptStruct TypedElementFramework.TypedElementPackageUnresolvedReference
 // 0x0010 (0x0010 - 0x0000)
 struct alignas(0x08) FTypedElementPackageUnresolvedReference final : public FEditorDataStorageColumn
@@ -432,15 +450,6 @@ public:
 	struct FSCCRevisionId                         RevisionId;                                        // 0x0000(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSCCExternalRevisionIdColumn;
-
-// ScriptStruct TypedElementFramework.SCCUserInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FSCCUserInfo final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSCCUserInfo;
 
 // ScriptStruct TypedElementFramework.SCCExternallyLockedColumn
 // 0x0010 (0x0010 - 0x0000)
@@ -792,15 +801,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FWidgetFactoryColumn;
-
-// ScriptStruct TypedElementFramework.WidgetFactoryConstructorTypeInfoColumn
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FWidgetFactoryConstructorTypeInfoColumn final : public FEditorDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FWidgetFactoryConstructorTypeInfoColumn;
 
 // ScriptStruct TypedElementFramework.WidgetFactoryConstructorColumn
 // 0x0008 (0x0008 - 0x0000)

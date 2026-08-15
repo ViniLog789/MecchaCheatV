@@ -10,31 +10,31 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
 #include "PenguinHotel_classes.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C
-// 0x0088 (0x03D0 - 0x0348)
+// 0x0088 (0x0470 - 0x03E8)
 class ABP_FirstPersonGameMode_V2_C : public AMyGameModeBase
 {
 public:
-	uint8                                         Pad_348[0x8];                                      // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Pause_C*                           UIPause;                                           // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              DeleteUI;                                          // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<class AController*>                    ActivePlayers;                                     // 0x0370(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	TArray<class AController*>                    SpawnedControllers;                                // 0x0380(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TMulticastInlineDelegate<void()>              UpdateSpawnControllers;                            // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          UseVoiceChat;                                      // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      VoiceChatSoundAtt;                                 // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(int32 Current, int32 max_0)> MaxPlayerChange;                      // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<class UInputMappingContext*>           UseMappingContexts;                                // 0x03C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	uint8                                         Pad_3E8[0x8];                                      // 0x03E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Pause_C*                           UIPause;                                           // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              DeleteUI;                                          // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class AController*>                    ActivePlayers;                                     // 0x0410(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	TArray<class AController*>                    SpawnedControllers;                                // 0x0420(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              UpdateSpawnControllers;                            // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          UseVoiceChat;                                      // 0x0440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_441[0x7];                                      // 0x0441(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      VoiceChatSoundAtt;                                 // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(int32 Current, int32 max_0)> MaxPlayerChange;                      // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class UInputMappingContext*>           UseMappingContexts;                                // 0x0460(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void UpdateSpawnedControllers();

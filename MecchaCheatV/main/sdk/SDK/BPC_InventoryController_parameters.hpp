@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "ST_ItemCoreDatas_structs.hpp"
-#include "PenguinHotel_structs.hpp"
 #include "ST_OptionObject_structs.hpp"
+#include "PenguinHotel_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

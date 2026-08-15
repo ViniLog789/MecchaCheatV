@@ -732,18 +732,6 @@ public:
 };
 DUMPER7_ASSERTS_FFriendSettingsData;
 
-// ScriptStruct OnlineSubsystemBlueprints.PurchaseOfferEntryBP
-// 0x0028 (0x0028 - 0x0000)
-struct FPurchaseOfferEntryBP final
-{
-public:
-	class FString                                 OfferNamespace;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OfferId;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Quantity;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPurchaseOfferEntryBP;
-
 // ScriptStruct OnlineSubsystemBlueprints.ExternalUIFlowHandlerRegistration
 // 0x0018 (0x0018 - 0x0000)
 struct FExternalUIFlowHandlerRegistration final
@@ -754,15 +742,36 @@ public:
 };
 DUMPER7_ASSERTS_FExternalUIFlowHandlerRegistration;
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineStatsUserStatsBP
-// 0x0080 (0x0080 - 0x0000)
-struct FOnlineStatsUserStatsBP final
+// ScriptStruct OnlineSubsystemBlueprints.ShowWebUrlParameters
+// 0x0038 (0x0038 - 0x0000)
+struct FShowWebUrlParameters final
 {
 public:
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FVariantDataBP>    Stats;                                             // 0x0030(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          Embedded;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowCloseButton;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowBackground;                                    // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          HideCursor;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ResetCookies;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         OffsetX;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OffsetY;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SizeX;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SizeY;                                             // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AllowedDomains;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 CallbackPath;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOnlineStatsUserStatsBP;
+DUMPER7_ASSERTS_FShowWebUrlParameters;
+
+// ScriptStruct OnlineSubsystemBlueprints.ExternalIdQueryOptionsBP
+// 0x0018 (0x0018 - 0x0000)
+struct FExternalIdQueryOptionsBP final
+{
+public:
+	bool                                          bLookupByDisplayName;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AuthType;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FExternalIdQueryOptionsBP;
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlineMessagePayloadData
 // 0x0001 (0x0001 - 0x0000)
@@ -788,6 +797,18 @@ public:
 	int32                                         MaxRecipients;                                     // 0x00D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FShowSendMessageParameters;
+
+// ScriptStruct OnlineSubsystemBlueprints.PurchaseOfferEntryBP
+// 0x0028 (0x0028 - 0x0000)
+struct FPurchaseOfferEntryBP final
+{
+public:
+	class FString                                 OfferNamespace;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OfferId;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Quantity;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPurchaseOfferEntryBP;
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlineErrorInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -823,27 +844,6 @@ public:
 };
 DUMPER7_ASSERTS_FOnlineAccountCredential;
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineStatUpdateBP
-// 0x0038 (0x0038 - 0x0000)
-struct FOnlineStatUpdateBP final
-{
-public:
-	EOnlineStatModificationType_                  Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVariantDataBP                         Value;                                             // 0x0008(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOnlineStatUpdateBP;
-
-// ScriptStruct OnlineSubsystemBlueprints.OnlineStatsUserUpdatedStatsBP
-// 0x0080 (0x0080 - 0x0000)
-struct FOnlineStatsUserUpdatedStatsBP final
-{
-public:
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FOnlineStatUpdateBP> Stats;                                           // 0x0030(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOnlineStatsUserUpdatedStatsBP;
-
 // ScriptStruct OnlineSubsystemBlueprints.VoiceAdminChannelCredentialsBP
 // 0x0050 (0x0050 - 0x0000)
 struct FVoiceAdminChannelCredentialsBP final
@@ -867,36 +867,39 @@ public:
 };
 DUMPER7_ASSERTS_FBlockedQueryResultInfo;
 
-// ScriptStruct OnlineSubsystemBlueprints.ExternalIdQueryOptionsBP
-// 0x0018 (0x0018 - 0x0000)
-struct FExternalIdQueryOptionsBP final
+// ScriptStruct OnlineSubsystemBlueprints.ReportPlayedWithUserInfo
+// 0x0040 (0x0040 - 0x0000)
+struct FReportPlayedWithUserInfo final
 {
 public:
-	bool                                          bLookupByDisplayName;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AuthType;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PresenceStr;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FExternalIdQueryOptionsBP;
+DUMPER7_ASSERTS_FReportPlayedWithUserInfo;
 
-// ScriptStruct OnlineSubsystemBlueprints.ShowWebUrlParameters
-// 0x0038 (0x0038 - 0x0000)
-struct FShowWebUrlParameters final
+// ScriptStruct OnlineSubsystemBlueprints.OnlineStatsUserStatsBP
+// 0x0080 (0x0080 - 0x0000)
+struct FOnlineStatsUserStatsBP final
 {
 public:
-	bool                                          Embedded;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowCloseButton;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowBackground;                                    // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          HideCursor;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ResetCookies;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         OffsetX;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OffsetY;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SizeX;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SizeY;                                             // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AllowedDomains;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 CallbackPath;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FVariantDataBP>    Stats;                                             // 0x0030(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShowWebUrlParameters;
+DUMPER7_ASSERTS_FOnlineStatsUserStatsBP;
+
+// ScriptStruct OnlineSubsystemBlueprints.VoiceChatChannel3dPropertiesBP
+// 0x0010 (0x0010 - 0x0000)
+struct FVoiceChatChannel3dPropertiesBP final
+{
+public:
+	bool                                          bSet;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVoiceChatAttenuationModel_                   AttenuationModel;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinDistance;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDistance;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Rolloff;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVoiceChatChannel3dPropertiesBP;
 
 // ScriptStruct OnlineSubsystemBlueprints.VoiceChatResultBP
 // 0x0030 (0x0030 - 0x0000)
@@ -912,17 +915,6 @@ public:
 	class FString                                 ErrorDesc;                                         // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FVoiceChatResultBP;
-
-// ScriptStruct OnlineSubsystemBlueprints.ColumnMetaDataBP
-// 0x0018 (0x0018 - 0x0000)
-struct FColumnMetaDataBP final
-{
-public:
-	class FString                                 ColumnName;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOnlineKeyValuePairDataType_                  DataType;                                          // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FColumnMetaDataBP;
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlinePartyConfiguration
 // 0x0040 (0x0040 - 0x0000)
@@ -1066,16 +1058,6 @@ public:
 };
 DUMPER7_ASSERTS_FPagedQueryBP;
 
-// ScriptStruct OnlineSubsystemBlueprints.ReportPlayedWithUserInfo
-// 0x0040 (0x0040 - 0x0000)
-struct FReportPlayedWithUserInfo final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PresenceStr;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FReportPlayedWithUserInfo;
-
 // ScriptStruct OnlineSubsystemBlueprints.OnlineFriendSettingsSourceDataConfig
 // 0x0001 (0x0001 - 0x0000)
 struct FOnlineFriendSettingsSourceDataConfig final
@@ -1121,6 +1103,17 @@ public:
 	TMap<class FString, struct FVariantDataBP>    Columns;                                           // 0x0048(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FOnlineStatsRowBP;
+
+// ScriptStruct OnlineSubsystemBlueprints.ColumnMetaDataBP
+// 0x0018 (0x0018 - 0x0000)
+struct FColumnMetaDataBP final
+{
+public:
+	class FString                                 ColumnName;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOnlineKeyValuePairDataType_                  DataType;                                          // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FColumnMetaDataBP;
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlineLobbySearchQueryFilterBP
 // 0x0048 (0x0048 - 0x0000)
@@ -1197,6 +1190,27 @@ public:
 };
 DUMPER7_ASSERTS_FSessionSearchParamBP;
 
+// ScriptStruct OnlineSubsystemBlueprints.OnlineStatUpdateBP
+// 0x0038 (0x0038 - 0x0000)
+struct FOnlineStatUpdateBP final
+{
+public:
+	EOnlineStatModificationType_                  Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVariantDataBP                         Value;                                             // 0x0008(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOnlineStatUpdateBP;
+
+// ScriptStruct OnlineSubsystemBlueprints.OnlineStatsUserUpdatedStatsBP
+// 0x0080 (0x0080 - 0x0000)
+struct FOnlineStatsUserUpdatedStatsBP final
+{
+public:
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FOnlineStatUpdateBP> Stats;                                           // 0x0030(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOnlineStatsUserUpdatedStatsBP;
+
 // ScriptStruct OnlineSubsystemBlueprints.OnlineStoreCategoryBP
 // 0x0020 (0x0020 - 0x0000)
 struct FOnlineStoreCategoryBP final
@@ -1227,19 +1241,5 @@ public:
 	class FString                                 ID;                                                // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FVoiceChatDeviceInfoBP;
-
-// ScriptStruct OnlineSubsystemBlueprints.VoiceChatChannel3dPropertiesBP
-// 0x0010 (0x0010 - 0x0000)
-struct FVoiceChatChannel3dPropertiesBP final
-{
-public:
-	bool                                          bSet;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVoiceChatAttenuationModel_                   AttenuationModel;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinDistance;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDistance;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Rolloff;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FVoiceChatChannel3dPropertiesBP;
 
 SDK_NAMESPACE_END

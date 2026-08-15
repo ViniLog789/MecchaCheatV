@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ST_cLeonMapData_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
 #include "UINavigation_classes.hpp"
 
 

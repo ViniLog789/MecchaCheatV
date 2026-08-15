@@ -17,16 +17,16 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character_Survivor.BP_FirstPersonCharacter_cLeon_Character_Survivor_C
-// 0x0030 (0x0D40 - 0x0D10)
-class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C : public ABP_FirstPersonCharacter_cLeon_Character_C
+// 0x0030 (0x0D50 - 0x0D20)
+#pragma pack(push, 0x1)
+class SDK_ALIGN(0x10) ABP_FirstPersonCharacter_cLeon_Character_Survivor_C : public ABP_FirstPersonCharacter_cLeon_Character_C
 {
 public:
-	uint8                                         Pad_D10[0x8];                                      // 0x0D10(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        FilledValue;                                       // 0x0D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         PreStencil;                                        // 0x0D20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D24[0x4];                                      // 0x0D24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UCapsuleComponent*>              OverlapCheckCapsules;                              // 0x0D28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UClass*                                 HunterClass;                                       // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        FilledValue;                                       // 0x0D20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PreStencil;                                        // 0x0D28(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D2C[0x4];                                      // 0x0D2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UCapsuleComponent*>              OverlapCheckCapsules;                              // 0x0D30(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UClass*                                 HunterClass;                                       // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetStencilValue_Server_(int32 StencilValue);
@@ -50,6 +50,7 @@ public:
 		return GetDefaultObjImpl<ABP_FirstPersonCharacter_cLeon_Character_Survivor_C>();
 	}
 };
+#pragma pack(pop)
 DUMPER7_ASSERTS_ABP_FirstPersonCharacter_cLeon_Character_Survivor_C;
 
 SDK_NAMESPACE_END

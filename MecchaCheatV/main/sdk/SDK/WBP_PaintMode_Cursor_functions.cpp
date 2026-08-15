@@ -327,20 +327,6 @@ void UWBP_PaintMode_Cursor_C::ColorChanged(const struct FLinearColor& NewColor, 
 }
 
 
-// Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_PaintMode_Cursor_C::BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintMode_Cursor_C", "BndEvt__WBP_PaintMode_Cursor_WBP_ImageHoverButton_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_PaintMode_Cursor.WBP_PaintMode_Cursor_C.BndEvt__WBP_PaintMode_Cursor_WBP_ControllerColorPalet_K2Node_ComponentBoundEvent_0_UpdateParamaterValues__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

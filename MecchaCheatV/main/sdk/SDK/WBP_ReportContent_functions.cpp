@@ -76,6 +76,29 @@ void UWBP_ReportContent_C::OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const str
 }
 
 
+// Function WBP_ReportContent.WBP_ReportContent_C.DoCustomNavigation_0
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_ReportContent_C::DoCustomNavigation_0(EUINavigation Navigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ReportContent_C", "DoCustomNavigation_0");
+
+	Params::WBP_ReportContent_C_DoCustomNavigation_0 Parms{};
+
+	Parms.Navigation = Navigation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_ReportContent.WBP_ReportContent_C.DoCustomNavigation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

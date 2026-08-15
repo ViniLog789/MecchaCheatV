@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "EN_cLeonMainGamePhase_structs.hpp"
 #include "ST_cLeonMapData_structs.hpp"
 
@@ -139,6 +140,16 @@ public:
 	bool                                          Visibility;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_cLeonMain_C_NamePlateVisibilityChange;
+
+// Function WBP_cLeonMain.WBP_cLeonMain_C.MOUIIYO_Change
+// 0x000C (0x000C - 0x0000)
+struct WBP_cLeonMain_C_MOUIIYO_Change final
+{
+public:
+	struct FIntVector2                            ValueAndMax;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ButtonActiveState;                                 // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_cLeonMain_C_MOUIIYO_Change;
 
 // Function WBP_cLeonMain.WBP_cLeonMain_C.MapDataUpdate
 // 0x0028 (0x0028 - 0x0000)

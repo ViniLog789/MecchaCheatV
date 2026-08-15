@@ -44,6 +44,18 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ReportContent_C_OnFinished_8BE5134246B81962AB20AC90BBF1E4BD;
 
+// Function WBP_ReportContent.WBP_ReportContent_C.DoCustomNavigation_0
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_ReportContent_C_DoCustomNavigation_0 final
+{
+public:
+	EUINavigation                                 Navigation;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_ReportTypeButton_C*                CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ReportContent_C_DoCustomNavigation_0;
+
 // Function WBP_ReportContent.WBP_ReportContent_C.DoCustomNavigation
 // 0x0010 (0x0010 - 0x0000)
 struct WBP_ReportContent_C_DoCustomNavigation final

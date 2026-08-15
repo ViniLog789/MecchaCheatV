@@ -1501,6 +1501,16 @@ public:
 };
 DUMPER7_ASSERTS_ModBlueprintLibrary_UnloadModLevelInstance;
 
+// Function PenguinHotel.MyGameModeBase.BanPlayer
+// 0x0018 (0x0018 - 0x0000)
+struct MyGameModeBase_BanPlayer final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Reason;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MyGameModeBase_BanPlayer;
+
 // Function PenguinHotel.MyGameModeBase.GetSeamlessTravelActorListBPF
 // 0x0028 (0x0028 - 0x0000)
 struct MyGameModeBase_GetSeamlessTravelActorListBPF final

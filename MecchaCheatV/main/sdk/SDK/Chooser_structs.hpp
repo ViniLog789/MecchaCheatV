@@ -102,6 +102,35 @@ enum class EChooserEvaluationFrequency : uint32
 	EChooserEvaluationFrequency_MAX          = 4,
 };
 
+// ScriptStruct Chooser.ChooserOutputObjectRowData
+// 0x0010 (0x0010 - 0x0000)
+struct FChooserOutputObjectRowData final
+{
+public:
+	struct FInstancedStruct                       Value;                                             // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FChooserOutputObjectRowData;
+
+// ScriptStruct Chooser.ChooserColumnBase
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FChooserColumnBase
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChooserColumnBase;
+
+// ScriptStruct Chooser.OutputObjectColumn
+// 0x0030 (0x0038 - 0x0008)
+struct FOutputObjectColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	TArray<struct FChooserOutputObjectRowData>    RowValues;                                         // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FChooserOutputObjectRowData            FallbackValue;                                     // 0x0028(0x0010)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOutputObjectColumn;
+
 // ScriptStruct Chooser.ChooserParameterBase
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FChooserParameterBase
@@ -110,6 +139,34 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FChooserParameterBase;
+
+// ScriptStruct Chooser.ChooserEnumRowData
+// 0x0008 (0x0008 - 0x0000)
+struct FChooserEnumRowData final
+{
+public:
+	EEnumColumnCellValueComparison                Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Value;                                             // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChooserEnumRowData;
+
+// ScriptStruct Chooser.EnumColumnBase
+// 0x0000 (0x0008 - 0x0008)
+struct FEnumColumnBase : public FChooserColumnBase
+{
+};
+DUMPER7_ASSERTS_FEnumColumnBase;
+
+// ScriptStruct Chooser.EnumColumn
+// 0x0020 (0x0028 - 0x0008)
+struct FEnumColumn final : public FEnumColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	TArray<struct FChooserEnumRowData>            RowValues;                                         // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEnumColumn;
 
 // ScriptStruct Chooser.ChooserParameterBoolBase
 // 0x0000 (0x0008 - 0x0008)
@@ -178,15 +235,6 @@ public:
 };
 DUMPER7_ASSERTS_FContextObjectTypeClass;
 
-// ScriptStruct Chooser.ChooserColumnBase
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FChooserColumnBase
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChooserColumnBase;
-
 // ScriptStruct Chooser.BoolColumn
 // 0x0020 (0x0028 - 0x0008)
 struct FBoolColumn final : public FChooserColumnBase
@@ -196,18 +244,6 @@ public:
 	TArray<EBoolColumnCellValue>                  RowValuesWithAny;                                  // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FBoolColumn;
-
-// ScriptStruct Chooser.RandomizeColumn
-// 0x0028 (0x0030 - 0x0008)
-struct FRandomizeColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	float                                         RepeatProbabilityMultiplier;                       // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EqualCostThreshold;                                // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 RowValues;                                         // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRandomizeColumn;
 
 // ScriptStruct Chooser.ChooserEnumPropertyBinding
 // 0x0000 (0x0030 - 0x0030)
@@ -222,6 +258,68 @@ struct FChooserObjectPropertyBinding final : public FChooserPropertyBinding
 {
 };
 DUMPER7_ASSERTS_FChooserObjectPropertyBinding;
+
+// ScriptStruct Chooser.AnimCurveOverride
+// 0x000C (0x000C - 0x0000)
+struct FAnimCurveOverride final
+{
+public:
+	class FName                                   CurveName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurveValue;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnimCurveOverride;
+
+// ScriptStruct Chooser.AnimCurveOverrideList
+// 0x0018 (0x0018 - 0x0000)
+struct FAnimCurveOverrideList final
+{
+public:
+	TArray<struct FAnimCurveOverride>             Values;                                            // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint32                                        Hash;                                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimCurveOverrideList;
+
+// ScriptStruct Chooser.ChooserPlayerSettings
+// 0x0040 (0x0040 - 0x0000)
+struct FChooserPlayerSettings final
+{
+public:
+	bool                                          bMirror;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartTime;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceLooping;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PlaybackRate;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAnimCurveOverrideList                 CurveOverrides;                                    // 0x0010(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         BlendTime;                                         // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBlendProfile*                          BlendProfile;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	EAlphaBlendOption                             BlendOption;                                       // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseInertialBlend;                                 // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChooserPlayerSettings;
+
+// ScriptStruct Chooser.AnimNode_ChooserPlayer
+// 0x0188 (0x0248 - 0x00C0)
+struct FAnimNode_ChooserPlayer final : public FAnimNode_BlendStack_Standalone
+{
+public:
+	uint8                                         Pad_C0[0x20];                                      // 0x00C0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	EChooserEvaluationFrequency                   EvaluationFrequency;                               // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedStruct                       Chooser;                                           // 0x00E8(0x0010)(Edit, NativeAccessSpecifierPublic)
+	class UMirrorDataTable*                       MirrorDataTable;                                   // 0x00F8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	float                                         BlendSpaceX;                                       // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendSpaceY;                                       // 0x0104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FChooserPlayerSettings                 DefaultSettings;                                   // 0x0110(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               ChooserContextDefinition;                          // 0x0150(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bStartFromMatchingPose;                            // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_161[0xE7];                                     // 0x0161(0x00E7)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_ChooserPlayer;
 
 // ScriptStruct Chooser.ChooserStructPropertyBinding
 // 0x0000 (0x0030 - 0x0030)
@@ -256,34 +354,6 @@ public:
 	struct FChooserEnumPropertyBinding            Binding;                                           // 0x0018(0x0030)(Edit, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FEnumContextProperty;
-
-// ScriptStruct Chooser.ChooserEnumRowData
-// 0x0008 (0x0008 - 0x0000)
-struct FChooserEnumRowData final
-{
-public:
-	EEnumColumnCellValueComparison                Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Value;                                             // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChooserEnumRowData;
-
-// ScriptStruct Chooser.EnumColumnBase
-// 0x0000 (0x0008 - 0x0008)
-struct FEnumColumnBase : public FChooserColumnBase
-{
-};
-DUMPER7_ASSERTS_FEnumColumnBase;
-
-// ScriptStruct Chooser.EnumColumn
-// 0x0020 (0x0028 - 0x0008)
-struct FEnumColumn final : public FEnumColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<struct FChooserEnumRowData>            RowValues;                                         // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEnumColumn;
 
 // ScriptStruct Chooser.ChooserFloatDistanceRowData
 // 0x0004 (0x0004 - 0x0000)
@@ -586,26 +656,6 @@ public:
 };
 DUMPER7_ASSERTS_FOutputFloatColumn;
 
-// ScriptStruct Chooser.ChooserOutputObjectRowData
-// 0x0010 (0x0010 - 0x0000)
-struct FChooserOutputObjectRowData final
-{
-public:
-	struct FInstancedStruct                       Value;                                             // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FChooserOutputObjectRowData;
-
-// ScriptStruct Chooser.OutputObjectColumn
-// 0x0030 (0x0038 - 0x0008)
-struct FOutputObjectColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<struct FChooserOutputObjectRowData>    RowValues;                                         // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FChooserOutputObjectRowData            FallbackValue;                                     // 0x0028(0x0010)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOutputObjectColumn;
-
 // ScriptStruct Chooser.StructContextProperty
 // 0x0030 (0x0038 - 0x0008)
 struct FStructContextProperty final : public FChooserParameterStructBase
@@ -635,67 +685,17 @@ public:
 };
 DUMPER7_ASSERTS_FRandomizeContextProperty;
 
-// ScriptStruct Chooser.AnimCurveOverride
-// 0x000C (0x000C - 0x0000)
-struct FAnimCurveOverride final
+// ScriptStruct Chooser.RandomizeColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FRandomizeColumn final : public FChooserColumnBase
 {
 public:
-	class FName                                   CurveName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurveValue;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	float                                         RepeatProbabilityMultiplier;                       // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EqualCostThreshold;                                // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 RowValues;                                         // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAnimCurveOverride;
-
-// ScriptStruct Chooser.AnimCurveOverrideList
-// 0x0018 (0x0018 - 0x0000)
-struct FAnimCurveOverrideList final
-{
-public:
-	TArray<struct FAnimCurveOverride>             Values;                                            // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint32                                        Hash;                                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimCurveOverrideList;
-
-// ScriptStruct Chooser.ChooserPlayerSettings
-// 0x0040 (0x0040 - 0x0000)
-struct FChooserPlayerSettings final
-{
-public:
-	bool                                          bMirror;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StartTime;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceLooping;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PlaybackRate;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAnimCurveOverrideList                 CurveOverrides;                                    // 0x0010(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         BlendTime;                                         // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBlendProfile*                          BlendProfile;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	EAlphaBlendOption                             BlendOption;                                       // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseInertialBlend;                                 // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChooserPlayerSettings;
-
-// ScriptStruct Chooser.AnimNode_ChooserPlayer
-// 0x0188 (0x0248 - 0x00C0)
-struct FAnimNode_ChooserPlayer final : public FAnimNode_BlendStack_Standalone
-{
-public:
-	uint8                                         Pad_C0[0x20];                                      // 0x00C0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	EChooserEvaluationFrequency                   EvaluationFrequency;                               // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInstancedStruct                       Chooser;                                           // 0x00E8(0x0010)(Edit, NativeAccessSpecifierPublic)
-	class UMirrorDataTable*                       MirrorDataTable;                                   // 0x00F8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	float                                         BlendSpaceX;                                       // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendSpaceY;                                       // 0x0104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FChooserPlayerSettings                 DefaultSettings;                                   // 0x0110(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               ChooserContextDefinition;                          // 0x0150(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bStartFromMatchingPose;                            // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_161[0xE7];                                     // 0x0161(0x00E7)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_ChooserPlayer;
+DUMPER7_ASSERTS_FRandomizeColumn;
 
 // ScriptStruct Chooser.NestedChooser
 // 0x0008 (0x0010 - 0x0008)

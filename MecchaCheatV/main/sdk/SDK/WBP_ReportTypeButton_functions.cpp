@@ -56,6 +56,29 @@ void UWBP_ReportTypeButton_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.DoCustomNavigationTop
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_ReportTypeButton_C::DoCustomNavigationTop(EUINavigation Navigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ReportTypeButton_C", "DoCustomNavigationTop");
+
+	Params::WBP_ReportTypeButton_C_DoCustomNavigationTop Parms{};
+
+	Parms.Navigation = Navigation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.DoCustomNavigation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

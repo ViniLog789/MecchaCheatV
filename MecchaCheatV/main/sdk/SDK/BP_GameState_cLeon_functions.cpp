@@ -64,6 +64,20 @@ void ABP_GameState_cLeon_C::UpdateRanking()
 }
 
 
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateMOUEEYOState
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::UpdateMOUEEYOState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "UpdateMOUEEYOState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.UpdateBulletWidget
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -418,6 +432,20 @@ void ABP_GameState_cLeon_C::OnRep_NeedModId()
 }
 
 
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_MOUEEYO
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_MOUEEYO()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_MOUEEYO");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_MainGamePhase
 // (BlueprintCallable, BlueprintEvent)
 
@@ -553,6 +581,20 @@ void ABP_GameState_cLeon_C::OnRep_ChickenSearchTarget()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_ChickenSearchTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.MOUEEYO_Activate
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::MOUEEYO_Activate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "MOUEEYO_Activate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -916,6 +958,34 @@ void ABP_GameState_cLeon_C::AddToViewDataForce(class ABP_FirstPersonPlayerState_
 	Parms.Points = std::move(Points);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AddMOUEEYO(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::AddMOUEEYO_Server_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "AddMOUEEYO(Server)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.AddMOUEEYO(Local)
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::AddMOUEEYO_Local_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "AddMOUEEYO(Local)");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

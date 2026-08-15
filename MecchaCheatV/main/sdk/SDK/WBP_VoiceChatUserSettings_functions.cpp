@@ -152,6 +152,29 @@ class UWidget* UWBP_VoiceChatUserSettings_C::DoCustomNavigation_SliderTop(EUINav
 }
 
 
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.DoCustomNavigation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_VoiceChatUserSettings_C::DoCustomNavigation(EUINavigation Navigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "DoCustomNavigation");
+
+	Params::WBP_VoiceChatUserSettings_C_DoCustomNavigation Parms{};
+
+	Parms.Navigation = Navigation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ConstructSetup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -223,6 +246,20 @@ void UWBP_VoiceChatUserSettings_C::BndEvt__WBP_VoiceChatUserSettings_LongTapButt
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_BAN_K2Node_ComponentBoundEvent_3_PushEnd__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_VoiceChatUserSettings_C::BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_BAN_K2Node_ComponentBoundEvent_3_PushEnd__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_BAN_K2Node_ComponentBoundEvent_3_PushEnd__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

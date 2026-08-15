@@ -449,26 +449,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMTrait_SetDeformerIntVariable;
 
-// ScriptStruct OptimusCore.OptimusDataType
-// 0x0050 (0x0050 - 0x0000)
-struct FOptimusDataType final
-{
-public:
-	class FName                                   TypeName;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   DisplayName;                                       // 0x0008(0x0010)(NativeAccessSpecifierPublic)
-	struct FShaderValueTypeHandle                 ShaderValueType;                                   // 0x0018(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ShaderValueSize;                                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TypeCategory;                                      // 0x0024(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UObject>                 TypeObject;                                        // 0x002C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasCustomPinColor;                                // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CustomPinColor;                                    // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOptimusDataTypeUsageFlags                    UsageFlags;                                        // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOptimusDataTypeFlags                         TypeFlags;                                         // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusDataType;
-
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerIntArrayVariable
 // 0x0010 (0x0028 - 0x0018)
 struct FRigVMTrait_SetDeformerIntArrayVariable final : public FRigVMTrait_OptimusVariableBase
@@ -1242,6 +1222,26 @@ public:
 	struct FOptimusDataDomain                     DataDomain;                                        // 0x0038(0x0040)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FOptimusNode_ResourceAccessorBase_DuplicationInfo;
+
+// ScriptStruct OptimusCore.OptimusDataType
+// 0x0050 (0x0050 - 0x0000)
+struct FOptimusDataType final
+{
+public:
+	class FName                                   TypeName;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   DisplayName;                                       // 0x0008(0x0010)(NativeAccessSpecifierPublic)
+	struct FShaderValueTypeHandle                 ShaderValueType;                                   // 0x0018(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ShaderValueSize;                                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TypeCategory;                                      // 0x0024(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UObject>                 TypeObject;                                        // 0x002C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasCustomPinColor;                                // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CustomPinColor;                                    // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOptimusDataTypeUsageFlags                    UsageFlags;                                        // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOptimusDataTypeFlags                         TypeFlags;                                         // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusDataType;
 
 // ScriptStruct OptimusCore.OptimusComputeGraphInfo
 // 0x0018 (0x0018 - 0x0000)

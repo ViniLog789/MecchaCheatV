@@ -37,6 +37,7 @@ public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnPushButton(class UWBP_ReportTypeButton_C* SelfObject);
 	void OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const struct FEOSPlayerReportResult& Result);
+	class UWidget* DoCustomNavigation_0(EUINavigation Navigation);
 	class UWidget* DoCustomNavigation(EUINavigation Navigation);
 	void BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 

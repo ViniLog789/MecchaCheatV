@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EN_StrafingDirection_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "EN_StrafingDirection_structs.hpp"
 
 
 SDK_NAMESPACE_START

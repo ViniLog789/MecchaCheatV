@@ -44,6 +44,7 @@ public:
 	void UpdateEEYANPoint_Local_(int32 CurrentEEYAN_Point);
 	void SetModState(bool ModState);
 	void SetBodyClass(class UClass* CurrentBodyClass);
+	void SendMouiiyo();
 	void ReciveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* Source);
 	void ReceiveBeginPlay();
 	void OnWriteUserFileProgress64_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);

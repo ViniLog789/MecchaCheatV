@@ -145,6 +145,30 @@ public:
 };
 DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_IsRedpointFrameworkFreeEdition;
 
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.IsVoiceChatDisabledByPlatformOverride
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointFrameworkBlueprintLibrary_IsVoiceChatDisabledByPlatformOverride final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_IsVoiceChatDisabledByPlatformOverride;
+
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.IsVoiceChatEnabled
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointFrameworkBlueprintLibrary_IsVoiceChatEnabled final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_IsVoiceChatEnabled;
+
 // Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.KickPlayerController
 // 0x0020 (0x0020 - 0x0000)
 struct RedpointFrameworkBlueprintLibrary_KickPlayerController final
@@ -213,6 +237,18 @@ public:
 	class FString                                 DeviceID;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_SetVoiceChatAudioOutputDevice;
+
+// Function RedpointEOSFramework.RedpointFrameworkBlueprintLibrary.SetVoiceChatEnabled
+// 0x0040 (0x0040 - 0x0000)
+struct RedpointFrameworkBlueprintLibrary_SetVoiceChatEnabled final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RedpointFrameworkBlueprintLibrary_SetVoiceChatEnabled;
 
 // Function RedpointEOSFramework.RedpointFrameworkLocalPlayerSubsystem.BindFriendListSections
 // 0x0018 (0x0018 - 0x0000)

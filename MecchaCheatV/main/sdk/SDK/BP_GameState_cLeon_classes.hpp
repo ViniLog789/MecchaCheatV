@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "ST_cLeonMapData_structs.hpp"
 #include "EN_cLeonGamePhase_structs.hpp"
 #include "EN_cLeonGameMode_structs.hpp"
-#include "EN_cLeonMainGamePhase_structs.hpp"
-#include "ST_cLeonSurvivorVariation_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ST_cLeonSurvivorVariation_structs.hpp"
+#include "EN_cLeonMainGamePhase_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_GameState_cLeon.BP_GameState_cLeon_C
-// 0x02D8 (0x05D8 - 0x0300)
+// 0x0300 (0x0600 - 0x0300)
 class ABP_GameState_cLeon_C final : public AGameStateBase
 {
 public:
@@ -88,11 +88,18 @@ public:
 	TMulticastInlineDelegate<void(int32 max_0, int32 Current)> BulletUpdate;                         // 0x05B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void()>              WinnerCheck;                                       // 0x05C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C* ChickenSearchTarget;                  // 0x05D0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	int32                                         MOUEEYO;                                           // 0x05D8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5DC[0x4];                                      // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const struct FIntVector2& ValueAndMax, bool ButtonActiveState)> MOUIIYO_Change; // 0x05E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          MOUIIYO_ActiveState;                               // 0x05F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerStatecLeon;                               // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState);
 	void UpdateSend();
 	void UpdateRanking();
+	void UpdateMOUEEYOState();
 	void UpdateBulletWidget(int32 Current);
 	void SyncRankning_Client_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& NewPoints, int32 UpdateTime);
 	void SyncRanking_Server_();
@@ -113,6 +120,7 @@ public:
 	void OnRep_TimerTextIndex();
 	void OnRep_TimerNumber();
 	void OnRep_NeedModId();
+	void OnRep_MOUEEYO();
 	void OnRep_MainGamePhase();
 	void OnRep_LiveSurvivors_PlayerState();
 	void OnRep_JoinPlayerState();
@@ -123,6 +131,7 @@ public:
 	void OnRep_Filter_Horror();
 	void OnRep_CurrentPreviewMapData();
 	void OnRep_ChickenSearchTarget();
+	void MOUEEYO_Activate();
 	void ModStateUpdate();
 	void ModDownloadWait();
 	void MaxPlayerChange(int32 Current, int32 max_0);
@@ -144,6 +153,8 @@ public:
 	void AllHunterStencilOff();
 	void AddToViewDatas(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);
 	void AddToViewDataForce(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);
+	void AddMOUEEYO_Server_();
+	void AddMOUEEYO_Local_();
 
 public:
 	static class UClass* StaticClass()

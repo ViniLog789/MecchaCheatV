@@ -122,12 +122,15 @@ public:
 	static bool IsPlayerControllerSpectating(class APlayerController* PlayerController);
 	static bool IsPlayInEditor();
 	static bool IsRedpointFrameworkFreeEdition();
+	static bool IsVoiceChatDisabledByPlatformOverride(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId);
+	static bool IsVoiceChatEnabled(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId);
 	static bool KickPlayerController(class APlayerController* PlayerController, const class FText& KickReason);
 	static void SetGlobalVoiceChatAudioFeatureEnabled(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId, ERedpointVoiceChatAudioFeature AudioFeature, bool bEnabled);
 	static void SetListViewEntrySpacing(class UListView* InListView, float InEntrySpacing);
 	static void SetPlayerControllerSpectating(class APlayerController* PlayerController, bool bIsSpectating);
 	static void SetVoiceChatAudioInputDevice(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId, const class FString& DeviceID);
 	static void SetVoiceChatAudioOutputDevice(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId, const class FString& DeviceID);
+	static void SetVoiceChatEnabled(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& PlayerId, bool bEnabled);
 
 public:
 	static class UClass* StaticClass()

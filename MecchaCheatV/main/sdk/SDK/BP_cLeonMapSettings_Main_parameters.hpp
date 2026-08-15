@@ -14,24 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractStart(Local)
-// 0x0008 (0x0008 - 0x0000)
-struct BP_cLeonMapSettings_Main_C_BPI_InteractStart_Local_ final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        First_Person;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_cLeonMapSettings_Main_C_BPI_InteractStart_Local_;
-
-// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractStart(Server)
-// 0x0008 (0x0008 - 0x0000)
-struct BP_cLeonMapSettings_Main_C_BPI_InteractStart_Server_ final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        First_Person;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_cLeonMapSettings_Main_C_BPI_InteractStart_Server_;
-
 // Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.IsChangeImage
 // 0x0058 (0x0058 - 0x0000)
 struct BP_cLeonMapSettings_Main_C_IsChangeImage final
@@ -49,6 +31,24 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0048(0x0010)()
 };
 DUMPER7_ASSERTS_BP_cLeonMapSettings_Main_C_IsChangeImage;
+
+// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractStart(Server)
+// 0x0008 (0x0008 - 0x0000)
+struct BP_cLeonMapSettings_Main_C_BPI_InteractStart_Server_ final
+{
+public:
+	class ABP_FirstPersonCharacter_Main_C*        First_Person;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_cLeonMapSettings_Main_C_BPI_InteractStart_Server_;
+
+// Function BP_cLeonMapSettings_Main.BP_cLeonMapSettings_Main_C.BPI_InteractStart(Local)
+// 0x0008 (0x0008 - 0x0000)
+struct BP_cLeonMapSettings_Main_C_BPI_InteractStart_Local_ final
+{
+public:
+	class ABP_FirstPersonCharacter_Main_C*        First_Person;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_cLeonMapSettings_Main_C_BPI_InteractStart_Local_;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

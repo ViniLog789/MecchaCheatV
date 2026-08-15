@@ -879,14 +879,17 @@ public:
 DUMPER7_ASSERTS_UModBlueprintLibrary;
 
 // Class PenguinHotel.MyGameModeBase
-// 0x0008 (0x0348 - 0x0340)
+// 0x00A8 (0x03E8 - 0x0340)
 class AMyGameModeBase : public AGameModeBase
 {
 public:
 	bool                                          bCheckMaxPublicConnections;                        // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class FString>                           BannedUniqueIds;                                   // 0x0348(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	TSet<class FString>                           BannedNetworkAddresses;                            // 0x0398(0x0050)(Transient, NativeAccessSpecifierPrivate)
 
 public:
+	void BanPlayer(class APlayerController* PlayerController, const class FString& Reason);
 	void GetSeamlessTravelActorListBPF(bool bToTransition, TArray<class AActor*>* ActorList, const TArray<class AActor*>& TargetActroList);
 
 public:
