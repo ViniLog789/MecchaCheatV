@@ -30,6 +30,26 @@ void ABP_FirstPersonCharacter_Main_C::ViewResetCheck()
 }
 
 
+// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.UpdateCoreDatas
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FST_ItemCoreDatas&         CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_Main_C::UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "UpdateCoreDatas");
+
+	Params::BP_FirstPersonCharacter_Main_C_UpdateCoreDatas Parms{};
+
+	Parms.CoreDatas = std::move(CoreDatas);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.Attack_AC_Remote
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -110,21 +130,25 @@ void ABP_FirstPersonCharacter_Main_C::Recharge()
 }
 
 
-// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.UpdateCoreDatas
+// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.PickState
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_ItemCoreDatas&         CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_Main_C::UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas)
+void ABP_FirstPersonCharacter_Main_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "UpdateCoreDatas");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "PickState");
 
-	Params::BP_FirstPersonCharacter_Main_C_UpdateCoreDatas Parms{};
+	Params::BP_FirstPersonCharacter_Main_C_PickState Parms{};
 
-	Parms.CoreDatas = std::move(CoreDatas);
+	Parms.State = State;
+	Parms.Character = Character;
+	Parms.SlotIndex = SlotIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -718,27 +742,17 @@ void ABP_FirstPersonCharacter_Main_C::ServerCamaraTick()
 }
 
 
-// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.PickState
+// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.InteractItem
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_Main_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
+void ABP_FirstPersonCharacter_Main_C::InteractItem()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "PickState");
+		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "InteractItem");
 
-	Params::BP_FirstPersonCharacter_Main_C_PickState Parms{};
-
-	Parms.State = State;
-	Parms.Character = Character;
-	Parms.SlotIndex = SlotIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -1274,20 +1288,6 @@ void ABP_FirstPersonCharacter_Main_C::ReleaseRightItem()
 }
 
 
-// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.InteractItem
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonCharacter_Main_C::InteractItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "InteractItem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.SetMeshDatas
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1325,6 +1325,28 @@ void ABP_FirstPersonCharacter_Main_C::DamagedAnimation(double DamageValue, bool 
 
 	Parms.DamageValue = DamageValue;
 	Parms.UnAvoidable = UnAvoidable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.DropItem
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Force_Vector                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   CentorPosition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonCharacter_Main_C::DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "DropItem");
+
+	Params::BP_FirstPersonCharacter_Main_C_DropItem Parms{};
+
+	Parms.Force_Vector = std::move(Force_Vector);
+	Parms.CentorPosition = std::move(CentorPosition);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1421,28 +1443,6 @@ void ABP_FirstPersonCharacter_Main_C::ItemShakeStart()
 		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "ItemShakeStart");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.DropItem
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   Force_Vector                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   CentorPosition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonCharacter_Main_C::DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonCharacter_Main_C", "DropItem");
-
-	Params::BP_FirstPersonCharacter_Main_C_DropItem Parms{};
-
-	Parms.Force_Vector = std::move(Force_Vector);
-	Parms.CentorPosition = std::move(CentorPosition);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

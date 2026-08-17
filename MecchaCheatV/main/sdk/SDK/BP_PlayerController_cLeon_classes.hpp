@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PlayerController_cLeon.BP_PlayerController_cLeon_C
-// 0x0098 (0x0810 - 0x0778)
+// 0x00A0 (0x0818 - 0x0778)
 class ABP_PlayerController_cLeon_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
@@ -43,6 +43,7 @@ public:
 	uint8                                         Pad_7FA[0x6];                                      // 0x07FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_GameState_cLeon_C*                  As_BP_Game_State_C_Leon;                           // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerStatecLeon;                               // 0x0808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         MuteInt;                                           // 0x0810(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void TeleportMovie();
@@ -66,6 +67,7 @@ public:
 	void EEYAN_State(bool State);
 	void ChoseBodyClose();
 	void CameraReset();
+	void BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_0_RedpointVoiceChatComponentVoiceChatChannelJoined__DelegateSignature(const class FString& ChannelName);
 	void ApplySettings();
 	void AddMainWidgets();
 	void AddBodyTypeSesttings();

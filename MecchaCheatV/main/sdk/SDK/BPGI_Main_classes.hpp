@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UINavigation_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EN_InputJudgementType_structs.hpp"
 #include "RedpointEOSFramework_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -11,26 +11,35 @@
 #include "Basic.hpp"
 
 #include "ENUM_HandType_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
 #include "FinishFilter_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
-#include "UMG_structs.hpp"
-#include "EN_DamageType_structs.hpp"
-#include "Engine_structs.hpp"
-#include "EN_InputBlockDeviceType_structs.hpp"
-#include "PenguinHotel_structs.hpp"
-#include "Mover_structs.hpp"
-#include "EnhancedInput_structs.hpp"
-#include "ST_OptionObject_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "DeathType_structs.hpp"
-#include "InputCore_structs.hpp"
+#include "PenguinHotel_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "EN_InputBlockDeviceType_structs.hpp"
+#include "Mover_structs.hpp"
 #include "EN_StanType_structs.hpp"
+#include "EnhancedInput_structs.hpp"
+#include "UMG_structs.hpp"
+#include "ST_OptionObject_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.UpdateCoreDatas
+// 0x0070 (0x0070 - 0x0000)
+struct BP_FirstPersonCharacter_Main_C_UpdateCoreDatas final
+{
+public:
+	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_UpdateCoreDatas;
 
 // Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.Attack_AC_Remote
 // 0x0020 (0x0020 - 0x0000)
@@ -62,14 +71,17 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_StaminaDamage;
 
-// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.UpdateCoreDatas
-// 0x0070 (0x0070 - 0x0000)
-struct BP_FirstPersonCharacter_Main_C_UpdateCoreDatas final
+// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.PickState
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_Main_C_PickState final
 {
 public:
-	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_UpdateCoreDatas;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_PickState;
 
 // Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.SetCameraFreeRotation(Server)
 // 0x0001 (0x0001 - 0x0000)
@@ -247,18 +259,6 @@ public:
 	bool                                          StopMovement_0;                                    // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_SetMovementMode_Server_;
-
-// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.PickState
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_Main_C_PickState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_PickState;
 
 // Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.SetFreeLook
 // 0x0001 (0x0001 - 0x0000)
@@ -451,6 +451,16 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_DamagedAnimation;
 
+// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.DropItem
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_Main_C_DropItem final
+{
+public:
+	struct FVector                                Force_Vector;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CentorPosition;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_DropItem;
+
 // Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.AddActor
 // 0x0008 (0x0008 - 0x0000)
 struct BP_FirstPersonCharacter_Main_C_AddActor final
@@ -486,16 +496,6 @@ public:
 	bool                                          IsCrouching_0;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_SetIsCrouching_Server_;
-
-// Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.DropItem
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_Main_C_DropItem final
-{
-public:
-	struct FVector                                Force_Vector;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CentorPosition;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_Main_C_DropItem;
 
 // Function BP_FirstPersonCharacter_Main.BP_FirstPersonCharacter_Main_C.Interact(Server)
 // 0x0010 (0x0010 - 0x0000)

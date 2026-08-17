@@ -11,9 +11,31 @@
 #include "Basic.hpp"
 
 #include "WBP_VoiceChatControlPanel_classes.hpp"
+#include "WBP_VoiceChatControlPanel_parameters.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.GetSortedCharacters
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class ABP_FirstPersonPlayerState_Online_C*>*OutActors                                              (Parm, OutParm)
+
+void UWBP_VoiceChatControlPanel_C::GetSortedCharacters(TArray<class ABP_FirstPersonPlayerState_Online_C*>* OutActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatControlPanel_C", "GetSortedCharacters");
+
+	Params::WBP_VoiceChatControlPanel_C_GetSortedCharacters Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutActors != nullptr)
+		*OutActors = std::move(Parms.OutActors);
+}
+
 
 // Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)

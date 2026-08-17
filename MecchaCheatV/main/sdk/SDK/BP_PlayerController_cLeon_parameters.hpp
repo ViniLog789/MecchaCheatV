@@ -186,5 +186,14 @@ public:
 };
 DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_EEYAN_State;
 
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_0_RedpointVoiceChatComponentVoiceChatChannelJoined__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct BP_PlayerController_cLeon_C_BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_0_RedpointVoiceChatComponentVoiceChatChannelJoined__DelegateSignature final
+{
+public:
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerController_cLeon_C_BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_0_RedpointVoiceChatComponentVoiceChatChannelJoined__DelegateSignature;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

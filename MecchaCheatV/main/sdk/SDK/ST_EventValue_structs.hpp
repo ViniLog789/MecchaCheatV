@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EN_DeviceState_structs.hpp"
 #include "EN_DeviceSignalType_structs.hpp"
+#include "EN_DeviceState_structs.hpp"
 
 
 SDK_NAMESPACE_START

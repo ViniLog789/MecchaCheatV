@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "ST_ItemCoreDataArray_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "EN_InputBlockDeviceType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "ST_ItemCoreDataArray_structs.hpp"
 #include "BP_FirstPersonCharacter_Main_classes.hpp"
+#include "EN_InputBlockDeviceType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UINavigation_structs.hpp"
 
@@ -98,6 +98,8 @@ public:
 	float                                         TraceHeadRadius;                                   // 0x0D10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void AddPage(int32 Value);
+	void MinusPage();
 	void MEChange();
 	void BndEvt__BP_FirstPersonCharacter_cLeon_Character_RuntimePaintable_K2Node_ComponentBoundEvent_0_OnDecoyActorCountChanged__DelegateSignature(int32 OldCount, int32 NewCount);
 	void DestroyDecoy();

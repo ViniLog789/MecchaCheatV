@@ -424,6 +424,26 @@ void ABP_PlayerController_cLeon_C::CameraReset()
 }
 
 
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_0_RedpointVoiceChatComponentVoiceChatChannelJoined__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FString&                    ChannelName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_0_RedpointVoiceChatComponentVoiceChatChannelJoined__DelegateSignature(const class FString& ChannelName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_0_RedpointVoiceChatComponentVoiceChatChannelJoined__DelegateSignature");
+
+	Params::BP_PlayerController_cLeon_C_BndEvt__BP_PlayerController_cLeon_RedpointVoiceChat_K2Node_ComponentBoundEvent_0_RedpointVoiceChatComponentVoiceChatChannelJoined__DelegateSignature Parms{};
+
+	Parms.ChannelName = std::move(ChannelName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.ApplySettings
 // (BlueprintCallable, BlueprintEvent)
 

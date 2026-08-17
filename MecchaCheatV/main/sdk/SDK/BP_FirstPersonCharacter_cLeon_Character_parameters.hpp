@@ -20,6 +20,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.AddPage
+// 0x0004 (0x0004 - 0x0000)
+struct BP_FirstPersonCharacter_cLeon_Character_C_AddPage final
+{
+public:
+	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_C_AddPage;
+
 // Function BP_FirstPersonCharacter_cLeon_Character.BP_FirstPersonCharacter_cLeon_Character_C.BndEvt__BP_FirstPersonCharacter_cLeon_Character_RuntimePaintable_K2Node_ComponentBoundEvent_0_OnDecoyActorCountChanged__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
 struct BP_FirstPersonCharacter_cLeon_Character_C_BndEvt__BP_FirstPersonCharacter_cLeon_Character_RuntimePaintable_K2Node_ComponentBoundEvent_0_OnDecoyActorCountChanged__DelegateSignature final

@@ -2754,6 +2754,31 @@ class FString UCustomProgramFunctionLibrary::HashStringMD5(const class FString& 
 }
 
 
+// Function PenguinHotel.CustomProgramFunctionLibrary.IsAnyKeyOrControllerButtonPressed
+// (Final, Native, Static, Private, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomProgramFunctionLibrary::IsAnyKeyOrControllerButtonPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomProgramFunctionLibrary", "IsAnyKeyOrControllerButtonPressed");
+
+	Params::CustomProgramFunctionLibrary_IsAnyKeyOrControllerButtonPressed Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PenguinHotel.CustomProgramFunctionLibrary.IsInGame
 // (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
 // Parameters:

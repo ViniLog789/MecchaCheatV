@@ -900,6 +900,15 @@ public:
 };
 DUMPER7_ASSERTS_CustomProgramFunctionLibrary_HashStringMD5;
 
+// Function PenguinHotel.CustomProgramFunctionLibrary.IsAnyKeyOrControllerButtonPressed
+// 0x0001 (0x0001 - 0x0000)
+struct CustomProgramFunctionLibrary_IsAnyKeyOrControllerButtonPressed final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomProgramFunctionLibrary_IsAnyKeyOrControllerButtonPressed;
+
 // Function PenguinHotel.CustomProgramFunctionLibrary.IsInGame
 // 0x0010 (0x0010 - 0x0000)
 struct CustomProgramFunctionLibrary_IsInGame final

@@ -20,7 +20,7 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_VoiceChatState.WBP_VoiceChatState_C.UpdateVisual
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct WBP_VoiceChatState_C_UpdateVisual final
 {
 public:
@@ -33,24 +33,23 @@ public:
 	bool                                          Temp_bool_Variable_2;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_3;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0018(0x0030)(HasGetValueTypeHash)
-	class URedpointVoiceChatComponent*            CallFunc_GetComponentByClass_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMemberSpeaking_ReturnValue;             // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOutputMuted_ReturnValue;                // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInputMuted_ReturnValue;                 // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0058(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x006C(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default_2;                           // 0x0080(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0094(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x00A8(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default_3;                           // 0x00BC(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default_4;                           // 0x00D0(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0010(0x0014)()
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0028(0x0030)(HasGetValueTypeHash)
+	class URedpointVoiceChatComponent*            CallFunc_GetComponentByClass_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0060(0x0014)()
+	bool                                          CallFunc_IsMemberSpeaking_ReturnValue;             // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOutputMuted_ReturnValue;                // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_Select_Default;                             // 0x0078(0x0014)()
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInputMuted_ReturnValue;                 // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x008E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x008F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0090(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x00A4(0x0014)()
+	struct FSlateColor                            K2Node_Select_Default_3;                           // 0x00B8(0x0014)()
+	struct FSlateColor                            K2Node_Select_Default_4;                           // 0x00CC(0x0014)()
 };
 DUMPER7_ASSERTS_WBP_VoiceChatState_C_UpdateVisual;
 

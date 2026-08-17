@@ -29,6 +29,7 @@ public:
 	class UWBP_VoiceChatUserSettings_C*           PreContent;                                        // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void GetSortedCharacters(TArray<class ABP_FirstPersonPlayerState_Online_C*>* OutActors);
 	void Construct();
 
 public:
