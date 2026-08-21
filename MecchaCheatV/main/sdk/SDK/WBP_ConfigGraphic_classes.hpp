@@ -46,6 +46,7 @@ public:
 	void UpdateScreenEvent();
 	void ScreenTypeSettingsUpdate();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void GetRootFocusTarget(class UWidget** Widget);
 	void DeleteConfigWidget();
 	void Construct();
 	void BndEvt__WBP_ConfigGraphic_WBP_PerformaiceMode_K2Node_ComponentBoundEvent_3_UpdateSettings__DelegateSignature();

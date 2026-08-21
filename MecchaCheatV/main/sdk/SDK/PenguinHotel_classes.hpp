@@ -480,7 +480,11 @@ public:
 	static void GetNintendoBpCurrentSettings(bool* bFreeCommunication, TArray<struct FNintendoRestrictionLevelSetting>* RestrictionLevels);
 	static bool HasNintendoFreeCommunicationSetting();
 	static bool IsNintendoFreeCommunicationAvailable();
+	static bool IsNintendoFreeCommunicationRestricted();
 	static bool IsNintendoParentalControlEnabled();
+	static bool IsNintendoPctlAvailable();
+	static bool IsUsingNintendoGameChat();
+	static bool MaskNintendoProfanityWordsInText(const class FString& Text, class FString* MaskedText, int32* ProfanityWordCount);
 	static bool TryBeginNintendoFreeCommunication(bool bShowUI);
 
 public:
@@ -1109,18 +1113,19 @@ DUMPER7_ASSERTS_URuntimePaintRelayComponent;
 class URuntimePaintReplicationManager final : public UTickableWorldSubsystem
 {
 public:
-	int32                                         MaxReplicatedPaintStrokesPerTick;                  // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxReplicatedPaintRenderTargetWritesPerFrame;      // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxOutgoingNetworkBatchesPerSecond;                // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxOutgoingStrokesPerBatch;                        // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCoalesceOutgoingStrokes;                          // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableAdaptiveRemotePaintInterval;                // 0x0051(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_52[0x2];                                       // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinRemotePaintFramesAfterLocalPaint;               // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AdaptiveTargetFPS;                                 // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AdaptiveFpsDropRatio;                              // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxAdaptiveRemotePaintFrameInterval;               // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bLocalPaintNetworkSyncDisabled;                    // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxReplicatedPaintStrokesPerTick;                  // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxReplicatedPaintRenderTargetWritesPerFrame;      // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxOutgoingNetworkBatchesPerSecond;                // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxOutgoingStrokesPerBatch;                        // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCoalesceOutgoingStrokes;                          // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAdaptiveRemotePaintInterval;                // 0x0055(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinRemotePaintFramesAfterLocalPaint;               // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AdaptiveTargetFPS;                                 // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AdaptiveFpsDropRatio;                              // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxAdaptiveRemotePaintFrameInterval;               // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FQueuedRuntimePaintStrokeBatch> QueuedBatches;                                     // 0x0068(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TArray<struct FQueuedRuntimePaintStrokeBatch> QueuedLocalPaintBatches;                           // 0x0078(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TArray<struct FQueuedRuntimePaintOutgoingBatch> QueuedOutgoingBatches;                           // 0x0088(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
@@ -1128,9 +1133,12 @@ public:
 	uint8                                         Pad_A8[0xD0];                                      // 0x00A8(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void SetLocalPaintNetworkSyncDisabled(bool bDisabled);
+
 	int32 GetQueuedStrokeCount() const;
 	int32 GetQueuedStrokeCountForComponent(class URuntimePaintableComponent* PaintComponent) const;
 	struct FRuntimePaintReplicationPressure GetReplicationPressure() const;
+	bool IsLocalPaintNetworkSyncDisabled() const;
 
 public:
 	static class UClass* StaticClass()

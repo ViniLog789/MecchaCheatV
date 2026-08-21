@@ -113,10 +113,11 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::HitSuccess(class ABP_Fir
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.AntiChatTrace
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// const struct FVector&                   Start                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   End                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_FirstPersonCharacter_cLeon_Character_C*Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::AntiChatTrace(const struct FVector& End, class ABP_FirstPersonCharacter_cLeon_Character_C* Target)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::AntiChatTrace(const struct FVector& Start, const struct FVector& End, class ABP_FirstPersonCharacter_cLeon_Character_C* Target)
 {
 	static class UFunction* Func = nullptr;
 
@@ -125,6 +126,7 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::AntiChatTrace(const stru
 
 	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_AntiChatTrace Parms{};
 
+	Parms.Start = std::move(Start);
 	Parms.End = std::move(End);
 	Parms.Target = Target;
 

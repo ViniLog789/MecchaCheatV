@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "EN_StanType_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 
 
 SDK_NAMESPACE_START

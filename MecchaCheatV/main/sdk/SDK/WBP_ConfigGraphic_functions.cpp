@@ -64,6 +64,27 @@ void UWBP_ConfigGraphic_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.GetRootFocusTarget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget**                         Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ConfigGraphic_C::GetRootFocusTarget(class UWidget** Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "GetRootFocusTarget");
+
+	Params::WBP_ConfigGraphic_C_GetRootFocusTarget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Widget != nullptr)
+		*Widget = Parms.Widget;
+}
+
+
 // Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.DeleteConfigWidget
 // (BlueprintCallable, BlueprintEvent)
 

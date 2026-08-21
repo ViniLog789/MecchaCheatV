@@ -128,6 +128,29 @@ class UUINavComponent* UWBP_cLeonGameSettings_C::GetInitialFocusComponent()
 }
 
 
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.DoCustomNavigation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_cLeonGameSettings_C::DoCustomNavigation(EUINavigation Navigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "DoCustomNavigation");
+
+	Params::WBP_cLeonGameSettings_C_DoCustomNavigation Parms{};
+
+	Parms.Navigation = Navigation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -505,6 +528,26 @@ void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2No
 		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_WBP_BackButton_K2Node_ComponentBoundEvent_21_OnClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_cLeonGameSettings.WBP_cLeonGameSettings_C.BndEvt__WBP_cLeonGameSettings_MiniBody_K2Node_ComponentBoundEvent_0_ChangeValue__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonGameSettings_C::BndEvt__WBP_cLeonGameSettings_MiniBody_K2Node_ComponentBoundEvent_0_ChangeValue__DelegateSignature(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonGameSettings_C", "BndEvt__WBP_cLeonGameSettings_MiniBody_K2Node_ComponentBoundEvent_0_ChangeValue__DelegateSignature");
+
+	Params::WBP_cLeonGameSettings_C_BndEvt__WBP_cLeonGameSettings_MiniBody_K2Node_ComponentBoundEvent_0_ChangeValue__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

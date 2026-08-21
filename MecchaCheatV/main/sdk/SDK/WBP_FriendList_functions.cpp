@@ -76,6 +76,30 @@ void UWBP_FriendList_C::OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2
 }
 
 
+// Function WBP_FriendList.WBP_FriendList_C.OnQueryUserInfoComplete_3C852F954B2362CFF8A841927D5A9F87
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<struct FUniqueNetIdRepl>&  UserIds                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FString&                    ErrorStr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_FriendList_C::OnQueryUserInfoComplete_3C852F954B2362CFF8A841927D5A9F87(bool bWasSuccessful, const TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FriendList_C", "OnQueryUserInfoComplete_3C852F954B2362CFF8A841927D5A9F87");
+
+	Params::WBP_FriendList_C_OnQueryUserInfoComplete_3C852F954B2362CFF8A841927D5A9F87 Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.UserIds = std::move(UserIds);
+	Parms.ErrorStr = std::move(ErrorStr);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_FriendList.WBP_FriendList_C.OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -102,12 +126,37 @@ void UWBP_FriendList_C::OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7(int32 Loca
 }
 
 
+// Function WBP_FriendList.WBP_FriendList_C.OnCallFailed_3C852F954B2362CFF8A841927D5A9F87
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<struct FUniqueNetIdRepl>&  UserIds                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FString&                    ErrorStr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_FriendList_C::OnCallFailed_3C852F954B2362CFF8A841927D5A9F87(bool bWasSuccessful, const TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FriendList_C", "OnCallFailed_3C852F954B2362CFF8A841927D5A9F87");
+
+	Params::WBP_FriendList_C_OnCallFailed_3C852F954B2362CFF8A841927D5A9F87 Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.UserIds = std::move(UserIds);
+	Parms.ErrorStr = std::move(ErrorStr);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_FriendList.WBP_FriendList_C.GetSortedFriends
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UOnlineFriendRef*>*        RezultPlayers                                          (Parm, OutParm)
+// TArray<struct FUniqueNetIdRepl>*        AllUserIds                                             (Parm, OutParm)
 
-void UWBP_FriendList_C::GetSortedFriends(TArray<class UOnlineFriendRef*>* RezultPlayers)
+void UWBP_FriendList_C::GetSortedFriends(TArray<class UOnlineFriendRef*>* RezultPlayers, TArray<struct FUniqueNetIdRepl>* AllUserIds)
 {
 	static class UFunction* Func = nullptr;
 
@@ -120,6 +169,30 @@ void UWBP_FriendList_C::GetSortedFriends(TArray<class UOnlineFriendRef*>* Rezult
 
 	if (RezultPlayers != nullptr)
 		*RezultPlayers = std::move(Parms.RezultPlayers);
+
+	if (AllUserIds != nullptr)
+		*AllUserIds = std::move(Parms.AllUserIds);
+}
+
+
+// Function WBP_FriendList.WBP_FriendList_C.GetRootFocusTarget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget**                         Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FriendList_C::GetRootFocusTarget(class UWidget** Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FriendList_C", "GetRootFocusTarget");
+
+	Params::WBP_FriendList_C_GetRootFocusTarget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Widget != nullptr)
+		*Widget = Parms.Widget;
 }
 
 

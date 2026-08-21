@@ -47,7 +47,7 @@ public:
 	void InfinityBulletEnd();
 	void UpdateRemainBullet(int32 BulletNum);
 	void HitSuccess(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter);
-	void AntiChatTrace(const struct FVector& End, class ABP_FirstPersonCharacter_cLeon_Character_C* Target);
+	void AntiChatTrace(const struct FVector& Start, const struct FVector& End, class ABP_FirstPersonCharacter_cLeon_Character_C* Target);
 	void ChangeViewMode(class FName ModeName, bool Quick);
 	void ChangeViewEnd();
 	void AddtoViewDatas_Server_(const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);

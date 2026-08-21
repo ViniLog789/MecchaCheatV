@@ -92,6 +92,34 @@ void UWBP_ConfigV2_C::OnReturn()
 }
 
 
+// Function WBP_ConfigV2.WBP_ConfigV2_C.OnPrevious
+// (Event, Public, BlueprintEvent)
+
+void UWBP_ConfigV2_C::OnPrevious()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigV2_C", "OnPrevious");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ConfigV2.WBP_ConfigV2_C.OnNext
+// (Event, Public, BlueprintEvent)
+
+void UWBP_ConfigV2_C::OnNext()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigV2_C", "OnNext");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_ConfigV2.WBP_ConfigV2_C.OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -14,6 +14,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_VoiceChatControlPanel_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_VoiceChatControlPanel_C_PreConstruct;
+
 // Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.GetSortedCharacters
 // 0x0078 (0x0078 - 0x0000)
 struct WBP_VoiceChatControlPanel_C_GetSortedCharacters final
@@ -39,6 +48,19 @@ public:
 	TArray<class ABP_FirstPersonPlayerState_Online_C*> CallFunc_GetAllActorsOfClass_OutActors;       // 0x0068(0x0010)(ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_VoiceChatControlPanel_C_GetSortedCharacters;
+
+// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.GetRootFocusTarget
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_VoiceChatControlPanel_C_GetRootFocusTarget final
+{
+public:
+	class UWidget*                                Widget;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsumer_IsConsumer;                    // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                K2Node_Select_Default;                             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_VoiceChatControlPanel_C_GetRootFocusTarget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

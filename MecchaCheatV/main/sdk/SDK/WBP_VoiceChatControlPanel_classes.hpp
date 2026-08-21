@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C
-// 0x0038 (0x0378 - 0x0340)
+// 0x0050 (0x0390 - 0x0340)
 class UWBP_VoiceChatControlPanel_C final : public UUserWidget
 {
 public:
@@ -25,12 +25,17 @@ public:
 	class UWBP_SettingVoiceOuputDevice_C*         WBP_SettingVoiceOuputDevice;                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_SettingVoiceInputDevice_C*         WBP_SettingVoiceInputDevice;                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UScrollBox*                             ScrollBox_52;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FUniqueNetIdRepl>               BoxTarget;                                         // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWBP_VoiceChatUserSettings_C*           PreContent;                                        // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ULongTapButton_OnAnimation_C*           LongTapButton_OnAnimation;                         // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FUniqueNetIdRepl>               BoxTarget;                                         // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWBP_VoiceChatUserSettings_C*           PreContent;                                        // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWBP_VoiceChatUserSettings_C*>   UserSettings;                                      // 0x0380(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
+	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void GetSortedCharacters(TArray<class ABP_FirstPersonPlayerState_Online_C*>* OutActors);
+	void GetRootFocusTarget(class UWidget** Widget);
 	void Construct();
+	void BndEvt__WBP_VoiceChatControlPanel_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

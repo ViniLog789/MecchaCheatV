@@ -47,6 +47,8 @@ public:
 	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnReturn();
+	void OnPrevious();
+	void OnNext();
 	void OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1(class FName SessionName, bool bWasSuccessful);
 	void OnCallFailed_E994E3BA416B92D5C7D03FB3DBF5BBA1(class FName SessionName, bool bWasSuccessful);
 	class UUINavComponent* GetInitialFocusComponent();

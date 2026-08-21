@@ -23,5 +23,14 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ConfigSound_C_PreConstruct;
 
+// Function WBP_ConfigSound.WBP_ConfigSound_C.GetRootFocusTarget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_ConfigSound_C_GetRootFocusTarget final
+{
+public:
+	class UWidget*                                Widget;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigSound_C_GetRootFocusTarget;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

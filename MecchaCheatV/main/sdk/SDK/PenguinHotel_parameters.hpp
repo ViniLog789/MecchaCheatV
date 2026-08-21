@@ -772,6 +772,15 @@ public:
 };
 DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_IsNintendoFreeCommunicationAvailable;
 
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoFreeCommunicationRestricted
+// 0x0001 (0x0001 - 0x0000)
+struct CustomFunctionLibraryNintendo_IsNintendoFreeCommunicationRestricted final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_IsNintendoFreeCommunicationRestricted;
+
 // Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoParentalControlEnabled
 // 0x0001 (0x0001 - 0x0000)
 struct CustomFunctionLibraryNintendo_IsNintendoParentalControlEnabled final
@@ -780,6 +789,37 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_IsNintendoParentalControlEnabled;
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoPctlAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct CustomFunctionLibraryNintendo_IsNintendoPctlAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_IsNintendoPctlAvailable;
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsUsingNintendoGameChat
+// 0x0001 (0x0001 - 0x0000)
+struct CustomFunctionLibraryNintendo_IsUsingNintendoGameChat final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_IsUsingNintendoGameChat;
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.MaskNintendoProfanityWordsInText
+// 0x0028 (0x0028 - 0x0000)
+struct CustomFunctionLibraryNintendo_MaskNintendoProfanityWordsInText final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MaskedText;                                        // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ProfanityWordCount;                                // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_CustomFunctionLibraryNintendo_MaskNintendoProfanityWordsInText;
 
 // Function PenguinHotel.CustomFunctionLibraryNintendo.TryBeginNintendoFreeCommunication
 // 0x0002 (0x0002 - 0x0000)
@@ -1852,6 +1892,15 @@ public:
 };
 DUMPER7_ASSERTS_RuntimePaintRelayComponent_ServerRelayTextureSync;
 
+// Function PenguinHotel.RuntimePaintReplicationManager.SetLocalPaintNetworkSyncDisabled
+// 0x0001 (0x0001 - 0x0000)
+struct RuntimePaintReplicationManager_SetLocalPaintNetworkSyncDisabled final
+{
+public:
+	bool                                          bDisabled;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintReplicationManager_SetLocalPaintNetworkSyncDisabled;
+
 // Function PenguinHotel.RuntimePaintReplicationManager.GetQueuedStrokeCount
 // 0x0004 (0x0004 - 0x0000)
 struct RuntimePaintReplicationManager_GetQueuedStrokeCount final
@@ -1880,6 +1929,15 @@ public:
 	struct FRuntimePaintReplicationPressure       ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RuntimePaintReplicationManager_GetReplicationPressure;
+
+// Function PenguinHotel.RuntimePaintReplicationManager.IsLocalPaintNetworkSyncDisabled
+// 0x0001 (0x0001 - 0x0000)
+struct RuntimePaintReplicationManager_IsLocalPaintNetworkSyncDisabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintReplicationManager_IsLocalPaintNetworkSyncDisabled;
 
 // Function PenguinHotel.ScreenSpaceBrushQuery.AddIgnoreActor
 // 0x0008 (0x0008 - 0x0000)

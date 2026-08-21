@@ -50,6 +50,27 @@ void UWBP_ConfigSound_C::PreConstruct(bool IsDesignTime_PreConstruct)
 }
 
 
+// Function WBP_ConfigSound.WBP_ConfigSound_C.GetRootFocusTarget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget**                         Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ConfigSound_C::GetRootFocusTarget(class UWidget** Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigSound_C", "GetRootFocusTarget");
+
+	Params::WBP_ConfigSound_C_GetRootFocusTarget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Widget != nullptr)
+		*Widget = Parms.Widget;
+}
+
+
 // Function WBP_ConfigSound.WBP_ConfigSound_C.DeleteConfigWidget
 // (BlueprintCallable, BlueprintEvent)
 

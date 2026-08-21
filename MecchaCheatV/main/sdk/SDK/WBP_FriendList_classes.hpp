@@ -28,8 +28,11 @@ public:
 	void UpdateEvent();
 	void PushButton(const struct FUniqueNetIdRepl& ID);
 	void OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr);
+	void OnQueryUserInfoComplete_3C852F954B2362CFF8A841927D5A9F87(bool bWasSuccessful, const TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr);
 	void OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr);
-	void GetSortedFriends(TArray<class UOnlineFriendRef*>* RezultPlayers);
+	void OnCallFailed_3C852F954B2362CFF8A841927D5A9F87(bool bWasSuccessful, const TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr);
+	void GetSortedFriends(TArray<class UOnlineFriendRef*>* RezultPlayers, TArray<struct FUniqueNetIdRepl>* AllUserIds);
+	void GetRootFocusTarget(class UWidget** Widget);
 	void Construct();
 	void BndEvt__WBP_FriendList_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 

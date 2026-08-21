@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "ST_cLeonMapData_structs.hpp"
-#include "EN_cLeonMainGamePhase_structs.hpp"
-#include "EN_cLeonGamePhase_structs.hpp"
 #include "ST_cLeonSurvivorVariation_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "EN_cLeonMainGamePhase_structs.hpp"
 #include "EN_cLeonGameMode_structs.hpp"
+#include "EN_cLeonGamePhase_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_GameState_cLeon.BP_GameState_cLeon_C
-// 0x0300 (0x0600 - 0x0300)
+// 0x0318 (0x0618 - 0x0300)
 class ABP_GameState_cLeon_C final : public AGameStateBase
 {
 public:
@@ -94,6 +94,9 @@ public:
 	bool                                          MOUIIYO_ActiveState;                               // 0x05F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerStatecLeon;                               // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableSelectMinimum;                               // 0x0600(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FST_cLeonSurvivorVariation>     MiniSurvivors;                                     // 0x0608(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState);
@@ -140,6 +143,7 @@ public:
 	void InitPlayerState();
 	void GetRandomMapData(struct FST_cLeonMapData* ReturnMapArray);
 	void GetDoubleRanking(TMap<class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*, int32>* ReturnMap);
+	void GetBodyVariants(TArray<struct FST_cLeonSurvivorVariation>* SurvivorVariations);
 	void GetAllMapDatas(TArray<struct FST_cLeonMapData>* ReturnMapArray);
 	void GameEndSurvivorStop();
 	void ForceStart();

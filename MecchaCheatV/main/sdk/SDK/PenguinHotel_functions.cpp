@@ -2414,6 +2414,31 @@ bool UCustomFunctionLibraryNintendo::IsNintendoFreeCommunicationAvailable()
 }
 
 
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoFreeCommunicationRestricted
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomFunctionLibraryNintendo::IsNintendoFreeCommunicationRestricted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "IsNintendoFreeCommunicationRestricted");
+
+	Params::CustomFunctionLibraryNintendo_IsNintendoFreeCommunicationRestricted Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoParentalControlEnabled
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -2434,6 +2459,92 @@ bool UCustomFunctionLibraryNintendo::IsNintendoParentalControlEnabled()
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsNintendoPctlAvailable
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomFunctionLibraryNintendo::IsNintendoPctlAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "IsNintendoPctlAvailable");
+
+	Params::CustomFunctionLibraryNintendo_IsNintendoPctlAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.IsUsingNintendoGameChat
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomFunctionLibraryNintendo::IsUsingNintendoGameChat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "IsUsingNintendoGameChat");
+
+	Params::CustomFunctionLibraryNintendo_IsUsingNintendoGameChat Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.CustomFunctionLibraryNintendo.MaskNintendoProfanityWordsInText
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    Text                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          MaskedText                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  ProfanityWordCount                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCustomFunctionLibraryNintendo::MaskNintendoProfanityWordsInText(const class FString& Text, class FString* MaskedText, int32* ProfanityWordCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CustomFunctionLibraryNintendo", "MaskNintendoProfanityWordsInText");
+
+	Params::CustomFunctionLibraryNintendo_MaskNintendoProfanityWordsInText Parms{};
+
+	Parms.Text = std::move(Text);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (MaskedText != nullptr)
+		*MaskedText = std::move(Parms.MaskedText);
+
+	if (ProfanityWordCount != nullptr)
+		*ProfanityWordCount = Parms.ProfanityWordCount;
 
 	return Parms.ReturnValue;
 }
@@ -5424,6 +5535,31 @@ void URuntimePaintRelayComponent::ServerRelayTextureSync(class URuntimePaintable
 }
 
 
+// Function PenguinHotel.RuntimePaintReplicationManager.SetLocalPaintNetworkSyncDisabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bDisabled                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URuntimePaintReplicationManager::SetLocalPaintNetworkSyncDisabled(bool bDisabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintReplicationManager", "SetLocalPaintNetworkSyncDisabled");
+
+	Params::RuntimePaintReplicationManager_SetLocalPaintNetworkSyncDisabled Parms{};
+
+	Parms.bDisabled = bDisabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PenguinHotel.RuntimePaintReplicationManager.GetQueuedStrokeCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -5490,6 +5626,31 @@ struct FRuntimePaintReplicationPressure URuntimePaintReplicationManager::GetRepl
 		Func = Class->GetFunction("RuntimePaintReplicationManager", "GetReplicationPressure");
 
 	Params::RuntimePaintReplicationManager_GetReplicationPressure Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.RuntimePaintReplicationManager.IsLocalPaintNetworkSyncDisabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URuntimePaintReplicationManager::IsLocalPaintNetworkSyncDisabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintReplicationManager", "IsLocalPaintNetworkSyncDisabled");
+
+	Params::RuntimePaintReplicationManager_IsLocalPaintNetworkSyncDisabled Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

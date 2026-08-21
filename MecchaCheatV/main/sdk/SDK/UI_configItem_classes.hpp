@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_configItem_before_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Enum_configItem_before_structs.hpp"
 
 
 SDK_NAMESPACE_START

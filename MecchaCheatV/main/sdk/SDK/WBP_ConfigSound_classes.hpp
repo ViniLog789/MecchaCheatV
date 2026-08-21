@@ -34,6 +34,7 @@ public:
 public:
 	void ScreenTypeSettingsUpdate();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void GetRootFocusTarget(class UWidget** Widget);
 	void DeleteConfigWidget();
 	void Construct();
 	void BndEvt__WBP_ConfigSound_WBP_TextSE_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature();

@@ -23,5 +23,18 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ConfigGraphic_C_PreConstruct;
 
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.GetRootFocusTarget
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_ConfigGraphic_C_GetRootFocusTarget final
+{
+public:
+	class UWidget*                                Widget;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsumer_IsConsumer;                    // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                K2Node_Select_Default;                             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigGraphic_C_GetRootFocusTarget;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

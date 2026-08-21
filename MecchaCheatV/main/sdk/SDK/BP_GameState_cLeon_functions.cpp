@@ -752,6 +752,27 @@ void ABP_GameState_cLeon_C::GetDoubleRanking(TMap<class ABP_FirstPersonCharacter
 }
 
 
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetBodyVariants
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FST_cLeonSurvivorVariation>*SurvivorVariations                                     (Parm, OutParm)
+
+void ABP_GameState_cLeon_C::GetBodyVariants(TArray<struct FST_cLeonSurvivorVariation>* SurvivorVariations)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "GetBodyVariants");
+
+	Params::BP_GameState_cLeon_C_GetBodyVariants Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SurvivorVariations != nullptr)
+		*SurvivorVariations = std::move(Parms.SurvivorVariations);
+}
+
+
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetAllMapDatas
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

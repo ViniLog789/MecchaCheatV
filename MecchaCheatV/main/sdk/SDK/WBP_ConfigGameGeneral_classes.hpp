@@ -36,6 +36,7 @@ public:
 public:
 	void ScreenTypeSettingsUpdate();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void GetRootFocusTarget(class UWidget** Widget);
 	void DeleteConfigWidget();
 	void Construct();
 	void BndEvt__WBP_ConfigGameGeneral_WBP_ToggleOption_InvertY_K2Node_ComponentBoundEvent_2_UpdateSettings__DelegateSignature();

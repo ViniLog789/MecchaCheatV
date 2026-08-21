@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_VoiceChatControlPanel_C::PreConstruct(bool IsDesignTime_PreConstruct)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatControlPanel_C", "PreConstruct");
+
+	Params::WBP_VoiceChatControlPanel_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.GetSortedCharacters
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -37,6 +57,27 @@ void UWBP_VoiceChatControlPanel_C::GetSortedCharacters(TArray<class ABP_FirstPer
 }
 
 
+// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.GetRootFocusTarget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget**                         Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_VoiceChatControlPanel_C::GetRootFocusTarget(class UWidget** Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatControlPanel_C", "GetRootFocusTarget");
+
+	Params::WBP_VoiceChatControlPanel_C_GetRootFocusTarget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Widget != nullptr)
+		*Widget = Parms.Widget;
+}
+
+
 // Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -46,6 +87,20 @@ void UWBP_VoiceChatControlPanel_C::Construct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_VoiceChatControlPanel_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.BndEvt__WBP_VoiceChatControlPanel_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_VoiceChatControlPanel_C::BndEvt__WBP_VoiceChatControlPanel_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatControlPanel_C", "BndEvt__WBP_VoiceChatControlPanel_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

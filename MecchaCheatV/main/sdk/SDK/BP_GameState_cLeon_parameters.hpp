@@ -10,9 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ST_cLeonMapData_structs.hpp"
 #include "EN_cLeonMainGamePhase_structs.hpp"
+#include "ST_cLeonSurvivorVariation_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
 #include "SteamWorkshopMaps_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 
@@ -355,6 +356,16 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_GetDoubleRanking;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetBodyVariants
+// 0x0020 (0x0020 - 0x0000)
+struct BP_GameState_cLeon_C_GetBodyVariants final
+{
+public:
+	TArray<struct FST_cLeonSurvivorVariation>     SurvivorVariations;                                // 0x0000(0x0010)(Parm, OutParm)
+	TArray<struct FST_cLeonSurvivorVariation>     ReturnValue;                                       // 0x0010(0x0010)(Edit, BlueprintVisible)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_GetBodyVariants;
 
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.GetAllMapDatas
 // 0x01C8 (0x01C8 - 0x0000)
