@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ENUM_CameraMode_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ENUM_ActorType_structs.hpp"
 
 

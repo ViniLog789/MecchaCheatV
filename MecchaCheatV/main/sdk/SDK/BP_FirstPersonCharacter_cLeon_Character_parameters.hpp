@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "UINavigation_structs.hpp"
 #include "EN_InputBlockDeviceType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EnhancedInput_structs.hpp"
-#include "UINavigation_structs.hpp"
 #include "InputCore_structs.hpp"
 
 

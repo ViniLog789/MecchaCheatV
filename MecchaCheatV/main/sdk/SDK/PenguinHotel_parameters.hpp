@@ -1475,7 +1475,7 @@ public:
 DUMPER7_ASSERTS_ModBlueprintLibrary_MountAllPakFilesInFolder;
 
 // Function PenguinHotel.ModBlueprintLibrary.MountIoStoreAndGetLevelsFromAssetRegistry
-// 0x0058 (0x0058 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct ModBlueprintLibrary_MountIoStoreAndGetLevelsFromAssetRegistry final
 {
 public:
@@ -1483,10 +1483,12 @@ public:
 	class FString                                 AssetRegistryFileName;                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 RequiredPackagePathPrefix;                         // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 RequiredMapSuffix;                                 // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FIoStoreModLevelInfo>           OutLevels;                                         // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         OutMountedContainerCount;                          // 0x0050(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0054(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bUseCppContentFilter;                              // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FIoStoreModLevelInfo>           OutLevels;                                         // 0x0048(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         OutMountedContainerCount;                          // 0x0058(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x005C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_ModBlueprintLibrary_MountIoStoreAndGetLevelsFromAssetRegistry;
 
@@ -1540,6 +1542,21 @@ public:
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_ModBlueprintLibrary_ReadModJsonFile;
+
+// Function PenguinHotel.ModBlueprintLibrary.ScanModFolderForCppContent
+// 0x0040 (0x0040 - 0x0000)
+struct ModBlueprintLibrary_ScanModFolderForCppContent final
+{
+public:
+	class FString                                 ModFolderPath;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AssetRegistryFileName;                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutContainsCpp;                                   // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OutDetectedItem;                                   // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ModBlueprintLibrary_ScanModFolderForCppContent;
 
 // Function PenguinHotel.ModBlueprintLibrary.UnloadModLevelInstance
 // 0x0008 (0x0008 - 0x0000)

@@ -4446,11 +4446,12 @@ int32 UModBlueprintLibrary::MountAllPakFilesInFolder(const class FString& Folder
 // const class FString&                    AssetRegistryFileName                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    RequiredPackagePathPrefix                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    RequiredMapSuffix                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUseCppContentFilter                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FIoStoreModLevelInfo>*    OutLevels                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // int32*                                  OutMountedContainerCount                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModBlueprintLibrary::MountIoStoreAndGetLevelsFromAssetRegistry(const class FString& ModFolderPath, const class FString& AssetRegistryFileName, const class FString& RequiredPackagePathPrefix, const class FString& RequiredMapSuffix, TArray<struct FIoStoreModLevelInfo>* OutLevels, int32* OutMountedContainerCount)
+bool UModBlueprintLibrary::MountIoStoreAndGetLevelsFromAssetRegistry(const class FString& ModFolderPath, const class FString& AssetRegistryFileName, const class FString& RequiredPackagePathPrefix, const class FString& RequiredMapSuffix, bool bUseCppContentFilter, TArray<struct FIoStoreModLevelInfo>* OutLevels, int32* OutMountedContainerCount)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4463,6 +4464,7 @@ bool UModBlueprintLibrary::MountIoStoreAndGetLevelsFromAssetRegistry(const class
 	Parms.AssetRegistryFileName = std::move(AssetRegistryFileName);
 	Parms.RequiredPackagePathPrefix = std::move(RequiredPackagePathPrefix);
 	Parms.RequiredMapSuffix = std::move(RequiredMapSuffix);
+	Parms.bUseCppContentFilter = bUseCppContentFilter;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4608,6 +4610,44 @@ bool UModBlueprintLibrary::ReadModJsonFile(const class FString& JsonFilePath, st
 
 	if (OutInfo != nullptr)
 		*OutInfo = std::move(Parms.OutInfo);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PenguinHotel.ModBlueprintLibrary.ScanModFolderForCppContent
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    ModFolderPath                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AssetRegistryFileName                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutContainsCpp                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          OutDetectedItem                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UModBlueprintLibrary::ScanModFolderForCppContent(const class FString& ModFolderPath, const class FString& AssetRegistryFileName, bool* bOutContainsCpp, class FString* OutDetectedItem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ModBlueprintLibrary", "ScanModFolderForCppContent");
+
+	Params::ModBlueprintLibrary_ScanModFolderForCppContent Parms{};
+
+	Parms.ModFolderPath = std::move(ModFolderPath);
+	Parms.AssetRegistryFileName = std::move(AssetRegistryFileName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutContainsCpp != nullptr)
+		*bOutContainsCpp = Parms.bOutContainsCpp;
+
+	if (OutDetectedItem != nullptr)
+		*OutDetectedItem = std::move(Parms.OutDetectedItem);
 
 	return Parms.ReturnValue;
 }

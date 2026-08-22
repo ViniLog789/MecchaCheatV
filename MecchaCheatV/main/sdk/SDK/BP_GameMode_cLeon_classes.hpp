@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_FirstPersonGameMode_V2_classes.hpp"
 #include "EN_cLeonBodyType_structs.hpp"
+#include "BP_FirstPersonGameMode_V2_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -76,6 +76,9 @@ public:
 	void RemoveGamePlayer(bool IsLogout, class AController* Controller);
 	void ReceiveBeginPlay();
 	void ModComplete();
+	void MapLoadSuccess();
+	void MapLoadReset();
+	void MapLoadError();
 	void KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState);
 	void K2_PostLogin(class APlayerController* NewPlayer_K2_PostLogin);
 	void K2_OnRestartPlayer(class AController* NewPlayer_K2_OnRestartPlayer);

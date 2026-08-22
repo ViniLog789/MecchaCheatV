@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_DeviceBase_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START

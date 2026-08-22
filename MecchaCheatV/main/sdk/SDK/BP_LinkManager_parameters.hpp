@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "ReferencedGlueGroup_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EN_GlueType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START

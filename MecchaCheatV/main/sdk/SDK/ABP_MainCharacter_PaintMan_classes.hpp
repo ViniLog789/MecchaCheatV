@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "ABP_MainCharacter_PaintMan_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ABP_MainCharacter_PaintMan_structs.hpp"
+#include "ControlRig_structs.hpp"
 
 
 SDK_NAMESPACE_START

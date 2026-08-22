@@ -860,11 +860,12 @@ public:
 	static class ULevelStreamingDynamic* LoadModLevelInstanceByPath(class UObject* WorldContextObject, const class FString& LevelPath, const struct FVector& Location, const struct FRotator& Rotation, bool* bOutSuccess);
 	static int32 MountAllIoStoreContainersInFolder(const class FString& FolderPath);
 	static int32 MountAllPakFilesInFolder(const class FString& FolderPath);
-	static bool MountIoStoreAndGetLevelsFromAssetRegistry(const class FString& ModFolderPath, const class FString& AssetRegistryFileName, const class FString& RequiredPackagePathPrefix, const class FString& RequiredMapSuffix, TArray<struct FIoStoreModLevelInfo>* OutLevels, int32* OutMountedContainerCount);
+	static bool MountIoStoreAndGetLevelsFromAssetRegistry(const class FString& ModFolderPath, const class FString& AssetRegistryFileName, const class FString& RequiredPackagePathPrefix, const class FString& RequiredMapSuffix, bool bUseCppContentFilter, TArray<struct FIoStoreModLevelInfo>* OutLevels, int32* OutMountedContainerCount);
 	static bool MountIoStoreContainer(const class FString& TocPath);
 	static class ULevelStreamingDynamic* MountPakAndLoadLevelFromJson(class UObject* WorldContextObject, const class FString& ModFolderPath, const class FString& JsonFileName, const struct FVector& Location, const struct FRotator& Rotation, bool* bOutSuccess, struct FModMapJsonInfo* OutInfo);
 	static bool MountPakFile(const class FString& PakPath);
 	static bool ReadModJsonFile(const class FString& JsonFilePath, struct FModMapJsonInfo* OutInfo);
+	static bool ScanModFolderForCppContent(const class FString& ModFolderPath, const class FString& AssetRegistryFileName, bool* bOutContainsCpp, class FString* OutDetectedItem);
 	static void UnloadModLevelInstance(class ULevelStreamingDynamic* StreamingLevel);
 
 public:

@@ -12,10 +12,10 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ABP_MiniPenguin_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "ABP_MiniPenguin_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 SDK_NAMESPACE_START

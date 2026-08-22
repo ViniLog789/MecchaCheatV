@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ModLevelManager.BP_ModLevelManager_C
-// 0x0028 (0x02D0 - 0x02A8)
+// 0x0048 (0x02F0 - 0x02A8)
 class ABP_ModLevelManager_C final : public AActor
 {
 public:
@@ -24,6 +24,8 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class FString                                 MapItemId;                                         // 0x02B8(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, HasGetValueTypeHash)
 	class ASkyLight*                              DisableSkyLight;                                   // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              MapLoadError;                                      // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              MapLoadSuccess;                                    // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void SetLoadCustomState(bool IsUse);

@@ -428,6 +428,48 @@ void ABP_GameMode_cLeon_C::ModComplete()
 }
 
 
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.MapLoadSuccess
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::MapLoadSuccess()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "MapLoadSuccess");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.MapLoadReset
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::MapLoadReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "MapLoadReset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.MapLoadError
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::MapLoadError()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "MapLoadError");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.KillPlayer
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

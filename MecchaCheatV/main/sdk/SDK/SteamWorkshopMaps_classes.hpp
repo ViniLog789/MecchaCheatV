@@ -90,7 +90,7 @@ public:
 DUMPER7_ASSERTS_ASteamWorkshopMapClientLoader;
 
 // Class SteamWorkshopMaps.SteamWorkshopMapSubsystem
-// 0x0218 (0x0248 - 0x0030)
+// 0x0318 (0x0348 - 0x0030)
 class USteamWorkshopMapSubsystem final : public UGameInstanceSubsystem
 {
 public:
@@ -98,7 +98,7 @@ public:
 	TMulticastInlineDelegate<void(bool bSuccess, const class FString& ItemId, const class FString& ErrorMessage)> OnCreateWorkshopItemComplete; // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(bool bSuccess, const class FString& ItemId, const class FString& ErrorMessage)> OnSubmitWorkshopItemComplete; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(bool bSuccess, const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage)> OnRequestWorkshopItemDetailsComplete; // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x1E0];                                     // 0x0068(0x01E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x2E0];                                     // 0x0068(0x02E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool CreateWorkshopItem(class FString* ErrorMessage);
